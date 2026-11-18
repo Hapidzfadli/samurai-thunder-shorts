@@ -1,0 +1,28 @@
+{
+  "name": "samurai-thunder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YouTube Short: Why Samurai Feared The Flying Thunder — Remotion + Three.js",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render SamuraiThunder out/samurai-thunder.mp4 --gl=swangle",
+    "still": "remotion still SamuraiThunder out/still.png --gl=swangle"
+  },
+  "dependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/noto-serif-jp": "^5.3.1",
+    "@react-three/fiber": "^9.0.0",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/three": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/three": "^0.170.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,18 @@
+node_modules/
+.venv/
+dist/
+build/
+.DS_Store
+*.log
+
+# Large downloaded model weights and raw YouTube full-length WAVs
+voices/*.onnx
+voices/*.bin
+voices/yt_*.wav
+
+# Intermediate partial video renders
+out/*-part1.mp4
+out/*-part2.mp4
+out/concat*.txt
+out/wewe-video-only.mp4
+__pycache__/
