@@ -36,7 +36,7 @@ def prepare_voice_prompt(voice_arg: str) -> Path:
         raise FileNotFoundError(f"File sampel suara tidak ditemukan: {custom_path}")
     out_wav = VDIR / f"custom_{custom_path.stem}_48k.wav"
     subprocess.run(
-        ["ffmpeg", "-y", "-i", str(custom_path), "-ar", "48000", "-ac", "1", "-t", "10", str(out_wav)],
+        ["ffmpeg", "-y", "-i", str(custom_path), "-ar", "48000", "-ac", "1", "-t", "22", str(out_wav)],
         check=True,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
@@ -47,8 +47,8 @@ def prepare_voice_prompt(voice_arg: str) -> Path:
 print("Memuat model Pocket-TTS Indonesian (502 jam data suara asli Indonesia + Zero-Shot Voice Cloning)...")
 tts_model = TTSModel.load_model(
     config=POCKET_CONFIG,
-    eos_threshold=-6.0,
-    temp=0.3,
+    eos_threshold=-5.5,
+    temp=0.62,
 )
 
 
