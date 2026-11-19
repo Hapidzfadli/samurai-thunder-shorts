@@ -66,8 +66,15 @@ def synth_id_cloned(voice_state, text: str, target_max_s: float | None = None) -
         raw = raw[max(0, idx[0] - int(0.015 * SR)) : min(len(raw), idx[-1] + int(0.05 * SR))]
     # If the cloned speaker speaks slightly slower than the scene window, gently time-compress if needed
     if target_max_s is not None and len(raw) / SR > target_max_s:
-        target_len = int(target_max_s * SR)
-        raw = signal.resample(raw, target_len)
+        ratio = (len(raw) / SR) / target_max_s
+        print(f"    (dipadatkan x{ratio:.2f} tanpa mengubah nada)")
+        # Pitch-preserving tempo change (atempo accepts 0.5-2.0) instead of resampling, which would raise the pitch.
+        proc = subprocess.run(
+            ["ffmpeg", "-v", "quiet", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-",
+             "-filter:a", f"atempo={min(ratio, 2.0):.4f}", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-"],
+            input=raw.astype(np.float32).tobytes(), capture_output=True, check=True,
+        )
+        raw = np.frombuffer(proc.stdout, dtype=np.float32).copy()
     # Broadcast condenser EQ
     b, a = signal.butter(2, 85 / (SR / 2), btype="highpass")
     raw = signal.lfilter(b, a, raw)
