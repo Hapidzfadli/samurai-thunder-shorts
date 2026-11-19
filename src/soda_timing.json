@@ -1,0 +1,156 @@
+{
+ "fps": 30,
+ "total_frames": 1477,
+ "scenes": {
+  "hook": 188,
+  "kocok": 332,
+  "tekan": 186,
+  "serah": 274,
+  "buka": 210,
+  "akhir": 287
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Dodi mengocok kaleng soda sekuat tenaga.",
+   "from": 4,
+   "to": 63
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Rencananya, Rizky yang akan membukanya.",
+   "from": 68,
+   "to": 134
+  },
+  "hook_3": {
+   "scene": "hook",
+   "text": "Kita masuk ke dalam kalengnya.",
+   "from": 141,
+   "to": 179
+  },
+  "kocok_1": {
+   "scene": "kocok",
+   "text": "Di dalam, ada gas karbon dioksida yang larut di soda.",
+   "from": 6,
+   "to": 83
+  },
+  "kocok_2": {
+   "scene": "kocok",
+   "text": "Biasanya, mereka tenang dan menempel di cairan.",
+   "from": 88,
+   "to": 154
+  },
+  "kocok_3": {
+   "scene": "kocok",
+   "text": "Tapi begitu dikocok, ribuan gelembung muncul dan menempel di dinding.",
+   "from": 161,
+   "to": 262
+  },
+  "kocok_4": {
+   "scene": "kocok",
+   "text": "Kami mau keluar, kami mau keluar.",
+   "from": 266,
+   "to": 323
+  },
+  "tekan_1": {
+   "scene": "tekan",
+   "text": "Makin banyak gelembung, makin tinggi tekanannya.",
+   "from": 4,
+   "to": 74
+  },
+  "tekan_2": {
+   "scene": "tekan",
+   "text": "Tutup kaleng menahan semuanya, kayak pintu bus mudik jam pulang.",
+   "from": 81,
+   "to": 177
+  },
+  "serah_1": {
+   "scene": "serah",
+   "text": "Dodi menyodorkan kaleng itu ke Rizky.",
+   "from": 6,
+   "to": 59
+  },
+  "serah_2": {
+   "scene": "serah",
+   "text": "Rizky menolak, lalu balik menyodorkan.",
+   "from": 66,
+   "to": 136
+  },
+  "serah_3": {
+   "scene": "serah",
+   "text": "Kamu aja yang buka duluan.",
+   "from": 141,
+   "to": 179
+  },
+  "serah_4": {
+   "scene": "serah",
+   "text": "Dodi gugup. Tidak ada alasan lagi.",
+   "from": 187,
+   "to": 265
+  },
+  "buka_1": {
+   "scene": "buka",
+   "text": "Dodi menarik cincinnya.",
+   "from": 9,
+   "to": 50
+  },
+  "buka_2": {
+   "scene": "buka",
+   "text": "Tekanan turun mendadak, semua gelembung berebut keluar, membawa sodanya.",
+   "from": 66,
+   "to": 172
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Dodi basah kuyup. Rizky tertawa terbahak-bahak.",
+   "from": 6,
+   "to": 78
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Biar aman, diamkan kaleng beberapa menit sebelum dibuka.",
+   "from": 86,
+   "to": 184
+  },
+  "akhir_3": {
+   "scene": "akhir",
+   "text": "Kocok lagi?",
+   "from": 194,
+   "to": 220
+  },
+  "akhir_4": {
+   "scene": "akhir",
+   "text": "Jangan.",
+   "from": 226,
+   "to": 242
+  }
+ },
+ "events": {
+  "hook.shake": 7,
+  "hook.smirk": 75,
+  "hook.dive": 150,
+  "kocok.calm": 6,
+  "kocok.dots": 89,
+  "kocok.shake": 181,
+  "kocok.nucl": 217,
+  "kocok.plead": 266,
+  "tekan.rise": 4,
+  "tekan.lid": 96,
+  "tekan.max": 157,
+  "serah.give": 27,
+  "serah.refuse": 66,
+  "serah.say": 141,
+  "serah.sweat": 188,
+  "buka.tab": 29,
+  "buka.pssh": 69,
+  "buka.rush": 98,
+  "buka.hit": 148,
+  "akhir.wet": 6,
+  "akhir.laugh": 45,
+  "akhir.tip": 86,
+  "akhir.again": 194,
+  "akhir.no": 227,
+  "akhir.card": 248
+ },
+ "stepF": {}
+}
