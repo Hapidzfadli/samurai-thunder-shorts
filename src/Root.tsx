@@ -3,6 +3,8 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/noto-serif-jp/900.css";
 import { Composition } from "remotion";
+import { CharacterShowcase } from "./CharacterShowcase";
+import { CHARACTER_PRESETS } from "./three/characters";
 import { SamuraiThunder, TOTAL_FRAMES } from "./SamuraiThunder";
 import { SamuraiThunderPart2, TOTAL_FRAMES_P2 } from "./SamuraiThunderPart2";
 import { TOTAL_FRAMES_WEWE, WeweGombel } from "./WeweGombel";
@@ -10,6 +12,14 @@ import { TOTAL_FRAMES_WEWE, WeweGombel } from "./WeweGombel";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="CharacterShowcase"
+        component={CharacterShowcase}
+        durationInFrames={CHARACTER_PRESETS.length}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
       <Composition
         id="WeweGombel"
         component={WeweGombel}
