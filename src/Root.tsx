@@ -10,10 +10,19 @@ import { Genderuwo, TOTAL_FRAMES_GEN } from "./Genderuwo";
 import { Rani, TOTAL_FRAMES_RANI } from "./Rani";
 import { Nyamuk, TOTAL_FRAMES_NYAMUK } from "./Nyamuk";
 import { Level30, TOTAL_FRAMES_L30 } from "./Level30";
+import { Soda, TOTAL_FRAMES_SODA } from "./Soda";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Soda"
+        component={Soda}
+        durationInFrames={TOTAL_FRAMES_SODA}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="Level30"
         component={Level30}
