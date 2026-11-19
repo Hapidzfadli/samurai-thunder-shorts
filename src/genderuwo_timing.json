@@ -1,218 +1,218 @@
 {
  "fps": 30,
- "total_frames": 2382,
+ "total_frames": 2054,
  "scenes": {
-  "hook": 183,
-  "rumah": 375,
-  "tanda": 378,
-  "panggil": 324,
-  "kelor": 435,
-  "gedor": 267,
-  "fajar": 420
+  "hook": 156,
+  "rumah": 317,
+  "tanda": 332,
+  "panggil": 280,
+  "kelor": 364,
+  "gedor": 236,
+  "fajar": 369
  },
  "lines": {
   "hook_1": {
    "scene": "hook",
    "text": "Kalau suamimu pulang tengah malam.",
-   "from": 10,
-   "to": 62
+   "from": 9,
+   "to": 54
   },
   "hook_2": {
    "scene": "hook",
    "text": "Jangan dibuka!",
-   "from": 88,
-   "to": 117
+   "from": 71,
+   "to": 99
   },
   "rumah_1": {
    "scene": "rumah",
    "text": "Konon, di sebuah kampung,",
-   "from": 9,
-   "to": 51
+   "from": 7,
+   "to": 45
   },
   "rumah_1b": {
    "scene": "rumah",
    "text": "tengah malam.",
-   "from": 54,
-   "to": 92
+   "from": 47,
+   "to": 78
   },
   "rumah_2": {
    "scene": "rumah",
    "text": "Yu Darmi,",
-   "from": 115,
-   "to": 157
+   "from": 90,
+   "to": 126
   },
   "rumah_3": {
    "scene": "rumah",
    "text": "tinggal sendirian. Suaminya merantau jauh.",
-   "from": 160,
-   "to": 218
+   "from": 128,
+   "to": 182
   },
   "rumah_4": {
    "scene": "rumah",
    "text": "Di ujung jalan, berdiri beringin tua.",
-   "from": 232,
-   "to": 296
+   "from": 192,
+   "to": 248
   },
   "rumah_5": {
    "scene": "rumah",
    "text": "Kata warga, itu rumah genderuwo.",
-   "from": 303,
-   "to": 357
+   "from": 253,
+   "to": 302
   },
   "tanda_1a": {
    "scene": "tanda",
    "text": "Tercium bau singkong bakar yang menyengat.",
-   "from": 9,
-   "to": 74
+   "from": 7,
+   "to": 67
   },
   "tanda_1b": {
    "scene": "tanda",
    "text": "Padahal tak ada yang membakar.",
-   "from": 84,
-   "to": 129
+   "from": 75,
+   "to": 116
   },
   "tanda_2a": {
    "scene": "tanda",
    "text": "Lalu, anjing kampung berhenti menggonggong.",
-   "from": 144,
-   "to": 222
+   "from": 127,
+   "to": 197
   },
   "tanda_2b": {
    "scene": "tanda",
    "text": "Diam.",
-   "from": 240,
-   "to": 275
+   "from": 211,
+   "to": 241
   },
   "tanda_3": {
    "scene": "tanda",
    "text": "Lampu minyak pun bergoyang.",
-   "from": 292,
-   "to": 357
+   "from": 253,
+   "to": 314
   },
   "panggil_1": {
    "scene": "panggil",
    "text": "Lalu terdengar suara dari arah beringin.",
-   "from": 15,
-   "to": 75
+   "from": 12,
+   "to": 67
   },
   "panggil_h": {
    "scene": "panggil",
    "text": "Dik... bukakan pintu. Mas pulang.",
-   "from": 104,
-   "to": 170
+   "from": 87,
+   "to": 149
   },
   "panggil_3a": {
    "scene": "panggil",
    "text": "Suaranya persis suaminya.",
-   "from": 186,
-   "to": 231
+   "from": 159,
+   "to": 201
   },
   "panggil_3b": {
    "scene": "panggil",
    "text": "Tapi kenapa ia tak mau mendekat?",
-   "from": 243,
-   "to": 300
+   "from": 209,
+   "to": 259
   },
   "kelor_1a": {
    "scene": "kelor",
    "text": "Yu Darmi ingat pesan Mbah:",
-   "from": 9,
-   "to": 55
+   "from": 7,
+   "to": 49
   },
   "kelor_1b": {
    "scene": "kelor",
    "text": "Sebarkan daun kelor di ambang pintu.",
-   "from": 79,
-   "to": 145
+   "from": 63,
+   "to": 121
   },
   "kelor_2": {
    "scene": "kelor",
    "text": "Sosok itu berhenti di depan pintu. Ia tak sanggup melangkah.",
-   "from": 159,
-   "to": 271
+   "from": 131,
+   "to": 229
   },
   "kelor_3a": {
    "scene": "kelor",
    "text": "Lalu bayangannya membesar.",
-   "from": 287,
-   "to": 338
+   "from": 238,
+   "to": 283
   },
   "kelor_3b": {
    "scene": "kelor",
    "text": "Dan matanya merah menyalaaa!",
-   "from": 351,
-   "to": 405
+   "from": 291,
+   "to": 337
   },
   "gedor_g": {
    "scene": "gedor",
    "text": "Dik... bukakan pintu.",
-   "from": 9,
-   "to": 68
+   "from": 7,
+   "to": 63
   },
   "gedor_1a": {
    "scene": "gedor",
    "text": "Ia menggedor pintu berkali-kali,",
-   "from": 82,
-   "to": 133
+   "from": 71,
+   "to": 116
   },
   "gedor_1b": {
    "scene": "gedor",
    "text": "lalu meraung, dan menghilang.",
-   "from": 141,
-   "to": 189
+   "from": 121,
+   "to": 164
   },
   "fajar_1": {
    "scene": "fajar",
    "text": "Fajar tiba. Hanya tersisa jejak besar berbulu di bawah beringin.",
-   "from": 10,
-   "to": 112
+   "from": 9,
+   "to": 103
   },
   "fajar_2": {
    "scene": "fajar",
    "text": "Tiga hari kemudian, suami Yu Darmi pulang sungguhan.",
-   "from": 127,
-   "to": 207
+   "from": 116,
+   "to": 190
   },
   "fajar_3": {
    "scene": "fajar",
    "text": "Kalau ada yang memanggil dari gelap,",
-   "from": 237,
-   "to": 293
+   "from": 207,
+   "to": 257
   },
   "fajar_3b": {
    "scene": "fajar",
    "text": "pastikan dia berani masuk.",
-   "from": 306,
-   "to": 360
+   "from": 266,
+   "to": 312
   }
  },
  "events": {
-  "hook.eyes": 69,
-  "hook.text": 89,
-  "hook.knock1": 121,
-  "hook.knock2": 135,
-  "hook.knock3": 150,
-  "rumah.pan": 233,
-  "tanda.eyes": 245,
-  "tanda.lamp0": 280,
-  "tanda.bark": 148,
+  "hook.eyes": 61,
+  "hook.text": 72,
+  "hook.knock1": 103,
+  "hook.knock2": 117,
+  "hook.knock3": 131,
+  "rumah.pan": 192,
+  "tanda.eyes": 216,
+  "tanda.lamp0": 242,
+  "tanda.bark": 130,
   "panggil.walk0": 15,
-  "panggil.walk1": 98,
-  "panggil.quote0": 104,
-  "panggil.quote1": 180,
-  "kelor.leaves": 95,
+  "panggil.walk1": 81,
+  "panggil.quote0": 87,
+  "panggil.quote1": 153,
+  "kelor.leaves": 78,
   "kelor.approach0": 9,
-  "kelor.approach1": 160,
-  "kelor.eyes": 226,
-  "kelor.flip": 296,
-  "kelor.flare": 351,
-  "gedor.roar": 145,
-  "gedor.flee0": 172,
-  "gedor.flee1": 229,
-  "fajar.husband0": 119,
-  "fajar.husband1": 243,
-  "fajar.card": 231,
-  "fajar.big": 306
+  "kelor.approach1": 132,
+  "kelor.eyes": 189,
+  "kelor.flip": 248,
+  "kelor.flare": 292,
+  "gedor.roar": 125,
+  "gedor.flee0": 152,
+  "gedor.flee1": 209,
+  "fajar.husband0": 107,
+  "fajar.husband1": 226,
+  "fajar.card": 202,
+  "fajar.big": 266
  },
  "stepF": {
   "fake": 1.7,

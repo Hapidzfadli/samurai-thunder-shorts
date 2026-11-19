@@ -296,49 +296,52 @@ TIMING_JSON = ROOT / "src" / "genderuwo_timing.json"
 # fx: rate<1 = slower, pitch<1 = lower (tempo kept), gain, shout, whisper, echo, warm, growl
 # ---------------------------------------------------------------------------------------------
 SCENES = [
-    # lead, tail, min_s, segments
-    ("hook", 0.35, 2.2, 5.0, [
-        ("hook_1", 0.0, "Kalau suamimu pulang tengah malam.", {"rate": 0.86}, 4),
-        ("hook_2", 0.90, "Jangan dibuka!", {"shout": True, "rate": 0.92, "gain": 1.45}, 3),
+    # key, lead, tail, min_s, segments (id, pause_before_s, text, fx, candidates)
+    # fx: rate (>1 faster), pitch, gain, shout, whisper, echo, warm, growl,
+    #     emph = words to stress (pitch + loudness bump), emph_st/emph_db = how much,
+    #     k = pitch-range expansion (1.0 = natural), end = "fall" (firm) or "rise" (question)
+    ("hook", 0.30, 1.9, 4.6, [
+        ("hook_1", 0.0, "Kalau suamimu pulang tengah malam.", {"rate": 1.0, "emph": ["pulang", "malam"], "k": 1.35}, 4),
+        ("hook_2", 0.60, "Jangan dibuka!", {"shout": True, "rate": 1.0, "gain": 1.5, "emph": ["Jangan", "dibuka"], "emph_st": 3.0, "end": "fall"}, 3),
     ]),
-    ("rumah", 0.30, 0.6, 9.0, [
-        ("rumah_1", 0.0, "Konon, di sebuah kampung,", {"rate": 0.95}, 3),
-        ("rumah_1b", 0.12, "tengah malam.", {"rate": 0.70, "gain": 0.95}, 3),
-        ("rumah_2", 0.80, "Yu Darmi,", {"rate": 0.80, "gain": 1.18}, 3),
-        ("rumah_3", 0.12, "tinggal sendirian. Suaminya merantau jauh.", {}, 2),
-        ("rumah_4", 0.50, "Di ujung jalan, berdiri beringin tua.", {"rate": 0.95}, 2),
-        ("rumah_5", 0.25, "Kata warga, itu rumah genderuwo.", {"rate": 0.90, "gain": 0.95}, 2),
+    ("rumah", 0.25, 0.5, 8.0, [
+        ("rumah_1", 0.0, "Konon, di sebuah kampung,", {"rate": 1.08, "emph": ["Konon"], "k": 1.4}, 3),
+        ("rumah_1b", 0.10, "tengah malam.", {"rate": 0.88, "gain": 0.95, "emph": ["malam"], "emph_st": 2.5}, 3),
+        ("rumah_2", 0.45, "Yu Darmi,", {"rate": 0.95, "gain": 1.18, "emph": ["Yu", "Darmi"], "emph_st": 3.0, "emph_db": 2.5}, 3),
+        ("rumah_3", 0.10, "tinggal sendirian. Suaminya merantau jauh.", {"rate": 1.1, "emph": ["sendirian", "merantau", "jauh"], "k": 1.4}, 2),
+        ("rumah_4", 0.35, "Di ujung jalan, berdiri beringin tua.", {"rate": 1.1, "emph": ["beringin", "tua"]}, 2),
+        ("rumah_5", 0.20, "Kata warga, itu rumah genderuwo.", {"rate": 1.0, "gain": 0.98, "emph": ["genderuwo"], "emph_st": 4.0, "end": "fall"}, 2),
     ]),
-    ("tanda", 0.30, 0.7, 9.0, [
-        ("tanda_1a", 0.0, "Tercium bau singkong bakar yang menyengat.", {}, 2),
-        ("tanda_1b", 0.35, "Padahal tak ada yang membakar.", {"rate": 0.92}, 2),
-        ("tanda_2a", 0.55, "Lalu, anjing kampung berhenti menggonggong.", {"rate": 0.90, "gain": 0.9}, 2),
-        ("tanda_2b", 0.65, "Diam.", {"whisper": True, "rate": 0.78}, 3),
-        ("tanda_3", 0.60, "Lampu minyak pun bergoyang.", {"rate": 0.88, "gain": 0.8, "echo": True}, 2),
+    ("tanda", 0.25, 0.6, 8.0, [
+        ("tanda_1a", 0.0, "Tercium bau singkong bakar yang menyengat.", {"rate": 1.1, "emph": ["singkong", "menyengat"]}, 2),
+        ("tanda_1b", 0.30, "Padahal tak ada yang membakar.", {"rate": 1.05, "emph": ["tak", "membakar"], "end": "fall"}, 2),
+        ("tanda_2a", 0.40, "Lalu, anjing kampung berhenti menggonggong.", {"rate": 1.0, "gain": 0.92, "emph": ["berhenti", "menggonggong"]}, 2),
+        ("tanda_2b", 0.50, "Diam.", {"whisper": True, "rate": 0.9}, 3),
+        ("tanda_3", 0.45, "Lampu minyak pun bergoyang.", {"rate": 0.98, "gain": 0.8, "echo": True, "emph": ["bergoyang"], "emph_st": 3.0}, 2),
     ]),
-    ("panggil", 0.50, 0.8, 9.0, [
-        ("panggil_1", 0.0, "Lalu terdengar suara dari arah beringin.", {}, 2),
-        ("panggil_h", 1.00, "Dik... bukakan pintu. Mas pulang.", {"pitch": 0.94, "rate": 0.92, "echo": True, "warm": True, "gain": 0.95}, 3),
-        ("panggil_3a", 0.55, "Suaranya persis suaminya.", {"rate": 0.95}, 2),
-        ("panggil_3b", 0.45, "Tapi kenapa ia tak mau mendekat?", {"rate": 0.86, "gain": 0.85}, 2),
+    ("panggil", 0.40, 0.7, 7.5, [
+        ("panggil_1", 0.0, "Lalu terdengar suara dari arah beringin.", {"rate": 1.1, "emph": ["suara", "beringin"]}, 2),
+        ("panggil_h", 0.70, "Dik... bukakan pintu. Mas pulang.", {"pitch": 0.95, "rate": 1.0, "echo": True, "warm": True, "gain": 0.95, "emph": ["Dik", "pintu", "pulang"], "emph_st": 3.0, "k": 1.5}, 3),
+        ("panggil_3a", 0.35, "Suaranya persis suaminya.", {"rate": 1.05, "emph": ["persis"], "emph_st": 4.0}, 2),
+        ("panggil_3b", 0.30, "Tapi kenapa ia tak mau mendekat?", {"rate": 0.98, "gain": 0.9, "emph": ["kenapa", "mendekat"], "end": "rise"}, 2),
     ]),
-    ("kelor", 0.30, 1.0, 11.0, [
-        ("kelor_1a", 0.0, "Yu Darmi ingat pesan Mbah:", {"rate": 0.93}, 2),
-        ("kelor_1b", 0.85, "Sebarkan daun kelor di ambang pintu.", {"rate": 0.88, "gain": 1.12}, 3),
-        ("kelor_2", 0.50, "Sosok itu berhenti di depan pintu. Ia tak sanggup melangkah.", {"rate": 0.95}, 2),
-        ("kelor_3a", 0.55, "Lalu bayangannya membesar.", {"rate": 0.82, "pitch": 0.96, "gain": 0.9}, 2),
-        ("kelor_3b", 0.45, "Dan matanya merah menyalaaa!", {"shout": True, "rate": 0.78, "gain": 1.5}, 3),
+    ("kelor", 0.25, 0.9, 9.5, [
+        ("kelor_1a", 0.0, "Yu Darmi ingat pesan Mbah:", {"rate": 1.05, "emph": ["Mbah"]}, 2),
+        ("kelor_1b", 0.50, "Sebarkan daun kelor di ambang pintu.", {"rate": 1.0, "gain": 1.12, "emph": ["Sebarkan", "kelor", "pintu"], "end": "fall", "k": 1.2}, 3),
+        ("kelor_2", 0.35, "Sosok itu berhenti di depan pintu. Ia tak sanggup melangkah.", {"rate": 1.1, "emph": ["berhenti", "tak", "melangkah"]}, 2),
+        ("kelor_3a", 0.35, "Lalu bayangannya membesar.", {"rate": 0.95, "pitch": 0.96, "gain": 0.9, "emph": ["membesar"], "emph_st": 3.0}, 2),
+        ("kelor_3b", 0.30, "Dan matanya merah menyalaaa!", {"shout": True, "rate": 0.92, "gain": 1.5, "emph": ["matanya", "merah", "menyala"], "emph_st": 4.5, "emph_db": 4.0}, 3),
     ]),
-    ("gedor", 0.30, 2.6, 8.0, [
-        ("gedor_g", 0.0, "Dik... bukakan pintu.", {"pitch": 0.74, "rate": 0.85, "growl": True, "echo": True, "gain": 1.1}, 3),
-        ("gedor_1a", 0.50, "Ia menggedor pintu berkali-kali,", {"rate": 0.95}, 2),
-        ("gedor_1b", 0.30, "lalu meraung, dan menghilang.", {"rate": 0.88}, 2),
+    ("gedor", 0.25, 2.4, 7.5, [
+        ("gedor_g", 0.0, "Dik... bukakan pintu.", {"pitch": 0.74, "rate": 0.92, "growl": True, "echo": True, "gain": 1.1}, 3),
+        ("gedor_1a", 0.30, "Ia menggedor pintu berkali-kali,", {"rate": 1.1, "emph": ["menggedor", "berkali-kali"]}, 2),
+        ("gedor_1b", 0.20, "lalu meraung, dan menghilang.", {"rate": 1.0, "emph": ["meraung", "menghilang"], "end": "fall"}, 2),
     ]),
-    ("fajar", 0.35, 2.0, 11.0, [
-        ("fajar_1", 0.0, "Fajar tiba. Hanya tersisa jejak besar berbulu di bawah beringin.", {}, 2),
-        ("fajar_2", 0.55, "Tiga hari kemudian, suami Yu Darmi pulang sungguhan.", {}, 2),
-        ("fajar_3", 1.00, "Kalau ada yang memanggil dari gelap,", {"rate": 0.88, "gain": 0.95}, 2),
-        ("fajar_3b", 0.45, "pastikan dia berani masuk.", {"rate": 0.80, "gain": 1.05}, 3),
+    ("fajar", 0.30, 1.9, 9.5, [
+        ("fajar_1", 0.0, "Fajar tiba. Hanya tersisa jejak besar berbulu di bawah beringin.", {"rate": 1.08, "emph": ["Fajar", "jejak", "berbulu"]}, 2),
+        ("fajar_2", 0.45, "Tiga hari kemudian, suami Yu Darmi pulang sungguhan.", {"rate": 1.08, "emph": ["Tiga", "sungguhan"]}, 2),
+        ("fajar_3", 0.60, "Kalau ada yang memanggil dari gelap,", {"rate": 1.0, "gain": 0.95, "emph": ["memanggil", "gelap"]}, 2),
+        ("fajar_3b", 0.30, "pastikan dia berani masuk.", {"rate": 0.95, "gain": 1.05, "emph": ["pastikan", "berani", "masuk"], "emph_st": 3.5, "end": "fall"}, 3),
     ]),
 ]
 
@@ -369,12 +372,8 @@ _WHISPER = None
 
 
 def asr_text(clip: np.ndarray) -> str:
-    global _WHISPER
-    if _WHISPER is None:
-        from faster_whisper import WhisperModel
-        _WHISPER = WhisperModel("small", device="cpu", compute_type="int8")
     audio16 = signal.resample_poly(clip, 160, 441).astype(np.float32)
-    segs, _ = _WHISPER.transcribe(audio16, language="id", beam_size=1, vad_filter=False)
+    segs, _ = _whisper().transcribe(audio16, language="id", beam_size=1, vad_filter=False)
     return " ".join(s.text for s in segs)
 
 
@@ -463,7 +462,77 @@ def growl(x: np.ndarray) -> np.ndarray:
     return out / (np.max(np.abs(out)) + 1e-6) * 0.4
 
 
+
+import pyworld as pw
+
+
+def _whisper():
+    global _WHISPER
+    if _WHISPER is None:
+        from faster_whisper import WhisperModel
+        _WHISPER = WhisperModel("small", device="cpu", compute_type="int8")
+    return _WHISPER
+
+
+def asr_words(clip: np.ndarray):
+    audio16 = signal.resample_poly(clip, 160, 441).astype(np.float32)
+    segs, _ = _whisper().transcribe(audio16, language="id", beam_size=5, word_timestamps=True)
+    return [(w.word.strip(), w.start, w.end) for sg in segs for w in (sg.words or [])]
+
+
+def _nw(w: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", w.lower())
+
+
+def expressive(clip: np.ndarray, fx: dict) -> np.ndarray:
+    """Make the delivery livelier without touching the voice colour:
+    widen the pitch range (k), lift pitch + loudness on the words to stress, and shape how the line ends
+    (fall = firm statement, rise = question)."""
+    k = fx.get("k", 1.3)
+    emph = fx.get("emph", [])
+    est, edb = fx.get("emph_st", 3.5), fx.get("emph_db", 3.0)
+    end = fx.get("end")
+    x = np.ascontiguousarray(clip, dtype=np.float64)
+    f0, tt = pw.harvest(x, SR, f0_floor=70, f0_ceil=450, frame_period=5.0)
+    voiced = f0 > 0
+    if voiced.sum() < 20:
+        return clip
+    sp = pw.cheaptrick(x, f0, tt, SR)
+    ap = pw.d4c(x, f0, tt, SR)
+    lf = np.log2(f0[voiced])
+    m = lf.mean()
+    f0n = f0.copy()
+    f0n[voiced] = 2 ** (m + k * (lf - m))
+    n = len(f0)
+    shift, amp = np.zeros(n), np.zeros(n)
+    if emph:
+        words = asr_words(clip)
+        for e in emph:
+            if not words:
+                break
+            best = max(words, key=lambda w: difflib.SequenceMatcher(None, _nw(e), _nw(w[0])).ratio())
+            if difflib.SequenceMatcher(None, _nw(e), _nw(best[0])).ratio() >= 0.6:
+                i0, i1 = int(best[1] / 0.005), min(n, int(best[2] / 0.005) + 1)
+                if i1 > i0 + 3:
+                    bump = np.hanning(i1 - i0 + 2)[1:-1]
+                    shift[i0:i1] = np.maximum(shift[i0:i1], est * bump)
+                    amp[i0:i1] = np.maximum(amp[i0:i1], bump)
+    vi = np.where(voiced)[0]
+    if end and len(vi) > 25:
+        L = min(60, len(vi))
+        shift[vi[-L:]] += (4.0 if end == "rise" else -3.0) * np.linspace(0, 1, L)
+    shift = np.convolve(shift, np.ones(5) / 5, mode="same")
+    f0n[voiced] *= 2 ** (shift[voiced] / 12)
+    y = pw.synthesize(f0n, sp, ap, SR, 5.0)
+    env = np.interp(np.arange(len(y)) / SR, tt, 1 + (10 ** (edb / 20) - 1) * amp)
+    y = y * env
+    ref = np.sqrt(np.mean(x[np.abs(x) > 0.02] ** 2)) if (np.abs(x) > 0.02).any() else 0.1
+    cur = np.sqrt(np.mean(y[np.abs(y) > 0.02] ** 2)) if (np.abs(y) > 0.02).any() else 0.1
+    return (y * (ref / (cur + 1e-9))).astype(np.float32)
+
 def apply_fx(clip: np.ndarray, fx: dict) -> np.ndarray:
+    if fx.get("emph") or fx.get("end") or "k" in fx:
+        clip = expressive(clip, fx)
     clip = norm_rms(clip)
     af = []
     pitch = fx.get("pitch")
