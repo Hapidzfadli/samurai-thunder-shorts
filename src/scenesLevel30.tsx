@@ -2,8 +2,7 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, random, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { CameraRig, Vec3 } from "./three/objects";
-import { Expr, Person } from "./three/objectsRani";
-import { Brain, BrainRoom, Capsa, ChiliPepper, Droplet, Envelope, FaceFX, GUARD_SPOTS, Guard, Kantin, MenuBoard, MouthSet, NerveTunnel, THREE, cl, lerp3, sm, tongueY } from "./three/objectsLevel30";
+import { Brain, BrainRoom, Capsa, ChiliPepper, Droplet, Envelope, FaceFX, GUARD_SPOTS, Guard, Kantin, MenuBoard, MouthSet, NerveTunnel, THREE, Toon, ToonExpr, cl, lerp3, sm, tongueY } from "./three/objectsLevel30";
 import timing from "./level30_timing.json";
 import { FONT_BODY, FONT_TITLE } from "./ui";
 
@@ -64,7 +63,7 @@ const chunkText = (text: string) => {
   return out;
 };
 
-const Caps: React.FC<{ ids: LineId[]; hl?: string[]; color?: string; top?: number }> = ({ ids, hl = [], color = "#ffd23f", top = 1240 }) => {
+const Caps: React.FC<{ ids: LineId[]; hl?: string[]; color?: string; top?: number }> = ({ ids, hl = [], color = "#ffd23f", top = 1320 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const hlU = hl.map((h) => h.toUpperCase());
@@ -80,19 +79,20 @@ const Caps: React.FC<{ ids: LineId[]; hl?: string[]; color?: string; top?: numbe
       const e = i === chunks.length - 1 ? ln.to + 8 : ln.from + (acc / total) * span;
       if (frame >= s && frame < e) {
         const sp = spring({ frame: frame - s, fps, config: { damping: 10, stiffness: 260 } });
-        const txt = chunks[i].toUpperCase();
-        const isHl = txt.split(" ").some((w) => hlU.includes(w));
-        const size = Math.min(124, 740 / (txt.length * 0.5));
+        const txt = chunks[i].toLowerCase();
+        const isHl = txt.split(" ").some((w) => hlU.includes(w.toUpperCase()));
+        const size = Math.min(92, 720 / (txt.length * 0.52));
         return (
           <div style={{ position: "absolute", top, left: 90, width: 760, textAlign: "center" }}>
             <span
               style={{
                 display: "inline-block",
-                fontFamily: FONT_TITLE,
+                fontFamily: FONT_BODY,
+                fontWeight: 800,
                 fontSize: size,
                 lineHeight: 1.1,
                 color: isHl ? color : "white",
-                WebkitTextStroke: "7px rgba(10,6,18,0.95)",
+                WebkitTextStroke: "6px rgba(10,6,18,0.95)",
                 paintOrder: "stroke fill",
                 textShadow: isHl ? `0 0 34px ${color}99, 0 8px 0 rgba(10,6,18,0.7)` : "0 8px 0 rgba(10,6,18,0.7)",
                 transform: `scale(${0.55 + 0.45 * sp}) rotate(${(1 - sp) * -3}deg)`,
@@ -135,7 +135,7 @@ const Look: React.FC<{ tint?: string; heat?: number }> = ({ tint = "rgba(20,10,3
 /* ------------------------------------------------------------------ */
 /* Shared pieces                                                         */
 /* ------------------------------------------------------------------ */
-const redden = (hot: number) => new THREE.Color("#c89068").lerp(new THREE.Color("#e03a2a"), cl(hot)).getStyle();
+const redden = (hot: number) => new THREE.Color("#ffffff").lerp(new THREE.Color("#ee3b2b"), cl(hot)).getStyle();
 
 const KantinLights: React.FC = () => (
   <>
@@ -146,10 +146,10 @@ const KantinLights: React.FC = () => (
   </>
 );
 
-const BUDI_Z = 0.85;
-const Budi: React.FC<{ t: number; hot?: number; expr?: Expr; shake?: number; jump?: number; armsUp?: number; fx?: { tears?: number; sweat?: number; steam?: number; snot?: number } }> = ({ t, hot = 0, expr = "neutral", shake = 0, jump = 0, armsUp = 0, fx }) => (
+const BUDI_Z = 0.73;
+const Budi: React.FC<{ t: number; hot?: number; expr?: ToonExpr; shake?: number; jump?: number; armsUp?: number; fx?: { tears?: number; sweat?: number; steam?: number; snot?: number } }> = ({ t, hot = 0, expr = "neutral", shake = 0, jump = 0, armsUp = 0, fx }) => (
   <>
-    <Person position={[0, -0.42, BUDI_Z]} t={t} skin={redden(hot)} shirt="#3a86c8" pants="#3b3f63" hair="#1c1410" style="short" seed="budi" expr={expr} shake={shake} jump={jump} armsUp={armsUp} />
+    <Toon position={[0, -0.32, BUDI_Z]} t={t} face={redden(hot)} shirt="#3a86c8" pants="#2b3350" hairColor="#1c1410" seed="budi" expr={expr} shake={shake} jump={jump} armsUp={armsUp} />
     <FaceFX head={[0, 1.18, BUDI_Z]} t={t} {...fx} />
   </>
 );
@@ -181,8 +181,8 @@ export const SceneL30Hook: React.FC = () => {
   const chiliX = interpolate(f, [bite, bite + 16], [0.1, 1.1], clamp);
   const mouthS = f >= dive ? interpolate(f, [dive, dive + 52], [0.03, 2.1], clamp) : 0;
   const cam = shotCam(f, [
-    { to: bite + 14, p0: [0.42, 1.28, 2.55], l0: [0.1, 1.1, 1.15], p1: [0.2, 1.22, 2.15], l1: [0.06, 1.1, 1.1], fov: 38 },
-    { to: freeze + 60, p0: [0, 1.25, 2.3], l0: [0, 1.2, 1.0], p1: [0, 1.21, 1.62], l1: [0, 1.17, 1.0], fov: 30 },
+    { to: bite + 14, p0: [0.55, 1.3, 3.3], l0: [0.1, 1.1, 1.15], p1: [0.3, 1.24, 2.9], l1: [0.06, 1.1, 1.1], fov: 38 },
+    { to: freeze + 60, p0: [0, 1.25, 3.1], l0: [0, 1.2, 1.0], p1: [0, 1.21, 2.3], l1: [0, 1.17, 1.0], fov: 30 },
     { to: dive, p0: [3.4, 1.7, 5.4], l0: [0, 1.1, 1.0], p1: [2.5, 1.55, 4.4], l1: [0, 1.1, 1.0], fov: 44 },
     { to: 9999, p0: [0, 1.14, 2.5], l0: [0, 1.1, 1.0], p1: [0, 1.1, 1.28], l1: [0, 1.1, 1.0], fov: 40, shake: 0.02 },
   ]);
@@ -194,7 +194,7 @@ export const SceneL30Hook: React.FC = () => {
         <Budi t={t} hot={hot} expr={f < bite ? "neutral" : "surprised"} shake={interpolate(f, [freeze + 20, freeze + 60], [0, 0.6], clamp)} fx={{ steam: interpolate(f, [freeze + 40, freeze + 64], [0, 1], clamp), sweat: interpolate(f, [freeze + 30, freeze + 50], [0, 1], clamp) }} />
         <ChiliPepper position={[chiliX, 1.09, chiliZ]} rotation={[Math.PI / 2, 0, 0.1]} scale={1.15} bite={f > bite ? 1 : 0} />
         {mouthS > 0 && (
-          <mesh position={[0, 1.07, 1.05]} scale={[mouthS, mouthS * 1.15, 0.3]}>
+          <mesh position={[0, 1.06, 1.08]} scale={[mouthS, mouthS * 1.15, 0.3]}>
             <sphereGeometry args={[0.1, 14, 12]} />
             <meshBasicMaterial color="#4a0a14" />
           </mesh>
@@ -332,8 +332,8 @@ export const SceneL30Otak: React.FC = () => {
   const snotF = EV("otak.snot");
   const sweatF = EV("otak.sweat");
   const cam = shotCam(f, [
-    { to: snotF, p0: [0, 1.28, 2.5], l0: [0, 1.17, 1.0], p1: [0, 1.22, 1.9], l1: [0, 1.15, 1.0], fov: 34 },
-    { to: sweatF, p0: [0.55, 1.1, 1.9], l0: [0, 1.08, 1.0], p1: [0.3, 1.1, 1.5], l1: [0, 1.08, 1.0], fov: 32 },
+    { to: snotF, p0: [0, 1.28, 3.5], l0: [0, 1.17, 1.0], p1: [0, 1.22, 2.8], l1: [0, 1.15, 1.0], fov: 34 },
+    { to: sweatF, p0: [0.8, 1.1, 2.9], l0: [0, 1.08, 1.0], p1: [0.5, 1.1, 2.4], l1: [0, 1.08, 1.0], fov: 32 },
     { to: 9999, p0: [2.6, 1.9, 4.4], l0: [0, 1.0, 1.0], p1: [1.6, 1.7, 3.6], l1: [0, 1.0, 1.0], fov: 44 },
   ]);
   const wet = interpolate(f, [cry, cry + 24], [0, 1], clamp);
@@ -379,7 +379,7 @@ export const SceneL30Air: React.FC = () => {
   const pull = EV("air.pull");
   const chug = f < macro - 2;
   if (chug) {
-    const cam = shotCam(f, [{ to: 9999, p0: [0.9, 1.35, 2.7], l0: [0, 1.15, 1.0], p1: [0.4, 1.25, 2.0], l1: [0, 1.12, 1.0], fov: 36 }]);
+    const cam = shotCam(f, [{ to: 9999, p0: [1.1, 1.35, 3.6], l0: [0, 1.15, 1.0], p1: [0.5, 1.25, 2.7], l1: [0, 1.12, 1.0], fov: 36 }]);
     const tilt = interpolate(f, [4, 22], [0.4, 1.0], clamp);
     return (
       <AbsoluteFill>
@@ -501,7 +501,7 @@ export const SceneL30Akhir: React.FC = () => {
   const cam = shotCam(f, [
     { to: waiterF, p0: [1.4, 1.6, 5.6], l0: [0, 1.15, 1], p1: [0.6, 1.4, 4.4], l1: [0, 1.15, 1], fov: 42 },
     { to: nod - 8, p0: [2.8, 1.4, 4.8], l0: [1.2, 1.3, 0.9], p1: [1.8, 1.45, 4.1], l1: [1.0, 1.25, 0.9], fov: 42 },
-    { to: sigh, p0: [0, 1.28, 2.6], l0: [0, 1.15, 1.0], p1: [0, 1.2, 1.95], l1: [0, 1.15, 1.0], fov: 32 },
+    { to: sigh, p0: [0, 1.28, 3.4], l0: [0, 1.15, 1.0], p1: [0, 1.2, 2.7], l1: [0, 1.15, 1.0], fov: 32 },
     { to: 9999, p0: [0, 2.1, 7.2], l0: [0, 1.0, 2], p1: [0, 1.7, 5.6], l1: [0, 1.0, 2], fov: 48 },
   ]);
   const cutaway = f >= sigh;
@@ -518,7 +518,7 @@ export const SceneL30Akhir: React.FC = () => {
           <KantinLights />
           <Kantin t={t} milk={1} />
           <Budi t={t} hot={interpolate(f, [0, 70], [0.5, 0.1], clamp)} expr={f > nod - 6 ? "smug" : "happy"} jump={pulse(f, nod, 10) * 0.3} fx={{ steam: interpolate(f, [0, 40], [0.6, 0], clamp) }} />
-          <Person position={[wx, 0, 0.9]} rotationY={-0.5} t={t} walking={f < waiterF + 22} walkF={2.4} skin="#a8754f" shirt="#2a9d8f" pants="#222" hair="#0e0a08" style="short" apron="#ffffff" pointArm={f > waiterF + 22 ? 0.0 : 0} expr="happy" seed="waiter" look={-0.3} />
+          <Toon position={[wx, 0, 0.9]} rotationY={-0.5} t={t} walking={f < waiterF + 22} walkF={2.4} shirt="#2a9d8f" pants="#222" apron="#ffffff" hat="peci" hatColor="#111" expr="happy" seed="waiter" look={-0.3} />
           {f > waiterF - 10 && <MenuBoard position={[wx - 0.32, 1.3, 1.28]} rotation={[0, -0.25, 0.05]} scale={1.35} />}
         </Stage>
       )}

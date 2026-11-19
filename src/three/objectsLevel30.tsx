@@ -93,13 +93,13 @@ export const Guard: React.FC<{
   const worried = alarm > 0.3 || cry > 0.3;
   const arm = (side: number) => (
     <group position={[side * 0.25, 0.78, 0]} rotation={[-press * (side > 0 ? 1.25 : 0) + (run ? -side * swing * 0.9 : 0) + (side > 0 && press > 0 ? 0 : 0), 0, side * (0.3 + up * 2.3) + (up ? side * flap : 0)]}>
-      <M position={[0, -0.12, 0]}>
-        <capsuleGeometry args={[0.05, 0.16, 4, 8]} />
-        <meshStandardMaterial color={body} roughness={0.8} flatShading />
-      </M>
-      <M position={[0, -0.28, 0]}>
+      <mesh position={[0, -0.16, 0]}>
+        <cylinderGeometry args={[0.028, 0.028, 0.34, 6]} />
+        <meshBasicMaterial color="#111" />
+      </mesh>
+      <M position={[0, -0.34, 0]}>
         <sphereGeometry args={[0.06, 8, 8]} />
-        <meshStandardMaterial color="#ffd9b3" roughness={0.8} />
+        <meshToonMaterial color="#ffffff" />
       </M>
     </group>
   );
@@ -107,19 +107,23 @@ export const Guard: React.FC<{
     <group position={[position[0] + shake, position[1] + hop, position[2]]} rotation={[slump * 0.32 + run * 0.25, rotationY, 0]} scale={scale}>
       {[-1, 1].map((s) => (
         <group key={s} position={[s * 0.1, 0.36, 0]} rotation={[s * swing * 0.9, 0, 0]}>
-          <M position={[0, -0.16, 0]}>
-            <capsuleGeometry args={[0.065, 0.14, 4, 8]} />
-            <meshStandardMaterial color="#1d2b53" roughness={0.9} flatShading />
-          </M>
-          <M position={[0, -0.3, 0.04]}>
-            <boxGeometry args={[0.12, 0.06, 0.2]} />
-            <meshStandardMaterial color="#111" roughness={0.9} />
+          <mesh position={[0, -0.18, 0]}>
+            <cylinderGeometry args={[0.03, 0.03, 0.38, 6]} />
+            <meshBasicMaterial color="#111" />
+          </mesh>
+          <M position={[0, -0.37, 0.05]} scale={[1, 0.5, 1.7]}>
+            <sphereGeometry args={[0.07, 8, 6]} />
+            <meshBasicMaterial color="#111" />
           </M>
         </group>
       ))}
+      <mesh position={[0, 0.62, 0]} scale={[1.13, 1.07, 0.9]}>
+        <capsuleGeometry args={[0.2, 0.22, 6, 10]} />
+        <meshBasicMaterial color="#111" side={THREE.BackSide} />
+      </mesh>
       <M position={[0, 0.62, 0]} scale={[1, 1, 0.8]}>
-        <capsuleGeometry args={[0.22, 0.26, 6, 10]} />
-        <meshStandardMaterial color={body} roughness={0.8} flatShading />
+        <capsuleGeometry args={[0.2, 0.22, 6, 10]} />
+        <meshToonMaterial color={body} />
       </M>
       <mesh position={[0.09, 0.7, 0.18]}>
         <boxGeometry args={[0.1, 0.1, 0.02]} />
@@ -128,9 +132,13 @@ export const Guard: React.FC<{
       {arm(-1)}
       {arm(1)}
       <group position={[0, 1.12, 0]} rotation={[0, look, Math.sin(t * 2 + sn) * 0.02 + (cry > 0 ? Math.sin(t * 20) * 0.05 : 0)]}>
+        <mesh scale={[1.07, 1.02, 1.03]}>
+          <sphereGeometry args={[0.27, 14, 12]} />
+          <meshBasicMaterial color="#111" side={THREE.BackSide} />
+        </mesh>
         <M scale={[1, 0.95, 0.96]}>
           <sphereGeometry args={[0.27, 14, 12]} />
-          <meshStandardMaterial color="#ffd9b3" roughness={0.75} />
+          <meshToonMaterial color="#ffffff" />
         </M>
         {[-1, 1].map((s) => (
           <group key={s}>
@@ -223,6 +231,10 @@ export const Capsa: React.FC<{ position: Vec3; scale?: number; t: number; seed?:
   const sn = [...seed].reduce((a, c) => a + c.charCodeAt(0), 0);
   return (
     <group position={position} scale={scale} rotation={[Math.sin(t * 5 + sn) * 0.12, Math.sin(t * 3 + sn) * 0.3, Math.sin(t * 4 + sn) * 0.1]}>
+      <mesh scale={1.1}>
+        <dodecahedronGeometry args={[0.24, 0]} />
+        <meshBasicMaterial color="#111" side={THREE.BackSide} />
+      </mesh>
       <M>
         <dodecahedronGeometry args={[0.24, 0]} />
         <meshStandardMaterial color="#ff5a1f" emissive="#ff3b00" emissiveIntensity={0.55} roughness={0.6} flatShading />
@@ -303,13 +315,40 @@ export const ChiliPepper: React.FC<{ position: Vec3; rotation?: Vec3; scale?: nu
 /* ------------------------------------------------------------------ */
 export const Kantin: React.FC<{ t: number; milk?: number; water?: number; level?: 30 | 31 }> = ({ t, milk = 0, water = 1 }) => {
   const wood = useCanvasTex("kantinwood", 256, 256, (g) => {
-    g.fillStyle = "#c79a64";
+    g.fillStyle = "#3b2312";
     g.fillRect(0, 0, 256, 256);
     for (let i = 0; i < 8; i++) {
-      g.fillStyle = i % 2 ? "#bb8c58" : "#d0a46f";
-      g.fillRect(0, i * 32, 256, 30);
+      g.fillStyle = i % 2 ? "#b98650" : "#cf9d62";
+      g.fillRect(0, i * 32 + 2, 256, 28);
+      for (let k = 0; k < 14; k++) {
+        g.strokeStyle = "rgba(90,50,20,0.35)";
+        g.lineWidth = 1.5;
+        const y = i * 32 + 4 + Math.abs(Math.sin(i * 7.3 + k * 1.9)) * 24;
+        g.beginPath();
+        g.moveTo(0, y);
+        g.bezierCurveTo(80, y + 3, 170, y - 3, 256, y + 1);
+        g.stroke();
+      }
     }
   });
+  const wall = useCanvasTex("kantinwall", 512, 256, (g) => {
+    g.fillStyle = "#e9c791";
+    g.fillRect(0, 0, 512, 256);
+    for (let r = 0; r < 8; r++)
+      for (let c = 0; c < 8; c++) {
+        const ox = r % 2 ? 32 : 0;
+        g.fillStyle = (r * 5 + c * 3) % 4 === 0 ? "#dcb67c" : (r + c) % 3 === 0 ? "#f1d3a0" : "#e6c28a";
+        g.fillRect(c * 64 + ox + 2, r * 32 + 2, 60, 28);
+      }
+    for (let i = 0; i < 90; i++) {
+      g.fillStyle = `rgba(110,70,30,${0.04 + (i % 5) * 0.015})`;
+      g.beginPath();
+      g.arc((i * 97) % 512, (i * 53) % 256, 6 + (i % 7) * 4, 0, 7);
+      g.fill();
+    }
+  });
+  wall.wrapS = wall.wrapT = THREE.RepeatWrapping;
+  wall.repeat.set(3, 1);
   wood.wrapS = wood.wrapT = THREE.RepeatWrapping;
   wood.repeat.set(6, 4);
   const bulbs = [-4, -2.4, -0.8, 0.8, 2.4, 4];
@@ -321,7 +360,7 @@ export const Kantin: React.FC<{ t: number; milk?: number; water?: number; level?
       </mesh>
       <mesh position={[0, 2.6, -2.6]} receiveShadow>
         <planeGeometry args={[18, 6]} />
-        <meshStandardMaterial color="#f4d9a8" roughness={0.95} />
+        <meshStandardMaterial map={wall} roughness={0.95} />
       </mesh>
       <mesh position={[0, 0.5, -2.58]}>
         <boxGeometry args={[18, 1.0, 0.04]} />
@@ -398,7 +437,8 @@ export const MenuBoard: React.FC<{ position: Vec3; rotation?: Vec3; scale?: numb
 export const FaceFX: React.FC<{ head: Vec3; t: number; tears?: number; sweat?: number; steam?: number; snot?: number }> = ({ head, t, tears = 0, sweat = 0, steam = 0, snot = 0 }) => {
   const [hx, hy, hz] = head;
   return (
-    <group>
+    <group position={[hx, hy, hz]} scale={1.55}>
+      <group position={[-hx, -hy, -hz]}>
       {tears > 0.02 &&
         [-1, 1].flatMap((s) =>
           [0, 1, 2].map((i) => {
@@ -446,6 +486,179 @@ export const FaceFX: React.FC<{ head: Vec3; t: number; tears?: number; sweat?: n
           </mesh>
         </group>
       )}
+      </group>
+    </group>
+  );
+};
+
+
+/* ------------------------------------------------------------------ */
+/* Toon: big white outlined head, capsule torso, hair-thin limbs        */
+/* (the minimalist look the viral blueprint asks for)                    */
+/* ------------------------------------------------------------------ */
+export type ToonExpr = "neutral" | "surprised" | "worried" | "happy" | "smug";
+const HULL = "#111";
+export const Toon: React.FC<{
+  position: Vec3;
+  rotationY?: number;
+  scale?: number;
+  t: number;
+  shirt?: string;
+  pants?: string;
+  hairColor?: string;
+  hat?: "none" | "peci" | "cap";
+  hatColor?: string;
+  apron?: string;
+  face?: string; // face colour (white -> red / purple for anger)
+  expr?: ToonExpr;
+  walking?: boolean;
+  walkF?: number;
+  armsUp?: number;
+  pointArm?: number;
+  shake?: number;
+  jump?: number;
+  seed?: string;
+  look?: number;
+}> = ({ position, rotationY = 0, scale = 1, t, shirt = "#3a86c8", pants = "#222", hairColor = "#1c1410", hat = "none", hatColor = "#111", apron, face = "#ffffff", expr = "neutral", walking = false, walkF = 2.2, armsUp = 0, pointArm = 0, shake = 0, jump = 0, seed = "toon", look = 0 }) => {
+  const sn = [...seed].reduce((a, c) => a + c.charCodeAt(0), 0);
+  const ph = Math.PI * walkF * t;
+  const c = walking ? Math.cos(ph) : 0;
+  const bob = (walking ? Math.abs(Math.sin(ph)) * 0.05 : Math.sin(t * 2.2 + sn) * 0.01) + jump * 0.2;
+  const jx = shake * Math.sin(t * 60) * 0.05;
+  const blink = (t + sn * 0.3) % 3 < 0.12 ? 0.12 : 1;
+  const lid = expr === "smug" ? 0.5 : expr === "happy" ? 0.8 : 1;
+  const eyeR = expr === "surprised" ? 0.105 : 0.088;
+  const browTilt = expr === "worried" ? 0.45 : expr === "smug" ? -0.25 : expr === "surprised" ? 0 : expr === "happy" ? -0.1 : 0.12;
+  const browY = expr === "surprised" ? 0.2 : 0.155;
+  const arm = (side: number) => {
+    const swing = walking ? -side * 0.55 * c : 0;
+    const up = -armsUp * 2.6;
+    const point = side > 0 ? -pointArm * 1.45 : 0;
+    return (
+      <group key={side} position={[side * 0.2, 1.0, 0]} rotation={[swing + up + point, 0, side * (0.14 + armsUp * 0.35)]}>
+        <mesh position={[0, -0.24, 0]}>
+          <cylinderGeometry args={[0.026, 0.026, 0.5, 6]} />
+          <meshBasicMaterial color={HULL} />
+        </mesh>
+        <M position={[0, -0.5, 0]}>
+          <sphereGeometry args={[0.058, 8, 8]} />
+          <meshToonMaterial color="#ffffff" />
+        </M>
+      </group>
+    );
+  };
+  return (
+    <group position={[position[0] + jx, position[1] + bob, position[2]]} rotation={[0, rotationY, shake * Math.sin(t * 50) * 0.05]} scale={scale}>
+      {[-1, 1].map((sd) => (
+        <group key={sd} position={[sd * 0.09, 0.62, 0]} rotation={[sd * 0.55 * c, 0, 0]}>
+          <mesh position={[0, -0.3, 0]}>
+            <cylinderGeometry args={[0.028, 0.028, 0.62, 6]} />
+            <meshBasicMaterial color={HULL} />
+          </mesh>
+          <M position={[0, -0.62, 0.05]} scale={[1, 0.5, 1.8]}>
+            <sphereGeometry args={[0.075, 8, 6]} />
+            <meshBasicMaterial color={HULL} />
+          </M>
+        </group>
+      ))}
+      <mesh position={[0, 0.9, 0]} scale={[1.12, 1.06, 0.92]}>
+        <capsuleGeometry args={[0.19, 0.3, 6, 12]} />
+        <meshBasicMaterial color={HULL} side={THREE.BackSide} />
+      </mesh>
+      <M position={[0, 0.9, 0]} scale={[1, 1, 0.82]}>
+        <capsuleGeometry args={[0.19, 0.3, 6, 12]} />
+        <meshToonMaterial color={shirt} />
+      </M>
+      <M position={[0, 0.7, 0]} scale={[1.02, 0.6, 0.86]}>
+        <sphereGeometry args={[0.2, 10, 8]} />
+        <meshToonMaterial color={pants} />
+      </M>
+      {apron && (
+        <M position={[0, 0.84, 0.155]}>
+          <boxGeometry args={[0.28, 0.4, 0.02]} />
+          <meshToonMaterial color={apron} />
+        </M>
+      )}
+      {arm(-1)}
+      {arm(1)}
+      <group position={[0, 1.5, 0]} rotation={[0, look + Math.sin(t * 0.8 + sn) * 0.05, 0]}>
+        <mesh scale={[1.05, 1.02, 1.03]}>
+          <sphereGeometry args={[0.32, 20, 16]} />
+          <meshBasicMaterial color={HULL} side={THREE.BackSide} />
+        </mesh>
+        <M>
+          <sphereGeometry args={[0.32, 20, 16]} />
+          <meshToonMaterial color={face} />
+        </M>
+        {[-1, 1].map((sd) => (
+          <group key={sd}>
+            <mesh position={[sd * 0.12, 0.03, 0.27]} scale={[1, Math.min(lid, blink), 0.5]}>
+              <sphereGeometry args={[eyeR * 1.12, 12, 10]} />
+              <meshBasicMaterial color={HULL} />
+            </mesh>
+            <mesh position={[sd * 0.12, 0.03, 0.285]} scale={[1, Math.min(lid, blink), 0.5]}>
+              <sphereGeometry args={[eyeR, 12, 10]} />
+              <meshBasicMaterial color="#ffffff" />
+            </mesh>
+            <mesh position={[sd * 0.12 + Math.sin(look) * 0.015, 0.03, 0.335]} scale={[1, Math.min(lid, blink), 1]}>
+              <sphereGeometry args={[expr === "surprised" ? 0.026 : 0.036, 8, 8]} />
+              <meshBasicMaterial color={HULL} />
+            </mesh>
+            <mesh position={[sd * 0.12, browY, 0.28]} rotation={[0, 0, -sd * browTilt]}>
+              <boxGeometry args={[0.14, 0.032, 0.02]} />
+              <meshBasicMaterial color={HULL} />
+            </mesh>
+          </group>
+        ))}
+        {expr === "surprised" && (
+          <mesh position={[0, -0.13, 0.3]} scale={[1, 1.4, 0.4]}>
+            <sphereGeometry args={[0.05, 10, 10]} />
+            <meshBasicMaterial color="#3a0a10" />
+          </mesh>
+        )}
+        {(expr === "happy" || expr === "smug") && (
+          <mesh position={[expr === "smug" ? 0.03 : 0, -0.08, 0.3]} rotation={[0, 0, Math.PI]}>
+            <torusGeometry args={[0.075, 0.014, 6, 16, Math.PI]} />
+            <meshBasicMaterial color={HULL} />
+          </mesh>
+        )}
+        {expr === "worried" && (
+          <mesh position={[0, -0.16, 0.3]}>
+            <torusGeometry args={[0.06, 0.014, 6, 16, Math.PI]} />
+            <meshBasicMaterial color={HULL} />
+          </mesh>
+        )}
+        {expr === "neutral" && (
+          <mesh position={[0, -0.12, 0.3]}>
+            <boxGeometry args={[0.11, 0.022, 0.01]} />
+            <meshBasicMaterial color={HULL} />
+          </mesh>
+        )}
+        {hat === "none" && [0, 1, 2, 3, 4].map((i) => (
+          <mesh key={i} position={[(i - 2) * 0.07, 0.33 + (i % 2) * 0.02, 0]} rotation={[0, 0, -(i - 2) * 0.28]}>
+            <coneGeometry args={[0.03, 0.14, 4]} />
+            <meshBasicMaterial color={hairColor} />
+          </mesh>
+        ))}
+        {hat === "peci" && (
+          <M position={[0, 0.3, 0]}>
+            <cylinderGeometry args={[0.2, 0.22, 0.17, 14]} />
+            <meshToonMaterial color={hatColor} />
+          </M>
+        )}
+        {hat === "cap" && (
+          <>
+            <M position={[0, 0.28, 0]}>
+              <sphereGeometry args={[0.34, 14, 8, 0, Math.PI * 2, 0, 1.0]} />
+              <meshToonMaterial color={hatColor} />
+            </M>
+            <M position={[0, 0.2, 0.3]} rotation={[0.15, 0, 0]}>
+              <boxGeometry args={[0.3, 0.03, 0.2]} />
+              <meshToonMaterial color={hatColor} />
+            </M>
+          </>
+        )}
+      </group>
     </group>
   );
 };
