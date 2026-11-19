@@ -72,8 +72,8 @@ const CUST_LOOK = [
   { skin: "#c89068", shirt: "#f4a261", hair: "#6b4a2b", style: "short" as const },
 ];
 const CUST_X = [-1.45, -0.8, -0.15, 0.5];
-const POLE_L: Vec3 = [-1.55, 0, 0.7];
-const POLE_R: Vec3 = [1.55, 0, 0.7];
+const POLE_L: Vec3 = [-1.3, 0, 1.4];
+const POLE_R: Vec3 = [1.3, 0, 1.4];
 
 const Stage: React.FC<{
   t: number;
@@ -97,10 +97,11 @@ const Stage: React.FC<{
   cam?: Vec3;
   look?: Vec3;
   fov?: number;
-}> = ({ t, rain = 0, raniX, raniZ = 0.7, raniRot = 0, raniWalking = false, raniWalkF = 2, raniUp = 0, raniReach = 0, raniShake = 0, custs, ratmi, aldi, mat = 0, basket = 1, spark, plus = 0, plastic = false, cam = [0, 1.6, 7.2], look = [0, 1.15, 0], fov = 50 }) => {
+}> = ({ t, rain = 0, raniX, raniZ = 1.4, raniRot = 0, raniWalking = false, raniWalkF = 2, raniUp = 0, raniReach = 0, raniShake = 0, custs, ratmi, aldi, mat = 0, basket = 1, spark, plus = 0, plastic = false, cam = [0, 1.6, 7.2], look = [0, 1.15, 0], fov = 50 }) => {
   const { width, height } = useVideoConfig();
   const dim = 1 - 0.38 * rain;
   return (
+    <>
     <ThreeCanvas width={width} height={height} camera={{ fov, near: 0.1, far: 200, position: cam }}>
       <CameraRig position={cam} lookAt={look} />
       <ambientLight intensity={1.35 * dim + 0.2} color={rain > 0.5 ? "#a9bdd6" : "#fff4e0"} />
@@ -136,7 +137,7 @@ const Stage: React.FC<{
         );
       })}
       {/* Aldi */}
-      {aldi?.visible && <Person position={[aldi.x, 0, 1.1]} t={t} scale={0.62} skin="#d2a679" shirt="#ffffff" pants="#d62828" hair="#1a1410" style="short" seed="aldi" pointArm={aldi.point ?? 0} rotationY={aldi.point ? 0.3 : -0.2} />}
+      {aldi?.visible && <Person position={[aldi.x, 0, 2.0]} t={t} scale={0.62} skin="#d2a679" shirt="#ffffff" pants="#d62828" hair="#1a1410" style="short" seed="aldi" pointArm={aldi.point ?? 0} rotationY={aldi.point ? 0.3 : -0.2} />}
       {/* Rani */}
       <Person
         position={[raniX, 0, raniZ]}
@@ -165,6 +166,8 @@ const Stage: React.FC<{
       {plus > 0.02 && <ChargePlus origin={[raniX, 1.1, raniZ]} t={t} amount={plus} />}
       {spark && <Spark position={spark.pos} s={spark.s} seed={spark.seed} />}
     </ThreeCanvas>
+    <AbsoluteFill style={{ background: "linear-gradient(rgba(10,20,45,0) 58%, rgba(10,20,45,0.62) 82%, rgba(10,20,45,0.8) 100%)" }} />
+    </>
   );
 };
 
@@ -185,7 +188,7 @@ export const SceneRaniHook: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const x = interpolate(frame, [EV("hook.walk0"), EV("hook.walk1")], [-1.9, 1.9], clamp);
+  const x = interpolate(frame, [EV("hook.walk0"), EV("hook.walk1")], [-2.2, 2.2], clamp);
   const walking = frame > EV("hook.walk0") && frame < EV("hook.walk1");
   const stand = interpolate(frame, [EV("hook.stand"), EV("hook.stand") + 24], [0, 1], clamp);
   const l1 = spring({ frame: frame - 4, fps, config: { damping: 13 } });
@@ -195,7 +198,7 @@ export const SceneRaniHook: React.FC = () => {
       <Backdrop />
       <Stage t={t} raniX={x} raniRot={Math.PI / 2} raniWalking={walking} raniWalkF={2.0} custs={hairFor(x, stand)} ratmi={{}} />
       <div style={{ position: "absolute", top: 215, width: "100%", textAlign: "center" }}>
-        <div style={{ fontFamily: FONT_BODY, fontWeight: 800, fontSize: 52, letterSpacing: 5, color: "#1d3557", opacity: l1, transform: `translateY(${(1 - l1) * 30}px)` }}>
+        <div style={{ fontFamily: FONT_BODY, fontWeight: 800, fontSize: 52, letterSpacing: 5, color: "white", WebkitTextStroke: "3px #1d3557", paintOrder: "stroke fill", opacity: l1, transform: `translateY(${(1 - l1) * 30}px)` }}>
           WARUNG BU RATMI
         </div>
         <div style={{ fontFamily: FONT_TITLE, fontSize: 150, lineHeight: 1.04, color: "white", opacity: l2, transform: `scale(${1.4 - 0.4 * l2})`, WebkitTextStroke: "5px #1d3557", paintOrder: "stroke fill", textShadow: "0 10px 0 #1d3557" }}>
@@ -259,7 +262,7 @@ export const SceneRaniSengat: React.FC = () => {
   const burst = interpolate(frame, [tikF, tikF + 3, tikF + 16], [0, 1, 0], clamp);
   const shake = frame >= tikF && frame < tikF + 14 ? 1 : 0;
   const leave = interpolate(frame, [EV("sengat.leave"), EV("sengat.leave") + 70], [0, 1], clamp);
-  const raniX = -0.95;
+  const raniX = -0.7;
   const custs = hairFor(raniX, 0.75).map((c, i) => ({ ...c, away: i === 2 ? 0 : leave }));
   const flash = interpolate(frame, [tikF, tikF + 2, tikF + 8], [0, 0.55, 0], clamp);
   const tik = spring({ frame: frame - tikF, fps, config: { damping: 7, stiffness: 220 } });
@@ -275,7 +278,7 @@ export const SceneRaniSengat: React.FC = () => {
         raniUp={frame >= tikF ? 0.9 : 0.1}
         custs={custs}
         plastic={frame >= EV("sengat.plastic")}
-        spark={{ pos: [raniX - 0.62, 1.25, 1.0], s: burst * 1.6, seed: "s1" }}
+        spark={{ pos: [raniX - 0.62, 1.25, 1.71], s: burst * 1.6, seed: "s1" }}
         cam={[-0.4, 1.5, 6.3]}
         look={[-0.35, 1.15, 0]}
       />
@@ -377,7 +380,7 @@ export const SceneRaniTik: React.FC = () => {
   const tikF = EV("tik.tik");
   const fallF = EV("tik.fall");
   const rel = Math.round(LN("tik_3").from + 0.62 * (LN("tik_3").to - LN("tik_3").from));
-  const raniX = 0.95;
+  const raniX = 0.7;
   const reach = interpolate(frame, [EV("tik.touch"), tikF], [0, 1], clamp);
   const burst1 = interpolate(frame, [tikF, tikF + 3, tikF + 16], [0, 1, 0], clamp);
   const burst2 = interpolate(frame, [rel, rel + 3, rel + 16], [0, 1, 0], clamp);
@@ -399,7 +402,7 @@ export const SceneRaniTik: React.FC = () => {
         raniShake={frame >= tikF && frame < tikF + 12 ? 1 : 0}
         custs={hairFor(raniX, up)}
         plus={plus}
-        spark={{ pos: [raniX + 0.62, 1.25, 0.4], s: Math.max(burst1, burst2) * 1.7, seed: frame >= rel ? "s3" : "s2" }}
+        spark={{ pos: [raniX + 0.62, 1.25, 1.09], s: Math.max(burst1, burst2) * 1.7, seed: frame >= rel ? "s3" : "s2" }}
         cam={[0.55, 1.4, 6.1]}
         look={[0.55, 1.1, 0]}
       />

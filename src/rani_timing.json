@@ -1,0 +1,163 @@
+{
+ "fps": 30,
+ "total_frames": 2273,
+ "scenes": {
+  "hook": 323,
+  "curiga": 313,
+  "sengat": 314,
+  "hujan": 307,
+  "aldi": 283,
+  "tik": 432,
+  "akhir": 301
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Rani, kasir baru di warung Bu Ratmi, bisa bikin rambut orang berdiri, cuma dengan lewat.",
+   "from": 7,
+   "to": 152
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Rambut para pembeli di antrean tegak serentak, lalu condong ke arahnya, kayak tanaman nyari matahari.",
+   "from": 160,
+   "to": 308
+  },
+  "curiga_1": {
+   "scene": "curiga",
+   "text": "Bu Ratmi yakin Rani punya aura aneh. Katanya, harus mandi kembang tujuh rupa.",
+   "from": 7,
+   "to": 159
+  },
+  "curiga_2": {
+   "scene": "curiga",
+   "text": "Padahal Rani baru seminggu kerja, sejak lantai warung diganti vinil baru yang licin.",
+   "from": 167,
+   "to": 301
+  },
+  "sengat_1a": {
+   "scene": "sengat",
+   "text": "Tiap Rani pegang rak besi, dia tersengat.",
+   "from": 7,
+   "to": 73
+  },
+  "sengat_1b": {
+   "scene": "sengat",
+   "text": "Tik.",
+   "from": 87,
+   "to": 98
+  },
+  "sengat_1c": {
+   "scene": "sengat",
+   "text": "Plastik bungkus menempel di lengannya, dan susah dikibas.",
+   "from": 103,
+   "to": 185
+  },
+  "sengat_2": {
+   "scene": "sengat",
+   "text": "Pembeli pun pindah ke warung sebelah. Cuma Pak Botak yang tetap santai.",
+   "from": 194,
+   "to": 302
+  },
+  "hujan_1": {
+   "scene": "hujan",
+   "text": "Lalu hujan turun tiga hari, dan nggak ada satu pun rambut yang berdiri.",
+   "from": 7,
+   "to": 107
+  },
+  "hujan_2a": {
+   "scene": "hujan",
+   "text": "Kata Bu Ratmi, alhamdulillah, auranya sudah luntur.",
+   "from": 115,
+   "to": 194
+  },
+  "hujan_2b": {
+   "scene": "hujan",
+   "text": "Tapi begitu cuaca panas lagi, rambut-rambut itu berdiri lagi.",
+   "from": 205,
+   "to": 295
+  },
+  "aldi_1": {
+   "scene": "aldi",
+   "text": "Sampai Aldi, anak SD yang lagi pintar-pintarnya IPA, memperhatikan Rani jalan menyeret sandal di atas vinil itu.",
+   "from": 7,
+   "to": 181
+  },
+  "aldi_2": {
+   "scene": "aldi",
+   "text": "Dia menyuruh Rani memegang pagar besi di depan warung.",
+   "from": 189,
+   "to": 271
+  },
+  "tik_1": {
+   "scene": "tik",
+   "text": "Tik.",
+   "from": 16,
+   "to": 27
+  },
+  "tik_1b": {
+   "scene": "tik",
+   "text": "Rambut semua orang langsung turun.",
+   "from": 36,
+   "to": 83
+  },
+  "tik_2a": {
+   "scene": "tik",
+   "text": "Itu listrik statis, Bu.",
+   "from": 95,
+   "to": 140
+  },
+  "tik_2b": {
+   "scene": "tik",
+   "text": "Sandal karet diseret di lantai vinil bikin badan Rani penuh muatan.",
+   "from": 145,
+   "to": 259
+  },
+  "tik_3": {
+   "scene": "tik",
+   "text": "Rambut berdiri karena muatannya sama, jadi saling tolak. Begitu menyentuh besi, muatannya lepas.",
+   "from": 267,
+   "to": 417
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Besoknya, Bu Ratmi memasang keset kain, dan lantai vinil itu pun ditutup.",
+   "from": 7,
+   "to": 135
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Tapi keranjang kembang tujuh rupa tetap ada di samping meja kasir. Jaga-jaga.",
+   "from": 146,
+   "to": 265
+  }
+ },
+ "events": {
+  "hook.walk0": 6,
+  "hook.stand": 161,
+  "hook.walk1": 317,
+  "curiga.aura": 16,
+  "curiga.basket": 101,
+  "curiga.vinyl": 234,
+  "sengat.touch": 80,
+  "sengat.tik": 87,
+  "sengat.plastic": 113,
+  "sengat.leave": 195,
+  "hujan.rain0": 8,
+  "hujan.sun": 205,
+  "hujan.up": 235,
+  "aldi.enter": 8,
+  "aldi.point": 189,
+  "tik.touch": 8,
+  "tik.tik": 16,
+  "tik.fall": 37,
+  "tik.charge": 146,
+  "tik.repel": 268,
+  "tik.release": 360,
+  "akhir.mat": 84,
+  "akhir.basket": 147
+ },
+ "stepF": {
+  "rani": 1.6
+ }
+}

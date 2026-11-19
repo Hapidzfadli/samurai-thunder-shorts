@@ -178,7 +178,7 @@ export const Person: React.FC<{
 export const WarungSet: React.FC<{ rainy?: boolean }> = ({ rainy = false }) => {
   const tiles = useMemo(() => {
     const out: { x: number; z: number; a: boolean }[] = [];
-    for (let i = -8; i < 8; i++) for (let j = -5; j < 5; j++) out.push({ x: i * 0.5 + 0.25, z: j * 0.5 + 0.25 - 0.5, a: (i + j) % 2 === 0 });
+    for (let i = -8; i < 8; i++) for (let j = -5; j < 12; j++) out.push({ x: i * 0.5 + 0.25, z: j * 0.5 + 0.25 - 0.5, a: (i + j) % 2 === 0 });
     return out;
   }, []);
   const goods = useMemo(
@@ -187,6 +187,11 @@ export const WarungSet: React.FC<{ rainy?: boolean }> = ({ rainy = false }) => {
   );
   return (
     <group>
+      {/* base floor reaching toward the camera */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 4]}>
+        <planeGeometry args={[14, 22]} />
+        <meshStandardMaterial color="#cfe9dc" roughness={0.6} />
+      </mesh>
       {/* vinyl floor (checker) */}
       {tiles.map((tl, i) => (
         <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[tl.x, 0.005, tl.z]}>
@@ -203,13 +208,13 @@ export const WarungSet: React.FC<{ rainy?: boolean }> = ({ rainy = false }) => {
       {[0, 1, 2].map((r) => (
         <mesh key={r} position={[0, 0.3 + r * 0.72, -2.35]}>
           <boxGeometry args={[3.9, 0.04, 0.5]} />
-          <meshStandardMaterial color="#9aa5b1" metalness={0.8} roughness={0.35} />
+          <meshStandardMaterial color="#b8c2cc" metalness={0.25} roughness={0.45} />
         </mesh>
       ))}
       {[-1.9, 1.9].map((x) => (
         <mesh key={x} position={[x, 1.1, -2.35]}>
           <boxGeometry args={[0.05, 2.3, 0.5]} />
-          <meshStandardMaterial color="#9aa5b1" metalness={0.8} roughness={0.35} />
+          <meshStandardMaterial color="#b8c2cc" metalness={0.25} roughness={0.45} />
         </mesh>
       ))}
       {goods.map((g, i) => (
@@ -241,11 +246,11 @@ export const IronPole: React.FC<{ position: Vec3 }> = ({ position }) => (
   <group position={position}>
     <mesh position={[0, 1.7, 0]}>
       <cylinderGeometry args={[0.07, 0.07, 3.4, 8]} />
-      <meshStandardMaterial color="#8d99a6" metalness={0.85} roughness={0.3} />
+      <meshStandardMaterial color="#b8c2cc" metalness={0.25} roughness={0.45} />
     </mesh>
     <mesh position={[0, 0.03, 0]}>
       <cylinderGeometry args={[0.16, 0.18, 0.06, 8]} />
-      <meshStandardMaterial color="#6e7885" metalness={0.8} roughness={0.4} />
+      <meshStandardMaterial color="#8d99a6" metalness={0.25} roughness={0.5} />
     </mesh>
   </group>
 );
