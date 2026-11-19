@@ -266,7 +266,7 @@ def voice_deepen(clip: np.ndarray, factor: float = 1.45) -> np.ndarray:
     return (out / (np.max(np.abs(out)) + 1e-6) * 0.95).astype(np.float32)
 
 
-def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_hangat"):
+def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_hangat", out_name: str = "genderuwo_master.mp3"):
     narr_wav = prepare_voice_prompt(voice_arg)
     hus_wav = prepare_voice_prompt(husband_voice)
     print(f"Narator: {narr_wav.name} | Suara suami/genderuwo: {hus_wav.name}")
@@ -367,7 +367,7 @@ def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_
     peak = np.max(np.abs(master)) + 1e-6
     master = np.tanh(master / peak * 1.6) / np.tanh(1.6) * 0.92
 
-    out_mp3 = OUT_DIR / "genderuwo_master.mp3"
+    out_mp3 = OUT_DIR / out_name
     wav_path = out_mp3.with_suffix(".wav")
     pcm = (np.clip(master, -1.0, 1.0) * 32767).astype(np.int16)
     with wave.open(str(wav_path), "wb") as wf:
@@ -387,5 +387,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate Genderuwo (Bahasa Indonesia) audio with Zero-Shot Voice Cloning")
     parser.add_argument("--voice", default="pria_bariton", help="Suara narator (preset atau path .wav/.mp3)")
     parser.add_argument("--husband", default="pria_hangat", help="Suara 'suami' (dan dasar suara genderuwo)")
+    parser.add_argument("--out", default="genderuwo_master.mp3", help="Nama file mp3 keluaran di public/audio/")
     args = parser.parse_args()
-    build_genderuwo(args.voice, args.husband)
+    build_genderuwo(args.voice, args.husband, args.out)
