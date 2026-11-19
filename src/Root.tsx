@@ -4,6 +4,7 @@ import "@fontsource/inter/800.css";
 import "@fontsource/noto-serif-jp/900.css";
 import { Composition } from "remotion";
 import { CharacterShowcase } from "./CharacterShowcase";
+import { RailroadExpansion, TOTAL_FRAMES_RAILROAD } from "./RailroadExpansion";
 import { CHARACTER_PRESETS } from "./three/characters";
 import { SamuraiThunder, TOTAL_FRAMES } from "./SamuraiThunder";
 import { SamuraiThunderPart2, TOTAL_FRAMES_P2 } from "./SamuraiThunderPart2";
@@ -12,6 +13,14 @@ import { TOTAL_FRAMES_WEWE, WeweGombel } from "./WeweGombel";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="RailroadExpansion"
+        component={RailroadExpansion}
+        durationInFrames={TOTAL_FRAMES_RAILROAD}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="CharacterShowcase"
         component={CharacterShowcase}
