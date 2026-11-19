@@ -14,20 +14,27 @@ import {
   SuamiFigure,
   YuDarmi,
 } from "./three/objectsGenderuwo";
+import timing from "./genderuwo_timing.json";
 import { Caption, FONT_BODY, FONT_TITLE, GOLD, Kicker, NightSky, RED, SceneFade, lightning } from "./ui";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const ease = Easing.bezier(0.45, 0, 0.2, 1);
 
-export const DURATIONS_GEN = {
-  hook: 150,
-  rumah: 240,
-  tanda: 240,
-  panggil: 270,
-  kelor: 300,
-  gedor: 240,
-  fajar: 330,
+/** Scene lengths, caption windows and visual beats all come from the narration timing written by
+ *  scripts/build_audio_genderuwo.py, so the picture always follows the speech. */
+export const DURATIONS_GEN = timing.scenes as {
+  hook: number;
+  rumah: number;
+  tanda: number;
+  panggil: number;
+  kelor: number;
+  gedor: number;
+  fajar: number;
 };
+type LineId = keyof typeof timing.lines;
+const LN = (id: LineId) => timing.lines[id];
+const EV = (name: string) => (timing.events as Record<string, number>)[name];
+const capTo = (id: LineId) => LN(id).to + 4;
 
 const Canvas: React.FC<{ children: React.ReactNode; fov?: number }> = ({ children, fov = 50 }) => {
   const { width, height } = useVideoConfig();
@@ -83,14 +90,14 @@ const Chip: React.FC<{ label: string; n: string; from: number; to: number; top: 
 /* 1. HOOK — a closed door in the dead of night                        */
 /* ================================================================== */
 const DoorInside: React.FC<{ frame: number }> = ({ frame }) => {
-  const knocks = [92, 106, 120];
+  const knocks = [EV("hook.knock1"), EV("hook.knock2"), EV("hook.knock3")];
   let shake = 0;
   for (const k of knocks) {
     const d = frame - k;
     if (d >= 0 && d < 8) shake = Math.max(shake, 1 - d / 8);
   }
-  const shadowX = interpolate(frame, [18, 74], [-2.4, 0.2], clamp);
-  const eyes = interpolate(frame, [78, 90], [0, 1], clamp);
+  const shadowX = interpolate(frame, [12, EV("hook.eyes") - 4], [-2.4, 0.2], clamp);
+  const eyes = interpolate(frame, [EV("hook.eyes"), EV("hook.eyes") + 12], [0, 1], clamp);
   const plank = "#7d5636";
   return (
     <group>
@@ -162,9 +169,9 @@ export const SceneGenHook: React.FC = () => {
   const t = frame / fps;
   const l1 = spring({ frame: frame - 6, fps, config: { damping: 14 } });
   const l2 = spring({ frame: frame - 16, fps, config: { damping: 12 } });
-  const l3 = spring({ frame: frame - 90, fps, config: { damping: 9, stiffness: 190 } });
-  const knockFlash = lightning(frame, [92, 106, 120]);
-  const camZ = interpolate(frame, [0, 150], [8.2, 6.6], { ...clamp, easing: ease });
+  const l3 = spring({ frame: frame - EV("hook.knock1"), fps, config: { damping: 9, stiffness: 190 } });
+  const knockFlash = lightning(frame, [EV("hook.knock1"), EV("hook.knock2"), EV("hook.knock3")]);
+  const camZ = interpolate(frame, [0, DURATIONS_GEN.hook], [8.2, 6.6], { ...clamp, easing: ease });
 
   return (
     <AbsoluteFill style={{ background: "#05070f" }}>
@@ -238,13 +245,14 @@ export const SceneGenRumah: React.FC = () => {
   const { fps } = useVideoConfig();
   const t = frame / fps;
   const p = interpolate(frame, [0, DURATIONS_GEN.rumah], [0, 1], { ...clamp, easing: ease });
-  const cam: Vec3 = [interpolate(p, [0, 1], [0.4, 0.1]), interpolate(p, [0, 1], [2.3, 1.9]), interpolate(p, [0, 1], [11, 8.6])];
+  const pan = interpolate(frame, [EV("rumah.pan"), EV("rumah.pan") + 70], [0, 1], { ...clamp, easing: ease });
+  const cam: Vec3 = [interpolate(p, [0, 1], [0.4, 0.1]) + pan * 1.2, interpolate(p, [0, 1], [2.3, 1.9]), interpolate(p, [0, 1], [11, 8.6])];
 
   return (
     <AbsoluteFill>
       <NightSky moonX={820} moonY={330} />
       <Canvas fov={50}>
-        <CameraRig position={cam} lookAt={[0.2, 1.7, -3]} />
+        <CameraRig position={cam} lookAt={[0.2 + pan * 2.2, 1.9 + pan * 0.9, -3 - pan * 3]} />
         <NightLights />
         <NightGround t={t} />
         <KampungHouse position={[0.6, 0, -3.0]} rotationY={0.12} scale={1.15} />
@@ -256,16 +264,16 @@ export const SceneGenRumah: React.FC = () => {
       <Kicker text="SEBUAH KAMPUNG · TENGAH MALAM" from={6} top={235} />
       <Caption
         text="Yu Darmi tinggal sendirian. Suaminya merantau jauh."
-        from={6}
-        to={108}
+        from={LN("rumah_1").from}
+        to={capTo("rumah_1")}
         highlight={["SENDIRIAN", "MERANTAU"]}
         top={1290}
         size={70}
       />
       <Caption
         text="Beringin tua itu rumah GENDERUWO, kata warga"
-        from={117}
-        to={234}
+        from={LN("rumah_2").from}
+        to={capTo("rumah_2")}
         highlight={["GENDERUWO"]}
         highlightColor={RED}
         top={1290}
@@ -285,8 +293,8 @@ export const SceneGenTanda: React.FC = () => {
   const t = frame / fps;
   const p = interpolate(frame, [0, DURATIONS_GEN.tanda], [0, 1], { ...clamp, easing: ease });
   const cam: Vec3 = [interpolate(p, [0, 1], [-0.5, 0.2]), interpolate(p, [0, 1], [1.9, 1.7]), interpolate(p, [0, 1], [8.4, 6.8])];
-  const eyes = interpolate(frame, [150, 164], [0, 1], clamp);
-  const lampDim = 0.55 + 0.45 * Math.abs(Math.sin(frame * 0.35)) * (frame > 170 ? 1 : 0.4);
+  const eyes = interpolate(frame, [EV("tanda.eyes"), EV("tanda.eyes") + 14], [0, 1], clamp);
+  const lampDim = 0.55 + 0.45 * Math.abs(Math.sin(frame * 0.35)) * (frame > EV("tanda.eyes") ? 1 : 0.4);
 
   return (
     <AbsoluteFill>
@@ -311,20 +319,20 @@ export const SceneGenTanda: React.FC = () => {
         <pointLight position={[0.2, 1.6, 0.4]} intensity={3 * lampDim} distance={6} color="#ffa955" />
       </Canvas>
       <Kicker text="TENGAH MALAM · TANDA PERTAMA" from={6} top={235} />
-      <Chip n="①" label="BAU SINGKONG BAKAR" from={40} to={118} top={430} left />
-      <Chip n="②" label="ANJING MENDADAK DIAM" from={130} to={232} top={430} left={false} />
+      <Chip n="①" label="BAU SINGKONG BAKAR" from={LN("tanda_1").from + 24} to={capTo("tanda_1")} top={430} left />
+      <Chip n="②" label="ANJING MENDADAK DIAM" from={LN("tanda_2").from + 6} to={capTo("tanda_2")} top={430} left={false} />
       <Caption
         text="Bau singkong bakar menyengat, padahal tak ada yang membakar"
-        from={6}
-        to={120}
+        from={LN("tanda_1").from}
+        to={capTo("tanda_1")}
         highlight={["SINGKONG", "BAKAR"]}
         top={1290}
         size={68}
       />
       <Caption
-        text="Anjing menggonggong... lalu mendadak DIAM"
-        from={126}
-        to={234}
+        text="Anjing mendadak DIAM. Lampu minyak bergoyang"
+        from={LN("tanda_2").from}
+        to={capTo("tanda_2")}
         highlight={["DIAM"]}
         highlightColor={RED}
         top={1290}
@@ -358,10 +366,10 @@ export const SceneGenPanggil: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const walk = interpolate(frame, [20, 215], [0, 1], { ...clamp, easing: Easing.inOut(Easing.quad) });
+  const walk = interpolate(frame, [EV("panggil.walk0"), EV("panggil.walk1")], [0, 1], { ...clamp, easing: Easing.inOut(Easing.quad) });
   const pos: Vec3 = [interpolate(walk, [0, 1], [-3.0, 0.1]), 0, interpolate(walk, [0, 1], [-14.5, -5.2])];
-  const quote = spring({ frame: frame - 100, fps, config: { damping: 12 } });
-  const quoteOut = interpolate(frame, [166, 176], [1, 0], clamp);
+  const quote = spring({ frame: frame - EV("panggil.quote0"), fps, config: { damping: 12 } });
+  const quoteOut = interpolate(frame, [EV("panggil.quote1") - 10, EV("panggil.quote1")], [1, 0], clamp);
 
   return (
     <AbsoluteFill>
@@ -398,11 +406,11 @@ export const SceneGenPanggil: React.FC = () => {
           MAS PULANG.”
         </div>
       </div>
-      <Caption text="Lalu terdengar suara dari arah beringin" from={6} to={90} highlight={["SUARA"]} top={1290} size={70} />
+      <Caption text="Lalu terdengar suara dari arah beringin" from={LN("panggil_1").from} to={capTo("panggil_1")} highlight={["SUARA"]} top={1290} size={70} />
       <Caption
         text="Suaranya persis suaminya. Tapi kenapa ia tak mau mendekat?"
-        from={180}
-        to={267}
+        from={LN("panggil_3").from}
+        to={capTo("panggil_3")}
         highlight={["PERSIS", "TAK"]}
         highlightColor={RED}
         top={1290}
@@ -420,14 +428,15 @@ export const SceneGenKelor: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const approach = interpolate(frame, [0, 70], [0, 1], { ...clamp, easing: Easing.out(Easing.quad) });
+  const approach = interpolate(frame, [EV("kelor.approach0"), EV("kelor.approach1")], [0, 1], { ...clamp, easing: Easing.out(Easing.quad) });
+  const flipF = EV("kelor.flip");
   const z = interpolate(approach, [0, 1], [-5.4, -4.3]);
-  const flash = lightning(frame, [142, 150]);
-  const isGen = frame >= 142;
-  const kelorGrow = spring({ frame: frame - 24, fps, config: { damping: 14 } });
+  const flash = lightning(frame, [flipF, flipF + 8]);
+  const isGen = frame >= flipF;
+  const kelorGrow = spring({ frame: frame - EV("kelor.leaves"), fps, config: { damping: 14 } });
   // blocked: lean in, recoil, lean in, recoil
-  const press = isGen ? Math.max(0, Math.sin((frame - 150) * 0.16)) : 0;
-  const rage = interpolate(frame, [180, 300], [0, 1], clamp);
+  const press = isGen ? Math.max(0, Math.sin((frame - flipF - 8) * 0.16)) : 0;
+  const rage = interpolate(frame, [flipF + 30, DURATIONS_GEN.kelor], [0, 1], clamp);
   const shakeAmt = isGen ? 0.02 + rage * 0.03 : 0;
   const camShake: Vec3 = [Math.sin(frame * 3.1) * shakeAmt, Math.cos(frame * 2.7) * shakeAmt, 0];
 
@@ -442,7 +451,7 @@ export const SceneGenKelor: React.FC = () => {
             <SuamiFigure
               position={[0.1, 0, z]}
               t={t}
-              eyeGlow={frame > 110 ? interpolate(frame, [110, 140], [0.3, 1], clamp) : 0}
+              eyeGlow={frame > EV("kelor.eyes") ? interpolate(frame, [EV("kelor.eyes"), EV("kelor.eyes") + 30], [0.3, 1], clamp) : 0}
             />
           )}
           {isGen && (
@@ -456,11 +465,11 @@ export const SceneGenKelor: React.FC = () => {
           )}
         </Yard>
       </Canvas>
-      <Chip n="①" label="DAUN KELOR DI AMBANG PINTU" from={14} to={118} top={430} left />
+      <Chip n="①" label="DAUN KELOR DI AMBANG PINTU" from={LN("kelor_1").from + 10} to={capTo("kelor_1")} top={430} left />
       <Caption
         text="Yu Darmi ingat pesan Mbah: sebar DAUN KELOR di ambang pintu"
-        from={6}
-        to={114}
+        from={LN("kelor_1").from}
+        to={capTo("kelor_1")}
         highlight={["KELOR"]}
         highlightColor="#7bdc66"
         top={1290}
@@ -468,20 +477,20 @@ export const SceneGenKelor: React.FC = () => {
       />
       <Caption
         text="Sosok itu berhenti. Tak sanggup melangkah."
-        from={120}
-        to={204}
+        from={LN("kelor_2").from}
+        to={capTo("kelor_2")}
         highlight={["BERHENTI", "MELANGKAH"]}
         top={1290}
         size={72}
       />
       <Caption
-        text="Matanya MERAH menyala!"
-        from={213}
-        to={294}
+        text="Bayangannya membesar, matanya MERAH menyala!"
+        from={LN("kelor_3").from}
+        to={capTo("kelor_3")}
         highlight={["MERAH"]}
         highlightColor={RED}
         top={1290}
-        size={92}
+        size={78}
       />
       <SceneFade duration={DURATIONS_GEN.kelor} inFrames={6} />
     </AbsoluteFill>
@@ -495,15 +504,15 @@ export const SceneGenGedor: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const flee = interpolate(frame, [138, 195], [0, 1], { ...clamp, easing: Easing.in(Easing.quad) });
-  const pound = frame < 130 ? Math.max(0, Math.sin(frame * 0.55)) : 0;
-  const hit = frame < 130 ? Math.max(0, Math.sin(frame * 0.55 - 0.4)) ** 6 : 0;
-  const roar = interpolate(frame, [104, 130], [0, 1], clamp) * (frame < 140 ? 1 : 0);
+  const roarF = EV("gedor.roar");
+  const flee = interpolate(frame, [EV("gedor.flee0"), EV("gedor.flee1")], [0, 1], { ...clamp, easing: Easing.in(Easing.quad) });
+  const pound = frame < roarF ? Math.max(0, Math.sin(frame * 0.55)) : 0;
+  const hit = frame < roarF ? Math.max(0, Math.sin(frame * 0.55 - 0.4)) ** 6 : 0;
+  const roar = interpolate(frame, [roarF - 16, roarF + 6], [0, 1], clamp) * (frame < EV("gedor.flee0") ? 1 : 0);
   const gz = interpolate(flee, [0, 1], [-4.3, -20]);
-  const sx = frame < 140 ? 0.03 + hit * 0.06 : 0;
+  const sx = frame < EV("gedor.flee0") ? 0.03 + hit * 0.06 : 0;
   const redFlash = hit * 0.18;
-  const quiet = interpolate(frame, [190, 215], [0, 1], clamp);
-
+  
   return (
     <AbsoluteFill>
       <NightSky moonX={780} moonY={340} />
@@ -531,8 +540,8 @@ export const SceneGenGedor: React.FC = () => {
       <AbsoluteFill style={{ background: "#ff2a10", opacity: redFlash }} />
       <Caption
         text="Ia menggedor pintu berkali-kali..."
-        from={87}
-        to={140}
+        from={LN("gedor_1").from}
+        to={roarF + 2}
         highlight={["MENGGEDOR"]}
         highlightColor={RED}
         top={1290}
@@ -540,14 +549,13 @@ export const SceneGenGedor: React.FC = () => {
       />
       <Caption
         text="lalu meraung dan menghilang"
-        from={146}
-        to={236}
+        from={roarF + 4}
+        to={capTo("gedor_1") + 10}
         highlight={["MERAUNG", "MENGHILANG"]}
         top={1290}
         size={78}
       />
-      <AbsoluteFill style={{ background: "black", opacity: quiet * 0.0 }} />
-      <SceneFade duration={DURATIONS_GEN.gedor} inFrames={4} />
+            <SceneFade duration={DURATIONS_GEN.gedor} inFrames={4} />
     </AbsoluteFill>
   );
 };
@@ -597,11 +605,11 @@ export const SceneGenFajar: React.FC = () => {
   const t = frame / fps;
   const p = interpolate(frame, [0, DURATIONS_GEN.fajar], [0, 1], { ...clamp, easing: ease });
   const cam: Vec3 = [interpolate(p, [0, 1], [-0.2, 0.3]), interpolate(p, [0, 1], [2.3, 1.9]), interpolate(p, [0, 1], [9.2, 7.6])];
-  const walk = interpolate(frame, [60, 270], [0, 1], { ...clamp, easing: Easing.inOut(Easing.quad) });
+  const walk = interpolate(frame, [EV("fajar.husband0"), EV("fajar.husband1")], [0, 1], { ...clamp, easing: Easing.inOut(Easing.quad) });
   const husbandPos: Vec3 = [interpolate(walk, [0, 1], [1.6, 0.35]), 0, interpolate(walk, [0, 1], [-32, -1.2])];
   const stepBob = Math.abs(Math.sin(frame * 0.35)) * 0.05 * (walk > 0 && walk < 1 ? 1 : 0);
-  const title = spring({ frame: frame - 214, fps, config: { damping: 12 } });
-  const t2 = spring({ frame: frame - 232, fps, config: { damping: 10, stiffness: 180 } });
+  const title = spring({ frame: frame - EV("fajar.card"), fps, config: { damping: 12 } });
+  const t2 = spring({ frame: frame - Math.round((LN("fajar_3").from + LN("fajar_3").to) / 2), fps, config: { damping: 10, stiffness: 180 } });
   const prints: { p: Vec3; r: number; m: boolean }[] = [
     { p: [3.2, 0, -6.2], r: 0.5, m: false },
     { p: [2.2, 0, -4.6], r: 0.45, m: true },
@@ -623,13 +631,13 @@ export const SceneGenFajar: React.FC = () => {
           <Footprint key={i} position={f.p} rotationY={f.r} mirror={f.m} scale={1.6} />
         ))}
         <YuDarmi position={[-1.0, 0, -1.7]} rotationY={0.5} t={t} lantern={false} />
-        <SuamiFigure position={[husbandPos[0], stepBob, husbandPos[2]]} t={t} scale={1} />
+        {frame >= EV("fajar.husband0") && <SuamiFigure position={[husbandPos[0], stepBob, husbandPos[2]]} t={t} scale={1} />}
       </Canvas>
       <Kicker text="FAJAR · JEJAK DI BAWAH BERINGIN" from={6} top={235} />
       <Caption
         text="Fajar tiba. Hanya tersisa jejak besar berbulu"
-        from={9}
-        to={111}
+        from={LN("fajar_1").from}
+        to={capTo("fajar_1")}
         highlight={["JEJAK", "BERBULU"]}
         highlightColor={GOLD}
         top={1290}
@@ -637,8 +645,8 @@ export const SceneGenFajar: React.FC = () => {
       />
       <Caption
         text="Tiga hari kemudian, suaminya pulang sungguhan"
-        from={120}
-        to={204}
+        from={LN("fajar_2").from}
+        to={capTo("fajar_2")}
         highlight={["SUNGGUHAN"]}
         highlightColor="#7bdc66"
         top={1290}
