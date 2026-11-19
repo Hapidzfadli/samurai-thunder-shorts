@@ -36,6 +36,7 @@ type LineId = keyof typeof timing.lines;
 const LN = (id: LineId) => timing.lines[id];
 const EV = (name: string) => (timing.events as Record<string, number>)[name];
 const capTo = (id: LineId) => LN(id).to + 4;
+const STEP = (timing as unknown as { stepF: { fake: number; real: number; gen: number } }).stepF;
 
 const Canvas: React.FC<{ children: React.ReactNode; fov?: number }> = ({ children, fov = 50 }) => {
   const { width, height } = useVideoConfig();
@@ -233,7 +234,7 @@ export const SceneGenHook: React.FC = () => {
       >
         JANGAN DIBUKA!
       </div>
-      <SceneFade duration={DURATIONS_GEN.hook} inFrames={10} outFrames={6} />
+      <SceneFade duration={DURATIONS_GEN.hook} inFrames={10} outFrames={0} />
     </AbsoluteFill>
   );
 };
@@ -296,7 +297,7 @@ export const SceneGenRumah: React.FC = () => {
         top={1290}
         size={74}
       />
-      <SceneFade duration={DURATIONS_GEN.rumah} />
+      <SceneFade duration={DURATIONS_GEN.rumah} inFrames={0} outFrames={0} />
     </AbsoluteFill>
   );
 };
@@ -375,7 +376,7 @@ export const SceneGenTanda: React.FC = () => {
         top={1290}
         size={66}
       />
-      <SceneFade duration={DURATIONS_GEN.tanda} />
+      <SceneFade duration={DURATIONS_GEN.tanda} inFrames={0} outFrames={0} />
     </AbsoluteFill>
   );
 };
@@ -414,7 +415,7 @@ export const SceneGenPanggil: React.FC = () => {
       <Canvas fov={50}>
         <CameraRig position={[0, 1.6, 1.5]} lookAt={[0, 1.45, -10]} />
         <Yard t={t}>
-          <SuamiFigure position={pos} rotationY={0} t={t} />
+          <SuamiFigure position={pos} rotationY={0} t={t} walking={walk > 0.001 && walk < 0.999} walkF={STEP.fake} />
         </Yard>
       </Canvas>
       <Kicker text="SUARA DARI ARAH BERINGIN" from={6} top={235} />
@@ -462,7 +463,7 @@ export const SceneGenPanggil: React.FC = () => {
         top={1290}
         size={64}
       />
-      <SceneFade duration={DURATIONS_GEN.panggil} />
+      <SceneFade duration={DURATIONS_GEN.panggil} inFrames={0} outFrames={0} />
     </AbsoluteFill>
   );
 };
@@ -559,7 +560,7 @@ export const SceneGenKelor: React.FC = () => {
         top={1250}
         size={100}
       />
-      <SceneFade duration={DURATIONS_GEN.kelor} inFrames={6} />
+      <SceneFade duration={DURATIONS_GEN.kelor} inFrames={0} outFrames={0} />
     </AbsoluteFill>
   );
 };
@@ -598,8 +599,10 @@ export const SceneGenGedor: React.FC = () => {
               t={t}
               pound={pound}
               rage={Math.max(roar, hit)}
-              lean={0.3}
+              lean={flee > 0.02 ? 0.7 : 0.3}
               eyeGlow={1 - flee}
+              walking={flee > 0.02 && flee < 1}
+              walkF={STEP.gen}
             />
           )}
         </Yard>
@@ -629,7 +632,7 @@ export const SceneGenGedor: React.FC = () => {
         top={1290}
         size={74}
       />
-      <SceneFade duration={DURATIONS_GEN.gedor} inFrames={4} />
+      <SceneFade duration={DURATIONS_GEN.gedor} inFrames={0} outFrames={0} />
     </AbsoluteFill>
   );
 };
@@ -681,7 +684,6 @@ export const SceneGenFajar: React.FC = () => {
   const cam: Vec3 = [interpolate(p, [0, 1], [-0.2, 0.3]), interpolate(p, [0, 1], [2.3, 1.9]), interpolate(p, [0, 1], [9.2, 7.6])];
   const walk = interpolate(frame, [EV("fajar.husband0"), EV("fajar.husband1")], [0, 1], { ...clamp, easing: Easing.inOut(Easing.quad) });
   const husbandPos: Vec3 = [interpolate(walk, [0, 1], [1.6, 0.35]), 0, interpolate(walk, [0, 1], [-32, -1.2])];
-  const stepBob = Math.abs(Math.sin(frame * 0.35)) * 0.05 * (walk > 0 && walk < 1 ? 1 : 0);
   const title = spring({ frame: frame - EV("fajar.card"), fps, config: { damping: 12 } });
   const t2 = spring({ frame: frame - EV("fajar.big"), fps, config: { damping: 10, stiffness: 180 } });
   const t3 = spring({ frame: frame - EV("fajar.big") - 14, fps, config: { damping: 10, stiffness: 180 } });
@@ -706,7 +708,9 @@ export const SceneGenFajar: React.FC = () => {
           <Footprint key={i} position={f.p} rotationY={f.r} mirror={f.m} scale={1.6} />
         ))}
         <YuDarmi position={[-1.0, 0, -1.7]} rotationY={0.5} t={t} lantern={false} />
-        {frame >= EV("fajar.husband0") && <SuamiFigure position={[husbandPos[0], stepBob, husbandPos[2]]} t={t} scale={1} />}
+        {frame >= EV("fajar.husband0") && (
+          <SuamiFigure position={[husbandPos[0], 0, husbandPos[2]]} t={t} scale={1} walking={walk > 0.001 && walk < 0.999} walkF={STEP.real} />
+        )}
       </Canvas>
       <Kicker text="FAJAR · JEJAK DI BAWAH BERINGIN" from={6} top={235} />
       <Caption
@@ -770,7 +774,7 @@ export const SceneGenFajar: React.FC = () => {
           BERANI MASUK
         </div>
       </div>
-      <SceneFade duration={DURATIONS_GEN.fajar} outFrames={14} />
+      <SceneFade duration={DURATIONS_GEN.fajar} inFrames={0} outFrames={14} />
     </AbsoluteFill>
   );
 };

@@ -144,10 +144,26 @@ export const SuamiFigure: React.FC<{
   t: number;
   eyeGlow?: number;
   bag?: boolean;
-}> = ({ position, rotationY = 0, scale = 1, t, eyeGlow = 0, bag = true }) => {
-  const sway = Math.sin(t * 1.3) * 0.015;
+  walking?: boolean;
+  walkF?: number; // steps per second; a footfall lands whenever sin(pi*f*t) = 0 (feet apart, body lowest)
+}> = ({ position, rotationY = 0, scale = 1, t, eyeGlow = 0, bag = true, walking = false, walkF = 1.8 }) => {
+  const ph = Math.PI * walkF * t;
+  const c = walking ? Math.cos(ph) : 0;
+  const sn = walking ? Math.sin(ph) : 0;
+  const bob = Math.abs(sn) * 0.06;
+  const sway = Math.sin(t * 1.3) * (walking ? 0.004 : 0.015) + c * 0.03;
   return (
-    <group position={position} rotation={[0, rotationY, sway]} scale={scale}>
+    <group position={[position[0], position[1] + bob, position[2]]} rotation={[0, rotationY, sway]} scale={scale}>
+      {/* shoes: feet swing front/back and lift mid-stride */}
+      {[-1, 1].map((sd) => (
+        <mesh
+          key={sd}
+          position={[sd * 0.13, 0.04 - bob + 0.08 * Math.max(0, sd * sn * -1), sd * 0.2 * c]}
+        >
+          <boxGeometry args={[0.13, 0.07, 0.26]} />
+          <meshStandardMaterial color="#1a1410" roughness={1} flatShading />
+        </mesh>
+      ))}
       {/* sarung */}
       <mesh position={[0, 0.5, 0]}>
         <cylinderGeometry args={[0.3, 0.38, 1.0, 8]} />
@@ -163,10 +179,12 @@ export const SuamiFigure: React.FC<{
         <meshStandardMaterial color="#d9d2bd" roughness={0.85} flatShading />
       </mesh>
       {[-1, 1].map((s) => (
-        <mesh key={s} position={[s * 0.4, 1.28, 0]}>
-          <cylinderGeometry args={[0.065, 0.06, 0.78, 6]} />
-          <meshStandardMaterial color="#d9d2bd" flatShading />
-        </mesh>
+        <group key={s} position={[s * 0.4, 1.66, 0]} rotation={[-s * 0.4 * c, 0, 0]}>
+          <mesh position={[0, -0.38, 0]}>
+            <cylinderGeometry args={[0.065, 0.06, 0.78, 6]} />
+            <meshStandardMaterial color="#d9d2bd" flatShading />
+          </mesh>
+        </group>
       ))}
       {/* head + peci */}
       <mesh position={[0, 1.92, 0]}>
@@ -208,7 +226,12 @@ export const GenderuwoFigure: React.FC<{
   pound?: number; // 0..1 arms slamming forward
   rage?: number; // 0..1 head thrown back / jitter
   flare?: number; // 0..1 eyes blaze
-}> = ({ position, rotationY = 0, scale = 1, t, eyeGlow = 1, lean = 0.25, pound = 0, rage = 0, flare = 0 }) => {
+  walking?: boolean;
+  walkF?: number; // steps per second; heavy footfall whenever sin(pi*f*t) = 0
+}> = ({ position, rotationY = 0, scale = 1, t, eyeGlow = 1, lean = 0.25, pound = 0, rage = 0, flare = 0, walking = false, walkF = 3.4 }) => {
+  const wph = Math.PI * walkF * t;
+  const wc = walking ? Math.cos(wph) : 0;
+  const wbob = walking ? Math.abs(Math.sin(wph)) * 0.12 : 0;
   const fur = useMemo(
     () =>
       new Array(46).fill(0).map((_, i) => {
@@ -261,14 +284,16 @@ export const GenderuwoFigure: React.FC<{
   };
 
   return (
-    <group position={position} rotation={[0, rotationY, 0]} scale={scale}>
+    <group position={[position[0], position[1] + wbob * scale, position[2]]} rotation={[0, rotationY, 0]} scale={scale}>
       <group position={[jitter * 3, 0, 0]}>
         {/* legs */}
         {[-0.38, 0.38].map((x) => (
-          <mesh key={x} position={[x, 0.52, 0]}>
-            <cylinderGeometry args={[0.28, 0.24, 1.06, 7]} />
-            <meshStandardMaterial color={skin} roughness={0.95} flatShading />
-          </mesh>
+          <group key={x} position={[x, 1.05, 0]} rotation={[Math.sign(x) * 0.55 * wc, 0, 0]}>
+            <mesh position={[0, -0.53, 0]}>
+              <cylinderGeometry args={[0.28, 0.24, 1.06, 7]} />
+              <meshStandardMaterial color={skin} roughness={0.95} flatShading />
+            </mesh>
+          </group>
         ))}
         {/* torso, hunched */}
         <group rotation={[lean * 0.3, 0, 0]}>

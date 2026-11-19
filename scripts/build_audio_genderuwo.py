@@ -285,6 +285,7 @@ import math
 import re
 
 FPS = 30
+STEP_F = {"fake": 1.7, "real": 1.8, "gen": 3.4}  # steps per second; the video bobs the characters at the same rate
 CACHE = ROOT / "voices" / "cache_gen"
 TIMING_JSON = ROOT / "src" / "genderuwo_timing.json"
 
@@ -565,9 +566,282 @@ def write_timing(P: dict, ev: dict):
             for k, v in P["lines"].items()
         },
         "events": {k: round(v * FPS) for k, v in ev.items()},
+        "stepF": STEP_F,
     }
     TIMING_JSON.write_text(json.dumps(out, ensure_ascii=False, indent=1))
     return out
+
+
+
+# =============================================================================================
+# Sound design (see research notes in the commit message): layered ambience that can be cut dead,
+# three-layer footsteps with distance, a layered creature roar, and J/L-cut style transitions.
+# =============================================================================================
+def reverb(x, rt=1.1, wet=0.25, lp=2500, seed=1):
+    rng = np.random.default_rng(seed)
+    n = int(SR * rt)
+    ir = rng.standard_normal(n) * np.exp(-np.arange(n) / SR * 6.9 / rt)
+    b, a = signal.butter(2, lp / (SR / 2), btype="lowpass")
+    ir = signal.lfilter(b, a, ir)
+    ir /= np.sqrt(np.sum(ir ** 2)) + 1e-9
+    x = np.array(x, dtype=np.float64)
+    fl = min(len(x) // 4, int(0.04 * SR))
+    x[-fl:] *= np.linspace(1.0, 0.0, fl)
+    y = signal.fftconvolve(x, ir)
+    out = np.zeros(len(y), dtype=np.float64)
+    out[: len(x)] += x * (1.0 - 0.5 * wet)
+    out += y * wet * 1.4
+    return out.astype(np.float32)
+
+
+def _bp(x, lo, hi, order=2):
+    b, a = signal.butter(order, [lo / (SR / 2), hi / (SR / 2)], btype="bandpass")
+    return signal.lfilter(b, a, x)
+
+
+def _lp(x, fc, order=2):
+    b, a = signal.butter(order, fc / (SR / 2), btype="lowpass")
+    return signal.lfilter(b, a, x)
+
+
+def _put(buf, clip, t0, gl=1.0, gr=1.0):
+    i0 = int(t0 * SR)
+    if i0 >= len(buf) or i0 + len(clip) <= 0:
+        return
+    if i0 < 0:
+        clip = clip[-i0:]
+        i0 = 0
+    i1 = min(len(buf), i0 + len(clip))
+    seg = clip[: i1 - i0]
+    buf[i0:i1, 0] += seg * gl
+    buf[i0:i1, 1] += seg * gr
+
+
+def amb_crickets(total, seed=7):
+    """Jangkrik: each cricket is a train of 3-4 short ~4.5-5 kHz pulses, repeating with a little jitter."""
+    rng = np.random.default_rng(seed)
+    out = np.zeros((int(SR * total) + SR, 2), dtype=np.float32)
+    for c in range(8):
+        fc = rng.uniform(4300, 5300)
+        pan = rng.uniform(-0.8, 0.8)
+        gl, gr = math.cos((pan + 1) * math.pi / 4), math.sin((pan + 1) * math.pi / 4)
+        lvl = rng.uniform(0.5, 1.0)
+        period = rng.uniform(0.36, 0.7)
+        tt = np.arange(int(0.014 * SR)) / SR
+        pulse = (np.sin(2 * np.pi * fc * tt) * np.sin(np.pi * tt / 0.014) ** 2).astype(np.float32)
+        t = rng.uniform(0, period)
+        while t < total - 0.4:
+            sp = rng.uniform(0.034, 0.05)
+            for k in range(int(rng.integers(3, 5))):
+                _put(out, pulse * lvl, t + k * sp, gl, gr)
+            t += period * rng.uniform(0.85, 1.2) + (rng.uniform(0.4, 1.6) if rng.random() < 0.08 else 0.0)
+    return out[: int(SR * total)]
+
+
+def amb_frogs(total, seed=9):
+    rng = np.random.default_rng(seed)
+    out = np.zeros((int(SR * total) + SR, 2), dtype=np.float32)
+    for c in range(2):
+        t = rng.uniform(1.0, 4.0)
+        base = rng.uniform(380, 520)
+        pan = rng.uniform(-0.7, 0.7)
+        gl, gr = math.cos((pan + 1) * math.pi / 4), math.sin((pan + 1) * math.pi / 4)
+        while t < total - 1.0:
+            dur = rng.uniform(0.35, 0.55)
+            tt = np.arange(int(SR * dur)) / SR
+            croak = np.sin(2 * np.pi * np.cumsum(base * (1 + 0.15 * np.exp(-tt * 8))) / SR) * (0.55 + 0.45 * np.sin(2 * np.pi * 26 * tt))
+            croak = _lp(croak * np.sin(np.pi * tt / dur) ** 1.5, 1300)
+            _put(out, croak.astype(np.float32) * 0.8, t, gl, gr)
+            t += rng.uniform(2.2, 5.5)
+    return out[: int(SR * total)]
+
+
+def amb_owl(times, total):
+    out = np.zeros((int(SR * total) + SR, 2), dtype=np.float32)
+    for t0 in times:
+        for k, f in enumerate([430, 345]):
+            tt = np.arange(int(0.42 * SR)) / SR
+            note = np.sin(2 * np.pi * f * tt + 6 * np.sin(2 * np.pi * 5 * tt) * 0.02) * np.sin(np.pi * tt / 0.42) ** 2
+            _put(out, _lp(note, 1100).astype(np.float32) * 0.7, t0 + k * 0.55, 0.8, 0.5)
+    return out[: int(SR * total)]
+
+
+def amb_wind(total, seed=3):
+    rng = np.random.default_rng(seed)
+    n = int(SR * total)
+    t = np.linspace(0, total, n, endpoint=False)
+    out = np.zeros((n, 2), dtype=np.float32)
+    for ch in range(2):
+        noise = rng.standard_normal(n)
+        low = _lp(noise, 420, 3) * (0.35 + 0.25 * np.sin(2 * np.pi * 0.07 * t + ch))
+        gust = _bp(noise, 300, 1100) * np.clip(np.sin(2 * np.pi * 0.045 * t + 1.7 + ch), 0, 1) ** 2 * 0.5
+        out[:, ch] = (low + gust).astype(np.float32)
+    return out
+
+
+def amb_room(total, seed=5):
+    rng = np.random.default_rng(seed)
+    n = int(SR * total)
+    t = np.linspace(0, total, n, endpoint=False)
+    x = _lp(rng.standard_normal(n), 160, 3) * 0.5 + np.sin(2 * np.pi * 50 * t) * 0.03
+    return np.stack([x, x], axis=1).astype(np.float32)
+
+
+def amb_birds(total, seed=11):
+    """Dawn chorus: several species with different chirp shapes, rising density."""
+    rng = np.random.default_rng(seed)
+    out = np.zeros((int(SR * total) + SR, 2), dtype=np.float32)
+    for species in range(4):
+        base = rng.uniform(2200, 4200)
+        sweep = rng.uniform(-900, 1200)
+        pan = rng.uniform(-0.8, 0.8)
+        gl, gr = math.cos((pan + 1) * math.pi / 4), math.sin((pan + 1) * math.pi / 4)
+        t = rng.uniform(0.2, 2.0)
+        while t < total - 0.6:
+            for k in range(int(rng.integers(2, 6))):
+                d = rng.uniform(0.06, 0.12)
+                ct = np.arange(int(SR * d)) / SR
+                f = base + sweep * ct / d
+                ch = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.sin(np.pi * ct / d) ** 1.2
+                _put(out, ch.astype(np.float32) * 0.5, t + k * (d + 0.04), gl, gr)
+            t += rng.uniform(1.4, 4.5)
+    return out[: int(SR * total)]
+
+
+def sfx_riser(dur=1.2, seed=2):
+    """Reverse-swell: layered noise bands that bloom upward and peak at the very end."""
+    rng = np.random.default_rng(seed)
+    n = int(SR * dur)
+    t = np.linspace(0, 1, n)
+    noise = rng.standard_normal(n)
+    out = np.zeros(n)
+    for i, (lo, hi) in enumerate([(200, 500), (450, 1100), (1000, 2600), (2400, 6000)]):
+        env = np.clip((t - i * 0.12) / (1 - i * 0.12), 0, 1) ** (2.2 + 0.4 * i)
+        out += _bp(noise, lo, hi) * env * (1.0 - 0.15 * i)
+    return (out / (np.max(np.abs(out)) + 1e-9) * 0.9).astype(np.float32)
+
+
+def sfx_boom(dur=1.8, f=52, seed=4):
+    t = np.linspace(0, dur, int(SR * dur), endpoint=False)
+    ph = 2 * np.pi * np.cumsum(f * (1 + 0.8 * np.exp(-t * 9))) / SR
+    x = np.sin(ph) * np.exp(-t * 2.6) + 0.3 * np.sin(2 * ph) * np.exp(-t * 5)
+    y = reverb(np.tanh(x * 1.4).astype(np.float32), rt=1.6, wet=0.3, lp=900, seed=seed)
+    return (y / (np.max(np.abs(y)) + 1e-9) * 0.9).astype(np.float32)
+
+
+def sfx_pad_dawn(dur=4.0):
+    t = np.linspace(0, dur, int(SR * dur), endpoint=False)
+    env = np.minimum(1.0, t / 1.6) * np.exp(-np.maximum(0, t - 1.8) * 0.9)
+    x = sum(np.sin(2 * np.pi * f * t + i) * g for i, (f, g) in enumerate([(261.6, 1), (329.6, 0.7), (392.0, 0.8), (523.3, 0.35)]))
+    return (x * env * 0.25).astype(np.float32)
+
+
+def sfx_step(seed: int, dist: float, kind: str = "dirt", bag: bool = False) -> np.ndarray:
+    """Dirt footstep in three layers (attack / body / grit) with heel and toe, then distance:
+    quieter and duller the farther away. kind: sandal (husband) or heavy (creature)."""
+    rng = np.random.default_rng(seed)
+    w = 1.0 if kind != "heavy" else 2.6
+    n = int(SR * 0.5)
+    t = np.arange(n) / SR
+    out = np.zeros(n)
+    # heel: body thump + attack click
+    thump = np.sin(2 * np.pi * (62 + 38 * np.exp(-t * 70)) * t / (1.0 if kind != "heavy" else 1.3)) * np.exp(-t * (36 if kind != "heavy" else 16))
+    out += thump * 0.9 * w * rng.uniform(0.9, 1.1)
+    click = _bp(rng.standard_normal(n), 1200, 4200) * np.exp(-t * 180)
+    out += click * 0.35 * (1.0 if kind != "heavy" else 0.5)
+    # grit: a handful of tiny noise grains, as soil/gravel gives way under the foot
+    for g in range(int(rng.integers(5, 9))):
+        g0 = int(rng.uniform(0.004, 0.075) * SR)
+        glen = int(rng.uniform(0.002, 0.006) * SR)
+        grain = _bp(rng.standard_normal(glen + 64), 2200, 7000)[:glen] * np.hanning(glen)
+        out[g0 : g0 + glen] += grain * rng.uniform(0.15, 0.45)
+    # toe-off: lighter, a beat later, plus a short slide
+    to = int(0.10 * SR)
+    tt = t[: n - to]
+    out[to:] += np.sin(2 * np.pi * 120 * tt) * np.exp(-tt * 55) * 0.35 * w
+    out[to:] += _bp(rng.standard_normal(n - to), 1500, 5000) * np.exp(-tt * 90) * 0.12
+    if kind == "sandal":
+        sl = int(0.15 * SR)
+        slide = _bp(rng.standard_normal(sl), 900, 3500) * np.sin(np.pi * np.arange(sl) / sl) ** 2 * 0.10
+        out[int(0.16 * SR) : int(0.16 * SR) + sl] += slide
+    if bag:  # cloth/bag rustle
+        rl = int(0.07 * SR)
+        out[int(0.03 * SR) : int(0.03 * SR) + rl] += _bp(rng.standard_normal(rl), 2500, 6500) * np.hanning(rl) * 0.12
+    # distance: level ~1/d and air absorption (the highs go first)
+    out = _lp(out, float(np.clip(9500 - 420 * dist, 1100, 9500)), 2)
+    out *= float(np.clip(4.5 / max(dist, 1.0), 0.05, 1.0))
+    return (out / (np.max(np.abs(out)) + 1e-9) * 0.8 * float(np.clip(4.5 / max(dist, 1.0), 0.06, 1.0))).astype(np.float32)
+
+
+def sfx_roar2(dur=1.9, seed=21, size=1.0):
+    """Layered creature roar: inhale -> glottal source (f0 glide + jitter + 28 Hz growl AM) through two vowel
+    formant sets shifted down (big body) -> sub one octave under -> saturation -> rasp tail -> dark reverb."""
+    rng = np.random.default_rng(seed)
+    n = int(SR * dur)
+    t = np.arange(n) / SR
+    smooth = lambda k: _lp(rng.standard_normal(n), k, 2)
+    jit = smooth(9) / (np.std(smooth(9)) + 1e-9)
+    f0 = np.interp(t, [0, 0.12, 0.5, dur], [95, 150, 120, 70]) * (1 + 0.012 * jit) / size
+    ph = 2 * np.pi * np.cumsum(f0) / SR
+    src = 2 * ((ph / (2 * np.pi)) % 1.0) - 1.0
+    gm = 27 + 5 * smooth(2) / (np.std(smooth(2)) + 1e-9) * 0.0
+    src = src * (1 - 0.55 * (0.5 + 0.5 * np.sin(2 * np.pi * gm * t)))
+    breath = rng.standard_normal(n)
+    drive = src + 0.3 * breath
+    shift = 0.76  # formants down ~24% = a much bigger vocal tract
+    vowels = {"o": [480, 830, 2300], "a": [700, 1150, 2500]}
+
+    def formants(x, F):
+        o = 0
+        for f, g in zip(F, [1.0, 0.7, 0.35]):
+            o = o + g * _bp(x, f * shift * 0.86, f * shift * 1.14)
+        return o
+
+    vo, va = formants(drive, vowels["o"]), formants(drive, vowels["a"])
+    w = np.interp(t, [0, 0.3, dur * 0.7, dur], [0, 1, 1, 0.2])
+    voice = vo * (1 - w) + va * w
+    sub = np.sin(2 * np.pi * np.cumsum(f0 / 2) / SR)
+    env = np.minimum(1.0, t / 0.07) * np.exp(-np.maximum(0, t - dur * 0.5) * 2.4)
+    x = np.tanh((voice / (np.std(voice) + 1e-9) * 0.9 + sub * 1.3) * env * 1.8)
+    # rasp tail (exhale)
+    rn = int(0.7 * SR)
+    rasp = _bp(rng.standard_normal(rn), 700, 3000) * np.minimum(1.0, np.arange(rn) / (0.05 * SR)) * np.exp(-np.arange(rn) / SR * 5.0) * 0.35
+    x = np.concatenate([x, np.zeros(rn)])
+    x[int(dur * SR * 0.55) : int(dur * SR * 0.55) + rn] += rasp
+    # inhale before the roar
+    inn = int(0.32 * SR)
+    inh = _bp(rng.standard_normal(inn), 600, 3200) * (np.arange(inn) / inn) ** 1.6 * 0.3
+    clip = np.concatenate([inh, x]).astype(np.float32)
+    clip = reverb(clip, rt=1.1, wet=0.28, lp=1800, seed=seed)
+    return (clip / (np.max(np.abs(clip)) + 1e-9) * 0.95).astype(np.float32), 0.32
+
+
+def silence_mask(total, windows, fast=0.04, slow=0.6):
+    """Gain curve: drops to `depth` almost instantly (the absence is the event) and returns slowly."""
+    pts_t, pts_g = [0.0], [1.0]
+    for t0, t1, depth in sorted(windows):
+        pts_t += [max(t0 - fast, pts_t[-1] + 1e-3), t0, t1, t1 + slow]
+        pts_g += [1.0, depth, depth, 1.0]
+    pts_t.append(total + 1)
+    pts_g.append(1.0)
+    return pts_t, pts_g
+
+
+def scene_gain(S, order, per_scene, total, jcut=0.5, xf=1.3):
+    """Layer gain per scene with J-cut: the next scene's ambience begins `jcut` s before the picture changes."""
+    pts_t, pts_g = [0.0], [per_scene[order[0]]]
+    for i in range(1, len(order)):
+        c = S[order[i]] - jcut
+        pts_t += [c - xf / 2, c + xf / 2]
+        pts_g += [per_scene[order[i - 1]], per_scene[order[i]]]
+    pts_t.append(total + 1)
+    pts_g.append(per_scene[order[-1]])
+    return pts_t, pts_g
+
+
+def curve(total, pts_t, pts_g):
+    tt = np.linspace(0, total, int(SR * total), endpoint=False)
+    return np.interp(tt, pts_t, pts_g).astype(np.float32)
 
 
 def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
@@ -578,82 +852,152 @@ def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
     clips = {}
     for key, _, _, _, segs in SCENES:
         for sid, gap, text, fx, n in segs:
-            print(f"  [{sid}] {text}")
             raw = get_raw(narr, narr_wav.name, sid, text, n)
             clips[sid] = apply_fx(raw, fx)
-            print(f"      -> {len(clips[sid]) / SR:.2f}s")
 
     P = plan(clips)
     ev = anchors(P)
     timing = write_timing(P, ev)
     total = P["total_s"]
     print(f"Total durasi video: {total:.1f}s ({timing['total_frames']} frame)")
-    for k, v in P["scenes"].items():
-        print(f"  scene {k:8s} {v['frames']:4d}f  mulai {v['start_s']:.2f}s")
 
     set_duration(total)
+    order = [k for k, *_ in SCENES]
     S = {k: v["start_s"] for k, v in P["scenes"].items()}
     G = lambda name: S[name.split(".")[0]] + ev[name]
+    L = P["lines"]
+    N = N_SAMPLES
 
-    bed = build_gamelan_horror_bed()
-    tt = np.linspace(0, DURATION, N_SAMPLES, endpoint=False)
-    mask = np.full(N_SAMPLES, 0.7, dtype=np.float32)
-    mask *= np.where((tt > G("gedor.flee1") - 0.5) & (tt < S["fajar"] + 0.4), 0.12, 1.0)
-    # near-silence while the dog falls quiet: the music holds its breath
-    mask *= np.where((tt > P["lines"]["tanda_2b"]["gs"] - 0.3) & (tt < P["lines"]["tanda_3"]["gs"]), 0.2, 1.0)
-    mask *= np.interp(tt, [0, 1.5, total - 5, total], [0.0, 1.0, 1.0, 0.0])
-    bed *= mask[:, None]
+    # ---- silence windows: cut-to-silence moments (research: the absence is the event) ----
+    sil = [
+        (L["hook_1"]["ge"] + 0.1, L["hook_2"]["gs"] - 0.02, 0.04),                  # the breath before "Jangan dibuka!"
+        (L["tanda_2a"]["ge"] - 0.2, L["tanda_3"]["gs"] + 0.5, 0.0),                  # the dog stops; the night holds still
+        (G("gedor.flee1") - 0.3, S["fajar"] + 0.8, 0.03),                           # after it flees
+    ]
+    mt, mg = silence_mask(total, sil)
+    m_all = curve(total, mt, mg)
+    mt2, mg2 = silence_mask(total, [(a, b, max(d, 0.18)) for a, b, d in sil], slow=0.9)
+    m_soft = curve(total, mt2, mg2)  # wind/room tone never fully vanish, just thin out
 
-    sfx = np.zeros((N_SAMPLES, 2), dtype=np.float32)
-    vo = np.zeros((N_SAMPLES, 2), dtype=np.float32)
+    # ---- ambience layers, each with its own per-scene level and J-cut crossfades ----
+    g_cr = {"hook": 0.18, "rumah": 1.0, "tanda": 1.0, "panggil": 0.9, "kelor": 0.75, "gedor": 0.9, "fajar": 0.0}
+    g_fr = {"hook": 0.0, "rumah": 0.8, "tanda": 0.7, "panggil": 0.6, "kelor": 0.4, "gedor": 0.5, "fajar": 0.0}
+    g_wd = {"hook": 0.25, "rumah": 0.7, "tanda": 0.8, "panggil": 0.8, "kelor": 0.9, "gedor": 1.0, "fajar": 0.5}
+    g_rm = {"hook": 1.0, "rumah": 0.0, "tanda": 0.0, "panggil": 0.15, "kelor": 0.15, "gedor": 0.15, "fajar": 0.0}
+    g_bd = {"hook": 0, "rumah": 0, "tanda": 0, "panggil": 0, "kelor": 0, "gedor": 0, "fajar": 1.0}
+    cur = lambda d: curve(total, *scene_gain(S, order, d, total))
+    amb = np.zeros((N, 2), dtype=np.float32)
+    amb += amb_crickets(total) * 0.19 * (cur(g_cr) * m_all)[:, None]
+    amb += amb_frogs(total) * 0.16 * (cur(g_fr) * m_all)[:, None]
+    amb += amb_wind(total) * 0.30 * (cur(g_wd) * m_soft)[:, None]
+    amb += amb_room(total) * 0.32 * (cur(g_rm) * m_soft)[:, None]
+    # the dawn chorus begins under the last seconds of silence (L-cut into the picture)
+    birds_t0 = S["fajar"] - 0.2
+    birds = amb_birds(total - birds_t0)
+    amb[int(birds_t0 * SR) : int(birds_t0 * SR) + len(birds)] += birds[: N - int(birds_t0 * SR)] * 0.22 * np.minimum(1.0, np.linspace(0, 6, len(birds)))[:, None][: N - int(birds_t0 * SR)]
+    amb += amb_owl([S["rumah"] + 3.2, S["kelor"] + 0.3], total) * 0.2 * m_all[:, None]
 
-    # Hook
-    add_clip(sfx, sfx_gong_ageng(2.8, 55.0), 0.15, gain=0.5)
-    add_clip(sfx, sfx_ghost_whoosh(1.6, 1), 0.6, gain=0.35)
-    add_clip(sfx, sfx_gong_ageng(2.4, 49.0), G("hook.eyes"), gain=0.5)
-    for i, k in enumerate(["hook.knock1", "hook.knock2", "hook.knock3"]):
-        add_clip(sfx, sfx_knock(0.5, 130 + 8 * i, i), G(k), gain=0.95)
-    # Rumah
-    add_clip(sfx, sfx_ghost_whoosh(1.2, 2), S["rumah"], gain=0.3)
-    add_clip(sfx, sfx_gong_ageng(2.4, 65.41), G("rumah.pan"), gain=0.4)
-    # Tanda: dog barks, then nothing; canopy eyes on the silence; creaking lamp
-    add_clip(sfx, sfx_ghost_whoosh(2.0, 3), S["tanda"] + 0.8, gain=0.35)
+    # ---- music: a drone that swells toward the scares, sparse gamelan only where it is calm ----
+    mus = np.zeros((N, 2), dtype=np.float32)
+    tt = np.linspace(0, total, N, endpoint=False)
+    inten = np.interp(tt, [0, S["rumah"], S["tanda"], S["panggil"], S["kelor"], G("kelor.flare"), S["gedor"], G("gedor.flee1"), S["fajar"], total],
+                      [0.5, 0.3, 0.35, 0.4, 0.55, 1.0, 0.8, 0.15, 0.3, 0.25])
+    for i, f in enumerate([32.70, 49.0, 65.41, 98.0]):
+        lfo = 0.7 + 0.3 * np.sin(2 * np.pi * (0.07 + i * 0.03) * tt + i)
+        d = np.sin(2 * np.pi * f * tt) * lfo * (0.016 + 0.05 * inten)
+        mus[:, 0] += d
+        mus[:, 1] += d
+    pelog = [261.63, 277.18, 349.23, 392.00, 415.30, 523.25]
+    pat = [0, 1, 3, 4, 3, 1, 0, 2]
+    k = 0
+    for scene, step in (("rumah", 2.8), ("fajar", 3.2)):
+        t0 = S[scene] + 1.0
+        while t0 < S[scene] + P["scenes"][scene]["frames"] / FPS - 1.0:
+            nt = np.arange(int(0.9 * SR)) / SR
+            f = pelog[pat[k % len(pat)]]
+            bn = np.sin(2 * np.pi * f * nt) * np.exp(-nt * 3.5) + 0.4 * np.sin(2 * np.pi * f * 2.76 * nt) * np.exp(-nt * 9)
+            _put(mus, bn.astype(np.float32) * 0.05, t0, 0.8 if k % 2 else 0.5, 0.5 if k % 2 else 0.8)
+            t0 += step
+            k += 1
+    mus *= (m_all * 0.92 + 0.08)[:, None] * np.interp(tt, [0, 1.5, total - 4, total], [0, 1, 1, 0])[:, None]
+
+    sfx = np.zeros((N, 2), dtype=np.float32)
+    vo = np.zeros((N, 2), dtype=np.float32)
+
+    # ---- scene transitions: swell into the cut + a low hit, tuned to the mood of what comes next ----
+    trans = {"rumah": "soft", "tanda": "soft", "panggil": "dark", "kelor": "dark", "gedor": "impact", "fajar": "dawn"}
+    for sc, kind in trans.items():
+        b = S[sc]
+        if kind == "soft":
+            add_clip(sfx, sfx_riser(1.0, 2), b - 1.0, gain=0.20)
+            add_clip(sfx, sfx_gong_ageng(2.0, 65.41), b, gain=0.18)
+        elif kind == "dark":
+            add_clip(sfx, sfx_riser(1.3, 3), b - 1.3, gain=0.30)
+            add_clip(sfx, sfx_boom(1.8, 52), b, gain=0.42)
+        elif kind == "impact":
+            add_clip(sfx, sfx_riser(0.7, 4), b - 0.7, gain=0.30)
+            add_clip(sfx, sfx_boom(2.2, 46), b, gain=0.70)
+        elif kind == "dawn":
+            add_clip(sfx, sfx_pad_dawn(4.5), b - 0.8, gain=0.40)
+
+    # ---- hook ----
+    add_clip(sfx, sfx_gong_ageng(2.8, 55.0), 0.15, gain=0.45)
+    add_clip(sfx, sfx_gong_ageng(2.4, 49.0), G("hook.eyes"), gain=0.45)
+    for i, k_ in enumerate(["hook.knock1", "hook.knock2", "hook.knock3"]):
+        add_clip(sfx, sfx_knock(0.5, 130 + 8 * i, i), G(k_), gain=0.95)
+    # ---- rumah / tanda ----
+    add_clip(sfx, sfx_gong_ageng(2.4, 65.41), G("rumah.pan"), gain=0.35)
     for i, dt in enumerate([0.0, 0.5, 1.0, 1.4]):
-        add_clip(sfx, sfx_bark(0.22, i), G("tanda.bark") + dt, gain=0.42 * (1.0 - 0.12 * i), pan=-0.3)
-    add_clip(sfx, sfx_gong_ageng(2.6, 58.27), G("tanda.eyes"), gain=0.55)
-    add_clip(sfx, sfx_ghost_whoosh(1.4, 4), G("tanda.eyes") + 0.1, gain=0.45)
+        add_clip(sfx, sfx_bark(0.22, i), G("tanda.bark") + dt, gain=0.40 * (1.0 - 0.12 * i), pan=-0.3)
+    add_clip(sfx, sfx_gong_ageng(2.6, 58.27), G("tanda.eyes"), gain=0.5)
+    add_clip(sfx, sfx_ghost_whoosh(1.4, 4), G("tanda.eyes") + 0.1, gain=0.4)
     add_clip(sfx, sfx_creak(2.2, 4), G("tanda.lamp0"), gain=0.5, pan=-0.35)
-    # Panggil
-    add_clip(sfx, sfx_ghost_whoosh(1.8, 5), S["panggil"], gain=0.35)
-    # Kelor: scatter, 'membesar' thunder, then the red-eyes flare
+    # ---- kelor ----
     add_clip(sfx, sfx_rustle(1.3, 6), G("kelor.leaves"), gain=0.7)
-    add_clip(sfx, sfx_thunder(2.8, 9), G("kelor.flip"), gain=0.8)
-    add_clip(sfx, sfx_gong_ageng(3.0, 49.0), G("kelor.flip") + 0.05, gain=0.6)
-    add_clip(sfx, sfx_roar(1.3, 33), G("kelor.flare") + 0.15, gain=0.7)
-    add_clip(sfx, sfx_gong_ageng(2.6, 55.0), G("kelor.flare"), gain=0.8)
-    # Gedor
+    add_clip(sfx, sfx_thunder(2.8, 9), G("kelor.flip"), gain=0.7)
+    add_clip(sfx, sfx_boom(2.4, 44), G("kelor.flip") + 0.05, gain=0.6)
+    r1, lead1 = sfx_roar2(1.5, 33, size=0.9)
+    add_clip(sfx, r1, G("kelor.flare") - lead1, gain=0.85)
+    # ---- gedor ----
     t0 = S["gedor"] + 0.2
-    while t0 < G("gedor.roar"):
+    while t0 < G("gedor.roar") - 0.3:
         add_clip(sfx, sfx_knock(0.5, 110, int(t0 * 10)), t0, gain=1.0)
         t0 += 0.38
-    add_clip(sfx, sfx_roar(1.7, 21), G("gedor.roar"), gain=0.95)
-    add_clip(sfx, sfx_ghost_whoosh(2.0, 8), G("gedor.flee0"), gain=0.7)
-    # Fajar
-    add_clip(sfx, sfx_birds(min(12.0, total - S["fajar"]), 11), S["fajar"] + 0.4, gain=0.55)
-    add_clip(sfx, sfx_gong_ageng(3.0, 65.41), G("fajar.big"), gain=0.35)
+    r2, lead2 = sfx_roar2(2.0, 21, size=1.0)
+    add_clip(sfx, r2, G("gedor.roar") - lead2, gain=1.0)
 
-    for sid, ln in P["lines"].items():
+    # ---- footsteps: scene-local step times k/f match the video's walking bob exactly ----
+    def steps(scene, t0, t1, f, kind, d0, d1, gain, seed0, bag=False, pan=0.0, echo=False):
+        for kk in range(math.ceil(t0 * f), math.floor(t1 * f) + 1):
+            tau = kk / f
+            if tau < t0 or tau > t1:
+                continue
+            d = d0 + (d1 - d0) * ((tau - t0) / max(t1 - t0, 1e-6))
+            clip = sfx_step(seed0 + kk, d, kind, bag)
+            if echo:
+                clip = reverb(clip, rt=0.9, wet=0.35, lp=2200, seed=kk)
+            add_clip(sfx, clip, S[scene] + tau, gain=gain, pan=pan + (0.08 if kk % 2 else -0.08))
+
+    # the "husband" walks too evenly and too hollow: it is the tell. It stops dead when the picture does.
+    steps("panggil", ev["panggil.walk0"], ev["panggil.walk1"], STEP_F["fake"], "sandal", 16.0, 6.7, 0.55, 100, echo=True)
+    steps("fajar", ev["fajar.husband0"], ev["fajar.husband1"], STEP_F["real"], "sandal", 40.0, 9.0, 0.65, 300, bag=True)
+    steps("gedor", ev["gedor.flee0"], ev["gedor.flee1"], STEP_F["gen"], "heavy", 5.8, 21.0, 1.1, 500)
+
+    add_clip(sfx, sfx_gong_ageng(3.0, 65.41), G("fajar.big"), gain=0.30)
+
+    for sid, ln in L.items():
         add_clip(vo, clips[sid], ln["gs"], gain=1.08)
 
     vo_mono = np.abs(vo[:, 0]) + np.abs(vo[:, 1])
     win = int(0.08 * SR)
     env = np.convolve(vo_mono, np.ones(win, dtype=np.float32) / win, mode="same")
     duck_music = 1.0 / (1.0 + 5.0 * env)
+    duck_amb = 1.0 / (1.0 + 2.4 * env)
     duck_sfx = 1.0 / (1.0 + 1.6 * env)
 
-    master = bed * duck_music[:, None] + sfx * duck_sfx[:, None] + vo * 1.25
-    fade_in = np.minimum(1.0, np.linspace(0, DURATION, N_SAMPLES) / 0.15)
-    fade_out = np.minimum(1.0, np.linspace(DURATION, 0, N_SAMPLES) / 0.8)
+    master = mus * duck_music[:, None] + amb * duck_amb[:, None] + sfx * duck_sfx[:, None] + vo * 1.25
+    fade_in = np.minimum(1.0, np.linspace(0, DURATION, N) / 0.15)
+    fade_out = np.minimum(1.0, np.linspace(DURATION, 0, N) / 0.8)
     master *= (fade_in * fade_out)[:, None]
     peak = np.max(np.abs(master)) + 1e-6
     master = np.tanh(master / peak * 1.6) / np.tanh(1.6) * 0.92
@@ -671,6 +1015,8 @@ def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
         check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
     )
     wav_path.unlink(missing_ok=True)
+    # debugging aid: stems for listening/analysis next to the cache (not committed)
+    np.save(CACHE / "_mix_stems.npy", np.stack([mus[:, 0], amb[:, 0], sfx[:, 0], vo[:, 0]]).astype(np.float16))
     print(f"Selesai! Master audio: {out_mp3} ({out_mp3.stat().st_size // 1024} KB), jadwal: {TIMING_JSON}")
 
 
