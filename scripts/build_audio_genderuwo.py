@@ -341,6 +341,20 @@ SCENES = [
     ]),
 ]
 
+# Extra candidate counts / alternative spellings fed to the TTS (spoken text stays the same). The ellipsis in
+# "Dik..." made the model garble the line, so it is written with commas.
+N_OVERRIDE = {"panggil_h": 6, "gedor_g": 6, "kelor_3a": 6, "rumah_2": 5, "kelor_1a": 5, "rumah_5": 4,
+              "tanda_1a": 4, "panggil_1": 4, "hook_2": 5, "fajar_1": 3, "fajar_2": 4, "kelor_3b": 5, "rumah_1b": 4}
+VARIANTS = {
+    "panggil_h": ["Dik, bukakan pintu. Mas pulang.", "Dik, bukakan pintunya. Mas pulang.", "Dik. Bukakan pintu, Dik. Mas pulang."],
+    "gedor_g": ["Dik, bukakan pintu.", "Dik. Bukakan pintu, Dik."],
+    "kelor_3a": ["Lalu, bayangannya membesar.", "Lalu bayangannya, membesar.", "Lalu bayangannya membesar."],
+    "rumah_2": ["Yu Darmi,", "Yu, Darmi.", "Yuu Darmi,"],
+    "kelor_1a": ["Yu Darmi ingat pesan Mbah,", "Yu Darmi ingat, pesan Mbah:", "Yu Darmi ingat pesan Mbah:"],
+    "rumah_5": ["Kata warga, itu rumah genderuwo.", "Kata warga, itu rumah gendruwo."],
+    "kelor_3b": ["Dan matanya merah menyalaaa!", "Dan matanya, merah menyala!"],
+}
+
 _WHISPER = None
 
 
@@ -358,28 +372,42 @@ def _words(s: str):
     return re.sub(r"[^a-z0-9 ]", "", s.lower()).split()
 
 
-def pick_best(state, text: str, n: int):
-    """Synthesize n candidates at natural speed and keep the one speech recognition hears most clearly."""
+def _letters(s: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def pick_best(state, texts: list, n: int):
+    """Synthesize n candidates (cycling through spelling variants) at natural speed and keep the one
+    speech recognition hears most clearly. Similarity is measured per letter, so names and spacing don't hurt."""
     best, best_score = None, -1.0
     for i in range(n):
+        text = texts[i % len(texts)]
         clip = synth_id_cloned(state, text, target_max_s=None)
-        score = difflib.SequenceMatcher(None, _words(text), _words(asr_text(clip))).ratio()
-        # mild preference for a natural pace (about 0.33 s/word incl. punctuation)
+        heard = asr_text(clip)
+        score = difflib.SequenceMatcher(None, _letters(text), _letters(heard)).ratio()
         exp = max(0.5, 0.33 * len(_words(text)))
         score -= 0.04 * min(1.0, abs(len(clip) / SR - exp) / exp)
-        print(f"      cand {i + 1}/{n}: score {score:.2f}")
+        print(f"      cand {i + 1}/{n}: {score:.2f}  <- '{heard.strip()}'")
         if score > best_score:
             best, best_score = clip, score
+    if best_score < 0.65:
+        print(f"      !! LEMAH (skor terbaik {best_score:.2f})")
     return best
 
 
 def get_raw(state, voice_key: str, sid: str, text: str, n: int) -> np.ndarray:
     CACHE.mkdir(parents=True, exist_ok=True)
-    key = hashlib.sha1(f"{voice_key}|{text}|n{n}|t0.5|v4".encode()).hexdigest()[:16]
+    if sid in N_OVERRIDE or sid in VARIANTS:
+        n = N_OVERRIDE.get(sid, n)
+        texts = VARIANTS.get(sid, [text])
+        key = hashlib.sha1(f"{voice_key}|{'/'.join(texts)}|n{n}|t0.5|v5".encode()).hexdigest()[:16]
+    else:  # unchanged segments keep their already-chosen v4 clip
+        texts = [text]
+        key = hashlib.sha1(f"{voice_key}|{text}|n{n}|t0.5|v4".encode()).hexdigest()[:16]
     f = CACHE / f"{key}.npy"
     if f.exists():
         return np.load(f)
-    clip = pick_best(state, text, n)
+    clip = pick_best(state, texts, n)
     np.save(f, clip)
     return clip
 
