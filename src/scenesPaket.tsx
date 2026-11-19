@@ -234,11 +234,11 @@ export const ScenePaketRouter: React.FC = () => {
       <Stage cam={cam} bg="linear-gradient(#0b1030, #1a2150)">
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, -3]}>
           <planeGeometry args={[40, 20]} />
-          <meshStandardMaterial color="#232a52" roughness={0.9} />
+          <meshStandardMaterial color="#4b5aa8" roughness={0.9} />
         </mesh>
         <mesh position={[0, 3, -5]}>
           <planeGeometry args={[40, 8]} />
-          <meshStandardMaterial color="#1b2147" />
+          <meshStandardMaterial color="#35418a" />
         </mesh>
         <mesh position={[2.3, 0.35, -1]}>
           <boxGeometry args={[4.4, 0.7, 2]} />
@@ -249,7 +249,9 @@ export const ScenePaketRouter: React.FC = () => {
           <ToonSprite key={i} position={[-3.4 + i * 0.75 + (f > say ? 0 : 0), 0, -0.6 - (i % 2) * 0.15]} height={1.55} yaw={0.2} params={{ expr: i % 2 ? "neutral" : "worried", shirt: c, pants: "#334155", hat: i % 3 === 0 ? "cap" : "none", hatColor: "#475569", seed: 20 + i, armL: [-0.3, 0.9], armR: [0.3, -0.9], squash: Math.sin(t * 2 + i) * 0.15, look: 0.5 }} />
         ))}
         <ToonSprite position={[px, 0, 0.7]} yaw={yawTo(px, 0.7, cam)} height={1.9} params={pakP} />
-        <pointLight position={[2, 3, 3]} intensity={60} distance={10} color="#7dd3fc" />
+        <ambientLight intensity={1.6} color="#c9d6ff" />
+        <pointLight position={[2, 3, 3]} intensity={120} distance={14} color="#9fe0ff" />
+        <pointLight position={[-2, 3, 3]} intensity={70} distance={14} color="#ffd9a0" />
       </Stage>
       <Look tint="rgba(30,40,120,0.2)" />
       <Timer scene="router" />
@@ -270,12 +272,12 @@ export const ScenePaketTiang: React.FC = () => {
   const kite = EV("tiang.kite");
   const x = interpolate(f, [0, light], [-7, 6], clamp);
   if (f < light) {
-    const cam = shotCam(f, [{ to: 9999, p0: [-6.5, 5.0, 4.6], l0: [-6.0, 6.0, -5.5], p1: [5, 5.0, 4.6], l1: [6, 6.0, -5.5], fov: 46 }]);
+    const cam = shotCam(f, [{ to: light, p0: [-7.0, 5.8, 2.0], l0: [-7.0, 6.5, -5.5], p1: [6.0, 5.8, 2.0], l1: [6.0, 6.5, -5.5], fov: 46 }]);
     return (
       <AbsoluteFill>
         <Stage cam={cam} bg="linear-gradient(#0b1030, #2b2f6b 70%, #6b5fa8)">
           <NightCity t={t} kite={0} />
-          <ToonSprite position={[x, 6.38, -5.35]} height={1.2} yaw={0.1} params={{ ...paket, ...run(f, 1.1), expr: "worried" }} shadow={false} />
+          <ToonSprite position={[x, 6.4, -5.3]} height={2.2} yaw={0.1} params={{ ...paket, ...run(f, 1.1), expr: "worried" }} shadow={false} />
         </Stage>
         <Look tint="rgba(30,40,120,0.2)" />
         <Timer scene="tiang" />
@@ -296,7 +298,7 @@ export const ScenePaketTiang: React.FC = () => {
           <Tube t={t} speed={30 + 40 * sm(cl((f - speed + 10) / 20))} />
           <mesh position={[0, -1.0, -0.4]}>
             <sphereGeometry args={[1.55 * fl, 16, 12]} />
-            <meshBasicMaterial color="#bfe3ff" transparent opacity={0.28} />
+            <meshBasicMaterial color="#bfe3ff" transparent opacity={0.28} depthWrite={false} />
           </mesh>
           <ToonSprite position={[0, -2.0, 0]} height={2.0} yaw={0.15} params={{ ...paket, ...run(f, 1.3), expr: "happy", face: "#e0f2fe" }} shadow={false} />
         </Stage>
@@ -425,11 +427,12 @@ export const ScenePaketBts: React.FC = () => {
   const fly = EV("bts.fly");
   const wave = sm(cl((f - tower) / 10));
   const k = sm(cl((f - fly) / 34));
-  const fx = 0 + k * 14;
+  const fx = k * 8;
   const fy = 9.5 - Math.sin(k * Math.PI) * 0 - k * 5.5;
   const cam = shotCam(f, [
     { to: fly, p0: [0, 0.8, 6.0], l0: [0, 5.5, -6], p1: [-0.4, 3.0, 6.4], l1: [0, 6.5, -6], fov: 56 },
-    { to: 9999, p0: [2.0, 3.8, 6.0], l0: [3.0, 6.0, -6], p1: [9.0, 4.6, 6.0], l1: [10.0, 4.5, -6], fov: 50 },
+    { to: fly + 50, p0: [1.0, 5.0, 6.0], l0: [1.5, 7.0, -6], p1: [5.5, 4.4, 6.0], l1: [6.0, 4.6, -6], fov: 50 },
+    { to: 9999, p0: [5.5, 4.4, 6.0], l0: [6.0, 4.6, -6], p1: [5.2, 4.2, 5.4], l1: [6.2, 4.5, -6], fov: 50 },
   ]);
   return (
     <AbsoluteFill>
