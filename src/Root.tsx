@@ -7,10 +7,19 @@ import { SamuraiThunder, TOTAL_FRAMES } from "./SamuraiThunder";
 import { SamuraiThunderPart2, TOTAL_FRAMES_P2 } from "./SamuraiThunderPart2";
 import { TOTAL_FRAMES_WEWE, WeweGombel } from "./WeweGombel";
 import { Genderuwo, TOTAL_FRAMES_GEN } from "./Genderuwo";
+import { Rani, TOTAL_FRAMES_RANI } from "./Rani";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Rani"
+        component={Rani}
+        durationInFrames={TOTAL_FRAMES_RANI}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="Genderuwo"
         component={Genderuwo}
