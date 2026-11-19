@@ -1,0 +1,134 @@
+{
+ "fps": 30,
+ "total_frames": 2129,
+ "scenes": {
+  "hook": 231,
+  "rumah": 295,
+  "tanda": 287,
+  "panggil": 277,
+  "kelor": 361,
+  "gedor": 240,
+  "fajar": 438
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Kalau suamimu pulang tengah malam, padahal katanya pulang bulan depan, jangan buka pintunya!",
+   "from": 10,
+   "to": 165
+  },
+  "rumah_1": {
+   "scene": "rumah",
+   "text": "Konon, di sebuah kampung, Yu Darmi tinggal sendirian karena suaminya merantau.",
+   "from": 9,
+   "to": 146
+  },
+  "rumah_2": {
+   "scene": "rumah",
+   "text": "Di ujung jalan berdiri beringin tua, yang dipercaya warga sebagai rumah genderuwo.",
+   "from": 157,
+   "to": 277
+  },
+  "tanda_1": {
+   "scene": "tanda",
+   "text": "Suatu malam, tercium bau singkong bakar yang menyengat, padahal tak ada yang membakar.",
+   "from": 9,
+   "to": 137
+  },
+  "tanda_2": {
+   "scene": "tanda",
+   "text": "Anjing kampung menggonggong, lalu mendadak diam. Lampu minyak pun bergoyang.",
+   "from": 148,
+   "to": 266
+  },
+  "panggil_1": {
+   "scene": "panggil",
+   "text": "Lalu terdengar sebuah suara dari arah beringin.",
+   "from": 15,
+   "to": 82
+  },
+  "panggil_h": {
+   "scene": "panggil",
+   "text": "Dik, bukakan pintu. Mas pulang.",
+   "from": 111,
+   "to": 152
+  },
+  "panggil_3": {
+   "scene": "panggil",
+   "text": "Suaranya persis suaminya. Tapi kenapa ia tak mau mendekat?",
+   "from": 166,
+   "to": 253
+  },
+  "kelor_1": {
+   "scene": "kelor",
+   "text": "Yu Darmi ingat pesan Mbah: sebarkan daun kelor di ambang pintu.",
+   "from": 9,
+   "to": 122
+  },
+  "kelor_2": {
+   "scene": "kelor",
+   "text": "Sosok itu berhenti di depan pintu. Ia tak sanggup melangkah.",
+   "from": 133,
+   "to": 233
+  },
+  "kelor_3": {
+   "scene": "kelor",
+   "text": "Lalu bayangannya membesar, dan matanya merah menyala!",
+   "from": 248,
+   "to": 331
+  },
+  "gedor_g": {
+   "scene": "gedor",
+   "text": "Dik, bukakan pintu.",
+   "from": 9,
+   "to": 47
+  },
+  "gedor_1": {
+   "scene": "gedor",
+   "text": "Ia menggedor pintu berkali-kali, lalu meraung dan menghilang.",
+   "from": 60,
+   "to": 157
+  },
+  "fajar_1": {
+   "scene": "fajar",
+   "text": "Fajar tiba. Hanya tersisa jejak besar berbulu di bawah beringin.",
+   "from": 10,
+   "to": 118
+  },
+  "fajar_2": {
+   "scene": "fajar",
+   "text": "Tiga hari kemudian, suami Yu Darmi pulang sungguhan.",
+   "from": 134,
+   "to": 224
+  },
+  "fajar_3": {
+   "scene": "fajar",
+   "text": "Jadi, kalau ada yang memanggil dari gelap, pastikan dia berani melangkah masuk.",
+   "from": 253,
+   "to": 378
+  }
+ },
+ "events": {
+  "hook.eyes": 95,
+  "hook.knock1": 169,
+  "hook.knock2": 183,
+  "hook.knock3": 197,
+  "rumah.pan": 157,
+  "tanda.eyes": 213,
+  "panggil.walk0": 15,
+  "panggil.walk1": 106,
+  "panggil.quote0": 112,
+  "panggil.quote1": 178,
+  "kelor.leaves": 71,
+  "kelor.approach0": 9,
+  "kelor.approach1": 134,
+  "kelor.eyes": 193,
+  "kelor.flip": 259,
+  "gedor.roar": 108,
+  "gedor.flee0": 135,
+  "gedor.flee1": 192,
+  "fajar.husband0": 125,
+  "fajar.husband1": 259,
+  "fajar.card": 247
+ }
+}
