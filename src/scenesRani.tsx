@@ -119,6 +119,8 @@ const Stage: React.FC<{
   const skyMid = golden ? "#ffc58a" : wet > 0.5 ? "#aab6c5" : "#cfeeff";
   const skyBot = golden ? "#ffe3c2" : wet > 0.5 ? "#8b97a6" : "#fff4d6";
   const hand = handPos(raniX, raniZ, raniRot);
+  const relaxed: [number, number] = [raniX + 0.34 * Math.cos(raniRot) + 0.05 * Math.sin(raniRot), raniZ - 0.34 * Math.sin(raniRot) + 0.05 * Math.cos(raniRot)];
+  const plasticPos: Vec3 = raniReach > 0.3 ? [hand[0], 0.95, hand[1]] : [relaxed[0], 0.8, relaxed[1]];
   const sceneCusts = custs.map((c, i) => {
     const away = c.away;
     const out = away > 0;
@@ -200,7 +202,7 @@ const Stage: React.FC<{
           jump={raniJump}
         />
         {plastic && (
-          <mesh position={[hand[0], 0.95, hand[1]]} rotation={[0.4, 0.3, 0.2]} castShadow>
+          <mesh position={plasticPos} rotation={[0.4, 0.3, 0.2]} castShadow>
             <boxGeometry args={[0.3, 0.04, 0.24]} />
             <meshStandardMaterial color="#ffffff" transparent opacity={0.85} roughness={0.15} />
           </mesh>
@@ -321,7 +323,7 @@ export const SceneRaniSengat: React.FC = () => {
       { to: touchF, p0: [0.6, 1.45, 4.2], l0: [-1.2, 1.2, 0.7], p1: [-0.2, 1.4, 3.6], l1: [-1.7, 1.2, 0.7], fov: 44 },
       { to: tikF + 5, p0: [-1.0, 1.35, 2.0], l0: [-2.15, 1.25, 1.0], p1: [-1.35, 1.3, 1.7], l1: [-2.15, 1.25, 1.0], fov: 26 },
       { to: tikF + 36, p0: [-1.0, 1.8, 3.1], l0: [-1.55, 1.68, 0.75], p1: [-1.15, 1.76, 2.7], l1: [-1.55, 1.68, 0.75], fov: 30 },
-      { to: EV("sengat.plastic") + 48, p0: [-0.9, 1.2, 2.4], l0: [-1.9, 0.95, 0.7], p1: [-1.1, 1.15, 2.2], l1: [-1.9, 0.95, 0.7], fov: 32 },
+      { to: EV("sengat.plastic") + 48, p0: [-0.3, 1.15, 2.5], l0: [-1.22, 0.85, 0.75], p1: [-0.6, 1.0, 2.1], l1: [-1.22, 0.82, 0.75], fov: 30 },
       { to: 9999, p0: [-0.5, 1.8, 8.2], l0: [-1.0, 1.2, 2.2], p1: [-1.8, 1.7, 7.4], l1: [-3.0, 1.1, 2.6], fov: 50 },
     ]
   );
@@ -524,7 +526,7 @@ export const SceneRaniAkhir: React.FC = () => {
   const c1 = spring({ frame: frame - endF, fps, config: { damping: 12 } });
   const c2 = spring({ frame: frame - endF - 10, fps, config: { damping: 10, stiffness: 180 } });
   const cam = shotCam(frame, [
-    { to: EV("akhir.mat") + 22, p0: [0.0, 3.25, 2.6], l0: [0, 0, 0.7], p1: [0.0, 3.2, 2.2], l1: [0, 0, 0.7], fov: 64 },
+    { to: EV("akhir.mat") + 22, p0: [1.2, 2.3, 4.6], l0: [0.0, 0.0, 0.6], p1: [0.6, 2.0, 4.0], l1: [0.0, 0.0, 0.6], fov: 52 },
     { to: EV("akhir.basket") + 36, p0: [0.4, 1.25, 0.7], l0: [0.9, 1.18, -1.0], p1: [0.55, 1.28, 0.4], l1: [0.9, 1.2, -1.0], fov: 30 },
     { to: 9999, p0: [0.5, 1.6, 6.8], l0: [0.3, 1.4, 0], p1: [0.1, 2.3, 13.0], l1: [0.0, 1.7, 0], fov: 46 },
   ]);
