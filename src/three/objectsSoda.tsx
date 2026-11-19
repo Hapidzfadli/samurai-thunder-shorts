@@ -11,11 +11,11 @@ export const lerp3 = (a: Vec3, b: Vec3, k: number): Vec3 => [a[0] + (b[0] - a[0]
 /* ------------------------------------------------------------------ */
 /* Procedural textures (deterministic, no assets needed)                */
 /* ------------------------------------------------------------------ */
-const hash = (x: number, y = 0) => {
+export const hash = (x: number, y = 0) => {
   const s = Math.sin(x * 127.1 + y * 311.7) * 43758.5453;
   return s - Math.floor(s);
 };
-const useTex = (key: string, w: number, h: number, draw: (g: CanvasRenderingContext2D) => void, repeat?: [number, number]) =>
+export const useTex = (key: string, w: number, h: number, draw: (g: CanvasRenderingContext2D) => void, repeat?: [number, number]) =>
   useMemo(() => {
     const cv = document.createElement("canvas");
     cv.width = w;
@@ -69,7 +69,7 @@ const useStrata = (repeat: [number, number] = [2, 1]) =>
     }
   }, repeat);
 
-const useSand = () =>
+export const useSand = () =>
   useTex("sand", 1024, 1024, (g) => {
     g.fillStyle = "#dfae72";
     g.fillRect(0, 0, 1024, 1024);
@@ -118,7 +118,7 @@ const useRoad = () =>
     g.fillRect(0, 500, 512, 6);
   }, [6, 1]);
 
-const usePlanks = (base = "#9a5a30") =>
+export const usePlanks = (base = "#9a5a30") =>
   useTex("planks" + base, 512, 512, (g) => {
     g.fillStyle = "#2a160b";
     g.fillRect(0, 0, 512, 512);
@@ -185,7 +185,10 @@ export type ToonParams = {
   face?: string;
   shirt: string;
   pants?: string;
-  hat?: "cap" | "bowler" | "bucket" | "none";
+  hat?: "cap" | "bowler" | "bucket" | "hair" | "none";
+  glasses?: boolean;
+  tape?: boolean;
+  small?: boolean;
   hatColor?: string;
   armL?: [number, number]; // [upper, fore-relative] radians from straight down, + = toward screen-right
   armR?: [number, number];
@@ -311,6 +314,13 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.fillRect(150, 400, 220, 200);
   }
   g.restore();
+  if (p.tape) {
+    g.fillStyle = "rgba(240,220,170,0.9)";
+    g.strokeStyle = INK;
+    g.lineWidth = 5;
+    g.fillRect(256 - 16, 405, 32, 190);
+    g.strokeRect(256 - 16, 405, 32, 190);
+  }
   // collar / buttons
   g.strokeStyle = INK;
   g.lineWidth = 6;
@@ -501,6 +511,18 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.strokeStyle = INK;
     g.lineWidth = 10;
     g.stroke();
+  } else if (hat === "hair") {
+    g.fillStyle = hc;
+    g.strokeStyle = INK;
+    g.lineWidth = 10;
+    g.beginPath();
+    g.moveTo(hx - 150, hy + 20);
+    g.bezierCurveTo(hx - 190, hy - 150, hx + 190, hy - 150, hx + 150, hy + 20);
+    g.bezierCurveTo(hx + 120, hy - 40, hx + 60, hy - 90, hx - 20, hy - 96);
+    g.bezierCurveTo(hx - 80, hy - 80, hx - 120, hy - 40, hx - 150, hy + 20);
+    g.fill();
+    g.stroke();
+    inkEllipse(g, hx + 150, hy + 80, 30, 56, hc, 9, sd + 53, 0.15);
   } else if (hat === "bucket") {
     g.fillStyle = hc;
     g.strokeStyle = INK;
@@ -516,6 +538,19 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     inkEllipse(g, hx, hy - 105, 160, 26, hc, 10, sd + 52);
   }
 
+  if (p.glasses) {
+    g.strokeStyle = INK;
+    g.lineWidth = 8;
+    ex.forEach((x) => {
+      g.beginPath();
+      g.arc(x, hy - 10, 46, 0, 7);
+      g.stroke();
+    });
+    g.beginPath();
+    g.moveTo(ex[0] + 46, hy - 10);
+    g.lineTo(ex[1] - 46, hy - 10);
+    g.stroke();
+  }
   // effects
   if ((p.sweat ?? 0) > 0.02) {
     for (let i = 0; i < 4; i++) {

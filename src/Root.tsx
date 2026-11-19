@@ -11,10 +11,19 @@ import { Rani, TOTAL_FRAMES_RANI } from "./Rani";
 import { Nyamuk, TOTAL_FRAMES_NYAMUK } from "./Nyamuk";
 import { Level30, TOTAL_FRAMES_L30 } from "./Level30";
 import { Soda, TOTAL_FRAMES_SODA } from "./Soda";
+import { Paket, TOTAL_FRAMES_PAKET } from "./Paket";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Paket"
+        component={Paket}
+        durationInFrames={TOTAL_FRAMES_PAKET}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="Soda"
         component={Soda}
