@@ -177,7 +177,8 @@ export const SceneL30Hook: React.FC = () => {
   const freeze = EV("hook.freeze");
   const dive = EV("hook.dive");
   const hot = interpolate(f, [bite, freeze + 60], [0, 1], clamp);
-  const chiliZ = interpolate(f, [0, bite - 4, bite, bite + 16], [1.52, 1.4, 1.4, 1.95], clamp);
+  const chiliZ = interpolate(f, [0, bite - 4, bite, bite + 16], [1.52, 1.4, 1.4, 1.6], clamp);
+  const chiliX = interpolate(f, [bite, bite + 16], [0.1, 1.1], clamp);
   const mouthS = f >= dive ? interpolate(f, [dive, dive + 52], [0.03, 2.1], clamp) : 0;
   const cam = shotCam(f, [
     { to: bite + 14, p0: [0.42, 1.28, 2.55], l0: [0.1, 1.1, 1.15], p1: [0.2, 1.22, 2.15], l1: [0.06, 1.1, 1.1], fov: 38 },
@@ -191,7 +192,7 @@ export const SceneL30Hook: React.FC = () => {
         <KantinLights />
         <Kantin t={t} />
         <Budi t={t} hot={hot} expr={f < bite ? "neutral" : "surprised"} shake={interpolate(f, [freeze + 20, freeze + 60], [0, 0.6], clamp)} fx={{ steam: interpolate(f, [freeze + 40, freeze + 64], [0, 1], clamp), sweat: interpolate(f, [freeze + 30, freeze + 50], [0, 1], clamp) }} />
-        <ChiliPepper position={[0.1, 1.09, chiliZ]} rotation={[Math.PI / 2, 0, 0.1]} scale={1.15} bite={f > bite ? 1 : 0} />
+        <ChiliPepper position={[chiliX, 1.09, chiliZ]} rotation={[Math.PI / 2, 0, 0.1]} scale={1.15} bite={f > bite ? 1 : 0} />
         {mouthS > 0 && (
           <mesh position={[0, 1.07, 1.05]} scale={[mouthS, mouthS * 1.15, 0.3]}>
             <sphereGeometry args={[0.1, 14, 12]} />
@@ -230,7 +231,7 @@ export const SceneL30Lidah: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage cam={cam} bg="#5a0f1a">
-        <MouthSet t={t} hot={hot} />
+        <MouthSet t={t} hot={hot} front={f < 44} />
         <Guards t={t} st={(i) => ({ alarm: al ? 1 : fireK > 0.4 ? 0.5 : 0, fire: fireK * (i % 7 === 6 ? 0.7 : 1), cheer: 0 })} />
         <ChiliPepper position={chiliPos} rotation={[0.2, 0.4, Math.PI / 2 + 0.1]} scale={1.5} bite={1} tag />
         {f > chiliF &&
@@ -378,7 +379,7 @@ export const SceneL30Air: React.FC = () => {
   const pull = EV("air.pull");
   const chug = f < macro - 2;
   if (chug) {
-    const cam = shotCam(f, [{ to: 9999, p0: [1.7, 1.45, 3.7], l0: [0, 1.15, 1.0], p1: [0.8, 1.3, 2.5], l1: [0, 1.12, 1.0], fov: 40 }]);
+    const cam = shotCam(f, [{ to: 9999, p0: [0.9, 1.35, 2.7], l0: [0, 1.15, 1.0], p1: [0.4, 1.25, 2.0], l1: [0, 1.12, 1.0], fov: 36 }]);
     const tilt = interpolate(f, [4, 22], [0.4, 1.0], clamp);
     return (
       <AbsoluteFill>

@@ -458,7 +458,7 @@ export const tongueY = (x: number, z: number) => {
   return -0.2 + 0.7 * Math.sqrt(Math.max(0, q));
 };
 
-export const MouthSet: React.FC<{ t: number; hot?: number }> = ({ t, hot = 0 }) => {
+export const MouthSet: React.FC<{ t: number; hot?: number; front?: boolean }> = ({ t, hot = 0, front = false }) => {
   const wall = new THREE.Color("#e8828f").lerp(new THREE.Color("#d8283a"), hot).getStyle();
   const tongue = new THREE.Color("#e0586d").lerp(new THREE.Color("#c4122a"), hot).getStyle();
   const bumps = useMemo(
@@ -496,7 +496,7 @@ export const MouthSet: React.FC<{ t: number; hot?: number }> = ({ t, hot = 0 }) 
           <meshStandardMaterial color={hot > 0.5 ? "#e0384a" : "#f59aa8"} roughness={0.6} flatShading />
         </mesh>
       ))}
-      {teeth.map((x, i) => (
+      {front && teeth.map((x, i) => (
         <group key={i}>
           <M position={[x, 3.6, 6.4 - Math.abs(x) * 0.35]}>
             <boxGeometry args={[0.85, 1.9, 0.6]} />
@@ -508,10 +508,11 @@ export const MouthSet: React.FC<{ t: number; hot?: number }> = ({ t, hot = 0 }) 
           </M>
         </group>
       ))}
+      {front && (
       <mesh position={[0, 2, 7.2]} rotation={[0, 0, 0]} scale={[1.2, 0.8, 1]}>
         <torusGeometry args={[4.4, 1, 10, 28]} />
         <meshStandardMaterial color="#d95a6e" roughness={0.6} flatShading />
-      </mesh>
+      </mesh>)}
       <ambientLight intensity={0.8} color="#ffb7c2" />
       <pointLight position={[0, 4.2, 4]} intensity={90} distance={16} color="#ffe2dc" />
       <pointLight position={[0, 2, 0]} intensity={30 + hot * 60} distance={14} color={hot > 0.3 ? "#ff6a3a" : "#ffb3c1"} />
