@@ -15,19 +15,30 @@ const EV = (name: string) => (timing.events as Record<string, number>)[name];
 /* ------------------------------------------------------------------ */
 /* Camera: every shot moves                                             */
 /* ------------------------------------------------------------------ */
-type Shot = { to: number; p0: Vec3; l0: Vec3; p1?: Vec3; l1?: Vec3; fov?: number; shake?: number };
+/** A shot dollies p0 -> p1; an optional `pm` makes the path swing through that point (push in, then pull back out). */
+type Shot = { to: number; p0: Vec3; l0: Vec3; p1?: Vec3; l1?: Vec3; pm?: Vec3; lm?: Vec3; fov?: number; fov1?: number; shake?: number };
+const curve = (a: Vec3, b: Vec3, m: Vec3 | undefined, k: number): Vec3 => {
+  if (!m) return lerp3(a, b, k);
+  const c: Vec3 = [2 * m[0] - (a[0] + b[0]) / 2, 2 * m[1] - (a[1] + b[1]) / 2, 2 * m[2] - (a[2] + b[2]) / 2];
+  const u = 1 - k;
+  return [u * u * a[0] + 2 * u * k * c[0] + k * k * b[0], u * u * a[1] + 2 * u * k * c[1] + k * k * b[1], u * u * a[2] + 2 * u * k * c[2] + k * k * b[2]];
+};
 const shotCam = (frame: number, shots: Shot[]) => {
   let start = 0;
   for (let i = 0; i < shots.length; i++) {
     const s = shots[i];
     if (frame < s.to || i === shots.length - 1) {
-      const k = sm(cl((frame - start) / Math.max(1, Math.min(s.to, start + 400) - start)));
-      const p = lerp3(s.p0, s.p1 ?? s.p0, k);
-      const l = lerp3(s.l0, s.l1 ?? s.l0, k);
+      const len = Math.max(1, Math.min(s.to, start + 400) - start);
+      const raw = cl((frame - start) / len);
+      const k = s.pm ? (raw * raw * (3 - 2 * raw)) * 0.4 + raw * 0.6 : sm(raw);
+      const p = curve(s.p0, s.p1 ?? s.p0, s.pm, k);
+      const l = curve(s.l0, s.l1 ?? s.l0, s.lm, k);
+      const f0 = s.fov ?? 50;
+      const fov = f0 + ((s.fov1 ?? f0) - f0) * k;
       const sh = s.shake ?? 0;
       const jx = sh * Math.sin(frame * 2.3) * 0.5 + sh * Math.sin(frame * 5.1) * 0.3;
       const jy = sh * Math.cos(frame * 2.9) * 0.5;
-      return { pos: [p[0] + jx, p[1] + jy, p[2]] as Vec3, look: l, fov: s.fov ?? 50 };
+      return { pos: [p[0] + jx, p[1] + jy, p[2]] as Vec3, look: l, fov };
     }
     start = s.to;
   }
@@ -181,10 +192,10 @@ export const SceneL30Hook: React.FC = () => {
   const chiliX = interpolate(f, [bite, bite + 16], [0.1, 1.1], clamp);
   const mouthS = f >= dive ? interpolate(f, [dive, dive + 52], [0.03, 2.1], clamp) : 0;
   const cam = shotCam(f, [
-    { to: bite + 14, p0: [0.55, 1.3, 3.3], l0: [0.1, 1.1, 1.15], p1: [0.3, 1.24, 2.9], l1: [0.06, 1.1, 1.1], fov: 38 },
-    { to: freeze + 60, p0: [0, 1.25, 3.1], l0: [0, 1.2, 1.0], p1: [0, 1.21, 2.3], l1: [0, 1.17, 1.0], fov: 30 },
-    { to: dive, p0: [3.4, 1.7, 5.4], l0: [0, 1.1, 1.0], p1: [2.5, 1.55, 4.4], l1: [0, 1.1, 1.0], fov: 44 },
-    { to: 9999, p0: [0, 1.14, 2.5], l0: [0, 1.1, 1.0], p1: [0, 1.1, 1.28], l1: [0, 1.1, 1.0], fov: 40, shake: 0.02 },
+    { to: bite + 6, p0: [1.0, 1.4, 4.8], l0: [0.05, 1.1, 1.0], p1: [0.6, 1.3, 4.0], l1: [0.05, 1.1, 1.0], fov: 40 },
+    { to: freeze + 22, p0: [0.5, 1.28, 4.0], l0: [0, 1.15, 1.0], p1: [0, 1.22, 3.0], l1: [0, 1.17, 1.0], fov: 38, fov1: 34 },
+    { to: dive, p0: [0, 1.22, 3.0], l0: [0, 1.17, 1.0], p1: [2.2, 1.65, 5.6], l1: [0, 1.1, 1.0], fov: 34, fov1: 42 },
+    { to: 9999, p0: [0, 1.2, 3.8], l0: [0, 1.1, 1.0], p1: [0, 1.1, 1.3], l1: [0, 1.1, 1.0], fov: 40, shake: 0.02 },
   ]);
   return (
     <AbsoluteFill>
@@ -225,7 +236,7 @@ export const SceneL30Lidah: React.FC = () => {
     { to: 40, p0: [0, 2.6, 11.5], l0: [0, 1, 2], p1: [0, 2.1, 7.6], l1: [0, 0.9, 2.2], fov: 52 },
     { to: 108, p0: [-3.2, 0.9, 6.3], l0: [-0.8, 1, 2.6], p1: [1.0, 1.1, 5.6], l1: [0.4, 1.0, 2.4], fov: 44 },
     { to: 168, p0: [3.6, 2.6, 6.2], l0: [0.3, 0.7, 2], p1: [2.4, 1.9, 5.4], l1: [0.5, 0.9, 2], fov: 44 },
-    { to: alarm, p0: [-0.2, 1.55, 4.6], l0: [-0.9, 1.2, 2.5], p1: [-0.6, 1.45, 3.9], l1: [-0.9, 1.25, 2.5], fov: 30 },
+    { to: alarm, p0: [0.4, 1.8, 5.2], l0: [-0.9, 1.2, 2.5], pm: [-0.5, 1.5, 4.0], p1: [0.6, 2.0, 6.0], l1: [-0.5, 1.2, 2.5], fov: 36 },
     { to: 9999, p0: [0, 1.9, 8], l0: [0, 1.3, 2.5], p1: [0, 1.7, 5.4], l1: [0, 1.3, 2.5], fov: 50, shake: 0.09 },
   ]);
   return (
@@ -332,9 +343,9 @@ export const SceneL30Otak: React.FC = () => {
   const snotF = EV("otak.snot");
   const sweatF = EV("otak.sweat");
   const cam = shotCam(f, [
-    { to: snotF, p0: [0, 1.28, 3.5], l0: [0, 1.17, 1.0], p1: [0, 1.22, 2.8], l1: [0, 1.15, 1.0], fov: 34 },
-    { to: sweatF, p0: [0.8, 1.1, 2.9], l0: [0, 1.08, 1.0], p1: [0.5, 1.1, 2.4], l1: [0, 1.08, 1.0], fov: 32 },
-    { to: 9999, p0: [2.6, 1.9, 4.4], l0: [0, 1.0, 1.0], p1: [1.6, 1.7, 3.6], l1: [0, 1.0, 1.0], fov: 44 },
+    { to: snotF - 4, p0: [0.4, 1.35, 5.2], l0: [0, 1.17, 1.0], pm: [0, 1.28, 3.5], p1: [0.5, 1.35, 4.5], l1: [0, 1.15, 1.0], fov: 38 },
+    { to: sweatF, p0: [1.1, 1.2, 3.6], l0: [0, 1.08, 1.0], p1: [0.7, 1.15, 3.0], l1: [0, 1.08, 1.0], fov: 34, fov1: 36 },
+    { to: 9999, p0: [0.9, 1.5, 3.8], l0: [0, 1.05, 1.0], p1: [2.8, 1.9, 6.2], l1: [0, 1.0, 1.0], fov: 40, fov1: 46 },
   ]);
   const wet = interpolate(f, [cry, cry + 24], [0, 1], clamp);
   return (
@@ -379,7 +390,7 @@ export const SceneL30Air: React.FC = () => {
   const pull = EV("air.pull");
   const chug = f < macro - 2;
   if (chug) {
-    const cam = shotCam(f, [{ to: 9999, p0: [1.1, 1.35, 3.6], l0: [0, 1.15, 1.0], p1: [0.5, 1.25, 2.7], l1: [0, 1.12, 1.0], fov: 36 }]);
+    const cam = shotCam(f, [{ to: 9999, p0: [1.8, 1.5, 5.4], l0: [0, 1.15, 1.0], p1: [0.9, 1.35, 3.9], l1: [0, 1.12, 1.0], fov: 40 }]);
     const tilt = interpolate(f, [4, 22], [0.4, 1.0], clamp);
     return (
       <AbsoluteFill>
@@ -412,8 +423,8 @@ export const SceneL30Air: React.FC = () => {
   const fire = 1 - cool;
   const cam = shotCam(f, [
     { to: 122, p0: [-2.6, 2.8, 6.6], l0: [0, 1.0, 1.5], p1: [0.6, 2.4, 5.6], l1: [-0.3, 1.0, 1.8], fov: 46 },
-    { to: 173, p0: [0.9, 2.1, 4.6], l0: [-0.5, 1.6, 2.7], p1: [0.2, 2.0, 4.0], l1: [-0.55, 1.6, 2.8], fov: 30 },
-    { to: nope - 4, p0: [-1.6, 2.0, 4.4], l0: [-0.6, 1.6, 2.8], p1: [-0.9, 1.9, 3.8], l1: [-0.5, 1.6, 2.8], fov: 26 },
+    { to: 173, p0: [0.9, 2.1, 4.8], l0: [-0.5, 1.6, 2.7], pm: [0.2, 2.0, 4.1], p1: [-0.6, 2.6, 6.0], l1: [-0.3, 1.4, 2.6], fov: 34 },
+    { to: nope - 4, p0: [-1.3, 1.9, 4.0], l0: [-0.6, 1.6, 2.8], p1: [0.2, 2.4, 6.6], l1: [-0.2, 1.3, 2.4], fov: 34, fov1: 42 },
     { to: milk, p0: [0, 1.8, 7.2], l0: [0, 1.2, 2], p1: [0, 1.8, 5.9], l1: [0, 1.2, 2], fov: 48, shake: 0.04 },
     { to: pull, p0: [0, 4.2, 8], l0: [0, 1.0, 1.5], p1: [0, 3.4, 7.2], l1: [0, 1.0, 1.5], fov: 50 },
     { to: 9999, p0: [1.8, 2.2, 5.6], l0: [0, 1.2, 2.0], p1: [0.4, 2.2, 4.6], l1: [0, 1.2, 2.0], fov: 42 },
@@ -501,7 +512,7 @@ export const SceneL30Akhir: React.FC = () => {
   const cam = shotCam(f, [
     { to: waiterF, p0: [1.4, 1.6, 5.6], l0: [0, 1.15, 1], p1: [0.6, 1.4, 4.4], l1: [0, 1.15, 1], fov: 42 },
     { to: nod - 8, p0: [2.8, 1.4, 4.8], l0: [1.2, 1.3, 0.9], p1: [1.8, 1.45, 4.1], l1: [1.0, 1.25, 0.9], fov: 42 },
-    { to: sigh, p0: [0, 1.28, 3.4], l0: [0, 1.15, 1.0], p1: [0, 1.2, 2.7], l1: [0, 1.15, 1.0], fov: 32 },
+    { to: sigh, p0: [1.0, 1.4, 5.0], l0: [0, 1.15, 1.0], pm: [0, 1.25, 3.4], p1: [0.4, 1.35, 4.4], l1: [0, 1.15, 1.0], fov: 36 },
     { to: 9999, p0: [0, 2.1, 7.2], l0: [0, 1.0, 2], p1: [0, 1.7, 5.6], l1: [0, 1.0, 2], fov: 48 },
   ]);
   const cutaway = f >= sigh;
