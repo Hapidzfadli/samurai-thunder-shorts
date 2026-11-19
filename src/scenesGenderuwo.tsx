@@ -342,8 +342,7 @@ export const SceneGenTanda: React.FC = () => {
       </Canvas>
       <Kicker text="TENGAH MALAM · TANDA PERTAMA" from={6} top={235} />
       <Chip n="①" label="BAU SINGKONG BAKAR" from={LN("tanda_1a").from + 24} to={capTo("tanda_1b")} top={430} left />
-      <Chip n="②" label="ANJING TERDIAM" from={LN("tanda_2a").from + 6} to={capTo("tanda_2b")} top={430} left={false} />
-      <Chip n="③" label="LAMPU BERGOYANG" from={LN("tanda_3").from} to={capTo("tanda_3")} top={430} left />
+      <Chip n="②" label="ANJING TERDIAM" from={LN("tanda_2a").from + 6} to={capTo("tanda_2b")} top={430} left />
       <Caption
         text="Tercium bau singkong bakar menyengat, padahal tak ada yang membakar"
         from={LN("tanda_1a").from}
