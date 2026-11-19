@@ -345,6 +345,28 @@ SCENES = [
     ]),
 ]
 
+# ---- Style reference: qin_mu_1min.mp3 (analysed, not cloned) ----------------------------------------------
+# It flows: ~2.6 words/s overall, almost no silences (2 pauses >=120 ms per minute), pitch std ~5 st, loudness std ~9 dB.
+# Ours spoke faster (3.3 words/s while speaking) but stopped constantly (36 pauses/min, mean 600 ms) and was flatter
+# (7.7 dB). So: ease the articulation rate a little, tighten the pauses (keeping the few deliberate dramatic ones),
+# and push the stressed words harder.
+PACE = 0.92
+DRAMATIC = {"hook_2", "tanda_2b", "tanda_3", "panggil_h", "kelor_1b", "kelor_3b", "fajar_3"}
+GAP_SCALE, GAP_SCALE_DRAMATIC, MIN_SCALE = 0.55, 0.85, 0.8
+_scaled = []
+for _key, _lead, _tail, _min, _segs in SCENES:
+    _ns = []
+    for _sid, _gap, _text, _fx, _n in _segs:
+        _fx = dict(_fx)
+        _fx["rate"] = max(0.72, round(_fx.get("rate", 1.0) * PACE, 3))
+        if _fx.get("emph") and "emph_db" not in _fx:
+            _fx["emph_db"] = 4.5
+        _ns.append((_sid, round(_gap * (GAP_SCALE_DRAMATIC if _sid in DRAMATIC else GAP_SCALE), 3), _text, _fx, _n))
+    # silent lead-ins/tails between scenes were ~1.4 s on average; keep what the visuals need (knocks, the creature running off)
+    _tail_floor = {"hook": 1.6, "gedor": 2.1}.get(_key, 0.0)
+    _scaled.append((_key, round(_lead * 0.7, 2), round(max(_tail * 0.75, _tail_floor), 2), round(_min * MIN_SCALE, 2), _ns))
+SCENES = _scaled
+
 # Extra candidate counts / alternative spellings fed to the TTS (spoken text stays the same). The ellipsis in
 # "Dik..." made the model garble the line, so it is written with commas.
 N_OVERRIDE = {"panggil_h": 6, "gedor_g": 6, "kelor_3a": 6, "rumah_2": 5, "kelor_1a": 5, "rumah_5": 4,
@@ -488,7 +510,7 @@ def expressive(clip: np.ndarray, fx: dict) -> np.ndarray:
     """Make the delivery livelier without touching the voice colour:
     widen the pitch range (k), lift pitch + loudness on the words to stress, and shape how the line ends
     (fall = firm statement, rise = question)."""
-    k = fx.get("k", 1.3)
+    k = fx.get("k", 1.4)
     emph = fx.get("emph", [])
     est, edb = fx.get("emph_st", 3.5), fx.get("emph_db", 3.0)
     end = fx.get("end")
@@ -530,7 +552,60 @@ def expressive(clip: np.ndarray, fx: dict) -> np.ndarray:
     cur = np.sqrt(np.mean(y[np.abs(y) > 0.02] ** 2)) if (np.abs(y) > 0.02).any() else 0.1
     return (y * (ref / (cur + 1e-9))).astype(np.float32)
 
-def apply_fx(clip: np.ndarray, fx: dict) -> np.ndarray:
+
+# A short pause after punctuation inside a line (the model runs words together: ~0-40 ms at commas/periods).
+# Values are minimums: where the speech already pauses longer, nothing is added.
+PAUSE = {",": 0.09, ".": 0.16, ":": 0.15, "?": 0.16, "...": 0.25}
+
+
+def insert_pauses(clip: np.ndarray, text: str, sid: str = "") -> np.ndarray:
+    toks = re.findall(r"\S+", text)
+    words = asr_words(clip) if len(toks) >= 2 else []
+    if len(words) < 2:
+        return clip
+    nws = [_nw(w[0]) for w in words]
+    cuts = []
+    for i, t in enumerate(toks[:-1]):
+        mm = re.search(r"(\.\.\.|[.,:?])$", t)
+        if not mm:
+            continue
+        exp = int(round(i / (len(toks) - 1) * (len(words) - 1)))
+        cand = [(difflib.SequenceMatcher(None, _nw(t), nws[j]).ratio(), j) for j in range(max(0, exp - 2), min(len(words) - 2, exp + 2) + 1)]
+        if not cand:
+            continue
+        r, j = max(cand)
+        if r < 0.6:
+            continue
+        gap = max(0.0, words[j + 1][1] - words[j][2])
+        extra = PAUSE[mm.group(1)] - gap
+        if extra < 0.04:
+            continue
+        # cut at the quietest 10 ms window around the word end (never inside a syllable)
+        e = words[j][2]
+        lo = max(1, int((e - 0.04) * SR))
+        hi = min(len(clip) - 1, int(max(e + 0.03, min(e + 0.10, words[j + 1][1] + 0.03)) * SR))
+        win = int(0.01 * SR)
+        best, best_pos = 1e9, lo
+        for pos in range(lo, max(lo + 1, hi - win), win // 2):
+            lvl = float(np.sqrt(np.mean(clip[pos : pos + win] ** 2)))
+            if lvl < best:
+                best, best_pos = lvl, pos + win // 2
+        cuts.append((best_pos, int(extra * SR), t, extra))
+    out = clip
+    fade = int(0.006 * SR)
+    for pos, n, t, extra in sorted(cuts, reverse=True):
+        a = out[:pos].copy()
+        b = out[pos:].copy()
+        a[-fade:] *= np.linspace(1, 0, fade)
+        b[:fade] *= np.linspace(0, 1, fade)
+        out = np.concatenate([a, np.zeros(n, np.float32), b])
+    for pos, n, t, extra in sorted(cuts):
+        print(f"      jeda +{extra * 1000:.0f} ms setelah '{t}' ({sid})")
+    return out.astype(np.float32)
+
+def apply_fx(clip: np.ndarray, fx: dict, text: str = "", sid: str = "") -> np.ndarray:
+    if text:
+        clip = insert_pauses(clip, text, sid)
     if fx.get("emph") or fx.get("end") or "k" in fx:
         clip = expressive(clip, fx)
     clip = norm_rms(clip)
@@ -931,7 +1006,7 @@ def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
     for key, _, _, _, segs in SCENES:
         for sid, gap, text, fx, n in segs:
             raw = get_raw(narr, narr_wav.name, sid, text, n)
-            clips[sid] = apply_fx(raw, fx)
+            clips[sid] = apply_fx(raw, fx, text, sid)
 
     P = plan(clips)
     ev = anchors(P)
