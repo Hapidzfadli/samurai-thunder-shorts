@@ -370,7 +370,7 @@ def anchors(P: dict) -> dict:
         "panggil.walk0": 0.5,
         "panggil.walk1": L["panggil_h"]["ls"] - 0.2,
         "panggil.quote0": L["panggil_h"]["ls"],
-        "panggil.quote1": L["panggil_h"]["le"] + 0.9,
+        "panggil.quote1": L["panggil_3"]["ls"] - 0.2,
         "kelor.leaves": L["kelor_1"]["ls"] + 0.55 * d("kelor_1"),
         "kelor.approach0": 0.3,
         "kelor.approach1": L["kelor_2"]["ls"],

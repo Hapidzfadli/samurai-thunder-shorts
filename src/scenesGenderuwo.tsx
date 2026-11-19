@@ -541,7 +541,7 @@ export const SceneGenGedor: React.FC = () => {
       <Caption
         text="Ia menggedor pintu berkali-kali..."
         from={LN("gedor_1").from}
-        to={roarF + 2}
+        to={roarF - 2}
         highlight={["MENGGEDOR"]}
         highlightColor={RED}
         top={1290}
