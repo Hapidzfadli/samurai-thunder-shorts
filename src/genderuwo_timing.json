@@ -1,12 +1,12 @@
 {
  "fps": 30,
- "total_frames": 2415,
+ "total_frames": 2382,
  "scenes": {
-  "hook": 194,
+  "hook": 183,
   "rumah": 375,
   "tanda": 378,
   "panggil": 324,
-  "kelor": 457,
+  "kelor": 435,
   "gedor": 267,
   "fajar": 420
  },
@@ -21,7 +21,7 @@
    "scene": "hook",
    "text": "Jangan dibuka!",
    "from": 88,
-   "to": 128
+   "to": 117
   },
   "rumah_1": {
    "scene": "rumah",
@@ -141,7 +141,7 @@
    "scene": "kelor",
    "text": "Dan matanya merah menyalaaa!",
    "from": 351,
-   "to": 427
+   "to": 405
   },
   "gedor_g": {
    "scene": "gedor",
@@ -189,9 +189,9 @@
  "events": {
   "hook.eyes": 69,
   "hook.text": 89,
-  "hook.knock1": 132,
-  "hook.knock2": 146,
-  "hook.knock3": 160,
+  "hook.knock1": 121,
+  "hook.knock2": 135,
+  "hook.knock3": 150,
   "rumah.pan": 233,
   "tanda.eyes": 245,
   "tanda.lamp0": 280,

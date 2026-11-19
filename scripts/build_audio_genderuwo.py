@@ -356,6 +356,15 @@ VARIANTS = {
     "kelor_3b": ["Dan matanya merah menyalaaa!", "Dan matanya, merah menyala!"],
 }
 
+def tts_clean(text: str) -> str:
+    """What the speech model actually receives. It VOICES "!" as an extra syllable ("dibuka!" -> "dibuka indah"),
+    and stretched letters ("menyalaaa") add artifacts too. Firmness is done with pace/loudness (fx), not punctuation;
+    the on-screen caption keeps its "!"."""
+    text = re.sub(r"!+", ".", text)
+    text = re.sub(r"(.)\1{2,}", r"\1", text)
+    return text
+
+
 _WHISPER = None
 
 
@@ -400,10 +409,10 @@ def get_raw(state, voice_key: str, sid: str, text: str, n: int) -> np.ndarray:
     CACHE.mkdir(parents=True, exist_ok=True)
     if sid in N_OVERRIDE or sid in VARIANTS:
         n = N_OVERRIDE.get(sid, n)
-        texts = VARIANTS.get(sid, [text])
+        texts = [tts_clean(t) for t in VARIANTS.get(sid, [text])]
         key = hashlib.sha1(f"{voice_key}|{'/'.join(texts)}|n{n}|t0.5|v5".encode()).hexdigest()[:16]
     else:  # unchanged segments keep their already-chosen v4 clip
-        texts = [text]
+        texts = [tts_clean(text)]
         key = hashlib.sha1(f"{voice_key}|{text}|n{n}|t0.5|v4".encode()).hexdigest()[:16]
     f = CACHE / f"{key}.npy"
     if f.exists():
