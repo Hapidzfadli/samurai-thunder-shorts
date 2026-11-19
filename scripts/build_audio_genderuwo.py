@@ -879,6 +879,27 @@ def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
     mt2, mg2 = silence_mask(total, [(a, b, max(d, 0.18)) for a, b, d in sil], slow=0.9)
     m_soft = curve(total, mt2, mg2)  # wind/room tone never fully vanish, just thin out
 
+    # ---- ambience is used only at chosen moments (scene openings, dramatic pauses, tails), never as a constant bed ----
+    scene_end = {k: S[k] + P["scenes"][k]["frames"] / FPS for k in order}
+    first = {k: min(v["gs"] for v in L.values() if v["scene"] == k) for k in order}
+    last = {k: max(v["ge"] for v in L.values() if v["scene"] == k) for k in order}
+    moments = []
+    for k in order:
+        if k != "hook":
+            moments.append((S[k] - 0.6, first[k] + 0.15))        # opening: swells in under the transition (J-cut)
+        if k not in ("gedor",):
+            moments.append((last[k] - 0.1, scene_end[k] + 0.6))  # tail: breathes after the last line (L-cut)
+    for a_, b_ in (("rumah_1b", "rumah_2"), ("panggil_1", "panggil_h"), ("kelor_1a", "kelor_1b"), ("fajar_2", "fajar_3")):
+        moments.append((L[a_]["ge"] - 0.05, L[b_]["gs"] + 0.05))  # the pause before a key line
+    moments.append((L["tanda_1b"]["ge"], L["tanda_2a"]["ge"]))     # crickets build, so the cut to silence lands
+    tt_all = np.linspace(0, total, N, endpoint=False)
+    gate = np.zeros(N, dtype=np.float32)
+    for t0_, t1_ in moments:
+        fade = 0.45
+        gate = np.maximum(gate, np.clip(np.minimum((tt_all - t0_) / fade, (t1_ - tt_all) / fade), 0, 1).astype(np.float32))
+    m_all = m_all * gate
+    m_soft = m_soft * gate
+
     # ---- ambience layers, each with its own per-scene level and J-cut crossfades ----
     g_cr = {"hook": 0.18, "rumah": 1.0, "tanda": 1.0, "panggil": 0.9, "kelor": 0.75, "gedor": 0.9, "fajar": 0.0}
     g_fr = {"hook": 0.0, "rumah": 0.8, "tanda": 0.7, "panggil": 0.6, "kelor": 0.4, "gedor": 0.5, "fajar": 0.0}
@@ -894,8 +915,8 @@ def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
     # the dawn chorus begins under the last seconds of silence (L-cut into the picture)
     birds_t0 = S["fajar"] - 0.2
     birds = amb_birds(total - birds_t0)
-    amb[int(birds_t0 * SR) : int(birds_t0 * SR) + len(birds)] += birds[: N - int(birds_t0 * SR)] * 0.22 * np.minimum(1.0, np.linspace(0, 6, len(birds)))[:, None][: N - int(birds_t0 * SR)]
-    amb += amb_owl([S["rumah"] + 3.2, S["kelor"] + 0.3], total) * 0.2 * m_all[:, None]
+    amb[int(birds_t0 * SR) : int(birds_t0 * SR) + len(birds)] += birds[: N - int(birds_t0 * SR)] * 0.22 * np.minimum(1.0, np.linspace(0, 6, len(birds)))[:, None][: N - int(birds_t0 * SR)] * gate[int(birds_t0 * SR) : int(birds_t0 * SR) + len(birds)][:, None][: N - int(birds_t0 * SR)]
+    amb += amb_owl([L["rumah_1b"]["ge"] + 0.05, L["panggil_1"]["ge"] + 0.05], total) * 0.2 * m_all[:, None]
 
     # ---- music: a drone that swells toward the scares, sparse gamelan only where it is calm ----
     mus = np.zeros((N, 2), dtype=np.float32)
@@ -992,7 +1013,7 @@ def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
     win = int(0.08 * SR)
     env = np.convolve(vo_mono, np.ones(win, dtype=np.float32) / win, mode="same")
     duck_music = 1.0 / (1.0 + 5.0 * env)
-    duck_amb = 1.0 / (1.0 + 2.4 * env)
+    duck_amb = 1.0 / (1.0 + 9.0 * env)
     duck_sfx = 1.0 / (1.0 + 1.6 * env)
 
     master = mus * duck_music[:, None] + amb * duck_amb[:, None] + sfx * duck_sfx[:, None] + vo * 1.25
