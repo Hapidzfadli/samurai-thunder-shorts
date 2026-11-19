@@ -262,7 +262,7 @@ export const SceneSodaTekan: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage cam={cam} bg="#2a0e04">
-        <CanInterior t={t} shake={0.25 + 0.5 * strain} nucleate={1} lidStrain={strain} rush={0.04 * Math.abs(Math.sin(t * 9)) * press} />
+        <CanInterior t={t} shake={0.25 + 0.5 * strain} nucleate={1} lift={sm(cl((f - 4) / 40))} lidStrain={strain} rush={0.04 * Math.abs(Math.sin(t * 9)) * press} />
       </Stage>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 46%, rgba(0,0,0,0) 50%, rgba(60,8,0,0.55) 100%)" }} />
       <Tag label="DALAM KALENG" from={2} to={50} color="#ffb45a" />

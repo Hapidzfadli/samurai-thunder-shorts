@@ -487,8 +487,8 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.lineWidth = 7;
     for (let i = -3; i <= 3; i++) {
       g.beginPath();
-      g.moveTo(hx + i * 36, hy - 160);
-      g.lineTo(hx + i * 30, hy - 60);
+      g.moveTo(hx + i * 34, hy - 122 + Math.abs(i) * 9);
+      g.lineTo(hx + i * 30, hy - 62);
       g.stroke();
     }
   } else if (hat === "bowler") {
@@ -550,22 +550,30 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.fillStyle = "#fffaf0";
     g.strokeStyle = INK;
     g.lineWidth = 7;
-    for (let i = 0; i < 14; i++) {
-      const a = (i / 14) * Math.PI * 2 + 0.4;
-      const r = 20 + hash(i, sd) * 36;
-      const x = hx + Math.cos(a) * (60 + hash(i, 9) * 80) * f;
-      const y = hy - 20 + Math.sin(a) * (70 + hash(i, 4) * 60) * f + f * 20;
+    for (let i = 0; i < 12; i++) {
+      const a = -Math.PI * (0.08 + 0.84 * (i / 11));
+      const r = 22 + hash(i, sd) * 24;
+      const x = hx + Math.cos(a) * (120 + hash(i, 9) * 30) * f;
+      const y = hy + Math.sin(a) * (108 + hash(i, 4) * 26) * f + 10 * f;
       g.beginPath();
       g.arc(x, y, r * f, 0, 7);
       g.fill();
       g.stroke();
     }
+    for (let i = 0; i < 4; i++) {
+      const x = hx + (i < 2 ? -1 : 1) * (112 + (i % 2) * 22);
+      const y = hy + 26 + (i % 2) * 40;
+      g.beginPath();
+      g.arc(x, y, 26 * f, 0, 7);
+      g.fill();
+      g.stroke();
+    }
     // drips
-    for (let i = 0; i < 6; i++) {
-      const x = hx - 110 + i * 44;
+    for (let i = 0; i < 4; i++) {
+      const x = [hx - 124, hx - 98, hx + 98, hx + 124][i];
       g.fillStyle = "#fffaf0";
       g.beginPath();
-      g.roundRect(x - 9, hy + 30, 18, 60 * f * (0.5 + hash(i, 6)), 9);
+      g.roundRect(x - 9, hy + 50, 18, 70 * f * (0.5 + hash(i, 6)), 9);
       g.fill();
       g.stroke();
     }
@@ -626,21 +634,21 @@ export const Desert: React.FC<{ t: number }> = ({ t }) => {
         <meshStandardMaterial map={road} roughness={0.95} />
       </mesh>
       {/* canyon walls */}
-      <mesh position={[0, 7, -18]}>
-        <planeGeometry args={[60, 18]} />
+      <mesh position={[0, 3.2, -22]}>
+        <planeGeometry args={[90, 6.4]} />
         <meshStandardMaterial map={strata} roughness={1} />
       </mesh>
-      <mesh position={[-16, 6, -8]} rotation={[0, Math.PI / 2.6, 0]}>
-        <planeGeometry args={[28, 16]} />
+      <mesh position={[-16, 3.4, -8]} rotation={[0, Math.PI / 2.6, 0]}>
+        <planeGeometry args={[28, 6.8]} />
         <meshStandardMaterial map={strata2} roughness={1} />
       </mesh>
-      <mesh position={[18, 6, -9]} rotation={[0, -Math.PI / 2.6, 0]}>
-        <planeGeometry args={[30, 16]} />
+      <mesh position={[18, 3.4, -9]} rotation={[0, -Math.PI / 2.6, 0]}>
+        <planeGeometry args={[30, 6.8]} />
         <meshStandardMaterial map={strata2} roughness={1} />
       </mesh>
       {[-22, -9, 8, 24].map((x, i) => (
-        <mesh key={i} position={[x, 5 + i, -30]}>
-          <boxGeometry args={[10 + i * 2, 10 + i * 2, 4]} />
+        <mesh key={i} position={[x, 2.2 + i * 0.4, -34]}>
+          <boxGeometry args={[10 + i * 2, 4.4 + i * 0.8, 4]} />
           <meshStandardMaterial map={strata2} roughness={1} />
         </mesh>
       ))}
@@ -739,12 +747,12 @@ export const Desert: React.FC<{ t: number }> = ({ t }) => {
         </group>
       ))}
       {/* sun */}
-      <mesh position={[-8, 6.5, -26]}>
-        <circleGeometry args={[2.2, 28]} />
+      <mesh position={[-9, 9.5, -40]}>
+        <circleGeometry args={[3, 28]} />
         <meshBasicMaterial color="#fff2c8" />
       </mesh>
-      <mesh position={[-8, 6.5, -26.1]}>
-        <circleGeometry args={[5.5, 28]} />
+      <mesh position={[-9, 9.5, -40.1]}>
+        <circleGeometry args={[8, 28]} />
         <meshBasicMaterial color="#ffb347" transparent opacity={0.28} />
       </mesh>
       {/* dust motes */}
@@ -778,8 +786,9 @@ export const CanInterior: React.FC<{
   rush?: number; // 0..1 bubbles stampeding to the opening
   lidStrain?: number; // 0..1
   faces?: boolean;
-}> = ({ t, shake = 0, nucleate = 0, rush = 0, lidStrain = 0, faces = true }) => {
-  const dots = useMemo(() => new Array(120).fill(0).map((_, i) => ({ x: (hash(i, 1) - 0.5) * 5, y: hash(i, 2) * 7 - 1.5, z: (hash(i, 3) - 0.5) * 5, r: 0.03 + hash(i, 4) * 0.05, ph: hash(i, 5) * 6 })), []);
+  lift?: number; // 0..1 faced bubbles crowd up against the lid
+}> = ({ t, shake = 0, nucleate = 0, rush = 0, lidStrain = 0, faces = true, lift = 0 }) => {
+  const dots = useMemo(() => new Array(260).fill(0).map((_, i) => ({ x: (hash(i, 1) - 0.5) * 5, y: hash(i, 2) * 7 - 1.5, z: (hash(i, 3) - 0.5) * 5, r: 0.03 + hash(i, 4) * 0.05, ph: hash(i, 5) * 6 })), []);
   const wall = useMemo(
     () =>
       new Array(46).fill(0).map((_, i) => {
@@ -804,7 +813,7 @@ export const CanInterior: React.FC<{
       {/* headspace + lid */}
       <mesh position={[0, 4.1 + 0.05 * lidStrain * Math.sin(t * 40), 0]} rotation={[Math.PI / 2, 0, 0]} scale={[1, 1, 1 + lidStrain * 0.04]}>
         <circleGeometry args={[3, 18]} />
-        <meshStandardMaterial color="#c9ced6" metalness={0.7} roughness={0.35} side={THREE.DoubleSide} emissive="#6c7480" emissiveIntensity={0.4} />
+        <meshStandardMaterial color="#8a919e" metalness={0.7} roughness={0.4} side={THREE.DoubleSide} emissive="#3a404a" emissiveIntensity={0.25} />
       </mesh>
       <mesh position={[0, 4.0, 0]} rotation={[Math.PI / 2, 0, 0]}>
         <ringGeometry args={[2.2, 2.35, 24]} />
@@ -835,7 +844,7 @@ export const CanInterior: React.FC<{
           const k = sm(cl(nucleate * 2 - 0.2 * i));
           const up = rush * rush * (5 - y);
           const px = x * (1 - rush * 0.7);
-          const py = y + up + Math.sin(t * 2 + i) * 0.05;
+          const py = y + lift * (3.0 - y * 0.2 + i * 0.12) + up + Math.sin(t * 2 + i) * 0.05;
           const s = (0.5 + 0.5 * k) * r;
           return (
             <group key={i} position={[px, py, z * (1 - rush * 0.7)]} scale={s * 2.2}>
