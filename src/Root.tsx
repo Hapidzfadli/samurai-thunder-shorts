@@ -9,10 +9,19 @@ import { TOTAL_FRAMES_WEWE, WeweGombel } from "./WeweGombel";
 import { Genderuwo, TOTAL_FRAMES_GEN } from "./Genderuwo";
 import { Rani, TOTAL_FRAMES_RANI } from "./Rani";
 import { Nyamuk, TOTAL_FRAMES_NYAMUK } from "./Nyamuk";
+import { Level30, TOTAL_FRAMES_L30 } from "./Level30";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Level30"
+        component={Level30}
+        durationInFrames={TOTAL_FRAMES_L30}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="Nyamuk"
         component={Nyamuk}
