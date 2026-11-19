@@ -1,0 +1,175 @@
+{
+ "fps": 30,
+ "total_frames": 1962,
+ "scenes": {
+  "hook": 244,
+  "tampar": 289,
+  "raket": 219,
+  "asap": 252,
+  "senter": 343,
+  "pagi": 375,
+  "kelambu": 240
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Jam satu malam. Bimo baru mau tidur, tiba-tiba,",
+   "from": 9,
+   "to": 104
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Nging.",
+   "from": 106,
+   "to": 136
+  },
+  "hook_3": {
+   "scene": "hook",
+   "text": "Satu nyamuk. Cuma satu. Tapi suaranya kayak pesawat jet.",
+   "from": 146,
+   "to": 232
+  },
+  "tampar_1a": {
+   "scene": "tampar",
+   "text": "Bimo menampar ke arah suara.",
+   "from": 7,
+   "to": 50
+  },
+  "tampar_1b": {
+   "scene": "tampar",
+   "text": "Plak.",
+   "from": 58,
+   "to": 93
+  },
+  "tampar_1c": {
+   "scene": "tampar",
+   "text": "Nyamuknya selamat, pipinya yang kena.",
+   "from": 99,
+   "to": 168
+  },
+  "tampar_2": {
+   "scene": "tampar",
+   "text": "Tamparan kedua, ketiga, keempat. Nyamuknya masih terbang santai.",
+   "from": 178,
+   "to": 277
+  },
+  "raket_1": {
+   "scene": "raket",
+   "text": "Bimo mengeluarkan senjata pamungkas, raket listrik.",
+   "from": 7,
+   "to": 86
+  },
+  "raket_2": {
+   "scene": "raket",
+   "text": "Nyamuknya menghindar, dan raketnya malah menyetrum guling kesayangan.",
+   "from": 94,
+   "to": 207
+  },
+  "asap_1": {
+   "scene": "asap",
+   "text": "Obat nyamuk, kipas angin, semprotan, semuanya dinyalakan. Kamar jadi penuh asap.",
+   "from": 7,
+   "to": 132
+  },
+  "asap_2": {
+   "scene": "asap",
+   "text": "Nyamuknya baik-baik saja. Yang batuk-batuk justru Bimo.",
+   "from": 140,
+   "to": 240
+  },
+  "senter_1": {
+   "scene": "senter",
+   "text": "Jam tiga pagi. Bimo matikan lampu, nyalakan senter HP, biar nyamuknya mendekat.",
+   "from": 7,
+   "to": 150
+  },
+  "senter_2a": {
+   "scene": "senter",
+   "text": "Nyamuk hinggap di layar. Bimo menepuk sekuat tenaga.",
+   "from": 158,
+   "to": 242
+  },
+  "senter_2b": {
+   "scene": "senter",
+   "text": "Plak.",
+   "from": 251,
+   "to": 286
+  },
+  "senter_2c": {
+   "scene": "senter",
+   "text": "Layar HP-nya retak.",
+   "from": 292,
+   "to": 331
+  },
+  "pagi_1": {
+   "scene": "pagi",
+   "text": "Akhirnya Bimo menyerah dan tertidur kelelahan.",
+   "from": 9,
+   "to": 87
+  },
+  "pagi_2": {
+   "scene": "pagi",
+   "text": "Paginya, badannya penuh bentol. Ternyata yang menggigit semalaman bukan si berisik, tapi puluhan nyamuk lain yang diam-diam.",
+   "from": 99,
+   "to": 278
+  },
+  "pagi_3": {
+   "scene": "pagi",
+   "text": "Sementara si berisik, tidur nyenyak di jendela.",
+   "from": 289,
+   "to": 360
+  },
+  "kelambu_1": {
+   "scene": "kelambu",
+   "text": "Malam berikutnya, Bimo memasang kelambu.",
+   "from": 9,
+   "to": 73
+  },
+  "kelambu_2": {
+   "scene": "kelambu",
+   "text": "Tapi si berisik sudah masuk duluan.",
+   "from": 83,
+   "to": 129
+  },
+  "kelambu_3": {
+   "scene": "kelambu",
+   "text": "Nging.",
+   "from": 139,
+   "to": 169
+  }
+ },
+ "events": {
+  "hook.buzz": 107,
+  "hook.look": 116,
+  "hook.jet": 193,
+  "tampar.swing": 22,
+  "tampar.slap1": 59,
+  "tampar.slap2": 200,
+  "tampar.slap3": 220,
+  "tampar.slap4": 239,
+  "tampar.chill": 259,
+  "raket.show": 43,
+  "raket.swing": 96,
+  "raket.zap": 164,
+  "asap.coil": 30,
+  "asap.fan": 52,
+  "asap.spray": 76,
+  "asap.smoke": 105,
+  "asap.cough": 195,
+  "senter.dark": 47,
+  "senter.flash": 79,
+  "senter.land": 184,
+  "senter.slap": 252,
+  "senter.crack": 293,
+  "pagi.sleep": 48,
+  "pagi.morning": 100,
+  "pagi.bentol": 153,
+  "pagi.silent": 228,
+  "pagi.window": 290,
+  "kelambu.net": 41,
+  "kelambu.inside": 83,
+  "kelambu.nging": 139,
+  "kelambu.card": 173
+ },
+ "stepF": {}
+}

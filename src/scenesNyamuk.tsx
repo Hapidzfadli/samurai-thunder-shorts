@@ -540,8 +540,8 @@ export const SceneNyamukKelambu: React.FC = () => {
         {frame < nging && frame >= net + 30 && <Zzz x={250} y={1010} t={t} />}
         {frame >= nging && frame < nging + 60 && <SpeedLines x={mx} y={my} r0={60} r1={120} n={10} seed={t * 3} />}
       </World>
-      {frame >= nging && frame < nging + 70 && (
-        <div style={{ position: "absolute", top: 520, width: "100%", textAlign: "center", fontFamily: FONT_TITLE, fontSize: 190, color: "#e8f4ff", WebkitTextStroke: "7px #12121a", paintOrder: "stroke fill", transform: `rotate(${Math.sin(frame * 3) * 4 - 4}deg)`, opacity: interpolate(frame, [nging + 56, nging + 70], [1, 0], clamp) }}>
+      {frame >= nging && frame < cardF && (
+        <div style={{ position: "absolute", top: 520, width: "100%", textAlign: "center", fontFamily: FONT_TITLE, fontSize: 190, color: "#e8f4ff", WebkitTextStroke: "7px #12121a", paintOrder: "stroke fill", transform: `rotate(${Math.sin(frame * 3) * 4 - 4}deg)`, opacity: interpolate(frame, [cardF - 10, cardF], [1, 0], clamp) }}>
           NGIIING~
         </div>
       )}
@@ -551,7 +551,7 @@ export const SceneNyamukKelambu: React.FC = () => {
           <div style={{ fontFamily: FONT_TITLE, fontSize: 168, lineHeight: 1, color: GOLD, opacity: c2, transform: `scale(${1.7 - 0.7 * c2})`, WebkitTextStroke: "6px #7a4b00", paintOrder: "stroke fill", textShadow: "0 10px 0 #7a4b00" }}>BIMO 0</div>
         </div>
       )}
-      <Kicker text="MALAM BERIKUTNYA" from={4} top={235} />
+      {frame < cardF - 8 && <Kicker text="MALAM BERIKUTNYA" from={4} top={235} />}
       <Caption text="Malam berikutnya, Bimo memasang KELAMBU" from={LN("kelambu_1").from} to={capTo("kelambu_1")} highlight={["KELAMBU"]} top={1290} size={66} />
       <Caption text="Tapi si berisik sudah masuk DULUAN" from={LN("kelambu_2").from} to={capTo("kelambu_2")} highlight={["DULUAN"]} highlightColor={RED} top={1290} size={68} />
       <SceneFade duration={DURATIONS_NYAMUK.kelambu} inFrames={0} outFrames={14} />
