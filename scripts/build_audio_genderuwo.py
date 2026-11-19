@@ -278,112 +278,253 @@ def voice_deepen(clip: np.ndarray, factor: float = 1.45) -> np.ndarray:
     return (out / (np.max(np.abs(out)) + 1e-6) * 0.95).astype(np.float32)
 
 
+import difflib
 import hashlib
 import json
 import math
+import re
 
 FPS = 30
 CACHE = ROOT / "voices" / "cache_gen"
 TIMING_JSON = ROOT / "src" / "genderuwo_timing.json"
 
-# Narration. (id, who, text) per scene. who: n = narrator, h = husband, g = genderuwo.
-# Natural speed only: the VIDEO is stretched to fit the speech, never the other way round.
+# ---------------------------------------------------------------------------------------------
+# Narration, analysed by dramatic function. Each phrase is its own segment so it can get its own
+# delivery (pace, pitch, loudness, whisper/shout) and an explicit pause before it.
+# (id, pause_before_s, text, fx, candidates)
+# fx: rate<1 = slower, pitch<1 = lower (tempo kept), gain, shout, whisper, echo, warm, growl
+# ---------------------------------------------------------------------------------------------
 SCENES = [
+    # lead, tail, min_s, segments
     ("hook", 0.35, 2.2, 5.0, [
-        ("hook_1", "n", 0.0, "Kalau suamimu pulang tengah malam, padahal katanya pulang bulan depan, jangan buka pintunya!"),
+        ("hook_1", 0.0, "Kalau suamimu pulang tengah malam.", {"rate": 0.86}, 4),
+        ("hook_2", 0.90, "Jangan dibuka!", {"shout": True, "rate": 0.92, "gain": 1.45}, 3),
     ]),
-    ("rumah", 0.30, 0.6, 8.0, [
-        ("rumah_1", "n", 0.0, "Konon, di sebuah kampung, Yu Darmi tinggal sendirian karena suaminya merantau."),
-        ("rumah_2", "n", 0.40, "Di ujung jalan berdiri beringin tua, yang dipercaya warga sebagai rumah genderuwo."),
+    ("rumah", 0.30, 0.6, 9.0, [
+        ("rumah_1", 0.0, "Konon, di sebuah kampung,", {"rate": 0.95}, 3),
+        ("rumah_1b", 0.12, "tengah malam.", {"rate": 0.70, "gain": 0.95}, 3),
+        ("rumah_2", 0.80, "Yu Darmi,", {"rate": 0.80, "gain": 1.18}, 3),
+        ("rumah_3", 0.12, "tinggal sendirian. Suaminya merantau jauh.", {}, 2),
+        ("rumah_4", 0.50, "Di ujung jalan, berdiri beringin tua.", {"rate": 0.95}, 2),
+        ("rumah_5", 0.25, "Kata warga, itu rumah genderuwo.", {"rate": 0.90, "gain": 0.95}, 2),
     ]),
-    ("tanda", 0.30, 0.7, 8.0, [
-        ("tanda_1", "n", 0.0, "Suatu malam, tercium bau singkong bakar yang menyengat, padahal tak ada yang membakar."),
-        ("tanda_2", "n", 0.40, "Anjing kampung menggonggong, lalu mendadak diam. Lampu minyak pun bergoyang."),
+    ("tanda", 0.30, 0.7, 9.0, [
+        ("tanda_1a", 0.0, "Tercium bau singkong bakar yang menyengat.", {}, 2),
+        ("tanda_1b", 0.35, "Padahal tak ada yang membakar.", {"rate": 0.92}, 2),
+        ("tanda_2a", 0.55, "Lalu, anjing kampung berhenti menggonggong.", {"rate": 0.90, "gain": 0.9}, 2),
+        ("tanda_2b", 0.65, "Diam.", {"whisper": True, "rate": 0.78}, 3),
+        ("tanda_3", 0.60, "Lampu minyak pun bergoyang.", {"rate": 0.88, "gain": 0.8, "echo": True}, 2),
     ]),
     ("panggil", 0.50, 0.8, 9.0, [
-        ("panggil_1", "n", 0.0, "Lalu terdengar sebuah suara dari arah beringin."),
-        ("panggil_h", "h", 1.0, "Dik, bukakan pintu. Mas pulang."),
-        ("panggil_3", "n", 0.5, "Suaranya persis suaminya. Tapi kenapa ia tak mau mendekat?"),
+        ("panggil_1", 0.0, "Lalu terdengar suara dari arah beringin.", {}, 2),
+        ("panggil_h", 1.00, "Dik... bukakan pintu. Mas pulang.", {"pitch": 0.94, "rate": 0.92, "echo": True, "warm": True, "gain": 0.95}, 3),
+        ("panggil_3a", 0.55, "Suaranya persis suaminya.", {"rate": 0.95}, 2),
+        ("panggil_3b", 0.45, "Tapi kenapa ia tak mau mendekat?", {"rate": 0.86, "gain": 0.85}, 2),
     ]),
-    ("kelor", 0.30, 1.0, 10.0, [
-        ("kelor_1", "n", 0.0, "Yu Darmi ingat pesan Mbah: sebarkan daun kelor di ambang pintu."),
-        ("kelor_2", "n", 0.40, "Sosok itu berhenti di depan pintu. Ia tak sanggup melangkah."),
-        ("kelor_3", "n", 0.55, "Lalu bayangannya membesar, dan matanya merah menyala!"),
+    ("kelor", 0.30, 1.0, 11.0, [
+        ("kelor_1a", 0.0, "Yu Darmi ingat pesan Mbah:", {"rate": 0.93}, 2),
+        ("kelor_1b", 0.85, "Sebarkan daun kelor di ambang pintu.", {"rate": 0.88, "gain": 1.12}, 3),
+        ("kelor_2", 0.50, "Sosok itu berhenti di depan pintu. Ia tak sanggup melangkah.", {"rate": 0.95}, 2),
+        ("kelor_3a", 0.55, "Lalu bayangannya membesar.", {"rate": 0.82, "pitch": 0.96, "gain": 0.9}, 2),
+        ("kelor_3b", 0.45, "Dan matanya merah menyalaaa!", {"shout": True, "rate": 0.78, "gain": 1.5}, 3),
     ]),
     ("gedor", 0.30, 2.6, 8.0, [
-        ("gedor_g", "g", 0.0, "Dik, bukakan pintu."),
-        ("gedor_1", "n", 0.45, "Ia menggedor pintu berkali-kali, lalu meraung dan menghilang."),
+        ("gedor_g", 0.0, "Dik... bukakan pintu.", {"pitch": 0.74, "rate": 0.85, "growl": True, "echo": True, "gain": 1.1}, 3),
+        ("gedor_1a", 0.50, "Ia menggedor pintu berkali-kali,", {"rate": 0.95}, 2),
+        ("gedor_1b", 0.30, "lalu meraung, dan menghilang.", {"rate": 0.88}, 2),
     ]),
     ("fajar", 0.35, 2.0, 11.0, [
-        ("fajar_1", "n", 0.0, "Fajar tiba. Hanya tersisa jejak besar berbulu di bawah beringin."),
-        ("fajar_2", "n", 0.55, "Tiga hari kemudian, suami Yu Darmi pulang sungguhan."),
-        ("fajar_3", "n", 1.0, "Jadi, kalau ada yang memanggil dari gelap, pastikan dia berani melangkah masuk."),
+        ("fajar_1", 0.0, "Fajar tiba. Hanya tersisa jejak besar berbulu di bawah beringin.", {}, 2),
+        ("fajar_2", 0.55, "Tiga hari kemudian, suami Yu Darmi pulang sungguhan.", {}, 2),
+        ("fajar_3", 1.00, "Kalau ada yang memanggil dari gelap,", {"rate": 0.88, "gain": 0.95}, 2),
+        ("fajar_3b", 0.45, "pastikan dia berani masuk.", {"rate": 0.80, "gain": 1.05}, 3),
     ]),
 ]
 
+_WHISPER = None
 
-def get_clip(voice_state, voice_key: str, who: str, text: str) -> np.ndarray:
-    """Synthesize at natural speed (no squeezing). Cached on disk so re-planning/re-mixing is fast."""
+
+def asr_text(clip: np.ndarray) -> str:
+    global _WHISPER
+    if _WHISPER is None:
+        from faster_whisper import WhisperModel
+        _WHISPER = WhisperModel("small", device="cpu", compute_type="int8")
+    audio16 = signal.resample_poly(clip, 160, 441).astype(np.float32)
+    segs, _ = _WHISPER.transcribe(audio16, language="id", beam_size=1, vad_filter=False)
+    return " ".join(s.text for s in segs)
+
+
+def _words(s: str):
+    return re.sub(r"[^a-z0-9 ]", "", s.lower()).split()
+
+
+def pick_best(state, text: str, n: int):
+    """Synthesize n candidates at natural speed and keep the one speech recognition hears most clearly."""
+    best, best_score = None, -1.0
+    for i in range(n):
+        clip = synth_id_cloned(state, text, target_max_s=None)
+        score = difflib.SequenceMatcher(None, _words(text), _words(asr_text(clip))).ratio()
+        # mild preference for a natural pace (about 0.33 s/word incl. punctuation)
+        exp = max(0.5, 0.33 * len(_words(text)))
+        score -= 0.04 * min(1.0, abs(len(clip) / SR - exp) / exp)
+        print(f"      cand {i + 1}/{n}: score {score:.2f}")
+        if score > best_score:
+            best, best_score = clip, score
+    return best
+
+
+def get_raw(state, voice_key: str, sid: str, text: str, n: int) -> np.ndarray:
     CACHE.mkdir(parents=True, exist_ok=True)
-    key = hashlib.sha1(f"{voice_key}|{who}|{text}|t0.5|v3".encode()).hexdigest()[:16]
+    key = hashlib.sha1(f"{voice_key}|{text}|n{n}|t0.5|v4".encode()).hexdigest()[:16]
     f = CACHE / f"{key}.npy"
     if f.exists():
         return np.load(f)
-    clip = synth_id_cloned(voice_state, text, target_max_s=None)
-    if who == "g":
-        clip = voice_deepen(clip, 1.45)
+    clip = pick_best(state, text, n)
     np.save(f, clip)
     return clip
 
 
+# ---------------------------------------------------------------------------------------------
+# Delivery effects
+# ---------------------------------------------------------------------------------------------
+def ffmpeg_filter(clip: np.ndarray, af: str) -> np.ndarray:
+    p = subprocess.run(
+        ["ffmpeg", "-v", "quiet", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-af", af,
+         "-f", "f32le", "-ar", str(SR), "-ac", "1", "-"],
+        input=clip.astype(np.float32).tobytes(), capture_output=True, check=True,
+    )
+    return np.frombuffer(p.stdout, dtype=np.float32).copy()
+
+
+def norm_rms(x: np.ndarray, target: float = 0.11) -> np.ndarray:
+    idx = np.abs(x) > 0.02
+    rms = float(np.sqrt(np.mean(x[idx] ** 2))) if idx.any() else 1.0
+    return x * (target / (rms + 1e-6))
+
+
+def whisperize(x: np.ndarray) -> np.ndarray:
+    rng = np.random.default_rng(3)
+    w = int(0.02 * SR)
+    env = np.convolve(np.abs(x), np.ones(w) / w, mode="same")
+    b, a = signal.butter(2, [1200 / (SR / 2), 6500 / (SR / 2)], btype="bandpass")
+    n = signal.lfilter(b, a, rng.standard_normal(len(x)))
+    n = n / (np.std(n) + 1e-6) * env * 1.8
+    return norm_rms(0.35 * x + n, 0.07)
+
+
+def shout(x: np.ndarray) -> np.ndarray:
+    x = x * 1.9
+    b, a = signal.butter(2, [1500 / (SR / 2), 4500 / (SR / 2)], btype="bandpass")
+    x = x + 0.5 * signal.lfilter(b, a, x)
+    return np.tanh(x * 1.6) / np.tanh(1.6) * 0.9
+
+
+def growl(x: np.ndarray) -> np.ndarray:
+    b, a = signal.butter(2, 150 / (SR / 2), btype="lowpass")
+    out = x * 0.7 + signal.lfilter(b, a, x) * 1.1 + np.tanh(x * 3.0) * 0.5
+    return out / (np.max(np.abs(out)) + 1e-6) * 0.4
+
+
+def apply_fx(clip: np.ndarray, fx: dict) -> np.ndarray:
+    clip = norm_rms(clip)
+    af = []
+    pitch = fx.get("pitch")
+    if pitch:
+        af += [f"asetrate={int(SR * pitch)}", f"aresample={SR}", f"atempo={1 / pitch:.4f}"]
+    rate = fx.get("rate")
+    if rate and abs(rate - 1.0) > 1e-3:
+        af.append(f"atempo={rate:.4f}")
+    if fx.get("warm"):
+        af.append("lowpass=f=4800")
+    if fx.get("echo"):
+        af += ["apad=pad_dur=0.45", "aecho=0.8:0.55:85:0.32"]
+    if af:
+        clip = ffmpeg_filter(clip, ",".join(af))
+    if fx.get("growl"):
+        clip = growl(clip)
+    if fx.get("whisper"):
+        clip = whisperize(clip)
+    if fx.get("shout"):
+        clip = shout(clip)
+    return (clip * fx.get("gain", 1.0)).astype(np.float32)
+
+
+# ---------------------------------------------------------------------------------------------
+# More SFX
+# ---------------------------------------------------------------------------------------------
+def sfx_bark(dur: float = 0.22, seed: int = 0) -> np.ndarray:
+    rng = np.random.default_rng(seed)
+    t = np.linspace(0, dur, int(SR * dur), endpoint=False)
+    f = 520 * np.exp(-t * 4.0) + 260
+    voiced = np.sin(2 * np.pi * np.cumsum(f) / SR) + 0.5 * np.sin(4 * np.pi * np.cumsum(f) / SR)
+    b, a = signal.butter(2, [500 / (SR / 2), 3000 / (SR / 2)], btype="bandpass")
+    noise = signal.lfilter(b, a, rng.standard_normal(len(t)))
+    env = np.minimum(1.0, t / 0.015) * np.exp(-t * 14)
+    return np.tanh((voiced * 0.6 + noise * 0.5) * env * 1.6).astype(np.float32)
+
+
+def sfx_creak(dur: float = 1.6, seed: int = 4) -> np.ndarray:
+    """Swinging lamp chain: slow wooden/metal creak."""
+    rng = np.random.default_rng(seed)
+    t = np.linspace(0, dur, int(SR * dur), endpoint=False)
+    f = 190 + 70 * np.sin(2 * np.pi * 1.3 * t) + 25 * rng.standard_normal(len(t)) * 0.0
+    tone = np.sin(2 * np.pi * np.cumsum(f) / SR) * (0.5 + 0.5 * np.sin(2 * np.pi * 3.1 * t)) ** 2
+    b, a = signal.butter(2, [300 / (SR / 2), 2200 / (SR / 2)], btype="bandpass")
+    grit = signal.lfilter(b, a, rng.standard_normal(len(t))) * 0.25
+    env = np.sin(np.pi * t / dur) ** 1.2
+    return np.tanh((tone * 0.7 + grit) * env).astype(np.float32)
+
+
 def plan(clips: dict) -> dict:
-    """Turn natural line lengths into scene durations + line/event anchors (all in seconds, then frames)."""
     t_scene = 0.0
     scenes, lines = {}, {}
-    for key, lead, tail, min_s, items in SCENES:
+    for key, lead, tail, min_s, segs in SCENES:
         t = lead
-        for lid, who, gap, text in items:
+        for sid, gap, text, fx, n in segs:
             t += gap
-            dur = len(clips[lid]) / SR
-            lines[lid] = {"scene": key, "who": who, "text": text, "ls": t, "le": t + dur}
+            dur = len(clips[sid]) / SR
+            lines[sid] = {"scene": key, "text": text, "ls": t, "le": t + dur}
             t += dur
         frames = max(math.ceil(max(min_s, t + tail) * FPS), 1)
         scenes[key] = {"frames": frames, "start_s": t_scene}
-        for lid, *_ in items:
-            lines[lid]["gs"] = t_scene + lines[lid]["ls"]
-            lines[lid]["ge"] = t_scene + lines[lid]["le"]
+        for sid, *_ in segs:
+            lines[sid]["gs"] = t_scene + lines[sid]["ls"]
+            lines[sid]["ge"] = t_scene + lines[sid]["le"]
         t_scene += frames / FPS
     return {"scenes": scenes, "lines": lines, "total_s": t_scene}
 
 
 def anchors(P: dict) -> dict:
-    """Visual/SFX beats, tied to the narration lines they belong to. Values are scene-local seconds."""
     L = P["lines"]
-    def d(i): return L[i]["le"] - L[i]["ls"]
-    ev = {
-        "hook.eyes": L["hook_1"]["ls"] + 0.55 * d("hook_1"),
-        "hook.knock1": L["hook_1"]["le"] + 0.15,
-        "hook.knock2": L["hook_1"]["le"] + 0.62,
-        "hook.knock3": L["hook_1"]["le"] + 1.09,
-        "rumah.pan": L["rumah_2"]["ls"],
-        "tanda.eyes": L["tanda_2"]["ls"] + 0.55 * d("tanda_2"),
+    d = lambda i: L[i]["le"] - L[i]["ls"]
+    return {
+        "hook.eyes": L["hook_1"]["le"] + 0.25,
+        "hook.text": L["hook_2"]["ls"],
+        "hook.knock1": L["hook_2"]["le"] + 0.15,
+        "hook.knock2": L["hook_2"]["le"] + 0.62,
+        "hook.knock3": L["hook_2"]["le"] + 1.09,
+        "rumah.pan": L["rumah_4"]["ls"],
+        "tanda.eyes": L["tanda_2b"]["ls"] + 0.15,
+        "tanda.lamp0": L["tanda_3"]["ls"] - 0.4,
+        "tanda.bark": L["tanda_2a"]["ls"] + 0.1,
         "panggil.walk0": 0.5,
         "panggil.walk1": L["panggil_h"]["ls"] - 0.2,
         "panggil.quote0": L["panggil_h"]["ls"],
-        "panggil.quote1": L["panggil_3"]["ls"] - 0.2,
-        "kelor.leaves": L["kelor_1"]["ls"] + 0.55 * d("kelor_1"),
+        "panggil.quote1": L["panggil_3a"]["ls"] - 0.2,
+        "kelor.leaves": L["kelor_1b"]["ls"] + 0.5,
         "kelor.approach0": 0.3,
         "kelor.approach1": L["kelor_2"]["ls"],
         "kelor.eyes": L["kelor_2"]["ls"] + 0.6 * d("kelor_2"),
-        "kelor.flip": L["kelor_3"]["ls"] + 0.35,
-        "gedor.roar": L["gedor_1"]["ls"] + 0.5 * d("gedor_1"),
-        "gedor.flee0": L["gedor_1"]["ls"] + 0.5 * d("gedor_1") + 0.9,
-        "gedor.flee1": L["gedor_1"]["ls"] + 0.5 * d("gedor_1") + 2.8,
+        "kelor.flip": L["kelor_3a"]["ls"] + 0.3,
+        "kelor.flare": L["kelor_3b"]["ls"],
+        "gedor.roar": L["gedor_1b"]["ls"] + 0.1,
+        "gedor.flee0": L["gedor_1b"]["ls"] + 1.0,
+        "gedor.flee1": L["gedor_1b"]["ls"] + 2.9,
         "fajar.husband0": L["fajar_2"]["ls"] - 0.3,
         "fajar.husband1": L["fajar_2"]["le"] + 1.2,
         "fajar.card": L["fajar_3"]["ls"] - 0.2,
+        "fajar.big": L["fajar_3b"]["ls"],
     }
-    return ev
 
 
 def write_timing(P: dict, ev: dict):
@@ -401,19 +542,18 @@ def write_timing(P: dict, ev: dict):
     return out
 
 
-def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_hangat", out_name: str = "genderuwo_master.mp3"):
+def build_genderuwo(voice_arg: str, out_name: str = "genderuwo_master.mp3"):
     narr_wav = prepare_voice_prompt(voice_arg)
-    hus_wav = prepare_voice_prompt(husband_voice)
-    print(f"Narator: {narr_wav.name} | Suara suami/genderuwo: {hus_wav.name}")
+    print(f"Suara narator (dipakai untuk semua tokoh): {narr_wav.name}")
     narr = tts_model.get_state_for_audio_prompt(str(narr_wav))
-    hus = tts_model.get_state_for_audio_prompt(str(hus_wav))
 
     clips = {}
-    for key, _, _, _, items in SCENES:
-        for lid, who, _, text in items:
-            vs, vk = (narr, narr_wav.name) if who == "n" else (hus, hus_wav.name)
-            clips[lid] = get_clip(vs, vk, who, text)
-            print(f"  {lid:10s} {len(clips[lid]) / SR:4.2f}s  {text[:52]}")
+    for key, _, _, _, segs in SCENES:
+        for sid, gap, text, fx, n in segs:
+            print(f"  [{sid}] {text}")
+            raw = get_raw(narr, narr_wav.name, sid, text, n)
+            clips[sid] = apply_fx(raw, fx)
+            print(f"      -> {len(clips[sid]) / SR:.2f}s")
 
     P = plan(clips)
     ev = anchors(P)
@@ -425,14 +565,14 @@ def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_
 
     set_duration(total)
     S = {k: v["start_s"] for k, v in P["scenes"].items()}
-    G = lambda name: S[name.split(".")[0]] + ev[name]  # global seconds of an anchor
-    GL = lambda lid: P["lines"][lid]["gs"]
+    G = lambda name: S[name.split(".")[0]] + ev[name]
 
     bed = build_gamelan_horror_bed()
     tt = np.linspace(0, DURATION, N_SAMPLES, endpoint=False)
     mask = np.full(N_SAMPLES, 0.7, dtype=np.float32)
-    flee_end = G("gedor.flee1")
-    mask *= np.where((tt > flee_end - 0.5) & (tt < S["fajar"] + 0.4), 0.12, 1.0)
+    mask *= np.where((tt > G("gedor.flee1") - 0.5) & (tt < S["fajar"] + 0.4), 0.12, 1.0)
+    # near-silence while the dog falls quiet: the music holds its breath
+    mask *= np.where((tt > P["lines"]["tanda_2b"]["gs"] - 0.3) & (tt < P["lines"]["tanda_3"]["gs"]), 0.2, 1.0)
     mask *= np.interp(tt, [0, 1.5, total - 5, total], [0.0, 1.0, 1.0, 0.0])
     bed *= mask[:, None]
 
@@ -440,25 +580,30 @@ def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_
     vo = np.zeros((N_SAMPLES, 2), dtype=np.float32)
 
     # Hook
-    add_clip(sfx, sfx_gong_ageng(2.8, 55.0), 0.15, gain=0.55)
-    add_clip(sfx, sfx_ghost_whoosh(1.6, 1), 0.6, gain=0.4)
+    add_clip(sfx, sfx_gong_ageng(2.8, 55.0), 0.15, gain=0.5)
+    add_clip(sfx, sfx_ghost_whoosh(1.6, 1), 0.6, gain=0.35)
     add_clip(sfx, sfx_gong_ageng(2.4, 49.0), G("hook.eyes"), gain=0.5)
     for i, k in enumerate(["hook.knock1", "hook.knock2", "hook.knock3"]):
         add_clip(sfx, sfx_knock(0.5, 130 + 8 * i, i), G(k), gain=0.95)
     # Rumah
-    add_clip(sfx, sfx_ghost_whoosh(1.2, 2), S["rumah"], gain=0.35)
+    add_clip(sfx, sfx_ghost_whoosh(1.2, 2), S["rumah"], gain=0.3)
     add_clip(sfx, sfx_gong_ageng(2.4, 65.41), G("rumah.pan"), gain=0.4)
-    # Tanda
-    add_clip(sfx, sfx_ghost_whoosh(2.0, 3), S["tanda"] + 0.8, gain=0.4)
-    add_clip(sfx, sfx_gong_ageng(2.6, 58.27), G("tanda.eyes"), gain=0.6)
-    add_clip(sfx, sfx_ghost_whoosh(1.4, 4), G("tanda.eyes") + 0.1, gain=0.5)
+    # Tanda: dog barks, then nothing; canopy eyes on the silence; creaking lamp
+    add_clip(sfx, sfx_ghost_whoosh(2.0, 3), S["tanda"] + 0.8, gain=0.35)
+    for i, dt in enumerate([0.0, 0.5, 1.0, 1.4]):
+        add_clip(sfx, sfx_bark(0.22, i), G("tanda.bark") + dt, gain=0.42 * (1.0 - 0.12 * i), pan=-0.3)
+    add_clip(sfx, sfx_gong_ageng(2.6, 58.27), G("tanda.eyes"), gain=0.55)
+    add_clip(sfx, sfx_ghost_whoosh(1.4, 4), G("tanda.eyes") + 0.1, gain=0.45)
+    add_clip(sfx, sfx_creak(2.2, 4), G("tanda.lamp0"), gain=0.5, pan=-0.35)
     # Panggil
-    add_clip(sfx, sfx_ghost_whoosh(1.8, 5), S["panggil"], gain=0.4)
-    # Kelor: scatter, then the reveal
+    add_clip(sfx, sfx_ghost_whoosh(1.8, 5), S["panggil"], gain=0.35)
+    # Kelor: scatter, 'membesar' thunder, then the red-eyes flare
     add_clip(sfx, sfx_rustle(1.3, 6), G("kelor.leaves"), gain=0.7)
-    add_clip(sfx, sfx_thunder(2.8, 9), G("kelor.flip"), gain=0.9)
-    add_clip(sfx, sfx_gong_ageng(3.0, 49.0), G("kelor.flip") + 0.05, gain=0.7)
-    # Gedor: pounding until the roar, roar, flee
+    add_clip(sfx, sfx_thunder(2.8, 9), G("kelor.flip"), gain=0.8)
+    add_clip(sfx, sfx_gong_ageng(3.0, 49.0), G("kelor.flip") + 0.05, gain=0.6)
+    add_clip(sfx, sfx_roar(1.3, 33), G("kelor.flare") + 0.15, gain=0.7)
+    add_clip(sfx, sfx_gong_ageng(2.6, 55.0), G("kelor.flare"), gain=0.8)
+    # Gedor
     t0 = S["gedor"] + 0.2
     while t0 < G("gedor.roar"):
         add_clip(sfx, sfx_knock(0.5, 110, int(t0 * 10)), t0, gain=1.0)
@@ -467,16 +612,15 @@ def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_
     add_clip(sfx, sfx_ghost_whoosh(2.0, 8), G("gedor.flee0"), gain=0.7)
     # Fajar
     add_clip(sfx, sfx_birds(min(12.0, total - S["fajar"]), 11), S["fajar"] + 0.4, gain=0.55)
-    add_clip(sfx, sfx_gong_ageng(3.0, 65.41), G("fajar.card"), gain=0.35)
+    add_clip(sfx, sfx_gong_ageng(3.0, 65.41), G("fajar.big"), gain=0.35)
 
-    for lid, ln in P["lines"].items():
-        add_clip(vo, clips[lid], ln["gs"], gain=1.08 if ln["who"] != "g" else 1.15)
+    for sid, ln in P["lines"].items():
+        add_clip(vo, clips[sid], ln["gs"], gain=1.08)
 
     vo_mono = np.abs(vo[:, 0]) + np.abs(vo[:, 1])
     win = int(0.08 * SR)
-    kernel = np.ones(win, dtype=np.float32) / win
-    env = np.convolve(vo_mono, kernel, mode="same")
-    duck_music = 1.0 / (1.0 + 5.0 * env)   # stronger ducking so narration stays clear
+    env = np.convolve(vo_mono, np.ones(win, dtype=np.float32) / win, mode="same")
+    duck_music = 1.0 / (1.0 + 5.0 * env)
     duck_sfx = 1.0 / (1.0 + 1.6 * env)
 
     master = bed * duck_music[:, None] + sfx * duck_sfx[:, None] + vo * 1.25
@@ -505,7 +649,6 @@ def build_genderuwo(voice_arg: str = "pria_bariton", husband_voice: str = "pria_
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Genderuwo audio + timing (video follows the speech)")
     parser.add_argument("--voice", default="voices/id_prompts/youtube_8ofVl1KpViI_ref.wav", help="Suara narator (preset atau path .wav/.mp3)")
-    parser.add_argument("--husband", default="pria_hangat", help="Suara 'suami' (dan dasar suara genderuwo)")
     parser.add_argument("--out", default="genderuwo_master.mp3", help="Nama file mp3 keluaran di public/audio/")
     args = parser.parse_args()
-    build_genderuwo(args.voice, args.husband, args.out)
+    build_genderuwo(args.voice, args.out)

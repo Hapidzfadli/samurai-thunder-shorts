@@ -7,6 +7,7 @@ import {
   DoorwayFrame,
   Footprint,
   GenderuwoFigure,
+  HangingLamp,
   KelorLeaves,
   NightGround,
   NightLights,
@@ -169,7 +170,7 @@ export const SceneGenHook: React.FC = () => {
   const t = frame / fps;
   const l1 = spring({ frame: frame - 6, fps, config: { damping: 14 } });
   const l2 = spring({ frame: frame - 16, fps, config: { damping: 12 } });
-  const l3 = spring({ frame: frame - EV("hook.knock1"), fps, config: { damping: 9, stiffness: 190 } });
+  const l3 = spring({ frame: frame - EV("hook.text"), fps, config: { damping: 9, stiffness: 190 } });
   const knockFlash = lightning(frame, [EV("hook.knock1"), EV("hook.knock2"), EV("hook.knock3")]);
   const camZ = interpolate(frame, [0, DURATIONS_GEN.hook], [8.2, 6.6], { ...clamp, easing: ease });
 
@@ -263,17 +264,33 @@ export const SceneGenRumah: React.FC = () => {
       </Canvas>
       <Kicker text="SEBUAH KAMPUNG · TENGAH MALAM" from={6} top={235} />
       <Caption
-        text="Yu Darmi tinggal sendirian. Suaminya merantau jauh."
+        text="Konon, di sebuah kampung, tengah malam..."
         from={LN("rumah_1").from}
-        to={capTo("rumah_1")}
-        highlight={["SENDIRIAN", "MERANTAU"]}
+        to={capTo("rumah_1b")}
+        highlight={["MALAM"]}
+        top={1290}
+        size={66}
+      />
+      <Caption
+        text="YU DARMI tinggal sendirian. Suaminya merantau jauh."
+        from={LN("rumah_2").from}
+        to={capTo("rumah_3")}
+        highlight={["YU", "DARMI", "SENDIRIAN", "MERANTAU"]}
+        top={1290}
+        size={66}
+      />
+      <Caption
+        text="Di ujung jalan, berdiri beringin tua"
+        from={LN("rumah_4").from}
+        to={capTo("rumah_4")}
+        highlight={["BERINGIN"]}
         top={1290}
         size={70}
       />
       <Caption
-        text="Beringin tua itu rumah GENDERUWO, kata warga"
-        from={LN("rumah_2").from}
-        to={capTo("rumah_2")}
+        text="Kata warga, itu rumah GENDERUWO"
+        from={LN("rumah_5").from}
+        to={capTo("rumah_5")}
         highlight={["GENDERUWO"]}
         highlightColor={RED}
         top={1290}
@@ -313,30 +330,51 @@ export const SceneGenTanda: React.FC = () => {
         ))}
         <SmokeWisps t={t} origin={[3.4, 0.5, -10]} spread={7} count={20} />
         <KampungHouse position={[-8.5, 0, -6]} rotationY={0.5} scale={1.2} lightOn={false} />
+        <HangingLamp
+          position={[1.0, 4.9, 3.4]}
+          t={t}
+          sway={interpolate(frame, [EV("tanda.lamp0"), EV("tanda.lamp0") + 50], [0, 1], clamp)}
+        />
         <group scale={1}>
           <YuDarmi position={[-0.1, 0, 1.2]} rotationY={Math.PI - 0.3} t={t} lantern />
         </group>
         <pointLight position={[0.2, 1.6, 0.4]} intensity={3 * lampDim} distance={6} color="#ffa955" />
       </Canvas>
       <Kicker text="TENGAH MALAM · TANDA PERTAMA" from={6} top={235} />
-      <Chip n="①" label="BAU SINGKONG BAKAR" from={LN("tanda_1").from + 24} to={capTo("tanda_1")} top={430} left />
-      <Chip n="②" label="ANJING MENDADAK DIAM" from={LN("tanda_2").from + 6} to={capTo("tanda_2")} top={430} left={false} />
+      <Chip n="①" label="BAU SINGKONG BAKAR" from={LN("tanda_1a").from + 24} to={capTo("tanda_1b")} top={430} left />
+      <Chip n="②" label="ANJING TERDIAM" from={LN("tanda_2a").from + 6} to={capTo("tanda_2b")} top={430} left={false} />
+      <Chip n="③" label="LAMPU BERGOYANG" from={LN("tanda_3").from} to={capTo("tanda_3")} top={430} left />
       <Caption
-        text="Bau singkong bakar menyengat, padahal tak ada yang membakar"
-        from={LN("tanda_1").from}
-        to={capTo("tanda_1")}
+        text="Tercium bau singkong bakar menyengat, padahal tak ada yang membakar"
+        from={LN("tanda_1a").from}
+        to={capTo("tanda_1b")}
         highlight={["SINGKONG", "BAKAR"]}
         top={1290}
-        size={68}
+        size={62}
       />
       <Caption
-        text="Anjing mendadak DIAM. Lampu minyak bergoyang"
-        from={LN("tanda_2").from}
-        to={capTo("tanda_2")}
-        highlight={["DIAM"]}
-        highlightColor={RED}
+        text="Anjing berhenti menggonggong..."
+        from={LN("tanda_2a").from}
+        to={capTo("tanda_2a")}
+        highlight={["MENGGONGGONG"]}
         top={1290}
-        size={74}
+        size={70}
+      />
+      <Caption
+        text="diam."
+        from={LN("tanda_2b").from}
+        to={capTo("tanda_2b") + 10}
+        highlightColor={RED}
+        top={1340}
+        size={44}
+      />
+      <Caption
+        text="Lampu minyak bergoyang..."
+        from={LN("tanda_3").from}
+        to={capTo("tanda_3")}
+        highlight={["BERGOYANG"]}
+        top={1290}
+        size={66}
       />
       <SceneFade duration={DURATIONS_GEN.tanda} />
     </AbsoluteFill>
@@ -408,13 +446,22 @@ export const SceneGenPanggil: React.FC = () => {
       </div>
       <Caption text="Lalu terdengar suara dari arah beringin" from={LN("panggil_1").from} to={capTo("panggil_1")} highlight={["SUARA"]} top={1290} size={70} />
       <Caption
-        text="Suaranya persis suaminya. Tapi kenapa ia tak mau mendekat?"
-        from={LN("panggil_3").from}
-        to={capTo("panggil_3")}
-        highlight={["PERSIS", "TAK"]}
+        text="Suaranya PERSIS suaminya."
+        from={LN("panggil_3a").from}
+        to={capTo("panggil_3a")}
+        highlight={["PERSIS"]}
         highlightColor={RED}
         top={1290}
-        size={66}
+        size={70}
+      />
+      <Caption
+        text="Tapi kenapa ia tak mau MENDEKAT?"
+        from={LN("panggil_3b").from}
+        to={capTo("panggil_3b")}
+        highlight={["MENDEKAT"]}
+        highlightColor={RED}
+        top={1290}
+        size={64}
       />
       <SceneFade duration={DURATIONS_GEN.panggil} />
     </AbsoluteFill>
@@ -437,7 +484,11 @@ export const SceneGenKelor: React.FC = () => {
   // blocked: lean in, recoil, lean in, recoil
   const press = isGen ? Math.max(0, Math.sin((frame - flipF - 8) * 0.16)) : 0;
   const rage = interpolate(frame, [flipF + 30, DURATIONS_GEN.kelor], [0, 1], clamp);
-  const shakeAmt = isGen ? 0.02 + rage * 0.03 : 0;
+  const flareF = EV("kelor.flare");
+  const flare = interpolate(frame, [flareF, flareF + 6, flareF + 40], [0, 1, 0.6], clamp);
+  const burst = interpolate(frame, [flareF, flareF + 3, flareF + 16], [0, 0.4, 0], clamp);
+  const grow = interpolate(frame, [flipF, LN("kelor_3a").to], [0.5, 0.72], { ...clamp, easing: ease });
+  const shakeAmt = (isGen ? 0.02 + rage * 0.03 : 0) + burst * 0.1;
   const camShake: Vec3 = [Math.sin(frame * 3.1) * shakeAmt, Math.cos(frame * 2.7) * shakeAmt, 0];
 
   return (
@@ -457,40 +508,57 @@ export const SceneGenKelor: React.FC = () => {
           {isGen && (
             <GenderuwoFigure
               position={[0.1, 0, -4.3]}
-              scale={0.7}
+              scale={grow}
               t={t}
               lean={0.2 + press * 0.5}
-              rage={rage}
+              rage={Math.max(rage, burst * 2)}
+              flare={flare}
+              eyeGlow={1 + flare * 2}
             />
           )}
         </Yard>
       </Canvas>
-      <Chip n="①" label="DAUN KELOR DI AMBANG PINTU" from={LN("kelor_1").from + 10} to={capTo("kelor_1")} top={430} left />
+      <AbsoluteFill style={{ background: "#ff3a1a", opacity: burst }} />
+      <Chip n="①" label="DAUN KELOR DI AMBANG PINTU" from={LN("kelor_1b").from + 6} to={capTo("kelor_1b")} top={430} left />
       <Caption
-        text="Yu Darmi ingat pesan Mbah: sebar DAUN KELOR di ambang pintu"
-        from={LN("kelor_1").from}
-        to={capTo("kelor_1")}
-        highlight={["KELOR"]}
-        highlightColor="#7bdc66"
+        text="Yu Darmi ingat pesan Mbah..."
+        from={LN("kelor_1a").from}
+        to={capTo("kelor_1a")}
         top={1290}
-        size={64}
+        size={68}
       />
       <Caption
-        text="Sosok itu berhenti. Tak sanggup melangkah."
+        text="Sebarkan DAUN KELOR di ambang pintu"
+        from={LN("kelor_1b").from}
+        to={capTo("kelor_1b")}
+        highlight={["DAUN", "KELOR"]}
+        highlightColor="#7bdc66"
+        top={1290}
+        size={68}
+      />
+      <Caption
+        text="Sosok itu berhenti di depan pintu. Ia tak sanggup melangkah."
         from={LN("kelor_2").from}
         to={capTo("kelor_2")}
         highlight={["BERHENTI", "MELANGKAH"]}
         top={1290}
-        size={72}
+        size={60}
       />
       <Caption
-        text="Bayangannya membesar, matanya MERAH menyala!"
-        from={LN("kelor_3").from}
-        to={capTo("kelor_3")}
-        highlight={["MERAH"]}
-        highlightColor={RED}
+        text="Lalu bayangannya membesar..."
+        from={LN("kelor_3a").from}
+        to={capTo("kelor_3a")}
         top={1290}
-        size={78}
+        size={66}
+      />
+      <Caption
+        text="Dan matanya MERAH MENYALA!"
+        from={LN("kelor_3b").from}
+        to={DURATIONS_GEN.kelor - 6}
+        highlight={["MERAH", "MENYALA"]}
+        highlightColor={RED}
+        top={1250}
+        size={100}
       />
       <SceneFade duration={DURATIONS_GEN.kelor} inFrames={6} />
     </AbsoluteFill>
@@ -539,23 +607,30 @@ export const SceneGenGedor: React.FC = () => {
       </Canvas>
       <AbsoluteFill style={{ background: "#ff2a10", opacity: redFlash }} />
       <Caption
+        text="“Dik... bukakan pintu...”"
+        from={LN("gedor_g").from}
+        to={capTo("gedor_g")}
+        top={1280}
+        size={84}
+      />
+      <Caption
         text="Ia menggedor pintu berkali-kali..."
-        from={LN("gedor_1").from}
-        to={roarF - 2}
+        from={LN("gedor_1a").from}
+        to={capTo("gedor_1a")}
         highlight={["MENGGEDOR"]}
         highlightColor={RED}
         top={1290}
         size={72}
       />
       <Caption
-        text="lalu meraung dan menghilang"
-        from={roarF + 4}
-        to={capTo("gedor_1") + 10}
+        text="lalu meraung, dan menghilang"
+        from={LN("gedor_1b").from}
+        to={capTo("gedor_1b") + 10}
         highlight={["MERAUNG", "MENGHILANG"]}
         top={1290}
-        size={78}
+        size={74}
       />
-            <SceneFade duration={DURATIONS_GEN.gedor} inFrames={4} />
+      <SceneFade duration={DURATIONS_GEN.gedor} inFrames={4} />
     </AbsoluteFill>
   );
 };
@@ -609,7 +684,8 @@ export const SceneGenFajar: React.FC = () => {
   const husbandPos: Vec3 = [interpolate(walk, [0, 1], [1.6, 0.35]), 0, interpolate(walk, [0, 1], [-32, -1.2])];
   const stepBob = Math.abs(Math.sin(frame * 0.35)) * 0.05 * (walk > 0 && walk < 1 ? 1 : 0);
   const title = spring({ frame: frame - EV("fajar.card"), fps, config: { damping: 12 } });
-  const t2 = spring({ frame: frame - Math.round((LN("fajar_3").from + LN("fajar_3").to) / 2), fps, config: { damping: 10, stiffness: 180 } });
+  const t2 = spring({ frame: frame - EV("fajar.big"), fps, config: { damping: 10, stiffness: 180 } });
+  const t3 = spring({ frame: frame - EV("fajar.big") - 14, fps, config: { damping: 10, stiffness: 180 } });
   const prints: { p: Vec3; r: number; m: boolean }[] = [
     { p: [3.2, 0, -6.2], r: 0.5, m: false },
     { p: [2.2, 0, -4.6], r: 0.45, m: true },
@@ -635,22 +711,22 @@ export const SceneGenFajar: React.FC = () => {
       </Canvas>
       <Kicker text="FAJAR · JEJAK DI BAWAH BERINGIN" from={6} top={235} />
       <Caption
-        text="Fajar tiba. Hanya tersisa jejak besar berbulu"
+        text="Fajar tiba. Hanya tersisa jejak besar berbulu di bawah beringin"
         from={LN("fajar_1").from}
         to={capTo("fajar_1")}
         highlight={["JEJAK", "BERBULU"]}
         highlightColor={GOLD}
         top={1290}
-        size={70}
+        size={62}
       />
       <Caption
-        text="Tiga hari kemudian, suaminya pulang sungguhan"
+        text="Tiga hari kemudian, suami Yu Darmi pulang sungguhan"
         from={LN("fajar_2").from}
         to={capTo("fajar_2")}
         highlight={["SUNGGUHAN"]}
         highlightColor="#7bdc66"
         top={1290}
-        size={70}
+        size={62}
       />
       <AbsoluteFill style={{ background: "rgba(5,6,14,0.5)", opacity: title }} />
       <div style={{ position: "absolute", top: 330, width: "100%", textAlign: "center" }}>
@@ -687,8 +763,8 @@ export const SceneGenFajar: React.FC = () => {
             fontSize: 200,
             lineHeight: 1,
             color: GOLD,
-            opacity: t2,
-            transform: `scale(${1.8 - 0.8 * t2})`,
+            opacity: t3,
+            transform: `scale(${1.8 - 0.8 * t3})`,
             textShadow: "0 0 40px rgba(255,201,74,0.6), 0 10px 0 #7a4b00",
           }}
         >

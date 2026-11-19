@@ -207,7 +207,8 @@ export const GenderuwoFigure: React.FC<{
   lean?: number; // 0..1 hunch forward
   pound?: number; // 0..1 arms slamming forward
   rage?: number; // 0..1 head thrown back / jitter
-}> = ({ position, rotationY = 0, scale = 1, t, eyeGlow = 1, lean = 0.25, pound = 0, rage = 0 }) => {
+  flare?: number; // 0..1 eyes blaze
+}> = ({ position, rotationY = 0, scale = 1, t, eyeGlow = 1, lean = 0.25, pound = 0, rage = 0, flare = 0 }) => {
   const fur = useMemo(
     () =>
       new Array(46).fill(0).map((_, i) => {
@@ -308,8 +309,8 @@ export const GenderuwoFigure: React.FC<{
             {/* glowing eyes */}
             {[-0.15, 0.15].map((x, i) => (
               <mesh key={i} position={[x, 0.04, 0.38]}>
-                <sphereGeometry args={[0.065, 8, 8]} />
-                <meshBasicMaterial color="#ff2a10" />
+                <sphereGeometry args={[0.065 * (1 + flare * 1.1), 8, 8]} />
+                <meshBasicMaterial color={flare > 0.3 ? "#ff5a3a" : "#ff2a10"} />
               </mesh>
             ))}
             {/* mouth + fangs */}
@@ -323,7 +324,7 @@ export const GenderuwoFigure: React.FC<{
                 <meshStandardMaterial color="#f0ead8" />
               </mesh>
             ))}
-            <pointLight position={[0, 0.04, 0.8]} intensity={1.0 * eyeGlow} distance={4.0} color="#ff3a1a" />
+            <pointLight position={[0, 0.04, 0.8]} intensity={1.0 * eyeGlow + flare * 9} distance={4.0 + flare * 4} color="#ff3a1a" />
           </group>
         </group>
       </group>
@@ -395,6 +396,62 @@ export const SmokeWisps: React.FC<{ t: number; origin?: Vec3; spread?: number; c
           </mesh>
         );
       })}
+    </group>
+  );
+};
+
+/* ------------------------------------------------------------------ */
+/* Lampu minyak gantung — swings on its chain, flame flickers.          */
+/* sway 0..1 scales the pendulum swing; the flame gutters as it grows.  */
+/* ------------------------------------------------------------------ */
+export const HangingLamp: React.FC<{ position: Vec3; t: number; sway?: number; chain?: number }> = ({
+  position,
+  t,
+  sway = 0,
+  chain = 2.3,
+}) => {
+  const ang = sway * 0.4 * Math.sin(t * 2.7) * (1 + 0.18 * Math.sin(t * 1.1)) + Math.sin(t * 0.9) * 0.012;
+  const flame = 0.85 + 0.2 * Math.sin(t * 23) + 0.12 * Math.sin(t * 37 + 1.3) - sway * 0.3 * Math.abs(Math.sin(t * 2.7));
+  return (
+    <group position={position}>
+      {/* ceiling hook */}
+      <mesh>
+        <sphereGeometry args={[0.07, 8, 6]} />
+        <meshStandardMaterial color="#1a1612" />
+      </mesh>
+      <group rotation={[0, 0, ang]}>
+        <mesh position={[0, -chain / 2, 0]}>
+          <cylinderGeometry args={[0.013, 0.013, chain, 5]} />
+          <meshStandardMaterial color="#2a2622" metalness={0.6} roughness={0.5} />
+        </mesh>
+        <group position={[0, -chain, 0]}>
+          {/* brass cap + ring */}
+          <mesh position={[0, 0.2, 0]}>
+            <coneGeometry args={[0.17, 0.14, 8]} />
+            <meshStandardMaterial color="#9c7a34" metalness={0.8} roughness={0.35} />
+          </mesh>
+          <mesh position={[0, 0.3, 0]}>
+            <torusGeometry args={[0.035, 0.01, 6, 10]} />
+            <meshStandardMaterial color="#9c7a34" metalness={0.8} roughness={0.35} />
+          </mesh>
+          {/* glass chimney, glowing */}
+          <mesh>
+            <cylinderGeometry args={[0.1, 0.12, 0.3, 10]} />
+            <meshBasicMaterial color="#ffd68a" transparent opacity={0.55 + 0.25 * flame} />
+          </mesh>
+          {/* flame */}
+          <mesh position={[0, -0.02, 0]} scale={[1, Math.max(0.4, flame), 1]}>
+            <coneGeometry args={[0.06, 0.2, 7]} />
+            <meshBasicMaterial color="#fff2c4" />
+          </mesh>
+          {/* oil reservoir */}
+          <mesh position={[0, -0.22, 0]}>
+            <cylinderGeometry args={[0.14, 0.11, 0.14, 10]} />
+            <meshStandardMaterial color="#9c7a34" metalness={0.8} roughness={0.35} />
+          </mesh>
+          <pointLight position={[0, 0, 0.15]} intensity={Math.max(1.5, 11 * flame)} distance={11} color="#ffa955" />
+        </group>
+      </group>
     </group>
   );
 };
