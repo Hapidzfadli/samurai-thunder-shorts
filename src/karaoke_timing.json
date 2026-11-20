@@ -1,0 +1,168 @@
+{
+ "fps": 30,
+ "total_frames": 1712,
+ "scenes": {
+  "hook": 276,
+  "tini": 165,
+  "rizal": 165,
+  "ronda": 165,
+  "pagar": 240,
+  "dalam": 240,
+  "panggung": 461
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Jam dua belas malam. Pak Joko, menyalakan karaoke.",
+   "from": 4,
+   "to": 91
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Satu, dua, tes. Tes.",
+   "from": 97,
+   "to": 142
+  },
+  "hook_3": {
+   "scene": "hook",
+   "text": "Cintaku sedalam parit, rinduku selebar gorong-gorong!",
+   "from": 149,
+   "to": 267
+  },
+  "tini_1": {
+   "scene": "tini",
+   "text": "Di sebelah, Bu Tini langsung terbangun.",
+   "from": 4,
+   "to": 52
+  },
+  "tini_2": {
+   "scene": "tini",
+   "text": "Astaghfirullah, siapa yang nyanyi jam segini?",
+   "from": 56,
+   "to": 121
+  },
+  "rizal_1": {
+   "scene": "rizal",
+   "text": "Mas Rizal, besok meeting jam delapan.",
+   "from": 4,
+   "to": 48
+  },
+  "rizal_2": {
+   "scene": "rizal",
+   "text": "Ya Tuhan, tolong. Saya cuma mau tidur.",
+   "from": 53,
+   "to": 133
+  },
+  "ronda_1": {
+   "scene": "ronda",
+   "text": "Di pos ronda, Pak Ujang jatuh dari kursi.",
+   "from": 4,
+   "to": 82
+  },
+  "ronda_2": {
+   "scene": "ronda",
+   "text": "Ada apa ini? Maling? Gempa?",
+   "from": 86,
+   "to": 132
+  },
+  "pagar_1": {
+   "scene": "pagar",
+   "text": "Bu Tini menggedor pagar.",
+   "from": 4,
+   "to": 49
+  },
+  "pagar_2": {
+   "scene": "pagar",
+   "text": "Pak Joko, sudah malam!",
+   "from": 53,
+   "to": 93
+  },
+  "pagar_3": {
+   "scene": "pagar",
+   "text": "Sebentar, Bu. Lagu terakhir.",
+   "from": 98,
+   "to": 147
+  },
+  "pagar_4": {
+   "scene": "pagar",
+   "text": "Lagu terakhir, yang kesepuluh.",
+   "from": 153,
+   "to": 197
+  },
+  "dalam_1": {
+   "scene": "dalam",
+   "text": "Warga masuk mau protes. Lalu lagu koplo favorit mereka, diputar.",
+   "from": 4,
+   "to": 108
+  },
+  "dalam_2": {
+   "scene": "dalam",
+   "text": "Satu lagu saja, ya.",
+   "from": 113,
+   "to": 152
+  },
+  "dalam_3": {
+   "scene": "dalam",
+   "text": "Semua lupa tujuan, dan ikut goyang.",
+   "from": 158,
+   "to": 211
+  },
+  "panggung_1": {
+   "scene": "panggung",
+   "text": "Lalu, Nenek Mina mengambil mic.",
+   "from": 6,
+   "to": 57
+  },
+  "panggung_2": {
+   "scene": "panggung",
+   "text": "Malam ini bulan tersenyum, menemani cintaku yang syahdu.",
+   "from": 65,
+   "to": 243
+  },
+  "panggung_3": {
+   "scene": "panggung",
+   "text": "Semua terdiam. Pak Joko menangis.",
+   "from": 251,
+   "to": 307
+  },
+  "panggung_4": {
+   "scene": "panggung",
+   "text": "Saya, kalah, Nek.",
+   "from": 314,
+   "to": 368
+  },
+  "panggung_5": {
+   "scene": "panggung",
+   "text": "Besok malam lagi, ya.",
+   "from": 376,
+   "to": 416
+  }
+ },
+ "events": {
+  "hook.start": 47,
+  "hook.test": 98,
+  "hook.sing": 149,
+  "hook.shake": 184,
+  "tini.wake": 19,
+  "tini.say": 56,
+  "rizal.look": 4,
+  "rizal.say": 54,
+  "ronda.fall": 43,
+  "ronda.say": 86,
+  "pagar.knock": 18,
+  "pagar.say": 53,
+  "pagar.joko": 98,
+  "pagar.tenth": 154,
+  "dalam.enter": 4,
+  "dalam.song": 61,
+  "dalam.tini": 114,
+  "dalam.dance": 159,
+  "panggung.mic": 6,
+  "panggung.sing": 66,
+  "panggung.quiet": 252,
+  "panggung.joko": 314,
+  "panggung.tini": 377,
+  "panggung.card": 422
+ },
+ "stepF": {}
+}
