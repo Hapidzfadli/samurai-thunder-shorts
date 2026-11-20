@@ -21,6 +21,7 @@ import { MotionTest, MOTION_TEST_FRAMES } from "./MotionTest";
 import { RigTest, RIG_TEST_FRAMES } from "./RigTest";
 import { Misi, TOTAL_FRAMES_MISI } from "./Misi";
 import { SheetWar } from "./SheetWar";
+import { Perang, TOTAL_FRAMES_PERANG } from "./Perang";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
 
 export const RemotionRoot: React.FC = () => {
@@ -38,6 +39,14 @@ export const RemotionRoot: React.FC = () => {
         id="Misi"
         component={Misi}
         durationInFrames={TOTAL_FRAMES_MISI}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="Perang"
+        component={Perang}
+        durationInFrames={TOTAL_FRAMES_PERANG}
         fps={30}
         width={1080}
         height={1920}
