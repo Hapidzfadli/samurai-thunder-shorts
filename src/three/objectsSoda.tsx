@@ -206,6 +206,10 @@ export type ToonParams = {
   armR?: [number, number];
   legL?: number;
   legR?: number;
+  kneeL?: number; // shin angle relative to the thigh (negative = knee bends)
+  kneeR?: number;
+  bob?: number; // lifts the whole body (px, card space)
+  profile?: boolean; // legs/feet drawn as a side-view stride (walking sideways)
   prop?: "can" | "box" | "mic" | "cane" | "none";
   canShake?: number;
   sweat?: number;
@@ -400,15 +404,26 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   g.rotate(lean * 0.12);
   g.scale(1 + sq * 0.05, 1 - sq * 0.05);
   g.translate(-256, -780);
+  g.translate(0, -(p.bob ?? 0));
   const face = p.face ?? "#ffffff";
 
   // legs
   const isBox = p.kind === "box";
   const legTop = 565;
-  const lh = limb(g, [256 - 36, legTop], p.legL ?? 0.04, -0.02, 105, 105, 9, sd + 1);
-  const rh = limb(g, [256 + 36, legTop], p.legR ?? -0.04, 0.02, 105, 105, 9, sd + 2);
-  inkEllipse(g, lh[0] - 6, lh[1] + 4, 30, 14, INK, 3, sd + 3);
-  inkEllipse(g, rh[0] + 6, rh[1] + 4, 30, 14, INK, 3, sd + 4);
+  const tL = p.legL ?? 0.04;
+  const tR = p.legR ?? -0.04;
+  const kL = p.kneeL ?? -0.02;
+  const kR = p.kneeR ?? 0.02;
+  const lh = limb(g, [256 - 36, legTop], tL, kL, 105, 105, 9, sd + 1);
+  const rh = limb(g, [256 + 36, legTop], tR, kR, 105, 105, 9, sd + 2);
+  if (p.profile) {
+    // side-view feet follow the shin so a lifted foot points its toes down
+    inkEllipse(g, lh[0] + 12, lh[1] + 4, 30, 13, INK, 3, sd + 3, (tL + kL) * -0.7);
+    inkEllipse(g, rh[0] + 12, rh[1] + 4, 30, 13, INK, 3, sd + 4, (tR + kR) * -0.7);
+  } else {
+    inkEllipse(g, lh[0] - 6, lh[1] + 4, 30, 14, INK, 3, sd + 3);
+    inkEllipse(g, rh[0] + 6, rh[1] + 4, 30, 14, INK, 3, sd + 4);
+  }
 
   // back arm (left side of screen)
   const aL = p.armL ?? [-0.22, -0.1];
