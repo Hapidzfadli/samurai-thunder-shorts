@@ -138,20 +138,20 @@ const Look: React.FC<{ green?: number }> = ({ green = 0 }) => (
 /* ------------------------------------------------------------------ */
 const yawTo = (x: number, z: number, cam: Cam) => Math.max(-0.5, Math.min(0.5, Math.atan2(cam.pos[0] - x, cam.pos[2] - z) * 0.6));
 const greenFace = (k: number) => new THREE.Color("#ffffff").lerp(new THREE.Color("#b7e07a"), cl(k)).getStyle();
-const budi: ToonParams = { expr: "worried", shirt: "#3b82c4", pants: "#2b3350", hat: "hair", hatColor: "#1c1410", seed: 4 };
-const ibu: ToonParams = { expr: "neutral", shirt: "#e76f9a", pants: "#5a3a5a", hat: "hair", hatColor: "#3a2410", seed: 6 };
-const ceo: ToonParams = { expr: "neutral", shirt: "#1f2937", pants: "#111827", hat: "bowler", hatColor: "#222222", glasses: true, seed: 9 };
-const magang: ToonParams = { expr: "neutral", shirt: "#22c55e", pants: "#334155", hat: "cap", hatColor: "#15803d", glasses: true, seed: 13 };
-const kurir: ToonParams = { expr: "neutral", shirt: "#f97316", pants: "#7c2d12", hat: "cap", hatColor: "#c2410c", seed: 15 };
+const budi: ToonParams = { expr: "worried", shirt: "#dbeafe", pants: "#3b3f63", hat: "bald", hatColor: "#3a2a1a", mustache: true, belly: 0.9, tie: "#dc2626", seed: 4 };
+const ibu: ToonParams = { expr: "neutral", shirt: "#e76f9a", pants: "#5a3a5a", hat: "hijab", hatColor: "#7c3aed", seed: 6 };
+const ceo: ToonParams = { expr: "neutral", shirt: "#1f2937", pants: "#111827", hat: "bowler", hatColor: "#222222", glasses: true, mustache: true, tie: "#1d4ed8", seed: 9 };
+const magang: ToonParams = { expr: "neutral", shirt: "#22c55e", pants: "#334155", hat: "short", hatColor: "#1c1410", glasses: true, lanyard: true, seed: 13 };
+const kurir: ToonParams = { expr: "neutral", shirt: "#f97316", pants: "#7c2d12", hat: "cap", hatColor: "#c2410c", prop: "box", seed: 15 };
 const NOSE = { armR: [3.5, 0.4] as [number, number], armL: [-3.5, -0.4] as [number, number] };
 
 type Slot = { x: number; z: number; h: number };
 const SLOT: Record<string, Slot> = {
-  ibu: { x: -1.35, z: 0.9, h: 2.0 },
-  budi: { x: 0, z: 0.9, h: 2.0 },
-  ceo: { x: 1.35, z: 0.9, h: 2.0 },
-  magang: { x: -0.7, z: -0.1, h: 1.8 },
-  kurir: { x: 0.7, z: -0.1, h: 1.8 },
+  ibu: { x: -1.4, z: 0.9, h: 1.75 },
+  budi: { x: 0, z: 0.9, h: 1.75 },
+  ceo: { x: 1.4, z: 0.9, h: 1.75 },
+  magang: { x: -0.72, z: -0.15, h: 1.6 },
+  kurir: { x: 0.72, z: -0.15, h: 1.6 },
 };
 const Crew: React.FC<{ cam: Cam; p: Record<"ibu" | "budi" | "ceo" | "magang" | "kurir", ToonParams>; z0?: number }> = ({ cam, p, z0 = 0 }) => (
   <>
@@ -264,13 +264,13 @@ export const SceneNaik: React.FC = () => {
   const sweat = EV("naik.sweat");
   const twelve = EV("naik.twelve");
   const release = EV("naik.release");
-  const floor = Math.round(f < 36 ? interpolate(f, [0, 36], [4, 7], clamp) : f < twelve ? interpolate(f, [36, twelve], [7, 12], clamp) : interpolate(f, [twelve, release + 40], [12, 13], clamp));
-  if (f < 36) {
+  const floor = Math.round(f < 48 ? interpolate(f, [0, 48], [4, 7], clamp) : f < twelve ? interpolate(f, [48, twelve], [7, 12], clamp) : interpolate(f, [twelve, release + 40], [12, 13], clamp));
+  if (f < 48) {
     const cam = shotCam(f, [{ to: 9999, p0: [0, 2.2, 13], l0: [0, 5.0, -3], p1: [0, 4.0, 13], l1: [0, 7.0, -3], fov: 46 }]);
     return (
       <AbsoluteFill>
         <Stage cam={cam} bg="linear-gradient(#0b1030, #2b2f6b 70%, #6b5fa8)">
-          <Building t={t} floor={interpolate(f, [0, 36], [3.2, 6.6], clamp)} />
+          <Building t={t} floor={interpolate(f, [0, 48], [3.2, 6.6], clamp)} />
         </Stage>
         <Look />
         <Floor n={floor} />
@@ -279,7 +279,7 @@ export const SceneNaik: React.FC = () => {
     );
   }
   const cam = shotCam(f, [
-    { to: twelve - 4, p0: [0, 1.55, 7.2], l0: [0, 1.3, 0], p1: [0, 1.55, 6.6], l1: [0, 1.3, 0], fov: 48 },
+    { to: twelve - 4, p0: [0, 1.4, 7.0], l0: [0, 1.15, 0], p1: [0, 1.4, 6.5], l1: [0, 1.15, 0], fov: 48 },
     { to: 9999, p0: [0.25, 1.5, 5.4], l0: [0, 1.3, 0.3], p1: [0.2, 1.5, 5.0], l1: [0, 1.3, 0.3], fov: 42 },
   ]);
   const rel = f >= release;
@@ -295,7 +295,7 @@ export const SceneNaik: React.FC = () => {
       <Stage cam={cam} bg="#20232c">
         <LiftRoom t={t} />
         <Crew cam={cam} p={crew} />
-        {f >= release && <Gas origin={[0, 0.9, 0.9]} k={cl((f - release) / 80) * 0.25} t={t} spread={1.2} />}
+        {f >= release && <Gas origin={[0, 0.7, 0.15]} k={cl((f - release) / 80) * 0.25} t={t} spread={1.2} />}
       </Stage>
       <Look />
       <Floor n={floor} />
@@ -316,8 +316,8 @@ export const SceneBau: React.FC = () => {
   const k = cl(f / 90) * 0.7 + 0.3;
   const react = (at: number) => sm(cl((f - at) / 14));
   const cam = shotCam(f, [
-    { to: nose, p0: [0, 1.6, 7.0], l0: [0, 1.3, 0], p1: [0, 1.6, 6.6], l1: [0, 1.3, 0], fov: 48 },
-    { to: 9999, p0: [-0.2, 1.6, 6.4], l0: [0, 1.3, 0], p1: [0.2, 1.6, 6.0], l1: [0, 1.3, 0], fov: 48 },
+    { to: nose, p0: [0, 1.4, 7.0], l0: [0, 1.15, 0], p1: [0, 1.4, 6.6], l1: [0, 1.15, 0], fov: 48 },
+    { to: 9999, p0: [-0.2, 1.4, 6.8], l0: [0, 1.15, 0], p1: [0.2, 1.4, 6.4], l1: [0, 1.15, 0], fov: 48 },
   ]);
   const sick = (at: number) => react(at);
   const crew = {
@@ -333,7 +333,7 @@ export const SceneBau: React.FC = () => {
       <Stage cam={cam} bg="#20232c">
         <LiftRoom t={t} gas={k} />
         <Crew cam={cam} p={crew} />
-        <Gas origin={[0, 0.9, 0.9]} k={k} t={t} spread={3.4} />
+        <Gas origin={[0, 0.7, 0.15]} k={k} t={t} spread={3.4} />
       </Stage>
       <Look green={0.1 + 0.18 * k} />
       <Floor n={floor} />
@@ -355,7 +355,7 @@ export const SceneTuduh: React.FC = () => {
   const mag = EV("tuduh.magang");
   const bud = EV("tuduh.budi");
   const cam = shotCam(f, [
-    { to: ibuF - 4, p0: [0, 1.6, 7.0], l0: [0, 1.3, 0], p1: [0, 1.6, 6.6], l1: [0, 1.3, 0], fov: 48 },
+    { to: ibuF - 4, p0: [0, 1.4, 7.0], l0: [0, 1.15, 0], p1: [0, 1.4, 6.6], l1: [0, 1.15, 0], fov: 48 },
     { to: mag - 4, p0: [-1.0, 1.5, 5.4], l0: [-0.9, 1.3, 0.4], p1: [-0.9, 1.5, 5.0], l1: [-0.8, 1.3, 0.4], fov: 42 },
     { to: bud - 4, p0: [-0.2, 1.5, 5.4], l0: [-0.5, 1.3, 0.2], p1: [-0.1, 1.5, 5.0], l1: [-0.4, 1.3, 0.2], fov: 42 },
     { to: 9999, p0: [0.2, 1.5, 5.4], l0: [0.1, 1.3, 0.4], p1: [0.1, 1.5, 5.0], l1: [0.1, 1.3, 0.4], fov: 42 },
@@ -376,7 +376,7 @@ export const SceneTuduh: React.FC = () => {
       <Stage cam={cam} bg="#20232c">
         <LiftRoom t={t} gas={1} />
         <Crew cam={cam} p={crew} />
-        <Gas origin={[0, 0.9, 0.9]} k={1} t={t} spread={3.6} />
+        <Gas origin={[0, 0.7, 0.15]} k={1} t={t} spread={3.6} />
       </Stage>
       <Look green={0.26} />
       <Floor n={floor} />
@@ -418,8 +418,8 @@ export const SceneBuka: React.FC = () => {
         <Lobby t={t} doorOpen={open} warm={false} portal title="LANTAI 20" sub="HRD & KEUANGAN" />
         <LiftRoom t={t} z0={-5.3} gas={1} />
         <Crew cam={cam} p={crew} z0={-5.3} />
-        <Gas origin={[0, 0.9, -4.4]} k={0.8 + 0.2 * rush} t={t} spread={3.8} />
-        {open > 0.1 && <Gas origin={[0, 0.9, -1.5]} k={rush} t={t} spread={2.4 + 3 * rush} />}
+        <Gas origin={[0, 0.7, -5.1]} k={0.8 + 0.2 * rush} t={t} spread={3.8} />
+        {open > 0.1 && <Gas origin={[0, 0.9, -1.8]} k={rush} t={t} spread={2.4 + 3 * rush} />}
         <ToonSprite position={[2.8, 0, -0.4]} height={2.0} yaw={yawTo(2.8, -0.4, cam)} params={hrdP} flip />
       </Stage>
       <Look green={0.08 * open} />

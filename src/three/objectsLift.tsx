@@ -152,6 +152,7 @@ export const LiftRoom: React.FC<{ t: number; z0?: number; tint?: string; gas?: n
         <planeGeometry args={[4.6, 4]} />
         <meshStandardMaterial color="#eef1f6" emissive="#fff6dc" emissiveIntensity={0.6} />
       </mesh>
+      <Sign position={[0, 2.85, -1.28]} size={[1.5, 0.55]} text="5 ORANG" bg="#20242c" fg="#f5e2a8" accent="#c9a45a" />
       <M position={[0, 1.2, -1.22]}>
         <boxGeometry args={[4.4, 0.08, 0.1]} />
         <meshStandardMaterial color="#d8c27a" metalness={0.9} roughness={0.2} />
@@ -192,12 +193,30 @@ export const Gas: React.FC<{ origin: Vec3; k: number; t: number; spread?: number
         if (e <= 0.01) return null;
         const rr = e * spread * (0.3 + p.r);
         return (
-          <mesh key={i} position={[origin[0] + Math.cos(p.a) * rr + Math.sin(t * 1.2 + p.ph) * 0.08, origin[1] + p.y * 1.6 * e + Math.sin(t * 1.5 + p.ph) * 0.06, origin[2] + Math.sin(p.a) * rr * 0.6]} scale={p.s * (0.6 + e)}>
+          <mesh key={i} position={[origin[0] + Math.cos(p.a) * rr + Math.sin(t * 1.2 + p.ph) * 0.08, origin[1] + p.y * 1.6 * e + Math.sin(t * 1.5 + p.ph) * 0.06, origin[2] + Math.abs(Math.sin(p.a)) * rr * 0.6]} scale={p.s * (0.6 + e)}>
             <sphereGeometry args={[0.55, 10, 8]} />
             <meshBasicMaterial color={i % 3 === 0 ? "#a8d65a" : "#86c232"} transparent opacity={0.22 + 0.1 * (i % 2)} depthWrite={false} />
           </mesh>
         );
       })}
+      {k > 0.35 &&
+        [0, 1, 2].map((i) => (
+          <mesh key={`f${i}`} position={[origin[0] + Math.cos(t * (3 + i) + i * 2) * (0.7 + 0.3 * i), origin[1] + 1.5 + Math.sin(t * (4 + i) + i) * 0.25 + i * 0.15, origin[2] + 0.4 + Math.sin(t * (3 + i) + i * 2) * 0.4]}>
+            <sphereGeometry args={[0.035, 6, 6]} />
+            <meshBasicMaterial color="#16110f" />
+          </mesh>
+        ))}
+      {k > 0.2 &&
+        [-1, 0, 1].map((c) => (
+          <group key={c} position={[origin[0] + c * 0.45, origin[1] + 0.6, origin[2] + 0.6]}>
+            {new Array(7).fill(0).map((_, i) => (
+              <mesh key={i} position={[Math.sin(i * 1.1 + t * 3 + c) * 0.12, i * 0.2 + ((t * 0.6 + c * 0.2) % 1) * 0.2, 0]}>
+                <sphereGeometry args={[0.04, 6, 6]} />
+                <meshBasicMaterial color="#6aa22a" transparent opacity={0.9 - i * 0.11} depthWrite={false} />
+              </mesh>
+            ))}
+          </group>
+        ))}
     </group>
   );
 };
