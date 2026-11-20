@@ -185,7 +185,7 @@ export const SceneLiftHook: React.FC = () => {
       <Stage cam={cam} bg="#2b2638" shadows>
         <Lobby t={t} doorOpen={door} />
         {row.map(([k, x]) => {
-          const params = { ibu, kurir, budi, ceo, magang }[k];
+          const params = ({ ibu, kurir, budi, ceo, magang } as Record<string, ToonParams>)[k];
           const isB = k === "budi";
           return (
             <ToonSprite key={k} position={[x, 0, 0.6]} height={k === "kurir" || k === "magang" ? 1.85 : 2.0} yaw={yawTo(x, 0.6, cam)} params={{ ...params, ...idle(f, params.seed ?? 1), expr: isB ? (f > stomach ? "worried" : "neutral") : "neutral", armR: isB ? [0.5, -1.5] : params.armR, armL: isB ? [-0.5, 1.5] : params.armL, sweat: isB && f > rumble ? 1 : 0, squash: isB ? 0.1 + Math.abs(wob) * 4 : params.squash }} shadow />
@@ -264,13 +264,13 @@ export const SceneNaik: React.FC = () => {
   const sweat = EV("naik.sweat");
   const twelve = EV("naik.twelve");
   const release = EV("naik.release");
-  const floor = Math.round(f < twelve ? interpolate(f, [0, seven + 6, twelve], [3, 7, 12], clamp) : interpolate(f, [twelve, release + 40], [12, 13], clamp));
-  if (f < seven - 4) {
+  const floor = Math.round(f < 36 ? interpolate(f, [0, 36], [4, 7], clamp) : f < twelve ? interpolate(f, [36, twelve], [7, 12], clamp) : interpolate(f, [twelve, release + 40], [12, 13], clamp));
+  if (f < 36) {
     const cam = shotCam(f, [{ to: 9999, p0: [0, 2.2, 13], l0: [0, 5.0, -3], p1: [0, 4.0, 13], l1: [0, 7.0, -3], fov: 46 }]);
     return (
       <AbsoluteFill>
         <Stage cam={cam} bg="linear-gradient(#0b1030, #2b2f6b 70%, #6b5fa8)">
-          <Building t={t} floor={interpolate(f, [0, seven], [2, 6.5], clamp)} />
+          <Building t={t} floor={interpolate(f, [0, 36], [3.2, 6.6], clamp)} />
         </Stage>
         <Look />
         <Floor n={floor} />

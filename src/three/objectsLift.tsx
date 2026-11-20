@@ -378,14 +378,12 @@ export const HRRoom: React.FC<{ t: number }> = ({ t }) => {
           <meshBasicMaterial color="#6f8fb8" />
         </mesh>
       ))}
-      <M position={[-1.8, 3.2, -3.92]}>
-        <boxGeometry args={[4.6, 3.6, 0.06]} />
-        <meshStandardMaterial color="#5a4630" />
-      </M>
-      <mesh position={[-1.8, 3.2, -3.88]}>
-        <planeGeometry args={[4.4, 3.4]} />
-        <meshBasicMaterial color="#8fd3ff" transparent opacity={0.0} />
-      </mesh>
+      {[[0, 1.8, 4.6, 0.12], [0, -1.8, 4.6, 0.12], [-2.3, 0, 0.12, 3.6], [2.3, 0, 0.12, 3.6], [0, 0, 0.1, 3.6]].map(([dx, dy, w, h], i) => (
+        <M key={i} position={[-1.8 + (dx as number), 3.2 + (dy as number), -3.85]}>
+          <boxGeometry args={[w as number, h as number, 0.08]} />
+          <meshStandardMaterial color="#5a4630" />
+        </M>
+      ))}
       <Sign position={[2.6, 3.8, -3.9]} size={[2.2, 0.9]} text="HRD" sub="RUANG WAWANCARA" bg="#1d3557" fg="#f1faee" accent="#e63946" />
       <M position={[0.6, 0.78, -2.3]}>
         <boxGeometry args={[3.4, 0.12, 1.4]} />
