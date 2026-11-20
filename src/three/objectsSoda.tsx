@@ -198,7 +198,9 @@ export type ToonParams = {
   glasses?: boolean;
   tape?: boolean;
   small?: boolean;
-  kind?: "person" | "box"; // a cardboard-box character (data packet)
+  kind?: "person" | "box" | "cat"; // a cardboard-box character (data packet) or a cat
+  rim?: { color: string; side: -1 | 1 }; // cinematic rim light from the scene
+  tint?: string; // ambient colour wash (rgba)
   hatColor?: string;
   armL?: [number, number]; // [upper, fore-relative] radians from straight down, + = toward screen-right
   armR?: [number, number];
@@ -269,10 +271,128 @@ const limb = (g: CanvasRenderingContext2D, from: [number, number], a1: number, a
   return h;
 };
 
+const grade = (g: CanvasRenderingContext2D, p: ToonParams) => {
+  if (!p.rim && !p.tint) return;
+  g.save();
+  g.globalCompositeOperation = "source-atop";
+  if (p.tint) {
+    g.fillStyle = p.tint;
+    g.fillRect(0, 0, CW, CH);
+  }
+  if (p.rim) {
+    const left = p.rim.side < 0;
+    const gr = g.createLinearGradient(left ? CW * 0.2 : CW * 0.8, 0, left ? CW * 0.31 : CW * 0.69, 0);
+    gr.addColorStop(0, p.rim.color);
+    gr.addColorStop(1, "rgba(0,0,0,0)");
+    g.fillStyle = gr;
+    g.fillRect(0, 0, CW, CH);
+  }
+  g.restore();
+};
+
+const drawCat = (g: CanvasRenderingContext2D, p: ToonParams) => {
+  const sd = p.seed ?? 1;
+  const fur = p.shirt;
+  const tail = Math.sin((p.squash ?? 0) * 6) * 18;
+  // tail
+  g.strokeStyle = INK;
+  g.lineCap = "round";
+  g.lineWidth = 40;
+  g.beginPath();
+  g.moveTo(330, 640);
+  g.bezierCurveTo(470, 640 + tail, 470, 520, 410 + tail, 470);
+  g.stroke();
+  g.strokeStyle = fur;
+  g.lineWidth = 26;
+  g.beginPath();
+  g.moveTo(330, 640);
+  g.bezierCurveTo(470, 640 + tail, 470, 520, 410 + tail, 470);
+  g.stroke();
+  // body
+  inkEllipse(g, 256, 650, 132, 120, fur, 11, sd + 1);
+  // legs
+  [-1, 1].forEach((sg) => inkEllipse(g, 256 + sg * 70, 760, 34, 22, fur, 8, sd + 2 + sg));
+  // head
+  inkEllipse(g, 256, 470, 112, 98, fur, 11, sd + 3);
+  [-1, 1].forEach((sg) => {
+    g.fillStyle = fur;
+    g.strokeStyle = INK;
+    g.lineWidth = 10;
+    g.beginPath();
+    g.moveTo(256 + sg * 100, 430);
+    g.lineTo(256 + sg * 92, 330);
+    g.lineTo(256 + sg * 28, 392);
+    g.closePath();
+    g.fill();
+    g.stroke();
+    g.fillStyle = "#f6a6b8";
+    g.beginPath();
+    g.moveTo(256 + sg * 86, 410);
+    g.lineTo(256 + sg * 84, 356);
+    g.lineTo(256 + sg * 48, 392);
+    g.closePath();
+    g.fill();
+  });
+  // glowing eyes
+  [-1, 1].forEach((sg) => {
+    const grd = g.createRadialGradient(256 + sg * 44, 468, 4, 256 + sg * 44, 468, 54);
+    grd.addColorStop(0, "rgba(255,240,120,0.9)");
+    grd.addColorStop(1, "rgba(255,240,120,0)");
+    g.fillStyle = grd;
+    g.beginPath();
+    g.arc(256 + sg * 44, 468, 54, 0, 7);
+    g.fill();
+    inkEllipse(g, 256 + sg * 44, 468, 24, p.expr === "surprised" ? 30 : 22, "#ffe24a", 7, sd + 5 + sg);
+    g.fillStyle = INK;
+    g.beginPath();
+    g.ellipse(256 + sg * 44, 468, p.expr === "surprised" ? 9 : 5, p.expr === "surprised" ? 24 : 18, 0, 0, 7);
+    g.fill();
+  });
+  g.fillStyle = "#f08a9a";
+  g.beginPath();
+  g.moveTo(246, 506);
+  g.lineTo(266, 506);
+  g.lineTo(256, 520);
+  g.closePath();
+  g.fill();
+  g.strokeStyle = INK;
+  g.lineWidth = 6;
+  g.beginPath();
+  g.moveTo(256, 520);
+  g.quadraticCurveTo(236, 548, 214, 534);
+  g.moveTo(256, 520);
+  g.quadraticCurveTo(276, 548, 298, 534);
+  g.stroke();
+  g.lineWidth = 5;
+  [-1, 1].forEach((sg) =>
+    [0, 1].forEach((i) => {
+      g.beginPath();
+      g.moveTo(256 + sg * 50, 514 + i * 14);
+      g.lineTo(256 + sg * 130, 502 + i * 30);
+      g.stroke();
+    })
+  );
+  // stripes
+  g.strokeStyle = "rgba(0,0,0,0.25)";
+  g.lineWidth = 8;
+  [-1, 0, 1].forEach((i) => {
+    g.beginPath();
+    g.moveTo(256 + i * 40, 380);
+    g.lineTo(256 + i * 40, 410);
+    g.stroke();
+  });
+};
+
 export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   g.clearRect(0, 0, CW, CH);
   g.save();
   g.scale(2, 2);
+  if (p.kind === "cat") {
+    drawCat(g, p);
+    g.restore();
+    grade(g, p);
+    return;
+  }
   const sd = p.seed ?? 1;
   const lean = p.lean ?? 0;
   const sq = p.squash ?? 0;
@@ -981,6 +1101,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     }
   }
   g.restore();
+  grade(g, p);
 };
 
 export const ToonSprite: React.FC<{ position: Vec3; height?: number; yaw?: number; roll?: number; params: ToonParams; flip?: boolean; shadow?: boolean }> = ({ position, height = 2.1, yaw = 0, roll = 0, params, flip = false, shadow = true }) => {
