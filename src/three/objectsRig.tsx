@@ -59,6 +59,7 @@ export type Body = {
   belly?: number;
   mustache?: boolean;
   glasses?: boolean;
+  shades?: boolean;
   sarong?: boolean;
   slim?: number;
   armor?: "samurai" | "ashigaru" | "commander" | "none";
@@ -149,7 +150,7 @@ const Leg: React.FC<{ side: -1 | 1; pose?: LegPose; pants: string; shoes: string
   );
 };
 
-const Face: React.FC<{ r: number; expr: Expr3; look: [number, number]; blink: number; brow: string; mustache?: boolean; glasses?: boolean }> = ({ r, expr, look, blink, brow, mustache, glasses }) => {
+const Face: React.FC<{ r: number; expr: Expr3; look: [number, number]; blink: number; brow: string; mustache?: boolean; glasses?: boolean; shades?: boolean }> = ({ r, expr, look, blink, brow, mustache, glasses, shades }) => {
   const eyeR = (expr === "surprised" || expr === "scared" ? 0.056 : 0.046) * (r / 0.22);
   const lid = expr === "sleepy" ? 0.15 : expr === "smug" ? 0.55 : expr === "happy" || expr === "grin" ? 0.8 : 1;
   const ey = Math.max(0.1, Math.min(lid, blink));
@@ -172,7 +173,13 @@ const Face: React.FC<{ r: number; expr: Expr3; look: [number, number]; blink: nu
             <boxGeometry args={[0.085 * k, 0.017 * k, 0.012]} />
             <meshBasicMaterial color={brow} />
           </mesh>
-          {glasses && (
+          {shades && (
+            <mesh position={[0, 0, 0.035]} scale={[1, 1, 0.3]}>
+              <sphereGeometry args={[eyeR * 1.22, 16, 12]} />
+              <meshBasicMaterial color="#0d0d12" />
+            </mesh>
+          )}
+          {glasses && !shades && (
             <mesh position={[0, 0, 0.03]}>
               <torusGeometry args={[eyeR * 1.35, 0.007, 6, 18]} />
               <meshBasicMaterial color={INK} />
@@ -300,7 +307,7 @@ export const Rig3D: React.FC<{
             <P key={sd} geo={() => <sphereGeometry args={[0.04 * hs, 8, 8]} />} color={skin} pos={[sd * r * 0.95, -0.01, 0]} scale={[0.5, 1, 0.8]} hull={0.1} />
           ))}
           <P geo={() => <sphereGeometry args={[0.03 * hs, 8, 8]} />} color={skin} pos={[0, -0.025, r * 0.96]} hull={0.1} />
-          <Face r={r} expr={expr} look={look} blink={blink} brow={body.hairStyle === "bald" ? "#3a2a20" : hairColor} mustache={body.mustache} glasses={body.glasses} />
+          <Face r={r} expr={expr} look={look} blink={blink} brow={body.hairStyle === "bald" ? "#3a2a20" : hairColor} mustache={body.mustache} glasses={body.glasses} shades={body.shades} />
           {armored && body.armor !== "ashigaru" && (
             <group>
               <P geo={() => <sphereGeometry args={[r * 1.18, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.55]} />} color="#14131a" pos={[0, 0.02, -0.01]} hull={0.04} />
@@ -330,9 +337,21 @@ export const Rig3D: React.FC<{
           {!armored && body.hairStyle === "short" && <P geo={() => <sphereGeometry args={[r * 1.05, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.52]} />} color={hairColor} pos={[0, 0.012, -0.005]} hull={0.04} />}
           {!armored && body.hairStyle === "quiff" && (
             <>
-              <P geo={() => <sphereGeometry args={[r * 1.04, 18, 12, 0, Math.PI * 2, 0, Math.PI * 0.5]} />} color={hairColor} pos={[0, 0.006, -0.03]} rot={[-0.5, 0, 0]} hull={0.04} />
-              <P geo={() => <sphereGeometry args={[r * 0.62, 12, 10]} />} color={hairColor} pos={[0, r * 0.98, r * 0.28]} scale={[1.25, 0.62, 1.0]} rot={[-0.35, 0, 0]} hull={0.05} />
-              <P geo={() => <sphereGeometry args={[r * 0.32, 10, 8]} />} color={hairColor} pos={[r * 0.1, r * 1.12, r * 0.52]} scale={[1.3, 0.7, 1]} rot={[-0.6, 0, 0.2]} hull={0.06} />
+              {/* side/back base, hairline high on forehead */}
+              <P geo={() => <sphereGeometry args={[r * 1.04, 18, 12, 0, Math.PI * 2, 0, Math.PI * 0.5]} />} color={hairColor} pos={[0, 0.0, -0.05]} rot={[-0.62, 0, 0]} hull={0.04} />
+              {/* big pompadour wave: rises from front hairline and sweeps back */}
+              {[
+                [0.0, 0.98, 0.5, 0.52, 0.5, -0.5],
+                [0.0, 1.22, 0.3, 0.6, 0.55, -0.3],
+                [0.0, 1.34, 0.0, 0.62, 0.55, -0.05],
+                [0.0, 1.32, -0.34, 0.58, 0.5, 0.2],
+                [0.0, 1.2, -0.66, 0.5, 0.42, 0.45],
+                [0.0, 1.1, -0.92, 0.36, 0.32, 0.9],
+              ].map(([x, y, z, rx, ry, tilt], k) => (
+                <P key={k} geo={() => <sphereGeometry args={[r * 0.5, 12, 10]} />} color={hairColor} pos={[x, r * y - 0.03, r * z]} scale={[1.38 + (k === 4 ? 0.1 : 0), ry * 1.15, rx * 1.35]} rot={[tilt, 0, 0]} hull={0.05} />
+              ))}
+              {/* flick at the back */}
+              <P geo={() => <coneGeometry args={[r * 0.3, r * 0.7, 6]} />} color={hairColor} pos={[0, r * 1.12, -r * 1.12]} rot={[-1.9, 0, 0]} hull={0.05} />
             </>
           )}
           {body.hairStyle === "messy" &&
