@@ -61,6 +61,9 @@ export type Body = {
   glasses?: boolean;
   sarong?: boolean;
   slim?: number;
+  armor?: "samurai" | "ashigaru" | "commander" | "none";
+  banner?: string; // sashimono cloth colour
+  accent?: string; // armour lacing colour
 };
 
 const L_UP = 0.3;
@@ -89,7 +92,7 @@ export const ikAim = (l1: number, l2: number, shoulder: THREE.Vector3, target: T
 
 const Hand: React.FC<{ color: string }> = ({ color }) => <P geo={() => <sphereGeometry args={[0.065, 10, 8]} />} color={color} pos={[0, -0.04, 0]} hull={0.08} />;
 
-const Arm: React.FC<{ side: -1 | 1; pose?: ArmPose; shirt: string; skin: string; slim: number }> = ({ side, pose = {}, shirt, skin, slim }) => {
+const Arm: React.FC<{ side: -1 | 1; pose?: ArmPose; shirt: string; skin: string; slim: number; sode?: boolean; accent?: string }> = ({ side, pose = {}, shirt, skin, slim, sode, accent = "#9c1c1c" }) => {
   const sh: Vec3 = [side * 0.27 * slim, 0.52, 0];
   let q1: [number, number, number, number] | undefined;
   let q2: [number, number, number, number] | undefined;
@@ -104,7 +107,18 @@ const Arm: React.FC<{ side: -1 | 1; pose?: ArmPose; shirt: string; skin: string;
   return (
     <group position={sh} {...(q1 ? { quaternion: q1 } : { rotation: [-swing, 0, out] })}>
       <P geo={() => <sphereGeometry args={[0.075, 10, 8]} />} color={shirt} hull={0.07} />
-      <P geo={() => <capsuleGeometry args={[0.055, L_UP - 0.11, 4, 8]} />} color={shirt} pos={[0, -L_UP / 2, 0]} />
+      {sode && (
+        <group rotation={[0, 0, side * 0.25]}>
+          <P geo={() => <boxGeometry args={[0.2, 0.24, 0.26]} />} color="#1a1822" pos={[side * 0.03, -0.06, 0]} />
+          {[-0.1, 0, 0.1].map((y) => (
+            <mesh key={y} position={[side * 0.03, -0.06 + y, 0.135]}>
+              <boxGeometry args={[0.2, 0.018, 0.01]} />
+              <meshBasicMaterial color={accent} />
+            </mesh>
+          ))}
+        </group>
+      )}
+      <P geo={() => <capsuleGeometry args={[0.055, L_UP - 0.11, 4, 8]} />} color={sode ? "#1a1822" : shirt} pos={[0, -L_UP / 2, 0]} />
       <group position={[0, -L_UP, 0]} {...(q2 ? { quaternion: q2 } : { rotation: [-elbow, 0, 0] })}>
         <P geo={() => <sphereGeometry args={[0.058, 8, 8]} />} color={skin} hull={0.07} />
         <P geo={() => <capsuleGeometry args={[0.048, L_LO - 0.1, 4, 8]} />} color={skin} pos={[0, -L_LO / 2, 0]} />
@@ -209,7 +223,8 @@ export const Rig3D: React.FC<{
   look?: [number, number];
   seed?: number;
   shadow?: boolean;
-}> = ({ position, rotationY = 0, scale = 1, t, body, pose = {}, expr = "neutral", look = [0, 0], seed = 1, shadow = true }) => {
+  children?: React.ReactNode;
+}> = ({ position, rotationY = 0, scale = 1, t, body, pose = {}, expr = "neutral", look = [0, 0], seed = 1, shadow = true, children }) => {
   const skin = body.skin ?? "#f1c9a0";
   const slim = body.slim ?? 1;
   const hs = body.headScale ?? 1;
@@ -225,6 +240,8 @@ export const Rig3D: React.FC<{
   const breathe = 1 + Math.sin(t * 2.4 + seed) * 0.012;
   const hd = pose.head ?? [0, 0, 0];
   const hairColor = body.hair ?? "#1c1410";
+  const armored = !!body.armor && body.armor !== "none";
+  const accent = body.accent ?? "#9c1c1c";
   return (
     <group position={position} rotation={[0, rotationY, 0]} scale={scale * H}>
       <group position={[0, hipY, 0]} rotation={[pose.lean ?? 0, pose.twist ?? 0, pose.sway ?? 0]}>
@@ -234,6 +251,46 @@ export const Rig3D: React.FC<{
           <P geo={() => <capsuleGeometry args={[0.2, 0.3, 6, 12]} />} color={body.shirt} pos={[0, 0.3, 0]} scale={[slim * (1 + belly * 0.1), 1, 0.78 + belly * 0.25]} />
           {belly > 0 && <P geo={() => <sphereGeometry args={[0.24, 12, 10]} />} color={body.shirt} pos={[0, 0.16, 0.1 + belly * 0.07]} scale={[1, 0.95, 0.6 + belly * 0.4]} />}
         </group>
+        {armored && (
+          <group>
+            <P geo={() => <boxGeometry args={[0.44 * slim, 0.46, 0.1]} />} color={body.armor === "ashigaru" ? "#3a3646" : "#1a1822"} pos={[0, 0.3, 0.13 + belly * 0.05]} />
+            {[0.14, 0.26, 0.38, 0.5].map((y) => (
+              <mesh key={y} position={[0, y, 0.185 + belly * 0.05]}>
+                <boxGeometry args={[0.44 * slim, 0.02, 0.01]} />
+                <meshBasicMaterial color={accent} />
+              </mesh>
+            ))}
+            <P geo={() => <boxGeometry args={[0.52 * slim, 0.26, 0.4]} />} color="#14131a" pos={[0, -0.2, 0.0]} />
+            {[-0.2, -0.1, 0.0, 0.1].map((y) => (
+              <mesh key={y} position={[0, -0.2 + y * 0.6, 0.205]}>
+                <boxGeometry args={[0.5 * slim, 0.012, 0.01]} />
+                <meshBasicMaterial color={accent} />
+              </mesh>
+            ))}
+            {body.armor !== "ashigaru" && (
+              <group position={[0, 0.75, -0.22]} rotation={[0.05 * Math.sin(t * 2 + seed), 0, 0.04 * Math.sin(t * 1.6 + seed)]}>
+                <mesh position={[0, 0.45, 0]}>
+                  <cylinderGeometry args={[0.012, 0.012, 1.5, 5]} />
+                  <meshBasicMaterial color="#111" />
+                </mesh>
+                <mesh position={[0.17, 0.85 + Math.sin(t * 3 + seed) * 0.01, 0]} rotation={[0, Math.sin(t * 2.2 + seed) * 0.15, 0]}>
+                  <planeGeometry args={[0.34, 0.78]} />
+                  <meshStandardMaterial color={body.banner ?? "#e9e2d0"} side={THREE.DoubleSide} />
+                </mesh>
+                <mesh position={[0.17, 1.0, 0.004]}>
+                  <circleGeometry args={[0.09, 16]} />
+                  <meshBasicMaterial color="#b3141b" />
+                </mesh>
+              </group>
+            )}
+            {body.armor === "commander" && (
+              <mesh position={[0, 0.3, -0.2]} rotation={[0.12 + 0.05 * Math.sin(t * 2.4), 0, 0]}>
+                <planeGeometry args={[0.7, 1.05]} />
+                <meshStandardMaterial color="#8a1018" side={THREE.DoubleSide} />
+              </mesh>
+            )}
+          </group>
+        )}
         {body.sarong && <P geo={() => <cylinderGeometry args={[0.24 * slim, 0.3 * slim, 0.55, 14]} />} color={body.pants} pos={[0, -0.18, 0]} />}
         <P geo={() => <cylinderGeometry args={[0.055, 0.065, 0.1, 8]} />} color={skin} pos={[0, 0.64, 0]} />
         {/* head */}
@@ -244,8 +301,33 @@ export const Rig3D: React.FC<{
           ))}
           <P geo={() => <sphereGeometry args={[0.03 * hs, 8, 8]} />} color={skin} pos={[0, -0.025, r * 0.96]} hull={0.1} />
           <Face r={r} expr={expr} look={look} blink={blink} brow={body.hairStyle === "bald" ? "#3a2a20" : hairColor} mustache={body.mustache} glasses={body.glasses} />
+          {armored && body.armor !== "ashigaru" && (
+            <group>
+              <P geo={() => <sphereGeometry args={[r * 1.18, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.55]} />} color="#14131a" pos={[0, 0.02, -0.01]} hull={0.04} />
+              <P geo={() => <cylinderGeometry args={[r * 1.28, r * 1.7, 0.1, 12]} />} color="#14131a" pos={[0, -0.04, -0.06]} />
+              <P geo={() => <boxGeometry args={[r * 1.5, 0.12, 0.14]} />} color="#2a2430" pos={[0, -r * 0.4, r * 0.72]} />
+              {[-1, 1].map((sd) => (
+                <mesh key={sd} position={[sd * 0.1, r * 1.35, r * 0.7]} rotation={[0, 0, -sd * 0.45]}>
+                  <boxGeometry args={[0.035, 0.34, 0.02]} />
+                  <meshStandardMaterial color="#d8a93a" metalness={0.9} roughness={0.25} emissive="#5a3d00" />
+                </mesh>
+              ))}
+              {body.armor === "commander" && (
+                <mesh position={[0, r * 1.45, r * 0.74]} rotation={[0, 0, Math.PI]}>
+                  <torusGeometry args={[0.2, 0.022, 6, 18, Math.PI]} />
+                  <meshStandardMaterial color="#d8a93a" metalness={0.9} roughness={0.25} emissive="#5a3d00" />
+                </mesh>
+              )}
+            </group>
+          )}
+          {armored && body.armor === "ashigaru" && (
+            <group>
+              <P geo={() => <coneGeometry args={[r * 2.0, 0.2, 14]} />} color="#2b2a33" pos={[0, r * 0.95, 0]} hull={0.04} />
+              <P geo={() => <boxGeometry args={[r * 1.4, 0.1, 0.12]} />} color="#2a2430" pos={[0, -r * 0.42, r * 0.7]} />
+            </group>
+          )}
           {/* hair */}
-          {body.hairStyle === "short" && <P geo={() => <sphereGeometry args={[r * 1.05, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.52]} />} color={hairColor} pos={[0, 0.012, -0.005]} hull={0.04} />}
+          {!armored && body.hairStyle === "short" && <P geo={() => <sphereGeometry args={[r * 1.05, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.52]} />} color={hairColor} pos={[0, 0.012, -0.005]} hull={0.04} />}
           {body.hairStyle === "messy" &&
             [0, 1, 2, 3, 4, 5, 6].map((i) => (
               <P key={i} geo={() => <coneGeometry args={[0.04 * hs, 0.14 * hs, 5]} />} color={hairColor} pos={[Math.cos(i * 0.9) * r * 0.55, r * 0.88 + (i % 2) * 0.02, Math.sin(i * 0.9) * r * 0.4 - 0.02]} rot={[Math.sin(i) * 0.5, 0, -Math.cos(i * 0.9) * 0.6]} hull={0.08} />
@@ -259,8 +341,9 @@ export const Rig3D: React.FC<{
           {body.hairStyle === "bald" &&
             [-1, 1].map((sd) => <P key={sd} geo={() => <sphereGeometry args={[0.05 * hs, 8, 8]} />} color={hairColor} pos={[sd * r * 0.93, 0.03, -0.02]} scale={[0.6, 1, 0.9]} hull={0.1} />)}
         </group>
-        <Arm side={-1} pose={pose.armL} shirt={body.shirt} skin={skin} slim={slim} />
-        <Arm side={1} pose={pose.armR} shirt={body.shirt} skin={skin} slim={slim} />
+        {children}
+        <Arm side={-1} pose={pose.armL} shirt={body.shirt} skin={skin} slim={slim} sode={armored && body.armor !== "ashigaru"} accent={body.accent} />
+        <Arm side={1} pose={pose.armR} shirt={body.shirt} skin={skin} slim={slim} sode={armored && body.armor !== "ashigaru"} accent={body.accent} />
         <group position={[0, -0.02, 0]}>
           <Leg side={-1} pose={lw} pants={body.pants} shoes={body.shoes ?? "#2a211c"} sarong={body.sarong} />
           <Leg side={1} pose={rw} pants={body.pants} shoes={body.shoes ?? "#2a211c"} sarong={body.sarong} />
