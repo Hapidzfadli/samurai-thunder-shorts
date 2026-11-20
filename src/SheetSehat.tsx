@@ -5,7 +5,7 @@ import { CameraRig } from "./three/objects";
 import { Body, Rig3D, idle3 } from "./three/objectsRig";
 import { Bacteria } from "./three/objectsLift";
 
-const ASTI: Body = { shirt: "#f6a6c0", pants: "#f6a6c0", hair: "#2a1a10", hairStyle: "bun", height: 0.93, slim: 0.95, belly: 0.25, sarong: true };
+const ASTI: Body = { shirt: "#f6a6c0", pants: "#f6a6c0", hair: "#8a4a86", hairStyle: "hijab", height: 0.93, slim: 0.95, belly: 0.25, sarong: true };
 const HAPID: Body = { shirt: "#3b82c4", pants: "#2b3350", hair: "#2a1a10", hairStyle: "quiff", height: 1.02, shades: true };
 const BIDAN: Body = { shirt: "#f4f6f8", pants: "#f4f6f8", hair: "#2a1a10", hairStyle: "bun", height: 0.95, slim: 0.95, sarong: true, shoes: "#e5e7eb" };
 

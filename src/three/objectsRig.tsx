@@ -53,7 +53,7 @@ export type Body = {
   pants: string;
   shoes?: string;
   hair?: string;
-  hairStyle?: "short" | "bald" | "bun" | "messy" | "quiff" | "none";
+  hairStyle?: "short" | "bald" | "bun" | "messy" | "quiff" | "hijab" | "none";
   height?: number; // overall scale
   headScale?: number;
   belly?: number;
@@ -352,6 +352,16 @@ export const Rig3D: React.FC<{
               ))}
               {/* flick at the back */}
               <P geo={() => <coneGeometry args={[r * 0.3, r * 0.7, 6]} />} color={hairColor} pos={[0, r * 1.12, -r * 1.12]} rot={[-1.9, 0, 0]} hull={0.05} />
+            </>
+          )}
+          {!armored && body.hairStyle === "hijab" && (
+            <>
+              {/* crown covering forehead band */}
+              <P geo={() => <sphereGeometry args={[r * 1.13, 20, 12, 0, Math.PI * 2, 0, Math.PI * 0.37]} />} color={hairColor} pos={[0, 0.0, -0.015]} hull={0.04} />
+              {/* sides + back, front wedge left open for the face */}
+              <P geo={() => <sphereGeometry args={[r * 1.13, 20, 14, Math.PI / 2 + 0.95, Math.PI * 2 - 1.9, 0, Math.PI * 0.78]} />} color={hairColor} pos={[0, 0.0, -0.015]} hull={0.04} />
+              {/* drape over neck and shoulders */}
+              <P geo={() => <cylinderGeometry args={[r * 0.98, r * 1.8, r * 1.1, 20, 1, true]} />} color={hairColor} pos={[0, -r * 1.58, -0.02]} hull={0.04} />
             </>
           )}
           {body.hairStyle === "messy" &&
