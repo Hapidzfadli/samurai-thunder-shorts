@@ -13,10 +13,19 @@ import { Level30, TOTAL_FRAMES_L30 } from "./Level30";
 import { Soda, TOTAL_FRAMES_SODA } from "./Soda";
 import { Paket, TOTAL_FRAMES_PAKET } from "./Paket";
 import { Kos, TOTAL_FRAMES_KOS } from "./Kos";
+import { Lift, TOTAL_FRAMES_LIFT } from "./Lift";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Lift"
+        component={Lift}
+        durationInFrames={TOTAL_FRAMES_LIFT}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="Kos"
         component={Kos}
