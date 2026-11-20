@@ -1,4 +1,5 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
+import { useCurrentFrame } from "remotion";
 import { random } from "remotion";
 import * as THREE from "three";
 import { Vec3 } from "./objects";
@@ -983,16 +984,29 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
 };
 
 export const ToonSprite: React.FC<{ position: Vec3; height?: number; yaw?: number; roll?: number; params: ToonParams; flip?: boolean; shadow?: boolean }> = ({ position, height = 2.1, yaw = 0, roll = 0, params, flip = false, shadow = true }) => {
-  const { cv, tex } = useMemo(() => {
+  // The card is drawn on a 2D canvas, copied to raw pixels and uploaded as a DataTexture. Uploading straight from
+  // the canvas could race with the screenshot in headless video renders and leave the card blank.
+  const frameNo = useCurrentFrame();
+  const { cv, tex, buf } = useMemo(() => {
     const cv = document.createElement("canvas");
     cv.width = CW;
     cv.height = CH;
-    const tex = new THREE.CanvasTexture(cv);
+    const buf = new Uint8Array(CW * CH * 4);
+    const tex = new THREE.DataTexture(buf, CW, CH, THREE.RGBAFormat, THREE.UnsignedByteType);
     tex.colorSpace = THREE.SRGBColorSpace;
+    tex.flipY = true;
+    tex.generateMipmaps = true;
+    tex.minFilter = THREE.LinearMipmapLinearFilter;
+    tex.magFilter = THREE.LinearFilter;
     tex.anisotropy = 8;
-    return { cv, tex };
-  }, []);
-  drawToon(cv.getContext("2d")!, params);
+    return { cv, tex, buf };
+    // a fresh card per frame: reusing one texture across frames left it blank in headless video renders
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [frameNo]);
+  useEffect(() => () => tex.dispose(), [tex]);
+  const ctx = cv.getContext("2d", { willReadFrequently: true })!;
+  drawToon(ctx, params);
+  buf.set(ctx.getImageData(0, 0, CW, CH).data);
   tex.needsUpdate = true;
   const w = (height * CW) / CH;
   return (
