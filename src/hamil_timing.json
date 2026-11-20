@@ -1,0 +1,231 @@
+{
+ "fps": 30,
+ "total_frames": 3423,
+ "scenes": {
+  "hook": 270,
+  "mandi": 329,
+  "klinik": 396,
+  "tubuh": 334,
+  "hidung": 330,
+  "grafik": 330,
+  "tips": 330,
+  "siaga": 330,
+  "bahaya": 420,
+  "akhir": 354
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Pagi hari. Pak Hapid dengan bangga memasak nasi goreng spesial, untuk istrinya, Bu Asti.",
+   "from": 4,
+   "to": 131
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Sayang, sarapan sudah siap!",
+   "from": 136,
+   "to": 180
+  },
+  "hook_3": {
+   "scene": "hook",
+   "text": "Tapi begitu aromanya tercium, Bu Asti langsung lari!",
+   "from": 183,
+   "to": 261
+  },
+  "mandi_1": {
+   "scene": "mandi",
+   "text": "Di kamar mandi, Bu Asti mual dan muntah. Pak Hapid panik.",
+   "from": 4,
+   "to": 87
+  },
+  "mandi_2": {
+   "scene": "mandi",
+   "text": "Astaga! Apa nasi gorengku beracun?!",
+   "from": 91,
+   "to": 144
+  },
+  "mandi_3": {
+   "scene": "mandi",
+   "text": "Tenang, Pak Hapid. Bukan salah nasi gorengnya. Ini sangat umum. Sekitar tujuh dari sepuluh ibu hamil mengalaminya.",
+   "from": 149,
+   "to": 320
+  },
+  "klinik_1": {
+   "scene": "klinik",
+   "text": "Di klinik, Bu Bidan Ratih menjelaskan.",
+   "from": 4,
+   "to": 64
+  },
+  "klinik_2": {
+   "scene": "klinik",
+   "text": "Ini sering disebut morning sickness. Padahal bisa muncul kapan saja. Pagi, siang, bahkan malam.",
+   "from": 68,
+   "to": 231
+  },
+  "klinik_3": {
+   "scene": "klinik",
+   "text": "Jadi, bukan salah nasi goreng, Bu Bidan?",
+   "from": 234,
+   "to": 288
+  },
+  "klinik_4": {
+   "scene": "klinik",
+   "text": "Bukan, Pak. Mari kita lihat ke dalam tubuh Bu Asti.",
+   "from": 292,
+   "to": 387
+  },
+  "tubuh_1": {
+   "scene": "tubuh",
+   "text": "Di awal kehamilan, kadar hormon naik pesat. Antara lain hormon hCG, dan estrogen.",
+   "from": 4,
+   "to": 142
+  },
+  "tubuh_2": {
+   "scene": "tubuh",
+   "text": "Surat! Surat untuk semua organ! Kamu hamil!",
+   "from": 145,
+   "to": 204
+  },
+  "tubuh_3": {
+   "scene": "tubuh",
+   "text": "Lonjakan hormon ini dikaitkan dengan rasa mual, tapi bukan satu-satunya penyebab.",
+   "from": 209,
+   "to": 325
+  },
+  "hidung_1": {
+   "scene": "hidung",
+   "text": "Hidung juga jadi jauh lebih peka terhadap bau. Ini masih dugaan, penyebab pastinya belum sepenuhnya diketahui.",
+   "from": 4,
+   "to": 154
+  },
+  "hidung_2": {
+   "scene": "hidung",
+   "text": "Awas! Bau nasi goreng! Alarm! Alarm!",
+   "from": 157,
+   "to": 205
+  },
+  "hidung_3": {
+   "scene": "hidung",
+   "text": "Akibatnya, aroma yang biasanya enak, bisa terasa menyebalkan.",
+   "from": 210,
+   "to": 319
+  },
+  "grafik_1": {
+   "scene": "grafik",
+   "text": "Kabar baiknya, ada masanya. Biasanya mulai sekitar minggu kelima, memuncak sekitar minggu kesembilan, lalu membaik sekitar minggu keenam belas sampai kedelapan belas.",
+   "from": 4,
+   "to": 207
+  },
+  "grafik_2": {
+   "scene": "grafik",
+   "text": "Jadi, ini nggak selamanya, ya?",
+   "from": 212,
+   "to": 267
+  },
+  "tips_1": {
+   "scene": "tips",
+   "text": "Ada beberapa tips. Taruh biskuit kering di samping kasur, makan sedikit tapi sering, dan minum sedikit demi sedikit.",
+   "from": 4,
+   "to": 190
+  },
+  "tips_2": {
+   "scene": "tips",
+   "text": "Siap, Bu Bidan! Serahkan padaku!",
+   "from": 195,
+   "to": 239
+  },
+  "siaga_1": {
+   "scene": "siaga",
+   "text": "Sejak itu, Pak Hapid jadi suami siaga.",
+   "from": 4,
+   "to": 77
+  },
+  "siaga_2": {
+   "scene": "siaga",
+   "text": "Biskuit sudah! Jendela dibuka! Penanak nasi, aku asingkan!",
+   "from": 80,
+   "to": 153
+  },
+  "siaga_3": {
+   "scene": "siaga",
+   "text": "Sayang, biskuitnya terlalu banyak.",
+   "from": 158,
+   "to": 210
+  },
+  "bahaya_1": {
+   "scene": "bahaya",
+   "text": "Tapi tetap waspada. Segera ke dokter atau bidan, kalau muntah terus sampai tidak bisa makan atau minum, badan lemas, air seni sangat pekat atau jarang, atau berat badan turun.",
+   "from": 4,
+   "to": 268
+  },
+  "bahaya_2": {
+   "scene": "bahaya",
+   "text": "Itu bisa jadi hiperemesis gravidarum, dan perlu penanganan medis.",
+   "from": 273,
+   "to": 390
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Beberapa minggu kemudian, Bu Asti sudah bisa menikmati nasi goreng lagi.",
+   "from": 6,
+   "to": 115
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Sayang, tambah kerupuknya!",
+   "from": 122,
+   "to": 173
+  },
+  "akhir_3": {
+   "scene": "akhir",
+   "text": "Ingat, ini konten edukasi, bukan pengganti konsultasi dengan bidan atau dokter.",
+   "from": 181,
+   "to": 309
+  }
+ },
+ "events": {
+  "hook.cook": 30,
+  "hook.call": 137,
+  "hook.smell": 203,
+  "hook.run": 230,
+  "mandi.retch": 29,
+  "mandi.panic": 91,
+  "mandi.stat": 243,
+  "klinik.in": 4,
+  "klinik.morning": 101,
+  "klinik.night": 198,
+  "klinik.ask": 235,
+  "klinik.zoom": 344,
+  "tubuh.in": 4,
+  "tubuh.mail": 146,
+  "tubuh.shout": 163,
+  "tubuh.cause": 210,
+  "hidung.nose": 19,
+  "hidung.guess": 86,
+  "hidung.alarm": 158,
+  "hidung.bad": 210,
+  "grafik.start": 4,
+  "grafik.peak": 105,
+  "grafik.end": 170,
+  "grafik.ask": 212,
+  "tips.biscuit": 42,
+  "tips.small": 97,
+  "tips.drink": 149,
+  "tips.ok": 196,
+  "siaga.start": 4,
+  "siaga.run": 81,
+  "siaga.pile": 110,
+  "siaga.fall": 142,
+  "siaga.asti": 159,
+  "bahaya.sign": 4,
+  "bahaya.i1": 97,
+  "bahaya.i2": 149,
+  "bahaya.i3": 202,
+  "bahaya.i4": 241,
+  "bahaya.name": 273,
+  "akhir.eat": 6,
+  "akhir.ask": 122,
+  "akhir.card": 181
+ },
+ "stepF": {}
+}
