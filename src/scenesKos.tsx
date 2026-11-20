@@ -265,8 +265,8 @@ export const SceneKosHook: React.FC = () => {
           color={RENDI}
           holdR={
             phoneUp
-              ? () => (
-                  <g transform="translate(24 -62) rotate(8) scale(1.7)">
+              ? ({ ang }) => (
+                  <g transform={`translate(24 -62) rotate(${ang + 6}) scale(1.7)`}>
                     <Phone screen="#cfe9ff" />
                     <text x={0} y={-80} textAnchor="middle" fontFamily="Anton, Impact, sans-serif" fontSize={13} fill={INK}>
                       SALDO
