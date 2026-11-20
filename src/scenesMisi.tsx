@@ -123,7 +123,7 @@ const Grade: React.FC<{ bloom?: [number, number]; warm?: number; flash?: number 
 /* ------------------------------------------------------------------ */
 /* Characters                                                            */
 /* ------------------------------------------------------------------ */
-const BIMA: Body = { shirt: "#3b82c4", pants: "#1e3a8a", hair: "#2a1a10", hairStyle: "messy", height: 0.74, headScale: 1.32, shoes: "#e5e7eb" };
+const BIMA: Body = { shirt: "#3b82c4", pants: "#1e3a8a", hair: "#2a1a10", hairStyle: "messy", height: 0.82, headScale: 1.3, shoes: "#e5e7eb" };
 const AYAH: Body = { shirt: "#e5e7eb", pants: "#7c2d12", hair: "#3a2a1a", hairStyle: "bald", height: 1.0, belly: 0.9, mustache: true, sarong: true };
 const IBU: Body = { shirt: "#8b5cf6", pants: "#6d3fd1", hair: "#2a1a10", hairStyle: "bun", height: 0.93, slim: 0.95, sarong: true };
 
@@ -169,12 +169,12 @@ const Sweat: React.FC<{ position: Vec3; t: number; amount?: number }> = ({ posit
 
 const AyahAsleep: React.FC<{ t: number; snore: number; cam?: Cam; lookAt?: number; offer?: number; eye?: number }> = ({ t, snore, lookAt = 0, offer = 0, eye = 0 }) => {
   const breath = Math.sin(t * 2.6) * 0.5 + 0.5;
-  const handLocal: Vec3 = lerpV(HAND_REST, [0.2, 0.0, 0.95], offer);
+  const handLocal: Vec3 = lerpV(HAND_REST, [0.2, 0.1, 0.55], offer);
   const pose: Pose3 = {
     ...SIT,
     bob: 0.012 * breath * snore,
     lean: -0.1 - 0.025 * breath * snore + lookAt * 0.08,
-    head: [-0.4 * (1 - lookAt) + 0.0, lookAt * 0.85, 0.12 * (1 - lookAt)],
+    head: [-0.4 * (1 - lookAt) + 0.0, lookAt * 0.1, 0.12 * (1 - lookAt)],
     armR: { ik: { target: handLocal, pole: [0.5, -0.4, -0.1] } },
     armL: { swing: 0.2, out: 0.2, elbow: 0.5 },
   };
@@ -192,8 +192,8 @@ export const SceneMisiHook: React.FC = () => {
   const title = EV("hook.title");
   const target = EV("hook.target");
   const cam = shotCam(f, [
-    { to: target, p0: [3.6, 1.8, 6.4], l0: [0.4, 0.9, -0.4], p1: [3.0, 1.6, 5.4], l1: [0.8, 0.9, -0.3], fov: 44 },
-    { to: 9999, p0: [2.5, 1.2, 3.0], l0: [1.2, 0.7, -0.2], p1: [2.1, 1.05, 2.5], l1: [1.15, 0.7, -0.25], fov: 36 },
+    { to: target, p0: [-0.8, 1.75, 7.6], l0: [0.3, 0.9, -0.4], p1: [-0.2, 1.6, 6.4], l1: [0.6, 0.9, -0.3], fov: 46 },
+    { to: 9999, p0: [-0.6, 1.25, 3.9], l0: [1.2, 0.8, -0.2], p1: [-0.2, 1.15, 3.3], l1: [1.2, 0.78, -0.25], fov: 38 },
   ]);
   const peek = smooth3(cl(f / 24));
   const bimaPose: Pose3 = { ...idle3(t, 1), bob: -0.22 * peek, lean: 0.25 * peek, head: [0.15, -0.5, 0.18], legL: { swing: 0.5, knee: 0.9 }, legR: { swing: 0.4, knee: 1.0 }, armL: { swing: 0.1, out: 0.3, elbow: 0.4 }, armR: { swing: 0.3, out: 0.15, elbow: 0.7 } };
@@ -204,8 +204,8 @@ export const SceneMisiHook: React.FC = () => {
         <LivingRoom3D t={t} />
         <AyahAsleep t={t} snore={1} />
         <Remote position={REMOTE_WORLD} rotation={[0, 0.4, 0]} glow={0.6 + 0.4 * Math.sin(t * 3)} />
-        <Rig3D position={[3.55, 0, 2.55]} rotationY={Math.PI + 0.5} t={t} body={BIMA} pose={bimaPose} expr="worried" look={[-0.6, 0]} seed={5} />
-        <Cat3D position={[2.9, 0.5, 1.9]} rotationY={0.3} t={t} alert={0.2} />
+        <Rig3D position={[3.1, 0, 1.55]} rotationY={-Math.PI / 2 - 0.25} t={t} body={BIMA} pose={bimaPose} expr="worried" look={[-0.6, 0]} seed={5} />
+        <Cat3D position={[2.05, 0.5, 1.9]} rotationY={Math.PI / 2} t={t} alert={0.2} />
         <Dust t={t} />
       </Stage>
       <Grade bloom={[16, 52]} />
@@ -281,32 +281,30 @@ export const SceneMisiKucing: React.FC = () => {
   const talk = EV("kucing.talk");
   const hiss = EV("kucing.hiss");
   const cam = shotCam(f, [
-    { to: talk, p0: [2.6, 0.95, 4.8], l0: [2.9, 0.75, 1.9], p1: [2.5, 0.9, 4.2], l1: [2.9, 0.75, 1.9], fov: 36 },
-    { to: 9999, p0: [1.2, 1.05, 4.6], l0: [2.55, 0.85, 2.3], p1: [1.5, 1.0, 4.2], l1: [2.6, 0.85, 2.3], fov: 38 },
+    { to: talk, p0: [2.5, 1.0, 8.6], l0: [2.7, 0.85, 1.9], p1: [2.6, 0.98, 8.0], l1: [2.75, 0.85, 1.9], fov: 34 },
+    { to: 9999, p0: [2.8, 1.05, 8.4], l0: [2.75, 0.85, 1.9], p1: [2.8, 1.0, 7.8], l1: [2.75, 0.85, 1.9], fov: 34 },
   ]);
   const walkK = cl(f / (talk - 6));
   const ph = walkK * 3.0;
-  const bx = lerpN(1.3, 2.35, walkK);
-  const bz = lerpN(0.9, 2.9, walkK);
+  const bx = lerpN(4.3, 3.0, walkK);
+  const bz = 1.9;
   const walking = f < talk - 6;
   const begging = f >= talk;
   const alert = cl((f - guard) / 10);
   const hissK = f >= hiss ? cl((f - hiss) / 6) : 0;
   const bimaPose: Pose3 = walking
-    ? { ...walk3(ph, "tiptoe"), head: [0.0, 0.4, 0] }
-    : begging
-    ? { ...idle3(t, 3), lean: 0.12 - 0.3 * hissK, bob: -0.12 + 0.1 * hissK, legL: { swing: 0.6, knee: 0.9 }, legR: { swing: 0.5, knee: 1.0 }, armL: { ik: { target: [0.03, 0.55, 0.28] } }, armR: { ik: { target: [-0.03, 0.55, 0.28] } }, head: [0.1, 0.35, 0.12] }
-    : walk3(ph, "tiptoe");
-  const bimaRy = walking ? Math.PI * 0.62 : Math.PI * 0.8;
-  const expr = hissK > 0 ? "scared" : begging ? "worried" : "worried";
+    ? { ...walk3(ph, "tiptoe"), head: [0.0, 0.2, 0] }
+    : { ...idle3(t, 3), lean: 0.1 - 0.35 * hissK, bob: -0.1 + 0.1 * hissK, legL: { swing: 0.6, knee: 0.9 }, legR: { swing: 0.5, knee: 1.0 }, armL: { ik: { target: [0.04, 0.55, 0.3] } }, armR: { ik: { target: [-0.04, 0.55, 0.3] } }, head: [0.1, 0.0, 0.12] };
+  const bimaRy = -Math.PI / 2;
+  const expr = hissK > 0 ? "scared" : "worried";
   return (
     <AbsoluteFill>
       <Stage cam={cam}>
         <LivingRoom3D t={t} />
         <AyahAsleep t={t} snore={1} />
-        <Cat3D position={[2.9, 0.5, 1.9]} rotationY={-2.5 + 0.5 * Math.sin(t * 0.5)} t={t} alert={Math.max(alert, hissK)} tailPhase={hissK * 3} />
+        <Cat3D position={[2.05, 0.5, 1.9]} rotationY={Math.PI / 2} t={t} alert={Math.max(alert, hissK)} tailPhase={hissK * 3} />
         <Rig3D position={[bx, 0, bz]} rotationY={bimaRy} t={t} body={BIMA} pose={bimaPose} expr={expr} look={[0, 0]} seed={5} />
-        {begging && <Sweat position={[bx - 0.08, 0.95, bz + 0.1]} t={t} />}
+        {begging && <Sweat position={[bx + 0.0, 1.25, bz + 0.1]} t={t} />}
         <Dust t={t} />
       </Stage>
       <Grade bloom={[10, 55]} />
@@ -327,29 +325,29 @@ export const SceneMisiTangan: React.FC = () => {
   const snore = EV("tangan.snore");
   const stop = EV("tangan.stop");
   const cam = shotCam(f, [
-    { to: near, p0: [2.6, 1.3, 2.4], l0: [1.2, 0.85, 0.0], p1: [2.2, 1.2, 2.0], l1: [1.2, 0.8, -0.05], fov: 36 },
-    { to: 9999, p0: [2.0, 1.1, 1.4], l0: [1.2, 0.75, -0.15], p1: [1.8, 1.05, 1.1], l1: [1.2, 0.72, -0.2], fov: 30 },
+    { to: near, p0: [0.9, 1.3, 7.4], l0: [1.0, 0.85, -0.2], p1: [1.0, 1.25, 6.7], l1: [1.0, 0.84, -0.2], fov: 30 },
+    { to: 9999, p0: [1.0, 1.15, 6.0], l0: [1.0, 0.8, -0.22], p1: [1.05, 1.1, 5.5], l1: [1.05, 0.8, -0.22], fov: 25 },
   ]);
-  const BP: Vec3 = [1.36, 0, 0.12];
-  const BRY = Math.PI;
-  const hip = 0.76;
+  const BP: Vec3 = [0.72, 0, -0.25];
+  const BRY = Math.PI / 2;
+  const hip = 0.9;
   const k = easeInOut3(cl((f - reach) / (near - reach + 22)));
-  const rest: Vec3 = toRig([1.4, 0.55, 0.0], BP, BRY, 0.74, hip);
-  const tgtWorld: Vec3 = [REMOTE_WORLD[0], REMOTE_WORLD[1] + 0.035, REMOTE_WORLD[2] + 0.02];
-  const tgt: Vec3 = toRig(tgtWorld, BP, BRY, 0.74, hip);
+  const rest: Vec3 = toRig([0.8, 0.5, 0.0], BP, BRY, 0.82, hip);
+  const tgtWorld: Vec3 = [REMOTE_WORLD[0] - 0.02, REMOTE_WORLD[1] + 0.035, REMOTE_WORLD[2] + 0.0];
+  const tgt: Vec3 = toRig(tgtWorld, BP, BRY, 0.82, hip);
   const hand = lerpV(rest, lerpV(tgt, [tgt[0], tgt[1], tgt[2] + 0.02], 0.0), k * 0.96);
   const shake = f > near ? Math.sin(f * 2.4) * 0.006 : 0;
   const snoring = f < snore ? 1 : f < stop ? 0.3 : 0;
-  const bimaPose: Pose3 = { ...idle3(t, 5), lean: 0.16 + 0.1 * k, bob: -0.04 * k, legL: { swing: 0.15, knee: 0.3 }, legR: { swing: -0.05, knee: 0.15 }, armR: { ik: { target: [hand[0] + shake, hand[1] + shake, hand[2]], pole: [0.2, -0.5, 0.3] } }, armL: { swing: 0.1, out: 0.5, elbow: 0.6 }, head: [0.2 * k, 0.25, 0] };
+  const bimaPose: Pose3 = { ...idle3(t, 5), lean: 0.16 + 0.1 * k, bob: -0.04 * k, legL: { swing: 0.15, knee: 0.3 }, legR: { swing: -0.05, knee: 0.15 }, armL: { ik: { target: [hand[0] + shake, hand[1] + shake, hand[2]], pole: [-0.6, -0.4, 0.1] } }, armR: { swing: 0.1, out: 0.5, elbow: 0.6 }, head: [0.2 * k, 0.0, 0] };
   const sweatAmt = f > near ? 1 : 0;
   return (
     <AbsoluteFill>
       <Stage cam={cam}>
-        <LivingRoom3D t={t} />
+        <LivingRoom3D t={t} chair={false} />
         <AyahAsleep t={t} snore={snoring} />
         <Remote position={REMOTE_WORLD} rotation={[0, 0.4, 0]} glow={0.9} />
-        <Rig3D position={BP} rotationY={BRY} t={t} body={BIMA} pose={bimaPose} expr={f > near ? "scared" : "worried"} look={[0.4, -0.5]} seed={5} />
-        <Sweat position={[BP[0] + 0.0, 1.38, BP[2] - 0.16]} t={t} amount={sweatAmt} />
+        <Rig3D position={BP} rotationY={BRY} t={t} body={BIMA} pose={bimaPose} expr={f > near ? "scared" : "worried"} look={[0.4, -0.3]} seed={5} />
+        <Sweat position={[BP[0] + 0.1, 1.5, BP[2] + 0.2]} t={t} amount={sweatAmt} />
         <Dust t={t} />
       </Stage>
       <Grade bloom={[8, 55]} />
@@ -375,31 +373,31 @@ export const SceneMisiTwist: React.FC = () => {
   const eyeOpen = f >= eye ? 1 : 0;
   const lookAt = smooth3((f - eye) / 12);
   const cam = shotCam(f, [
-    { to: hah - 4, p0: [0.1, 1.15, 1.6], l0: [1.45, 0.95, -0.4], p1: [0.35, 1.12, 1.3], l1: [1.45, 0.98, -0.4], fov: 32 },
-    { to: light, p0: [2.6, 1.15, 2.6], l0: [1.3, 0.85, 0.1], p1: [2.4, 1.1, 2.3], l1: [1.3, 0.85, 0.1], fov: 36 },
-    { to: 9999, p0: [3.2, 1.7, 6.4], l0: [2.0, 1.0, 0.8], p1: [2.8, 1.6, 5.6], l1: [2.0, 1.0, 0.8], fov: 42 },
+    { to: hah - 4, p0: [1.0, 1.25, 6.6], l0: [1.0, 0.95, -0.2], p1: [1.05, 1.2, 6.0], l1: [1.0, 0.95, -0.2], fov: 27 },
+    { to: light, p0: [0.5, 1.2, 6.2], l0: [0.7, 0.9, -0.2], p1: [0.6, 1.15, 5.7], l1: [0.7, 0.9, -0.2], fov: 30 },
+    { to: 9999, p0: [-2.4, 2.0, 6.8], l0: [2.0, 1.0, 1.4], p1: [-1.9, 1.9, 6.2], l1: [2.0, 1.0, 1.4], fov: 44 },
   ]);
-  const BP: Vec3 = [1.36, 0, 0.12];
+  const BP: Vec3 = [0.72, 0, -0.25];
   const jump = f >= hah ? Math.max(0, Math.sin(cl((f - hah) / 14) * Math.PI)) : 0;
   const back = f >= hah ? easeInOut3((f - hah) / 14) : 0;
-  const bpos: Vec3 = [BP[0] + 0.45 * back, 0.28 * jump, BP[2] + 0.5 * back];
-  const handLocal: Vec3 = lerpV(HAND_REST, [0.2, 0.0, 0.95], offer);
+  const bpos: Vec3 = [BP[0] - 0.55 * back, 0.28 * jump, BP[2] + 0.5 * back];
+  const handLocal: Vec3 = lerpV(HAND_REST, [0.2, 0.1, 0.55], offer);
   const handWorld = rigToWorld(handLocal, AYAH_POS, AYAH_RY, 1.0, AYAH_HIP);
-  const bPose: Pose3 = f < hah ? { ...idle3(t, 5), lean: 0.2, armR: { ik: { target: toRig(REMOTE_WORLD, BP, Math.PI, 0.74, 0.76) } }, armL: { swing: 0.1, out: 0.5, elbow: 0.6 } } : { ...idle3(t, 5), lean: -0.25 * (1 - jump * 0), bob: 0, armL: { swing: 0, out: 1.9, elbow: 0.3 }, armR: { swing: 0, out: 1.9, elbow: 0.3 }, legL: { swing: 0.3, knee: 0.5 }, legR: { swing: -0.2, knee: 0.4 }, head: [-0.2, 0.2, 0] };
+  const bPose: Pose3 = f < hah ? { ...idle3(t, 5), lean: 0.2, armL: { ik: { target: toRig(REMOTE_WORLD, BP, Math.PI / 2, 0.82, 0.9), pole: [-0.6, -0.4, 0.1] } }, armR: { swing: 0.1, out: 0.5, elbow: 0.6 } } : { ...idle3(t, 5), lean: -0.25 * (1 - jump * 0), bob: 0, armL: { swing: 0, out: 1.9, elbow: 0.3 }, armR: { swing: 0, out: 1.9, elbow: 0.3 }, legL: { swing: 0.3, knee: 0.5 }, legR: { swing: -0.2, knee: 0.4 }, head: [-0.2, 0.2, 0] };
   const ibuIn = f >= light ? smooth3((f - light) / 14) : 0;
-  const ibuPose: Pose3 = { ...idle3(t, 9), lean: 0.05, armL: { swing: 0.15, out: 0.9, elbow: 1.2 }, armR: { swing: -0.5, out: 0.4, elbow: 0.9 }, head: [0.0, -0.5, 0.0] };
+  const ibuPose: Pose3 = { ...idle3(t, 9), lean: 0.05, armL: { swing: 0.15, out: 0.9, elbow: 1.2 }, armR: { swing: -0.5, out: 0.4, elbow: 0.9 }, head: [0.0, 0.0, 0.0] };
   return (
     <AbsoluteFill>
       <Stage cam={cam}>
-        <LivingRoom3D t={t} lights={lights} />
+        <LivingRoom3D t={t} lights={lights} chair={f >= light - 14} />
         <AyahAsleep t={t} snore={0} lookAt={lookAt} offer={offer} eye={eyeOpen} />
         <Remote position={f >= say - 4 ? [handWorld[0], handWorld[1] + 0.02, handWorld[2]] : REMOTE_WORLD} rotation={[0, 0.4, 0]} glow={0.7} />
-        <Rig3D position={bpos} rotationY={Math.PI} t={t} body={BIMA} pose={bPose} expr={f >= hah ? "scared" : "worried"} look={[0.2, 0]} seed={5} />
-        <Cat3D position={[2.9, 0.5, 1.9]} rotationY={-2.5} t={t} alert={0.2} />
+        <Rig3D position={bpos} rotationY={Math.PI / 2} t={t} body={BIMA} pose={bPose} expr={f >= hah ? "scared" : "worried"} look={[0.2, 0]} seed={5} />
+        {f >= light - 14 && <Cat3D position={[2.05, 0.5, 1.9]} rotationY={Math.PI / 2} t={t} alert={0.2} />}
         {f >= light && (
           <>
-            <Rig3D position={[3.55 - 0.6 * ibuIn, 0, 3.0]} rotationY={Math.PI + 0.55} t={t} body={IBU} pose={ibuPose} expr="angry" look={[-0.3, 0]} seed={8} />
-            <Torch position={[3.3, 1.0, 2.9]} target={[1.4, 0.8, 0.3]} on={ibuIn} />
+            <Rig3D position={[4.8 - 1.8 * ibuIn, 0, 2.5]} rotationY={-Math.PI / 2 - 0.2} t={t} body={IBU} pose={ibuPose} expr="angry" look={[-0.3, 0]} seed={8} />
+            <Torch position={[3.1, 1.0, 2.5]} target={[1.4, 0.8, 0.3]} on={ibuIn} />
           </>
         )}
         <Dust t={t} />

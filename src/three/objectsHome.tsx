@@ -110,10 +110,10 @@ export const Remote: React.FC<{ position: Vec3; rotation?: Vec3; glow?: number }
 /* Living room at night                                                  */
 /* x: -4.2..4.2, z: -5..4. TV on the left wall facing +x, sofa facing it. */
 /* ------------------------------------------------------------------ */
-export const LivingRoom3D: React.FC<{ t: number; lights?: number; tvOn?: boolean }> = ({ t, lights = 0, tvOn = true }) => {
+export const LivingRoom3D: React.FC<{ t: number; lights?: number; tvOn?: boolean; chair?: boolean }> = ({ t, lights = 0, tvOn = true, chair = true }) => {
   const planks = usePlanks("#7a5a3a");
   const wall = useTex("hwall", 256, 256, (g) => {
-    g.fillStyle = "#b9a98f";
+    g.fillStyle = "#8f877c";
     g.fillRect(0, 0, 256, 256);
     for (let i = 0; i < 1800; i++) {
       g.fillStyle = `rgba(0,0,0,${hash(i, 1) * 0.06})`;
@@ -210,13 +210,13 @@ export const LivingRoom3D: React.FC<{ t: number; lights?: number; tvOn?: boolean
       <group position={[1.5, 0, -0.5]}>
         <M position={[0, 0.25, 0]}>
           <boxGeometry args={[1.0, 0.5, 2.6]} />
-          <meshStandardMaterial color="#5a4a6a" roughness={0.95} />
+          <meshStandardMaterial color="#6a5a80" roughness={0.95} />
         </M>
         <M position={[0.42, 0.85, 0]}>
           <boxGeometry args={[0.28, 0.9, 2.6]} />
-          <meshStandardMaterial color="#5a4a6a" roughness={0.95} />
+          <meshStandardMaterial color="#6a5a80" roughness={0.95} />
         </M>
-        {[-1, 1].map((s) => (
+        {[-1].map((s) => (
           <M key={s} position={[0, 0.45, s * 1.38]}>
             <boxGeometry args={[1.0, 0.62, 0.22]} />
             <meshStandardMaterial color="#4a3b59" roughness={0.95} />
@@ -245,7 +245,7 @@ export const LivingRoom3D: React.FC<{ t: number; lights?: number; tvOn?: boolean
         <meshStandardMaterial color="#cfe6ff" transparent opacity={0.6} />
       </M>
       {/* armchair for the cat */}
-      <group position={[2.9, 0, 1.9]} rotation={[0, -2.2, 0]}>
+      {chair && <group position={[2.0, 0, 1.9]} rotation={[0, Math.PI / 2, 0]}>
         <M position={[0, 0.25, 0]}>
           <boxGeometry args={[0.9, 0.5, 0.9]} />
           <meshStandardMaterial color="#7a3b2e" roughness={0.95} />
@@ -254,9 +254,9 @@ export const LivingRoom3D: React.FC<{ t: number; lights?: number; tvOn?: boolean
           <boxGeometry args={[0.9, 0.7, 0.16]} />
           <meshStandardMaterial color="#7a3b2e" roughness={0.95} />
         </M>
-      </group>
+      </group>}
       {/* lighting: dark, moonlight + TV + (later) the ceiling light */}
-      <ambientLight intensity={0.28 + 0.9 * L} color={L > 0.4 ? "#fff0d8" : "#5a74c8"} />
+      <ambientLight intensity={0.2 + 0.9 * L} color={L > 0.4 ? "#fff0d8" : "#5a74c8"} />
       <directionalLight position={[3, 5, -3]} intensity={1.0 * (1 - 0.5 * L)} color="#8fb4ff" castShadow shadow-mapSize={[1024, 1024]} shadow-camera-left={-6} shadow-camera-right={6} shadow-camera-top={6} shadow-camera-bottom={-3} shadow-camera-near={0.5} shadow-camera-far={20} shadow-bias={-0.0006} />
       {L > 0.01 && <pointLight position={[0, 3.6, 0.5]} intensity={90 * L} distance={14} color="#ffe9c0" />}
       <fog attach="fog" args={["#0b1230", 9, 26]} />
