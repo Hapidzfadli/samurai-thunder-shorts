@@ -18,6 +18,7 @@ import { SheetLift, SheetLiftExpr } from "./SheetLift";
 import { SheetKaraoke } from "./SheetKaraoke";
 import { SheetMisi } from "./SheetMisi";
 import { MotionTest, MOTION_TEST_FRAMES } from "./MotionTest";
+import { RigTest, RIG_TEST_FRAMES } from "./RigTest";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
 
 export const RemotionRoot: React.FC = () => {
@@ -31,6 +32,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
+      <Composition id="RigTest" component={RigTest} durationInFrames={RIG_TEST_FRAMES} fps={30} width={1080} height={1080} />
       <Composition id="MotionTest" component={MotionTest} durationInFrames={MOTION_TEST_FRAMES} fps={30} width={1080} height={1080} />
       <Composition id="SheetMisi" component={SheetMisi} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition id="SheetKaraoke" component={SheetKaraoke} durationInFrames={1} fps={30} width={2000} height={1080} />
