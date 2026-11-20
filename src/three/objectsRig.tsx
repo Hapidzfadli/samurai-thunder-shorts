@@ -53,7 +53,7 @@ export type Body = {
   pants: string;
   shoes?: string;
   hair?: string;
-  hairStyle?: "short" | "bald" | "bun" | "messy" | "none";
+  hairStyle?: "short" | "bald" | "bun" | "messy" | "quiff" | "none";
   height?: number; // overall scale
   headScale?: number;
   belly?: number;
@@ -328,6 +328,13 @@ export const Rig3D: React.FC<{
           )}
           {/* hair */}
           {!armored && body.hairStyle === "short" && <P geo={() => <sphereGeometry args={[r * 1.05, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.52]} />} color={hairColor} pos={[0, 0.012, -0.005]} hull={0.04} />}
+          {!armored && body.hairStyle === "quiff" && (
+            <>
+              <P geo={() => <sphereGeometry args={[r * 1.04, 18, 12, 0, Math.PI * 2, 0, Math.PI * 0.5]} />} color={hairColor} pos={[0, 0.006, -0.03]} rot={[-0.5, 0, 0]} hull={0.04} />
+              <P geo={() => <sphereGeometry args={[r * 0.62, 12, 10]} />} color={hairColor} pos={[0, r * 0.98, r * 0.28]} scale={[1.25, 0.62, 1.0]} rot={[-0.35, 0, 0]} hull={0.05} />
+              <P geo={() => <sphereGeometry args={[r * 0.32, 10, 8]} />} color={hairColor} pos={[r * 0.1, r * 1.12, r * 0.52]} scale={[1.3, 0.7, 1]} rot={[-0.6, 0, 0.2]} hull={0.06} />
+            </>
+          )}
           {body.hairStyle === "messy" &&
             [0, 1, 2, 3, 4, 5, 6].map((i) => (
               <P key={i} geo={() => <coneGeometry args={[0.04 * hs, 0.14 * hs, 5]} />} color={hairColor} pos={[Math.cos(i * 0.9) * r * 0.55, r * 0.88 + (i % 2) * 0.02, Math.sin(i * 0.9) * r * 0.4 - 0.02]} rot={[Math.sin(i) * 0.5, 0, -Math.cos(i * 0.9) * 0.6]} hull={0.08} />
