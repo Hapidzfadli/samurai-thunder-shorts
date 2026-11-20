@@ -17,7 +17,7 @@ const GRAD = (() => {
 })();
 const INK = "#0d0b14";
 
-const P: React.FC<{ geo: () => React.ReactNode; color: string; pos?: Vec3; rot?: Vec3; scale?: Vec3 | number; hull?: number; emissive?: string; nohull?: boolean }> = ({ geo, color, pos = [0, 0, 0], rot = [0, 0, 0], scale = 1, hull = 0.05, emissive, nohull }) => (
+export const P: React.FC<{ geo: () => React.ReactNode; color: string; pos?: Vec3; rot?: Vec3; scale?: Vec3 | number; hull?: number; emissive?: string; nohull?: boolean }> = ({ geo, color, pos = [0, 0, 0], rot = [0, 0, 0], scale = 1, hull = 0.05, emissive, nohull }) => (
   <group position={pos} rotation={rot} scale={scale as never}>
     <mesh castShadow receiveShadow>
       {geo()}
@@ -60,6 +60,7 @@ export type Body = {
   mustache?: boolean;
   glasses?: boolean;
   shades?: boolean;
+  mask?: string;
   sarong?: boolean;
   slim?: number;
   armor?: "samurai" | "ashigaru" | "commander" | "none";
@@ -150,7 +151,7 @@ const Leg: React.FC<{ side: -1 | 1; pose?: LegPose; pants: string; shoes: string
   );
 };
 
-const Face: React.FC<{ r: number; expr: Expr3; look: [number, number]; blink: number; brow: string; mustache?: boolean; glasses?: boolean; shades?: boolean }> = ({ r, expr, look, blink, brow, mustache, glasses, shades }) => {
+const Face: React.FC<{ r: number; expr: Expr3; look: [number, number]; blink: number; brow: string; mustache?: boolean; glasses?: boolean; shades?: boolean; mask?: string }> = ({ r, expr, look, blink, brow, mustache, glasses, shades, mask }) => {
   const eyeR = (expr === "surprised" || expr === "scared" ? 0.056 : 0.046) * (r / 0.22);
   const lid = expr === "sleepy" ? 0.15 : expr === "smug" ? 0.55 : expr === "happy" || expr === "grin" ? 0.8 : 1;
   const ey = Math.max(0.1, Math.min(lid, blink));
@@ -187,6 +188,20 @@ const Face: React.FC<{ r: number; expr: Expr3; look: [number, number]; blink: nu
           )}
         </group>
       ))}
+      {mask && (
+        <group>
+          <mesh scale={[1, 1, 1.02]}>
+            <sphereGeometry args={[r * 1.045, 20, 12, Math.PI / 2 - 1.0, 2.0, Math.PI * 0.55, Math.PI * 0.32]} />
+            <meshToonMaterial color={mask} gradientMap={GRAD} side={THREE.DoubleSide} />
+          </mesh>
+          {[-1, 1].map((sd) => (
+            <mesh key={sd} position={[sd * r * 0.98, -r * 0.18, r * 0.12]} rotation={[0, 0, 0]}>
+              <torusGeometry args={[r * 0.12, 0.006, 6, 14]} />
+              <meshBasicMaterial color="#ffffff" />
+            </mesh>
+          ))}
+        </group>
+      )}
       {/* mouth */}
       {(expr === "surprised" || expr === "scared") && (
         <mesh position={[0, -0.085 * k, r * 0.9]} scale={[1, 1.4, 0.4]}>
@@ -307,7 +322,7 @@ export const Rig3D: React.FC<{
             <P key={sd} geo={() => <sphereGeometry args={[0.04 * hs, 8, 8]} />} color={skin} pos={[sd * r * 0.95, -0.01, 0]} scale={[0.5, 1, 0.8]} hull={0.1} />
           ))}
           <P geo={() => <sphereGeometry args={[0.03 * hs, 8, 8]} />} color={skin} pos={[0, -0.025, r * 0.96]} hull={0.1} />
-          <Face r={r} expr={expr} look={look} blink={blink} brow={body.hairStyle === "bald" ? "#3a2a20" : hairColor} mustache={body.mustache} glasses={body.glasses} shades={body.shades} />
+          <Face r={r} expr={expr} look={look} blink={blink} brow={body.hairStyle === "bald" ? "#3a2a20" : hairColor} mustache={body.mustache} glasses={body.glasses} shades={body.shades} mask={body.mask} />
           {armored && body.armor !== "ashigaru" && (
             <group>
               <P geo={() => <sphereGeometry args={[r * 1.18, 16, 10, 0, Math.PI * 2, 0, Math.PI * 0.55]} />} color="#14131a" pos={[0, 0.02, -0.01]} hull={0.04} />
@@ -360,8 +375,10 @@ export const Rig3D: React.FC<{
               <P geo={() => <sphereGeometry args={[r * 1.13, 20, 12, 0, Math.PI * 2, 0, Math.PI * 0.37]} />} color={hairColor} pos={[0, 0.0, -0.015]} hull={0.04} />
               {/* sides + back, front wedge left open for the face */}
               <P geo={() => <sphereGeometry args={[r * 1.13, 20, 14, Math.PI / 2 + 0.95, Math.PI * 2 - 1.9, 0, Math.PI * 0.78]} />} color={hairColor} pos={[0, 0.0, -0.015]} hull={0.04} />
-              {/* drape over neck and shoulders */}
-              <P geo={() => <cylinderGeometry args={[r * 0.98, r * 1.8, r * 1.1, 20, 1, true]} />} color={hairColor} pos={[0, -r * 1.58, -0.02]} hull={0.04} />
+              {/* drape over neck and shoulders: open at the front for the face */}
+              <P geo={() => <cylinderGeometry args={[r * 1.0, r * 1.55, r * 1.25, 22, 1, true, 0.95, Math.PI * 2 - 1.9]} />} color={hairColor} pos={[0, -r * 1.0, -0.02]} hull={0.04} />
+              {/* chest bib under the chin */}
+              <P geo={() => <cylinderGeometry args={[r * 0.96, r * 1.5, r * 1.0, 22, 1, true, -1.0, 2.0]} />} color={hairColor} pos={[0, -r * 1.45, 0.0]} hull={0.04} />
             </>
           )}
           {body.hairStyle === "messy" &&
