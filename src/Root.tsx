@@ -23,6 +23,7 @@ import { Misi, TOTAL_FRAMES_MISI } from "./Misi";
 import { SheetWar } from "./SheetWar";
 import { SheetSehat } from "./SheetSehat";
 import { Hamil, TOTAL_FRAMES_HAMIL } from "./Hamil";
+import { SheetAncol } from "./SheetAncol";
 import { Perang, TOTAL_FRAMES_PERANG } from "./Perang";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
 
@@ -54,6 +55,7 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
       />
       <Composition id="Hamil" component={Hamil} durationInFrames={TOTAL_FRAMES_HAMIL} fps={30} width={1080} height={1920} />
+      <Composition id="SheetAncol" component={SheetAncol} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition id="SheetSehat" component={SheetSehat} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition id="SheetWar" component={SheetWar} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition id="RigTest" component={RigTest} durationInFrames={RIG_TEST_FRAMES} fps={30} width={1080} height={1080} />

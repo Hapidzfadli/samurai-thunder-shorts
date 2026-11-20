@@ -55,3 +55,12 @@ export const Hormone: React.FC<{ x: number; y: number; s?: number; c: string; ha
     )}
   </g>
 );
+
+export const mask = (c = "#bfe6ff") => (
+  <g>
+    <path d="M -50 14 Q 0 6 50 14 Q 52 52 0 66 Q -52 52 -50 14 Z" fill={c} stroke={INK} strokeWidth={6} strokeLinejoin="round" />
+    <path d="M -38 26 L 38 26 M -38 40 L 34 40" stroke="#fff" strokeWidth={3} opacity={0.8} />
+    <path d="M -50 22 Q -70 18 -66 4 M 50 22 Q 70 18 66 4" stroke={INK} strokeWidth={4} fill="none" />
+  </g>
+);
+export const blush = <g><circle cx={-40} cy={20} r={11} fill="#ff8aa8" opacity={0.75} /><circle cx={42} cy={20} r={11} fill="#ff8aa8" opacity={0.75} /></g>;
