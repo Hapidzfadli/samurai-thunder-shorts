@@ -6,7 +6,7 @@ import { Body, Rig3D, idle3 } from "./three/objectsRig";
 import { Bacteria } from "./three/objectsLift";
 
 const ASTI: Body = { shirt: "#f6a6c0", pants: "#f6a6c0", hair: "#2a1a10", hairStyle: "bun", height: 0.93, slim: 0.95, belly: 0.25, sarong: true };
-const HAPID: Body = { shirt: "#3b82c4", pants: "#2b3350", hair: "#2a1a10", hairStyle: "messy", height: 1.02, glasses: true };
+const HAPID: Body = { shirt: "#3b82c4", pants: "#2b3350", hair: "#2a1a10", hairStyle: "short", height: 1.02, glasses: true };
 const BIDAN: Body = { shirt: "#f4f6f8", pants: "#f4f6f8", hair: "#2a1a10", hairStyle: "bun", height: 0.95, slim: 0.95, sarong: true, shoes: "#e5e7eb" };
 
 const Blob: React.FC<{ x: number; color: string; hat: string; t: number; seed: number; nose?: boolean; mail?: boolean }> = ({ x, color, t, seed, nose, mail }) => (
