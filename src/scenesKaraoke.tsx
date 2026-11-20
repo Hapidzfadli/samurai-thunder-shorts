@@ -166,7 +166,7 @@ export const SceneKHook: React.FC = () => {
   const pu = beat(t) * (f >= start ? 1 : 0);
   const cam = shotCam(f, [
     { to: test, p0: [0, 2.2, 10.5], l0: [0, 1.6, -2], p1: [0, 2.1, 9.6], l1: [0, 1.6, -2], fov: 46 },
-    { to: sing + 70, p0: [0.4, 1.9, 5.8], l0: [0.4, 1.5, -1], p1: [0.4, 1.9, 5.2], l1: [0.4, 1.5, -1], fov: 40 },
+    { to: sing + 70, p0: [0.4, 1.9, 7.4], l0: [0.4, 1.5, -1], p1: [0.4, 1.9, 6.8], l1: [0.4, 1.5, -1], fov: 40 },
     { to: 9999, p0: [0, 2.2, 10.0], l0: [0, 1.7, -2], p1: [0, 2.1, 9.4], l1: [0, 1.7, -2], fov: 46, shake: f >= shake ? 0.05 : 0 },
   ]);
   const singing = f >= sing;
@@ -271,8 +271,8 @@ export const SceneKRonda: React.FC = () => {
   const fall = EV("ronda.fall");
   const say = EV("ronda.say");
   const cam = shotCam(f, [
-    { to: fall + 30, p0: [0, 1.9, 8.2], l0: [0, 1.3, -1.5], p1: [0, 1.8, 7.6], l1: [0, 1.3, -1.5], fov: 46, shake: 0.02 },
-    { to: 9999, p0: [0.2, 1.8, 6.6], l0: [0, 1.3, -1.5], p1: [0.2, 1.8, 6.2], l1: [0, 1.3, -1.5], fov: 44, shake: 0.02 },
+    { to: fall + 30, p0: [-0.6, 1.7, 6.4], l0: [-0.8, 1.2, -1.7], p1: [-0.6, 1.7, 5.9], l1: [-0.8, 1.2, -1.7], fov: 44, shake: 0.02 },
+    { to: 9999, p0: [-0.6, 1.6, 5.6], l0: [-0.8, 1.2, -1.7], p1: [-0.6, 1.6, 5.2], l1: [-0.8, 1.2, -1.7], fov: 42, shake: 0.02 },
   ]);
   const down = sm(cl((f - fall) / 8));
   const stand = sm(cl((f - fall - 30) / 14));
@@ -351,7 +351,7 @@ export const SceneKDalam: React.FC = () => {
   const cam = shotCam(f, [
     { to: song, p0: [0, 1.9, 8.8], l0: [0, 1.4, -1], p1: [0, 1.9, 8.2], l1: [0, 1.4, -1], fov: 46 },
     { to: dance, p0: [0, 1.8, 7.6], l0: [0, 1.4, -1], p1: [0, 1.8, 7.2], l1: [0, 1.4, -1], fov: 46 },
-    { to: 9999, p0: [0, 1.8, 8.4], l0: [0, 1.4, -1], p1: [0, 1.8, 7.8], l1: [0, 1.4, -1], fov: 46 },
+    { to: 9999, p0: [0, 1.8, 7.8], l0: [0, 1.3, -1], p1: [0, 1.8, 7.3], l1: [0, 1.3, -1], fov: 46 },
   ]);
   const walkIn = (x1: number, delay: number) => lerpX(6.5, x1, sm(cl((f - enter - delay) / 22)));
   const lerpX = (a: number, b: number, k: number) => a + (b - a) * k;
