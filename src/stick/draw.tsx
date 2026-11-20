@@ -138,7 +138,11 @@ export const Stick: React.FC<{
   holdL?: Hold;
   tuft?: boolean;
   cheek?: number; // red slap mark 0..1
-}> = ({ x, y, s = 1, flip = false, pose = {}, expr = "neutral", color = "#2d6cdf", holdR, holdL, tuft = true, cheek = 0 }) => {
+  headBack?: React.ReactNode;
+  headFront?: React.ReactNode;
+  bodyBack?: React.ReactNode;
+  bodyFront?: React.ReactNode;
+}> = ({ x, y, s = 1, flip = false, pose = {}, expr = "neutral", color = "#2d6cdf", holdR, holdL, tuft = true, cheek = 0, headBack, headFront, bodyBack, bodyFront }) => {
   const t = pose.t ?? 0;
   const h = pose.h ?? 0;
   const aL = pose.aL ?? [-8, -10];
@@ -179,7 +183,9 @@ export const Stick: React.FC<{
       <circle cx={AL.W[0]} cy={AL.W[1]} r={13} fill={INK} />
       {holdL && <g transform={`translate(${AL.W[0]} ${AL.W[1]}) rotate(${-AL.ang})`}>{holdL({ x: AL.W[0], y: AL.W[1], ang: AL.ang })}</g>}
       {/* torso */}
+      {bodyBack}
       {seg([0, 0], S, "torso")}
+      {bodyFront}
       {/* near limbs */}
       {seg([0, 0], LR.K, "rk")}
       {seg(LR.K, LR.F, "rf")}
@@ -197,8 +203,10 @@ export const Stick: React.FC<{
             <line x1={16} y1={-60} x2={28} y2={-88} />
           </g>
         )}
+        {headBack}
         <circle r={64} fill="#fff" stroke={INK} strokeWidth={12} />
         <Face expr={expr} />
+        {headFront}
         {cheek > 0 && <circle cx={36} cy={18} r={20 * cheek} fill="#ff5a5a" opacity={0.75} />}
       </g>
     </g>
