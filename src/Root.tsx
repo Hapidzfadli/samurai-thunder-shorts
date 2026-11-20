@@ -14,10 +14,13 @@ import { Soda, TOTAL_FRAMES_SODA } from "./Soda";
 import { Paket, TOTAL_FRAMES_PAKET } from "./Paket";
 import { Kos, TOTAL_FRAMES_KOS } from "./Kos";
 import { Lift, TOTAL_FRAMES_LIFT } from "./Lift";
+import { SheetLift, SheetLiftExpr } from "./SheetLift";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="SheetLift" component={SheetLift} durationInFrames={1} fps={30} width={2000} height={1080} />
+      <Composition id="SheetLiftExpr" component={SheetLiftExpr} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition
         id="Lift"
         component={Lift}

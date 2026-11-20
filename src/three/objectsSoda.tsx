@@ -185,7 +185,11 @@ export type ToonParams = {
   face?: string;
   shirt: string;
   pants?: string;
-  hat?: "cap" | "bowler" | "bucket" | "hair" | "none";
+  hat?: "cap" | "bowler" | "bucket" | "hair" | "short" | "bald" | "hijab" | "none";
+  mustache?: boolean;
+  belly?: number;
+  tie?: string;
+  lanyard?: boolean;
   glasses?: boolean;
   tape?: boolean;
   small?: boolean;
@@ -195,7 +199,7 @@ export type ToonParams = {
   armR?: [number, number];
   legL?: number;
   legR?: number;
-  prop?: "can" | "none";
+  prop?: "can" | "box" | "none";
   canShake?: number;
   sweat?: number;
   foam?: number;
@@ -291,6 +295,10 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   const shirt = p.shirt;
   if (!isBox) {
   g.save();
+  g.translate(256, 500);
+  g.scale(1 + (p.belly ?? 0) * 0.55, 1 + (p.belly ?? 0) * 0.08);
+  g.translate(-256, -500);
+  g.save();
   g.fillStyle = shirt;
   g.strokeStyle = INK;
   g.lineWidth = 9;
@@ -324,6 +332,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.lineWidth = 5;
     g.fillRect(256 - 16, 405, 32, 190);
     g.strokeRect(256 - 16, 405, 32, 190);
+  g.restore();
   }
   // collar / buttons
   g.strokeStyle = INK;
@@ -337,6 +346,36 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.beginPath();
     g.arc(262, 455 + i * 40, 5, 0, 7);
     g.fill();
+  }
+  if (p.tie && !isBox) {
+    g.fillStyle = p.tie;
+    g.strokeStyle = INK;
+    g.lineWidth = 6;
+    g.beginPath();
+    g.moveTo(256 - 14, 418);
+    g.lineTo(256 + 14, 418);
+    g.lineTo(256 + 20, 520);
+    g.lineTo(256, 556);
+    g.lineTo(256 - 20, 520);
+    g.closePath();
+    g.fill();
+    g.stroke();
+  }
+  if (p.lanyard && !isBox) {
+    g.strokeStyle = "#2563eb";
+    g.lineWidth = 8;
+    g.beginPath();
+    g.moveTo(256 - 40, 410);
+    g.lineTo(256, 520);
+    g.lineTo(256 + 40, 410);
+    g.stroke();
+    g.fillStyle = "#fff";
+    g.strokeStyle = INK;
+    g.lineWidth = 5;
+    g.fillRect(256 - 24, 520, 48, 62);
+    g.strokeRect(256 - 24, 520, 48, 62);
+    g.fillStyle = "#2563eb";
+    g.fillRect(256 - 16, 528, 32, 12);
   }
   if (p.pants) {
     g.fillStyle = p.pants;
@@ -353,6 +392,22 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   const handR = limb(g, [256 + shX, shY], aR[0], aR[1], 92, 88, 9, sd + 6);
   const hands: [number, number][] = [handL, handR];
   hands.forEach(([x, y], i) => inkEllipse(g, x, y, 17, 17, face, 7, sd + 7 + i));
+  if (p.prop === "box") {
+    g.save();
+    g.translate(handR[0] + 10, handR[1] - 26);
+    g.fillStyle = "#d49a4a";
+    g.strokeStyle = INK;
+    g.lineWidth = 8;
+    g.beginPath();
+    g.roundRect(-52, -52, 104, 92, 8);
+    g.fill();
+    g.stroke();
+    g.fillStyle = "rgba(245,225,170,0.95)";
+    g.fillRect(-52, -30, 104, 18);
+    g.strokeRect(-52, -30, 104, 18);
+    g.restore();
+    inkEllipse(g, handR[0], handR[1], 17, 17, face, 7, sd + 9);
+  }
   if (p.prop === "can") {
     const sh = (p.canShake ?? 0) * 7;
     const cx = handR[0] + Math.sin(sd * 9 + (p.canShake ?? 0) * 40) * sh;
@@ -383,6 +438,23 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   }
 
   // head
+  if (p.hat === "hijab") {
+    g.fillStyle = p.hatColor ?? "#7c3aed";
+    g.strokeStyle = INK;
+    g.lineWidth = 10;
+    g.beginPath();
+    g.ellipse(256, 262, 176, 176, 0, 0, 7);
+    g.fill();
+    g.stroke();
+    g.beginPath();
+    g.moveTo(256 - 150, 330);
+    g.quadraticCurveTo(256 - 170, 470, 256 - 70, 450);
+    g.lineTo(256 + 70, 450);
+    g.quadraticCurveTo(256 + 170, 470, 256 + 150, 330);
+    g.closePath();
+    g.fill();
+    g.stroke();
+  }
   const hx = 256;
   const hy = isBox ? 425 : 240;
   if (isBox) {
@@ -502,8 +574,8 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   };
   const by = p.expr === "surprised" ? hy - 74 : hy - 58;
   const tilt = p.expr === "worried" || p.expr === "nervous" ? 0.9 : p.expr === "angry" ? -0.9 : p.expr === "smirk" ? -0.5 : p.expr === "happy" || p.expr === "laugh" ? -0.2 : 0.05;
-  brow(ex[0], -tilt, by);
-  brow(ex[1], tilt, by);
+  brow(ex[0], tilt, by);
+  brow(ex[1], -tilt, by);
   // mouth
   g.strokeStyle = INK;
   g.fillStyle = "#4a0f14";
@@ -552,6 +624,20 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.stroke();
   }
 
+  if (p.mustache) {
+    g.fillStyle = INK;
+    g.strokeStyle = INK;
+    g.lineWidth = 4;
+    [-1, 1].forEach((sg) => {
+      g.beginPath();
+      g.moveTo(hx, my - 22);
+      g.quadraticCurveTo(hx + sg * 40, my - 40, hx + sg * 74, my - 8);
+      g.quadraticCurveTo(hx + sg * 40, my - 14, hx, my - 4);
+      g.closePath();
+      g.fill();
+      g.stroke();
+    });
+  }
   // hat
   const hat = isBox ? "none" : (p.hat ?? "none");
   const hc = p.hatColor ?? "#222";
@@ -596,6 +682,46 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.fill();
     g.stroke();
     inkEllipse(g, hx + 150, hy + 80, 30, 56, hc, 9, sd + 53, 0.15);
+  } else if (hat === "short") {
+    g.fillStyle = hc;
+    g.strokeStyle = INK;
+    g.lineWidth = 10;
+    g.beginPath();
+    g.moveTo(hx - 144, hy - 20);
+    g.bezierCurveTo(hx - 170, hy - 140, hx + 170, hy - 140, hx + 144, hy - 20);
+    g.bezierCurveTo(hx + 110, hy - 70, hx + 40, hy - 88, hx - 30, hy - 84);
+    g.bezierCurveTo(hx - 90, hy - 80, hx - 130, hy - 56, hx - 144, hy - 20);
+    g.closePath();
+    g.fill();
+    g.stroke();
+  } else if (hat === "bald") {
+    g.strokeStyle = INK;
+    g.lineWidth = 9;
+    g.fillStyle = hc;
+    [-1, 1].forEach((sg) => {
+      g.beginPath();
+      g.moveTo(hx + sg * 146, hy - 70);
+      g.quadraticCurveTo(hx + sg * 176, hy - 20, hx + sg * 146, hy + 40);
+      g.quadraticCurveTo(hx + sg * 130, hy - 10, hx + sg * 146, hy - 70);
+      g.fill();
+      g.stroke();
+    });
+    g.strokeStyle = "rgba(255,255,255,0.9)";
+    g.lineWidth = 12;
+    g.beginPath();
+    g.arc(hx - 40, hy - 80, 70, Math.PI * 1.15, Math.PI * 1.45);
+    g.stroke();
+  } else if (hat === "hijab") {
+    g.strokeStyle = p.hatColor ?? "#7c3aed";
+    g.lineWidth = 30;
+    g.beginPath();
+    g.ellipse(hx, hy, 140, 130, 0, 0, 7);
+    g.stroke();
+    g.strokeStyle = INK;
+    g.lineWidth = 8;
+    g.beginPath();
+    g.ellipse(hx, hy, 124, 116, 0, 0, 7);
+    g.stroke();
   } else if (hat === "bucket") {
     g.fillStyle = hc;
     g.strokeStyle = INK;
