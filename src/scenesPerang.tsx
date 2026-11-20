@@ -130,7 +130,7 @@ const ROW_Z = [-1.6, 0, 1.6];
 
 const OdaArmy: React.FC<{ t: number; cheer?: number }> = ({ t, cheer = 0 }) => (
   <>
-    <Crowd origin={[-9.6, 0, 0]} cols={15} rows={4} dx={1.0} dz={0.95} clan="oda" t={t} rotationY={Math.PI / 2} bannerEvery={6} />
+    <Crowd origin={[-11.4, 0, 0]} cols={15} rows={4} dx={1.0} dz={0.95} clan="oda" t={t} rotationY={Math.PI / 2} bannerEvery={6} />
     <Crowd origin={[-6.2, 0, -8.2]} cols={4} rows={2} dx={1.0} dz={0.95} clan="oda" t={t} rotationY={Math.PI / 2} bannerEvery={5} />
     <Crowd origin={[-6.2, 0, 6.6]} cols={4} rows={2} dx={1.0} dz={0.95} clan="oda" t={t} rotationY={Math.PI / 2} bannerEvery={5} />
     <Palisade x={PALI_X} z0={-10.5} z1={10.5} />
@@ -191,7 +191,7 @@ export const ScenePerangHook: React.FC = () => {
   const title = EV("hook.title");
   const tak = EV("hook.takeda");
   const cam = shotCam(f, [
-    { to: tak, p0: [-17, 5.8, 3.2], l0: [8, 1.8, -0.4], p1: [-12.6, 3.8, 2.0], l1: [9, 1.8, -0.4], fov: 42 },
+    { to: tak, p0: [-22, 6.2, 3.2], l0: [8, 1.8, -0.4], p1: [-17.5, 4.4, 2.0], l1: [9, 1.8, -0.4], fov: 42 },
     { to: 9999, p0: [10, 2.2, 6.4], l0: [24, 1.7, 0], p1: [13, 2.6, 8], l1: [24, 1.7, 0], fov: 38 },
   ]);
   const ts = spring({ frame: f - title, fps, config: { damping: 13 } });
@@ -230,7 +230,7 @@ export const ScenePerangPagar: React.FC = () => {
   const match = EV("pagar.match");
   const cam = shotCam(f, [
     { to: count, p0: [-1.2, 1.75, 6.2], l0: [-6, 1.2, 0.5], p1: [-2.2, 1.6, 4.0], l1: [-6, 1.2, 0.3], fov: 34 },
-    { to: 9999, p0: [-15, 3.6, -5], l0: [-3, 1.4, 0], p1: [-14, 3.2, 4.5], l1: [-3, 1.4, 0], fov: 40 },
+    { to: 9999, p0: [-18, 3.8, -5], l0: [-3, 1.4, 0], p1: [-17, 3.4, 4.5], l1: [-3, 1.4, 0], fov: 40 },
   ]);
   return (
     <AbsoluteFill>
@@ -263,8 +263,8 @@ export const ScenePerangSerbu: React.FC = () => {
   const xs = LANES.map((_, i) => lerpN(30 + (i % 4) * 2.2, 2 + (i % 3) * 0.8, k));
   const lead = xs[3];
   const cam = shotCam(f, [
-    { to: shout - 4, p0: [-9.5, 1.25, 0.0], l0: [10, 1.4, -0.3], p1: [-8.8, 1.2, 0.5], l1: [10, 1.4, -0.2], fov: 34 },
-    { to: 9999, p0: [lead - 6, 1.7, 3.4], l0: [lead, 1.6, 0.6], p1: [lead - 5, 1.6, 3.0], l1: [lead, 1.6, 0.6], fov: 34 },
+    { to: shout - 4, p0: [-15.5, 1.9, 0.0], l0: [10, 1.4, -0.3], p1: [-14.5, 1.8, 0.5], l1: [10, 1.4, -0.2], fov: 34 },
+    { to: 9999, p0: [lead - 10, 2.0, 5.0], l0: [lead, 1.5, 0.6], p1: [lead - 9, 1.9, 4.6], l1: [lead, 1.5, 0.6], fov: 34 },
   ]);
   return (
     <AbsoluteFill>
@@ -329,10 +329,10 @@ export const ScenePerangTembak: React.FC = () => {
   const XC = [14, 12.5, 11, 15.5, 13.5, 12];
   const fallT = [v1 + 12, v1 + 20, v1 + 28, v2 + 12, v2 + 22, v3 + 10];
   const cam = shotCam(f, [
-    { to: v1 - 6, p0: [-12.4, 2.3, 0.4], l0: [6, 1.2, 0], p1: [-11.2, 2.1, 0.6], l1: [6, 1.2, 0], fov: 36 },
+    { to: v1 - 6, p0: [-15.6, 2.8, 0.4], l0: [6, 1.2, 0], p1: [-14.4, 2.6, 0.6], l1: [6, 1.2, 0], fov: 36 },
     { to: v2 - 6, p0: [-6.8, 1.5, 9.8], l0: [-6.6, 1.3, 0], p1: [-6.8, 1.45, 8.6], l1: [-6.6, 1.3, 0], fov: 34 },
     { to: v3 - 6, p0: [-1.0, 1.05, 3.2], l0: [-6, 1.3, 0.2], p1: [-1.6, 1.1, 2.8], l1: [-6, 1.3, 0.1], fov: 32 },
-    { to: 9999, p0: [-13, 3.0, 0.0], l0: [4, 1.4, 0], p1: [-12, 2.6, 0.8], l1: [4, 1.3, 0], fov: 38 },
+    { to: 9999, p0: [-16, 3.2, 0.0], l0: [4, 1.4, 0], p1: [-15, 2.8, 0.8], l1: [4, 1.3, 0], fov: 38 },
   ]);
   const gunPos = (row: number, i: number): Vec3 => [rowX(row) + 1.0, 1.2, ROW_Z[i]];
   return (
@@ -391,7 +391,7 @@ export const ScenePerangRuntuh: React.FC = () => {
   const last = EV("runtuh.last");
   const cam = shotCam(f, [
     { to: last, p0: [-3.4, 1.9, 11.5], l0: [-3.2, 1.0, 0], p1: [-3.4, 1.8, 9.2], l1: [-3.2, 1.0, 0], fov: 34 },
-    { to: 9999, p0: [-14, 3.4, -2], l0: [2, 1.2, 0], p1: [-12, 3.0, 1.5], l1: [2, 1.2, 0], fov: 40 },
+    { to: 9999, p0: [-17, 3.6, -2], l0: [2, 1.2, 0], p1: [-15, 3.2, 1.5], l1: [2, 1.2, 0], fov: 40 },
   ]);
   const hits = [fall, fall + 10, fall + 20, fall + 30, fall + 44, fall + 56, fall + 70, last];
   return (
@@ -430,7 +430,7 @@ export const ScenePerangPanglima: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / 30;
   const hill = EV("panglima.hill");
-  const cam = shotCam(f, [{ to: 9999, p0: [-9.5, 1.4, 2.4], l0: [-19, 3.3, 0], p1: [-11.5, 2.0, 1.4], l1: [-19, 3.6, 0], fov: 34 }]);
+  const cam = shotCam(f, [{ to: 9999, p0: [-12.5, 4.6, 9.5], l0: [-19, 3.9, 0], p1: [-12.0, 4.2, 7.0], l1: [-19, 4.0, 0], fov: 34 }]);
   const nobPose: Pose3 = { ...idle3(t, 3), armR: { swing: -0.6, out: 0.5, elbow: 1.0 }, armL: { swing: 0.2, out: 0.3, elbow: 0.6 }, head: [0, Math.sin(t * 0.5) * 0.2, 0] };
   return (
     <AbsoluteFill>

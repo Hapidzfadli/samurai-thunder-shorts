@@ -38,7 +38,7 @@ export const Terrain: React.FC<{ t: number; hillAt?: Vec3 }> = ({ t, hillAt = [-
       g.fillRect(hash(i, 2) * 256, hash(i, 3) * 256, 2 + hash(i, 4) * 3, 2 + hash(i, 5) * 3);
     }
   }, [12, 2]);
-  const trees = useMemo(() => new Array(38).fill(0).map((_, i) => ({ x: -34 + hash(i, 1) * 70, z: 16 + hash(i, 2) * 26 * (i % 2 ? 1 : -1.3), s: 0.8 + hash(i, 3) * 1.1 })), []);
+  const trees = useMemo(() => new Array(38).fill(0).map((_, i) => ({ x: -34 + hash(i, 1) * 70, z: (i % 2 ? 1 : -1) * (15 + hash(i, 2) * 30), s: 0.8 + hash(i, 3) * 1.1 })), []);
   const clouds = useMemo(() => new Array(9).fill(0).map((_, i) => ({ x: -50 + hash(i, 4) * 120, y: 24 + hash(i, 5) * 12, z: -40 - hash(i, 6) * 30, s: 5 + hash(i, 7) * 6 })), []);
   return (
     <group>
