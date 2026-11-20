@@ -15,10 +15,12 @@ import { Paket, TOTAL_FRAMES_PAKET } from "./Paket";
 import { Kos, TOTAL_FRAMES_KOS } from "./Kos";
 import { Lift, TOTAL_FRAMES_LIFT } from "./Lift";
 import { SheetLift, SheetLiftExpr } from "./SheetLift";
+import { SheetKaraoke } from "./SheetKaraoke";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="SheetKaraoke" component={SheetKaraoke} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition id="SheetLift" component={SheetLift} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition id="SheetLiftExpr" component={SheetLiftExpr} durationInFrames={1} fps={30} width={2000} height={1080} />
       <Composition

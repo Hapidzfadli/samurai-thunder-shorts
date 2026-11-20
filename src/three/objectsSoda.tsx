@@ -185,7 +185,11 @@ export type ToonParams = {
   face?: string;
   shirt: string;
   pants?: string;
-  hat?: "cap" | "bowler" | "bucket" | "hair" | "short" | "bald" | "hijab" | "none";
+  hat?: "cap" | "bowler" | "bucket" | "hair" | "short" | "bald" | "hijab" | "curlers" | "bun" | "none";
+  shades?: boolean;
+  headphones?: boolean;
+  whistle?: boolean;
+  pattern?: "batik" | "flower";
   mustache?: boolean;
   belly?: number;
   tie?: string;
@@ -199,7 +203,7 @@ export type ToonParams = {
   armR?: [number, number];
   legL?: number;
   legR?: number;
-  prop?: "can" | "box" | "none";
+  prop?: "can" | "box" | "mic" | "cane" | "none";
   canShake?: number;
   sweat?: number;
   foam?: number;
@@ -321,6 +325,29 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.lineTo(256 - 20 + i * 8, 600);
     g.stroke();
   }
+  if (p.pattern) {
+    g.strokeStyle = p.pattern === "batik" ? "rgba(255,230,160,0.75)" : "rgba(255,255,255,0.7)";
+    g.fillStyle = p.pattern === "batik" ? "rgba(255,230,160,0.35)" : "rgba(255,255,255,0.45)";
+    g.lineWidth = 3;
+    for (let r = 0; r < 6; r++)
+      for (let c = 0; c < 5; c++) {
+        const x = 170 + c * 40 + (r % 2) * 20;
+        const y = 420 + r * 32;
+        if (p.pattern === "batik") {
+          g.beginPath();
+          g.moveTo(x, y - 12);
+          g.lineTo(x + 12, y);
+          g.lineTo(x, y + 12);
+          g.lineTo(x - 12, y);
+          g.closePath();
+          g.stroke();
+        } else {
+          g.beginPath();
+          g.arc(x, y, 9, 0, 7);
+          g.fill();
+        }
+      }
+  }
   if (p.wet) {
     g.fillStyle = `rgba(20,40,80,${0.35 * p.wet})`;
     g.fillRect(150, 400, 220, 200);
@@ -377,6 +404,22 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.fillStyle = "#2563eb";
     g.fillRect(256 - 16, 528, 32, 12);
   }
+  if (p.whistle && !isBox) {
+    g.strokeStyle = "#16a34a";
+    g.lineWidth = 6;
+    g.beginPath();
+    g.moveTo(256 - 36, 412);
+    g.lineTo(256 + 20, 500);
+    g.lineTo(256 + 48, 412);
+    g.stroke();
+    g.fillStyle = "#d4d8de";
+    g.strokeStyle = INK;
+    g.lineWidth = 5;
+    g.beginPath();
+    g.roundRect(256 + 6, 496, 40, 20, 8);
+    g.fill();
+    g.stroke();
+  }
   if (p.pants) {
     g.fillStyle = p.pants;
     g.strokeStyle = INK;
@@ -392,6 +435,49 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   const handR = limb(g, [256 + shX, shY], aR[0], aR[1], 92, 88, 9, sd + 6);
   const hands: [number, number][] = [handL, handR];
   hands.forEach(([x, y], i) => inkEllipse(g, x, y, 17, 17, face, 7, sd + 7 + i));
+  if (p.prop === "mic") {
+    g.save();
+    g.translate(handR[0] + 6, handR[1] - 20);
+    g.rotate(-0.5);
+    g.fillStyle = "#2b2b33";
+    g.strokeStyle = INK;
+    g.lineWidth = 7;
+    g.beginPath();
+    g.roundRect(-9, -8, 18, 64, 8);
+    g.fill();
+    g.stroke();
+    g.fillStyle = "#c9ced6";
+    g.beginPath();
+    g.arc(0, -22, 22, 0, 7);
+    g.fill();
+    g.stroke();
+    g.strokeStyle = "rgba(0,0,0,0.35)";
+    g.lineWidth = 3;
+    for (let i = -2; i <= 2; i++) {
+      g.beginPath();
+      g.moveTo(i * 8, -40);
+      g.lineTo(i * 8, -6);
+      g.stroke();
+    }
+    g.restore();
+    inkEllipse(g, handR[0], handR[1], 17, 17, face, 7, sd + 9);
+  }
+  if (p.prop === "cane") {
+    g.strokeStyle = INK;
+    g.lineCap = "round";
+    g.lineWidth = 12;
+    g.beginPath();
+    g.moveTo(handR[0], handR[1] - 10);
+    g.lineTo(handR[0] + 10, 770);
+    g.stroke();
+    g.strokeStyle = "#a8703a";
+    g.lineWidth = 6;
+    g.beginPath();
+    g.moveTo(handR[0], handR[1] - 10);
+    g.lineTo(handR[0] + 10, 770);
+    g.stroke();
+    inkEllipse(g, handR[0], handR[1], 17, 17, face, 7, sd + 9);
+  }
   if (p.prop === "box") {
     g.save();
     g.translate(handR[0] + 10, handR[1] - 26);
@@ -694,6 +780,43 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.closePath();
     g.fill();
     g.stroke();
+  } else if (hat === "curlers") {
+    g.fillStyle = hc;
+    g.strokeStyle = INK;
+    g.lineWidth = 10;
+    g.beginPath();
+    g.moveTo(hx - 150, hy + 10);
+    g.bezierCurveTo(hx - 190, hy - 160, hx + 190, hy - 160, hx + 150, hy + 10);
+    g.bezierCurveTo(hx + 110, hy - 50, hx + 40, hy - 80, hx - 20, hy - 82);
+    g.bezierCurveTo(hx - 80, hy - 76, hx - 126, hy - 40, hx - 150, hy + 10);
+    g.closePath();
+    g.fill();
+    g.stroke();
+    [-90, -30, 30, 90].forEach((dx, i) => {
+      g.fillStyle = ["#f472b6", "#60a5fa", "#fbbf24", "#34d399"][i];
+      g.strokeStyle = INK;
+      g.lineWidth = 6;
+      g.beginPath();
+      g.roundRect(hx + dx - 20, hy - 150 + Math.abs(dx) * 0.18, 40, 52, 14);
+      g.fill();
+      g.stroke();
+    });
+  } else if (hat === "bun") {
+    g.fillStyle = hc;
+    g.strokeStyle = INK;
+    g.lineWidth = 10;
+    g.beginPath();
+    g.arc(hx, hy - 150, 46, 0, 7);
+    g.fill();
+    g.stroke();
+    g.beginPath();
+    g.moveTo(hx - 146, hy - 10);
+    g.bezierCurveTo(hx - 170, hy - 140, hx + 170, hy - 140, hx + 146, hy - 10);
+    g.bezierCurveTo(hx + 100, hy - 60, hx + 30, hy - 80, hx - 20, hy - 80);
+    g.bezierCurveTo(hx - 80, hy - 76, hx - 126, hy - 50, hx - 146, hy - 10);
+    g.closePath();
+    g.fill();
+    g.stroke();
   } else if (hat === "bald") {
     g.strokeStyle = INK;
     g.lineWidth = 9;
@@ -737,6 +860,50 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     inkEllipse(g, hx, hy - 105, 160, 26, hc, 10, sd + 52);
   }
 
+  if (p.shades) {
+    g.fillStyle = "#111";
+    g.strokeStyle = INK;
+    g.lineWidth = 8;
+    ex.forEach((x) => {
+      g.beginPath();
+      g.roundRect(x - 46, hy - 40, 92, 58, 18);
+      g.fill();
+      g.stroke();
+    });
+    g.beginPath();
+    g.moveTo(ex[0] + 46, hy - 22);
+    g.lineTo(ex[1] - 46, hy - 22);
+    g.stroke();
+    g.strokeStyle = "rgba(255,255,255,0.6)";
+    g.lineWidth = 5;
+    ex.forEach((x) => {
+      g.beginPath();
+      g.moveTo(x - 26, hy - 28);
+      g.lineTo(x - 8, hy - 28);
+      g.stroke();
+    });
+  }
+  if (p.headphones) {
+    g.strokeStyle = "#16a34a";
+    g.lineWidth = 16;
+    g.beginPath();
+    g.arc(hx, hy, 160, Math.PI * 1.08, Math.PI * 1.92);
+    g.stroke();
+    g.strokeStyle = INK;
+    g.lineWidth = 6;
+    g.beginPath();
+    g.arc(hx, hy, 168, Math.PI * 1.08, Math.PI * 1.92);
+    g.stroke();
+    [-1, 1].forEach((sg) => {
+      g.fillStyle = "#22c55e";
+      g.strokeStyle = INK;
+      g.lineWidth = 7;
+      g.beginPath();
+      g.roundRect(hx + sg * 150 - 26, hy - 40, 52, 90, 20);
+      g.fill();
+      g.stroke();
+    });
+  }
   if (p.glasses) {
     g.strokeStyle = INK;
     g.lineWidth = 8;
