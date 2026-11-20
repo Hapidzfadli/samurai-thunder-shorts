@@ -1,0 +1,131 @@
+{
+ "fps": 30,
+ "total_frames": 1305,
+ "scenes": {
+  "hook": 210,
+  "lorong": 240,
+  "kucing": 195,
+  "tangan": 210,
+  "twist": 210,
+  "akhir": 240
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Jam dua pagi. Misi malam ini: ambil remote TV.",
+   "from": 4,
+   "to": 96
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Targetnya, ada di tangan ayah.",
+   "from": 102,
+   "to": 151
+  },
+  "lorong_1": {
+   "scene": "lorong",
+   "text": "Satu langkah. Dua langkah.",
+   "from": 4,
+   "to": 56
+  },
+  "lorong_2": {
+   "scene": "lorong",
+   "text": "Jangan berisik, jangan berisik.",
+   "from": 64,
+   "to": 115
+  },
+  "lorong_3": {
+   "scene": "lorong",
+   "text": "Lantai berderit. Bima membeku.",
+   "from": 132,
+   "to": 184
+  },
+  "kucing_1": {
+   "scene": "kucing",
+   "text": "Tapi, ada penjaga di ruangan itu.",
+   "from": 4,
+   "to": 57
+  },
+  "kucing_2": {
+   "scene": "kucing",
+   "text": "Mpus, kita teman, kan?",
+   "from": 66,
+   "to": 111
+  },
+  "tangan_1": {
+   "scene": "tangan",
+   "text": "Sedikit lagi. Sedikit lagi.",
+   "from": 4,
+   "to": 52
+  },
+  "tangan_2": {
+   "scene": "tangan",
+   "text": "Dengkur ayah, berhenti.",
+   "from": 67,
+   "to": 110
+  },
+  "twist_1": {
+   "scene": "twist",
+   "text": "Mau ini?",
+   "from": 9,
+   "to": 37
+  },
+  "twist_2": {
+   "scene": "twist",
+   "text": "Hah?!",
+   "from": 45,
+   "to": 70
+  },
+  "twist_3": {
+   "scene": "twist",
+   "text": "Jam berapa ini?!",
+   "from": 87,
+   "to": 122
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Akhirnya, satu keluarga nonton bareng, sampai jam dua pagi.",
+   "from": 6,
+   "to": 90
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Besok sekolah.",
+   "from": 98,
+   "to": 123
+  },
+  "akhir_3": {
+   "scene": "akhir",
+   "text": "Satu episode lagi.",
+   "from": 129,
+   "to": 165
+  }
+ },
+ "events": {
+  "hook.peek": 4,
+  "hook.title": 54,
+  "hook.target": 122,
+  "lorong.step1": 10,
+  "lorong.step2": 33,
+  "lorong.whisper": 64,
+  "lorong.creak": 135,
+  "lorong.freeze": 150,
+  "kucing.guard": 30,
+  "kucing.talk": 67,
+  "kucing.hiss": 109,
+  "tangan.reach": 9,
+  "tangan.near": 32,
+  "tangan.snore": 74,
+  "tangan.stop": 93,
+  "twist.eye": 5,
+  "twist.say": 9,
+  "twist.hah": 45,
+  "twist.light": 80,
+  "twist.ibu": 87,
+  "akhir.sit": 27,
+  "akhir.ibu": 99,
+  "akhir.bima": 130,
+  "akhir.card": 171
+ },
+ "stepF": {}
+}

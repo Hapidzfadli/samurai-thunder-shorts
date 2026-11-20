@@ -19,6 +19,7 @@ import { SheetKaraoke } from "./SheetKaraoke";
 import { SheetMisi } from "./SheetMisi";
 import { MotionTest, MOTION_TEST_FRAMES } from "./MotionTest";
 import { RigTest, RIG_TEST_FRAMES } from "./RigTest";
+import { Misi, TOTAL_FRAMES_MISI } from "./Misi";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
 
 export const RemotionRoot: React.FC = () => {
@@ -28,6 +29,14 @@ export const RemotionRoot: React.FC = () => {
         id="Karaoke"
         component={Karaoke}
         durationInFrames={TOTAL_FRAMES_KARAOKE}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="Misi"
+        component={Misi}
+        durationInFrames={TOTAL_FRAMES_MISI}
         fps={30}
         width={1080}
         height={1920}
