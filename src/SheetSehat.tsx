@@ -5,8 +5,8 @@ import { CameraRig } from "./three/objects";
 import { Body, Rig3D, idle3 } from "./three/objectsRig";
 import { Bacteria } from "./three/objectsLift";
 
-const SINTA: Body = { shirt: "#f6a6c0", pants: "#f6a6c0", hair: "#2a1a10", hairStyle: "bun", height: 0.93, slim: 0.95, belly: 0.25, sarong: true };
-const DIMAS: Body = { shirt: "#3b82c4", pants: "#2b3350", hair: "#2a1a10", hairStyle: "messy", height: 1.02, glasses: true };
+const ASTI: Body = { shirt: "#f6a6c0", pants: "#f6a6c0", hair: "#2a1a10", hairStyle: "bun", height: 0.93, slim: 0.95, belly: 0.25, sarong: true };
+const HAPID: Body = { shirt: "#3b82c4", pants: "#2b3350", hair: "#2a1a10", hairStyle: "messy", height: 1.02, glasses: true };
 const BIDAN: Body = { shirt: "#f4f6f8", pants: "#f4f6f8", hair: "#2a1a10", hairStyle: "bun", height: 0.95, slim: 0.95, sarong: true, shoes: "#e5e7eb" };
 
 const Blob: React.FC<{ x: number; color: string; hat: string; t: number; seed: number; nose?: boolean; mail?: boolean }> = ({ x, color, t, seed, nose, mail }) => (
@@ -31,10 +31,10 @@ export const SheetSehat: React.FC = () => {
   const t = 0.4;
   const idle = idle3(t, 1);
   const labels: [string, string, string][] = [
-    ["Bu Sinta", "TOKOH UTAMA · hamil muda", "Ibu muda yang sedang hamil trimester pertama. Ceria, tapi kini setiap aroma nasi goreng terasa seperti musuh."],
-    ["Pak Dimas", "Suami yang panik", "Penuh niat baik, kikuk di dapur, dan selalu salah menafsirkan gejala. Pembawa humor sepanjang cerita."],
+    ["Bu Asti", "TOKOH UTAMA · hamil muda", "Ibu muda yang sedang hamil trimester pertama. Ceria, tapi kini setiap aroma nasi goreng terasa seperti musuh."],
+    ["Pak Hapid", "Suami yang panik", "Penuh niat baik, kikuk di dapur, dan selalu salah menafsirkan gejala. Pembawa humor sepanjang cerita."],
     ["Bu Bidan Ratih", "Pemandu edukasi", "Tenang, hangat, menjelaskan dengan perumpamaan sederhana, lalu mengajak 'masuk ke dalam tubuh'."],
-    ["Kurir hCG & Estrogen", "Penghuni tubuh", "Makhluk-makhluk kecil bersurat yang membanjiri kota tubuh Bu Sinta di awal kehamilan."],
+    ["Kurir hCG & Estrogen", "Penghuni tubuh", "Makhluk-makhluk kecil bersurat yang membanjiri kota tubuh Bu Asti di awal kehamilan."],
     ["Satpam Hidung", "Penghuni tubuh", "Penjaga bau yang mendadak super peka dan membunyikan alarm pada hampir semua aroma."],
   ];
   return (
@@ -45,8 +45,8 @@ export const SheetSehat: React.FC = () => {
           <planeGeometry args={[40, 20]} />
           <meshStandardMaterial color="#f3e3d3" roughness={1} />
         </mesh>
-        <Rig3D position={[-4.6, 0, 0]} rotationY={0.2} t={t} body={SINTA} pose={{ ...idle, armR: { swing: -0.4, out: 0.2, elbow: 1.0 }, armL: { swing: -0.4, out: 0.2, elbow: 0.8 } }} expr="worried" seed={1} />
-        <Rig3D position={[-2.3, 0, 0]} rotationY={0.1} t={t} body={DIMAS} pose={{ ...idle, armR: { swing: -1.2, out: 0.5, elbow: 0.5 }, armL: { swing: -1.2, out: 0.5, elbow: 0.5 } }} expr="surprised" seed={2} />
+        <Rig3D position={[-4.6, 0, 0]} rotationY={0.2} t={t} body={ASTI} pose={{ ...idle, armR: { swing: -0.4, out: 0.2, elbow: 1.0 }, armL: { swing: -0.4, out: 0.2, elbow: 0.8 } }} expr="worried" seed={1} />
+        <Rig3D position={[-2.3, 0, 0]} rotationY={0.1} t={t} body={HAPID} pose={{ ...idle, armR: { swing: -1.2, out: 0.5, elbow: 0.5 }, armL: { swing: -1.2, out: 0.5, elbow: 0.5 } }} expr="surprised" seed={2} />
         <Rig3D position={[0.1, 0, 0]} rotationY={-0.1} t={t} body={BIDAN} pose={{ ...idle, armR: { swing: -0.5, out: 0.6, elbow: 1.0 } }} expr="happy" seed={3} />
         <Blob x={2.5} color="#ffd23f" hat="" t={t} seed={1} mail />
         <Blob x={3.9} color="#ff8fb1" hat="" t={t} seed={2} />
