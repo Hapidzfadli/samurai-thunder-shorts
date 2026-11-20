@@ -1,0 +1,151 @@
+{
+ "fps": 30,
+ "total_frames": 1535,
+ "scenes": {
+  "hook": 180,
+  "kasur": 235,
+  "celana": 180,
+  "kulkas": 180,
+  "warung": 273,
+  "makan": 212,
+  "akhir": 275
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Tanggal dua puluh sembilan. Saldo Rendi, empat ribu lima ratus.",
+   "from": 4,
+   "to": 80
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Perutnya keroncongan, dompetnya cuma berisi doa.",
+   "from": 85,
+   "to": 156
+  },
+  "kasur_1": {
+   "scene": "kasur",
+   "text": "Rendi membongkar kasur, siapa tahu ada uang terselip.",
+   "from": 4,
+   "to": 85
+  },
+  "kasur_2": {
+   "scene": "kasur",
+   "text": "Yang ketemu, cuma debu, kecoa, dan sebelah kaus kaki.",
+   "from": 90,
+   "to": 178
+  },
+  "kasur_3": {
+   "scene": "kasur",
+   "text": "Permisi, ini kontrakan saya.",
+   "from": 181,
+   "to": 226
+  },
+  "celana_1": {
+   "scene": "celana",
+   "text": "Di kantong celana lama, ada kertas. Uang, kah?",
+   "from": 4,
+   "to": 74
+  },
+  "celana_2": {
+   "scene": "celana",
+   "text": "Ternyata, struk fotokopi tahun lalu.",
+   "from": 81,
+   "to": 135
+  },
+  "kulkas_1": {
+   "scene": "kulkas",
+   "text": "Kulkas dibuka. Isinya, lampu, dan saus sachet.",
+   "from": 4,
+   "to": 91
+  },
+  "kulkas_2": {
+   "scene": "kulkas",
+   "text": "Bahkan jangkrik pun, nggak mau tinggal di sana.",
+   "from": 97,
+   "to": 153
+  },
+  "warung_1": {
+   "scene": "warung",
+   "text": "Akhirnya, Rendi ke warung. Mie instan, tiga ribu lima ratus.",
+   "from": 4,
+   "to": 84
+  },
+  "warung_2": {
+   "scene": "warung",
+   "text": "Telur, dua ribu lima ratus. Uangnya kurang seribu.",
+   "from": 89,
+   "to": 155
+  },
+  "warung_3": {
+   "scene": "warung",
+   "text": "Bu, boleh setengah telurnya?",
+   "from": 160,
+   "to": 214
+  },
+  "warung_4": {
+   "scene": "warung",
+   "text": "Ini warung, bukan lelang.",
+   "from": 220,
+   "to": 264
+  },
+  "makan_1": {
+   "scene": "makan",
+   "text": "Malam itu, Rendi makan mie polos, sambil membayangkan telur.",
+   "from": 4,
+   "to": 104
+  },
+  "makan_2": {
+   "scene": "makan",
+   "text": "Telurnya bersinar, melayang, lalu berubah jadi mie lagi.",
+   "from": 109,
+   "to": 203
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Tiba-tiba, HP bergetar. Transfer masuk, lima puluh ribu, dari Ibu.",
+   "from": 6,
+   "to": 110
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Nak, ini buat beli telur.",
+   "from": 118,
+   "to": 163
+  },
+  "akhir_3": {
+   "scene": "akhir",
+   "text": "Rendi menangis haru. Ibu, selalu tahu.",
+   "from": 171,
+   "to": 230
+  }
+ },
+ "events": {
+  "hook.balance": 46,
+  "hook.growl": 89,
+  "hook.wallet": 129,
+  "kasur.lift": 33,
+  "kasur.dust": 100,
+  "kasur.roach": 182,
+  "kasur.sock": 152,
+  "celana.reach": 25,
+  "celana.paper": 53,
+  "celana.struk": 81,
+  "kulkas.open": 13,
+  "kulkas.sauce": 60,
+  "kulkas.cricket": 98,
+  "warung.in": 4,
+  "warung.egg": 89,
+  "warung.ask": 161,
+  "warung.no": 221,
+  "makan.eat": 4,
+  "makan.dream": 74,
+  "makan.egg": 110,
+  "makan.back": 175,
+  "akhir.buzz": 6,
+  "akhir.read": 118,
+  "akhir.cry": 171,
+  "akhir.card": 235
+ },
+ "stepF": {}
+}
