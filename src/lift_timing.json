@@ -1,0 +1,161 @@
+{
+ "fps": 30,
+ "total_frames": 1628,
+ "scenes": {
+  "hook": 180,
+  "perut": 293,
+  "naik": 240,
+  "bau": 240,
+  "tuduh": 240,
+  "buka": 180,
+  "akhir": 255
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Lift penuh. Tujuannya, lantai dua puluh.",
+   "from": 4,
+   "to": 60
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Dan Pak Budi, baru makan jengkol.",
+   "from": 65,
+   "to": 129
+  },
+  "hook_3": {
+   "scene": "hook",
+   "text": "Perutnya berbunyi.",
+   "from": 135,
+   "to": 171
+  },
+  "perut_1": {
+   "scene": "perut",
+   "text": "Di dalam perutnya, bakteri pesta pora, menguraikan jengkol dan menghasilkan gas.",
+   "from": 4,
+   "to": 137
+  },
+  "perut_2": {
+   "scene": "perut",
+   "text": "Tekanan naik. Rata-rata orang kentut empat belas kali sehari.",
+   "from": 142,
+   "to": 249
+  },
+  "perut_3": {
+   "scene": "perut",
+   "text": "Hore, pesta!",
+   "from": 253,
+   "to": 284
+  },
+  "naik_1": {
+   "scene": "naik",
+   "text": "Lantai tujuh. Pak Budi berkeringat dingin.",
+   "from": 4,
+   "to": 71
+  },
+  "naik_2": {
+   "scene": "naik",
+   "text": "Lantai dua belas. Dia nggak kuat lagi.",
+   "from": 76,
+   "to": 98
+  },
+  "naik_3": {
+   "scene": "naik",
+   "text": "Tanpa suara. Tapi mematikan.",
+   "from": 113,
+   "to": 175
+  },
+  "bau_1": {
+   "scene": "bau",
+   "text": "Baunya dari gas hidrogen sulfida, hasil kerja bakteri usus.",
+   "from": 4,
+   "to": 92
+  },
+  "bau_2": {
+   "scene": "bau",
+   "text": "Hidung manusia bisa mencium gas ini, meski cuma sedikit.",
+   "from": 97,
+   "to": 175
+  },
+  "tuduh_1": {
+   "scene": "tuduh",
+   "text": "Semua langsung saling menuduh.",
+   "from": 4,
+   "to": 50
+  },
+  "tuduh_2": {
+   "scene": "tuduh",
+   "text": "Siapa ini, ya ampun!",
+   "from": 53,
+   "to": 95
+  },
+  "tuduh_3": {
+   "scene": "tuduh",
+   "text": "Bukan saya, Pak!",
+   "from": 98,
+   "to": 127
+  },
+  "tuduh_4": {
+   "scene": "tuduh",
+   "text": "Wah, baunya, parah banget ya.",
+   "from": 135,
+   "to": 181
+  },
+  "buka_1": {
+   "scene": "buka",
+   "text": "Pintu terbuka di lantai dua puluh.",
+   "from": 4,
+   "to": 53
+  },
+  "buka_2": {
+   "scene": "buka",
+   "text": "Di sana, HRD sudah menunggu Pak Budi, untuk wawancara kerja.",
+   "from": 58,
+   "to": 158
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Selamat pagi, Pak Budi. Kita, sudah bertemu.",
+   "from": 6,
+   "to": 69
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Pak Budi tidak diterima. Tapi dia sangat berkesan.",
+   "from": 77,
+   "to": 158
+  },
+  "akhir_3": {
+   "scene": "akhir",
+   "text": "Lain kali, cari toilet dulu.",
+   "from": 166,
+   "to": 210
+  }
+ },
+ "events": {
+  "hook.enter": 21,
+  "hook.stomach": 103,
+  "hook.rumble": 136,
+  "perut.party": 31,
+  "perut.gas": 97,
+  "perut.press": 143,
+  "perut.cheer": 253,
+  "naik.seven": 4,
+  "naik.sweat": 44,
+  "naik.twelve": 76,
+  "naik.release": 114,
+  "bau.cloud": 4,
+  "bau.nose": 98,
+  "tuduh.start": 4,
+  "tuduh.ibu": 54,
+  "tuduh.magang": 99,
+  "tuduh.budi": 136,
+  "buka.door": 31,
+  "buka.hrd": 59,
+  "akhir.ceo": 6,
+  "akhir.verdict": 78,
+  "akhir.tip": 166,
+  "akhir.card": 216
+ },
+ "stepF": {}
+}
