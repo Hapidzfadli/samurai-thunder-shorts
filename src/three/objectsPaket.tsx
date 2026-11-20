@@ -8,7 +8,7 @@ const M: React.FC<React.ComponentProps<"mesh">> = (props) => <mesh castShadow re
 /* ------------------------------------------------------------------ */
 /* Bedroom / cafe                                                       */
 /* ------------------------------------------------------------------ */
-export const Kamar: React.FC<{ t: number; variant?: "rina" | "cafe"; clock?: string; screen?: string; progress?: number }> = ({ t, variant = "rina", clock = "23:59", screen = "MENGIRIM", progress = 0.9 }) => {
+export const Kamar: React.FC<{ t: number; variant?: "rina" | "cafe"; clock?: string; screen?: string; progress?: number; sign?: [string, string] | null }> = ({ t, variant = "rina", clock = "23:59", screen = "MENGIRIM", progress = 0.9, sign }) => {
   const planks = usePlanks(variant === "cafe" ? "#7b4a2a" : "#b07a48");
   const wall = useTex("wall" + variant, 512, 512, (g) => {
     g.fillStyle = variant === "cafe" ? "#7a3f26" : "#6a5acd";
@@ -40,13 +40,15 @@ export const Kamar: React.FC<{ t: number; variant?: "rina" | "cafe"; clock?: str
     g.font = "bold 54px Anton, Impact, sans-serif";
     g.textAlign = "center";
     g.fillText(screen, 256, 120);
-    g.fillStyle = "#26324f";
-    g.fillRect(56, 170, 400, 40);
-    g.fillStyle = "#4ade80";
-    g.fillRect(56, 170, 400 * progress, 40);
-    g.fillStyle = "#cfd8ff";
-    g.font = "bold 36px Inter, sans-serif";
-    g.fillText(`${Math.round(progress * 100)}%`, 256, 270);
+    if (progress >= 0) {
+      g.fillStyle = "#26324f";
+      g.fillRect(56, 170, 400, 40);
+      g.fillStyle = "#4ade80";
+      g.fillRect(56, 170, 400 * progress, 40);
+      g.fillStyle = "#cfd8ff";
+      g.font = "bold 36px Inter, sans-serif";
+      g.fillText(`${Math.round(progress * 100)}%`, 256, 270);
+    }
   });
   const cafe = variant === "cafe";
   return (
@@ -81,8 +83,9 @@ export const Kamar: React.FC<{ t: number; variant?: "rina" | "cafe"; clock?: str
         <circleGeometry args={[0.55, 24]} />
         <meshBasicMaterial map={clockTex} />
       </mesh>
-      {!cafe && <Sign position={[0.4, 3.6, -3.9]} size={[1.5, 1.0]} text="JANGAN MALAS" sub="DEADLINE" bg="#1d3557" fg="#f1faee" accent="#e63946" />}
-      {cafe && <Sign position={[0.4, 3.5, -3.9]} size={[2.2, 0.9]} text="WARUNG KOPI" sub="BUKA 24 JAM" bg="#3b2314" fg="#ffe9b0" accent="#ffb347" />}
+      {sign === undefined && !cafe && <Sign position={[0.4, 3.6, -3.9]} size={[1.5, 1.0]} text="JANGAN MALAS" sub="DEADLINE" bg="#1d3557" fg="#f1faee" accent="#e63946" />}
+      {sign === undefined && cafe && <Sign position={[0.4, 3.5, -3.9]} size={[2.2, 0.9]} text="WARUNG KOPI" sub="BUKA 24 JAM" bg="#3b2314" fg="#ffe9b0" accent="#ffb347" />}
+      {sign && <Sign position={[0.4, 3.6, -3.9]} size={[1.9, 0.9]} text={sign[0]} sub={sign[1]} bg="#4a1d6a" fg="#ffe9b0" accent="#ff9ad6" />}
       {/* desk */}
       <M position={[1.1, 0.78, -2.6]}>
         <boxGeometry args={[3.4, 0.12, 1.3]} />

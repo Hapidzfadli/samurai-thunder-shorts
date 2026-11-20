@@ -179,7 +179,7 @@ export const Sign: React.FC<{ position: Vec3; rotation?: Vec3; size: [number, nu
 /* ------------------------------------------------------------------ */
 /* Hand-drawn 2D character on a card inside the 3D world                */
 /* ------------------------------------------------------------------ */
-export type ToonExpr = "neutral" | "smirk" | "surprised" | "worried" | "happy" | "laugh" | "angry" | "nervous";
+export type ToonExpr = "neutral" | "smirk" | "surprised" | "worried" | "happy" | "laugh" | "angry" | "nervous" | "sleepy";
 export type ToonParams = {
   expr: ToonExpr;
   face?: string;
@@ -633,7 +633,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   const look = (p.look ?? 0) * 12;
   const big = p.expr === "surprised" || p.expr === "nervous" ? 1.18 : p.expr === "smirk" ? 0.95 : 1;
   ex.forEach((x, i) => {
-    const lidK = p.expr === "smirk" ? 0.55 : p.expr === "laugh" ? 0.18 : p.expr === "happy" ? 0.75 : 1;
+    const lidK = p.expr === "smirk" ? 0.55 : p.expr === "laugh" || p.expr === "sleepy" ? 0.18 : p.expr === "happy" ? 0.75 : 1;
     inkEllipse(g, x, hy - 10, 33 * big, 36 * big * lidK, "#ffffff", 8, sd + 20 + i);
     if (lidK > 0.4) {
       g.fillStyle = INK;
@@ -982,7 +982,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   g.restore();
 };
 
-export const ToonSprite: React.FC<{ position: Vec3; height?: number; yaw?: number; params: ToonParams; flip?: boolean; shadow?: boolean }> = ({ position, height = 2.1, yaw = 0, params, flip = false, shadow = true }) => {
+export const ToonSprite: React.FC<{ position: Vec3; height?: number; yaw?: number; roll?: number; params: ToonParams; flip?: boolean; shadow?: boolean }> = ({ position, height = 2.1, yaw = 0, roll = 0, params, flip = false, shadow = true }) => {
   const { cv, tex } = useMemo(() => {
     const cv = document.createElement("canvas");
     cv.width = CW;
@@ -997,10 +997,12 @@ export const ToonSprite: React.FC<{ position: Vec3; height?: number; yaw?: numbe
   const w = (height * CW) / CH;
   return (
     <group position={position} rotation={[0, yaw, 0]}>
+      <group rotation={[0, 0, roll]}>
       <mesh position={[0, height / 2 - height * 0.0375, 0]} scale={[flip ? -1 : 1, 1, 1]}>
         <planeGeometry args={[w, height]} />
         <meshBasicMaterial map={tex} transparent alphaTest={0.05} toneMapped={false} color="#fff3e2" side={THREE.DoubleSide} />
       </mesh>
+      </group>
       {shadow && (
         <mesh position={[0.15, 0.012, 0.05]} rotation={[-Math.PI / 2, 0, 0.15]} scale={[1, 0.34, 1]}>
           <circleGeometry args={[0.62 * (height / 2.1), 20]} />
