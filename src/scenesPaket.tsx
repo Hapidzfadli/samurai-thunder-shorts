@@ -163,7 +163,7 @@ const Look: React.FC<{ tint?: string }> = ({ tint = "rgba(30,20,60,0)" }) => (
 /* Characters                                                            */
 /* ------------------------------------------------------------------ */
 const yawTo = (x: number, z: number, cam: Cam) => Math.max(-0.6, Math.min(0.6, Math.atan2(cam.pos[0] - x, cam.pos[2] - z) * 0.8));
-const paket: ToonParams = { expr: "worried", shirt: "#d49a4a", pants: "#5a3a1c", hat: "cap", hatColor: "#1d4ed8", tape: true, seed: 5 };
+const paket: ToonParams = { expr: "worried", shirt: "#d49a4a", kind: "box", seed: 5 };
 const rina: ToonParams = { expr: "worried", shirt: "#ff6b9d", pants: "#3a3a5a", hat: "hair", hatColor: "#1a1210", seed: 2 };
 const dosen: ToonParams = { expr: "neutral", shirt: "#6b7280", pants: "#27272a", hat: "bowler", hatColor: "#3f3f46", glasses: true, seed: 9 };
 const petugas: ToonParams = { expr: "neutral", shirt: "#16a34a", pants: "#1f2937", hat: "cap", hatColor: "#14532d", seed: 12 };
@@ -246,7 +246,7 @@ export const ScenePaketRouter: React.FC = () => {
         </mesh>
         <Router position={[2.3, 0.7, -1]} t={t} scale={1.1} mad={mad} />
         {QUEUE.map((c, i) => (
-          <ToonSprite key={i} position={[-3.4 + i * 0.75 + (f > say ? 0 : 0), 0, -0.6 - (i % 2) * 0.15]} height={1.55} yaw={0.2} params={{ expr: i % 2 ? "neutral" : "worried", shirt: c, pants: "#334155", hat: i % 3 === 0 ? "cap" : "none", hatColor: "#475569", seed: 20 + i, armL: [-0.3, 0.9], armR: [0.3, -0.9], squash: Math.sin(t * 2 + i) * 0.15, look: 0.5 }} />
+          <ToonSprite key={i} position={[-3.4 + i * 0.75 + (f > say ? 0 : 0), 0, -0.6 - (i % 2) * 0.15]} height={1.55} yaw={0.2} params={{ expr: i % 2 ? "neutral" : "worried", shirt: c, kind: "box", seed: 20 + i, armL: [-0.3, 0.9], armR: [0.3, -0.9], squash: Math.sin(t * 2 + i) * 0.15, look: 0.5 }} />
         ))}
         <ToonSprite position={[px, 0, 0.7]} yaw={yawTo(px, 0.7, cam)} height={1.9} params={pakP} />
         <ambientLight intensity={1.6} color="#c9d6ff" />
@@ -300,7 +300,7 @@ export const ScenePaketTiang: React.FC = () => {
             <sphereGeometry args={[1.55 * fl, 16, 12]} />
             <meshBasicMaterial color="#bfe3ff" transparent opacity={0.28} depthWrite={false} />
           </mesh>
-          <ToonSprite position={[0, -2.0, 0]} height={2.0} yaw={0.15} params={{ ...paket, ...run(f, 1.3), expr: "happy", face: "#e0f2fe" }} shadow={false} />
+          <ToonSprite position={[0, -2.0, 0]} height={2.0} yaw={0.15} params={{ ...paket, ...run(f, 1.3), expr: "happy", shirt: "#dbeafe" }} shadow={false} />
         </Stage>
         <Look tint="rgba(0,60,160,0.15)" />
         <Timer scene="tiang" />
@@ -438,7 +438,7 @@ export const ScenePaketBts: React.FC = () => {
     <AbsoluteFill>
       <Stage cam={cam} bg="linear-gradient(#0b1030, #2b2f6b 65%, #7a5fa8)">
         <BtsHill t={t} wave={wave} />
-        {f >= fly - 4 && <ToonSprite position={[fx, fy, -5.5]} height={1.4 * (1 - 0.35 * k)} yaw={0} params={{ ...paket, expr: "happy", armL: [-2.5, -0.2], armR: [2.5, 0.2], face: "#e0f2fe", squash: Math.sin(f * 0.6) * 0.2 }} shadow={false} />}
+        {f >= fly - 4 && <ToonSprite position={[fx, fy, -5.5]} height={1.4 * (1 - 0.35 * k)} yaw={0} params={{ ...paket, expr: "happy", armL: [-2.5, -0.2], armR: [2.5, 0.2], shirt: "#dbeafe", squash: Math.sin(f * 0.6) * 0.2 }} shadow={false} />}
       </Stage>
       <Look tint="rgba(30,40,120,0.2)" />
       <Timer scene="bts" />

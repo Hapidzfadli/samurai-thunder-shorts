@@ -189,6 +189,7 @@ export type ToonParams = {
   glasses?: boolean;
   tape?: boolean;
   small?: boolean;
+  kind?: "person" | "box"; // a cardboard-box character (data packet)
   hatColor?: string;
   armL?: [number, number]; // [upper, fore-relative] radians from straight down, + = toward screen-right
   armR?: [number, number];
@@ -273,6 +274,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   const face = p.face ?? "#ffffff";
 
   // legs
+  const isBox = p.kind === "box";
   const legTop = 565;
   const lh = limb(g, [256 - 36, legTop], p.legL ?? 0.04, -0.02, 105, 105, 9, sd + 1);
   const rh = limb(g, [256 + 36, legTop], p.legR ?? -0.04, 0.02, 105, 105, 9, sd + 2);
@@ -282,10 +284,12 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   // back arm (left side of screen)
   const aL = p.armL ?? [-0.22, -0.1];
   const aR = p.armR ?? [0.22, 0.1];
-  const handL = limb(g, [256 - 64, 425], aL[0], aL[1], 92, 88, 9, sd + 5);
+  const shX = isBox ? 150 : 64;
+  const shY = isBox ? 440 : 425;
+  const handL = limb(g, [256 - shX, shY], aL[0], aL[1], 92, 88, 9, sd + 5);
 
-  // torso
   const shirt = p.shirt;
+  if (!isBox) {
   g.save();
   g.fillStyle = shirt;
   g.strokeStyle = INK;
@@ -344,8 +348,9 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.stroke();
   }
 
+  }
   // front arm (right side of screen) + prop
-  const handR = limb(g, [256 + 64, 425], aR[0], aR[1], 92, 88, 9, sd + 6);
+  const handR = limb(g, [256 + shX, shY], aR[0], aR[1], 92, 88, 9, sd + 6);
   const hands: [number, number][] = [handL, handR];
   hands.forEach(([x, y], i) => inkEllipse(g, x, y, 17, 17, face, 7, sd + 7 + i));
   if (p.prop === "can") {
@@ -379,8 +384,74 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
 
   // head
   const hx = 256;
-  const hy = 240;
-  inkEllipse(g, hx, hy, 148, 138, face, 11, sd + 10);
+  const hy = isBox ? 425 : 240;
+  if (isBox) {
+    const bx = 106;
+    const by = 280;
+    const bw = 300;
+    const bh = 290;
+    // open top flaps
+    g.fillStyle = "#b9803a";
+    g.strokeStyle = INK;
+    g.lineWidth = 9;
+    g.lineJoin = "round";
+    g.beginPath();
+    g.moveTo(bx + 6, by + 6);
+    g.lineTo(bx - 40, by - 52);
+    g.lineTo(bx + 120, by - 20);
+    g.closePath();
+    g.fill();
+    g.stroke();
+    g.beginPath();
+    g.moveTo(bx + bw - 6, by + 6);
+    g.lineTo(bx + bw + 40, by - 52);
+    g.lineTo(bx + bw - 120, by - 20);
+    g.closePath();
+    g.fill();
+    g.stroke();
+    // body
+    g.fillStyle = p.shirt;
+    g.beginPath();
+    g.roundRect(bx, by, bw, bh, 18);
+    g.fill();
+    g.stroke();
+    g.save();
+    g.beginPath();
+    g.roundRect(bx, by, bw, bh, 18);
+    g.clip();
+    g.strokeStyle = "rgba(0,0,0,0.16)";
+    g.lineWidth = 3;
+    for (let i = 0; i < 18; i++) {
+      g.beginPath();
+      g.moveTo(bx + 150 + i * 9, by);
+      g.lineTo(bx + 110 + i * 9, by + bh);
+      g.stroke();
+    }
+    // tape across the top
+    g.fillStyle = "rgba(245,225,170,0.95)";
+    g.fillRect(bx, by + 18, bw, 30);
+    g.strokeStyle = INK;
+    g.lineWidth = 5;
+    g.strokeRect(bx, by + 18, bw, 30);
+    g.restore();
+    // shipping label with a data icon
+    g.fillStyle = "#ffffff";
+    g.strokeStyle = INK;
+    g.lineWidth = 5;
+    g.fillRect(bx + 196, by + 208, 92, 62);
+    g.strokeRect(bx + 196, by + 208, 92, 62);
+    g.fillStyle = "#1d4ed8";
+    g.font = "bold 24px Anton, Impact, sans-serif";
+    g.textAlign = "center";
+    g.fillText("DATA", bx + 242, by + 236);
+    g.fillStyle = INK;
+    for (let i = 0; i < 12; i++) g.fillRect(bx + 204 + i * 6.4, by + 244, 2 + (i % 3), 18);
+    // wet / glow tint
+    if (p.wet) {
+      g.fillStyle = `rgba(120,180,255,${0.15 * p.wet})`;
+      g.fillRect(bx, by, bw, bh);
+    }
+  } else inkEllipse(g, hx, hy, 148, 138, face, 11, sd + 10);
   if (p.wet) {
     g.fillStyle = `rgba(120,180,255,${0.15 * p.wet})`;
     g.beginPath();
@@ -388,6 +459,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.fill();
   }
   // cheek hatch
+  if (!isBox) {
   g.strokeStyle = "rgba(0,0,0,0.12)";
   g.lineWidth = 3;
   for (let i = 0; i < 9; i++) {
@@ -395,6 +467,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
     g.moveTo(hx + 80 + i * 6, hy + 40 - i * 4);
     g.lineTo(hx + 60 + i * 6, hy + 100 - i * 6);
     g.stroke();
+  }
   }
 
   // eyes
@@ -480,7 +553,7 @@ export const drawToon = (g: CanvasRenderingContext2D, p: ToonParams) => {
   }
 
   // hat
-  const hat = p.hat ?? "none";
+  const hat = isBox ? "none" : (p.hat ?? "none");
   const hc = p.hatColor ?? "#222";
   if (hat === "cap") {
     g.fillStyle = hc;
