@@ -83,6 +83,30 @@ const limb = (c: CanvasRenderingContext2D, x: number, y: number, l1: number, l2:
   return [h[0], h[1], a[0] + a[1]];
 };
 
+
+/** wide robe sleeve over the upper arm and half the forearm */
+const sleeve = (c: CanvasRenderingContext2D, x: number, y: number, a: [number, number], col: string, trim?: string) => {
+  const e = tip(x, y, 130, a[0]);
+  const m = tip(e[0], e[1], 70, a[0] + a[1]);
+  const band = (p0: [number, number], p1: [number, number], w0: number, w1: number, fill: string) => {
+    const dx = p1[0] - p0[0];
+    const dy = p1[1] - p0[1];
+    const L = Math.hypot(dx, dy) || 1;
+    const nx = -dy / L;
+    const ny = dx / L;
+    poly(c, [[p0[0] + nx * w0, p0[1] + ny * w0], [p1[0] + nx * w1, p1[1] + ny * w1], [p1[0] - nx * w1, p1[1] - ny * w1], [p0[0] - nx * w0, p0[1] - ny * w0]], fill, INKC, 6);
+  };
+  band([x, y], e, 18, 20, col);
+  band(e, m, 20, 27, col);
+  if (trim) band(tip(e[0], e[1], 56, a[0] + a[1]), m, 25, 27, trim);
+  c.fillStyle = col;
+  c.beginPath();
+  c.arc(e[0], e[1], 19, 0, Math.PI * 2);
+  c.fill();
+};
+const slipper = (c: CanvasRenderingContext2D, x: number, y: number, col: string) => {
+  poly(c, [[x - 18, y - 16], [x + 30, y - 14], [x + 58, y - 22], [x + 62, y - 34], [x + 70, y - 22], [x + 56, y + 6], [x - 20, y + 6]], col, INKC, 6);
+};
 const drawProp = (c: CanvasRenderingContext2D, p: BeanParams, hx: number, hy: number, ang: number) => {
   if (!p.prop || p.prop === "none") return;
   c.save();
@@ -189,8 +213,10 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   // far leg + arm
   limb(c, 280, hipY, 165, 170, lL, 10);
   const footL = tip(...tip(280, hipY, 165, lL[0]), 170, lL[0] + lL[1]);
-  seg(c, footL[0], footL[1], footL[0] + 40, footL[1], 10);
+  if (p.robe) slipper(c, footL[0], footL[1], p.robeTrim ?? "#8a3a2a");
+  else seg(c, footL[0], footL[1], footL[0] + 40, footL[1], 10);
   const handL = limb(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, 130, 120, aL, 9);
+  if (p.robe) sleeve(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, aL, p.robe, p.robeTrim ?? p.sash);
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handL[0], handL[1], 12, 0, Math.PI * 2);
@@ -243,7 +269,8 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   // near leg
   limb(c, 322, hipY, 165, 170, lR, 10);
   const footR = tip(...tip(322, hipY, 165, lR[0]), 170, lR[0] + lR[1]);
-  seg(c, footR[0], footR[1], footR[0] + 40, footR[1], 10);
+  if (p.robe) slipper(c, footR[0], footR[1], p.robeTrim ?? "#8a3a2a");
+  else seg(c, footR[0], footR[1], footR[0] + 40, footR[1], 10);
   if (p.robe) {
     const wd = p.wide ?? 1;
     poly(c, [[300 - 56 * wd + tx, shY - 2], [300 + 56 * wd + tx, shY - 2], [300 + 92 * wd, 905], [300 - 92 * wd, 905]], p.robe, INKC, 8);
@@ -252,6 +279,26 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
       seg(c, 300 - 90 * wd, 896, 300 + 90 * wd, 896, 10, p.robeTrim);
     }
     if (p.sash) poly(c, [[300 - 66 * wd, hipY - 20], [300 + 66 * wd, hipY - 20], [300 + 68 * wd, hipY + 14], [300 - 68 * wd, hipY + 14]], p.sash, INKC, 4);
+    // shading on the far side + folds
+    c.save();
+    c.beginPath();
+    c.moveTo(300 + 20 * wd + tx, shY);
+    c.lineTo(300 + 56 * wd + tx, shY - 2);
+    c.lineTo(300 + 92 * wd, 905);
+    c.lineTo(300 + 40 * wd, 905);
+    c.closePath();
+    c.fillStyle = "rgba(20,10,30,0.16)";
+    c.fill();
+    c.restore();
+    [-0.45, 0.15].forEach((k) => seg(c, 300 + k * 60 * wd, hipY + 40, 300 + k * 80 * wd, 880, 3, "rgba(20,10,30,0.25)"));
+    // embroidered hem + collar
+    const hemCol = p.robeTrim ?? p.sash ?? "#c8a050";
+    poly(c, [[300 - 90 * wd, 862], [300 + 90 * wd, 862], [300 + 92 * wd, 905], [300 - 92 * wd, 905]], hemCol, INKC, 5);
+    for (let k = 0; k < 7; k++) {
+      const cx = 300 - 72 * wd + k * 24 * wd;
+      poly(c, [[cx, 870], [cx + 8, 883], [cx, 896], [cx - 8, 883]], "#fff6d8", INKC, 2);
+    }
+    poly(c, [[300 - 34 + tx, shY - 4], [300 + 34 + tx, shY - 4], [300 + tx, shY + 46]], hemCol, INKC, 5);
   }
   // head
   const hx = 300 + tx * 1.3;
@@ -528,6 +575,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   c.restore();
   // near arm
   const handR = limb(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aR, 9);
+  if (p.robe) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.robe, p.robeTrim ?? p.sash);
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handR[0], handR[1], 12, 0, Math.PI * 2);

@@ -1,0 +1,154 @@
+{
+ "fps": 30,
+ "total_frames": 2091,
+ "scenes": {
+  "tantang": 336,
+  "pasar": 240,
+  "hari2": 195,
+  "malam": 210,
+  "kentut": 285,
+  "istana": 195,
+  "buka": 180,
+  "akhir": 450
+ },
+ "lines": {
+  "t1": {
+   "scene": "tantang",
+   "text": "Suatu hari, Raja Harun Ar-Rasyid ingin menjebak Abu Nawas.",
+   "from": 3,
+   "to": 91
+  },
+  "t2": {
+   "scene": "tantang",
+   "text": "Abu Nawas! Tangkap angin, dan bawa ke hadapanku dalam tiga hari! Kalau gagal, kau dihukum!",
+   "from": 94,
+   "to": 242
+  },
+  "t3": {
+   "scene": "tantang",
+   "text": "Para wazir tertawa. Mana mungkin angin bisa ditangkap?",
+   "from": 245,
+   "to": 327
+  },
+  "p1": {
+   "scene": "pasar",
+   "text": "Hari pertama, Abu Nawas mengejar angin di pasar, pakai karung.",
+   "from": 3,
+   "to": 99
+  },
+  "p2": {
+   "scene": "pasar",
+   "text": "Abu Nawas, kau sedang apa?",
+   "from": 102,
+   "to": 151
+  },
+  "p3": {
+   "scene": "pasar",
+   "text": "Menangkap angin! Eh, lolos lagi!",
+   "from": 154,
+   "to": 228
+  },
+  "h1": {
+   "scene": "hari2",
+   "text": "Hari kedua, ia mencoba jaring, kipas, sampai layang-layang. Hasilnya? Kosong!",
+   "from": 3,
+   "to": 140
+  },
+  "m1": {
+   "scene": "malam",
+   "text": "Suamiku, besok batas waktunya. Bagaimana ini?",
+   "from": 3,
+   "to": 76
+  },
+  "m2": {
+   "scene": "malam",
+   "text": "Abu Nawas berpikir keras, semalaman.",
+   "from": 80,
+   "to": 133
+  },
+  "k1": {
+   "scene": "kentut",
+   "text": "Hari ketiga, perutnya mulas. Lalu...",
+   "from": 3,
+   "to": 51
+  },
+  "k2": {
+   "scene": "kentut",
+   "text": "Nah! Ini dia anginnya!",
+   "from": 83,
+   "to": 121
+  },
+  "k3": {
+   "scene": "kentut",
+   "text": "Cepat-cepat, ia menangkapnya ke dalam botol, dan menyumbatnya rapat-rapat.",
+   "from": 123,
+   "to": 225
+  },
+  "i1": {
+   "scene": "istana",
+   "text": "Di istana, Abu Nawas menyerahkan sebuah botol.",
+   "from": 3,
+   "to": 77
+  },
+  "i2": {
+   "scene": "istana",
+   "text": "Inilah angin yang Paduka minta. Silakan dibuka.",
+   "from": 80,
+   "to": 147
+  },
+  "b1": {
+   "scene": "buka",
+   "text": "Raja membuka sumbatnya, dan...",
+   "from": 3,
+   "to": 60
+  },
+  "b2": {
+   "scene": "buka",
+   "text": "Hueek! Bau apa ini?!",
+   "from": 98,
+   "to": 151
+  },
+  "a1": {
+   "scene": "akhir",
+   "text": "Ampun, Paduka. Tadi hamba buang angin. Hamba langsung menangkapnya, takut lepas lagi.",
+   "from": 3,
+   "to": 130
+  },
+  "a2": {
+   "scene": "akhir",
+   "text": "Raja pun tertawa terbahak-bahak. Abu Nawas lolos lagi, berkat akalnya.",
+   "from": 285,
+   "to": 402
+  }
+ },
+ "events": {
+  "tantang.raja": 95,
+  "tantang.point": 102,
+  "tantang.three": 175,
+  "tantang.laugh": 246,
+  "pasar.run": 41,
+  "pasar.ask": 102,
+  "pasar.miss": 194,
+  "hari2.net": 37,
+  "hari2.fan": 65,
+  "hari2.kite": 92,
+  "hari2.empty": 126,
+  "malam.wife": 3,
+  "malam.think": 80,
+  "kentut.belly": 27,
+  "kentut.fart": 55,
+  "kentut.idea": 84,
+  "kentut.bottle": 159,
+  "kentut.cork": 204,
+  "kentut.giggle": 229,
+  "istana.give": 47,
+  "istana.say": 81,
+  "buka.pop": 65,
+  "buka.yuck": 98,
+  "akhir.say": 3,
+  "akhir.laugh": 137,
+  "akhir.crowd": 177,
+  "akhir.end": 285
+ },
+ "stepF": {}
+}
