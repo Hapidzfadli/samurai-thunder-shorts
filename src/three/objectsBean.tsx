@@ -658,3 +658,30 @@ export const beanWalk = (phase: number, amp = 1): Partial<BeanParams> => {
     lean: 3 * amp,
   };
 };
+
+/**
+ * World position of a bean card's hand (for attaching real 3D props that can change hands).
+ * Mirrors the canvas maths in drawBean: shoulders at (300 ± 40*wide [+lean*3.2 for R], 364), upper arm 130, forearm 120,
+ * whole drawing lifted by `bob`. The card faces the camera (yaw = atan2(cam - pos)).
+ */
+export const beanHandCanvas = (p: BeanParams, side: "L" | "R"): [number, number] => {
+  const wide = p.wide ?? 0.95;
+  const tx = (p.lean ?? 0) * 3.2;
+  const a = side === "L" ? (p.armL ?? [-6, -8]) : (p.armR ?? [6, -8]);
+  const sx = side === "L" ? 300 - 40 * wide : 300 + 40 * wide + tx;
+  const sy = 350 + 14;
+  const e = tip(sx, sy, 130, a[0]);
+  const h = tip(e[0], e[1], 120, a[0] + a[1]);
+  return [h[0], h[1] - (p.bob ?? 0)];
+};
+export const beanCanvasToWorld = (cx: number, cy: number, position: Vec3, height: number, camPos: Vec3, flip = false, toCam = 0.04): Vec3 => {
+  const w = (height * BW) / BH;
+  const lx = (cx / BW - 0.5) * w * (flip ? -1 : 1);
+  const ly = height * (0.975 - cy / BH);
+  const face = Math.atan2(camPos[0] - position[0], camPos[2] - position[2]);
+  return [position[0] + lx * Math.cos(face) + Math.sin(face) * toCam, position[1] + ly, position[2] - lx * Math.sin(face) + Math.cos(face) * toCam];
+};
+export const beanHandWorld = (p: BeanParams, side: "L" | "R", position: Vec3, height: number, camPos: Vec3, flip = false): Vec3 => {
+  const [cx, cy] = beanHandCanvas(p, side);
+  return beanCanvasToWorld(cx, cy, position, height, camPos, flip, 0.06);
+};

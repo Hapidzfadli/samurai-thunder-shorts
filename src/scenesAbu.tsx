@@ -4,7 +4,7 @@ import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } fr
 import { ThreeCanvas } from "@remotion/three";
 import { useThree } from "@react-three/fiber";
 import { P, easeInOut3, lerpN, lerpV } from "./three/objectsRig";
-import { BeanCard, BeanParams, beanWalk } from "./three/objectsBean";
+import { BeanCard, BeanParams, beanHandWorld, beanWalk } from "./three/objectsBean";
 import * as A from "./three/objectsAbuProps";
 import { Cat3D } from "./three/objectsRig";
 import { ABU, RAJA, WAZIR, PENGAWAL, ISTRI, PEDAGANG } from "./SheetAbu";
@@ -418,105 +418,285 @@ export const SceneAMalam: React.FC = () => {
   );
 };
 
+
+/** screen-space projection with the same camera the Stage uses */
+const projector = (cam: Cam) => {
+  const c = new THREE.PerspectiveCamera(cam.fov, 1080 / 1920, 0.05, 200);
+  c.position.set(...cam.pos);
+  c.lookAt(...cam.look);
+  c.updateMatrixWorld();
+  return (p: Vec3) => {
+    const v = new THREE.Vector3(...p).project(c);
+    return [v.x * 540, v.y * 960] as [number, number];
+  };
+};
+/** brute-force 2-bone solve: arm angles that put a card's hand on a screen target */
+const reachArm = (base: BeanParams, side: "L" | "R", pos: Vec3, h: number, cam: Cam, target: Vec3): [number, number] => {
+  const proj = projector(cam);
+  const goal = proj(target);
+  let best: [number, number] = [0, 0];
+  let bd = 1e9;
+  for (let a0 = -180; a0 <= 180; a0 += 6)
+    for (let a1 = -150; a1 <= 0; a1 += 6) {
+      const pp = { ...base, [side === "R" ? "armR" : "armL"]: [a0, a1] } as BeanParams;
+      const q = proj(beanHandWorld(pp, side, pos, h, cam.pos));
+      const d = Math.hypot(q[0] - goal[0], q[1] - goal[1]) + Math.abs(a1) * 0.05;
+      if (d < bd) {
+        bd = d;
+        best = [a0, a1];
+      }
+    }
+  return best;
+};
 /* ================================================================== */
-/* 5. KENTUT                                                            */
+/* close-up inserts (hands)                                              */
 /* ================================================================== */
+const SKIN = "#f7ead6";
+const INKH = "#241726";
+const BottleSvg: React.FC<{ x: number; y: number; s?: number; fill?: number }> = ({ x, y, s = 1, fill = 0 }) => (
+  <g transform={`translate(${x} ${y}) scale(${s})`}>
+    <path d="M -150 -180 Q -160 260 -120 300 L 120 300 Q 160 260 150 -180 Q 140 -260 60 -300 L 60 -420 L -60 -420 L -60 -300 Q -140 -260 -150 -180 Z" fill="rgba(160,220,200,0.55)" stroke={INKH} strokeWidth={12} strokeLinejoin="round" />
+    {fill > 0 && <path d={`M -140 ${300 - 400 * fill} L 140 ${300 - 400 * fill} L 125 295 L -125 295 Z`} fill="rgba(170,210,90,0.5)" />}
+    <path d="M -95 -150 Q -105 100 -80 230" stroke="#ffffff" strokeWidth={20} fill="none" opacity={0.6} strokeLinecap="round" />
+    <path d="M -60 -420 L 60 -420" stroke={INKH} strokeWidth={14} />
+  </g>
+);
+const Cork: React.FC<{ x: number; y: number; rot?: number }> = ({ x, y, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot})`}>
+    <path d="M -58 -70 L 58 -70 L 48 60 L -48 60 Z" fill="#c8874a" stroke={INKH} strokeWidth={11} strokeLinejoin="round" />
+    {[[-20, -30], [18, -6], [-8, 26], [26, 34]].map(([a, b], i) => <circle key={i} cx={a} cy={b} r={6} fill="#8a5428" />)}
+  </g>
+);
+/** a hand gripping something vertical: palm on the left, four finger bars across the object */
+const GripHand: React.FC<{ x: number; y: number; flip?: boolean; sleeve: string; cuff: string; s?: number }> = ({ x, y, flip = false, sleeve, cuff, s = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${flip ? -s : s} ${s})`}>
+    <path d="M -560 -160 L -170 -120 L -170 170 L -560 260 Z" fill={sleeve} stroke={INKH} strokeWidth={12} strokeLinejoin="round" />
+    <path d="M -230 -128 L -170 -120 L -170 170 L -230 182 Z" fill={cuff} stroke={INKH} strokeWidth={10} />
+    <path d="M -175 -110 Q -60 -150 20 -100 L 40 140 Q -60 190 -175 160 Z" fill={SKIN} stroke={INKH} strokeWidth={12} strokeLinejoin="round" />
+    {[-70, -10, 50, 110].map((yy, i) => <rect key={i} x={-10} y={yy - 26} width={200 - i * 8} height={54} rx={27} fill={SKIN} stroke={INKH} strokeWidth={11} />)}
+    <path d="M -60 -110 Q 40 -190 120 -150 Q 150 -120 110 -100 Q 40 -120 -20 -80" fill={SKIN} stroke={INKH} strokeWidth={11} strokeLinejoin="round" />
+  </g>
+);
+/** thumb + index pinch from above */
+const PinchHand: React.FC<{ x: number; y: number; sleeve: string; cuff: string; open?: number }> = ({ x, y, sleeve, cuff, open = 0 }) => (
+  <g transform={`translate(${x} ${y})`}>
+    <path d="M 120 -620 L 420 -560 L 330 -230 L 60 -300 Z" fill={sleeve} stroke={INKH} strokeWidth={12} strokeLinejoin="round" />
+    <path d="M 80 -310 L 330 -240 L 312 -180 L 64 -250 Z" fill={cuff} stroke={INKH} strokeWidth={10} />
+    <path d="M 70 -250 Q 220 -230 300 -170 Q 270 -60 160 -60 Q 60 -80 30 -170 Z" fill={SKIN} stroke={INKH} strokeWidth={12} strokeLinejoin="round" />
+    <rect x={-120 - open * 40} y={-150} width={70} height={190} rx={35} fill={SKIN} stroke={INKH} strokeWidth={11} transform={`rotate(${-10 - open * 10} -85 -150)`} />
+    <rect x={60 + open * 40} y={-150} width={70} height={190} rx={35} fill={SKIN} stroke={INKH} strokeWidth={11} transform={`rotate(${12 + open * 10} 95 -150)`} />
+  </g>
+);
+const InsertBg: React.FC<{ a: string; b: string }> = ({ a, b }) => <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 40%, ${a} 0%, ${b} 100%)` }} />;
+/** Abu presses the cork into the bottle while the last wisps of 'wind' go in */
+const InsertCork: React.FC<{ from: number; to: number; plok: number }> = ({ from, to, plok }) => {
+  const f = useCurrentFrame();
+  if (f < from || f >= to) return null;
+  const k = cl((f - from) / Math.max(1, plok - from));
+  const corkY = lerpN(330, 560, easeInOut3(cl((k - 0.35) / 0.65)));
+  const done = f >= plok;
+  const fade = interpolate(f, [from, from + 4, to - 4, to], [0, 1, 1, 0], clamp);
+  return (
+    <AbsoluteFill style={{ opacity: fade }}>
+      <InsertBg a="#f2dcb0" b="#b8946a" />
+      <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute" }}>
+        {!done && [0, 1, 2, 3, 4].map((i) => {
+          const p = (k * 1.6 + i * 0.2) % 1;
+          return <path key={i} d={`M ${300 + i * 90} ${180 + p * 40} Q ${540 + Math.sin(i + p * 6) * 120} ${380 + p * 120} 540 ${600 + p * 200}`} stroke="#a8c860" strokeWidth={26 - p * 14} fill="none" strokeLinecap="round" opacity={1 - p} />;
+        })}
+        <BottleSvg x={540} y={1060} s={1.15} fill={0.55} />
+        <Cork x={540} y={corkY} />
+        <GripHand x={430} y={1170} sleeve="#7a9a6a" cuff="#c8a050" s={1.1} />
+        <g transform={`translate(0 ${corkY - 560})`}><PinchHand x={540} y={500} sleeve="#7a9a6a" cuff="#c8a050" /></g>
+        {done && [0, 1, 2, 3, 4, 5].map((i) => <path key={i} transform={`translate(${540 + Math.cos(i * 1.05) * 260} ${520 + Math.sin(i * 1.05) * 200}) rotate(${(f - plok) * 8})`} d="M 0 -26 L 7 -7 L 26 0 L 7 7 L 0 26 L -7 7 L -26 0 L -7 -7 Z" fill="#fff6a8" stroke={INKH} strokeWidth={4} />)}
+      </svg>
+    </AbsoluteFill>
+  );
+};
+/** the king grips the bottle and pulls the cork until it pops */
+const InsertUncork: React.FC<{ from: number; to: number; pop: number }> = ({ from, to, pop }) => {
+  const f = useCurrentFrame();
+  if (f < from || f >= to) return null;
+  const k = cl((f - from) / Math.max(1, pop - from));
+  const popped = f >= pop;
+  const pk = cl((f - pop) / 14);
+  const shake = !popped ? Math.sin(f * 2.3) * 8 * k : 0;
+  const corkY = popped ? 560 - 120 - pk * 900 : 560 - 120 * easeInOut3(k * k);
+  const fade = interpolate(f, [from, from + 4, to - 4, to], [0, 1, 1, 0], clamp);
+  return (
+    <AbsoluteFill style={{ opacity: fade }}>
+      <InsertBg a="#ffe6c0" b="#a86a4a" />
+      <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute" }}>
+        <g transform={`translate(${shake} 0)`}>
+          <BottleSvg x={540} y={1060} s={1.15} fill={0.55} />
+          <GripHand x={430} y={1180} sleeve="#5a2a8a" cuff="#e0b040" s={1.1} />
+        </g>
+        {popped && [...Array(14)].map((i, n) => {
+          const a = -Math.PI / 2 + (n - 6.5) * 0.18;
+          const r = 120 + pk * (500 + (n % 3) * 140);
+          return <circle key={n} cx={540 + Math.cos(a) * r * 0.9} cy={560 + Math.sin(a) * r} r={50 + pk * 70 + (n % 4) * 14} fill="#a8c860" stroke={INKH} strokeWidth={6} opacity={0.9 - pk * 0.3} />;
+        })}
+        <Cork x={540 + shake} y={corkY} rot={popped ? pk * 540 : shake} />
+        <g transform={`translate(${shake} ${popped ? -pk * 220 : corkY - 440})`}><PinchHand x={540} y={500} sleeve="#5a2a8a" cuff="#e0b040" open={popped ? 1 : 0} /></g>
+        {!popped && k > 0.3 && [0, 1, 2].map((i) => <path key={i} d={`M ${720 + i * 40} ${300 + i * 50} l 70 -20`} stroke={INKH} strokeWidth={10} strokeLinecap="round" opacity={0.7} />)}
+      </svg>
+      {popped && <AbsoluteFill style={{ background: `rgba(150,200,80,${0.35 * pk})` }} />}
+    </AbsoluteFill>
+  );
+};
+
+/* ================================================================== */
+/* 5. KENTUT (revised: grab bottle from shelf, aim it at the rear, cork)  */
+/* ================================================================== */
+const SHELF_BOTTLE: Vec3 = [2.15, 1.44, -2.4];
 export const SceneAKentut: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / 30;
   const belly = EV("kentut.belly");
   const fart = EV("kentut.fart");
   const idea = EV("kentut.idea");
-  const bottle = EV("kentut.bottle");
   const cork = EV("kentut.cork");
   const giggle = EV("kentut.giggle");
   const k2 = LN2("k2");
-  const cloud = f >= fart ? cl((f - fart) / 12) : 0;
-  const captured = f >= bottle + 10;
-  const cloudScale = captured ? Math.max(0, 1 - (f - bottle - 10) / 10) : cloud;
-  const params: Partial<BeanParams> =
-    f < fart ? { ...idle(t), expr: f >= belly ? "worried" : "sad", armL: [20, 60], armR: [-20, -60], lean: f >= belly ? 8 : 0, sweat: f >= belly } :
-    f < idea ? { ...idle(t), expr: "shock", armL: [-60, -30], armR: [60, -30], bob: 14 } :
-    f < bottle ? { ...idle(t), ...(f >= k2.from && f < k2.to ? talk(f, true) : { expr: "shock" }), armR: [150, -30] } :
-    f < giggle ? { ...idle(t), expr: "smug", prop: "bottle", armR: [100 + Math.sin(f * 0.6) * 10, -50] } :
-    { ...laughing(f), prop: "bottle", armR: [120, -60] };
+  const H = 2.3;
+  // path: stand (0,0.6) -> walk to shelf (1.7,-1.5) -> grab -> back (0,0.6) -> aim behind -> insert cork -> giggle
+  const goK = easeInOut3(cl((f - (idea + 8)) / 26));
+  const backK = easeInOut3(cl((f - (idea + 44)) / 24));
+  const ax = f < idea + 44 ? lerpN(0, 1.75, goK) : lerpN(1.75, 0.2, backK);
+  const az = f < idea + 44 ? lerpN(0.6, -1.5, goK) : lerpN(-1.5, 0.6, backK);
+  const walking = (goK > 0 && goK < 1) || (backK > 0 && backK < 1);
+  const reachShelf = f >= idea + 32 && f < idea + 46;
+  const aiming = f >= idea + 70 && f < cork - 14;
+  const aimK = easeInOut3(cl((f - (idea + 70)) / 12));
+  const camPos: Vec3 = [0.8, 1.8, 9.6];
   const cam = shotCam(f, [
-    { to: fart, p0: [0, 1.8, 8.8], l0: [0, 1.4, -0.5], p1: [0, 1.7, 7.8], l1: [0, 1.4, -0.5], fov: 36 },
-    { to: idea + 10, p0: [0.4, 1.5, 6.2], l0: [0, 1.6, 0], p1: [0.3, 1.5, 5.6], l1: [0, 1.7, 0], fov: 34, roll0: 4, roll1: 5 },
-    { to: 9999, p0: [0, 1.8, 8.2], l0: [0, 1.6, 0], p1: [0, 1.8, 7.0], l1: [0, 1.7, 0], fov: 36 },
+    { to: idea + 8, p0: [0.2, 1.7, 8.0], l0: [0.1, 1.3, -0.2], p1: [0.2, 1.6, 7.2], l1: [0.1, 1.3, -0.2], fov: 36 },
+    { to: idea + 62, p0: camPos, l0: [0.8, 1.3, -0.6], p1: [0.8, 1.8, 9.0], l1: [0.8, 1.3, -0.6], fov: 38 },
+    { to: 9999, p0: [0.2, 1.5, 6.4], l0: [0.0, 1.2, 0.0], p1: [0.2, 1.5, 5.8], l1: [0.0, 1.2, 0.0], fov: 36 },
   ]);
+  let params: Partial<BeanParams>;
+  if (f < fart) params = { ...idle(t), expr: f >= belly ? "worried" : "sad", armL: [25, 70], armR: [-25, -70], lean: f >= belly ? 8 : 0, sweat: f >= belly };
+  else if (f < idea) params = { ...idle(t), expr: "shock", armL: [-60, -30], armR: [60, -30], bob: 14 };
+  else if (walking) params = { ...beanWalk(f * 0.07, 1.2), ...(f >= k2.from && f < k2.to ? talk(f, true) : { expr: "smug" }), armR: backK > 0 ? [40, -40] : [30, -10] };
+  else if (reachShelf) params = { ...idle(t), expr: "smug", armR: [150, -20] };
+  else if (aiming) params = { ...idle(t), expr: "smug", lean: 12 * aimK, armR: [lerpN(40, -48, aimK), lerpN(-40, -18, aimK)], armL: [-20, -40], look: -1 };
+  else if (f < giggle) params = { ...idle(t), expr: "smug", armR: [70, -70], armL: [-30, -50] };
+  else params = { ...laughing(f), armR: [120, -70] };
+  const abuPos: Vec3 = [ax, 0, az];
+  const full = bean(ABU, { ...params });
+  const hand = beanHandWorld(full, "R", abuPos, H, cam.pos);
+  const grabbed = f >= idea + 40;
+  const bottlePos: Vec3 = grabbed ? (aiming ? [hand[0], hand[1], hand[2] - 0.02 * aimK] : hand) : SHELF_BOTTLE;
+  const bottleRot: Vec3 = aiming ? [0, 0, lerpN(0, -1.35, aimK)] : [0, 0, 0];
+  const rear: Vec3 = [ax - 0.15, 0.9, az - 0.3];
+  // fart cloud stays behind, then is sucked into the bottle mouth while aiming
+  const suck = aiming ? cl((f - (idea + 78)) / 26) : f >= cork - 14 ? 1 : 0;
+  const cloudK = f >= fart ? cl((f - fart) / 12) * (1 - suck) : 0;
+  const mouth: Vec3 = [bottlePos[0] - Math.sin(bottleRot[2]) * 0.32, bottlePos[1] + Math.cos(bottleRot[2]) * 0.32, bottlePos[2]];
   return (
     <>
       <Stage cam={cam} shake={kick(f, [fart], 0.08)} bg="#ffe0b0" fog={["#ffe2c8", 40, 160]}>
         <Yard t={t} />
-        {cloudScale > 0 && <A.StinkCloud pos={[-0.9, 0.1, -0.4]} t={t} k={0.35 + cloudScale * 0.5} />}
-        <BeanCard position={[0, 0, 0.6]} height={2.3} params={bean(ABU, { ...params, look: f >= idea && f < bottle ? -1 : 0.3 })} />
+        {cloudK > 0 && <A.StinkCloud pos={aiming ? [rear[0] - 0.3, 0.5, rear[2]] : [-0.9, 0.15, -0.4]} t={t} k={0.25 + cloudK * 0.5} />}
+        {aiming && [0, 1, 2, 3, 4].map((i) => {
+          const p = (suck * 2 + i * 0.2) % 1;
+          return <mesh key={i} position={[lerpN(rear[0] - 0.3, mouth[0], p), lerpN(0.7, mouth[1], p) + Math.sin(p * 6 + i) * 0.06, lerpN(rear[2], mouth[2], p)]}><sphereGeometry args={[0.09 * (1 - p * 0.6), 8, 6]} /><meshBasicMaterial color="#a8c860" /></mesh>;
+        })}
+        <group position={bottlePos} rotation={bottleRot}>
+          <A.Bottle pos={[0, -0.15, 0]} s={0.55} corked={f >= cork} />
+        </group>
+        <BeanCard position={abuPos} height={H} params={full} />
         <Lights key1="#ffe6c0" dir={[-6, 10, 8]} k={2.0} />
       </Stage>
       <Grade warm={0.35} blur={4} flash={f >= idea && f < idea + 6 ? 0.4 * (1 - (f - idea) / 6) : 0} />
       <DayTag label="HARI KE-3" to={fart - 4} />
-      <Onoma at={fart} text="PRRRUT!" x={360} y={620} color="#b8e06a" size={130} dur={34} rot={-10} />
-      {f >= idea && f < bottle && <div style={{ position: "absolute", left: 640, top: 380, fontSize: 160, transform: `scale(${spring({ frame: f - idea, fps: 30, config: { damping: 8 } })})` }}>💡</div>}
-      <Onoma at={cork} text="PLOK!" x={720} y={640} color="#e0b040" size={90} dur={26} rot={8} />
-      <Onoma at={giggle} text="HEHEHE..." x={540} y={460} color="#ffffff" size={96} dur={60} rot={-4} />
+      <Onoma at={fart} text="PRRRUT!" x={330} y={700} color="#b8e06a" size={130} dur={30} rot={-10} />
+      {f >= idea && f < idea + 30 && <div style={{ position: "absolute", left: 600, top: 380, fontSize: 160, transform: `scale(${spring({ frame: f - idea, fps: 30, config: { damping: 8 } })})` }}>💡</div>}
+      {aiming && <Onoma at={idea + 80} text="SLURRP..." x={560} y={330} color="#b8e06a" size={80} dur={28} rot={-6} />}
+      <InsertCork from={cork - 14} to={cork + 16} plok={cork} />
+      <Onoma at={cork} text="PLOK!" x={540} y={260} color="#e0b040" size={110} dur={16} />
+      <Onoma at={giggle} text="HEHEHE..." x={540} y={460} color="#ffffff" size={96} dur={56} rot={-4} />
       <Caps ids={["k1", "k2", "k3"]} hl={["ketiga", "mulas", "Lalu", "Nah", "anginnya", "Cepat-cepat", "botol", "rapat-rapat"]} />
     </>
   );
 };
 
 /* ================================================================== */
-/* 6. ISTANA                                                            */
+/* 6. ISTANA (revised: the bottle visibly passes from hand to hand)      */
 /* ================================================================== */
+const RAJA_POS: Vec3 = [0, 1.27, -4.0];
+const RAJA_H = 2.5;
 export const SceneAIstana: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / 30;
-  const give = EV("istana.give");
   const i2 = LN2("i2");
-  const walkK = easeInOut3(cl(f / Math.max(20, give)));
-  const az = lerpN(4.5, 0.2, walkK);
-  const cam = shotCam(f, [{ to: give, p0: [1.0, 2.8, 15], l0: [0.6, 1.9, -1.5], p1: [0.8, 2.7, 13], l1: [0.6, 1.9, -1.5], fov: 40 }, { to: 9999, p0: [0.8, 2.6, 10.5], l0: [0.6, 2.1, -1.8], p1: [0.6, 2.6, 9.6], l1: [0.6, 2.1, -1.8], fov: 38 }]);
+  const camPos: Vec3 = [3.4, 2.4, 6.4];
+  const cam = shotCam(f, [{ to: 9999, p0: camPos, l0: [0.4, 1.9, -2.6], p1: [3.0, 2.3, 5.8], l1: [0.3, 1.9, -2.8], fov: 38 }]);
+  const walkK = easeInOut3(cl(f / 30));
+  const abuPos: Vec3 = [lerpN(2.6, 0.7, walkK), 0, lerpN(3.0, -2.7, walkK)];
+  const offerK = easeInOut3(cl((f - 26) / 14));
+  const reachK = easeInOut3(cl((f - 34) / 12));
+  const passK = easeInOut3(cl((f - 48) / 12));
+  const pullK = easeInOut3(cl((f - 62) / 14));
+  const abuP = bean(ABU, { ...(walkK < 1 ? beanWalk(f * 0.05, 1) : idle(t)), ...(f >= i2.from && f < i2.to ? talk(f, true) : { expr: "smug" }), lean: 10 * offerK * (1 - pullK), armR: pullK < 0.01 ? [lerpN(40, 150, offerK), lerpN(-40, -10, offerK)] : [lerpN(150, 10, pullK), -10], look: -1 });
+  const abuHand = beanHandWorld(abuP, "R", abuPos, 2.3, cam.pos);
+  const rajaBase = bean(RAJA, { ...idle(t), expr: f >= i2.from ? "smug" : "neutral", lean: 10 * reachK * (1 - pullK), look: 0.6 });
+  const meet = reachArm(rajaBase, "R", RAJA_POS, RAJA_H, cam, abuHand);
+  const rest: [number, number] = [10, -10];
+  const chest: [number, number] = [35, -120];
+  const armR: [number, number] = pullK > 0 ? [lerpN(meet[0], chest[0], pullK), lerpN(meet[1], chest[1], pullK)] : [lerpN(rest[0], meet[0], reachK), lerpN(rest[1], meet[1], reachK)];
+  const rajaP = bean(rajaBase, { armR });
+  const rajaHand = beanHandWorld(rajaP, "R", RAJA_POS, RAJA_H, cam.pos);
+  const bottlePos = lerpV(abuHand, rajaHand, passK);
   return (
     <>
       <Stage cam={cam} bg="#e8d4b0">
         <ThroneHall t={t} />
-        <BeanCard position={[0, 1.27, -4.0]} height={2.5} params={bean(RAJA, { ...idle(t), expr: f >= i2.from ? "smug" : "neutral", look: 0 })} />
+        <BeanCard position={RAJA_POS} height={RAJA_H} params={rajaP} />
         {[-2.1, 2.1].map((x, i) => <BeanCard key={x} position={[x, 0, -2.2]} height={2.3} params={bean(WAZIR, { ...idle(t, i), expr: "smug", seed: 50 + i, beard: i ? "#a8a8b0" : "#3a2a1a" })} flip={i === 1} />)}
         {[-3.4, 3.4].map((x, i) => <BeanCard key={x} position={[x, 0, -3.2]} height={2.4} params={bean(PENGAWAL, { ...idle(t, i + 2), expr: "angry", prop: "spear", armR: [10, -10], seed: 60 + i })} flip={i === 1} />)}
-        <BeanCard position={[1.4, 0, az]} height={2.3} params={bean(ABU, { ...(walkK < 1 ? beanWalk(f * 0.05, 1) : idle(t)), ...(f >= i2.from && f < i2.to ? talk(f, true) : { expr: "smug" }), prop: "bottle", armR: f >= give ? [130, -60] : [60, -40] })} />
+        <group position={bottlePos}><A.Bottle pos={[0, -0.15, 0]} s={0.55} /></group>
+        <BeanCard position={abuPos} height={2.3} params={abuP} />
         <Lights key1="#ffe0b0" sky="#fff0d8" ground="#8a6a4a" dir={[-5, 9, 9]} k={1.8} />
       </Stage>
       <Grade warm={0.4} blur={4} />
-      <Tag label="KEMBALI KE ISTANA" to={give} color="#e0b040" />
+      <Tag label="KEMBALI KE ISTANA" to={40} color="#e0b040" />
       <Caps ids={["i1", "i2"]} hl={["istana", "botol", "angin", "Paduka", "dibuka"]} />
     </>
   );
 };
 
 /* ================================================================== */
-/* 7. BUKA                                                              */
+/* 7. BUKA (revised: close-up of the king pulling the cork)              */
 /* ================================================================== */
 export const SceneABuka: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / 30;
   const pop = EV("buka.pop");
   const yuck = EV("buka.yuck");
-  const b2 = LN2("b2");
-  const cloud = f >= pop ? cl((f - pop) / 30) : 0;
-  const cam = shotCam(f, [{ to: pop, p0: [0.2, 2.8, 6.4], l0: [0, 2.6, -3.8], p1: [0.2, 2.8, 5.8], l1: [0, 2.6, -3.8], fov: 36 }, { to: 9999, p0: [0.6, 2.8, 11.5], l0: [0.3, 2.1, -2.4], p1: [0.6, 2.8, 12.5], l1: [0.3, 2.1, -2.4], fov: 40, roll0: -4, roll1: -2 }]);
+  const camPos: Vec3 = [0.6, 2.8, 11.5];
+  const after = f >= pop + 10;
+  const cloud = after ? cl((f - pop - 10) / 30) : 0;
+  const rajaP = bean(RAJA, { ...idle(t), expr: after ? "disgust" : "smug", armR: after ? [100, -10] : [40, -110], armL: after ? [-150, -150] : [-40, -100], lean: after ? -6 : 0 });
+  const rajaHand = beanHandWorld(rajaP, "R", RAJA_POS, RAJA_H, camPos);
+  const cam = shotCam(f, [{ to: 9999, p0: camPos, l0: [0.3, 2.1, -2.4], p1: [0.6, 2.8, 12.5], l1: [0.3, 2.1, -2.4], fov: 40, roll0: -3, roll1: -1 }]);
   return (
     <>
-      <Stage cam={cam} shake={kick(f, [pop], 0.07)} bg="#e8d4b0">
+      <Stage cam={cam} shake={kick(f, [pop + 10], 0.07)} bg="#e8d4b0">
         <ThroneHall t={t} />
-        {cloud > 0 && <A.StinkCloud pos={[0.9, 2.7 + cloud * 0.8, -3.6]} t={t} k={0.3 + cloud * 0.7} />}
-        <BeanCard position={[0, 1.27, -4.0]} height={2.5} params={bean(RAJA, { ...idle(t), ...(f >= b2.from && f < b2.to ? { expr: "disgust" as const } : { expr: f >= pop ? "disgust" : "smug" }), prop: "bottle", armR: f < pop ? [110, -60] : [140, -20], armL: f >= pop ? [-150, -150] : [-6, -8], lean: f >= pop ? -6 : 0 })} />
-        {[-2.1, 2.1].map((x, i) => <BeanCard key={x} position={[x, 0, -2.2]} height={2.3} params={bean(WAZIR, { ...idle(t, i), expr: f >= pop + 12 ? "disgust" : "neutral", armL: f >= pop + 12 ? [-150, -150] : [-6, -8], seed: 50 + i, beard: i ? "#a8a8b0" : "#3a2a1a" })} flip={i === 1} />)}
-        {[-3.4, 3.4].map((x, i) => <BeanCard key={x} position={[x, 0, -3.2]} height={2.4} params={bean(PENGAWAL, { ...idle(t, i + 2), expr: f >= pop + 20 ? "disgust" : "angry", prop: "spear", armR: [10, -10], armL: f >= pop + 20 ? [-150, -150] : [-6, -8], seed: 60 + i })} flip={i === 1} />)}
-        <BeanCard position={[1.6, 0, 0.8]} height={2.3} params={bean(ABU, { ...idle(t), expr: f >= pop ? "smug" : "neutral", look: -0.4 })} />
+        <BeanCard position={RAJA_POS} height={RAJA_H} params={rajaP} />
+        <group position={rajaHand}><A.Bottle pos={[0, -0.15, 0]} s={0.55} corked={!after} /></group>
+        {after && <A.StinkCloud pos={[rajaHand[0] + 0.1, rajaHand[1] + 0.3 + cloud * 0.6, rajaHand[2]]} t={t} k={0.25 + cloud * 0.6} />}
+        {after && <group position={[1.4, 0.06, -1.6]} rotation={[Math.PI / 2, 0, 0.6]}><mesh><cylinderGeometry args={[0.05, 0.045, 0.1, 10]} /><meshStandardMaterial color="#c8874a" /></mesh></group>}
+        {[-2.1, 2.1].map((x, i) => <BeanCard key={x} position={[x, 0, -2.2]} height={2.3} params={bean(WAZIR, { ...idle(t, i), expr: f >= pop + 22 ? "disgust" : "neutral", armL: f >= pop + 22 ? [-150, -150] : [-6, -8], seed: 50 + i, beard: i ? "#a8a8b0" : "#3a2a1a" })} flip={i === 1} />)}
+        {[-3.4, 3.4].map((x, i) => <BeanCard key={x} position={[x, 0, -3.2]} height={2.4} params={bean(PENGAWAL, { ...idle(t, i + 2), expr: f >= pop + 30 ? "disgust" : "angry", prop: "spear", armR: [10, -10], armL: f >= pop + 30 ? [-150, -150] : [-6, -8], seed: 60 + i })} flip={i === 1} />)}
+        <BeanCard position={[1.6, 0, 0.8]} height={2.3} params={bean(ABU, { ...idle(t), expr: after ? "smug" : "neutral", look: -0.4 })} />
         <Lights key1="#ffe0b0" sky="#fff0d8" ground="#8a6a4a" dir={[-5, 9, 9]} k={1.8} />
       </Stage>
       <Grade warm={0.3} blur={4} />
-      {cloud > 0 && <AbsoluteFill style={{ background: `rgba(140,200,80,${0.22 * Math.min(1, cloud * 2) * (1 - cl((f - pop - 60) / 30))})`, mixBlendMode: "multiply" }} />}
-      <Onoma at={pop} text="POP!" x={540} y={440} color="#e0b040" size={100} dur={20} />
+      {cloud > 0 && <AbsoluteFill style={{ background: `rgba(140,200,80,${0.2 * Math.min(1, cloud * 2) * (1 - cl((f - pop - 70) / 30))})`, mixBlendMode: "multiply" }} />}
+      <InsertUncork from={12} to={pop + 10} pop={pop} />
+      <Onoma at={pop} text="POP!" x={540} y={250} color="#e0b040" size={130} dur={12} />
       <Onoma at={yuck} text="HUEEEK!" x={540} y={560} color="#b8e06a" size={130} dur={60} rot={6} />
       <Caps ids={["b1", "b2"]} hl={["membuka", "dan", "Hueek", "Bau", "apa"]} />
     </>
@@ -546,6 +726,7 @@ export const SceneAAkhir: React.FC = () => {
       <Stage cam={cam} bg="#e8d4b0">
         <ThroneHall t={t} />
         <BeanCard position={[0, 1.27, -4.0]} height={2.5} params={bean(RAJA, { ...idle(t), ...(f >= laugh ? laughing(f) : { expr: "shock" }), prop: "none" })} />
+        <A.Bottle pos={[1.05, 1.9, -3.9]} s={0.55} corked={false} />
         {[-2.1, 2.1].map((x, i) => <BeanCard key={x} position={[x, 0, -2.2]} height={2.3} params={bean(WAZIR, { ...idle(t, i), ...(f >= crowd ? laughing(f, i + 1) : { expr: "shock" }), seed: 50 + i, beard: i ? "#a8a8b0" : "#3a2a1a" })} flip={i === 1} />)}
         {[-3.4, 3.4].map((x, i) => <BeanCard key={x} position={[x, 0, -3.2]} height={2.4} params={bean(PENGAWAL, { ...idle(t, i + 2), ...(f >= crowd + 8 ? laughing(f, i + 3) : { expr: "shock" }), prop: "spear", seed: 60 + i })} flip={i === 1} />)}
         <BeanCard position={[2.4, 0, 0.8]} height={2.3} params={bean(ABU, { ...idle(t), ...(f >= a1.from && f < a1.to ? { ...talk(f, true), armR: [100, -40] } : f >= crowd ? laughing(f, 2) : { expr: "smug" }) })} />
