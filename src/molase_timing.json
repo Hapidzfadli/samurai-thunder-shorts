@@ -1,0 +1,183 @@
+{
+ "fps": 30,
+ "total_frames": 2479,
+ "scenes": {
+  "hook": 169,
+  "tangki": 270,
+  "rembes": 150,
+  "cat": 195,
+  "hangat": 255,
+  "pecah": 96,
+  "gelombang": 285,
+  "madu": 378,
+  "court": 285,
+  "aturan": 126,
+  "twist": 270
+ },
+ "lines": {
+  "h1": {
+   "scene": "hook",
+   "text": "Pada tahun seribu sembilan ratus sembilan belas, sebuah kota di Amerika, diterjang gelombang sirup setinggi dua lantai.",
+   "from": 3,
+   "to": 161
+  },
+  "t1": {
+   "scene": "tangki",
+   "text": "Boston, bulan Januari. Di tepi pelabuhan, berdiri tangki baja raksasa, berisi lebih dari dua juta galon molase.",
+   "from": 3,
+   "to": 162
+  },
+  "t2": {
+   "scene": "tangki",
+   "text": "Pak Hendrik menjaganya setiap hari. Dan setiap hari, tangki itu merembes.",
+   "from": 165,
+   "to": 263
+  },
+  "r1": {
+   "scene": "rembes",
+   "text": "Tenang, Bu. Cuma rembes sedikit.",
+   "from": 3,
+   "to": 49
+  },
+  "r2": {
+   "scene": "rembes",
+   "text": "Pak, sepatuku lengket!",
+   "from": 52,
+   "to": 91
+  },
+  "c1": {
+   "scene": "cat",
+   "text": "Bosnya punya solusi cerdas. Cat saja tangkinya, warna cokelat.",
+   "from": 3,
+   "to": 90
+  },
+  "c2": {
+   "scene": "cat",
+   "text": "Beres. Kalau tidak kelihatan, berarti tidak bocor.",
+   "from": 92,
+   "to": 176
+  },
+  "w1": {
+   "scene": "hangat",
+   "text": "Lalu, pada lima belas Januari, cuaca tiba-tiba hangat, sekitar empat derajat, setelah hari-hari yang membeku.",
+   "from": 3,
+   "to": 157
+  },
+  "w2": {
+   "scene": "hangat",
+   "text": "Tangki mulai berderit. Tunggu, apa itu bunyi retak?",
+   "from": 159,
+   "to": 240
+  },
+  "p1": {
+   "scene": "pecah",
+   "text": "Dan dalam sekejap, tangki itu pecah.",
+   "from": 3,
+   "to": 61
+  },
+  "g1": {
+   "scene": "gelombang",
+   "text": "Gelombang molase setinggi tujuh meter, melaju lima puluh enam kilometer per jam, menyapu jalanan.",
+   "from": 3,
+   "to": 135
+  },
+  "g2": {
+   "scene": "gelombang",
+   "text": "Dua puluh satu orang meninggal, seratus lima puluh terluka.",
+   "from": 140,
+   "to": 218
+  },
+  "m1": {
+   "scene": "madu",
+   "text": "Nah, begini. Pernah menaruh madu di kulkas? Kental, dan menetes lambat.",
+   "from": 3,
+   "to": 113
+  },
+  "m2": {
+   "scene": "madu",
+   "text": "Tapi di dapur yang hangat, madu mengalir deras. Molase juga begitu.",
+   "from": 116,
+   "to": 216
+  },
+  "m3": {
+   "scene": "madu",
+   "text": "Hawa hangat hanya ikut berperan. Penyebab utamanya, dinding tangki yang terlalu tipis.",
+   "from": 218,
+   "to": 370
+  },
+  "k1": {
+   "scene": "court",
+   "text": "Perusahaan menyalahkan anarkis pembawa bom.",
+   "from": 3,
+   "to": 69
+  },
+  "k2": {
+   "scene": "court",
+   "text": "Pasti sabotase!",
+   "from": 71,
+   "to": 108
+  },
+  "k3": {
+   "scene": "court",
+   "text": "Tapi hakim tidak percaya. Setelah enam tahun dan tiga ribu saksi, perusahaan dinyatakan bersalah.",
+   "from": 110,
+   "to": 239
+  },
+  "a1": {
+   "scene": "aturan",
+   "text": "Sejak itu, insinyur wajib menandatangani rancangannya.",
+   "from": 3,
+   "to": 87
+  },
+  "z1": {
+   "scene": "twist",
+   "text": "Ironisnya, kebocoran paling berbahaya, ternyata yang cuma ditutup cat.",
+   "from": 4,
+   "to": 106
+  },
+  "z2": {
+   "scene": "twist",
+   "text": "Dan konon, di hari yang panas, North End masih tercium bau manis.",
+   "from": 111,
+   "to": 225
+  }
+ },
+ "events": {
+  "hook.wave": 90,
+  "hook.shock": 35,
+  "tangki.show": 82,
+  "tangki.hendrik": 165,
+  "tangki.leak": 225,
+  "rembes.say": 3,
+  "rembes.stick": 53,
+  "rembes.drip": 21,
+  "cat.paint": 38,
+  "cat.done": 93,
+  "cat.line": 138,
+  "hangat.cold": 3,
+  "hangat.warm": 64,
+  "hangat.deg": 110,
+  "hangat.creak": 160,
+  "hangat.crack": 219,
+  "pecah.snap": 34,
+  "gelombang.rush": 3,
+  "gelombang.speed": 75,
+  "gelombang.sweep": 108,
+  "gelombang.sad": 141,
+  "madu.fridge": 47,
+  "madu.slow": 91,
+  "madu.warm": 126,
+  "madu.fast": 166,
+  "madu.thin": 302,
+  "court.blame": 29,
+  "court.shout": 72,
+  "court.gavel": 130,
+  "court.guilty": 219,
+  "aturan.sign": 49,
+  "aturan.stamp": 78,
+  "twist.irony": 4,
+  "twist.paint": 75,
+  "twist.smell": 168
+ },
+ "stepF": {}
+}

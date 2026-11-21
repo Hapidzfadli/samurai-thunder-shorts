@@ -26,6 +26,7 @@ import { Hamil, TOTAL_FRAMES_HAMIL } from "./Hamil";
 import { SheetAncol } from "./SheetAncol";
 import { Ancol3DTest } from "./Ancol3DTest";
 import { Ancol3D, TOTAL_FRAMES_A3 } from "./Ancol3D";
+import { Molase, TOTAL_FRAMES_M } from "./Molase";
 import { Ancol, TOTAL_FRAMES_ANCOL } from "./Ancol";
 import { Perang, TOTAL_FRAMES_PERANG } from "./Perang";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
@@ -59,6 +60,7 @@ export const RemotionRoot: React.FC = () => {
       />
       <Composition id="Hamil" component={Hamil} durationInFrames={TOTAL_FRAMES_HAMIL} fps={30} width={1080} height={1920} />
       <Composition id="Ancol" component={Ancol} durationInFrames={TOTAL_FRAMES_ANCOL} fps={30} width={1080} height={1920} />
+      <Composition id="Molase" component={Molase} durationInFrames={TOTAL_FRAMES_M} fps={30} width={1080} height={1920} />
       <Composition id="Ancol3D" component={Ancol3D} durationInFrames={TOTAL_FRAMES_A3} fps={30} width={1080} height={1920} />
       <Composition id="Ancol3DTest" component={Ancol3DTest} durationInFrames={1} fps={30} width={1080} height={1080} />
       <Composition id="SheetAncol" component={SheetAncol} durationInFrames={1} fps={30} width={2000} height={1080} />
