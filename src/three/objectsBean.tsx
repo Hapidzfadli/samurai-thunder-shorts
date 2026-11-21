@@ -36,7 +36,7 @@ export type BeanParams = {
   armR?: [number, number];
   lean?: number;
   bob?: number;
-  prop?: "none" | "brush" | "bucket" | "paper" | "gavel" | "stamp" | "jar" | "pen" | "umbrella";
+  prop?: "none" | "brush" | "bucket" | "paper" | "gavel" | "stamp" | "jar" | "pen" | "umbrella" | "phone" | "headset" | "button";
   propHand?: "L" | "R";
   propRot?: number;
   goo?: number; // 0..1 brown coverage from the feet up
@@ -114,6 +114,18 @@ const drawProp = (c: CanvasRenderingContext2D, p: BeanParams, hx: number, hy: nu
       break;
     case "pen":
       seg(c, 0, -10, 0, 60, 8, "#222");
+      break;
+    case "phone":
+      poly(c, [[-22, -50], [22, -50], [22, 30], [-22, 30]], "#15151c", INKC, 5);
+      poly(c, [[-15, -42], [15, -42], [15, 20], [-15, 20]], "#6ec6ff", INKC, 2);
+      break;
+    case "button":
+      poly(c, [[-30, -6], [30, -6], [30, 26], [-30, 26]], "#3a3a44", INKC, 5);
+      c.fillStyle = "#e63946";
+      c.beginPath();
+      c.arc(0, -6, 22, Math.PI, 0);
+      c.fill();
+      c.stroke();
       break;
     case "umbrella":
       seg(c, 0, 0, 0, 200, 8, "#3a2a1a");
