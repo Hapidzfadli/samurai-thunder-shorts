@@ -15,7 +15,14 @@ export type BeanParams = {
   skin?: string;
   torso?: string;
   pants?: string;
-  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief";
+  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap";
+  wide?: number; // torso width factor (stocky build)
+  safari?: boolean; // safari shirt pockets + buttons
+  stars?: number; // shoulder stars (police rank)
+  badge?: boolean; // chest badge
+  belt?: string;
+  sideHair?: string; // hair at the temples under a hat
+  headphones?: boolean;
   hatColor?: string;
   hair?: string;
   mustache?: boolean;
@@ -136,7 +143,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   limb(c, 280, hipY, 165, 170, lL, 10);
   const footL = tip(...tip(280, hipY, 165, lL[0]), 170, lL[0] + lL[1]);
   seg(c, footL[0], footL[1], footL[0] + 40, footL[1], 10);
-  const handL = limb(c, 262, shY + 14, 130, 120, aL, 9);
+  const handL = limb(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, 130, 120, aL, 9);
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handL[0], handL[1], 12, 0, Math.PI * 2);
@@ -149,7 +156,40 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     poly(c, [[286 + tx, shY - 4], [314 + tx, shY - 4], [300 + tx * 0.6, shY + 90]], "#f5efe0", INKC, 5);
     if (p.tie) poly(c, [[294 + tx, shY + 14], [306 + tx, shY + 14], [312 + tx * 0.8, shY + 120], [300 + tx * 0.8, shY + 136], [288 + tx * 0.8, shY + 120]], p.tie, INKC, 4);
   } else {
-    poly(c, [[246 + tx, shY - 2], [354 + tx, shY - 2], [364, hipY + 20], [236, hipY + 20]], torso, INKC, 8);
+    const wd = p.wide ?? 1;
+    poly(c, [[300 - 54 * wd + tx, shY - 2], [300 + 54 * wd + tx, shY - 2], [300 + 70 * wd, shY + 150], [300 + 64 * wd, hipY + 20], [300 - 64 * wd, hipY + 20], [300 - 70 * wd, shY + 150]], torso, INKC, 8);
+    if (p.safari) {
+      poly(c, [[300 - 18 + tx, shY - 4], [300 + tx, shY + 34], [300 + 18 + tx, shY - 4]], torso, INKC, 5);
+      [-1, 1].forEach((sd) => poly(c, [[300 + sd * 22 * wd + tx, shY + 50], [300 + sd * 52 * wd + tx, shY + 50], [300 + sd * 52 * wd + tx, shY + 100], [300 + sd * 22 * wd + tx, shY + 100]], torso, INKC, 4));
+      [0, 1, 2, 3].forEach((k) => {
+        c.fillStyle = INKC;
+        c.beginPath();
+        c.arc(300 + tx * (1 - k * 0.2), shY + 50 + k * 60, 5, 0, Math.PI * 2);
+        c.fill();
+      });
+    }
+    if (p.badge) poly(c, [[262 + tx, shY + 46], [282 + tx, shY + 46], [282 + tx, shY + 66], [272 + tx, shY + 78], [262 + tx, shY + 66]], "#e0b040", INKC, 3);
+    if (p.stars) {
+      [-1, 1].forEach((sd) => {
+        for (let k = 0; k < p.stars!; k++) {
+          const cx = 300 + sd * (30 + k * 10) * (p.wide ?? 1) + tx;
+          const cy = shY + 6 - (k % 2) * 4;
+          c.fillStyle = "#f2c230";
+          c.beginPath();
+          for (let a = 0; a < 10; a++) {
+            const rr = a % 2 ? 4 : 9;
+            const an = (a * Math.PI) / 5 - Math.PI / 2;
+            a ? c.lineTo(cx + Math.cos(an) * rr, cy + Math.sin(an) * rr) : c.moveTo(cx + Math.cos(an) * rr, cy + Math.sin(an) * rr);
+          }
+          c.closePath();
+          c.fill();
+          c.strokeStyle = INKC;
+          c.lineWidth = 2;
+          c.stroke();
+        }
+      });
+    }
+    if (p.belt) poly(c, [[300 - 64 * wd, hipY - 8], [300 + 64 * wd, hipY - 8], [300 + 64 * wd, hipY + 12], [300 - 64 * wd, hipY + 12]], p.belt, INKC, 4);
   }
   if (p.apron) poly(c, [[260 + tx * 0.8, shY + 60], [340 + tx * 0.8, shY + 60], [352, hipY + 130], [248, hipY + 130]], p.apron, INKC, 6);
   if (!p.coat) poly(c, [[246, hipY + 10], [354, hipY + 10], [350, hipY + 40], [250, hipY + 40]], pants, INKC, 6);
@@ -282,6 +322,14 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   } else if (hat === "kerchief") {
     poly(c, [[190, 170], [210, 100], [300, 78], [390, 100], [410, 170], [350, 128], [250, 128]], hatCol, INKC, 8);
     poly(c, [[392, 160], [440, 190], [420, 230], [396, 180]], hatCol, INKC, 6);
+  } else if (hat === "peci") {
+    if (p.sideHair) [-1, 1].forEach((sd) => poly(c, [[300 + sd * 112, 150], [300 + sd * 120, 200], [300 + sd * 104, 205]], p.sideHair!, INKC, 4));
+    poly(c, [[206, 156], [214, 92], [300, 84], [386, 92], [394, 156], [300, 146]], "#151518", INKC, 7);
+    seg(c, 220, 100, 380, 100, 3, "#3a3a44");
+  } else if (hat === "policecap") {
+    poly(c, [[204, 150], [212, 118], [176, 90], [300, 62], [424, 90], [388, 118], [396, 150]], hatCol, INKC, 7);
+    poly(c, [[204, 150], [396, 150], [380, 176], [220, 176]], "#121216", INKC, 6);
+    poly(c, [[288, 96], [312, 96], [314, 120], [300, 130], [286, 120]], "#e0b040", INKC, 3);
   } else if (hat === "wig") {
     poly(c, [[170, 250], [176, 120], [300, 60], [424, 120], [430, 250], [400, 190], [200, 190]], "#f2f2f2", INKC, 7);
   } else if (p.hair) {
@@ -293,6 +341,14 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.bezierCurveTo(380, 130, 220, 130, 188, 170);
     c.fill();
     c.stroke();
+  }
+  if (p.headphones) {
+    c.strokeStyle = INKC;
+    c.lineWidth = 12;
+    c.beginPath();
+    c.arc(300, 210, 132, Math.PI * 1.05, Math.PI * 1.95);
+    c.stroke();
+    [-1, 1].forEach((sd) => poly(c, [[300 + sd * 112, 180], [300 + sd * 140, 180], [300 + sd * 140, 250], [300 + sd * 112, 250]], "#2a2a33", INKC, 5));
   }
   if (p.sweat) {
     c.fillStyle = "#8fd3ff";
@@ -307,7 +363,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   }
   c.restore();
   // near arm
-  const handR = limb(c, 338 + tx, shY + 14, 130, 120, aR, 9);
+  const handR = limb(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aR, 9);
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handR[0], handR[1], 12, 0, Math.PI * 2);

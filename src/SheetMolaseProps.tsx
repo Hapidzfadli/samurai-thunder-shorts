@@ -5,13 +5,13 @@ import { CameraRig } from "./three/objects";
 import * as K from "./three/objectsMolaseProps";
 import { Building, Tank } from "./three/objectsMolase";
 
-type Item = { name: string; note: string; el: React.ReactNode; w: number; h: number; span?: number };
+export type Item = { name: string; note: string; el: React.ReactNode; w: number; h: number; span?: number };
 const W = 2000;
 const PX = 125;
 const ROW_U = 3.9; // vertical units per row (prop + label)
 const TOP_U = 2.0; // title area in units
 
-const sheetHeight = (items: Item[], cols: number) => {
+export const sheetHeight = (items: Item[], cols: number) => {
   let col = 0;
   let rows = 1;
   for (const it of items) {
@@ -25,7 +25,7 @@ const sheetHeight = (items: Item[], cols: number) => {
   return Math.round((TOP_U + rows * ROW_U) * PX) + 20;
 };
 
-const Sheet: React.FC<{ title: string; sub: string; items: Item[]; bg: [string, string]; cols?: number }> = ({ title, sub, items, bg, cols = Math.ceil(items.length / 2) }) => {
+export const Sheet: React.FC<{ title: string; sub: string; items: Item[]; bg: [string, string]; cols?: number }> = ({ title, sub, items, bg, cols = Math.ceil(items.length / 2) }) => {
   const H = sheetHeight(items, cols);
   const UH = H / PX;
   const fov = (2 * Math.atan(UH / 2 / 40) * 180) / Math.PI;
