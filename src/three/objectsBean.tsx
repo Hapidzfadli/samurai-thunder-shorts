@@ -8,14 +8,18 @@ export const BW = 600;
 export const BH = 1000;
 const INKC = "#241726";
 
-export type BeanExpr = "neutral" | "worried" | "shock" | "angry" | "smug" | "scared" | "happy" | "sad" | "sleepy" | "talk";
+export type BeanExpr = "neutral" | "worried" | "shock" | "angry" | "smug" | "scared" | "happy" | "sad" | "sleepy" | "talk" | "laugh" | "disgust" | "think";
 export type BeanParams = {
   expr?: BeanExpr;
   look?: number; // -1..1 pupils
   skin?: string;
   torso?: string;
   pants?: string;
-  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap";
+  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet";
+  beard?: string;
+  robe?: string; // long robe to the ankles
+  robeTrim?: string;
+  sash?: string;
   wide?: number; // torso width factor (stocky build)
   safari?: boolean; // safari shirt pockets + buttons
   stars?: number; // shoulder stars (police rank)
@@ -36,7 +40,7 @@ export type BeanParams = {
   armR?: [number, number];
   lean?: number;
   bob?: number;
-  prop?: "none" | "brush" | "bucket" | "paper" | "gavel" | "stamp" | "jar" | "pen" | "umbrella" | "phone" | "headset" | "button";
+  prop?: "none" | "brush" | "bucket" | "paper" | "gavel" | "stamp" | "jar" | "pen" | "umbrella" | "phone" | "headset" | "button" | "bottle" | "sack" | "net" | "spear" | "fan" | "scroll";
   propHand?: "L" | "R";
   propRot?: number;
   goo?: number; // 0..1 brown coverage from the feet up
@@ -127,6 +131,37 @@ const drawProp = (c: CanvasRenderingContext2D, p: BeanParams, hx: number, hy: nu
       c.fill();
       c.stroke();
       break;
+    case "bottle":
+      poly(c, [[-22, 0], [22, 0], [26, 96], [-26, 96]], "rgba(170,220,200,0.9)", INKC, 6);
+      poly(c, [[-10, -40], [10, -40], [10, 0], [-10, 0]], "rgba(170,220,200,0.9)", INKC, 5);
+      poly(c, [[-12, -62], [12, -62], [10, -40], [-10, -40]], "#a8672a", INKC, 5);
+      break;
+    case "sack":
+      poly(c, [[-50, 10], [50, 10], [64, 120], [-64, 120]], "#d9c28a", INKC, 6);
+      seg(c, -30, 10, 30, 10, 8, "#8b5a2b");
+      break;
+    case "net":
+      seg(c, 0, 0, 0, 130, 8, "#8b5a2b");
+      c.strokeStyle = INKC;
+      c.lineWidth = 5;
+      c.beginPath();
+      c.ellipse(0, 175, 46, 52, 0, 0, Math.PI * 2);
+      c.stroke();
+      [-30, 0, 30].forEach((x) => seg(c, x, 130, x, 222, 2, INKC));
+      [150, 175, 200].forEach((y) => seg(c, -44, y, 44, y, 2, INKC));
+      break;
+    case "spear":
+      seg(c, 0, -160, 0, 140, 8, "#8b5a2b");
+      poly(c, [[-14, -160], [14, -160], [0, -210]], "#c8ccd4", INKC, 5);
+      break;
+    case "fan":
+      seg(c, 0, 0, 0, 60, 7, "#8b5a2b");
+      poly(c, [[0, 60], [-60, 150], [60, 150]], "#e8c86a", INKC, 6);
+      break;
+    case "scroll":
+      poly(c, [[-40, 0], [40, 0], [40, 120], [-40, 120]], "#f2e2b0", INKC, 6);
+      [30, 55, 80].forEach((y) => seg(c, -26, y, 26, y, 3));
+      break;
     case "umbrella":
       seg(c, 0, 0, 0, 200, 8, "#3a2a1a");
       break;
@@ -209,6 +244,15 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   limb(c, 322, hipY, 165, 170, lR, 10);
   const footR = tip(...tip(322, hipY, 165, lR[0]), 170, lR[0] + lR[1]);
   seg(c, footR[0], footR[1], footR[0] + 40, footR[1], 10);
+  if (p.robe) {
+    const wd = p.wide ?? 1;
+    poly(c, [[300 - 56 * wd + tx, shY - 2], [300 + 56 * wd + tx, shY - 2], [300 + 92 * wd, 905], [300 - 92 * wd, 905]], p.robe, INKC, 8);
+    if (p.robeTrim) {
+      seg(c, 300 + tx, shY + 10, 300, 900, 10, p.robeTrim);
+      seg(c, 300 - 90 * wd, 896, 300 + 90 * wd, 896, 10, p.robeTrim);
+    }
+    if (p.sash) poly(c, [[300 - 66 * wd, hipY - 20], [300 + 66 * wd, hipY - 20], [300 + 68 * wd, hipY + 14], [300 - 68 * wd, hipY + 14]], p.sash, INKC, 4);
+  }
   // head
   const hx = 300 + tx * 1.3;
   c.save();
@@ -246,6 +290,23 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
       c.beginPath();
       c.arc(x, eyeY + 8, 15, Math.PI, 0);
       c.stroke();
+    } else if (p.expr === "laugh") {
+      // squeezed shut ">" "<" eyes
+      c.strokeStyle = INKC;
+      c.lineWidth = 7;
+      c.beginPath();
+      const d = i === 0 ? 1 : -1;
+      c.moveTo(x - 14 * d, eyeY - 12);
+      c.lineTo(x + 12 * d, eyeY);
+      c.lineTo(x - 14 * d, eyeY + 12);
+      c.stroke();
+    } else if (p.expr === "disgust") {
+      c.strokeStyle = INKC;
+      c.lineWidth = 7;
+      c.beginPath();
+      c.moveTo(x - 16, eyeY + 2);
+      c.lineTo(x + 16, eyeY - 2 + (i ? 6 : -6));
+      c.stroke();
     } else {
       c.beginPath();
       c.arc(x, eyeY, big, 0, Math.PI * 2);
@@ -266,12 +327,34 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     if (p.expr === "angry") ang = i === 0 ? 22 : -22;
     if (p.expr === "smug") ang = i === 0 ? 8 : -2;
     if (p.expr === "shock") by -= 12;
+    if (p.expr === "laugh") by -= 8;
+    if (p.expr === "disgust") ang = i === 0 ? 14 : -14;
+    if (p.expr === "think") ang = i === 0 ? 0 : -16;
     c.save();
     c.translate(x, by);
     c.rotate(R(ang));
     seg(c, -17, 0, 17, 0, 7);
     c.restore();
   });
+  if (p.beard) {
+    c.fillStyle = p.beard;
+    c.strokeStyle = INKC;
+    c.lineWidth = 6;
+    c.beginPath();
+    c.moveTo(212, 236);
+    c.quadraticCurveTo(222, 336, 300, 356);
+    c.quadraticCurveTo(378, 336, 388, 236);
+    c.quadraticCurveTo(372, 268, 346, 280);
+    c.quadraticCurveTo(300, 318, 254, 280);
+    c.quadraticCurveTo(228, 268, 212, 236);
+    c.fill();
+    c.stroke();
+    // skin window around the mouth
+    c.fillStyle = p.skin ?? "#f7ead6";
+    c.beginPath();
+    c.ellipse(300, 272, 44, 26, 0, 0, Math.PI * 2);
+    c.fill();
+  }
   // mouth
   const my = 270;
   c.strokeStyle = INKC;
@@ -296,6 +379,45 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.moveTo(280, my + 4);
     c.quadraticCurveTo(310, my + 18, 330, my - 4);
     c.stroke();
+  } else if (p.expr === "laugh") {
+    // big open "D" mouth with tongue
+    const o = 0.75 + 0.25 * mo;
+    c.beginPath();
+    c.moveTo(258, my - 10);
+    c.lineTo(342, my - 10);
+    c.quadraticCurveTo(342, my + 48 * o, 300, my + 50 * o);
+    c.quadraticCurveTo(258, my + 48 * o, 258, my - 10);
+    c.closePath();
+    c.fillStyle = "#3a0f16";
+    c.fill();
+    c.lineWidth = 5;
+    c.stroke();
+    c.fillStyle = "#e86a7a";
+    c.beginPath();
+    c.ellipse(300, my + 26 * o, 16, 9 * o, 0, 0, Math.PI * 2);
+    c.fill();
+    // laugh tears
+    c.fillStyle = "#8fd3ff";
+    [[236, 232], [364, 232]].forEach(([tx2, ty]) => {
+      c.beginPath();
+      c.ellipse(tx2, ty + mo * 6, 7, 11, 0, 0, Math.PI * 2);
+      c.fill();
+    });
+  } else if (p.expr === "disgust") {
+    c.beginPath();
+    c.moveTo(276, my + 8);
+    c.quadraticCurveTo(288, my - 4, 300, my + 8);
+    c.quadraticCurveTo(312, my + 20, 324, my + 4);
+    c.stroke();
+    // greenish cheeks
+    c.fillStyle = "rgba(140,190,90,0.45)";
+    [[238, 252], [362, 252]].forEach(([x2, y2]) => {
+      c.beginPath();
+      c.ellipse(x2, y2, 22, 14, 0, 0, Math.PI * 2);
+      c.fill();
+    });
+  } else if (p.expr === "think") {
+    seg(c, 286, my + 8, 314, my + 2, 7);
   } else if (p.expr === "talk") {
     c.beginPath();
     c.ellipse(300, my + 4, 18, 8 + mo * 14, 0, 0, Math.PI * 2);
@@ -305,6 +427,8 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     seg(c, 282, my + 4, 318, my + 4, 7);
   }
   if (p.mustache) {
+    c.save();
+    if (p.expr === "laugh" || p.expr === "shock") c.translate(0, -10);
     c.fillStyle = "#2b1a12";
     c.beginPath();
     c.moveTo(300, my - 12);
@@ -314,6 +438,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.quadraticCurveTo(342, my - 26, 300, my - 12);
     c.fill();
     c.stroke();
+    c.restore();
   }
   // hats
   const hat = p.hat ?? "none";
@@ -334,6 +459,33 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   } else if (hat === "kerchief") {
     poly(c, [[190, 170], [210, 100], [300, 78], [390, 100], [410, 170], [350, 128], [250, 128]], hatCol, INKC, 8);
     poly(c, [[392, 160], [440, 190], [420, 230], [396, 180]], hatCol, INKC, 6);
+  } else if (hat === "turban") {
+    c.fillStyle = hatCol;
+    poly(c, [[190, 170], [196, 110], [250, 76], [350, 76], [404, 110], [410, 170], [300, 150]], hatCol, INKC, 7);
+    [100, 124, 148].forEach((y, i) => seg(c, 200 + i * 6, y + 6, 400 - i * 6, y - 4, 4, "rgba(0,0,0,0.25)"));
+    c.beginPath();
+    c.arc(300, 70, 22, 0, Math.PI * 2);
+    c.fillStyle = hatCol;
+    c.fill();
+    c.stroke();
+  } else if (hat === "tallturban") {
+    poly(c, [[196, 160], [206, 40], [300, 6], [394, 40], [404, 160], [300, 146]], hatCol, INKC, 7);
+    poly(c, [[284, 70], [316, 70], [300, 100]], "#e0b040", INKC, 3);
+  } else if (hat === "crown") {
+    poly(c, [[192, 168], [204, 110], [396, 110], [408, 168], [300, 156]], "#7a1f3a", INKC, 7);
+    poly(c, [[206, 114], [214, 40], [250, 84], [300, 20], [350, 84], [386, 40], [394, 114]], "#f2c230", INKC, 7);
+    [[250, 96, "#e63946"], [300, 92, "#3b78e7"], [350, 96, "#2bb673"]].forEach(([x, y, col]) => {
+      c.beginPath();
+      c.arc(x as number, y as number, 9, 0, Math.PI * 2);
+      c.fillStyle = col as string;
+      c.fill();
+      c.lineWidth = 3;
+      c.stroke();
+    });
+  } else if (hat === "guardhelmet") {
+    poly(c, [[196, 160], [206, 100], [300, 40], [394, 100], [404, 160]], "#b8bfc8", INKC, 7);
+    seg(c, 300, 40, 300, 10, 8, "#b8bfc8");
+    seg(c, 300, 150, 300, 210, 8, "#8a95a5");
   } else if (hat === "peci") {
     if (p.sideHair) [-1, 1].forEach((sd) => poly(c, [[300 + sd * 112, 150], [300 + sd * 120, 200], [300 + sd * 104, 205]], p.sideHair!, INKC, 4));
     poly(c, [[206, 156], [214, 92], [300, 84], [386, 92], [394, 156], [300, 146]], "#151518", INKC, 7);

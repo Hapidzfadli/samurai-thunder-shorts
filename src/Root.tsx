@@ -28,6 +28,7 @@ import { Ancol3DTest } from "./Ancol3DTest";
 import { Ancol3D, TOTAL_FRAMES_A3 } from "./Ancol3D";
 import { Molase, TOTAL_FRAMES_M } from "./Molase";
 import { SheetSadap } from "./SheetSadap";
+import { H_ABU, SheetAbu, SheetAbuAula, SheetAbuCerita, SheetAbuExpr, SheetAbuIstana, SheetAbuRumah } from "./SheetAbu";
 import { Sadap, TOTAL_FRAMES_S } from "./Sadap";
 import { H_SADAP, SheetSadapBareskrim, SheetSadapIstana, SheetSadapKerja, SheetSadapServer, SheetSadapWarung } from "./SheetSadapProps";
 import { SheetPropsDapur, SheetPropsKantor, SheetPropsLuar, SheetPropsSidang, SheetPropsTangki } from "./SheetMolaseProps";
@@ -75,6 +76,12 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SheetSadapWarung" component={SheetSadapWarung} durationInFrames={1} fps={30} width={2000} height={H_SADAP.Warung} />
       <Composition id="SheetSadapBareskrim" component={SheetSadapBareskrim} durationInFrames={1} fps={30} width={2000} height={H_SADAP.Bareskrim} />
       <Composition id="Sadap" component={Sadap} durationInFrames={TOTAL_FRAMES_S} fps={30} width={1080} height={1920} />
+      <Composition id="SheetAbu" component={SheetAbu} durationInFrames={1} fps={30} width={2000} height={1150} />
+      <Composition id="SheetAbuExpr" component={SheetAbuExpr} durationInFrames={1} fps={30} width={2000} height={900} />
+      <Composition id="SheetAbuIstana" component={SheetAbuIstana} durationInFrames={1} fps={30} width={2000} height={H_ABU.Istana} />
+      <Composition id="SheetAbuAula" component={SheetAbuAula} durationInFrames={1} fps={30} width={2000} height={H_ABU.Aula} />
+      <Composition id="SheetAbuRumah" component={SheetAbuRumah} durationInFrames={1} fps={30} width={2000} height={H_ABU.Rumah} />
+      <Composition id="SheetAbuCerita" component={SheetAbuCerita} durationInFrames={1} fps={30} width={2000} height={H_ABU.Cerita} />
       <Composition id="SheetSadap" component={SheetSadap} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="Molase" component={Molase} durationInFrames={TOTAL_FRAMES_M} fps={30} width={1080} height={1920} />
       <Composition id="Ancol3D" component={Ancol3D} durationInFrames={TOTAL_FRAMES_A3} fps={30} width={1080} height={1920} />
