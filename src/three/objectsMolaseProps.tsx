@@ -90,7 +90,7 @@ export const Wagon: React.FC<{ pos?: V3; load?: "barrels" | "sacks" | "none"; t?
     {load === "barrels" && [0, 1, 2].map((i) => <Cyl key={i} pos={[-0.7 + i * 0.7, 1.55, 0]} r={0.3} h={0.8} color="#8b5a2b" />)}
     {load === "sacks" && [0, 1, 2, 3].map((i) => <Ball key={i} pos={[-0.8 + i * 0.55, 1.4, (i % 2) * 0.3 - 0.15]} r={0.34} color="#d9c28a" s={[1, 0.8, 0.8]} />)}
     <B pos={[-0.9, 1.65, 0.0]} size={[0.5, 0.5, 0.5]} color="#c8a070" ink={0.03} />
-    {withHorse && <Horse3D position={[2.9, 0, 0]} rotationY={Math.PI / 2} scale={1.05} phase={0} t={t} color="#7a4a2a" armor={false} />}
+    {withHorse && <Horse3D position={[2.9, 0, 0]} rotationY={Math.PI / 2} scale={1.05} phase={t * 0.9} t={t} color="#7a4a2a" armor={false} />}
   </group>
 );
 export const Sacks: React.FC<{ pos?: V3 }> = ({ pos = [0, 0, 0] }) => (
@@ -273,9 +273,9 @@ export const TankSite: React.FC<{ pos?: V3; r?: number }> = ({ pos = [0, 0, 0], 
     <P geo={() => <torusGeometry args={[0.3, 0.05, 6, 14]} />} color="#c93b3b" pos={[-r - 1.2, 1.1, 0.4]} hull={0.1} />
     <B pos={[-r - 2.8, 0.6, 1.2]} size={[1.6, 1.2, 1.2]} color="#a9703a" ink={0.04} />
     <B pos={[-r - 2.8, 1.35, 1.2]} size={[1.9, 0.2, 1.5]} color="#4a3a45" ink={0.04} />
-    <Sign pos={[0, 1.2, r + 0.6]} w={3.0} h={0.9} text="PURITY DISTILLING" bg="#e8dcb8" fg="#3a1c0a" />
-    <Cyl pos={[-1, 0.7, r + 0.6]} r={0.05} h={1.4} color="#4a3a2a" hull={0.15} />
-    <Cyl pos={[1, 0.7, r + 0.6]} r={0.05} h={1.4} color="#4a3a2a" hull={0.15} />
+    <Sign pos={[-r - 2.2, 1.6, 2.4]} w={1.8} h={0.6} text="MOLASSES" bg="#e8dcb8" fg="#3a1c0a" />
+    <Cyl pos={[-r - 2.9, 0.8, 2.4]} r={0.05} h={1.6} color="#4a3a2a" hull={0.15} />
+    <Cyl pos={[-r - 1.5, 0.8, 2.4]} r={0.05} h={1.6} color="#4a3a2a" hull={0.15} />
   </group>
 );
 export const SnowPatch: React.FC<{ pos?: V3; s?: number }> = ({ pos = [0, 0, 0], s = 1 }) => (

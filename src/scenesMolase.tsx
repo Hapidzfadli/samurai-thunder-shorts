@@ -6,6 +6,7 @@ import { useThree } from "@react-three/fiber";
 import { P, easeInOut3, lerpN, lerpV } from "./three/objectsRig";
 import { BeanCard, BeanParams, beanWalk } from "./three/objectsBean";
 import { Barrel, Building, Cobble, Crate, Ground, InkBox, LampPost, Molasses, Puddle, SkyDome, Tank, Wave } from "./three/objectsMolase";
+import * as K from "./three/objectsMolaseProps";
 import timing from "./molase_timing.json";
 import { FONT_BODY, FONT_TITLE } from "./ui";
 
@@ -192,19 +193,56 @@ const ENG: BeanParams = { torso: "#6a8ab8", pants: "#3a3a4a", hat: "tophat", hat
 const bean = (base: BeanParams, extra: Partial<BeanParams>): BeanParams => ({ ...base, ...extra });
 const idle = (t: number, k = 0): Partial<BeanParams> => ({ bob: Math.abs(Math.sin(t * 1.6 + k)) * 2, armL: [-6 + Math.sin(t * 1.2 + k) * 3, -8], armR: [6 - Math.sin(t * 1.2 + k) * 3, -8], blink: (t * 1.0 + k * 0.7) % 2.6 < 0.13 });
 
-const Street: React.FC<{ t: number; snow?: number; dusk?: number }> = ({ t, snow = 0, dusk = 0 }) => (
-  <group>
-    <Ground color={dusk > 0 ? "#6e607a" : "#9a9cb3"} />
-    <Cobble w={9} z={0.5} len={120} a={dusk > 0 ? "#8a7a96" : "#9b9db8"} b="#3d3a52" />
-    {/* sidewalk */}
-    <InkBox pos={[0, 0.12, -5.1]} size={[120, 0.24, 2.2]} color="#c9c0b6" ink={0.05} />
-    {[-30, -22, -14, -6, 2, 10, 18, 26].filter((x) => x !== 10).map((x, i) => (
-      <Building key={x} pos={[x, 0, -8.4]} w={6.6} h={7 + (i % 3) * 1.8} d={4} base={["#b5573f", "#c9a066", "#9c4a38", "#c47f50"][i % 4]} seed={i + 3} cols={3} rows={3 + (i % 2)} lit={dusk > 0 ? 0.7 : 0.3} shop={i % 3 === 0} />
-    ))}
-    {[-12, 4, 20].map((x) => <LampPost key={x} pos={[x, 0, -4.2]} on={dusk > 0} />)}
-    {snow > 0 && [...Array(14)].map((_, i) => <mesh key={i} position={[-14 + i * 2.6, 0.03, -5.2 + (i % 3) * 3.2]} rotation={[-Math.PI / 2, 0, 0]} scale={[1, 0.6, 1]}><circleGeometry args={[0.9 * snow, 10]} /><meshBasicMaterial color="#f4f8ff" /></mesh>)}
-  </group>
-);
+const Street: React.FC<{ t: number; snow?: number; dusk?: number; wagon?: boolean }> = ({ t, snow = 0, dusk = 0, wagon = false }) => {
+  const d = dusk > 0;
+  const wx = ((t * 0.9 + 30) % 70) - 30;
+  return (
+    <group>
+      <Ground color={d ? "#6e607a" : "#9a9cb3"} />
+      <Cobble w={9} z={0.5} len={120} a={d ? "#8a7a96" : "#9b9db8"} b="#3d3a52" />
+      <InkBox pos={[0, 0.12, -5.1]} size={[120, 0.24, 2.2]} color="#c9c0b6" ink={0.05} />
+      <InkBox pos={[0, 0.12, 5.9]} size={[120, 0.24, 1.6]} color="#c9c0b6" ink={0.05} />
+      {/* back row: tenements, firehouse, warehouse */}
+      <K.Tenement pos={[-28, 0, -8.6]} seed={3} base="#b5573f" />
+      <K.Tenement pos={[-22, 0, -8.6]} seed={5} base="#c9a066" shop={false} />
+      <K.Firehouse pos={[-14, 0, -9.2]} />
+      <K.Tenement pos={[-6, 0, -8.6]} seed={8} base="#9c4a38" />
+      <K.Warehouse pos={[2.6, 0, -9.2]} />
+      <K.Tenement pos={[11, 0, -9.2]} seed={12} base="#c47f50" shop={false} />
+      <K.Warehouse pos={[19.4, 0, -9.2]} />
+      <K.Tenement pos={[27, 0, -8.6]} seed={14} base="#b5573f" />
+      {/* the elevated railway along the street */}
+      <K.ElevatedRail pos={[-4, 0, -6.2]} len={34} />
+      <K.ElevatedRail pos={[30, 0, -6.2]} len={30} />
+      {/* street furniture */}
+      {[-18, -8, 2, 20, 28].map((x) => <K.GasLamp key={x} pos={[x, 0.24, -4.3]} lit={d} />)}
+      {[-12, 6, 24].map((x) => <K.Hydrant key={x} pos={[x, 0.24, -4.0]} />)}
+      <K.NewsStand pos={[-9.5, 0.24, -4.4]} />
+      <K.Bench pos={[-1.6, 0.24, -4.3]} />
+      <K.Mailbox pos={[3.6, 0.24, -4.1]} />
+      <K.TrashCan pos={[-20.5, 0.24, -4.0]} />
+      <K.Bicycle pos={[-15.5, 0.24, -4.0]} />
+      <K.BarrelStack pos={[-1.4, 0.24, -4.6]} />
+      <K.CrateStack pos={[5.2, 0.24, -4.6]} />
+      <K.Sacks pos={[14.4, 0.24, -4.4]} />
+      <K.BarrelStack pos={[17.6, 0.24, -4.6]} />
+      <K.TankSite pos={TANK} r={1.9} />
+      {/* the harbour to the right of the tank */}
+      <mesh position={[40, -0.04, 6]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[40, 40]} />
+        <meshStandardMaterial color={d ? "#7a8ac0" : "#4a8fc8"} roughness={0.4} />
+      </mesh>
+      <K.Pier pos={[27, 0, 6]} len={9} />
+      <K.Steamer pos={[36, 0, 10]} t={t} />
+      <K.Crane pos={[24, 0.3, 4.2]} />
+      {[22.5, 25, 27.5].map((x) => <K.Bollard key={x} pos={[x, 0.3, 8]} />)}
+      <K.IronFence pos={[22, 0.24, 5.3]} len={5} />
+      <K.Streetcar pos={[-26, 0.24, 1.8]} />
+      {wagon && <K.Wagon pos={[wx, 0.1, -1.7]} t={t} load={wx > 10 ? "sacks" : "barrels"} />}
+      {snow > 0 && [...Array(18)].map((_, i) => <K.SnowPatch key={i} pos={[-20 + i * 2.5, 0.04, -3.2 + (i % 4) * 2.4]} s={1.1 * snow} />)}
+    </group>
+  );
+};
 const PierSet: React.FC<{ t: number }> = ({ t }) => (
   <group>
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.05, 40]}>
@@ -444,7 +482,7 @@ export const SceneMGelombang: React.FC = () => {
       <Stage cam={cam} shake={f < sad ? kick(f, [rush, rush + 20, rush + 40, speed, speed + 18, sweep], 0.06) : [0, 0, 0]} bg="#f2b987" fog={["#e8b890", 30, 120]}>
         <SkyDome top={f < sad ? "#5a8ee0" : "#4a6aa0"} horizon={f < sad ? "#ffc890" : "#c8b0c0"} />
         <PierSet t={t} />
-        <Street t={t} />
+        <Street t={t} wagon={false} />
         <Puddle x0={wf} x1={TANK[0] - 3} z={0.5} width={9} h={0.32 + settle * 0.05} t={t} />
         <Wave front={wf} z={0.5} width={9} h={f < sad ? 4.4 : Math.max(0.2, 4.4 * (1 - settle * 0.95))} t={t} />
         {f < sad
@@ -458,6 +496,8 @@ export const SceneMGelombang: React.FC = () => {
             })
           : null}
         {[0, 1, 2, 3, 4].map((i) => <Crate key={i} pos={[wf + 2 + i * 1.6, 0.35 + Math.sin(f * 0.12 + i) * 0.12, -1.6 + (i % 2) * 2.6]} rot={[f * 0.02 * (i + 1), 0.4 * i, f * 0.015]} />)}
+        {f < sad && <K.Wagon pos={[wf + 4.5, 0.4 + Math.sin(f * 0.1) * 0.1, -2.2]} t={t} load="barrels" />}
+        {[0, 1, 2].map((i) => <Barrel key={i} pos={[wf + 6 + i * 1.8, 0.3 + Math.abs(Math.sin(f * 0.1 + i)) * 0.3, 2.6 - i * 1.4]} />)}
         <Lights key1={f < sad ? "#ffb06a" : "#9ab0e0"} sky={f < sad ? "#ffd8b0" : "#8aa0d0"} dir={[8, 6, 10]} k={f < sad ? 2.4 : 1.4} />
       </Stage>
       <Grade warm={f < sad ? 0.7 : 0} cool={f < sad ? 0 : 0.8} blur={5} dark={f < sad ? 0 : 0.18 * settle} />
@@ -499,6 +539,14 @@ const Drip: React.FC<{ x: number; y: number; z: number; t: number; speed: number
     </group>
   );
 };
+const TileWall: React.FC<{ z: number; w?: number }> = ({ z, w = 24 }) => (
+  <group>
+    <mesh position={[0, 3, z]}><planeGeometry args={[w, 8]} /><meshStandardMaterial color="#f3ecd6" /></mesh>
+    <mesh position={[0, 1.15, z + 0.01]}><planeGeometry args={[w, 2.3]} /><meshBasicMaterial color="#9fd0cf" /></mesh>
+    {[...Array(Math.round(w / 0.8))].map((_, i) => <mesh key={i} position={[-w / 2 + 0.4 + i * 0.8, 1.15, z + 0.02]}><planeGeometry args={[0.02, 2.3]} /><meshBasicMaterial color="#ffffff" /></mesh>)}
+    {[0.6, 1.2, 1.8].map((y) => <mesh key={y} position={[0, y, z + 0.02]}><planeGeometry args={[w, 0.02]} /><meshBasicMaterial color="#ffffff" /></mesh>)}
+  </group>
+);
 export const SceneMMadu: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / 30;
@@ -508,40 +556,49 @@ export const SceneMMadu: React.FC = () => {
   const fast = EV("madu.fast");
   const thin = EV("madu.thin");
   const cam = shotCam(f, [
-    { to: warm - 10, p0: [-2.0, 1.6, 12], l0: [-2.0, 1.2, 0], p1: [-1.8, 1.6, 11], l1: [-1.9, 1.2, 0], fov: 36 },
-    { to: thin, p0: [1.8, 1.6, 12], l0: [1.8, 1.2, 0], p1: [1.6, 1.6, 11], l1: [1.7, 1.2, 0], fov: 36 },
-    { to: 9999, p0: [0, 1.9, 14], l0: [0, 1.4, 0], p1: [0, 2.0, 15], l1: [0, 1.4, 0], fov: 38 },
+    { to: warm - 10, p0: [-2.0, 1.7, 11], l0: [-2.2, 1.5, 0], p1: [-1.8, 1.7, 10], l1: [-2.1, 1.5, 0], fov: 36 },
+    { to: thin, p0: [1.8, 1.7, 11], l0: [1.8, 1.4, 0], p1: [1.6, 1.7, 10], l1: [1.7, 1.4, 0], fov: 36 },
+    { to: 9999, p0: [0, 2.3, 15], l0: [0, 1.7, 0], p1: [0, 2.4, 16], l1: [0, 1.7, 0], fov: 40 },
   ]);
+  const open = smoother(cl((f - fridge + 20) / 16));
   return (
     <>
       <Stage cam={cam} bg="#cfd8ee">
-        <mesh position={[0, 3, -2.2]}>
-          <planeGeometry args={[40, 12]} />
-          <meshStandardMaterial color="#e9e0cc" />
-        </mesh>
+        <TileWall z={-2.4} />
         <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
           <planeGeometry args={[60, 30]} />
-          <meshStandardMaterial color="#b88a5a" roughness={0.9} />
+          <meshStandardMaterial color="#c89a68" roughness={0.9} />
         </mesh>
-        {/* fridge (cold) */}
-        <InkBox pos={[-2.6, 1.3, -0.9]} size={[1.9, 2.6, 1.3]} color="#dfe9f3" ink={0.06} />
-        <InkBox pos={[-2.6, 1.3, -0.2]} size={[1.7, 2.3, 0.08]} color="#c8d6e6" ink={0.03} />
-        <InkBox pos={[-3.3, 1.3, -0.1]} size={[0.1, 0.9, 0.1]} color="#5a6a80" ink={0.02} />
-        {/* shelf with jar in the fridge */}
-        <InkBox pos={[-2.6, 1.2, 0.2]} size={[1.5, 0.1, 0.8]} color="#aebfd4" ink={0.03} />
-        <Jar pos={[-2.6, 1.25, 0.3]} tilt={0} />
-        <Drip x={-2.6} y={1.25} z={0.3} t={t} speed={0.06} len={0.5} />
-        {/* stove (warm) */}
-        <InkBox pos={[2.6, 0.55, -0.5]} size={[2.2, 1.1, 1.4]} color="#4a4a58" ink={0.06} />
-        {[-0.5, 0.5].map((x) => <mesh key={x} position={[2.6 + x, 1.12, -0.5]}><cylinderGeometry args={[0.32, 0.32, 0.04, 14]} /><meshBasicMaterial color={f >= warm ? "#ff7a2a" : "#222"} /></mesh>)}
-        <InkBox pos={[2.6, 1.15, 0.0]} size={[1.2, 0.06, 0.6]} color="#c8a070" ink={0.02} />
-        <Jar pos={[2.6, 1.18, 0.0]} tilt={0.9} />
-        <Drip x={2.35} y={1.25} z={0.0} t={t} speed={f >= fast ? 2.6 : 0.5} len={0.9} />
-        <BeanCard position={[0, 0, 1.2]} height={1.5} params={bean(KID, { ...idle(t), expr: f < warm ? "sleepy" : f >= fast ? "happy" : "neutral", look: f < warm ? -1 : 1 })} />
-        <hemisphereLight args={["#e8eeff", "#8a7a8a", 0.9]} />
-        <directionalLight position={[2, 8, 8]} intensity={1.2} color="#fff0d8" castShadow />
-        <pointLight position={[-2.6, 2.0, 1.4]} intensity={25} color="#6aa8ff" distance={7} />
-        <pointLight position={[2.6, 2.0, 1.4]} intensity={f >= warm ? 30 : 8} color="#ff9a4a" distance={7} />
+        {[...Array(14)].map((_, i) => <mesh key={i} position={[-8 + i * 1.2, 0.012, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[0.03, 30]} /><meshBasicMaterial color="#8a5a2b" /></mesh>)}
+        <K.Rug pos={[0, 0, 1.4]} w={5} d={2.6} color="#c0526a" />
+        {/* cold side */}
+        <K.Fridge pos={[-2.9, 0, -1.2]} open={open} />
+        <K.WallClock pos={[-1.0, 3.5, -2.3]} r={0.4} />
+        <K.Cabinet pos={[-5.4, 0, -2.0]} />
+        {/* window + shelves */}
+        <K.Window pos={[0.4, 2.4, -2.3]} w={1.8} h={1.4} />
+        <K.JarShelf pos={[2.7, 3.2, -2.0]} />
+        <K.Pot pos={[2.2, 1.1, -1.4]} />
+        {/* warm side */}
+        <K.Stove pos={[2.7, 0, -1.3]} hot={f >= warm} />
+        <K.Cabinet pos={[5.5, 0, -2.0]} />
+        {[2.0, 3.0, 4.0].map((x, i) => <K.Pot key={i} pos={[x, 2.9 + (i % 2) * 0.3, -2.25]} />)}
+        {/* table + plant */}
+        <K.KitchenTable pos={[-0.2, 0, -0.6]} />
+        <K.Chair pos={[-1.2, 0, 0.4]} rot={Math.PI} />
+        <K.Chair pos={[0.8, 0, 0.4]} rot={Math.PI} />
+        <K.Plant pos={[-5.4, 0, 0.2]} />
+        <K.Plant pos={[4.7, 0, 0.6]} />
+        {/* jars */}
+        <Jar pos={[-2.9, 1.43, -0.5]} tilt={0} />
+        <Drip x={-2.9} y={1.43} z={-0.5} t={t} speed={0.06} len={0.4} />
+        <Jar pos={[2.4, 1.18, -0.9]} tilt={0.9} />
+        <Drip x={2.15} y={1.26} z={-0.9} t={t} speed={f >= fast ? 2.6 : 0.5} len={0.9} />
+        <BeanCard position={[0.2, 0, 1.8]} height={1.5} params={bean(KID, { ...idle(t), expr: f < warm ? "sleepy" : f >= fast ? "happy" : "neutral", look: f < warm ? -1 : 1 })} />
+        <hemisphereLight args={["#e8eeff", "#8a7a8a", 1.4]} />
+        <directionalLight position={[2, 8, 8]} intensity={1.4} color="#fff0d8" castShadow />
+        <pointLight position={[-2.9, 2.6, 1.0]} intensity={30} color="#6aa8ff" distance={8} />
+        <pointLight position={[2.7, 2.4, 1.0]} intensity={f >= warm ? 36 : 8} color="#ff9a4a" distance={8} />
       </Stage>
       <Grade warm={f >= warm ? 0.5 : 0} cool={f < warm ? 0.7 : 0.1} blur={5} />
       <Chip from={slow} to={warm - 6} top={430} color="#3b78e7">DINGIN = LAMBAT</Chip>
@@ -557,21 +614,20 @@ export const SceneMMadu: React.FC = () => {
 /* ================================================================== */
 const Pew: React.FC<{ pos: Vec3; color: string }> = ({ pos, color }) => (
   <group position={pos}>
-    <P geo={() => <sphereGeometry args={[0.26, 10, 8]} />} color="#f7ead6" pos={[0, 0.95, 0]} hull={0.1} />
-    <P geo={() => <capsuleGeometry args={[0.24, 0.35, 4, 8]} />} color={color} pos={[0, 0.5, 0]} hull={0.1} />
+    <P geo={() => <sphereGeometry args={[0.26, 10, 8]} />} color="#f7ead6" pos={[0, 1.05, 0]} hull={0.1} />
+    <P geo={() => <capsuleGeometry args={[0.24, 0.35, 4, 8]} />} color={color} pos={[0, 0.6, 0]} hull={0.1} />
   </group>
 );
 export const SceneMCourt: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / 30;
-  const blame = EV("court.blame");
   const shout = EV("court.shout");
   const gavel = EV("court.gavel");
   const guilty = EV("court.guilty");
   const cam = shotCam(f, [
     { to: shout + 24, p0: [-2.4, 2.0, 11], l0: [-2.4, 2.0, 0], p1: [-2.4, 2.1, 10], l1: [-2.4, 2.0, 0], fov: 36 },
     { to: gavel + 30, p0: [2.2, 2.6, 12], l0: [2.2, 3.0, -1.6], p1: [2.2, 2.6, 11], l1: [2.2, 3.0, -1.6], fov: 36, roll0: 3, roll1: 0 },
-    { to: 9999, p0: [0, 3.0, 16], l0: [0, 1.8, 0], p1: [0, 3.2, 18], l1: [0, 1.8, 0], fov: 40 },
+    { to: 9999, p0: [0, 3.2, 17], l0: [0, 2.0, 0], p1: [0, 3.4, 19], l1: [0, 2.0, 0], fov: 40 },
   ]);
   const hit = f >= gavel && f < gavel + 10 ? 1 : f >= guilty && f < guilty + 10 ? 1 : 0;
   const stamp = spring({ frame: f - guilty, fps: 30, config: { damping: 8, stiffness: 220 } });
@@ -579,22 +635,33 @@ export const SceneMCourt: React.FC = () => {
   return (
     <>
       <Stage cam={cam} bg="#6a4a3a">
-        <mesh position={[0, 4, -4.5]}>
-          <planeGeometry args={[40, 12]} />
-          <meshStandardMaterial color="#8a5a3a" />
-        </mesh>
-        {[-6, -3, 0, 3, 6].map((x) => <InkBox key={x} pos={[x, 3, -4.3]} size={[2.4, 5, 0.12]} color="#a8683a" ink={0.04} />)}
-        <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-          <planeGeometry args={[60, 30]} />
-          <meshStandardMaterial color="#6a3f24" roughness={0.9} />
-        </mesh>
-        {/* bench + podium */}
-        <InkBox pos={[2.2, 0.9, -1.6]} size={[4.2, 1.8, 1.3]} color="#7a4a2a" ink={0.06} />
-        <InkBox pos={[-2.6, 0.6, 0.0]} size={[1.4, 1.2, 0.9]} color="#7a4a2a" ink={0.05} />
-        {[0, 1, 2].map((r) => [...Array(8)].map((_, i) => <Pew key={`${r}-${i}`} pos={[-5.6 + i * 1.5 + (r % 2) * 0.7, r * 0.0, 3.2 + r * 1.2 + 4]} color={cols[(i + r) % cols.length]} />))}
-        <BeanCard position={[2.2, 1.8, -1.6]} height={1.9} params={bean(JUDGE, { ...idle(t), expr: f >= guilty ? "angry" : "neutral", prop: "gavel", armR: hit ? [120, -30] : [60, -30] })} />
-        <BeanCard position={[-2.6, 1.2, 0.0]} height={2.0} params={bean(BOSS, { ...idle(t, 1), expr: f >= shout && f < gavel ? "angry" : f >= gavel ? "sad" : "smug", sweat: f >= gavel, armR: f >= shout && f < gavel ? [140 + Math.sin(f) * 10, -10] : [6, -8], look: 0.5 })} flip />
-        <Lights key1="#ffd9a0" sky="#c8a888" ground="#4a2a1a" dir={[-6, 8, 10]} k={1.8} />
+        {/* hall */}
+        <mesh position={[0, 4, -4.6]}><planeGeometry args={[40, 11]} /><meshStandardMaterial color="#d9c49a" /></mesh>
+        <mesh position={[0, 1.2, -4.55]}><planeGeometry args={[40, 2.4]} /><meshStandardMaterial color="#7a4a2a" /></mesh>
+        {[-9, -6, -3, 0, 3, 6, 9].map((x) => <K.Window key={x} pos={[x, 5.2, -4.5]} w={1.4} h={2.6} curtain="#8a1a1a" />)}
+        <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow><planeGeometry args={[60, 30]} /><meshStandardMaterial color="#6a3f24" roughness={0.9} /></mesh>
+        <mesh position={[0, 0.02, 4]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[3.2, 18]} /><meshBasicMaterial color="#7a1a1a" /></mesh>
+        <K.WallClock pos={[0, 7.2, -4.4]} r={0.6} />
+        <K.Bookshelf pos={[-7.6, 0, -4.2]} />
+        <K.Bookshelf pos={[7.6, 0, -4.2]} />
+        <K.FlagStand pos={[0.6, 0, -3.2]} />
+        <K.FlagStand pos={[5.2, 0, -3.2]} />
+        <K.Chandelier pos={[-2.5, 7.0, -1]} />
+        <K.Chandelier pos={[3.5, 7.0, -1]} />
+        {/* bench, witness, jury */}
+        <K.JudgeBench pos={[2.2, 0, -2.2]} />
+        <K.WitnessStand pos={[-0.9, 0, -1.8]} />
+        <group position={[-7.4, 0, 0.2]} rotation={[0, Math.PI / 2, 0]}><K.JuryBox /></group>
+        <K.Scales pos={[5.6, 1.85, -2.4]} />
+        {/* lawyers + bar rail + gallery */}
+        <K.Lawyers pos={[-2.6, 0, 1.0]} />
+        <K.Lawyers pos={[2.8, 0, 1.0]} />
+        <K.BarRail pos={[0, 0, 3.0]} len={14} />
+        <K.Pews pos={[-2.6, 0, 6.0]} rows={4} />
+        {[0, 1, 2, 3].map((r) => [...Array(7)].map((_, i) => <Pew key={`${r}-${i}`} pos={[-4.6 + i * 0.76 + (r % 2) * 0.3, 0, 6.2 + r * 1.4]} color={cols[(i + r) % cols.length]} />))}
+        <BeanCard position={[2.2, 1.9, -2.2]} height={1.9} params={bean(JUDGE, { ...idle(t), expr: f >= guilty ? "angry" : "neutral", prop: "gavel", armR: hit ? [120, -30] : [60, -30] })} />
+        <BeanCard position={[-2.6, 0, 0.0]} height={2.0} params={bean(BOSS, { ...idle(t, 1), expr: f >= shout && f < gavel ? "angry" : f >= gavel ? "sad" : "smug", sweat: f >= gavel, armR: f >= shout && f < gavel ? [140 + Math.sin(f) * 10, -10] : [6, -8], look: 0.5 })} flip />
+        <Lights key1="#ffd9a0" sky="#d8c0a0" ground="#6a4a3a" dir={[-6, 8, 10]} k={1.8} />
       </Stage>
       <Grade warm={0.4} blur={5} />
       <Bubble x={300} y={500} w={420} text="PASTI SABOTASE!" size={52} from={shout} to={shout + 70} />
@@ -617,31 +684,35 @@ export const SceneMAturan: React.FC = () => {
   const t = f / 30;
   const sign = EV("aturan.sign");
   const stamp = EV("aturan.stamp");
-  const cam = shotCam(f, [{ to: 9999, p0: [0.4, 2.8, 10.4], l0: [0, 1.5, 0], p1: [0.1, 2.5, 9.2], l1: [0, 1.5, 0], fov: 36, roll0: 3, roll1: 0 }]);
+  const cam = shotCam(f, [{ to: 9999, p0: [-0.2, 2.4, 10.0], l0: [-0.2, 1.7, 1.0], p1: [-0.4, 2.2, 9.0], l1: [-0.3, 1.7, 1.0], fov: 36, roll0: 3, roll1: 0 }]);
   const st = spring({ frame: f - stamp, fps: 30, config: { damping: 8, stiffness: 240 } });
   const kick1 = f >= stamp ? kick(f, [stamp], 0.1) : ([0, 0, 0] as Vec3);
   return (
     <>
       <Stage cam={cam} shake={kick1} bg="#cdbd9a">
-        <mesh position={[0, 3, -3]}>
-          <planeGeometry args={[40, 12]} />
-          <meshStandardMaterial color="#e9dcc0" />
-        </mesh>
-        <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-          <planeGeometry args={[60, 30]} />
-          <meshStandardMaterial color="#a8794a" roughness={0.9} />
-        </mesh>
-        {[-3, -1.5, 0, 1.5, 3].map((x, i) => <P key={x} geo={() => <cylinderGeometry args={[0.12, 0.12, 1.6, 10]} />} color={["#f1e6c8", "#c8d8e8", "#e8c8c8"][i % 3]} pos={[x, 2.8, -2.6]} rot={[0, 0, Math.PI / 2]} hull={0.15} />)}
-        {/* drawing table with blueprint */}
-        <InkBox pos={[0, 0.95, 0.4]} size={[3.2, 0.12, 1.8]} color="#a86a3a" ink={0.05} />
-        {[-1.4, 1.4].map((x) => <InkBox key={x} pos={[x, 0.45, 0.4]} size={[0.14, 0.9, 0.14]} color="#7a4a2a" ink={0.03} />)}
-        <mesh position={[0, 1.03, 0.4]} rotation={[-Math.PI / 2, 0, 0]}>
-          <planeGeometry args={[2.6, 1.4]} />
-          <meshBasicMaterial color="#3b6ac8" />
-        </mesh>
-        {[...Array(5)].map((_, i) => <mesh key={i} position={[0, 1.04, -0.1 + i * 0.25]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[2.3, 0.02]} /><meshBasicMaterial color="#bcd4ff" /></mesh>)}
-        <mesh position={[0, 1.045, 0.4]} rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[0.35, 0.4, 24]} /><meshBasicMaterial color="#bcd4ff" /></mesh>
-        <BeanCard position={[0, 0, -0.9]} height={2.0} params={bean(ENG, { ...idle(t), expr: f >= stamp ? "happy" : "neutral", prop: f >= sign ? (f < stamp ? "pen" : "stamp") : "none", armR: f >= sign && f < stamp ? [80 + Math.sin(f * 0.7) * 8, -40] : f >= stamp ? [70 + (1 - st) * 40, -30] : [6, -8], look: 0.5 })} />
+        <mesh position={[0, 3.2, -3.2]}><planeGeometry args={[40, 10]} /><meshStandardMaterial color="#e9dcc0" /></mesh>
+        <mesh position={[0, 1.0, -3.15]}><planeGeometry args={[40, 2.0]} /><meshStandardMaterial color="#8a6a40" /></mesh>
+        <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow><planeGeometry args={[60, 30]} /><meshStandardMaterial color="#a8794a" roughness={0.9} /></mesh>
+        {[...Array(16)].map((_, i) => <mesh key={i} position={[-9 + i * 1.2, 0.012, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[0.03, 30]} /><meshBasicMaterial color="#6a4a2a" /></mesh>)}
+        <K.Window pos={[-4.2, 3.6, -3.1]} w={1.8} h={2.2} curtain="#2a5aa8" />
+        <K.Window pos={[4.2, 3.6, -3.1]} w={1.8} h={2.2} curtain="#2a5aa8" />
+        <K.WallMap pos={[-0.2, 4.4, -3.1]} />
+        <K.WallClock pos={[2.0, 5.2, -3.1]} r={0.4} />
+        <K.BlueprintRack pos={[6.4, 0, -2.6]} />
+        <K.FilingCabinet pos={[8.2, 0, -2.6]} />
+        <K.FilingCabinet pos={[-8.2, 0, -2.6]} />
+        <K.CoatStand pos={[-6.4, 0, -2.4]} />
+        <K.Desk pos={[-5.6, 0, 0.6]} />
+        <K.Telephone pos={[-5.0, 1.0, 0.7]} />
+        <K.Globe pos={[-3.2, 0, -2.2]} />
+        <K.DraftingTable pos={[-3.0, 0, 3.6]} />
+        <K.Stool pos={[-3.0, 0, 5.0]} />
+        <K.PendantLamp pos={[0, 6.4, 0.4]} />
+        <K.PendantLamp pos={[-5, 6.4, 0.4]} />
+        {/* the hero table with the blueprint */}
+        <K.DraftingTable pos={[0.6, 0, 0.9]} />
+        <K.Stool pos={[2.5, 0, 0.9]} />
+        <BeanCard position={[-1.0, 0, 1.7]} height={2.0} params={bean(ENG, { ...idle(t), expr: f >= stamp ? "happy" : "neutral", prop: f >= sign ? (f < stamp ? "pen" : "stamp") : "none", armR: f >= sign && f < stamp ? [80 + Math.sin(f * 0.7) * 8, -40] : f >= stamp ? [70 + (1 - st) * 40, -30] : [6, -8], look: 0.5 })} />
         <Lights key1="#fff0d0" dir={[-4, 9, 8]} k={1.9} />
       </Stage>
       <Grade warm={0.3} blur={5} />
@@ -681,7 +752,7 @@ export const SceneMTwist: React.FC = () => {
       <Stage cam={cam} bg="#ffd0a0" fog={["#f6c898", 30, 130]}>
         <SkyDome top="#5a8ee0" horizon="#ffd0a0" />
         <PierSet t={t} />
-        <Street t={t} dusk={0} />
+        <Street t={t} dusk={0} wagon />
         {/* painted tank wall segment with something oozing behind the paint */}
         <Tank pos={TANK} t={t} leak={0} paint={1} />
         <mesh position={[TANK[0] - 1.2, 1.4, TANK[2] + 1.6]}>

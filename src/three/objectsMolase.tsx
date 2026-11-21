@@ -199,9 +199,9 @@ export const Tank: React.FC<{ pos: V3; r?: number; h?: number; paint?: number; l
         <P geo={() => <cylinderGeometry args={[r, r, h, 32]} />} color={body} pos={[0, h / 2, 0]} hull={0.015} />
       ) : (
         <>
-          <P geo={() => <cylinderGeometry args={[r, r, h, 32, 1, true, gap, Math.PI * 2 - gap]} />} color={body} pos={[0, h / 2, 0]} hull={0.012} />
+          <P geo={() => <cylinderGeometry args={[r, r, h, 32, 1, true, gap / 2, Math.PI * 2 - gap]} />} color={body} pos={[0, h / 2, 0]} hull={0.012} />
           <mesh position={[0, h / 2, 0]} rotation={[0, 0, 0]}>
-            <cylinderGeometry args={[r * 0.98, r * 0.98, h, 32, 1, true, gap, Math.PI * 2 - gap]} />
+            <cylinderGeometry args={[r * 0.98, r * 0.98, h, 32, 1, true, gap / 2, Math.PI * 2 - gap]} />
             <meshBasicMaterial color="#3a1c0a" side={THREE.BackSide} />
           </mesh>
         </>
