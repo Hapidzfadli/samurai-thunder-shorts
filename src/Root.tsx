@@ -35,6 +35,7 @@ import { SheetKelompok, SheetKelompokExpr, SheetKelompokProps } from "./SheetKel
 import { SheetNawas, SheetNawasExpr, SheetNawasProps } from "./SheetNawas";
 import { Nawas, TOTAL_FRAMES_NW } from "./Nawas";
 import { SheetAwan, SheetAwanProps } from "./SheetAwan";
+import { Awan, TOTAL_FRAMES_AW } from "./Awan";
 import { Emu, TOTAL_FRAMES_EMU } from "./Emu";
 import { H_KBY, SheetKabayan, SheetKabayanExpr, SheetKabayanPropDapur, SheetKabayanPropKampung, SheetKabayanPropSawah, SheetKabayanSawah } from "./SheetKabayan";
 import { AbuNawas, TOTAL_FRAMES_ABU } from "./AbuNawas";
@@ -97,6 +98,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="Emu" component={Emu} durationInFrames={TOTAL_FRAMES_EMU} fps={30} width={1080} height={1920} />
       <Composition id="Kelompok" component={Kelompok} durationInFrames={TOTAL_FRAMES_KEL} fps={30} width={1080} height={1920} />
       <Composition id="Nawas" component={Nawas} durationInFrames={TOTAL_FRAMES_NW} fps={30} width={1080} height={1920} />
+      <Composition id="Awan" component={Awan} durationInFrames={TOTAL_FRAMES_AW} fps={30} width={1080} height={1920} />
       <Composition id="SheetAwan" component={SheetAwan} durationInFrames={1} fps={30} width={2000} height={1000} />
       <Composition id="SheetAwanProps" component={SheetAwanProps} durationInFrames={1} fps={30} width={2000} height={2000} />
       <Composition id="SheetNawas" component={SheetNawas} durationInFrames={1} fps={30} width={2000} height={1150} />

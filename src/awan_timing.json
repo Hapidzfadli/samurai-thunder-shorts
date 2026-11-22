@@ -1,0 +1,838 @@
+{
+ "fps": 30,
+ "order": [
+  "hook",
+  "perintah",
+  "sedih",
+  "sanggup",
+  "siap",
+  "harih",
+  "lempar",
+  "runtuh",
+  "kejutan",
+  "bulan"
+ ],
+ "scenes": {
+  "hook": {
+   "from": 0,
+   "dur": 128
+  },
+  "perintah": {
+   "from": 128,
+   "dur": 262
+  },
+  "sedih": {
+   "from": 390,
+   "dur": 202
+  },
+  "sanggup": {
+   "from": 592,
+   "dur": 200
+  },
+  "siap": {
+   "from": 792,
+   "dur": 180
+  },
+  "harih": {
+   "from": 972,
+   "dur": 170
+  },
+  "lempar": {
+   "from": 1142,
+   "dur": 299
+  },
+  "runtuh": {
+   "from": 1441,
+   "dur": 214
+  },
+  "kejutan": {
+   "from": 1655,
+   "dur": 273
+  },
+  "bulan": {
+   "from": 1928,
+   "dur": 269
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "text": "Bos menyuruh membangun kantor... di atas awan.",
+    "style": "narasi",
+    "from": 15,
+    "to": 91,
+    "words": [
+     {
+      "w": "Bos",
+      "from": 15,
+      "to": 22
+     },
+     {
+      "w": "menyuruh",
+      "from": 23,
+      "to": 37
+     },
+     {
+      "w": "membangun",
+      "from": 38,
+      "to": 54
+     },
+     {
+      "w": "kantor...",
+      "from": 55,
+      "to": 66
+     },
+     {
+      "w": "di",
+      "from": 67,
+      "to": 73
+     },
+     {
+      "w": "atas",
+      "from": 74,
+      "to": 82
+     },
+     {
+      "w": "awan.",
+      "from": 83,
+      "to": 91
+     }
+    ]
+   }
+  ],
+  "perintah": [
+   {
+    "text": "Investor datang minggu depan! Kita startup cloud, jadi kantornya harus di atas awan!",
+    "style": "tegas",
+    "from": 15,
+    "to": 161,
+    "words": [
+     {
+      "w": "Investor",
+      "from": 15,
+      "to": 29
+     },
+     {
+      "w": "datang",
+      "from": 30,
+      "to": 42
+     },
+     {
+      "w": "minggu",
+      "from": 43,
+      "to": 54
+     },
+     {
+      "w": "depan!",
+      "from": 55,
+      "to": 65
+     },
+     {
+      "w": "Kita",
+      "from": 66,
+      "to": 74
+     },
+     {
+      "w": "startup",
+      "from": 75,
+      "to": 88
+     },
+     {
+      "w": "cloud,",
+      "from": 89,
+      "to": 99
+     },
+     {
+      "w": "jadi",
+      "from": 100,
+      "to": 108
+     },
+     {
+      "w": "kantornya",
+      "from": 109,
+      "to": 125
+     },
+     {
+      "w": "harus",
+      "from": 126,
+      "to": 136
+     },
+     {
+      "w": "di",
+      "from": 136,
+      "to": 142
+     },
+     {
+      "w": "atas",
+      "from": 143,
+      "to": 151
+     },
+     {
+      "w": "awan!",
+      "from": 152,
+      "to": 161
+     }
+    ]
+   },
+   {
+    "text": "Seminggu! Kalau gagal, semua dipecat!",
+    "style": "tegas",
+    "from": 173,
+    "to": 234,
+    "words": [
+     {
+      "w": "Seminggu!",
+      "from": 173,
+      "to": 188
+     },
+     {
+      "w": "Kalau",
+      "from": 189,
+      "to": 199
+     },
+     {
+      "w": "gagal,",
+      "from": 200,
+      "to": 209
+     },
+     {
+      "w": "semua",
+      "from": 210,
+      "to": 220
+     },
+     {
+      "w": "dipecat!",
+      "from": 221,
+      "to": 234
+     }
+    ]
+   }
+  ],
+  "sedih": [
+   {
+    "text": "Mas Udin baru punya bayi. Mbak Sinta harus membeli obat untuk ibunya.",
+    "style": "bisik",
+    "from": 24,
+    "to": 147,
+    "words": [
+     {
+      "w": "Mas",
+      "from": 24,
+      "to": 31
+     },
+     {
+      "w": "Udin",
+      "from": 32,
+      "to": 40
+     },
+     {
+      "w": "baru",
+      "from": 41,
+      "to": 50
+     },
+     {
+      "w": "punya",
+      "from": 50,
+      "to": 60
+     },
+     {
+      "w": "bayi.",
+      "from": 61,
+      "to": 70
+     },
+     {
+      "w": "Mbak",
+      "from": 70,
+      "to": 79
+     },
+     {
+      "w": "Sinta",
+      "from": 80,
+      "to": 90
+     },
+     {
+      "w": "harus",
+      "from": 91,
+      "to": 100
+     },
+     {
+      "w": "membeli",
+      "from": 101,
+      "to": 114
+     },
+     {
+      "w": "obat",
+      "from": 115,
+      "to": 124
+     },
+     {
+      "w": "untuk",
+      "from": 125,
+      "to": 134
+     },
+     {
+      "w": "ibunya.",
+      "from": 135,
+      "to": 147
+     }
+    ]
+   }
+  ],
+  "sanggup": [
+   {
+    "text": "Siap, Pak. Tapi syaratnya satu, bahan bangunannya Bapak yang kirim ke atas.",
+    "style": "santai",
+    "from": 12,
+    "to": 141,
+    "words": [
+     {
+      "w": "Siap,",
+      "from": 12,
+      "to": 20
+     },
+     {
+      "w": "Pak.",
+      "from": 21,
+      "to": 28
+     },
+     {
+      "w": "Tapi",
+      "from": 29,
+      "to": 38
+     },
+     {
+      "w": "syaratnya",
+      "from": 38,
+      "to": 54
+     },
+     {
+      "w": "satu,",
+      "from": 55,
+      "to": 64
+     },
+     {
+      "w": "bahan",
+      "from": 65,
+      "to": 74
+     },
+     {
+      "w": "bangunannya",
+      "from": 75,
+      "to": 94
+     },
+     {
+      "w": "Bapak",
+      "from": 95,
+      "to": 105
+     },
+     {
+      "w": "yang",
+      "from": 106,
+      "to": 114
+     },
+     {
+      "w": "kirim",
+      "from": 115,
+      "to": 125
+     },
+     {
+      "w": "ke",
+      "from": 126,
+      "to": 131
+     },
+     {
+      "w": "atas.",
+      "from": 132,
+      "to": 141
+     }
+    ]
+   },
+   {
+    "text": "Gampang!",
+    "style": "tegas",
+    "from": 157,
+    "to": 170,
+    "words": [
+     {
+      "w": "Gampang!",
+      "from": 157,
+      "to": 170
+     }
+    ]
+   }
+  ],
+  "siap": [
+   {
+    "text": "Seminggu penuh, Kang Nawas cuma main layang-layang... dan drone.",
+    "style": "santai",
+    "from": 15,
+    "to": 119,
+    "words": [
+     {
+      "w": "Seminggu",
+      "from": 15,
+      "to": 29
+     },
+     {
+      "w": "penuh,",
+      "from": 30,
+      "to": 40
+     },
+     {
+      "w": "Kang",
+      "from": 41,
+      "to": 50
+     },
+     {
+      "w": "Nawas",
+      "from": 50,
+      "to": 60
+     },
+     {
+      "w": "cuma",
+      "from": 61,
+      "to": 70
+     },
+     {
+      "w": "main",
+      "from": 70,
+      "to": 79
+     },
+     {
+      "w": "layang-layang...",
+      "from": 80,
+      "to": 100
+     },
+     {
+      "w": "dan",
+      "from": 101,
+      "to": 108
+     },
+     {
+      "w": "drone.",
+      "from": 109,
+      "to": 119
+     }
+    ]
+   }
+  ],
+  "harih": [
+   {
+    "text": "Hari yang ditunggu pun tiba.",
+    "style": "narasi",
+    "from": 12,
+    "to": 62,
+    "words": [
+     {
+      "w": "Hari",
+      "from": 12,
+      "to": 20
+     },
+     {
+      "w": "yang",
+      "from": 21,
+      "to": 30
+     },
+     {
+      "w": "ditunggu",
+      "from": 31,
+      "to": 45
+     },
+     {
+      "w": "pun",
+      "from": 46,
+      "to": 53
+     },
+     {
+      "w": "tiba.",
+      "from": 54,
+      "to": 62
+     }
+    ]
+   },
+   {
+    "text": "Pak! Mana batanya? Kirim ke atas, Pak!",
+    "style": "tegang",
+    "from": 78,
+    "to": 142,
+    "words": [
+     {
+      "w": "Pak!",
+      "from": 78,
+      "to": 85
+     },
+     {
+      "w": "Mana",
+      "from": 86,
+      "to": 94
+     },
+     {
+      "w": "batanya?",
+      "from": 95,
+      "to": 108
+     },
+     {
+      "w": "Kirim",
+      "from": 109,
+      "to": 119
+     },
+     {
+      "w": "ke",
+      "from": 120,
+      "to": 125
+     },
+     {
+      "w": "atas,",
+      "from": 126,
+      "to": 134
+     },
+     {
+      "w": "Pak!",
+      "from": 135,
+      "to": 142
+     }
+    ]
+   }
+  ],
+  "lempar": [
+   {
+    "text": "Pak Bos melempar bata sekuat tenaga.",
+    "style": "tegang",
+    "from": 9,
+    "to": 73,
+    "words": [
+     {
+      "w": "Pak",
+      "from": 9,
+      "to": 16
+     },
+     {
+      "w": "Bos",
+      "from": 17,
+      "to": 24
+     },
+     {
+      "w": "melempar",
+      "from": 25,
+      "to": 39
+     },
+     {
+      "w": "bata",
+      "from": 40,
+      "to": 48
+     },
+     {
+      "w": "sekuat",
+      "from": 49,
+      "to": 61
+     },
+     {
+      "w": "tenaga.",
+      "from": 62,
+      "to": 73
+     }
+    ]
+   },
+   {
+    "text": "Batanya jatuh... tepat di mobilnya sendiri.",
+    "style": "santai",
+    "from": 119,
+    "to": 189,
+    "words": [
+     {
+      "w": "Batanya",
+      "from": 119,
+      "to": 132
+     },
+     {
+      "w": "jatuh...",
+      "from": 133,
+      "to": 143
+     },
+     {
+      "w": "tepat",
+      "from": 143,
+      "to": 153
+     },
+     {
+      "w": "di",
+      "from": 154,
+      "to": 160
+     },
+     {
+      "w": "mobilnya",
+      "from": 161,
+      "to": 175
+     },
+     {
+      "w": "sendiri.",
+      "from": 176,
+      "to": 189
+     }
+    ]
+   },
+   {
+    "text": "Lemparan kedua? Kena celengannya.",
+    "style": "santai",
+    "from": 214,
+    "to": 268,
+    "words": [
+     {
+      "w": "Lemparan",
+      "from": 214,
+      "to": 228
+     },
+     {
+      "w": "kedua?",
+      "from": 229,
+      "to": 239
+     },
+     {
+      "w": "Kena",
+      "from": 240,
+      "to": 248
+     },
+     {
+      "w": "celengannya.",
+      "from": 249,
+      "to": 268
+     }
+    ]
+   }
+  ],
+  "runtuh": [
+   {
+    "text": "Saya cuma takut... perusahaan peninggalan Bapak saya hilang.",
+    "style": "bisik",
+    "from": 60,
+    "to": 159,
+    "words": [
+     {
+      "w": "Saya",
+      "from": 60,
+      "to": 68
+     },
+     {
+      "w": "cuma",
+      "from": 69,
+      "to": 78
+     },
+     {
+      "w": "takut...",
+      "from": 79,
+      "to": 88
+     },
+     {
+      "w": "perusahaan",
+      "from": 89,
+      "to": 107
+     },
+     {
+      "w": "peninggalan",
+      "from": 108,
+      "to": 127
+     },
+     {
+      "w": "Bapak",
+      "from": 128,
+      "to": 137
+     },
+     {
+      "w": "saya",
+      "from": 138,
+      "to": 147
+     },
+     {
+      "w": "hilang.",
+      "from": 148,
+      "to": 159
+     }
+    ]
+   }
+  ],
+  "kejutan": [
+   {
+    "text": "Pak, kantor paling tinggi itu bukan yang di atas awan... tapi yang dibangun bareng-bareng.",
+    "style": "narasi",
+    "from": 18,
+    "to": 170,
+    "words": [
+     {
+      "w": "Pak,",
+      "from": 18,
+      "to": 25
+     },
+     {
+      "w": "kantor",
+      "from": 26,
+      "to": 37
+     },
+     {
+      "w": "paling",
+      "from": 38,
+      "to": 50
+     },
+     {
+      "w": "tinggi",
+      "from": 50,
+      "to": 62
+     },
+     {
+      "w": "itu",
+      "from": 63,
+      "to": 70
+     },
+     {
+      "w": "bukan",
+      "from": 71,
+      "to": 80
+     },
+     {
+      "w": "yang",
+      "from": 81,
+      "to": 90
+     },
+     {
+      "w": "di",
+      "from": 91,
+      "to": 96
+     },
+     {
+      "w": "atas",
+      "from": 97,
+      "to": 105
+     },
+     {
+      "w": "awan...",
+      "from": 106,
+      "to": 115
+     },
+     {
+      "w": "tapi",
+      "from": 116,
+      "to": 124
+     },
+     {
+      "w": "yang",
+      "from": 125,
+      "to": 133
+     },
+     {
+      "w": "dibangun",
+      "from": 134,
+      "to": 149
+     },
+     {
+      "w": "bareng-bareng.",
+      "from": 149,
+      "to": 170
+     }
+    ]
+   }
+  ],
+  "bulan": [
+   {
+    "text": "Investornya terharu, dan langsung setuju.",
+    "style": "narasi",
+    "from": 24,
+    "to": 92,
+    "words": [
+     {
+      "w": "Investornya",
+      "from": 24,
+      "to": 43
+     },
+     {
+      "w": "terharu,",
+      "from": 44,
+      "to": 57
+     },
+     {
+      "w": "dan",
+      "from": 58,
+      "to": 64
+     },
+     {
+      "w": "langsung",
+      "from": 65,
+      "to": 80
+     },
+     {
+      "w": "setuju.",
+      "from": 81,
+      "to": 92
+     }
+    ]
+   },
+   {
+    "text": "Bagus! Bulan depan, kantor di bulan!",
+    "style": "tegas",
+    "from": 111,
+    "to": 172,
+    "words": [
+     {
+      "w": "Bagus!",
+      "from": 111,
+      "to": 121
+     },
+     {
+      "w": "Bulan",
+      "from": 122,
+      "to": 132
+     },
+     {
+      "w": "depan,",
+      "from": 133,
+      "to": 142
+     },
+     {
+      "w": "kantor",
+      "from": 143,
+      "to": 155
+     },
+     {
+      "w": "di",
+      "from": 156,
+      "to": 161
+     },
+     {
+      "w": "bulan!",
+      "from": 162,
+      "to": 172
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.awan": 80,
+  "perintah.gebrak": 11,
+  "perintah.awan": 149,
+  "perintah.pecat": 218,
+  "sedih.udin": 29,
+  "sedih.sinta": 77,
+  "sanggup.jari": 35,
+  "sanggup.atas": 130,
+  "sanggup.salam": 155,
+  "siap.kite": 76,
+  "siap.drone": 106,
+  "harih.tiba": 12,
+  "harih.teriak": 76,
+  "lempar.ambil": 1,
+  "lempar.lempar": 47,
+  "lempar.krek": 158,
+  "lempar.celeng": 238,
+  "runtuh.foto": 20,
+  "runtuh.hilang": 145,
+  "kejut.start": 16,
+  "kejut.tarik": 126,
+  "kejut.peluk": 176,
+  "bulan.call": 18,
+  "bulan.setuju": 79,
+  "bulan.bulan": 158,
+  "bulan.pingsan": 176,
+  "bulan.end": 206
+ },
+ "placeholder": true,
+ "total": 2197
+}

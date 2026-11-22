@@ -17,13 +17,13 @@ const LN = (k: NwScene, i: number): { from: number; to: number } => TM.lines[k][
 const Sub: React.FC<{ scene: NwScene }> = ({ scene }) => <SubWord timing={TM} scene={scene} />;
 
 /* ---------------- perkakas kecil ---------------- */
-const Day: React.FC<{ warm?: boolean }> = ({ warm }) => (
+export const Day: React.FC<{ warm?: boolean }> = ({ warm }) => (
   <>
     <hemisphereLight args={[warm ? "#fff2dc" : "#f6faff", "#c8b8a0", 1.15]} />
     <directionalLight position={[-3, 7, 6]} intensity={1.6} color="#fff4e4" castShadow shadow-mapSize={[2048, 2048]} shadow-camera-left={-8} shadow-camera-right={8} shadow-camera-top={8} shadow-camera-bottom={-8} />
   </>
 );
-const Holo: React.FC = () => (
+export const Holo: React.FC = () => (
   <>
     <hemisphereLight args={["#bfe4ff", "#123060", 1.6]} />
     <directionalLight position={[3, 6, 5]} intensity={1.5} color="#e8f4ff" />
@@ -32,25 +32,25 @@ const Holo: React.FC = () => (
   </>
 );
 /** tangan besar untuk close-up insert (bola + lengan baju) */
-const Hand: React.FC<{ at: Vec3; sleeve: string; glove?: string; dir?: Vec3; r?: number }> = ({ at, sleeve, glove = "#f1e2d0", dir = [0.5, -0.6, 0.6], r = 0.09 }) => (
+export const Hand: React.FC<{ at: Vec3; sleeve: string; glove?: string; dir?: Vec3; r?: number }> = ({ at, sleeve, glove = "#f1e2d0", dir = [0.5, -0.6, 0.6], r = 0.09 }) => (
   <group>
     <T g={G.sph(r, 16, 12)} c={glove} position={at} />
     <Limb a={at} b={[at[0] + dir[0], at[1] + dir[1], at[2] + dir[2]]} r={r * 0.55} c={sleeve} />
   </group>
 );
-const Coin: React.FC<{ position: Vec3; spin?: number }> = ({ position, spin = 0 }) => (
+export const Coin: React.FC<{ position: Vec3; spin?: number }> = ({ position, spin = 0 }) => (
   <group position={position} rotation={[Math.PI / 2, spin, 0]}>
     <T g={G.cyl(0.035, 0.035, 0.008, 16)} c="#e8c040" emissive="#6a4a00" ei={0.3} o={2} />
   </group>
 );
 /** peci dipegang di tangan (dilepas saat berduka) */
-const PeciHeld: React.FC<{ position: Vec3; yaw?: number }> = ({ position, yaw = 0 }) => (
+export const PeciHeld: React.FC<{ position: Vec3; yaw?: number }> = ({ position, yaw = 0 }) => (
   <group position={[position[0], position[1] - HEAD_R * 0.45, position[2]]} rotation={[0.25, yaw, 0]} scale={0.7}>
     <Hat kind="peci" c="#1a1a20" band="#2a2a34" r={HEAD_R} />
   </group>
 );
 /** benda berpindah tangan: melayang melengkung dari a ke b dalam 15 frame */
-const pass = (f: number, at: number, a: Vec3, b: Vec3, len = 15): Vec3 => {
+export const pass = (f: number, at: number, a: Vec3, b: Vec3, len = 15): Vec3 => {
   if (f < at) return a;
   if (f >= at + len) return b;
   const k = rp(f, at, at + len);
@@ -58,29 +58,29 @@ const pass = (f: number, at: number, a: Vec3, b: Vec3, len = 15): Vec3 => {
   return [p[0], p[1] + Math.sin(Math.PI * k) * 0.08, p[2]];
 };
 /** arah badan untuk shot dialog: menoleh ke lawan bicara tapi tetap 3/4 menghadap kamera (kamera di +z) */
-const face = (a: Vec3, b: Vec3, k = 0.75) => Math.max(-1.0, Math.min(1.0, Math.atan2(b[0] - a[0], 1.0) * k * 1.3));
+export const face = (a: Vec3, b: Vec3, k = 0.75) => Math.max(-1.0, Math.min(1.0, Math.atan2(b[0] - a[0], 1.0) * k * 1.3));
 /** panggung close-up tersendiri: benda + tangan besar di depan latar (tanpa tokoh, kamera tidak masuk ke badan) */
-const Insert: React.FC<{ set: React.ReactNode; at: Vec3; dist?: number; f: number; from: number; bg: string; warm?: boolean; children: React.ReactNode }> = ({ set, at, dist = 1.0, f, from, bg, warm, children }) => (
+export const Insert: React.FC<{ set: React.ReactNode; at: Vec3; dist?: number; f: number; from: number; bg: string; warm?: boolean; children: React.ReactNode }> = ({ set, at, dist = 1.0, f, from, bg, warm, children }) => (
   <Stage cam={{ pos: [at[0] + 0.06, at[1] + 0.06, at[2] + dist - (f - from) * 0.002], look: at, fov: 34 }} bg={bg}>
     <Day warm={warm} />
     {set}
     {children}
   </Stage>
 );
-const REACH_XR: Vec3 = [-0.06, 0.98, 0.52]; // tangan kanan menjulur menyilang ke kiri badan
-const REST_R: Vec3 = [0.42, 0.6, 0.1];
-const REST_L: Vec3 = [-0.42, 0.6, 0.1];
-const REACH_R: Vec3 = [0.18, 0.98, 0.5];
-const REACH_L: Vec3 = [-0.18, 0.98, 0.5];
-const CHEST_R: Vec3 = [0.12, 0.88, 0.32];
-const CHEST_L: Vec3 = [-0.12, 0.88, 0.32];
+export const REACH_XR: Vec3 = [-0.06, 0.98, 0.52]; // tangan kanan menjulur menyilang ke kiri badan
+export const REST_R: Vec3 = [0.42, 0.6, 0.1];
+export const REST_L: Vec3 = [-0.42, 0.6, 0.1];
+export const REACH_R: Vec3 = [0.18, 0.98, 0.5];
+export const REACH_L: Vec3 = [-0.18, 0.98, 0.5];
+export const CHEST_R: Vec3 = [0.12, 0.88, 0.32];
+export const CHEST_L: Vec3 = [-0.12, 0.88, 0.32];
 /** lengan: istirahat -> menjulur -> kembali ke dada */
-const armPath = (f: number, a: number, b: number, c: number, d: number, rest: Vec3, reach: Vec3, end: Vec3): Vec3 => {
+export const armPath = (f: number, a: number, b: number, c: number, d: number, rest: Vec3, reach: Vec3, end: Vec3): Vec3 => {
   if (f < b) return lv(rest, reach, rp(f, a, b));
   if (f < c) return reach;
   return lv(reach, end, rp(f, c, d));
 };
-const Hearts: React.FC<{ f: number; at: number; pos: Vec3 }> = ({ f, at, pos }) => {
+export const Hearts: React.FC<{ f: number; at: number; pos: Vec3 }> = ({ f, at, pos }) => {
   if (f < at) return null;
   return (
     <>
@@ -97,14 +97,14 @@ const Hearts: React.FC<{ f: number; at: number; pos: Vec3 }> = ({ f, at, pos }) 
     </>
   );
 };
-const Sweat: React.FC<{ pos: Vec3; f: number }> = ({ pos, f }) => {
+export const Sweat: React.FC<{ pos: Vec3; f: number }> = ({ pos, f }) => {
   const k = (f % 24) / 24;
   return <T g={G.sph(0.05, 10, 8)} c="#8ad8ff" emissive="#4ab8ff" ei={0.4} position={[pos[0] + 0.32, pos[1] - k * 0.25, pos[2] + 0.2]} scale={[0.8, 1.2, 0.8]} o={2} />;
 };
-const SplitLine: React.FC<{ vertical?: boolean }> = ({ vertical }) => (
+export const SplitLine: React.FC<{ vertical?: boolean }> = ({ vertical }) => (
   <div style={{ position: "absolute", left: vertical ? 534 : 0, top: vertical ? 0 : 954, width: vertical ? 12 : 1080, height: vertical ? 1920 : 12, background: "#ffd23f", boxShadow: "0 0 0 4px #0c0c10" }} />
 );
-const Panel: React.FC<{ x?: number; y?: number; w: number; h: number; children: React.ReactNode }> = ({ x = 0, y = 0, w, h, children }) => (
+export const Panel: React.FC<{ x?: number; y?: number; w: number; h: number; children: React.ReactNode }> = ({ x = 0, y = 0, w, h, children }) => (
   <div style={{ position: "absolute", left: x, top: y, width: w, height: h, overflow: "hidden" }}>{children}</div>
 );
 

@@ -266,18 +266,19 @@ export const CardboardOffice: React.FC<{ position?: Vec3; rotation?: Vec3; revea
     ))}
     {/* terpal penutup (ditarik ke samping saat kejutan) */}
     {tarp < 1 ? (
-      <group position={[-tarp * 1.6, 0, 0]}>
-        <T g={G.box(1.95, 1.9, 1.95)} c="#2a6ad8" position={[0, 0.95, 0]} scale={[1 - tarp * 0.7, 1, 1]} />
+      <group scale={[1 + tarp * 0.15, 1 - tarp * 0.97, 1 + tarp * 0.15]} rotation={[0, 0, tarp * 0.05]}>
+        <T g={G.box(1.95, 1.9, 1.95)} c="#2a6ad8" position={[0, 0.95, 0]} />
         {[-0.6, 0, 0.6].map((x) => (
-          <T key={x} g={G.box(0.02, 1.9, 0.02)} c="#1a4aa8" position={[x * (1 - tarp * 0.7), 0.95, 0.98]} o={false} />
+          <T key={x} g={G.box(0.02, 1.9, 0.02)} c="#1a4aa8" position={[x, 0.95, 0.98]} o={false} />
         ))}
+        <T g={G.sph(0.06, 8, 6)} c="#d8d8d8" position={[0.97, 1.88, 0.97]} o={false} />
       </group>
     ) : null}
   </group>
 );
 
 /* ================= LOKASI: rooftop gedung kantor (siang -> senja) ================= */
-export const RooftopSet: React.FC<{ dusk?: number; car?: boolean; dent?: number; office?: React.ReactNode }> = ({ dusk = 0, car = true, dent = 0, office }) => {
+export const RooftopSet: React.FC<{ dusk?: number; car?: boolean; dent?: number; office?: React.ReactNode; carPos?: Vec3; carRot?: number; chair?: boolean }> = ({ dusk = 0, car = true, dent = 0, office, carPos = [1.6, 0, 2.2], carRot = -0.3, chair = true }) => {
   const mix = (a: string, b: string) => {
     const pa = parseInt(a.slice(1), 16),
       pb = parseInt(b.slice(1), 16);
@@ -330,7 +331,9 @@ export const RooftopSet: React.FC<{ dusk?: number; car?: boolean; dent?: number;
           ))}
         </group>
       ))}
-      <group position={[2.4, 0, 0.9]} rotation={[0, -0.6, 0]}>
+      {chair ? <PlasticChair position={[2.4, 0, 0.9]} rotation={[0, -0.6, 0]} /> : null}
+      {/* (kursi lama) */}
+      <group visible={false}>
         <T g={G.box(0.45, 0.04, 0.45)} c="#e84a3a" position={[0, 0.45, 0]} />
         <T g={G.box(0.45, 0.45, 0.04)} c="#e84a3a" position={[0, 0.68, -0.21]} />
         {[
@@ -357,9 +360,176 @@ export const RooftopSet: React.FC<{ dusk?: number; car?: boolean; dent?: number;
       })}
       {/* matahari senja */}
       {dusk > 0 ? <T g={G.sph(2.2, 24, 16)} c="#ffb04a" emissive="#ff8a20" ei={1.2 * dusk} position={[6, 3 - dusk * 2.5, -40]} o={false} /> : null}
-      {car ? <BossCar position={[1.6, 0, 2.2]} rotation={[0, -0.3, 0]} dent={dent} /> : null}
+      {car ? <BossCar position={carPos} rotation={[0, carRot, 0]} dent={dent} /> : null}
       {office}
       <hemisphereLight args={[mix("#ffffff", "#ffc890"), mix("#c8b8a0", "#6a4a5a"), 0.6]} />
     </group>
   );
 };
+
+export const PlasticChair: React.FC<{ position?: Vec3; rotation?: Vec3; c?: string }> = ({ position, rotation, c = "#e84a3a" }) => (
+  <group position={position} rotation={rotation}>
+    <T g={G.box(0.45, 0.04, 0.45)} c={c} position={[0, 0.45, 0]} />
+    <T g={G.box(0.45, 0.45, 0.04)} c={c} position={[0, 0.68, -0.21]} />
+    {[
+      [1, 1],
+      [1, -1],
+      [-1, 1],
+      [-1, -1],
+    ].map(([x, z], i) => (
+      <Limb key={i} a={[x * 0.2, 0.44, z * 0.2]} b={[x * 0.22, 0, z * 0.22]} r={0.015} c={c} o={false} />
+    ))}
+  </group>
+);
+/** celengan babi; broken 0..1 = pecah, koin berhamburan */
+export const Piggy: React.FC<{ position?: Vec3; rotation?: Vec3; broken?: number; scale?: number }> = ({ position, rotation, broken = 0, scale = 1 }) => (
+  <group position={position} rotation={rotation} scale={scale}>
+    {broken <= 0 ? (
+      <group>
+        <T g={G.sph(0.14, 16, 12)} c="#f6a8c8" scale={[1.25, 1, 1]} position={[0, 0.14, 0]} />
+        <T g={G.cyl(0.05, 0.05, 0.04, 12)} c="#f08ab0" position={[0.18, 0.15, 0]} rotation={[0, 0, Math.PI / 2]} o={2} />
+        {[-1, 1].map((sd) => (
+          <T key={sd} g={G.cone(0.035, 0.06, 6)} c="#f6a8c8" position={[0.1, 0.27, sd * 0.06]} o={2} />
+        ))}
+        {[-0.08, 0.08].map((x) =>
+          [-0.07, 0.07].map((z) => <T key={`${x}${z}`} g={G.cyl(0.025, 0.025, 0.06, 8)} c="#f08ab0" position={[x, 0.03, z]} o={false} />)
+        )}
+        <T g={G.box(0.06, 0.005, 0.012)} c="#3a2a2a" position={[0, 0.285, 0]} o={false} />
+      </group>
+    ) : (
+      <group>
+        {Array.from({ length: 7 }).map((_, i) => {
+          const a = i * 0.9;
+          const r = 0.05 + broken * 0.25;
+          return <T key={i} g={G.dodec(0.05)} c="#f6a8c8" position={[Math.cos(a) * r, 0.03 + Math.max(0, 0.25 * Math.sin(Math.PI * Math.min(1, broken * 1.4))) * ((i % 3) / 2), Math.sin(a) * r]} rotation={[a, a * 2, 0]} scale={[1, 0.5, 1]} />;
+        })}
+        {Array.from({ length: 12 }).map((_, i) => {
+          const a = i * 0.53 + 0.2;
+          const r = 0.04 + broken * (0.3 + (i % 4) * 0.08);
+          const h = Math.max(0, Math.sin(Math.PI * Math.min(1, broken * 1.2)) * (0.3 + (i % 3) * 0.1));
+          return <T key={`c${i}`} g={G.cyl(0.03, 0.03, 0.008, 12)} c="#e8c040" emissive="#6a4a00" ei={0.3} position={[Math.cos(a) * r, 0.01 + h, Math.sin(a) * r]} rotation={[broken * 8 + i, 0, broken * 5]} o={false} />;
+        })}
+      </group>
+    )}
+  </group>
+);
+/** HP dengan layar bergambar (foto bayi / resep / video call investor) */
+export const ScreenPhone: React.FC<{ position?: Vec3; rotation?: Vec3; scale?: number; kind: "baby" | "call"; t?: number }> = ({ position, rotation, scale = 1, kind, t = 0 }) => (
+  <group position={position} rotation={rotation} scale={scale}>
+    <T g={G.rbox(0.085, 0.17, 0.012, 0.3)} c={kind === "call" ? "#d8b468" : "#2a2c34"} o={2} />
+    <CanvasPlane
+      w={0.074}
+      h={0.152}
+      px={220}
+      toon={false}
+      o={false}
+      position={[0, 0, 0.0065]}
+      drawKey={`scr${kind}${kind === "call" ? Math.floor(t * 4) % 2 : 0}`}
+      draw={(c, W, H) => {
+        if (kind === "baby") {
+          c.fillStyle = "#fde8ee";
+          c.fillRect(0, 0, W, H);
+          c.fillStyle = "#f1e2d0";
+          c.beginPath();
+          c.arc(W / 2, H * 0.42, W * 0.3, 0, Math.PI * 2);
+          c.fill();
+          c.strokeStyle = "#3a2a2a";
+          c.lineWidth = 3;
+          c.stroke();
+          c.fillStyle = "#3a2a2a";
+          c.beginPath();
+          c.arc(W * 0.4, H * 0.4, 4, 0, Math.PI * 2);
+          c.arc(W * 0.6, H * 0.4, 4, 0, Math.PI * 2);
+          c.fill();
+          c.beginPath();
+          c.arc(W / 2, H * 0.47, 9, 0.1 * Math.PI, 0.9 * Math.PI);
+          c.stroke();
+          c.fillStyle = "#7ad0ff";
+          c.fillRect(W * 0.15, H * 0.62, W * 0.7, H * 0.18);
+          c.fillStyle = "#c83a6a";
+          c.font = `900 ${W * 0.11}px Inter, sans-serif`;
+          c.textAlign = "center";
+          c.fillText("Dek Rafa ♥", W / 2, H * 0.92);
+        } else {
+          c.fillStyle = "#1e2a3a";
+          c.fillRect(0, 0, W, H);
+          c.fillStyle = "#5a7aa8";
+          c.fillRect(W * 0.06, H * 0.08, W * 0.88, H * 0.62);
+          c.fillStyle = "#f1e2d0";
+          c.beginPath();
+          c.arc(W / 2, H * 0.34, W * 0.24, 0, Math.PI * 2);
+          c.fill();
+          c.fillStyle = "#3a3a48";
+          c.fillRect(W * 0.26, H * 0.5, W * 0.48, H * 0.2);
+          c.fillStyle = "#2a1a10";
+          c.beginPath();
+          c.arc(W * 0.42, H * 0.32, 4, 0, Math.PI * 2);
+          c.arc(W * 0.58, H * 0.32, 4, 0, Math.PI * 2);
+          c.fill();
+          c.strokeStyle = "#2a1a10";
+          c.lineWidth = 3;
+          c.beginPath();
+          c.arc(W / 2, H * 0.37, 8, 0.1 * Math.PI, 0.9 * Math.PI);
+          c.stroke();
+          c.fillStyle = "#8ad8ff";
+          c.beginPath();
+          c.arc(W * 0.36, H * 0.38 + (Math.floor(t * 4) % 2) * 4, 3, 0, Math.PI * 2);
+          c.fill();
+          c.fillStyle = "#fff";
+          c.font = `800 ${W * 0.12}px Inter, sans-serif`;
+          c.textAlign = "center";
+          c.fillText("Investor", W / 2, H * 0.8);
+          c.fillStyle = "#e84a3a";
+          c.beginPath();
+          c.arc(W / 2, H * 0.92, W * 0.07, 0, Math.PI * 2);
+          c.fill();
+        }
+      }}
+    />
+  </group>
+);
+/** kertas resep obat (dilipat: fold 0..1) */
+export const Prescription: React.FC<{ position?: Vec3; rotation?: Vec3; fold?: number; scale?: number }> = ({ position, rotation, fold = 0, scale = 1 }) => (
+  <group position={position} rotation={rotation} scale={scale}>
+    <group scale={[1, 1 - fold * 0.5, 1]}>
+      <CanvasPlane
+        w={0.15}
+        h={0.2}
+        px={240}
+        toon={false}
+        o={2}
+        drawKey="resep"
+        draw={(c, W, H) => {
+          c.fillStyle = "#ffffff";
+          c.fillRect(0, 0, W, H);
+          c.fillStyle = "#2a8a5a";
+          c.fillRect(0, 0, W, H * 0.14);
+          c.fillStyle = "#fff";
+          c.font = `900 ${H * 0.08}px Inter, sans-serif`;
+          c.fillText("RESEP · APOTEK", W * 0.06, H * 0.1);
+          c.fillStyle = "#1a1a2a";
+          c.font = `700 ${H * 0.06}px Inter, sans-serif`;
+          c.fillText("R/ Obat jantung Ibu", W * 0.06, H * 0.3);
+          c.fillText("3x sehari", W * 0.06, H * 0.42);
+          c.fillStyle = "#c81e1e";
+          c.font = `900 ${H * 0.08}px Inter, sans-serif`;
+          c.fillText("Rp850.000", W * 0.06, H * 0.62);
+          c.fillStyle = "#8a90a0";
+          for (let i = 0; i < 3; i++) c.fillRect(W * 0.06, H * (0.72 + i * 0.07), W * 0.7, 3);
+        }}
+      />
+    </group>
+  </group>
+);
+export const Moon: React.FC<{ position?: Vec3; k?: number }> = ({ position = [-6, 9, -40], k = 1 }) => (
+  <group position={position} scale={k}>
+    <T g={G.sph(2.4, 28, 18)} c="#fff4c8" emissive="#ffe8a0" ei={0.9} o={false} />
+    {[
+      [0.8, 0.6, 0.5],
+      [-0.7, -0.4, 0.4],
+      [0.2, -1.0, 0.3],
+    ].map(([x, y, r], i) => (
+      <T key={i} g={G.sph(r, 12, 8)} c="#e8d8a0" position={[x, y, 2.1]} scale={[1, 1, 0.3]} o={false} />
+    ))}
+  </group>
+);

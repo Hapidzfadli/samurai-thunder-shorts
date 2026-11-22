@@ -1,0 +1,28 @@
+[
+ {"scene": "hook", "lines": [
+   ["narasi", "Bos menyuruh membangun kantor... di atas awan."]]},
+ {"scene": "perintah", "lines": [
+   ["tegas", "Investor datang minggu depan! Kita startup cloud, jadi kantornya harus di atas awan!"],
+   ["tegas", "Seminggu! Kalau gagal, semua dipecat!"]]},
+ {"scene": "sedih", "lines": [
+   ["bisik", "Mas Udin baru punya bayi. Mbak Sinta harus membeli obat untuk ibunya."]]},
+ {"scene": "sanggup", "lines": [
+   ["santai", "Siap, Pak. Tapi syaratnya satu, bahan bangunannya Bapak yang kirim ke atas."],
+   ["tegas", "Gampang!"]]},
+ {"scene": "siap", "lines": [
+   ["santai", "Seminggu penuh, Kang Nawas cuma main layang-layang... dan drone."]]},
+ {"scene": "harih", "lines": [
+   ["narasi", "Hari yang ditunggu pun tiba."],
+   ["tegang", "Pak! Mana batanya? Kirim ke atas, Pak!"]]},
+ {"scene": "lempar", "lines": [
+   ["tegang", "Pak Bos melempar bata sekuat tenaga."],
+   ["santai", "Batanya jatuh... tepat di mobilnya sendiri."],
+   ["santai", "Lemparan kedua? Kena celengannya."]]},
+ {"scene": "runtuh", "lines": [
+   ["bisik", "Saya cuma takut... perusahaan peninggalan Bapak saya hilang."]]},
+ {"scene": "kejutan", "lines": [
+   ["narasi", "Pak, kantor paling tinggi itu bukan yang di atas awan... tapi yang dibangun bareng-bareng."]]},
+ {"scene": "bulan", "lines": [
+   ["narasi", "Investornya terharu, dan langsung setuju."],
+   ["tegas", "Bagus! Bulan depan, kantor di bulan!"]]}
+]
