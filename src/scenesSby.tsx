@@ -194,9 +194,10 @@ export const SceneSbUltimatum: React.FC = () => {
   const flashes = [bent, bent + 7, bent + 15, bent + 26, tewas - 4];
   const tkr: HeroP = { ...TKR, expr: "determined", armR: { pitch: 1.0, out: 0.1, elbow: 1.0 }, armL: { pitch: 1.2, out: -0.2, elbow: 0.4 } };
   const tkrPos: Vec3 = [1.2, 0, 3.0];
-  const lf = rp(f, udara + 10, serah - 6);
+  const insAt = Math.max(serah + 20, LN("ultimatum", 1).to - 40);
+  const lf = rp(f, udara + 10, insAt);
   const leafPos: Vec3 = lv([2.0, 12, -4], lv(tkrPos, [tkrPos[0] + 0.15, 1.35, tkrPos[2] + 0.45], 1), lf);
-  const insert = f >= serah - 6;
+  const insert = f >= insAt;
   const cam = (): Cam => {
     if (f < udara - 10) {
       const k = rp(f, 0, udara - 10);
@@ -208,13 +209,13 @@ export const SceneSbUltimatum: React.FC = () => {
       return { pos: [-2.0, 1.5, 6.5], look: lv([0.5, 1.6, -6], [planeX * 0.3, 11, -8], k), fov: 48 };
     }
     // ikuti selebaran turun ke tangan pejuang
-    const k = rp(f, udara + 30, serah - 6);
+    const k = rp(f, udara + 30, insAt);
     return { pos: lv([0.5, 9, 4], [tkrPos[0] + 1.1, 1.7, tkrPos[2] + 2.2], k), look: leafPos, fov: lerp(48, 40, k) };
   };
   if (insert) {
     return (
       <AbsoluteFill>
-        <Stage cam={{ pos: [tkrPos[0] + 0.15, 1.42 + (f - serah) * 0.0004, tkrPos[2] + 0.95 - (f - serah) * 0.002], look: [tkrPos[0] + 0.15, 1.35, tkrPos[2] + 0.45], fov: 34 }} bg="#c8b8a0">
+        <Stage cam={{ pos: [tkrPos[0] + 0.25, 1.5, tkrPos[2] + 1.45 - (f - insAt) * 0.003], look: [tkrPos[0] + 0.15, 1.33, tkrPos[2] + 0.45], fov: 36 }} bg="#c8b8a0">
           <ToonSky top="#6a8ab8" horizon="#e8dcc8" />
           <DayLight />
           <CityBlock position={[-10, 0, -6]} n={4} seed={12} />
@@ -225,7 +226,7 @@ export const SceneSbUltimatum: React.FC = () => {
           ))}
         </Stage>
         <Bars />
-        <Chip at={serah - 4} to={D} top={210} color="#ff4a4a">⏰ Batas: 10 Nov 1945 · 06.00</Chip>
+        <Chip at={insAt} to={D} top={210} color="#ff4a4a">⏰ Batas: 10 Nov 1945 · 06.00</Chip>
         <Sub scene="ultimatum" />
       </AbsoluteFill>
     );
@@ -374,15 +375,18 @@ export const SceneSbSerangan: React.FC = () => {
   // fly-through: dari laut (kapal) ke kota (ledakan) ke jalan (tank)
   const cam = (): Cam => {
     if (f < bom - 6) {
+      // dari laut: rendah di belakang kapal, menghadap kota yang ditembaki
       const k = rp(f, 0, bom - 6);
-      return { pos: lv([-30, 4, -36], [-6, 9, -12], k), look: lv([-8, 3, -46], [4, 3, 6], k), fov: 50 };
+      return { pos: lv([-22, 3.5, -82], [-6, 6, -70], k), look: lv([-10, 3, -48], [0, 4, 8], k), fov: 48 };
     }
     if (f < tk - 4) {
+      // udara: mengikuti pesawat di atas kota
       const k = rp(f, bom - 6, tk - 4);
-      return { pos: lv([-6, 9, -12], [-2, 14, 6], k), look: lv([4, 3, 6], [3, 4, 22], k), fov: 50 };
+      return { pos: lv([-24, 26, -16], [-4, 30, -10], k), look: lv([-6, 2, 14], [8, 0, 16], k), fov: 50 };
     }
+    // jalan: tank melintas sangat dekat kamera rendah
     const k = rp(f, tk - 4, D);
-    return { pos: lv([4.5, 0.7, 26], [2.6, 0.6, 22], k), look: [0, 2.2, 31], fov: 44 };
+    return { pos: lv([-1.5, 0.7, 31.5], [-2.2, 0.6, 30.8], k), look: [-9, 1.8, 27], fov: 46 };
   };
   const planeK = rp(f, bom - 40, bom + 40);
   return (
@@ -416,9 +420,9 @@ export const SceneSbSerangan: React.FC = () => {
           <Fighter key={i} position={[lerp(-50, 50, planeK) + i * -6, 16 - i * 1.5, 6 + i * 4]} rotation={[0.15, 0, -0.08]} prop={f * 1.7} scale={0.9} />
         ))}
         {/* jalan & tank melaju ke kamera */}
-        <Sherman position={[0, 0, lerp(42, 33, rp(f, tk - 10, D))]} rotation={[0, -Math.PI / 2, 0]} turret={Math.sin(f * 0.03) * 0.2} track={f * 0.2} />
-        <Fire position={[-4, 0, 30]} t={f / 30} scale={1.5} />
-        <Rubble position={[3, 0, 28]} />
+        <Sherman position={[lerp(-18, -5, rp(f, tk - 10, D)), 0, 27]} rotation={[0, 0, 0]} turret={Math.sin(f * 0.03) * 0.2} track={f * 0.2} />
+        <Fire position={[-10, 0, 31]} t={f / 30} scale={1.5} />
+        <Rubble position={[-3, 0, 24]} />
       </Stage>
       <Grade c="#ff8a40" a={0.12} />
       <Bars />
@@ -452,11 +456,11 @@ export const SceneSbJembatan: React.FC = () => {
     if (f < mund - 10) {
       // tracking rendah menyusuri barikade karung pasir (parallax)
       const k = rp(f, 0, mund - 10);
-      return { pos: lv([-4.2, 0.9, 11.2], [2.8, 0.95, 11.0], k), look: lv([-1.5, 1.2, -6], [1.0, 1.4, -8], k), fov: 44 };
+      return { pos: lv([-2.4, 2.05, 11.6], [2.4, 2.1, 11.4], k), look: lv([-1.2, 1.2, -6], [1.0, 1.3, -8], k), fov: 44 };
     }
     // low-angle orbit mengitari Arek yang berdiri dengan tank di belakang
     const k = rp(f, mund - 10, D);
-    return orbit([0, 2.0, 8.4], lerp(3.0, 3.6, k), lerp(-0.55, 0.65, k), lerp(0.9, 1.1, k), 44, lerp(1.9, 2.4, k));
+    return orbit([0, 2.0, 8.4], lerp(3.2, 3.8, k), lerp(-0.4, -1.1, k), lerp(1.0, 1.25, k), 44, lerp(1.9, 2.3, k));
   };
   return (
     <AbsoluteFill>
@@ -488,7 +492,7 @@ export const SceneSbJembatan: React.FC = () => {
             </Hero>
           );
         })}
-        <Hero p={arek} position={arekPos} rotation={[0, Math.PI, 0]}>
+        <Hero p={arek} position={arekPos} rotation={[0, Math.PI - stand * 1.1, 0]}>
           <group position={hand} rotation={stand > 0.5 ? [0.1, 0, 0] : [-1.0, 0, 0]}>
             <group position={[0, -0.9, 0]}>
               <Bambu len={2.2} />
