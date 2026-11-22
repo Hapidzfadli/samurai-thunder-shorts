@@ -34,12 +34,12 @@ def extract_wav(src: Path, out: Path, ss: float, dur: float) -> Path:
     return out
 
 
-# Prepare 4 distinct emotion voice prompts
+# Prepare 4 distinct emotion voice prompts (Mak Ijah multi-emotion style)
 PROMPTS = {
-    "santai": extract_wav(DODI_MP3, PROMPT_CACHE / "santai.wav", 1.0, 10.0),
-    "narasi": extract_wav(DODI_MP3, PROMPT_CACHE / "narasi.wav", 18.0, 12.0),
-    "tegang": extract_wav(DODI_MP3, PROMPT_CACHE / "tegang.wav", 36.5, 11.0),
-    "tegas": ID_PROMPTS / "common_voice_id_19961910.wav",
+    "santai": ID_PROMPTS / "makijah_santai.wav",
+    "narasi": ID_PROMPTS / "makijah_narasi.wav",
+    "tegang": ID_PROMPTS / "makijah_panik.wav",
+    "tegas": ID_PROMPTS / "makijah_sombong.wav",
 }
 
 POCKET_CONFIG = "hf://anak10thn/pocket-tts-indonesian/indonesian_6l.yaml@17257664e384561c957b02ac92edd1a24807f0e5"
