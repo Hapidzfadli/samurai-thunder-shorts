@@ -6,7 +6,7 @@ Kisah ini cerita rakyat (domain publik). Versi ini: kantor startup, powerbank, d
 
 - Durasi target: ±50 detik, 1080×1920, gaya 3D explainer seperti Perang Emu (toon + garis tepi, latar padat properti).
 - Suara: VoxCPM2 (`scripts/voice_vox.py`), narator + suara tokoh (Nawas santai/licik, Pak Bos tegas/membentak).
-- Lokasi: (1) ruang kerja PT. Hemat Jaya, (2) ruang Pak Bos, (3) hologram grid biru untuk khayalan & layar terbelah.
+- Lokasi: (1) ruang kerja PT. Hemat Jaya, (2) ruang Pak Bos, (3) hologram X-ray di atas grid biru (makam HP: proyektor, peti X-ray, arwah HP bersayap + halo, nisan hologram) untuk khayalan & layar terbelah.
 
 ## Naskah + adegan + gerakan (action beats)
 

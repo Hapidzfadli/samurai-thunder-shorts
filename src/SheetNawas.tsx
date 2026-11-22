@@ -3,8 +3,8 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { CameraRig } from "./three/objects";
-import { Bean3, Bean3Params, BlueGrid, Expr3, ToonRes, Vec3 } from "./three/toon";
-import { BabyPowerbank, BossPhone, BossRoomSet, Candle, NawasPhone, OpenOfficeSet, PhoneGrave, Powerbank } from "./three/objectsNawas";
+import { Bean3, Bean3Params, BlueGrid, Expr3, ToonRes, ToonSky, Vec3 } from "./three/toon";
+import { BabyPowerbank, BossPhone, BossRoomSet, Candle, HoloPhoneGrave, NawasPhone, OpenOfficeSet, Powerbank } from "./three/objectsNawas";
 
 export const NAWAS: Bean3Params = { body: "#2a8a5a", plaid: "#1e6a44", shirt: "#f4f0e4", pants: "#3a3a48", boots: "#6a4a32", glove: "#f1e2d0", sleeve: "#2a8a5a", hat: "peci", hatColor: "#1a1a20", hatBand: "#2a2a34", backpack: "#3a3a3a" };
 export const BOS: Bean3Params = { body: "#2a2a3a", shirt: "#ffffff", tie: "#c82a2a", pants: "#2a2a3a", boots: "#1a1a1a", glove: "#f1dcc4", sleeve: "#2a2a3a", hair: "#2a2420", mustache: true, hat: "none" };
@@ -136,15 +136,14 @@ export const SheetNawasProps: React.FC = () => (
       <Cap t="3 · Benda penting (objek terpisah, ikut tangan)" d="Powerbank Pak Bos (lampu indikator), 'bayi' powerbank (pita, dot, versi dibedong), HP emas Pak Bos (layar baterai), HP butut Nawas retak 1%." />
     </div>
     <div style={{ position: "relative" }}>
-      <PropShot cam={[0, 0.9, 2.4]} look={[0, 0.25, 0]} fov={40} bg="#020a1c">
+      <PropShot cam={[0.5, 1.5, 3.3]} look={[0, 0.85, 0]} fov={42} bg="#020a1c">
         <hemisphereLight args={["#bfe4ff", "#123060", 1.6]} />
         <directionalLight position={[3, 6, 5]} intensity={1.4} />
+        <ToonSky top="#020814" horizon="#0a2a5a" />
         <BlueGrid size={30} />
-        <PhoneGrave position={[0, 0, 0]} scale={1.6} />
-        <Candle position={[-0.55, 0, 0.3]} scale={1.6} />
-        <Candle position={[0.55, 0, 0.3]} scale={1.6} flicker={2} />
+        <HoloPhoneGrave t={0.6} />
       </PropShot>
-      <Cap t="4 · 'Makam' HP + hologram" d="Dus HP jadi peti, bunga tabur, nisan 'RIP HP Pak Bos', lilin. Dipakai di adegan 'HP meninggal' sebagai gambar khayalan di atas grid biru." />
+      <Cap t="4 · 'Makam' HP + hologram" d="Proyektor hologram, peti X-ray berisi HP mati (baterai 0%), 'arwah' HP bersayap + halo melayang naik, nisan hologram, kelopak berpendar, lilin. Bergerak di video." />
     </div>
   </AbsoluteFill>
 );

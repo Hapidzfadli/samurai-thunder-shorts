@@ -1,6 +1,6 @@
 // Properti "Powerbank Melahirkan" (Kang Nawas zaman now): kantor startup, ruang Pak Bos, benda yang dipegang.
 import React from "react";
-import { CanvasPlane, G, Limb, T, Vec3 } from "./toon";
+import { CanvasPlane, G, Limb, T, Vec3, XR } from "./toon";
 import { Laptop, Mug } from "./objectsKelompok";
 
 /* ================= benda kecil (objek terpisah, mengikuti tangan) ================= */
@@ -459,3 +459,123 @@ export const BossRoomSet: React.FC<{ safeOpen?: number }> = ({ safeOpen = 0 }) =
     <hemisphereLight args={["#fff0d8", "#5a3a2a", 0.6]} />
   </group>
 );
+
+/* ================= hologram "makam HP" (gaya X-ray Perang Emu) ================= */
+/** t = waktu (detik) untuk animasi: arwah HP naik-turun, lingkaran proyektor berputar, kelopak melayang */
+export const HoloPhoneGrave: React.FC<{ position?: Vec3; scale?: number; t?: number }> = ({ position, scale = 1, t = 0 }) => {
+  const float = Math.sin(t * 2) * 0.04;
+  return (
+    <group position={position} scale={scale}>
+      {/* alas proyektor hologram: piringan gelap + cincin bercahaya berlapis */}
+      <T g={G.cyl(0.78, 0.84, 0.08, 40)} c="#16263e" position={[0, 0.04, 0]} />
+      <T g={G.cyl(0.62, 0.62, 0.012, 40)} c="#1a6a9a" emissive="#2a9ad8" ei={0.5} position={[0, 0.086, 0]} o={false} />
+      {[0.7, 0.5].map((r, i) => (
+        <mesh key={r} position={[0, 0.1 + i * 0.01, 0]} rotation={[Math.PI / 2, 0, t * (i ? -0.8 : 0.5)]}>
+          <torusGeometry args={[r, 0.008, 6, 64, Math.PI * 1.6]} />
+          <meshBasicMaterial color="#8ae8ff" toneMapped={false} />
+        </mesh>
+      ))}
+      {/* sorot cahaya proyektor ke atas */}
+      <XR g={G.cyl(0.5, 0.62, 1.9, 32, true)} position={[0, 1.05, 0]} color="#3ab8ff" edges={false} />
+
+      {/* peti = dus HP versi X-ray (heksagonal seperti peti) */}
+      <group position={[0, 0.32, 0]} rotation={[0, 0.5, 0]}>
+        <XR g={G.cyl(0.3, 0.24, 0.24, 6)} scale={[1, 1, 0.55]} color="#5fd4ff" />
+        {/* HP di dalam peti: layar mati, baterai 0% merah */}
+        <group position={[0, 0.02, 0]} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
+          <T g={G.rbox(0.17, 0.34, 0.025, 0.3)} c="#d8b468" o={2} />
+          <CanvasPlane
+            w={0.15}
+            h={0.31}
+            px={160}
+            toon={false}
+            o={false}
+            position={[0, 0, 0.014]}
+            drawKey="holoDead"
+            draw={(c, W, H) => {
+              c.fillStyle = "#06080c";
+              c.fillRect(0, 0, W, H);
+              const bw = W * 0.56,
+                bh = H * 0.12,
+                bx = (W - bw) / 2,
+                by = H * 0.4;
+              c.strokeStyle = "#ff3a3a";
+              c.lineWidth = 5;
+              c.strokeRect(bx, by, bw, bh);
+              c.fillStyle = "#ff3a3a";
+              c.fillRect(bx + bw, by + bh * 0.3, 7, bh * 0.4);
+              c.font = `900 ${W * 0.2}px Inter, sans-serif`;
+              c.textAlign = "center";
+              c.fillText("0%", W / 2, by + bh + H * 0.12);
+            }}
+          />
+        </group>
+      </group>
+
+      {/* "arwah" HP melayang naik: HP transparan, sayap & lingkaran halo emas */}
+      <group position={[0, 1.5 + float, 0.1]} rotation={[0, Math.sin(t) * 0.25, 0.08]}>
+        <XR g={G.rbox(0.2, 0.4, 0.03, 0.3)} color="#e8f8ff" />
+        <mesh position={[0, 0.3, 0]} rotation={[Math.PI / 2 - 0.25, 0, 0]}>
+          <torusGeometry args={[0.1, 0.014, 8, 32]} />
+          <meshBasicMaterial color="#ffd85a" toneMapped={false} />
+        </mesh>
+        {[-1, 1].map((sd) => (
+          <group key={sd} position={[sd * 0.15, 0.06, -0.02]} rotation={[0, 0, sd * (0.35 + Math.sin(t * 6) * 0.2)]}>
+            <XR g={G.sph(0.14, 16, 10)} position={[sd * 0.1, 0, 0]} scale={[1, 0.45, 0.15]} color="#bfefff" />
+          </group>
+        ))}
+      </group>
+
+      {/* nisan hologram melayang di belakang */}
+      <group position={[0, 0.72, -0.62]} scale={0.85}>
+        <XR g={G.box(0.62, 0.78, 0.04)} color="#5fd4ff" />
+        <CanvasPlane
+          w={0.58}
+          h={0.74}
+          px={300}
+          toon={false}
+          o={false}
+          alpha
+          position={[0, 0, 0.03]}
+          drawKey="holoNisan"
+          draw={(c, W, H) => {
+            c.clearRect(0, 0, W, H);
+            c.textAlign = "center";
+            c.shadowColor = "#5fd4ff";
+            c.shadowBlur = 14;
+            c.fillStyle = "#e8fbff";
+            c.font = `900 ${W * 0.22}px Inter, sans-serif`;
+            c.fillText("R.I.P", W / 2, H * 0.24);
+            c.strokeStyle = "#9ae8ff";
+            c.lineWidth = 4;
+            c.strokeRect(W * 0.32, H * 0.31, W * 0.36, H * 0.34);
+            c.fillStyle = "rgba(255,216,90,0.9)";
+            c.fillRect(W * 0.36, H * 0.34, W * 0.28, H * 0.28);
+            c.fillStyle = "#e8fbff";
+            c.font = `800 ${W * 0.085}px Inter, sans-serif`;
+            c.fillText("HP Pak Bos", W / 2, H * 0.76);
+            c.font = `600 ${W * 0.065}px Inter, sans-serif`;
+            c.fillText("baterai 100% → 0%", W / 2, H * 0.88);
+          }}
+        />
+      </group>
+
+      {/* kelopak bunga melayang & berpendar */}
+      {Array.from({ length: 16 }).map((_, i) => {
+        const a = i * 2.4 + t * 0.6;
+        const r = 0.35 + (i % 4) * 0.1;
+        const y = 0.2 + (((i * 0.37 + t * 0.25) % 1) * 1.3);
+        return (
+          <mesh key={i} position={[Math.cos(a) * r, y, Math.sin(a) * r]} scale={[1, 0.5, 1]}>
+            <sphereGeometry args={[0.022, 8, 6]} />
+            <meshBasicMaterial color={["#ff7ab0", "#ffd85a", "#ffffff", "#ff9ac8"][i % 4]} toneMapped={false} />
+          </mesh>
+        );
+      })}
+
+      {/* lilin di kiri-kanan alas */}
+      <Candle position={[-0.52, 0.08, 0.32]} scale={1.4} flicker={t * 9} />
+      <Candle position={[0.52, 0.08, 0.32]} scale={1.4} flicker={t * 9 + 2} />
+    </group>
+  );
+};

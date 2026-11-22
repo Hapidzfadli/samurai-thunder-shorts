@@ -817,10 +817,11 @@ export const useCanvasTex = (w: number, h: number, key: string, draw: (ctx: Canv
   return slot.tex;
 };
 /** bidang bertekstur kanvas (kertas, papan nama, peta, koran) */
-export const CanvasPlane: React.FC<{ w: number; h: number; px?: number; drawKey: string; draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void; position?: Vec3; rotation?: Vec3; toon?: boolean; o?: number | false }> = ({
+export const CanvasPlane: React.FC<{ w: number; h: number; px?: number; drawKey: string; draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void; position?: Vec3; rotation?: Vec3; toon?: boolean; o?: number | false; alpha?: boolean }> = ({
   w,
   h,
   px = 512,
+  alpha = false,
   drawKey,
   draw,
   position,
@@ -835,7 +836,7 @@ export const CanvasPlane: React.FC<{ w: number; h: number; px?: number; drawKey:
   return (
     <group position={position} rotation={rotation}>
       <mesh geometry={g} receiveShadow>
-        {toon ? <meshToonMaterial map={tex} gradientMap={toonGradient()} /> : <meshBasicMaterial map={tex} toneMapped={false} />}
+        {toon ? <meshToonMaterial map={tex} gradientMap={toonGradient()} /> : <meshBasicMaterial map={tex} toneMapped={false} transparent={alpha} depthWrite={!alpha} />}
       </mesh>
       {o ? <mesh geometry={hullOf(g)} material={outlineMat(o)} /> : null}
     </group>
