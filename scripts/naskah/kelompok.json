@@ -1,0 +1,30 @@
+[
+ {"scene": "hook", "lines": [
+   ["narasi", "Kerja kelompok lima orang. Yang kerja... coba tebak."],
+   ["narasi", "Bu Dosen memberi tugas. Deadline-nya hari Jumat."]]},
+ {"scene": "grup", "lines": [
+   ["santai", "Di grup, semua langsung semangat."],
+   ["santai", "Siap! Gas! Nanti aku edit ya! Aku cari referensi!"]]},
+ {"scene": "hilang", "lines": [
+   ["narasi", "Tapi hari demi hari, anggotanya mulai menghilang."],
+   ["santai", "Joko, terakhir dilihat tiga hari lalu. Sari, sinyalnya jelek. Bayu, cuma kirim satu link."],
+   ["bisik", "Dan Rara... masih menunggu untuk mengedit."]]},
+ {"scene": "kamis", "lines": [
+   ["tegang", "Kamis malam, Dimas mengerjakan semuanya sendirian."],
+   ["narasi", "Dia bertanya di grup, bagiannya mana?"],
+   ["santai", "Pesannya dibaca semua... lalu sepi."]]},
+ {"scene": "xray", "lines": [
+   ["narasi", "Jam satu malam, kopi gelas ketiga. Energinya tinggal tiga persen saja."],
+   ["tegang", "Jam empat subuh, matanya sudah seperti panda."]]},
+ {"scene": "kirim", "lines": [
+   ["narasi", "Akhirnya, tugas terkirim. Dimas tertidur di meja."]]},
+ {"scene": "presentasi", "lines": [
+   ["narasi", "Saat presentasi, semua tampil paling percaya diri."],
+   ["tegas", "Referensinya saya yang cari, Bu!"],
+   ["santai", "Saya yang edit semuanya!"]]},
+ {"scene": "nilai", "lines": [
+   ["narasi", "Dan nilainya?"],
+   ["tegang", "Semua dapat A."],
+   ["santai", "Kerja sama yang bagus ya, Dimas!"],
+   ["santai", "Dimas hanya bisa tersenyum."]]}
+]

@@ -1,0 +1,1602 @@
+{
+ "fps": 30,
+ "totalFrames": 1825,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 196,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Kerja kelompok lima orang. Yang kerja... coba tebak.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/hook_0.wav",
+     "wordsSec": [
+      [
+       "Kerja",
+       0.0,
+       0.3
+      ],
+      [
+       "kelompok",
+       0.3,
+       0.72
+      ],
+      [
+       "5",
+       0.72,
+       0.92
+      ],
+      [
+       "orang",
+       0.92,
+       1.24
+      ],
+      [
+       "yang",
+       1.24,
+       1.6
+      ],
+      [
+       "kerja",
+       1.6,
+       2.02
+      ],
+      [
+       "coba",
+       2.02,
+       2.54
+      ],
+      [
+       "tebak.",
+       2.54,
+       2.76
+      ]
+     ],
+     "from": 8,
+     "to": 93,
+     "words": [
+      {
+       "w": "Kerja",
+       "from": 8,
+       "to": 16
+      },
+      {
+       "w": "kelompok",
+       "from": 16,
+       "to": 29
+      },
+      {
+       "w": "5",
+       "from": 29,
+       "to": 35
+      },
+      {
+       "w": "orang",
+       "from": 35,
+       "to": 45
+      },
+      {
+       "w": "yang",
+       "from": 45,
+       "to": 56
+      },
+      {
+       "w": "kerja",
+       "from": 56,
+       "to": 68
+      },
+      {
+       "w": "coba",
+       "from": 68,
+       "to": 84
+      },
+      {
+       "w": "tebak.",
+       "from": 84,
+       "to": 90
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "text": "Bu Dosen memberi tugas. Deadline-nya hari Jumat.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/hook_1.wav",
+     "wordsSec": [
+      [
+       "Bu",
+       0.0,
+       0.2
+      ],
+      [
+       "dosen",
+       0.2,
+       0.6
+      ],
+      [
+       "memberi",
+       0.6,
+       0.98
+      ],
+      [
+       "tugas,",
+       0.98,
+       1.36
+      ],
+      [
+       "deadlinenya",
+       1.58,
+       2.04
+      ],
+      [
+       "hari",
+       2.04,
+       2.22
+      ],
+      [
+       "jumat.",
+       2.22,
+       2.6
+      ]
+     ],
+     "from": 101,
+     "to": 182,
+     "words": [
+      {
+       "w": "Bu",
+       "from": 101,
+       "to": 107
+      },
+      {
+       "w": "dosen",
+       "from": 107,
+       "to": 119
+      },
+      {
+       "w": "memberi",
+       "from": 119,
+       "to": 130
+      },
+      {
+       "w": "tugas,",
+       "from": 130,
+       "to": 142
+      },
+      {
+       "w": "deadlinenya",
+       "from": 148,
+       "to": 162
+      },
+      {
+       "w": "hari",
+       "from": 162,
+       "to": 168
+      },
+      {
+       "w": "jumat.",
+       "from": 168,
+       "to": 179
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "grup",
+   "from": 196,
+   "to": 438,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Di grup, semua langsung semangat.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/grup_0.wav",
+     "wordsSec": [
+      [
+       "Di",
+       0.0,
+       0.16
+      ],
+      [
+       "grup",
+       0.16,
+       0.38
+      ],
+      [
+       "Semua",
+       0.38,
+       1.14
+      ],
+      [
+       "Langsung",
+       1.14,
+       1.58
+      ],
+      [
+       "Semangat.",
+       1.58,
+       2.06
+      ]
+     ],
+     "from": 196,
+     "to": 258,
+     "words": [
+      {
+       "w": "Di",
+       "from": 196,
+       "to": 200
+      },
+      {
+       "w": "grup",
+       "from": 200,
+       "to": 207
+      },
+      {
+       "w": "Semua",
+       "from": 207,
+       "to": 230
+      },
+      {
+       "w": "Langsung",
+       "from": 230,
+       "to": 243
+      },
+      {
+       "w": "Semangat.",
+       "from": 243,
+       "to": 257
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Siap! Gas! Nanti aku edit ya! Aku cari referensi!",
+     "score": 1.0,
+     "file": "out/voice/kelompok/grup_1.wav",
+     "wordsSec": [
+      [
+       "Siap",
+       0.0,
+       0.64
+      ],
+      [
+       "gas",
+       0.64,
+       1.54
+      ],
+      [
+       "nanti",
+       1.54,
+       2.5
+      ],
+      [
+       "aku",
+       2.5,
+       2.74
+      ],
+      [
+       "edit",
+       2.74,
+       3.06
+      ],
+      [
+       "ya",
+       3.06,
+       3.34
+      ],
+      [
+       "aku",
+       3.34,
+       4.0
+      ],
+      [
+       "cari",
+       4.0,
+       4.54
+      ],
+      [
+       "referensi",
+       4.54,
+       5.18
+      ]
+     ],
+     "from": 266,
+     "to": 424,
+     "words": [
+      {
+       "w": "Siap",
+       "from": 266,
+       "to": 285
+      },
+      {
+       "w": "gas",
+       "from": 285,
+       "to": 312
+      },
+      {
+       "w": "nanti",
+       "from": 312,
+       "to": 341
+      },
+      {
+       "w": "aku",
+       "from": 341,
+       "to": 348
+      },
+      {
+       "w": "edit",
+       "from": 348,
+       "to": 358
+      },
+      {
+       "w": "ya",
+       "from": 358,
+       "to": 366
+      },
+      {
+       "w": "aku",
+       "from": 366,
+       "to": 386
+      },
+      {
+       "w": "cari",
+       "from": 386,
+       "to": 402
+      },
+      {
+       "w": "referensi",
+       "from": 402,
+       "to": 421
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "hilang",
+   "from": 438,
+   "to": 793,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Tapi hari demi hari, anggotanya mulai menghilang.",
+     "score": 0.988,
+     "file": "out/voice/kelompok/hilang_0.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.24
+      ],
+      [
+       "hari",
+       0.24,
+       0.48
+      ],
+      [
+       "demi",
+       0.48,
+       0.68
+      ],
+      [
+       "hari,",
+       0.68,
+       1.06
+      ],
+      [
+       "anggotannya",
+       1.32,
+       2.04
+      ],
+      [
+       "mulai",
+       2.04,
+       2.32
+      ],
+      [
+       "menghilang.",
+       2.32,
+       2.78
+      ]
+     ],
+     "from": 438,
+     "to": 524,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 438,
+       "to": 445
+      },
+      {
+       "w": "hari",
+       "from": 445,
+       "to": 452
+      },
+      {
+       "w": "demi",
+       "from": 452,
+       "to": 458
+      },
+      {
+       "w": "hari,",
+       "from": 458,
+       "to": 469
+      },
+      {
+       "w": "anggotannya",
+       "from": 477,
+       "to": 499
+      },
+      {
+       "w": "mulai",
+       "from": 499,
+       "to": 507
+      },
+      {
+       "w": "menghilang.",
+       "from": 507,
+       "to": 521
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Joko, terakhir dilihat tiga hari lalu. Sari, sinyalnya jelek. Bayu, cuma kirim satu link.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/hilang_1.wav",
+     "wordsSec": [
+      [
+       "Joko,",
+       0.0,
+       0.3
+      ],
+      [
+       "terakhir",
+       0.54,
+       0.86
+      ],
+      [
+       "dilihat",
+       0.86,
+       1.18
+      ],
+      [
+       "3",
+       1.18,
+       1.3
+      ],
+      [
+       "hari",
+       1.3,
+       1.5
+      ],
+      [
+       "lalu.",
+       1.5,
+       1.76
+      ],
+      [
+       "Sari,",
+       2.02,
+       2.32
+      ],
+      [
+       "sinyalnya",
+       2.48,
+       2.84
+      ],
+      [
+       "jelek.",
+       2.84,
+       3.06
+      ],
+      [
+       "Bayu,",
+       3.2,
+       3.52
+      ],
+      [
+       "cuma",
+       3.66,
+       3.86
+      ],
+      [
+       "kirim",
+       3.86,
+       4.12
+      ],
+      [
+       "1",
+       4.12,
+       4.3
+      ],
+      [
+       "link.",
+       4.3,
+       4.5
+      ]
+     ],
+     "from": 532,
+     "to": 671,
+     "words": [
+      {
+       "w": "Joko,",
+       "from": 532,
+       "to": 541
+      },
+      {
+       "w": "terakhir",
+       "from": 548,
+       "to": 558
+      },
+      {
+       "w": "dilihat",
+       "from": 558,
+       "to": 567
+      },
+      {
+       "w": "3",
+       "from": 567,
+       "to": 571
+      },
+      {
+       "w": "hari",
+       "from": 571,
+       "to": 577
+      },
+      {
+       "w": "lalu.",
+       "from": 577,
+       "to": 585
+      },
+      {
+       "w": "Sari,",
+       "from": 592,
+       "to": 601
+      },
+      {
+       "w": "sinyalnya",
+       "from": 606,
+       "to": 617
+      },
+      {
+       "w": "jelek.",
+       "from": 617,
+       "to": 624
+      },
+      {
+       "w": "Bayu,",
+       "from": 628,
+       "to": 637
+      },
+      {
+       "w": "cuma",
+       "from": 642,
+       "to": 648
+      },
+      {
+       "w": "kirim",
+       "from": 648,
+       "to": 655
+      },
+      {
+       "w": "1",
+       "from": 655,
+       "to": 661
+      },
+      {
+       "w": "link.",
+       "from": 661,
+       "to": 667
+      }
+     ]
+    },
+    {
+     "style": "bisik",
+     "text": "Dan Rara... masih menunggu untuk mengedit.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/hilang_2.wav",
+     "wordsSec": [
+      [
+       "dan",
+       0.0,
+       0.42
+      ],
+      [
+       "rara",
+       0.42,
+       0.84
+      ],
+      [
+       "masih",
+       0.84,
+       1.78
+      ],
+      [
+       "menunggu",
+       1.78,
+       2.36
+      ],
+      [
+       "untuk",
+       2.36,
+       2.58
+      ],
+      [
+       "mengedit",
+       2.58,
+       3.18
+      ]
+     ],
+     "from": 679,
+     "to": 780,
+     "words": [
+      {
+       "w": "dan",
+       "from": 679,
+       "to": 691
+      },
+      {
+       "w": "rara",
+       "from": 691,
+       "to": 704
+      },
+      {
+       "w": "masih",
+       "from": 704,
+       "to": 732
+      },
+      {
+       "w": "menunggu",
+       "from": 732,
+       "to": 750
+      },
+      {
+       "w": "untuk",
+       "from": 750,
+       "to": 756
+      },
+      {
+       "w": "mengedit",
+       "from": 756,
+       "to": 774
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kamis",
+   "from": 793,
+   "to": 1051,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Kamis malam, Dimas mengerjakan semuanya sendirian.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/kamis_0.wav",
+     "wordsSec": [
+      [
+       "Kamis",
+       0.0,
+       0.3
+      ],
+      [
+       "malam,",
+       0.3,
+       0.7
+      ],
+      [
+       "dimas",
+       0.82,
+       1.14
+      ],
+      [
+       "mengerjakan",
+       1.14,
+       1.72
+      ],
+      [
+       "semuanya",
+       1.72,
+       2.18
+      ],
+      [
+       "sendirian.",
+       2.18,
+       2.72
+      ]
+     ],
+     "from": 793,
+     "to": 880,
+     "words": [
+      {
+       "w": "Kamis",
+       "from": 793,
+       "to": 802
+      },
+      {
+       "w": "malam,",
+       "from": 802,
+       "to": 814
+      },
+      {
+       "w": "dimas",
+       "from": 818,
+       "to": 827
+      },
+      {
+       "w": "mengerjakan",
+       "from": 827,
+       "to": 845
+      },
+      {
+       "w": "semuanya",
+       "from": 845,
+       "to": 859
+      },
+      {
+       "w": "sendirian.",
+       "from": 859,
+       "to": 875
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "text": "Dia bertanya di grup, bagiannya mana?",
+     "score": 1.0,
+     "file": "out/voice/kelompok/kamis_1.wav",
+     "wordsSec": [
+      [
+       "dia",
+       0.0,
+       0.1
+      ],
+      [
+       "bertanya",
+       0.1,
+       0.44
+      ],
+      [
+       "di",
+       0.44,
+       0.6
+      ],
+      [
+       "grup,",
+       0.6,
+       0.78
+      ],
+      [
+       "bagiannya",
+       1.26,
+       1.8
+      ],
+      [
+       "mana?",
+       1.8,
+       1.98
+      ]
+     ],
+     "from": 887,
+     "to": 954,
+     "words": [
+      {
+       "w": "dia",
+       "from": 887,
+       "to": 890
+      },
+      {
+       "w": "bertanya",
+       "from": 890,
+       "to": 901
+      },
+      {
+       "w": "di",
+       "from": 901,
+       "to": 905
+      },
+      {
+       "w": "grup,",
+       "from": 905,
+       "to": 911
+      },
+      {
+       "w": "bagiannya",
+       "from": 925,
+       "to": 941
+      },
+      {
+       "w": "mana?",
+       "from": 941,
+       "to": 947
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Pesannya dibaca semua... lalu sepi.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/kamis_2.wav",
+     "wordsSec": [
+      [
+       "Pesannya",
+       0.0,
+       0.32
+      ],
+      [
+       "dibaca",
+       0.32,
+       0.7
+      ],
+      [
+       "semua,",
+       0.7,
+       1.06
+      ],
+      [
+       "lalu",
+       1.66,
+       1.94
+      ],
+      [
+       "sepi.",
+       1.94,
+       2.38
+      ]
+     ],
+     "from": 961,
+     "to": 1037,
+     "words": [
+      {
+       "w": "Pesannya",
+       "from": 961,
+       "to": 971
+      },
+      {
+       "w": "dibaca",
+       "from": 971,
+       "to": 982
+      },
+      {
+       "w": "semua,",
+       "from": 982,
+       "to": 993
+      },
+      {
+       "w": "lalu",
+       "from": 1011,
+       "to": 1020
+      },
+      {
+       "w": "sepi.",
+       "from": 1020,
+       "to": 1033
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "xray",
+   "from": 1051,
+   "to": 1283,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Jam satu malam, kopi gelas ketiga. Energinya tinggal tiga persen saja.",
+     "score": 0.935,
+     "file": "out/voice/kelompok/xray_0.wav",
+     "wordsSec": [
+      [
+       "Jam",
+       0.0,
+       0.32
+      ],
+      [
+       "1",
+       0.32,
+       0.7
+      ],
+      [
+       "malam,",
+       0.7,
+       1.18
+      ],
+      [
+       "kopi",
+       1.44,
+       1.68
+      ],
+      [
+       "gelas",
+       1.68,
+       1.88
+      ],
+      [
+       "ketiga,",
+       1.88,
+       2.32
+      ],
+      [
+       "energinya",
+       2.46,
+       3.18
+      ],
+      [
+       "tinggal",
+       3.18,
+       3.48
+      ],
+      [
+       "3",
+       3.48,
+       3.72
+      ],
+      [
+       "%",
+       3.72,
+       4.0
+      ],
+      [
+       "saja.",
+       4.0,
+       4.3
+      ]
+     ],
+     "from": 1051,
+     "to": 1185,
+     "words": [
+      {
+       "w": "Jam",
+       "from": 1051,
+       "to": 1060
+      },
+      {
+       "w": "1",
+       "from": 1060,
+       "to": 1072
+      },
+      {
+       "w": "malam,",
+       "from": 1072,
+       "to": 1086
+      },
+      {
+       "w": "kopi",
+       "from": 1094,
+       "to": 1101
+      },
+      {
+       "w": "gelas",
+       "from": 1101,
+       "to": 1107
+      },
+      {
+       "w": "ketiga,",
+       "from": 1107,
+       "to": 1120
+      },
+      {
+       "w": "energinya",
+       "from": 1124,
+       "to": 1146
+      },
+      {
+       "w": "tinggal",
+       "from": 1146,
+       "to": 1155
+      },
+      {
+       "w": "3",
+       "from": 1155,
+       "to": 1162
+      },
+      {
+       "w": "%",
+       "from": 1162,
+       "to": 1171
+      },
+      {
+       "w": "saja.",
+       "from": 1171,
+       "to": 1180
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "text": "Jam empat subuh, matanya sudah seperti panda.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/xray_1.wav",
+     "wordsSec": [
+      [
+       "Jam",
+       0.0,
+       0.16
+      ],
+      [
+       "4",
+       0.16,
+       0.38
+      ],
+      [
+       "subuh",
+       0.38,
+       0.84
+      ],
+      [
+       "matanya",
+       0.84,
+       1.46
+      ],
+      [
+       "sudah",
+       1.46,
+       1.66
+      ],
+      [
+       "seperti",
+       1.66,
+       1.98
+      ],
+      [
+       "panda.",
+       1.98,
+       2.32
+      ]
+     ],
+     "from": 1193,
+     "to": 1270,
+     "words": [
+      {
+       "w": "Jam",
+       "from": 1193,
+       "to": 1198
+      },
+      {
+       "w": "4",
+       "from": 1198,
+       "to": 1204
+      },
+      {
+       "w": "subuh",
+       "from": 1204,
+       "to": 1218
+      },
+      {
+       "w": "matanya",
+       "from": 1218,
+       "to": 1237
+      },
+      {
+       "w": "sudah",
+       "from": 1237,
+       "to": 1243
+      },
+      {
+       "w": "seperti",
+       "from": 1243,
+       "to": 1252
+      },
+      {
+       "w": "panda.",
+       "from": 1252,
+       "to": 1262
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kirim",
+   "from": 1283,
+   "to": 1392,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Akhirnya, tugas terkirim. Dimas tertidur di meja.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/kirim_0.wav",
+     "wordsSec": [
+      [
+       "Akhirnya,",
+       0.0,
+       0.54
+      ],
+      [
+       "tugas",
+       0.78,
+       1.1
+      ],
+      [
+       "terkirim",
+       1.1,
+       1.56
+      ],
+      [
+       "di",
+       1.56,
+       1.94
+      ],
+      [
+       "master",
+       1.94,
+       2.16
+      ],
+      [
+       "tidur",
+       2.16,
+       2.6
+      ],
+      [
+       "di",
+       2.6,
+       2.7
+      ],
+      [
+       "meja.",
+       2.7,
+       2.94
+      ]
+     ],
+     "from": 1283,
+     "to": 1379,
+     "words": [
+      {
+       "w": "Akhirnya,",
+       "from": 1283,
+       "to": 1299
+      },
+      {
+       "w": "tugas",
+       "from": 1307,
+       "to": 1316
+      },
+      {
+       "w": "terkirim",
+       "from": 1316,
+       "to": 1330
+      },
+      {
+       "w": "di",
+       "from": 1330,
+       "to": 1341
+      },
+      {
+       "w": "master",
+       "from": 1341,
+       "to": 1348
+      },
+      {
+       "w": "tidur",
+       "from": 1348,
+       "to": 1361
+      },
+      {
+       "w": "di",
+       "from": 1361,
+       "to": 1364
+      },
+      {
+       "w": "meja.",
+       "from": 1364,
+       "to": 1371
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "presentasi",
+   "from": 1392,
+   "to": 1608,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Saat presentasi, semua tampil paling percaya diri.",
+     "score": 0.976,
+     "file": "out/voice/kelompok/presentasi_0.wav",
+     "wordsSec": [
+      [
+       "Saat",
+       0.0,
+       0.28
+      ],
+      [
+       "persentasi,",
+       0.28,
+       0.92
+      ],
+      [
+       "semua",
+       1.18,
+       1.44
+      ],
+      [
+       "tampil",
+       1.44,
+       1.88
+      ],
+      [
+       "paling",
+       1.88,
+       2.1
+      ],
+      [
+       "percaya",
+       2.1,
+       2.56
+      ],
+      [
+       "diri.",
+       2.56,
+       2.98
+      ]
+     ],
+     "from": 1392,
+     "to": 1483,
+     "words": [
+      {
+       "w": "Saat",
+       "from": 1392,
+       "to": 1400
+      },
+      {
+       "w": "persentasi,",
+       "from": 1400,
+       "to": 1420
+      },
+      {
+       "w": "semua",
+       "from": 1427,
+       "to": 1435
+      },
+      {
+       "w": "tampil",
+       "from": 1435,
+       "to": 1448
+      },
+      {
+       "w": "paling",
+       "from": 1448,
+       "to": 1455
+      },
+      {
+       "w": "percaya",
+       "from": 1455,
+       "to": 1469
+      },
+      {
+       "w": "diri.",
+       "from": 1469,
+       "to": 1481
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Referensinya saya yang cari, Bu!",
+     "score": 1.0,
+     "file": "out/voice/kelompok/presentasi_1.wav",
+     "wordsSec": [
+      [
+       "Referensinya",
+       0.0,
+       0.68
+      ],
+      [
+       "saya",
+       0.68,
+       0.98
+      ],
+      [
+       "yang",
+       0.98,
+       1.18
+      ],
+      [
+       "cari,",
+       1.18,
+       1.52
+      ],
+      [
+       "Bu.",
+       1.62,
+       1.72
+      ]
+     ],
+     "from": 1491,
+     "to": 1547,
+     "words": [
+      {
+       "w": "Referensinya",
+       "from": 1491,
+       "to": 1511
+      },
+      {
+       "w": "saya",
+       "from": 1511,
+       "to": 1520
+      },
+      {
+       "w": "yang",
+       "from": 1520,
+       "to": 1526
+      },
+      {
+       "w": "cari,",
+       "from": 1526,
+       "to": 1536
+      },
+      {
+       "w": "Bu.",
+       "from": 1539,
+       "to": 1542
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Saya yang edit semuanya!",
+     "score": 1.0,
+     "file": "out/voice/kelompok/presentasi_2.wav",
+     "wordsSec": [
+      [
+       "Saya",
+       0.0,
+       0.24
+      ],
+      [
+       "yang",
+       0.24,
+       0.48
+      ],
+      [
+       "edit",
+       0.48,
+       0.7
+      ],
+      [
+       "semuanya.",
+       0.7,
+       1.14
+      ]
+     ],
+     "from": 1554,
+     "to": 1595,
+     "words": [
+      {
+       "w": "Saya",
+       "from": 1554,
+       "to": 1562
+      },
+      {
+       "w": "yang",
+       "from": 1562,
+       "to": 1569
+      },
+      {
+       "w": "edit",
+       "from": 1569,
+       "to": 1575
+      },
+      {
+       "w": "semuanya.",
+       "from": 1575,
+       "to": 1589
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "nilai",
+   "from": 1608,
+   "to": 1817,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Dan nilainya?",
+     "score": 1.0,
+     "file": "out/voice/kelompok/nilai_0.wav",
+     "wordsSec": [
+      [
+       "dan",
+       0.0,
+       0.26
+      ],
+      [
+       "nilainya.",
+       0.26,
+       0.8
+      ]
+     ],
+     "from": 1608,
+     "to": 1642,
+     "words": [
+      {
+       "w": "dan",
+       "from": 1608,
+       "to": 1616
+      },
+      {
+       "w": "nilainya.",
+       "from": 1616,
+       "to": 1632
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "text": "Semua dapat A.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/nilai_1.wav",
+     "wordsSec": [
+      [
+       "Semua",
+       0.0,
+       0.3
+      ],
+      [
+       "dapat",
+       0.3,
+       0.48
+      ],
+      [
+       "A.",
+       0.48,
+       0.78
+      ]
+     ],
+     "from": 1650,
+     "to": 1683,
+     "words": [
+      {
+       "w": "Semua",
+       "from": 1650,
+       "to": 1659
+      },
+      {
+       "w": "dapat",
+       "from": 1659,
+       "to": 1664
+      },
+      {
+       "w": "A.",
+       "from": 1664,
+       "to": 1673
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Kerja sama yang bagus ya, Dimas!",
+     "score": 1.0,
+     "file": "out/voice/kelompok/nilai_2.wav",
+     "wordsSec": [
+      [
+       "kerja",
+       0.0,
+       0.66
+      ],
+      [
+       "sama",
+       0.66,
+       0.86
+      ],
+      [
+       "yang",
+       0.86,
+       0.96
+      ],
+      [
+       "bagus",
+       0.96,
+       1.2
+      ],
+      [
+       "ya",
+       1.2,
+       1.34
+      ],
+      [
+       "dimas",
+       1.34,
+       1.7
+      ]
+     ],
+     "from": 1691,
+     "to": 1748,
+     "words": [
+      {
+       "w": "kerja",
+       "from": 1691,
+       "to": 1711
+      },
+      {
+       "w": "sama",
+       "from": 1711,
+       "to": 1717
+      },
+      {
+       "w": "yang",
+       "from": 1717,
+       "to": 1720
+      },
+      {
+       "w": "bagus",
+       "from": 1720,
+       "to": 1727
+      },
+      {
+       "w": "ya",
+       "from": 1727,
+       "to": 1731
+      },
+      {
+       "w": "dimas",
+       "from": 1731,
+       "to": 1742
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Dimas hanya bisa tersenyum.",
+     "score": 1.0,
+     "file": "out/voice/kelompok/nilai_3.wav",
+     "wordsSec": [
+      [
+       "Dimas",
+       0.0,
+       0.42
+      ],
+      [
+       "hanya",
+       0.42,
+       0.7
+      ],
+      [
+       "bisa",
+       0.7,
+       0.9
+      ],
+      [
+       "tersenyum.",
+       0.9,
+       1.46
+      ]
+     ],
+     "from": 1755,
+     "to": 1803,
+     "words": [
+      {
+       "w": "Dimas",
+       "from": 1755,
+       "to": 1768
+      },
+      {
+       "w": "hanya",
+       "from": 1768,
+       "to": 1776
+      },
+      {
+       "w": "bisa",
+       "from": 1776,
+       "to": 1782
+      },
+      {
+       "w": "tersenyum.",
+       "from": 1782,
+       "to": 1799
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

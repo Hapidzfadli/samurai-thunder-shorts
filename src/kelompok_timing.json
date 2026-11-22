@@ -1,0 +1,903 @@
+{
+ "fps": 30,
+ "order": [
+  "hook",
+  "grup",
+  "hilang",
+  "kamis",
+  "xray",
+  "kirim",
+  "presentasi",
+  "nilai"
+ ],
+ "scenes": {
+  "hook": {
+   "from": 0,
+   "dur": 210
+  },
+  "grup": {
+   "from": 210,
+   "dur": 266
+  },
+  "hilang": {
+   "from": 476,
+   "dur": 388
+  },
+  "kamis": {
+   "from": 864,
+   "dur": 296
+  },
+  "xray": {
+   "from": 1160,
+   "dur": 264
+  },
+  "kirim": {
+   "from": 1424,
+   "dur": 158
+  },
+  "presentasi": {
+   "from": 1582,
+   "dur": 244
+  },
+  "nilai": {
+   "from": 1826,
+   "dur": 314
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "text": "Kerja kelompok lima orang. Yang kerja... coba tebak.",
+    "style": "narasi",
+    "from": 9,
+    "to": 95,
+    "words": [
+     {
+      "w": "Kerja",
+      "from": 9,
+      "to": 17
+     },
+     {
+      "w": "kelompok",
+      "from": 17,
+      "to": 29
+     },
+     {
+      "w": "lima",
+      "from": 29,
+      "to": 40
+     },
+     {
+      "w": "orang.",
+      "from": 40,
+      "to": 50
+     },
+     {
+      "w": "Yang",
+      "from": 50,
+      "to": 60
+     },
+     {
+      "w": "kerja...",
+      "from": 60,
+      "to": 72
+     },
+     {
+      "w": "coba",
+      "from": 72,
+      "to": 86
+     },
+     {
+      "w": "tebak.",
+      "from": 86,
+      "to": 92
+     }
+    ]
+   },
+   {
+    "text": "Bu Dosen memberi tugas. Deadline-nya hari Jumat.",
+    "style": "narasi",
+    "from": 105,
+    "to": 186,
+    "words": [
+     {
+      "w": "Bu",
+      "from": 105,
+      "to": 111
+     },
+     {
+      "w": "Dosen",
+      "from": 111,
+      "to": 123
+     },
+     {
+      "w": "memberi",
+      "from": 123,
+      "to": 135
+     },
+     {
+      "w": "tugas.",
+      "from": 135,
+      "to": 153
+     },
+     {
+      "w": "Deadline-nya",
+      "from": 153,
+      "to": 166
+     },
+     {
+      "w": "hari",
+      "from": 166,
+      "to": 172
+     },
+     {
+      "w": "Jumat.",
+      "from": 172,
+      "to": 183
+     }
+    ]
+   }
+  ],
+  "grup": [
+   {
+    "text": "Di grup, semua langsung semangat.",
+    "style": "santai",
+    "from": 10,
+    "to": 73,
+    "words": [
+     {
+      "w": "Di",
+      "from": 10,
+      "to": 15
+     },
+     {
+      "w": "grup,",
+      "from": 15,
+      "to": 22
+     },
+     {
+      "w": "semua",
+      "from": 22,
+      "to": 45
+     },
+     {
+      "w": "langsung",
+      "from": 45,
+      "to": 58
+     },
+     {
+      "w": "semangat.",
+      "from": 58,
+      "to": 72
+     }
+    ]
+   },
+   {
+    "text": "Siap! Gas! Nanti aku edit ya! Aku cari referensi!",
+    "style": "santai",
+    "from": 80,
+    "to": 239,
+    "words": [
+     {
+      "w": "Siap!",
+      "from": 80,
+      "to": 100
+     },
+     {
+      "w": "Gas!",
+      "from": 100,
+      "to": 127
+     },
+     {
+      "w": "Nanti",
+      "from": 127,
+      "to": 155
+     },
+     {
+      "w": "aku",
+      "from": 155,
+      "to": 163
+     },
+     {
+      "w": "edit",
+      "from": 163,
+      "to": 172
+     },
+     {
+      "w": "ya!",
+      "from": 172,
+      "to": 181
+     },
+     {
+      "w": "Aku",
+      "from": 181,
+      "to": 200
+     },
+     {
+      "w": "cari",
+      "from": 200,
+      "to": 217
+     },
+     {
+      "w": "referensi!",
+      "from": 217,
+      "to": 236
+     }
+    ]
+   }
+  ],
+  "hilang": [
+   {
+    "text": "Tapi hari demi hari, anggotanya mulai menghilang.",
+    "style": "narasi",
+    "from": 15,
+    "to": 101,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 15,
+      "to": 22
+     },
+     {
+      "w": "hari",
+      "from": 22,
+      "to": 30
+     },
+     {
+      "w": "demi",
+      "from": 30,
+      "to": 36
+     },
+     {
+      "w": "hari,",
+      "from": 36,
+      "to": 55
+     },
+     {
+      "w": "anggotanya",
+      "from": 55,
+      "to": 75
+     },
+     {
+      "w": "mulai",
+      "from": 75,
+      "to": 84
+     },
+     {
+      "w": "menghilang.",
+      "from": 84,
+      "to": 98
+     }
+    ]
+   },
+   {
+    "text": "Joko, terakhir dilihat tiga hari lalu. Sari, sinyalnya jelek. Bayu, cuma kirim satu link.",
+    "style": "santai",
+    "from": 110,
+    "to": 250,
+    "words": [
+     {
+      "w": "Joko,",
+      "from": 110,
+      "to": 119
+     },
+     {
+      "w": "terakhir",
+      "from": 119,
+      "to": 135
+     },
+     {
+      "w": "dilihat",
+      "from": 135,
+      "to": 144
+     },
+     {
+      "w": "tiga",
+      "from": 144,
+      "to": 151
+     },
+     {
+      "w": "hari",
+      "from": 151,
+      "to": 157
+     },
+     {
+      "w": "lalu.",
+      "from": 157,
+      "to": 172
+     },
+     {
+      "w": "Sari,",
+      "from": 172,
+      "to": 185
+     },
+     {
+      "w": "sinyalnya",
+      "from": 185,
+      "to": 195
+     },
+     {
+      "w": "jelek.",
+      "from": 195,
+      "to": 201
+     },
+     {
+      "w": "Bayu,",
+      "from": 201,
+      "to": 212
+     },
+     {
+      "w": "cuma",
+      "from": 212,
+      "to": 223
+     },
+     {
+      "w": "kirim",
+      "from": 223,
+      "to": 230
+     },
+     {
+      "w": "satu",
+      "from": 230,
+      "to": 240
+     },
+     {
+      "w": "link.",
+      "from": 240,
+      "to": 245
+     }
+    ]
+   },
+   {
+    "text": "Dan Rara... masih menunggu untuk mengedit.",
+    "style": "bisik",
+    "from": 263,
+    "to": 364,
+    "words": [
+     {
+      "w": "Dan",
+      "from": 263,
+      "to": 276
+     },
+     {
+      "w": "Rara...",
+      "from": 276,
+      "to": 288
+     },
+     {
+      "w": "masih",
+      "from": 288,
+      "to": 316
+     },
+     {
+      "w": "menunggu",
+      "from": 316,
+      "to": 334
+     },
+     {
+      "w": "untuk",
+      "from": 334,
+      "to": 340
+     },
+     {
+      "w": "mengedit.",
+      "from": 340,
+      "to": 358
+     }
+    ]
+   }
+  ],
+  "kamis": [
+   {
+    "text": "Kamis malam, Dimas mengerjakan semuanya sendirian.",
+    "style": "tegang",
+    "from": 12,
+    "to": 98,
+    "words": [
+     {
+      "w": "Kamis",
+      "from": 12,
+      "to": 21
+     },
+     {
+      "w": "malam,",
+      "from": 21,
+      "to": 37
+     },
+     {
+      "w": "Dimas",
+      "from": 37,
+      "to": 46
+     },
+     {
+      "w": "mengerjakan",
+      "from": 46,
+      "to": 64
+     },
+     {
+      "w": "semuanya",
+      "from": 64,
+      "to": 77
+     },
+     {
+      "w": "sendirian.",
+      "from": 77,
+      "to": 94
+     }
+    ]
+   },
+   {
+    "text": "Dia bertanya di grup, bagiannya mana?",
+    "style": "narasi",
+    "from": 109,
+    "to": 175,
+    "words": [
+     {
+      "w": "Dia",
+      "from": 109,
+      "to": 112
+     },
+     {
+      "w": "bertanya",
+      "from": 112,
+      "to": 122
+     },
+     {
+      "w": "di",
+      "from": 122,
+      "to": 127
+     },
+     {
+      "w": "grup,",
+      "from": 127,
+      "to": 147
+     },
+     {
+      "w": "bagiannya",
+      "from": 147,
+      "to": 163
+     },
+     {
+      "w": "mana?",
+      "from": 163,
+      "to": 168
+     }
+    ]
+   },
+   {
+    "text": "Pesannya dibaca semua... lalu sepi.",
+    "style": "santai",
+    "from": 190,
+    "to": 266,
+    "words": [
+     {
+      "w": "Pesannya",
+      "from": 190,
+      "to": 200
+     },
+     {
+      "w": "dibaca",
+      "from": 200,
+      "to": 211
+     },
+     {
+      "w": "semua...",
+      "from": 211,
+      "to": 240
+     },
+     {
+      "w": "lalu",
+      "from": 240,
+      "to": 248
+     },
+     {
+      "w": "sepi.",
+      "from": 248,
+      "to": 262
+     }
+    ]
+   }
+  ],
+  "xray": [
+   {
+    "text": "Jam satu malam, kopi gelas ketiga. Energinya tinggal tiga persen saja.",
+    "style": "narasi",
+    "from": 12,
+    "to": 146,
+    "words": [
+     {
+      "w": "Jam",
+      "from": 12,
+      "to": 20
+     },
+     {
+      "w": "satu",
+      "from": 20,
+      "to": 38
+     },
+     {
+      "w": "malam,",
+      "from": 38,
+      "to": 56
+     },
+     {
+      "w": "kopi",
+      "from": 56,
+      "to": 62
+     },
+     {
+      "w": "gelas",
+      "from": 62,
+      "to": 67
+     },
+     {
+      "w": "ketiga.",
+      "from": 67,
+      "to": 77
+     },
+     {
+      "w": "Energinya",
+      "from": 77,
+      "to": 98
+     },
+     {
+      "w": "tinggal",
+      "from": 98,
+      "to": 110
+     },
+     {
+      "w": "tiga",
+      "from": 110,
+      "to": 114
+     },
+     {
+      "w": "persen",
+      "from": 114,
+      "to": 134
+     },
+     {
+      "w": "saja.",
+      "from": 134,
+      "to": 141
+     }
+    ]
+   },
+   {
+    "text": "Jam empat subuh, matanya sudah seperti panda.",
+    "style": "tegang",
+    "from": 160,
+    "to": 237,
+    "words": [
+     {
+      "w": "Jam",
+      "from": 160,
+      "to": 164
+     },
+     {
+      "w": "empat",
+      "from": 164,
+      "to": 180
+     },
+     {
+      "w": "subuh,",
+      "from": 180,
+      "to": 192
+     },
+     {
+      "w": "matanya",
+      "from": 192,
+      "to": 206
+     },
+     {
+      "w": "sudah",
+      "from": 206,
+      "to": 211
+     },
+     {
+      "w": "seperti",
+      "from": 211,
+      "to": 220
+     },
+     {
+      "w": "panda.",
+      "from": 220,
+      "to": 230
+     }
+    ]
+   }
+  ],
+  "kirim": [
+   {
+    "text": "Akhirnya, tugas terkirim. Dimas tertidur di meja.",
+    "style": "narasi",
+    "from": 21,
+    "to": 116,
+    "words": [
+     {
+      "w": "Akhirnya,",
+      "from": 21,
+      "to": 44
+     },
+     {
+      "w": "tugas",
+      "from": 44,
+      "to": 54
+     },
+     {
+      "w": "terkirim.",
+      "from": 54,
+      "to": 68
+     },
+     {
+      "w": "Dimas",
+      "from": 68,
+      "to": 82
+     },
+     {
+      "w": "tertidur",
+      "from": 82,
+      "to": 99
+     },
+     {
+      "w": "di",
+      "from": 99,
+      "to": 102
+     },
+     {
+      "w": "meja.",
+      "from": 102,
+      "to": 109
+     }
+    ]
+   }
+  ],
+  "presentasi": [
+   {
+    "text": "Saat presentasi, semua tampil paling percaya diri.",
+    "style": "narasi",
+    "from": 12,
+    "to": 103,
+    "words": [
+     {
+      "w": "Saat",
+      "from": 12,
+      "to": 20
+     },
+     {
+      "w": "presentasi,",
+      "from": 20,
+      "to": 47
+     },
+     {
+      "w": "semua",
+      "from": 47,
+      "to": 55
+     },
+     {
+      "w": "tampil",
+      "from": 55,
+      "to": 68
+     },
+     {
+      "w": "paling",
+      "from": 68,
+      "to": 75
+     },
+     {
+      "w": "percaya",
+      "from": 75,
+      "to": 89
+     },
+     {
+      "w": "diri.",
+      "from": 89,
+      "to": 101
+     }
+    ]
+   },
+   {
+    "text": "Referensinya saya yang cari, Bu!",
+    "style": "tegas",
+    "from": 113,
+    "to": 169,
+    "words": [
+     {
+      "w": "Referensinya",
+      "from": 113,
+      "to": 134
+     },
+     {
+      "w": "saya",
+      "from": 134,
+      "to": 143
+     },
+     {
+      "w": "yang",
+      "from": 143,
+      "to": 149
+     },
+     {
+      "w": "cari,",
+      "from": 149,
+      "to": 162
+     },
+     {
+      "w": "Bu!",
+      "from": 162,
+      "to": 165
+     }
+    ]
+   },
+   {
+    "text": "Saya yang edit semuanya!",
+    "style": "santai",
+    "from": 180,
+    "to": 220,
+    "words": [
+     {
+      "w": "Saya",
+      "from": 180,
+      "to": 187
+     },
+     {
+      "w": "yang",
+      "from": 187,
+      "to": 194
+     },
+     {
+      "w": "edit",
+      "from": 194,
+      "to": 201
+     },
+     {
+      "w": "semuanya!",
+      "from": 201,
+      "to": 214
+     }
+    ]
+   }
+  ],
+  "nilai": [
+   {
+    "text": "Dan nilainya?",
+    "style": "narasi",
+    "from": 9,
+    "to": 43,
+    "words": [
+     {
+      "w": "Dan",
+      "from": 9,
+      "to": 17
+     },
+     {
+      "w": "nilainya?",
+      "from": 17,
+      "to": 33
+     }
+    ]
+   },
+   {
+    "text": "Semua dapat A.",
+    "style": "tegang",
+    "from": 61,
+    "to": 94,
+    "words": [
+     {
+      "w": "Semua",
+      "from": 61,
+      "to": 70
+     },
+     {
+      "w": "dapat",
+      "from": 70,
+      "to": 75
+     },
+     {
+      "w": "A.",
+      "from": 75,
+      "to": 84
+     }
+    ]
+   },
+   {
+    "text": "Kerja sama yang bagus ya, Dimas!",
+    "style": "santai",
+    "from": 112,
+    "to": 169,
+    "words": [
+     {
+      "w": "Kerja",
+      "from": 112,
+      "to": 132
+     },
+     {
+      "w": "sama",
+      "from": 132,
+      "to": 138
+     },
+     {
+      "w": "yang",
+      "from": 138,
+      "to": 141
+     },
+     {
+      "w": "bagus",
+      "from": 141,
+      "to": 148
+     },
+     {
+      "w": "ya,",
+      "from": 148,
+      "to": 152
+     },
+     {
+      "w": "Dimas!",
+      "from": 152,
+      "to": 163
+     }
+    ]
+   },
+   {
+    "text": "Dimas hanya bisa tersenyum.",
+    "style": "santai",
+    "from": 182,
+    "to": 230,
+    "words": [
+     {
+      "w": "Dimas",
+      "from": 182,
+      "to": 195
+     },
+     {
+      "w": "hanya",
+      "from": 195,
+      "to": 203
+     },
+     {
+      "w": "bisa",
+      "from": 203,
+      "to": 209
+     },
+     {
+      "w": "tersenyum.",
+      "from": 209,
+      "to": 226
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.tebak": 83,
+  "hook.write": 119,
+  "hook.jumat": 170,
+  "grup.cheer": 56,
+  "grup.pop1": 78,
+  "grup.pop2": 98,
+  "grup.pop3": 125,
+  "grup.pop4": 209,
+  "hilang.tear": 20,
+  "hilang.joko": 108,
+  "hilang.sari": 170,
+  "hilang.bayu": 199,
+  "hilang.rara": 274,
+  "kamis.type": 12,
+  "kamis.send": 110,
+  "kamis.read": 197,
+  "kamis.flip": 244,
+  "xray.drink": 50,
+  "xray.battery": 74,
+  "xray.panda": 217,
+  "kirim.press": 46,
+  "kirim.sleep": 79,
+  "pres.start": 12,
+  "pres.bayu": 109,
+  "pres.rara": 176,
+  "nilai.board": 57,
+  "nilai.shock": 94,
+  "nilai.tos": 110,
+  "nilai.smile": 206,
+  "nilai.title": 238
+ },
+ "total": 2140
+}
