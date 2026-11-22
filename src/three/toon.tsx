@@ -239,7 +239,7 @@ export const BlueGrid: React.FC<{ size?: number; y?: number }> = ({ size = 60, y
 };
 
 /* ---------------- tokoh kepala bulat 3D ---------------- */
-export type Expr3 = "neutral" | "smug" | "shock" | "angry" | "happy" | "worried" | "determined" | "laugh" | "puzzled" | "shout" | "proud";
+export type Expr3 = "neutral" | "smug" | "shock" | "angry" | "happy" | "worried" | "determined" | "laugh" | "puzzled" | "shout" | "proud" | "sleepy";
 export type Bean3Params = {
   body: string; // warna baju
   pants?: string;
@@ -247,7 +247,7 @@ export type Bean3Params = {
   glove?: string; // warna tangan (bola)
   skin?: string; // warna kepala
   sleeve?: string;
-  hat?: "peaked" | "slouch" | "wide" | "fedora" | "none";
+  hat?: "peaked" | "slouch" | "wide" | "fedora" | "cap" | "none";
   hatColor?: string;
   hatBand?: string;
   expr?: Expr3;
@@ -274,6 +274,13 @@ export type Bean3Params = {
   shirt?: string; // kerah kemeja di balik jas
   medal?: boolean; // medali veteran di dada
   hide?: "hat"[]; // sembunyikan bagian (topi dipegang/terlempar sebagai benda terpisah)
+  ponytail?: boolean; // kuncir kuda (warna = hair)
+  longHair?: boolean; // rambut panjang terurai di belakang (warna = hair)
+  hijab?: string; // jilbab (menutup rambut & leher, wajah tetap terbuka)
+  backpack?: string; // ransel di punggung
+  headphones?: string; // headphone melingkar di leher
+  glassesUp?: boolean; // kacamata diletakkan di atas kepala
+  hood?: string; // tudung hoodie di belakang leher
 };
 const FACE = 512;
 type FaceSlot = { cv: HTMLCanvasElement; tex: THREE.DataTexture; buf: Uint8Array; key: string };
@@ -430,6 +437,20 @@ const drawFace = (ctx: CanvasRenderingContext2D, expr: Expr3, look: number, must
       eye(ex + dx, ey + 4, 0.6);
       mouth("open");
       break;
+    case "sleepy":
+      // mata panda: kantung gelap + mata setengah tertutup
+      ctx.fillStyle = "rgba(90,80,120,0.45)";
+      for (const sx of [-1, 1]) {
+        ctx.beginPath();
+        ctx.ellipse(ex + sx * dx, ey + 26, 38, 16, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      brow(ex - dx, by + 4, -0.18, 68, 20);
+      brow(ex + dx, by + 4, 0.18, 68, 20);
+      eye(ex - dx, ey + 6, 0.22);
+      eye(ex + dx, ey + 6, 0.22);
+      mouth("wavy");
+      break;
     case "proud":
       brow(ex - dx, by - 10, -0.12, 74, 22, 6);
       brow(ex + dx, by - 10, 0.12, 74, 22, 6);
@@ -508,6 +529,15 @@ export const Hat: React.FC<{ kind: Bean3Params["hat"]; c: string; band: string; 
         {/* pet topi menonjol ke depan, di atas alis */}
         <T g={G.cyl(r * 0.98, r * 0.98, 0.025, 28, false, -Math.PI / 2, Math.PI)} c="#1a1814" position={[0, -r * 0.02, r * 0.05]} rotation={[0.2, 0, 0]} scale={[0.82, 1, 1]} o={2} />
         <T g={G.sph(r * 0.08, 10, 8)} c="#e8c050" position={[0, r * 0.26, r * 0.86]} o={2} emissive="#6a4a00" ei={0.4} />
+      </group>
+    );
+  if (kind === "cap")
+    // topi baseball dipakai terbalik: pet di belakang, dahi & alis tetap terlihat
+    return (
+      <group position={[0, 0, 0]} rotation={[-0.35, 0, 0]}>
+        <T g={G.dome(r * 1.05, 0.95)} c={c} />
+        <T g={G.sph(r * 0.08, 10, 8)} c={band} position={[0, r * 0.55, 0]} o={2} />
+        <T g={G.cyl(r * 0.75, r * 0.75, 0.025, 24, false, Math.PI / 2, Math.PI)} c={band} position={[0, r * 0.2, -r * 0.55]} rotation={[-0.25, 0, 0]} scale={[0.8, 1, 1]} o={2} />
       </group>
     );
   if (kind === "fedora")
@@ -638,6 +668,24 @@ export const Bean3: React.FC<{ p: Bean3Params; position?: Vec3; rotation?: Vec3;
           </group>
         ) : null}
         {p.collar ? <T g={G.cyl(0.2, 0.26, 0.08, 18)} c={p.collar} position={[0, 1.06, 0]} o={2} /> : null}
+        {p.hood ? <T g={G.tor(0.2, 0.08, 8, 20)} c={p.hood} position={[0, 1.06, -0.12]} rotation={[Math.PI / 2 + 0.3, 0, 0]} o={2} /> : null}
+        {p.headphones ? (
+          <group position={[0, 1.08, 0]}>
+            <T g={G.tor(0.21, 0.025, 6, 24, Math.PI)} c={p.headphones} rotation={[Math.PI / 2, 0, 0]} o={2} />
+            {[-1, 1].map((sd) => (
+              <T key={sd} g={G.cyl(0.07, 0.07, 0.05, 14)} c={p.headphones!} position={[sd * 0.21, 0, 0.02]} rotation={[0, 0, Math.PI / 2]} o={2} />
+            ))}
+          </group>
+        ) : null}
+        {p.backpack ? (
+          <group position={[0, 0.82, -0.32]}>
+            <T g={G.rbox(0.44, 0.52, 0.2, 0.4)} c={p.backpack} />
+            <T g={G.rbox(0.3, 0.2, 0.08, 0.4)} c={p.backpack} position={[0, -0.12, -0.12]} o={2} />
+            {[-0.14, 0.14].map((x) => (
+              <T key={x} g={G.box(0.05, 0.55, 0.02)} c="#2a2a30" position={[x, 0.08, 0.61]} rotation={[0.05, 0, 0]} o={2} />
+            ))}
+          </group>
+        ) : null}
         {p.belt ? <T g={G.tor(0.29, 0.035, 6, 28)} c={p.belt} position={[0, 0.55, 0]} rotation={[Math.PI / 2, 0, 0]} o={2} /> : null}
         {p.strap ? <T g={G.box(0.05, 0.62, 0.02)} c={p.strap} position={[0.02, 0.8, 0.27]} rotation={[0, 0, -0.55]} o={2} /> : null}
         {p.braces
@@ -652,7 +700,29 @@ export const Bean3: React.FC<{ p: Bean3Params; position?: Vec3; rotation?: Vec3;
         <group position={[0, 1.42, 0]} rotation={[p.headTilt ?? 0, p.headTurn ?? 0, 0]}>
           <T g={G.sph(R, 36, 24)} c={skin} emissive="#ffffff" ei={0.08} />
           <FaceDecal r={R} expr={p.expr ?? "neutral"} look={p.look ?? 0} mustache={!!p.mustache} talk={p.talk ?? 0} />
-          {p.hair ? <T g={G.dome(R * 1.035, 1.2)} c={p.hair} rotation={[-0.42, 0, 0]} o={2} /> : null}
+          {p.hair && !p.hijab ? <T g={G.dome(R * 1.035, 1.2)} c={p.hair} rotation={[-0.42, 0, 0]} o={2} /> : null}
+          {p.hair && p.longHair && !p.hijab ? <T g={G.cap(R * 0.75, R * 0.9, 18)} c={p.hair} position={[0, -R * 0.35, -R * 0.42]} scale={[1.15, 1, 0.55]} o={2} /> : null}
+          {p.hair && p.ponytail && !p.hijab ? (
+            <group>
+              <T g={G.sph(R * 0.14, 10, 8)} c="#e04a7a" position={[0, R * 0.55, -R * 0.85]} o={2} />
+              <T g={G.cap(R * 0.2, R * 0.75, 12)} c={p.hair} position={[0, R * 0.15, -R * 1.12]} rotation={[0.35, 0, 0]} o={2} />
+            </group>
+          ) : null}
+          {p.hijab ? (
+            <group>
+              {/* kain di atas kepala sampai belakang, wajah terbuka */}
+              <T g={G.sph(R * 1.08, 30, 20)} c={p.hijab} position={[0, R * 0.06, -R * 0.2]} o={2} />
+              <T g={G.cone(R * 1.05, R * 1.1, 24)} c={p.hijab} position={[0, -R * 0.78, -R * 0.05]} o={2} />
+            </group>
+          ) : null}
+          {p.glassesUp ? (
+            <group position={[0, R * 0.82, R * 0.35]} rotation={[-0.9, 0, 0]}>
+              {[-1, 1].map((sd) => (
+                <T key={sd} g={G.tor(R * 0.17, R * 0.03, 6, 18)} c="#2a2a30" position={[sd * R * 0.22, 0, 0]} o={false} />
+              ))}
+              <T g={G.box(R * 0.12, R * 0.03, R * 0.03)} c="#2a2a30" o={false} />
+            </group>
+          ) : null}
           {p.hide?.includes("hat") ? null : <Hat kind={p.hat} c={p.hatColor ?? "#6a6a4a"} band={p.hatBand ?? "#3a2a1a"} r={R} />}
         </group>
         {children}
