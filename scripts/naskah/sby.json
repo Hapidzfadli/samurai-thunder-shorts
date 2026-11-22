@@ -1,0 +1,26 @@
+[
+ {"scene": "hook", "lines": [
+   ["tegang", "Hanya bambu runcing... melawan tank, kapal perang, dan pesawat tempur."]]},
+ {"scene": "yamato", "lines": [
+   ["narasi", "Sembilan belas September 1945. Bendera Belanda berkibar di atas Hotel Yamato."],
+   ["tegas", "Para pemuda memanjat, lalu merobek warna birunya."],
+   ["narasi", "Yang tersisa... merah putih."]]},
+ {"scene": "ultimatum", "lines": [
+   ["narasi", "Inggris datang untuk melucuti tentara Jepang, tapi bentrokan pecah, dan seorang jenderal Inggris tewas."],
+   ["tegang", "Ultimatum disebar dari udara. Serahkan senjata sebelum pukul enam pagi, sepuluh November."]]},
+ {"scene": "radio", "lines": [
+   ["narasi", "Malam itu, sebuah suara membakar seluruh kota lewat radio."],
+   ["tegas", "Semboyan kita tetap: merdeka atau mati!"]]},
+ {"scene": "serangan", "lines": [
+   ["tegang", "Pagi sepuluh November, Surabaya dihujani meriam kapal, bom pesawat, dan tank."]]},
+ {"scene": "jembatan", "lines": [
+   ["narasi", "Di Jembatan Merah, arek-arek Suroboyo bertahan dengan senjata seadanya."],
+   ["tegas", "Mereka tidak mundur."]]},
+ {"scene": "pmi", "lines": [
+   ["bisik", "Di tengah asap, para relawan menggotong yang terluka, satu demi satu."]]},
+ {"scene": "akhir", "lines": [
+   ["narasi", "Tiga minggu bertempur. Ribuan gugur. Kota itu akhirnya jatuh..."],
+   ["tegas", "tapi semangatnya menyalakan perlawanan di seluruh negeri."]]},
+ {"scene": "pahlawan", "lines": [
+   ["narasi", "Karena itu, setiap sepuluh November, kita mengenangnya sebagai Hari Pahlawan."]]}
+]
