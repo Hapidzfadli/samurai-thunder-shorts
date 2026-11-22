@@ -81,6 +81,35 @@ def norm_word(w):
     return re.sub(r"[^a-z0-9]", "", w.lower())
 
 
+def align_script(text, wsec, dur):
+    """Kata naskah (ejaan benar) diberi waktu dari transkrip whisper lewat posisi huruf proporsional."""
+    script = text.split()
+    if not wsec:
+        n = len(script)
+        return [(w, dur * i / n, dur * (i + 1) / n) for i, w in enumerate(script)]
+    # garis waktu huruf whisper
+    marks = []
+    tot = sum(max(1, len(norm_word(w))) for w, _, _ in wsec)
+    acc = 0
+    for w, a, b in wsec:
+        L = max(1, len(norm_word(w)))
+        marks.append((acc / tot, a))
+        acc += L
+        marks.append((acc / tot, b))
+    xs = [m[0] for m in marks]
+    ts = [m[1] for m in marks]
+    stot = sum(max(1, len(norm_word(w))) for w in script)
+    out = []
+    acc = 0
+    for w in script:
+        L = max(1, len(norm_word(w)))
+        a = float(np.interp(acc / stot, xs, ts))
+        acc += L
+        b = float(np.interp(acc / stot, xs, ts))
+        out.append((w, a, b))
+    return out
+
+
 def load_wav(path):
     with wave.open(str(path)) as wf:
         sr = wf.getframerate()
@@ -463,7 +492,7 @@ def main():
             t += cfg["gaps"][i] if i < len(cfg["gaps"]) else 0.3
             y = load_wav(ROOT / ln["file"])
             d = len(y) / SR
-            words = [{"w": w, "from": int(round((t + a) * FPS)), "to": int(round((t + b) * FPS))} for w, a, b in ln["wordsSec"]]
+            words = [{"w": w, "from": int(round((t + a) * FPS)), "to": int(round((t + b) * FPS))} for w, a, b in align_script(ln["text"], ln["wordsSec"], d)]
             lines.append({"text": ln["text"], "style": ln["style"], "from": int(round(t * FPS)), "to": int(round((t + d) * FPS)), "words": words})
             clips.append((start + t, y))
             t += d

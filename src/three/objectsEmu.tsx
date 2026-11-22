@@ -372,3 +372,12 @@ export const Binoculars: React.FC<{ position?: Vec3; rotation?: Vec3 }> = ({ pos
     <T g={G.box(0.06, 0.03, 0.05)} c="#3a3a3c" o={2} />
   </group>
 );
+
+/** posisi kepala emu relatif kaki (sama dengan rumus di Emu3D) — untuk benda yang dipatuk/dipakai emu */
+export const emuHeadLocal = (pose: EmuPose = {}): Vec3 => {
+  const n = pose.neck ?? 0.2;
+  const peck = pose.peck ?? 0;
+  const bounce = pose.run !== undefined ? Math.abs(Math.sin(pose.run)) * 0.06 : 0;
+  const bodyY = 1.02 + bounce;
+  return [0, bodyY + 0.82 - n * 0.45 - peck * 0.75, 0.48 + n * 0.45 + peck * 0.3];
+};

@@ -1,0 +1,1073 @@
+{
+ "fps": 30,
+ "order": [
+  "hook",
+  "serbu",
+  "kantor",
+  "datang",
+  "gerilya",
+  "bendungan",
+  "truk",
+  "kutipan",
+  "akhir"
+ ],
+ "scenes": {
+  "hook": {
+   "from": 0,
+   "dur": 158
+  },
+  "serbu": {
+   "from": 158,
+   "dur": 260
+  },
+  "kantor": {
+   "from": 418,
+   "dur": 279
+  },
+  "datang": {
+   "from": 697,
+   "dur": 187
+  },
+  "gerilya": {
+   "from": 884,
+   "dur": 209
+  },
+  "bendungan": {
+   "from": 1093,
+   "dur": 437
+  },
+  "truk": {
+   "from": 1530,
+   "dur": 332
+  },
+  "kutipan": {
+   "from": 1862,
+   "dur": 410
+  },
+  "akhir": {
+   "from": 2272,
+   "dur": 360
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "text": "Tahun sembilan belas tiga puluh dua, Australia menyatakan perang...",
+    "style": "narasi",
+    "from": 10,
+    "to": 102,
+    "words": [
+     {
+      "w": "Tahun",
+      "from": 10,
+      "to": 16
+     },
+     {
+      "w": "sembilan",
+      "from": 16,
+      "to": 46
+     },
+     {
+      "w": "belas",
+      "from": 46,
+      "to": 64
+     },
+     {
+      "w": "tiga",
+      "from": 64,
+      "to": 68
+     },
+     {
+      "w": "puluh",
+      "from": 68,
+      "to": 72
+     },
+     {
+      "w": "dua,",
+      "from": 72,
+      "to": 75
+     },
+     {
+      "w": "Australia",
+      "from": 75,
+      "to": 84
+     },
+     {
+      "w": "menyatakan",
+      "from": 84,
+      "to": 95
+     },
+     {
+      "w": "perang...",
+      "from": 95,
+      "to": 101
+     }
+    ]
+   },
+   {
+    "text": "melawan burung.",
+    "style": "santai",
+    "from": 105,
+    "to": 137,
+    "words": [
+     {
+      "w": "melawan",
+      "from": 105,
+      "to": 118
+     },
+     {
+      "w": "burung.",
+      "from": 118,
+      "to": 130
+     }
+    ]
+   }
+  ],
+  "serbu": [
+   {
+    "text": "Dua puluh ribu emu menyerbu ladang gandum milik para veteran perang.",
+    "style": "narasi",
+    "from": 18,
+    "to": 122,
+    "words": [
+     {
+      "w": "Dua",
+      "from": 18,
+      "to": 28
+     },
+     {
+      "w": "puluh",
+      "from": 28,
+      "to": 44
+     },
+     {
+      "w": "ribu",
+      "from": 44,
+      "to": 51
+     },
+     {
+      "w": "emu",
+      "from": 51,
+      "to": 55
+     },
+     {
+      "w": "menyerbu",
+      "from": 55,
+      "to": 67
+     },
+     {
+      "w": "ladang",
+      "from": 67,
+      "to": 77
+     },
+     {
+      "w": "gandum",
+      "from": 77,
+      "to": 86
+     },
+     {
+      "w": "milik",
+      "from": 86,
+      "to": 94
+     },
+     {
+      "w": "para",
+      "from": 94,
+      "to": 99
+     },
+     {
+      "w": "veteran",
+      "from": 99,
+      "to": 111
+     },
+     {
+      "w": "perang.",
+      "from": 111,
+      "to": 120
+     }
+    ]
+   },
+   {
+    "text": "Pagar roboh, gandum habis dipatuki, kelinci pun ikut masuk.",
+    "style": "tegang",
+    "from": 133,
+    "to": 224,
+    "words": [
+     {
+      "w": "Pagar",
+      "from": 133,
+      "to": 140
+     },
+     {
+      "w": "roboh,",
+      "from": 140,
+      "to": 156
+     },
+     {
+      "w": "gandum",
+      "from": 156,
+      "to": 165
+     },
+     {
+      "w": "habis",
+      "from": 165,
+      "to": 173
+     },
+     {
+      "w": "dipatuki,",
+      "from": 173,
+      "to": 194
+     },
+     {
+      "w": "kelinci",
+      "from": 194,
+      "to": 202
+     },
+     {
+      "w": "pun",
+      "from": 202,
+      "to": 206
+     },
+     {
+      "w": "ikut",
+      "from": 206,
+      "to": 213
+     },
+     {
+      "w": "masuk.",
+      "from": 213,
+      "to": 219
+     }
+    ]
+   }
+  ],
+  "kantor": [
+   {
+    "text": "Para petani datang ke Menteri Pertahanan. Permintaan mereka singkat.",
+    "style": "narasi",
+    "from": 15,
+    "to": 111,
+    "words": [
+     {
+      "w": "Para",
+      "from": 15,
+      "to": 21
+     },
+     {
+      "w": "petani",
+      "from": 21,
+      "to": 29
+     },
+     {
+      "w": "datang",
+      "from": 29,
+      "to": 40
+     },
+     {
+      "w": "ke",
+      "from": 40,
+      "to": 43
+     },
+     {
+      "w": "Menteri",
+      "from": 43,
+      "to": 53
+     },
+     {
+      "w": "Pertahanan.",
+      "from": 53,
+      "to": 76
+     },
+     {
+      "w": "Permintaan",
+      "from": 76,
+      "to": 92
+     },
+     {
+      "w": "mereka",
+      "from": 92,
+      "to": 97
+     },
+     {
+      "w": "singkat.",
+      "from": 97,
+      "to": 110
+     }
+    ]
+   },
+   {
+    "text": "Kirim senapan mesin!",
+    "style": "tegas",
+    "from": 120,
+    "to": 167,
+    "words": [
+     {
+      "w": "Kirim",
+      "from": 120,
+      "to": 131
+     },
+     {
+      "w": "senapan",
+      "from": 131,
+      "to": 147
+     },
+     {
+      "w": "mesin!",
+      "from": 147,
+      "to": 160
+     }
+    ]
+   },
+   {
+    "text": "Dan Pak Menteri... setuju.",
+    "style": "santai",
+    "from": 183,
+    "to": 246,
+    "words": [
+     {
+      "w": "Dan",
+      "from": 183,
+      "to": 190
+     },
+     {
+      "w": "Pak",
+      "from": 190,
+      "to": 198
+     },
+     {
+      "w": "Menteri...",
+      "from": 198,
+      "to": 217
+     },
+     {
+      "w": "setuju.",
+      "from": 217,
+      "to": 237
+     }
+    ]
+   }
+  ],
+  "datang": [
+   {
+    "text": "Datanglah Mayor Meredith, dua senapan mesin Lewis, dan sepuluh ribu peluru.",
+    "style": "narasi",
+    "from": 39,
+    "to": 154,
+    "words": [
+     {
+      "w": "Datanglah",
+      "from": 39,
+      "to": 50
+     },
+     {
+      "w": "Mayor",
+      "from": 50,
+      "to": 56
+     },
+     {
+      "w": "Meredith,",
+      "from": 56,
+      "to": 70
+     },
+     {
+      "w": "dua",
+      "from": 70,
+      "to": 83
+     },
+     {
+      "w": "senapan",
+      "from": 83,
+      "to": 91
+     },
+     {
+      "w": "mesin",
+      "from": 91,
+      "to": 99
+     },
+     {
+      "w": "Lewis,",
+      "from": 99,
+      "to": 106
+     },
+     {
+      "w": "dan",
+      "from": 106,
+      "to": 109
+     },
+     {
+      "w": "sepuluh",
+      "from": 109,
+      "to": 132
+     },
+     {
+      "w": "ribu",
+      "from": 132,
+      "to": 141
+     },
+     {
+      "w": "peluru.",
+      "from": 141,
+      "to": 149
+     }
+    ]
+   }
+  ],
+  "gerilya": [
+   {
+    "text": "Tapi emu tidak mau berbaris.",
+    "style": "tegang",
+    "from": 12,
+    "to": 60,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 12,
+      "to": 19
+     },
+     {
+      "w": "emu",
+      "from": 19,
+      "to": 29
+     },
+     {
+      "w": "tidak",
+      "from": 29,
+      "to": 34
+     },
+     {
+      "w": "mau",
+      "from": 34,
+      "to": 40
+     },
+     {
+      "w": "berbaris.",
+      "from": 40,
+      "to": 56
+     }
+    ]
+   },
+   {
+    "text": "Mereka berpencar jadi kelompok kecil, seperti pasukan gerilya.",
+    "style": "narasi",
+    "from": 70,
+    "to": 176,
+    "words": [
+     {
+      "w": "Mereka",
+      "from": 70,
+      "to": 80
+     },
+     {
+      "w": "berpencar",
+      "from": 80,
+      "to": 95
+     },
+     {
+      "w": "jadi",
+      "from": 95,
+      "to": 103
+     },
+     {
+      "w": "kelompok",
+      "from": 103,
+      "to": 115
+     },
+     {
+      "w": "kecil,",
+      "from": 115,
+      "to": 126
+     },
+     {
+      "w": "seperti",
+      "from": 126,
+      "to": 143
+     },
+     {
+      "w": "pasukan",
+      "from": 143,
+      "to": 158
+     },
+     {
+      "w": "gerilya.",
+      "from": 158,
+      "to": 168
+     }
+    ]
+   }
+  ],
+  "bendungan": [
+   {
+    "text": "Di dekat bendungan, seribu emu datang untuk minum. Pasukan menunggu.",
+    "style": "bisik",
+    "from": 18,
+    "to": 152,
+    "words": [
+     {
+      "w": "Di",
+      "from": 18,
+      "to": 23
+     },
+     {
+      "w": "dekat",
+      "from": 23,
+      "to": 29
+     },
+     {
+      "w": "bendungan,",
+      "from": 29,
+      "to": 56
+     },
+     {
+      "w": "seribu",
+      "from": 56,
+      "to": 74
+     },
+     {
+      "w": "emu",
+      "from": 74,
+      "to": 82
+     },
+     {
+      "w": "datang",
+      "from": 82,
+      "to": 94
+     },
+     {
+      "w": "untuk",
+      "from": 94,
+      "to": 98
+     },
+     {
+      "w": "minum.",
+      "from": 98,
+      "to": 119
+     },
+     {
+      "w": "Pasukan",
+      "from": 119,
+      "to": 135
+     },
+     {
+      "w": "menunggu.",
+      "from": 135,
+      "to": 151
+     }
+    ]
+   },
+   {
+    "text": "Tembak!",
+    "style": "tegas",
+    "from": 164,
+    "to": 191,
+    "words": [
+     {
+      "w": "Tembak!",
+      "from": 164,
+      "to": 182
+     }
+    ]
+   },
+   {
+    "text": "Tapi baru sebentar menembak, senapannya macet.",
+    "style": "tegang",
+    "from": 224,
+    "to": 299,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 224,
+      "to": 230
+     },
+     {
+      "w": "baru",
+      "from": 230,
+      "to": 237
+     },
+     {
+      "w": "sebentar",
+      "from": 237,
+      "to": 248
+     },
+     {
+      "w": "menembak,",
+      "from": 248,
+      "to": 269
+     },
+     {
+      "w": "senapannya",
+      "from": 269,
+      "to": 281
+     },
+     {
+      "w": "macet.",
+      "from": 281,
+      "to": 294
+     }
+    ]
+   },
+   {
+    "text": "Dan emunya? Kabur dengan santai.",
+    "style": "santai",
+    "from": 320,
+    "to": 401,
+    "words": [
+     {
+      "w": "Dan",
+      "from": 320,
+      "to": 326
+     },
+     {
+      "w": "emunya?",
+      "from": 326,
+      "to": 342
+     },
+     {
+      "w": "Kabur",
+      "from": 342,
+      "to": 371
+     },
+     {
+      "w": "dengan",
+      "from": 371,
+      "to": 379
+     },
+     {
+      "w": "santai.",
+      "from": 379,
+      "to": 398
+     }
+    ]
+   }
+  ],
+  "truk": [
+   {
+    "text": "Senapan lalu dipasang di atas truk.",
+    "style": "narasi",
+    "from": 15,
+    "to": 68,
+    "words": [
+     {
+      "w": "Senapan",
+      "from": 15,
+      "to": 25
+     },
+     {
+      "w": "lalu",
+      "from": 25,
+      "to": 35
+     },
+     {
+      "w": "dipasang",
+      "from": 35,
+      "to": 49
+     },
+     {
+      "w": "di",
+      "from": 49,
+      "to": 51
+     },
+     {
+      "w": "atas",
+      "from": 51,
+      "to": 56
+     },
+     {
+      "w": "truk.",
+      "from": 56,
+      "to": 67
+     }
+    ]
+   },
+   {
+    "text": "Tapi jalannya bergelombang, penembak tidak bisa membidik.",
+    "style": "tegang",
+    "from": 89,
+    "to": 180,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 89,
+      "to": 97
+     },
+     {
+      "w": "jalannya",
+      "from": 97,
+      "to": 109
+     },
+     {
+      "w": "bergelombang,",
+      "from": 109,
+      "to": 137
+     },
+     {
+      "w": "penembak",
+      "from": 137,
+      "to": 148
+     },
+     {
+      "w": "tidak",
+      "from": 148,
+      "to": 153
+     },
+     {
+      "w": "bisa",
+      "from": 153,
+      "to": 162
+     },
+     {
+      "w": "membidik.",
+      "from": 162,
+      "to": 178
+     }
+    ]
+   },
+   {
+    "text": "Lagipula, emu bisa berlari lima puluh kilometer per jam.",
+    "style": "santai",
+    "from": 194,
+    "to": 299,
+    "words": [
+     {
+      "w": "Lagipula,",
+      "from": 194,
+      "to": 210
+     },
+     {
+      "w": "emu",
+      "from": 210,
+      "to": 217
+     },
+     {
+      "w": "bisa",
+      "from": 217,
+      "to": 230
+     },
+     {
+      "w": "berlari",
+      "from": 230,
+      "to": 238
+     },
+     {
+      "w": "lima",
+      "from": 238,
+      "to": 244
+     },
+     {
+      "w": "puluh",
+      "from": 244,
+      "to": 250
+     },
+     {
+      "w": "kilometer",
+      "from": 250,
+      "to": 281
+     },
+     {
+      "w": "per",
+      "from": 281,
+      "to": 288
+     },
+     {
+      "w": "jam.",
+      "from": 288,
+      "to": 293
+     }
+    ]
+   }
+  ],
+  "kutipan": [
+   {
+    "text": "Mayor Meredith sampai berkata kepada wartawan:",
+    "style": "narasi",
+    "from": 10,
+    "to": 87,
+    "words": [
+     {
+      "w": "Mayor",
+      "from": 10,
+      "to": 19
+     },
+     {
+      "w": "Meredith",
+      "from": 19,
+      "to": 34
+     },
+     {
+      "w": "sampai",
+      "from": 34,
+      "to": 44
+     },
+     {
+      "w": "berkata",
+      "from": 44,
+      "to": 59
+     },
+     {
+      "w": "kepada",
+      "from": 59,
+      "to": 66
+     },
+     {
+      "w": "wartawan:",
+      "from": 66,
+      "to": 81
+     }
+    ]
+   },
+   {
+    "text": "Burung ini bisa menghadapi senapan mesin, sekebal tank.",
+    "style": "tegang",
+    "from": 96,
+    "to": 202,
+    "words": [
+     {
+      "w": "Burung",
+      "from": 96,
+      "to": 105
+     },
+     {
+      "w": "ini",
+      "from": 105,
+      "to": 112
+     },
+     {
+      "w": "bisa",
+      "from": 112,
+      "to": 126
+     },
+     {
+      "w": "menghadapi",
+      "from": 126,
+      "to": 144
+     },
+     {
+      "w": "senapan",
+      "from": 144,
+      "to": 154
+     },
+     {
+      "w": "mesin,",
+      "from": 154,
+      "to": 169
+     },
+     {
+      "w": "sekebal",
+      "from": 169,
+      "to": 190
+     },
+     {
+      "w": "tank.",
+      "from": 190,
+      "to": 196
+     }
+    ]
+   },
+   {
+    "text": "Koran menertawakan. Pasukan ditarik, dikirim lagi, lalu akhirnya pulang di bulan Desember.",
+    "style": "narasi",
+    "from": 217,
+    "to": 380,
+    "words": [
+     {
+      "w": "Koran",
+      "from": 217,
+      "to": 227
+     },
+     {
+      "w": "menertawakan.",
+      "from": 227,
+      "to": 255
+     },
+     {
+      "w": "Pasukan",
+      "from": 255,
+      "to": 269
+     },
+     {
+      "w": "ditarik,",
+      "from": 269,
+      "to": 288
+     },
+     {
+      "w": "dikirim",
+      "from": 288,
+      "to": 299
+     },
+     {
+      "w": "lagi,",
+      "from": 299,
+      "to": 319
+     },
+     {
+      "w": "lalu",
+      "from": 319,
+      "to": 326
+     },
+     {
+      "w": "akhirnya",
+      "from": 326,
+      "to": 341
+     },
+     {
+      "w": "pulang",
+      "from": 341,
+      "to": 353
+     },
+     {
+      "w": "di",
+      "from": 353,
+      "to": 357
+     },
+     {
+      "w": "bulan",
+      "from": 357,
+      "to": 364
+     },
+     {
+      "w": "Desember.",
+      "from": 364,
+      "to": 375
+     }
+    ]
+   }
+  ],
+  "akhir": [
+   {
+    "text": "Ribuan peluru ditembakkan, tapi ladang tetap diserbu.",
+    "style": "narasi",
+    "from": 15,
+    "to": 106,
+    "words": [
+     {
+      "w": "Ribuan",
+      "from": 15,
+      "to": 27
+     },
+     {
+      "w": "peluru",
+      "from": 27,
+      "to": 38
+     },
+     {
+      "w": "ditembakkan,",
+      "from": 38,
+      "to": 62
+     },
+     {
+      "w": "tapi",
+      "from": 62,
+      "to": 70
+     },
+     {
+      "w": "ladang",
+      "from": 70,
+      "to": 82
+     },
+     {
+      "w": "tetap",
+      "from": 82,
+      "to": 91
+     },
+     {
+      "w": "diserbu.",
+      "from": 91,
+      "to": 103
+     }
+    ]
+   },
+   {
+    "text": "Jadi, siapa pemenang perang ini?",
+    "style": "santai",
+    "from": 120,
+    "to": 201,
+    "words": [
+     {
+      "w": "Jadi,",
+      "from": 120,
+      "to": 137
+     },
+     {
+      "w": "siapa",
+      "from": 137,
+      "to": 162
+     },
+     {
+      "w": "pemenang",
+      "from": 162,
+      "to": 180
+     },
+     {
+      "w": "perang",
+      "from": 180,
+      "to": 190
+     },
+     {
+      "w": "ini?",
+      "from": 190,
+      "to": 195
+     }
+    ]
+   },
+   {
+    "text": "Ya... emu.",
+    "style": "santai",
+    "from": 225,
+    "to": 276,
+    "words": [
+     {
+      "w": "Ya...",
+      "from": 225,
+      "to": 252
+     },
+     {
+      "w": "emu.",
+      "from": 252,
+      "to": 274
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.salute": 85,
+  "hook.emu": 104,
+  "serbu.veteran": 93,
+  "serbu.fence": 130,
+  "serbu.peck": 154,
+  "serbu.rabbit": 191,
+  "serbu.hat": 228,
+  "kantor.arrive": 49,
+  "kantor.slam": 118,
+  "kantor.grab": 194,
+  "kantor.stamp": 216,
+  "datang.stop": 48,
+  "datang.lewis": 89,
+  "datang.ammo": 125,
+  "gerilya.look": 27,
+  "gerilya.split": 77,
+  "gerilya.aim": 154,
+  "bendungan.wait": 135,
+  "bendungan.fire": 162,
+  "bendungan.jam": 275,
+  "bendungan.cock": 303,
+  "bendungan.turn": 323,
+  "bendungan.flee": 340,
+  "truk.mount": 29,
+  "truk.drive": 72,
+  "truk.wild": 146,
+  "truk.overtake": 207,
+  "truk.speed": 238,
+  "truk.stop": 305,
+  "kutipan.talk": 96,
+  "kutipan.write": 92,
+  "kutipan.paper": 214,
+  "kutipan.tarik": 266,
+  "kutipan.kirim": 285,
+  "kutipan.pulang": 338,
+  "akhir.walk": 120,
+  "akhir.pick": 188,
+  "akhir.wear": 249,
+  "akhir.title": 286
+ },
+ "total": 2632
+}

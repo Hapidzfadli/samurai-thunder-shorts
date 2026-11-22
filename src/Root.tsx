@@ -30,6 +30,7 @@ import { Molase, TOTAL_FRAMES_M } from "./Molase";
 import { SheetSadap } from "./SheetSadap";
 import { Kabayan, TOTAL_FRAMES_KBY } from "./Kabayan";
 import { StyleEmuA, StyleEmuB } from "./StyleEmu";
+import { Emu, TOTAL_FRAMES_EMU } from "./Emu";
 import { H_KBY, SheetKabayan, SheetKabayanExpr, SheetKabayanPropDapur, SheetKabayanPropKampung, SheetKabayanPropSawah, SheetKabayanSawah } from "./SheetKabayan";
 import { AbuNawas, TOTAL_FRAMES_ABU } from "./AbuNawas";
 import { H_ABU, SheetAbu, SheetAbuAula, SheetAbuCerita, SheetAbuExpr, SheetAbuIstana, SheetAbuRumah } from "./SheetAbu";
@@ -88,6 +89,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="SheetAbuRumah" component={SheetAbuRumah} durationInFrames={1} fps={30} width={2000} height={H_ABU.Rumah} />
       <Composition id="SheetAbuCerita" component={SheetAbuCerita} durationInFrames={1} fps={30} width={2000} height={H_ABU.Cerita} />
       <Composition id="Kabayan" component={Kabayan} durationInFrames={TOTAL_FRAMES_KBY} fps={30} width={1080} height={1920} />
+      <Composition id="Emu" component={Emu} durationInFrames={TOTAL_FRAMES_EMU} fps={30} width={1080} height={1920} />
       <Composition id="StyleEmuA" component={StyleEmuA} durationInFrames={60} fps={30} width={1080} height={1920} />
       <Composition id="StyleEmuB" component={StyleEmuB} durationInFrames={60} fps={30} width={1080} height={1920} />
       <Composition id="SheetKabayan" component={SheetKabayan} durationInFrames={1} fps={30} width={2000} height={1150} />
