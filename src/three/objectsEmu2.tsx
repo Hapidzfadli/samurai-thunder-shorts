@@ -296,7 +296,7 @@ export const Notebook: React.FC<{ position?: Vec3; rotation?: Vec3; text: string
             c.stroke();
           }
           c.fillStyle = "#1a2a5a";
-          c.font = `italic 700 ${W * 0.075}px Georgia, serif`;
+          c.font = `italic 700 ${W * 0.1}px Georgia, serif`;
           const words = text.slice(0, n).split(" ");
           let line = "",
             y = H / 14 - 6;

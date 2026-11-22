@@ -188,6 +188,12 @@ export const SceneEmuHook: React.FC = () => {
         <Emu3D position={[1.2, -1.15 * (1 - rise), -0.5]} rotation={[0, -0.5, 0]} pose={{ neck: 0.25, headTilt: rise * 0.45 * Math.sin(Math.max(0, f - emu - 12) * 0.12 + 1.2), headTurn: -0.35, eyes: "round" }} />
       </Stage>
       <Vignette />
+      {f < emu - 6 ? (
+        <div style={{ position: "absolute", top: 230, left: 40, right: 40, textAlign: "center", fontFamily: "Inter, sans-serif", fontWeight: 900, opacity: rp(f, 0, 6) * (1 - rp(f, emu - 14, emu - 6)), transform: `scale(${0.85 + 0.15 * rp(f, 0, 8)})` }}>
+          <div style={{ fontSize: 78, lineHeight: 1.08, color: "#fff", textShadow: "6px 6px 0 #0c0c10, -3px -3px 0 #0c0c10, 3px -3px 0 #0c0c10, -3px 3px 0 #0c0c10" }}>AUSTRALIA PERNAH KALAH PERANG…</div>
+          <div style={{ display: "inline-block", marginTop: 22, background: "rgba(10,14,28,0.88)", border: "5px solid #ffd23f", borderRadius: 24, padding: "10px 30px", fontSize: 64, color: "#ffd23f" }}>LAWAN SIAPA? 🤔</div>
+        </div>
+      ) : null}
       <SubWord scene="hook" />
     </AbsoluteFill>
   );
@@ -276,7 +282,7 @@ export const SceneEmuSerbu: React.FC = () => {
 const InsertStamp: React.FC<{ f: number; at: number }> = ({ f, at }) => {
   const down = f < at ? rp(f, at - 12, at) : 1 - rp(f, at + 4, at + 14);
   const y = lerp(0.55, 0.04, down);
-  const cam: Cam = { pos: [0.0, 0.85, 0.75], look: [0, 0, 0], fov: 40 };
+  const cam: Cam = { pos: [0.0, 1.2, 1.1], look: [0, 0.05, 0], fov: 40 };
   return (
     <Stage cam={cam} bg="#7a4422" shake={kick(f, [at], 0.015)}>
       <hemisphereLight args={["#fff4e0", "#6a3a1c", 1.3]} />
@@ -284,11 +290,10 @@ const InsertStamp: React.FC<{ f: number; at: number }> = ({ f, at }) => {
       <T g={G.box(3, 0.1, 3)} c="#7a4422" position={[0, -0.05, 0]} o={false} />
       <Letter position={[0, 0.005, 0]} rotation={[-Math.PI / 2, 0, 0.12]} stamped={f >= at ? 1 : 0} w={0.5} />
       <group position={[0.04, y, 0.1]}>
-        <Stamp scale={2.0} />
-        <T g={G.sph(0.16, 18, 12)} c="#e8dccc" position={[0, 0.36, 0]} />
+        <Stamp scale={1.5} />
+        <T g={G.sph(0.1, 18, 12)} c="#e8dccc" position={[0, 0.3, 0]} />
         <Limb a={[0, 0.4, 0]} b={[0.25, 1.2, 0.5]} r={0.09} c="#3c3c48" />
       </group>
-      <Dust position={[0.04, 0, 0.1]} k={(f - at) / 10} scale={0.35} color="#f6f0dc" />
     </Stage>
   );
 };
@@ -301,12 +306,12 @@ export const SceneEmuKantor: React.FC = () => {
   const D = DUR_EMU("kantor");
   const l1 = LN("kantor", 1);
   const cam = shotCam(f, [
-    { to: arrive, p0: [3.4, 2.1, 4.6], l0: [-0.4, 1.0, -0.6], p1: [2.9, 1.8, 3.4], l1: [-0.2, 1.05, -0.6], fov: 42 },
+    { to: arrive, p0: [2.0, 1.9, 4.6], l0: [-1.2, 1.1, -0.3], p1: [1.6, 1.75, 4.2], l1: [-0.6, 1.1, -0.5], fov: 42 },
     { to: grab, p0: [1.5, 1.7, 4.1], l0: [-0.45, 1.1, -0.6], p1: [1.3, 1.65, 3.7], l1: [-0.45, 1.1, -0.6], fov: 40 },
     { to: D, p0: [1.3, 1.65, 3.7], l0: [-0.45, 1.1, -0.6], p1: [1.8, 1.8, 4.6], l1: [-0.45, 1.05, -0.6], fov: 40 },
   ]);
-  const tom = walkLerp(f, 0, arrive, [-3.0, 0, 2.2], [-0.9, 0, -0.2]);
-  const bill = walkLerp(f, 6, arrive + 6, [-3.6, 0, 2.6], [-1.7, 0, 0.6]);
+  const tom = walkLerp(f, 0, arrive, [-3.2, 0, -1.2], [-0.9, 0, -0.2]);
+  const bill = walkLerp(f, 6, arrive + 6, [-3.8, 0, -0.4], [-1.75, 0, 0.6]);
   const raise = rp(f, slam - 10, slam - 4);
   const hit = rp(f, slam - 4, slam);
   const relax = rp(f, slam + 14, slam + 24);
@@ -327,6 +332,12 @@ export const SceneEmuKantor: React.FC = () => {
     handR: lv([0.3, 1.06, 0.45], [0.38, 1.12, 0.5], reach),
   };
   const insert = f >= stamp - 13 && f < stamp + 22;
+  if (f >= stamp + 22 && f < stamp + 42) {
+    // keluar dari close-up: kamera menjauh pelan dari meja ke shot lebar
+    const k = rp(f, stamp + 22, stamp + 42);
+    cam.pos = lv([0.5, 1.5, 0.9], cam.pos, k);
+    cam.look = lv([0.1, 0.9, -0.9], cam.look, k);
+  }
   return (
     <AbsoluteFill>
       {insert ? (
@@ -340,8 +351,8 @@ export const SceneEmuKantor: React.FC = () => {
           <Letter position={[0.1, 0.852 + jump * 0.6, -0.75]} rotation={[-Math.PI / 2, 0, 0.1]} stamped={f >= stamp ? 1 : 0} />
           <Stamp position={reach > 0 ? bean3HandWorld(minP, "R", [0, 0, -1.6]) : [0.4, 0.85, -1.08]} />
           <Bean3 p={minP} position={[0, 0, -1.6]} />
-          <Bean3 p={billP} position={bill.pos} rotation={[0, f < arrive + 6 ? bill.yaw : 2.2, 0]} />
-          <Bean3 p={tomP} position={tom.pos} rotation={[0, f < arrive ? tom.yaw : 1.9, 0]} />
+          <Bean3 p={billP} position={bill.pos} rotation={[0, f < arrive + 6 ? bill.yaw : 1.0, 0]} />
+          <Bean3 p={tomP} position={tom.pos} rotation={[0, f < arrive ? tom.yaw : 1.25, 0]} />
         </Stage>
       )}
       <Vignette />
@@ -601,7 +612,7 @@ export const SceneEmuBendungan: React.FC = () => {
   const xrayEnd = turn - 4;
   const shooting = f >= fire + 2 && f < jam - 10;
   const cam = shotCam(f, [
-    { to: wait - 12, p0: [3.0, 3.2, 8.0], l0: [0, 0.6, -4], p1: [2.4, 2.8, 7.2], l1: [0, 0.6, -4], fov: 42 },
+    { to: wait - 12, p0: [6.2, 4.4, 4.2], l0: [0.3, 0.6, -2.6], p1: [5.6, 4.0, 3.8], l1: [0.3, 0.6, -2.8], fov: 42 },
     { to: fire + 3, p0: [2.4, 1.6, -2.0], l0: [-0.4, 0.9, 2.4], p1: [2.1, 1.55, -1.6], l1: [-0.4, 0.9, 2.4], fov: 40 },
     // tembak dari belakang senapan, lalu kamera MENEMBUS ke dalam senapan
     { to: jam, p0: [-1.6, 2.6, 5.6], l0: [0, 0.6, -4], p1: [-0.02, 0.72, 1.95], l1: [0, 0.68, 1.2], fov: 40, ease: jam },
@@ -666,9 +677,9 @@ export const SceneEmuTruk: React.FC = () => {
   const bounce = driving ? Math.abs(Math.sin(f * 0.9)) * 0.09 : 0;
   const tilt = driving ? Math.sin(f * 0.53) * 0.05 : f >= stop && f < stop + 10 ? Math.sin((f - stop) * 0.9) * 0.08 * (1 - (f - stop) / 10) : 0;
   const cam = shotCam(f, [
-    { to: drive, p0: [-0.2, 2.5, 6.2], l0: [1.4, 1.2, 0.4], p1: [0.1, 2.4, 5.8], l1: [1.4, 1.2, 0.4], fov: 42 },
-    { to: over, p0: [tx + 0.2, 2.0, 7.0], l0: [tx + 0.3, 1.2, -0.5], fov: 44 },
-    { to: D, p0: [tx - 1.5, 2.2, 7.5], l0: [tx - 2.0, 1.0, -1.5], fov: 46 },
+    { to: drive, p0: [1.6, 2.1, 4.4], l0: [1.2, 1.3, -0.6], p1: [1.4, 2.0, 4.0], l1: [1.2, 1.3, -0.6], fov: 42 },
+    { to: over, p0: [tx + 0.2, 3.3, 8.2], l0: [tx + 0.3, 1.0, 0], fov: 44 },
+    { to: D, p0: [tx - 1.5, 3.3, 8.6], l0: [tx - 2.0, 1.0, 0.5], fov: 46 },
   ]);
   if (f >= drive && f < D) {
     cam.pos = [tx + (f < over ? 0.2 : -1.5), cam.pos[1], cam.pos[2]];
@@ -676,36 +687,36 @@ export const SceneEmuTruk: React.FC = () => {
   }
   const mk = rp(f, mount, mount + 16);
   const wildK = f >= wild && driving;
-  const gunYaw = Math.PI + (wildK ? Math.sin(f * 0.7) * 0.6 : 0);
+  const gunYaw = 0 + (wildK ? Math.sin(f * 0.7) * 0.6 : 0);
   const gunPitch = wildK ? -0.3 + Math.sin(f * 1.1) * 0.35 : 0;
   // posisi dunia: truk menghadap -x, bak di belakang kabin (+x)
   const bedTop: Vec3 = [tx + 1.05, 0.92 + bounce, 0];
   const gunPos: Vec3 = f < mount ? [1.6, 1.25, -0.9] : lv([1.6, 1.25, -0.9], [bedTop[0], bedTop[1] + 0.55, bedTop[2]], mk);
   const shoot = wildK;
-  const sky: Vec3[] = [0, 1, 2, 3, 4].map((i) => [tx - 3 + i * 2, 6 + (i % 3) * 2, -8 - i]);
+  const sky: Vec3[] = [0, 1, 2, 3, 4].map((i) => [tx - 3 + i * 2, 6 + (i % 3) * 2, 6 + i]);
   const emuSpeed = f < over ? v * 1.0 : v * 1.6;
   return (
     <AbsoluteFill>
       <Stage cam={cam} shake={driving ? [0, Math.sin(f * 0.9) * 0.02, 0] : [0, 0, 0]}>
         <Countryside f={f} wheat={[-80, 20, -20, -3]} n={4200} houseAt={[10, 0, -16]} />
         <Road />
-        <Fence from={[-70, 2.2]} to={[14, 2.2]} posts={36} />
+        <Fence from={[-70, -2.4]} to={[14, -2.4]} posts={36} />
         <Truck position={[tx, 0, 0]} rotation={[0, -Math.PI / 2, 0]} spin={tx * 2.2} bounce={bounce} tilt={tilt}>
           <T g={G.cyl(0.05, 0.06, 0.5, 10)} c="#26272a" position={[0, 1.17, -1.05]} />
         </Truck>
         <LewisGun position={gunPos} rotation={[gunPitch, gunYaw, 0]} scale={0.85} bipod={f < mount} />
         <MuzzleFlash position={[gunPos[0] + Math.sin(gunYaw) * 0.85, gunPos[1] - gunPitch * 0.85, gunPos[2] + Math.cos(gunYaw) * 0.85]} rotation={[gunPitch, gunYaw, 0]} on={shoot && f % 3 === 0} seed={f} scale={0.8} />
-        <Tracers from={[gunPos[0], gunPos[1], gunPos[2] - 0.8]} to={sky} t={shoot ? f - wild : -1} dur={over - wild} speed={0.12} />
+        <Tracers from={[gunPos[0], gunPos[1], gunPos[2] + 0.8]} to={sky} t={shoot ? f - wild : -1} dur={over - wild} speed={0.12} />
         <Bean3
           p={{ ...OHALLORAN, expr: wildK ? "shock" : "determined", handL: [-0.2, 1.0, 0.5], handR: [0.2, 0.95, 0.45], lean: tilt * 3, headTilt: wildK ? Math.sin(f * 0.8) * 0.2 : 0 }}
-          position={f < mount ? [1.6, 0, -1.4] : [tx + 1.35, 0.92 + bounce * 1.4, 0.55]}
-          rotation={[0, f < mount ? 0.2 : 2.7, tilt * 2]}
+          position={f < mount ? [1.6, 0, -1.4] : [tx + 1.15, 0.92 + bounce * 1.4, -0.6]}
+          rotation={[0, f < mount ? 0.2 : 0.15, tilt * 2]}
         />
         <Bean3 p={{ ...MCMURRAY, expr: f >= mount ? "proud" : "determined", handL: f < mount + 16 ? [-0.25, 1.15, 0.45] : undefined, handR: f < mount + 16 ? [0.25, 1.15, 0.45] : undefined }} position={f < drive ? [0.5, 0, -1.4] : [tx - 0.35, 0.5 + bounce, 0.35]} rotation={[0, f < drive ? 0.3 : -1.57, 0]} scale={f < drive ? 1 : 0.0001} />
         {f >= drive
           ? [0, 1, 2, 3].map((i) => {
               const ex = tx - 1.0 + i * 1.6 - Math.max(0, f - over) * (emuSpeed - v);
-              return <Emu3D key={i} position={[ex, 0, -2.6 - (i % 2) * 1.2]} rotation={[0, -Math.PI / 2, 0]} pose={{ run: f * 0.75 + i * 1.3, neck: 0.55, eyes: "half", headTurn: i === 1 && f >= speedEv ? 1.25 : 0 }} />;
+              return <Emu3D key={i} position={[ex, 0, 2.5 + (i % 2) * 1.0]} rotation={[0, -Math.PI / 2, 0]} pose={{ run: f * 0.75 + i * 1.3, neck: 0.55, eyes: "half", headTurn: i === 1 && f >= speedEv ? 1.25 : 0 }} />;
             })
           : null}
         {driving ? [0, 1, 2].map((i) => <Dust key={i} position={[tx + 2.4 + i * 0.6, 0, (i - 1) * 0.6]} k={((f + i * 6) % 18) / 18} seed={i + 3} scale={0.8} />) : null}
@@ -736,8 +747,8 @@ export const SceneEmuTruk: React.FC = () => {
 /* ===================== 8. KUTIPAN, KORAN, DITARIK ===================== */
 const InsertWrite: React.FC<{ f: number; a: number; b: number }> = ({ f, a, b }) => {
   const text = "They can face machine guns with the invulnerability of tanks.";
-  const k = rp(f, a, b);
-  const cam: Cam = { pos: [0.06, 0.82, 0.5], look: [0, 0, 0.02], fov: 40 };
+  const k = rp(f, a, a + (b - a) * 0.7);
+  const cam: Cam = { pos: [0.06, 1.0, 0.62], look: [0, 0, 0.02], fov: 38 };
   const px = -0.11 + ((k * 6) % 1) * 0.24;
   const py = 0.16 - Math.floor(k * 6) * 0.035;
   return (
@@ -769,11 +780,17 @@ export const SceneEmuKutipan: React.FC = () => {
   const cam = shotCam(f, [
     { to: paper - 3, p0: [0.3, 1.55, 4.6], l0: [0.25, 1.15, 0.7], p1: [0.3, 1.5, 4.0], l1: [0.25, 1.15, 0.7], fov: 40 },
     { to: tarik - 3, p0: [0, 1.55, 2.9], l0: [0, 1.25, 0], p1: [0, 1.55, 2.6], l1: [0, 1.25, 0], fov: 40 },
-    { to: D, p0: [0, 3.2, 12], l0: [0, 0.8, 0], p1: [0, 3.0, 11], l1: [0, 0.8, 0], fov: 42 },
+    { to: D, p0: [0, 3.4, 15], l0: [0, 0.8, 0], p1: [0, 3.3, 14.5], l1: [0, 0.8, 0], fov: 46 },
   ]);
+  if (f >= l1.to - 10 && f < paper - 3) {
+    // keluar dari close-up buku: menjauh pelan ke shot kemah
+    const k = rp(f, l1.to - 10, l1.to + 12);
+    cam.pos = lv([1.7, 1.65, 2.6], cam.pos, k);
+    cam.look = lv([0.85, 1.0, 1.4], cam.look, k);
+  }
   const scene = f < paper - 3 ? "camp" : f < tarik - 3 ? "paper" : "road";
   // truk: ditarik (keluar ke kiri), dikirim lagi (masuk), pulang (keluar)
-  const truckX = f < kirim ? lerp(0, -16, rp(f, tarik, Math.min(kirim - 2, tarik + 16))) : f < pulang ? lerp(16, 0, rp(f, kirim, Math.min(pulang - 4, kirim + 22))) : lerp(0, -16, rp(f, pulang, pulang + 30));
+  const truckX = f < kirim ? lerp(0, -5.5, rp(f, tarik, kirim)) : f < pulang ? lerp(5.5, 0, rp(f, kirim, Math.min(pulang - 2, kirim + 30))) : lerp(0, -7, rp(f, pulang, pulang + 45));
   const truckYaw = f >= kirim && f < pulang ? -Math.PI / 2 : -Math.PI / 2;
   const merTalk = Math.max(talkAt(f, l1), talkAt(f, l0) * 0);
   return (
@@ -824,19 +841,22 @@ export const SceneEmuAkhir: React.FC = () => {
   const wear = EV("akhir.wear");
   const title = EV("akhir.title");
   const D = DUR_EMU("akhir");
-  const hatGround: Vec3 = [0.2, 0.03, 0.9];
+  const hatGround: Vec3 = [0, 0, 0];
   const start: Vec3 = [2.0, 0, -0.9];
   const stand: Vec3 = [0.2, 0, 0.35];
   const wk = rp(f, walkEv, pick - 10);
   const pos = lv(start, stand, wk);
   const peck = f < pick - 10 ? 0 : f < pick + 4 ? rp(f, pick - 10, pick) : 1 - rp(f, pick + 4, wear - 2);
-  const pose: EmuPose = { neck: 0.25, peck, run: wk > 0 && wk < 1 ? f * 0.4 : undefined, eyes: f >= wear ? "half" : "round", headTilt: f >= wear + 6 ? Math.sin(f * 0.1) * 0.15 : 0 };
+  const pose: EmuPose = { neck: 0.25 + 0.55 * peck, peck, run: wk > 0 && wk < 1 ? f * 0.4 : undefined, eyes: f >= wear ? "half" : "round", headTilt: f >= wear + 6 ? Math.sin(f * 0.1) * 0.15 : 0 };
   const yaw = wk < 1 ? yawTo(start, stand) : lerp(yawTo(start, stand), 0.35, rp(f, pick + 4, wear));
   const hl = emuHeadLocal(pose);
   const headW: Vec3 = [pos[0] + hl[2] * Math.sin(yaw), hl[1], pos[2] + hl[2] * Math.cos(yaw)];
   const beak: Vec3 = [headW[0] + Math.sin(yaw) * 0.14, headW[1] - 0.02, headW[2] + Math.cos(yaw) * 0.14];
+  // topi tergeletak di atas tumpukan peti, tepat di titik paruh saat mematuk
+  const y0 = yawTo(start, stand);
+  const hp0: Vec3 = [stand[0] + Math.sin(y0) * 1.28, 0.64, stand[2] + Math.cos(y0) * 1.28];
   const flip = rp(f, wear - 2, wear + 6);
-  const hatPos: Vec3 = f < pick ? hatGround : f < wear - 2 ? beak : lv(beak, [headW[0], headW[1] + 0.03, headW[2]], flip);
+  const hatPos: Vec3 = f < pick ? hp0 : f < wear - 2 ? beak : lv(beak, [headW[0], headW[1] + 0.03, headW[2]], flip);
   const hatRot: Vec3 = f < pick ? [0.05, 0.4, 0.1] : f < wear - 2 ? [1.3, yaw, 0] : [lerp(1.3, -0.15, flip) + flip * Math.PI * 2, yaw, 0];
   const cam = shotCam(f, [
     { to: walkEv, p0: [0, 6, 13], l0: [0, 0.6, -2], p1: [0, 5, 11], l1: [0, 0.6, -2], fov: 42 },
@@ -844,12 +864,16 @@ export const SceneEmuAkhir: React.FC = () => {
     { to: D, p0: [1.3, 2.0, 5.0], l0: [0.25, 1.4, 0.35], p1: [1.9, 2.4, 7.4], l1: [0.25, 1.2, 0.2], fov: 40 },
   ]);
   const tk = rp(f, title, title + 10);
+  const close: Cam = { pos: [beak[0] + 2.0, beak[1] + 0.45, beak[2] + 1.6], look: [beak[0], beak[1] + 0.05, beak[2]], fov: 38 };
+  const camF: Cam =
+    f >= pick - 12 && f < pick + 18 ? close : f >= pick + 18 && f < pick + 40 ? { pos: lv(close.pos, cam.pos, rp(f, pick + 18, pick + 40)), look: lv(close.look, cam.look, rp(f, pick + 18, pick + 40)), fov: lerp(38, cam.fov, rp(f, pick + 18, pick + 40)) } : cam;
   return (
     <AbsoluteFill>
-      <Stage cam={cam}>
+      <Stage cam={camF}>
         <Countryside f={f} clear={[[0.4, 0.4, 1.4]]} n={2600} />
         <Casings center={[0, 0, 1.2]} n={40} r={1.6} seed={7} />
-        <AmmoCrate position={[-1.3, 0.15, 1.2]} rotation={[0.3, 0.6, 0.2]} />
+        <AmmoCrate position={[hp0[0], 0.15, hp0[2]]} rotation={[0, 0.4, 0]} />
+        <AmmoCrate position={[hp0[0], 0.45, hp0[2]]} rotation={[0, 0.2, 0]} />
         <AmmoCrate position={[1.6, 0.15, 1.6]} rotation={[0, -0.4, 0]} />
         {[
           [-3, -2.5],
