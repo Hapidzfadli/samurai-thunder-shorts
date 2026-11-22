@@ -45,7 +45,7 @@ const Coin: React.FC<{ position: Vec3; spin?: number }> = ({ position, spin = 0 
 );
 /** peci dipegang di tangan (dilepas saat berduka) */
 const PeciHeld: React.FC<{ position: Vec3; yaw?: number }> = ({ position, yaw = 0 }) => (
-  <group position={[position[0], position[1] - HEAD_R * 0.75, position[2]]} rotation={[1.2, yaw, 0]}>
+  <group position={[position[0], position[1] - HEAD_R * 0.45, position[2]]} rotation={[0.25, yaw, 0]} scale={0.7}>
     <Hat kind="peci" c="#1a1a20" band="#2a2a34" r={HEAD_R} />
   </group>
 );
@@ -60,7 +60,7 @@ const pass = (f: number, at: number, a: Vec3, b: Vec3, len = 15): Vec3 => {
 /** arah badan untuk shot dialog: menoleh ke lawan bicara tapi tetap 3/4 menghadap kamera (kamera di +z) */
 const face = (a: Vec3, b: Vec3, k = 0.75) => Math.max(-1.0, Math.min(1.0, Math.atan2(b[0] - a[0], 1.0) * k * 1.3));
 /** panggung close-up tersendiri: benda + tangan besar di depan latar (tanpa tokoh, kamera tidak masuk ke badan) */
-const Insert: React.FC<{ set: React.ReactNode; at: Vec3; dist?: number; f: number; from: number; bg: string; warm?: boolean; children: React.ReactNode }> = ({ set, at, dist = 0.75, f, from, bg, warm, children }) => (
+const Insert: React.FC<{ set: React.ReactNode; at: Vec3; dist?: number; f: number; from: number; bg: string; warm?: boolean; children: React.ReactNode }> = ({ set, at, dist = 1.0, f, from, bg, warm, children }) => (
   <Stage cam={{ pos: [at[0] + 0.06, at[1] + 0.06, at[2] + dist - (f - from) * 0.002], look: at, fov: 34 }} bg={bg}>
     <Day warm={warm} />
     {set}
@@ -109,8 +109,8 @@ const Panel: React.FC<{ x?: number; y?: number; w: number; h: number; children: 
 );
 
 /* posisi tetap di ruang Pak Bos */
-const BOS_DESK: Vec3 = [-0.55, 0, -0.3];
-const NAWAS_FRONT: Vec3 = [0.55, 0, -0.2];
+const BOS_DESK: Vec3 = [-0.68, 0, -0.3];
+const NAWAS_FRONT: Vec3 = [0.68, 0, -0.2];
 
 /* ===================== 1. HOOK: powerbank + bayinya ===================== */
 export const SceneNwHook: React.FC = () => {
@@ -136,7 +136,7 @@ export const SceneNwHook: React.FC = () => {
       <AbsoluteFill>
         <Insert set={<BossRoomSet />} at={at} f={f} from={inA} bg="#3a2418" warm>
           <BabyPowerbank position={[at[0], at[1] + 0.02, at[2]]} rotation={[0, -0.25, Math.sin(f * 0.5) * 0.08]} scale={1.3} />
-          <Hand at={[at[0] + 0.02, at[1] - 0.1, at[2] + 0.02]} sleeve={NAWAS.sleeve!} dir={[-0.4, -0.5, 0.5]} r={0.075} />
+          <Hand at={[at[0] + 0.02, at[1] - 0.1, at[2] + 0.02]} sleeve={NAWAS.sleeve!} dir={[-0.4, -0.5, 0.5]} r={0.04} />
           <Hearts f={f} at={inA + 4} pos={[at[0], at[1] + 0.12, at[2]]} />
         </Insert>
         <Chip at={inA + 2} to={inB} top={250} color="#ff7ab0">👶 bayi powerbank?!</Chip>
@@ -211,7 +211,7 @@ export const SceneNwPelit: React.FC = () => {
         <Stage cam={{ pos: [-2.45, 1.2, -0.5 - (f - inA) * 0.002], look: [-2.5, 1.15, -2.5], fov: 40 }} bg="#e8eef2">
           <Day />
           <OpenOfficeSet />
-          <Hand at={[-2.3, 0.86 + tap, -2.38]} sleeve={BOS.sleeve!} glove={BOS.glove} dir={[0.5, -0.4, 0.7]} r={0.07} />
+          <Hand at={[-2.3, 0.86 + tap, -2.38]} sleeve={BOS.sleeve!} glove={BOS.glove} dir={[0.5, -0.4, 0.7]} r={0.04} />
         </Stage>
         <Chip at={inA + 2} to={inB} top={250}>🔒 Colokan digembok · 💸 Rp2.000/jam</Chip>
         <Sub scene="pelit" />
@@ -344,10 +344,10 @@ export const SceneNwLahir: React.FC = () => {
     return (
       <AbsoluteFill>
         <Insert set={<BossRoomSet />} at={at} f={f} from={inA} bg="#e8dcc8" warm>
-          <BabyPowerbank position={[at[0] - 0.05, at[1] + 0.02, at[2]]} rotation={[0, 0.2, Math.sin(f * 0.5) * 0.1]} scale={1.3} swaddle />
-          <Hand at={[at[0] - 0.04, at[1] - 0.12, at[2] + 0.02]} sleeve={NAWAS.sleeve!} dir={[-0.4, -0.5, 0.5]} r={0.075} />
+          <BabyPowerbank position={[at[0] - 0.05, at[1] + 0.02, at[2]]} rotation={[0, 0.2, Math.sin(f * 0.5) * 0.1]} scale={1.3} />
+          <Hand at={[at[0] - 0.04, at[1] - 0.12, at[2] + 0.02]} sleeve={NAWAS.sleeve!} dir={[-0.4, -0.5, 0.5]} r={0.04} />
           <Powerbank position={[at[0] + 0.2, at[1] + 0.02, at[2] - 0.08]} rotation={[0, -0.3, 0]} scale={0.9} />
-          <Hand at={[at[0] + 0.22, at[1] - 0.12, at[2] - 0.06]} sleeve={NAWAS.sleeve!} dir={[0.4, -0.5, 0.5]} r={0.075} />
+          <Hand at={[at[0] + 0.22, at[1] - 0.12, at[2] - 0.06]} sleeve={NAWAS.sleeve!} dir={[0.4, -0.5, 0.5]} r={0.04} />
           <Hearts f={f} at={inA + 2} pos={[at[0] - 0.05, at[1] + 0.15, at[2]]} />
         </Insert>
         <Chip at={inA + 2} to={inB} top={250} color="#ff7ab0">🍼 lahir: 1 bayi powerbank</Chip>
@@ -404,7 +404,7 @@ export const SceneNwHpEmas: React.FC = () => {
       <AbsoluteFill>
         <Insert set={<OpenOfficeSet />} at={at} f={f} from={inA} bg="#e8eef2">
           <BossPhone position={at} rotation={[0, Math.sin(f * 0.12) * 0.45, 0]} battery={100} scale={1.3} />
-          <Hand at={[at[0] + 0.02, at[1] - 0.13, at[2] + 0.01]} sleeve={BOS.sleeve!} glove={BOS.glove} dir={[0.4, -0.5, 0.5]} r={0.07} />
+          <Hand at={[at[0] + 0.02, at[1] - 0.13, at[2] + 0.01]} sleeve={BOS.sleeve!} glove={BOS.glove} dir={[0.4, -0.5, 0.5]} r={0.04} />
           {[0, 1, 2, 3].map((i) => {
             const k = ((f - inA + i * 8) % 32) / 32;
             return <T key={i} g={G.ico(0.02, 0)} c="#fff4b0" emissive="#ffe060" ei={2} position={[at[0] + Math.sin(i * 2.4) * 0.13, at[1] + Math.cos(i * 1.7) * 0.13, at[2] + 0.05]} scale={Math.sin(Math.PI * k) * 1.4} o={false} />;
@@ -491,7 +491,7 @@ export const SceneNwMeninggal: React.FC = () => {
           <Chip at={splitA + 4} to={splitB} top={60} color="#7fe8ff">🪦 HP Pak Bos · 2025–2026</Chip>
         </Panel>
         <Panel y={960} w={1080} h={960}>
-          <Stage cam={{ pos: [bHead[0] + fx, bHead[1] + 0.1, bHead[2] + fz], look: bHead, fov: 38 }} shake={shake} h={960} bg="#e8dcc8">
+          <Stage cam={{ pos: [bHead[0] + fx * 1.25, bHead[1] + 0.05, bHead[2] + fz * 1.25], look: [bHead[0], bHead[1] - 0.12, bHead[2]], fov: 38 }} shake={shake} h={960} bg="#e8dcc8">
             <Day warm />
             <BossRoomSet />
             <Bean3 p={bP} position={BOS_DESK} rotation={[0, bYaw, 0]} />
@@ -504,7 +504,7 @@ export const SceneNwMeninggal: React.FC = () => {
       </AbsoluteFill>
     );
   }
-  const camF = pullBack(f, splitB, splitB + 18, { pos: [BOS_DESK[0] + 0.6, 1.55, BOS_DESK[2] + 1.5], look: [BOS_DESK[0], 1.35, BOS_DESK[2]], fov: 40 }, camWide);
+  const camF = pullBack(f, splitB, splitB + 18, { pos: [BOS_DESK[0] + 0.5, 1.6, BOS_DESK[2] + 3.4], look: [BOS_DESK[0], 1.15, BOS_DESK[2]], fov: 40 }, camWide);
   return (
     <AbsoluteFill>
       {room(camF)}
@@ -549,7 +549,7 @@ export const SceneNwPunch: React.FC = () => {
         <Panel w={540} h={1920}>
           <Stage cam={{ pos: [0, 0.55, 1.6], look: [0, 0.35, 0], fov: 40 }} w={540} bg="#020a1c">
             <Holo />
-            <BabyPowerbank position={[0, 0.35, 0]} rotation={[0, Math.sin(f * 0.08) * 0.5, 0]} scale={2.4} swaddle />
+            <BabyPowerbank position={[0, 0.35, 0]} rotation={[0, Math.sin(f * 0.08) * 0.5, 0]} scale={2.4} />
             <Hearts f={f} at={pl} pos={[0, 0.65, 0]} />
           </Stage>
           <div style={{ position: "absolute", top: 300, left: 0, right: 0, textAlign: "center", fontFamily: "Inter, sans-serif", fontWeight: 900, fontSize: 52, color: "#7ae87a", textShadow: "4px 4px 0 #0c0c10" }}>
@@ -581,7 +581,7 @@ export const SceneNwPunch: React.FC = () => {
   const bHead: Vec3 = [BOS_DESK[0], 1.45, BOS_DESK[2]];
   const fx = Math.sin(bYaw);
   const fz = Math.cos(bYaw);
-  const closeBos: Cam = { pos: [bHead[0] + fx * 1.4, 1.5, bHead[2] + fz * 1.4], look: bHead, fov: 38 };
+  const closeBos: Cam = { pos: [bHead[0] + fx * 2.2, 1.55, bHead[2] + fz * 2.2], look: [bHead[0], 1.3, bHead[2]], fov: 38 };
   const two = shotCam(f, [{ to: pl, p0: [0.15, 1.7, 4.6], l0: [0, 1.25, -0.25], p1: [0.1, 1.65, 4.1], l1: [0, 1.25, -0.25], fov: 42 }]);
   const wide: Cam = { pos: [0.7, 1.85, 6.6], look: [0.55, 1.1, -0.5], fov: 44 };
   const cam = f < pl ? two : f < mel + 24 ? closeBos : pullBack(f, mel + 24, mel + 54, closeBos, wide);
@@ -603,30 +603,31 @@ export const SceneNwGratis: React.FC = () => {
   const balik = EV("gratis.balik");
   const end = EV("gratis.end");
   const D = DUR_NW("gratis");
-  const bosSign: Vec3 = [-2.05, 0, -1.95];
+  const bosSign: Vec3 = [-3.2, 0, -1.95];
   const bosMid: Vec3 = [-0.45, 0, 0.45];
   const nPos: Vec3 = [0.6, 0, 0.6];
   const bWalk = walkLerp(f, grat + 14, balik - 14, bosSign, bosMid);
   const bPos = f < grat + 14 ? bosSign : bWalk.pos;
   const atSign = f < grat + 14;
-  const bYaw = atSign ? -Math.PI / 2 : f < balik - 14 ? bWalk.yaw : face(bosMid, nPos);
+  const bYaw = atSign ? Math.PI / 2 : f < balik - 14 ? bWalk.yaw : face(bosMid, nPos);
   // tangan Bos mencabut papan lama (cabut..+20), lalu menempel papan baru (grat-6..grat+4)
   const signOld: Vec3 = [-2.5, 1.4, -2.47];
-  const SIGN_L: Vec3 = [-0.5, 1.36, 0.42]; // tangan kiri menyentuh papan di dinding
-  const DOWN_L: Vec3 = [-0.45, 0.75, 0.3];
-  const bL: Vec3 = atSign
+  const SIGN_R: Vec3 = [0.5, 1.36, 0.62]; // tangan kanan menyentuh papan di dinding
+  const DOWN_R: Vec3 = [0.45, 0.75, 0.3];
+  const bR: Vec3 = atSign
     ? f < cabut
-      ? lv(REST_L, SIGN_L, rp(f, cabut - 14, cabut))
+      ? lv(REST_R, SIGN_R, rp(f, cabut - 14, cabut))
       : f < grat - 6
-        ? lv(SIGN_L, DOWN_L, rp(f, cabut + 6, cabut + 22))
-        : lv(DOWN_L, SIGN_L, rp(f, grat - 6, grat + 2))
-    : REST_L;
-  const bR: Vec3 = atSign || f < balik ? REST_R : armPath(f, balik + 2, balik + 12, balik + 26, balik + 40, REST_R, REACH_R, [0.2, 1.05, 0.42]);
+        ? lv(SIGN_R, DOWN_R, rp(f, cabut + 6, cabut + 22))
+        : lv(DOWN_R, SIGN_R, rp(f, grat - 6, grat + 2))
+    : f < balik
+      ? REST_R
+      : armPath(f, balik + 2, balik + 12, balik + 26, balik + 40, REST_R, REACH_R, [0.2, 1.05, 0.42]);
+  const bL: Vec3 = REST_L;
   const bP: Bean3Params = { ...BOS, expr: f < grat ? "worried" : f < balik ? "neutral" : "happy", handR: bR, walk: bWalk.walk, handL: bL };
   const bRW = bean3HandWorld(bP, "R", bPos, bYaw);
-  const bLW = bean3HandWorld(bP, "L", bPos, bYaw);
   const peel = rp(f, cabut, cabut + 8);
-  const oldSign: Vec3 = f < cabut + 6 ? signOld : f < grat - 8 ? [bLW[0] - 0.05, bLW[1] + 0.05, bLW[2]] : [-2.6, 0.03, -1.6];
+  const oldSign: Vec3 = f < cabut + 6 ? signOld : f < grat - 8 ? [bRW[0] + 0.05, bRW[1] + 0.05, bRW[2]] : [-2.6, 0.03, -1.6];
   const nR: Vec3 = f < balik - 10 ? [0.18, 1.05, 0.42] : armPath(f, balik - 10, balik + 2, balik + 18, balik + 30, [0.18, 1.05, 0.42], REACH_XR, REST_R);
   const nP: Bean3Params = { ...NAWAS, expr: f > balik + 20 ? "laugh" : "smug", handR: nR, talk: talkAt(f, LN("gratis", 1), 0.8) };
   const nYaw = face(nPos, bosMid);
@@ -636,10 +637,10 @@ export const SceneNwGratis: React.FC = () => {
   const jump = (i: number) => (cheer ? Math.max(0, Math.sin((f - grat - i * 4) * 0.32)) * 0.22 : 0);
   const sP: Bean3Params = { ...SINTA, expr: cheer ? "laugh" : "puzzled", bob: jump(0), handL: cheer ? [-0.35, 1.5, 0.15] : undefined, handR: cheer ? [0.35, 1.5, 0.15] : undefined };
   const uP: Bean3Params = { ...UDIN, expr: cheer ? "laugh" : "puzzled", bob: jump(1), handR: [0.2, 0.95, 0.4] };
-  const uPos: Vec3 = [-1.55, 0, -1.1];
+  const uPos: Vec3 = [-0.75, 0, -1.25];
   const uYaw = 0.6;
   const uPhone = bean3HandWorld(uP, "R", uPos, uYaw);
-  const camSign: Cam = shotCam(f, [{ to: grat + 10, p0: [-1.6, 1.6, 1.4], l0: [-2.35, 1.15, -2.1], p1: [-1.75, 1.55, 1.0], l1: [-2.35, 1.15, -2.1], fov: 44 }]);
+  const camSign: Cam = shotCam(f, [{ to: grat + 10, p0: [-1.3, 1.6, 1.5], l0: [-2.7, 1.15, -2.1], p1: [-1.45, 1.55, 1.1], l1: [-2.7, 1.15, -2.1], fov: 44 }]);
   const camWide: Cam = shotCam(f, [{ to: D, p0: [-0.6, 1.9, 6.2], l0: [-0.5, 1.15, -0.5], p1: [0.0, 1.75, 5.4], l1: [0.0, 1.15, 0.0], fov: 44 }]);
   const cam = f < grat + 10 ? camSign : pullBack(f, grat + 10, grat + 40, camSign, camWide);
   return (
@@ -652,7 +653,7 @@ export const SceneNwGratis: React.FC = () => {
         <Bean3 p={bP} position={bPos} rotation={[0, bYaw, 0]} />
         <Bean3 p={nP} position={nPos} rotation={[0, nYaw, 0]} />
         {<BossPhone position={[phonePos[0], phonePos[1] + 0.1, phonePos[2]]} rotation={[0, f >= balik + 20 ? bYaw : nYaw, 0]} battery={100} />}
-        <Bean3 p={sP} position={[0.95, 0, -0.5]} rotation={[0, -0.4, 0]} />
+        <Bean3 p={sP} position={[-0.95, 0, -0.75]} rotation={[0, 0.3, 0]} />
         <Bean3 p={uP} position={uPos} rotation={[0, uYaw, 0]} />
         <NawasPhone position={[uPhone[0], uPhone[1] + 0.06, uPhone[2]]} rotation={[-0.3, uYaw, 0]} battery={cheer ? 100 : 12} />
         {f >= cabut + 4 ? <CableToStrip to={uPhone} /> : null}
