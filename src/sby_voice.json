@@ -1,0 +1,1589 @@
+{
+ "fps": 30,
+ "totalFrames": 1930,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 141,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Hanya bambu runcing... melawan tank, kapal perang, dan pesawat tempur.",
+     "score": 0.982,
+     "file": "out/voice/sby/hook_0.wav",
+     "wordsSec": [
+      [
+       "Hanya",
+       0.0,
+       0.26
+      ],
+      [
+       "bambu",
+       0.26,
+       0.54
+      ],
+      [
+       "runcing,",
+       0.54,
+       0.86
+      ],
+      [
+       "melawan",
+       1.12,
+       1.6
+      ],
+      [
+       "tang,",
+       1.6,
+       1.82
+      ],
+      [
+       "kapal",
+       2.16,
+       2.46
+      ],
+      [
+       "perang,",
+       2.46,
+       2.96
+      ],
+      [
+       "dan",
+       2.96,
+       3.16
+      ],
+      [
+       "pesawat",
+       3.16,
+       3.56
+      ],
+      [
+       "tempur.",
+       3.56,
+       3.9
+      ]
+     ],
+     "from": 8,
+     "to": 128,
+     "words": [
+      {
+       "w": "Hanya",
+       "from": 8,
+       "to": 15
+      },
+      {
+       "w": "bambu",
+       "from": 15,
+       "to": 24
+      },
+      {
+       "w": "runcing,",
+       "from": 24,
+       "to": 33
+      },
+      {
+       "w": "melawan",
+       "from": 41,
+       "to": 56
+      },
+      {
+       "w": "tang,",
+       "from": 56,
+       "to": 62
+      },
+      {
+       "w": "kapal",
+       "from": 72,
+       "to": 81
+      },
+      {
+       "w": "perang,",
+       "from": 81,
+       "to": 96
+      },
+      {
+       "w": "dan",
+       "from": 96,
+       "to": 102
+      },
+      {
+       "w": "pesawat",
+       "from": 102,
+       "to": 114
+      },
+      {
+       "w": "tempur.",
+       "from": 114,
+       "to": 125
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "yamato",
+   "from": 141,
+   "to": 484,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Sembilan belas September 1945. Bendera Belanda berkibar di atas Hotel Yamato.",
+     "score": 1.0,
+     "file": "out/voice/sby/yamato_0.wav",
+     "wordsSec": [
+      [
+       "19",
+       0.0,
+       0.38
+      ],
+      [
+       "September",
+       0.38,
+       0.98
+      ],
+      [
+       "1945,",
+       0.98,
+       2.16
+      ],
+      [
+       "Bendera",
+       3.16,
+       3.46
+      ],
+      [
+       "Belanda",
+       3.46,
+       3.86
+      ],
+      [
+       "berkibar",
+       3.86,
+       4.4
+      ],
+      [
+       "di",
+       4.4,
+       4.54
+      ],
+      [
+       "atas",
+       4.54,
+       4.82
+      ],
+      [
+       "Hotel",
+       4.82,
+       5.02
+      ],
+      [
+       "Yamato",
+       5.02,
+       5.52
+      ]
+     ],
+     "from": 141,
+     "to": 314,
+     "words": [
+      {
+       "w": "19",
+       "from": 141,
+       "to": 152
+      },
+      {
+       "w": "September",
+       "from": 152,
+       "to": 170
+      },
+      {
+       "w": "1945,",
+       "from": 170,
+       "to": 206
+      },
+      {
+       "w": "Bendera",
+       "from": 236,
+       "to": 245
+      },
+      {
+       "w": "Belanda",
+       "from": 245,
+       "to": 257
+      },
+      {
+       "w": "berkibar",
+       "from": 257,
+       "to": 273
+      },
+      {
+       "w": "di",
+       "from": 273,
+       "to": 277
+      },
+      {
+       "w": "atas",
+       "from": 277,
+       "to": 286
+      },
+      {
+       "w": "Hotel",
+       "from": 286,
+       "to": 292
+      },
+      {
+       "w": "Yamato",
+       "from": 292,
+       "to": 307
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Para pemuda memanjat, lalu merobek warna birunya.",
+     "score": 1.0,
+     "file": "out/voice/sby/yamato_1.wav",
+     "wordsSec": [
+      [
+       "para",
+       0.0,
+       0.18
+      ],
+      [
+       "pemuda",
+       0.18,
+       0.56
+      ],
+      [
+       "memanjat,",
+       0.56,
+       1.14
+      ],
+      [
+       "lalu",
+       1.42,
+       1.74
+      ],
+      [
+       "merobek",
+       1.74,
+       2.04
+      ],
+      [
+       "warna",
+       2.04,
+       2.32
+      ],
+      [
+       "birunya.",
+       2.32,
+       2.64
+      ]
+     ],
+     "from": 322,
+     "to": 408,
+     "words": [
+      {
+       "w": "para",
+       "from": 322,
+       "to": 327
+      },
+      {
+       "w": "pemuda",
+       "from": 327,
+       "to": 338
+      },
+      {
+       "w": "memanjat,",
+       "from": 338,
+       "to": 356
+      },
+      {
+       "w": "lalu",
+       "from": 364,
+       "to": 374
+      },
+      {
+       "w": "merobek",
+       "from": 374,
+       "to": 383
+      },
+      {
+       "w": "warna",
+       "from": 383,
+       "to": 391
+      },
+      {
+       "w": "birunya.",
+       "from": 391,
+       "to": 401
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "text": "Yang tersisa... merah putih.",
+     "score": 1.0,
+     "file": "out/voice/sby/yamato_2.wav",
+     "wordsSec": [
+      [
+       "yang",
+       0.0,
+       0.16
+      ],
+      [
+       "tersisa",
+       0.16,
+       0.86
+      ],
+      [
+       "merah",
+       0.86,
+       1.4
+      ],
+      [
+       "putih.",
+       1.4,
+       1.74
+      ]
+     ],
+     "from": 416,
+     "to": 471,
+     "words": [
+      {
+       "w": "yang",
+       "from": 416,
+       "to": 421
+      },
+      {
+       "w": "tersisa",
+       "from": 421,
+       "to": 442
+      },
+      {
+       "w": "merah",
+       "from": 442,
+       "to": 458
+      },
+      {
+       "w": "putih.",
+       "from": 458,
+       "to": 468
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ultimatum",
+   "from": 484,
+   "to": 829,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Inggris datang untuk melucuti tentara Jepang, tapi bentrokan pecah, dan seorang jenderal Inggris tewas.",
+     "score": 0.971,
+     "file": "out/voice/sby/ultimatum_0.wav",
+     "wordsSec": [
+      [
+       "Inggris",
+       0.0,
+       0.38
+      ],
+      [
+       "datang",
+       0.38,
+       0.74
+      ],
+      [
+       "untuk",
+       0.74,
+       0.9
+      ],
+      [
+       "melucuti",
+       0.9,
+       1.4
+      ],
+      [
+       "tentara",
+       1.4,
+       1.8
+      ],
+      [
+       "Jepang",
+       1.8,
+       2.2
+      ],
+      [
+       "tapi",
+       2.2,
+       2.54
+      ],
+      [
+       "bentarkan",
+       2.54,
+       3.0
+      ],
+      [
+       "pecah",
+       3.0,
+       3.6
+      ],
+      [
+       "dan",
+       3.6,
+       3.8
+      ],
+      [
+       "seorang",
+       3.8,
+       4.16
+      ],
+      [
+       "general",
+       4.16,
+       4.5
+      ],
+      [
+       "Inggris",
+       4.5,
+       4.94
+      ],
+      [
+       "tewas.",
+       4.94,
+       5.28
+      ]
+     ],
+     "from": 484,
+     "to": 651,
+     "words": [
+      {
+       "w": "Inggris",
+       "from": 484,
+       "to": 495
+      },
+      {
+       "w": "datang",
+       "from": 495,
+       "to": 506
+      },
+      {
+       "w": "untuk",
+       "from": 506,
+       "to": 511
+      },
+      {
+       "w": "melucuti",
+       "from": 511,
+       "to": 526
+      },
+      {
+       "w": "tentara",
+       "from": 526,
+       "to": 538
+      },
+      {
+       "w": "Jepang",
+       "from": 538,
+       "to": 550
+      },
+      {
+       "w": "tapi",
+       "from": 550,
+       "to": 560
+      },
+      {
+       "w": "bentarkan",
+       "from": 560,
+       "to": 574
+      },
+      {
+       "w": "pecah",
+       "from": 574,
+       "to": 592
+      },
+      {
+       "w": "dan",
+       "from": 592,
+       "to": 598
+      },
+      {
+       "w": "seorang",
+       "from": 598,
+       "to": 609
+      },
+      {
+       "w": "general",
+       "from": 609,
+       "to": 619
+      },
+      {
+       "w": "Inggris",
+       "from": 619,
+       "to": 632
+      },
+      {
+       "w": "tewas.",
+       "from": 632,
+       "to": 642
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "text": "Ultimatum disebar dari udara. Serahkan senjata sebelum pukul enam pagi, sepuluh November.",
+     "score": 1.0,
+     "file": "out/voice/sby/ultimatum_1.wav",
+     "wordsSec": [
+      [
+       "Ultimatum",
+       0.0,
+       0.56
+      ],
+      [
+       "disebar",
+       0.56,
+       1.04
+      ],
+      [
+       "dari",
+       1.04,
+       1.28
+      ],
+      [
+       "udara,",
+       1.28,
+       1.68
+      ],
+      [
+       "serahkan",
+       1.82,
+       2.32
+      ],
+      [
+       "senjata",
+       2.32,
+       2.78
+      ],
+      [
+       "sebelum",
+       2.78,
+       3.22
+      ],
+      [
+       "pukul",
+       3.22,
+       3.54
+      ],
+      [
+       "6",
+       3.54,
+       3.68
+      ],
+      [
+       "pagi,",
+       3.68,
+       4.12
+      ],
+      [
+       "10",
+       4.28,
+       4.5
+      ],
+      [
+       "November.",
+       4.5,
+       4.84
+      ]
+     ],
+     "from": 659,
+     "to": 815,
+     "words": [
+      {
+       "w": "Ultimatum",
+       "from": 659,
+       "to": 675
+      },
+      {
+       "w": "disebar",
+       "from": 675,
+       "to": 690
+      },
+      {
+       "w": "dari",
+       "from": 690,
+       "to": 697
+      },
+      {
+       "w": "udara,",
+       "from": 697,
+       "to": 709
+      },
+      {
+       "w": "serahkan",
+       "from": 713,
+       "to": 728
+      },
+      {
+       "w": "senjata",
+       "from": 728,
+       "to": 742
+      },
+      {
+       "w": "sebelum",
+       "from": 742,
+       "to": 755
+      },
+      {
+       "w": "pukul",
+       "from": 755,
+       "to": 765
+      },
+      {
+       "w": "6",
+       "from": 765,
+       "to": 769
+      },
+      {
+       "w": "pagi,",
+       "from": 769,
+       "to": 782
+      },
+      {
+       "w": "10",
+       "from": 787,
+       "to": 794
+      },
+      {
+       "w": "November.",
+       "from": 794,
+       "to": 804
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "radio",
+   "from": 829,
+   "to": 1031,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Malam itu, sebuah suara membakar seluruh kota lewat radio.",
+     "score": 1.0,
+     "file": "out/voice/sby/radio_0.wav",
+     "wordsSec": [
+      [
+       "Malam",
+       0.0,
+       0.36
+      ],
+      [
+       "itu,",
+       0.36,
+       0.62
+      ],
+      [
+       "sebuah",
+       0.8,
+       1.3
+      ],
+      [
+       "suara",
+       1.3,
+       1.58
+      ],
+      [
+       "membakar",
+       1.58,
+       2.08
+      ],
+      [
+       "seluruh",
+       2.08,
+       2.46
+      ],
+      [
+       "kota",
+       2.46,
+       2.68
+      ],
+      [
+       "lewat",
+       2.68,
+       2.9
+      ],
+      [
+       "radio.",
+       2.9,
+       3.22
+      ]
+     ],
+     "from": 829,
+     "to": 933,
+     "words": [
+      {
+       "w": "Malam",
+       "from": 829,
+       "to": 840
+      },
+      {
+       "w": "itu,",
+       "from": 840,
+       "to": 847
+      },
+      {
+       "w": "sebuah",
+       "from": 853,
+       "to": 868
+      },
+      {
+       "w": "suara",
+       "from": 868,
+       "to": 876
+      },
+      {
+       "w": "membakar",
+       "from": 876,
+       "to": 891
+      },
+      {
+       "w": "seluruh",
+       "from": 891,
+       "to": 903
+      },
+      {
+       "w": "kota",
+       "from": 903,
+       "to": 909
+      },
+      {
+       "w": "lewat",
+       "from": 909,
+       "to": 916
+      },
+      {
+       "w": "radio.",
+       "from": 916,
+       "to": 925
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Semboyan kita tetap: merdeka atau mati!",
+     "score": 0.969,
+     "file": "out/voice/sby/radio_1.wav",
+     "wordsSec": [
+      [
+       "Sembuyan",
+       0.0,
+       0.5
+      ],
+      [
+       "kita",
+       0.5,
+       0.68
+      ],
+      [
+       "tetap,",
+       0.68,
+       1.08
+      ],
+      [
+       "merdeka",
+       1.26,
+       1.7
+      ],
+      [
+       "atau",
+       1.7,
+       1.9
+      ],
+      [
+       "mati.",
+       1.9,
+       2.42
+      ]
+     ],
+     "from": 940,
+     "to": 1017,
+     "words": [
+      {
+       "w": "Sembuyan",
+       "from": 940,
+       "to": 955
+      },
+      {
+       "w": "kita",
+       "from": 955,
+       "to": 961
+      },
+      {
+       "w": "tetap,",
+       "from": 961,
+       "to": 973
+      },
+      {
+       "w": "merdeka",
+       "from": 978,
+       "to": 991
+      },
+      {
+       "w": "atau",
+       "from": 991,
+       "to": 997
+      },
+      {
+       "w": "mati.",
+       "from": 997,
+       "to": 1013
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "serangan",
+   "from": 1031,
+   "to": 1177,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Pagi sepuluh November, Surabaya dihujani meriam kapal, bom pesawat, dan tank.",
+     "score": 1.0,
+     "file": "out/voice/sby/serangan_0.wav",
+     "wordsSec": [
+      [
+       "Pagi",
+       0.0,
+       0.22
+      ],
+      [
+       "10",
+       0.22,
+       0.44
+      ],
+      [
+       "November,",
+       0.44,
+       0.88
+      ],
+      [
+       "Surabaya",
+       1.2,
+       1.72
+      ],
+      [
+       "dihujani",
+       1.72,
+       2.18
+      ],
+      [
+       "meriam",
+       2.18,
+       2.48
+      ],
+      [
+       "kapal,",
+       2.48,
+       2.92
+      ],
+      [
+       "bom",
+       3.12,
+       3.24
+      ],
+      [
+       "pesawat,",
+       3.24,
+       3.66
+      ],
+      [
+       "dan",
+       3.9,
+       4.02
+      ],
+      [
+       "tank.",
+       4.02,
+       4.22
+      ]
+     ],
+     "from": 1031,
+     "to": 1164,
+     "words": [
+      {
+       "w": "Pagi",
+       "from": 1031,
+       "to": 1037
+      },
+      {
+       "w": "10",
+       "from": 1037,
+       "to": 1044
+      },
+      {
+       "w": "November,",
+       "from": 1044,
+       "to": 1057
+      },
+      {
+       "w": "Surabaya",
+       "from": 1067,
+       "to": 1082
+      },
+      {
+       "w": "dihujani",
+       "from": 1082,
+       "to": 1096
+      },
+      {
+       "w": "meriam",
+       "from": 1096,
+       "to": 1105
+      },
+      {
+       "w": "kapal,",
+       "from": 1105,
+       "to": 1118
+      },
+      {
+       "w": "bom",
+       "from": 1124,
+       "to": 1128
+      },
+      {
+       "w": "pesawat,",
+       "from": 1128,
+       "to": 1140
+      },
+      {
+       "w": "dan",
+       "from": 1148,
+       "to": 1151
+      },
+      {
+       "w": "tank.",
+       "from": 1151,
+       "to": 1157
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "jembatan",
+   "from": 1177,
+   "to": 1373,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Di Jembatan Merah, arek-arek Suroboyo bertahan dengan senjata seadanya.",
+     "score": 1.0,
+     "file": "out/voice/sby/jembatan_0.wav",
+     "wordsSec": [
+      [
+       "Di",
+       0.0,
+       0.2
+      ],
+      [
+       "jembatan",
+       0.2,
+       0.68
+      ],
+      [
+       "merah,",
+       0.68,
+       1.14
+      ],
+      [
+       "arek",
+       1.28,
+       1.54
+      ],
+      [
+       "-arek",
+       1.54,
+       1.84
+      ],
+      [
+       "suro",
+       1.84,
+       2.14
+      ],
+      [
+       "boyo",
+       2.14,
+       2.48
+      ],
+      [
+       "bertahan",
+       2.48,
+       3.1
+      ],
+      [
+       "dengan",
+       3.1,
+       3.38
+      ],
+      [
+       "senjata",
+       3.38,
+       3.92
+      ],
+      [
+       "seadanya.",
+       3.92,
+       4.42
+      ]
+     ],
+     "from": 1177,
+     "to": 1315,
+     "words": [
+      {
+       "w": "Di",
+       "from": 1177,
+       "to": 1183
+      },
+      {
+       "w": "jembatan",
+       "from": 1183,
+       "to": 1198
+      },
+      {
+       "w": "merah,",
+       "from": 1198,
+       "to": 1212
+      },
+      {
+       "w": "arek",
+       "from": 1216,
+       "to": 1224
+      },
+      {
+       "w": "-arek",
+       "from": 1224,
+       "to": 1233
+      },
+      {
+       "w": "suro",
+       "from": 1233,
+       "to": 1242
+      },
+      {
+       "w": "boyo",
+       "from": 1242,
+       "to": 1252
+      },
+      {
+       "w": "bertahan",
+       "from": 1252,
+       "to": 1270
+      },
+      {
+       "w": "dengan",
+       "from": 1270,
+       "to": 1279
+      },
+      {
+       "w": "senjata",
+       "from": 1279,
+       "to": 1295
+      },
+      {
+       "w": "seadanya.",
+       "from": 1295,
+       "to": 1310
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Mereka tidak mundur.",
+     "score": 1.0,
+     "file": "out/voice/sby/jembatan_1.wav",
+     "wordsSec": [
+      [
+       "Mereka",
+       0.0,
+       0.44
+      ],
+      [
+       "tidak",
+       0.44,
+       0.62
+      ],
+      [
+       "mundur",
+       0.62,
+       1.06
+      ]
+     ],
+     "from": 1323,
+     "to": 1359,
+     "words": [
+      {
+       "w": "Mereka",
+       "from": 1323,
+       "to": 1336
+      },
+      {
+       "w": "tidak",
+       "from": 1336,
+       "to": 1341
+      },
+      {
+       "w": "mundur",
+       "from": 1341,
+       "to": 1355
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "pmi",
+   "from": 1373,
+   "to": 1530,
+   "lines": [
+    {
+     "style": "bisik",
+     "text": "Di tengah asap, para relawan menggotong yang terluka, satu demi satu.",
+     "score": 1.0,
+     "file": "out/voice/sby/pmi_0.wav",
+     "wordsSec": [
+      [
+       "Di",
+       0.0,
+       0.12
+      ],
+      [
+       "tengah",
+       0.12,
+       0.42
+      ],
+      [
+       "asap,",
+       0.42,
+       0.88
+      ],
+      [
+       "para",
+       1.28,
+       1.62
+      ],
+      [
+       "relawan",
+       1.62,
+       2.14
+      ],
+      [
+       "menggotong",
+       2.14,
+       2.64
+      ],
+      [
+       "yang",
+       2.64,
+       2.74
+      ],
+      [
+       "terluka,",
+       2.74,
+       3.22
+      ],
+      [
+       "satu",
+       3.48,
+       4.08
+      ],
+      [
+       "demi",
+       4.08,
+       4.28
+      ],
+      [
+       "satu.",
+       4.28,
+       4.58
+      ]
+     ],
+     "from": 1373,
+     "to": 1517,
+     "words": [
+      {
+       "w": "Di",
+       "from": 1373,
+       "to": 1377
+      },
+      {
+       "w": "tengah",
+       "from": 1377,
+       "to": 1386
+      },
+      {
+       "w": "asap,",
+       "from": 1386,
+       "to": 1399
+      },
+      {
+       "w": "para",
+       "from": 1411,
+       "to": 1422
+      },
+      {
+       "w": "relawan",
+       "from": 1422,
+       "to": 1437
+      },
+      {
+       "w": "menggotong",
+       "from": 1437,
+       "to": 1452
+      },
+      {
+       "w": "yang",
+       "from": 1452,
+       "to": 1455
+      },
+      {
+       "w": "terluka,",
+       "from": 1455,
+       "to": 1470
+      },
+      {
+       "w": "satu",
+       "from": 1477,
+       "to": 1495
+      },
+      {
+       "w": "demi",
+       "from": 1495,
+       "to": 1501
+      },
+      {
+       "w": "satu.",
+       "from": 1501,
+       "to": 1510
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "akhir",
+   "from": 1530,
+   "to": 1780,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Tiga minggu bertempur. Ribuan gugur. Kota itu akhirnya jatuh...",
+     "score": 1.0,
+     "file": "out/voice/sby/akhir_0.wav",
+     "wordsSec": [
+      [
+       "Tiga",
+       0.0,
+       0.4
+      ],
+      [
+       "minggu",
+       0.4,
+       0.96
+      ],
+      [
+       "bertempur,",
+       0.96,
+       1.66
+      ],
+      [
+       "ribuan",
+       1.84,
+       2.22
+      ],
+      [
+       "gugur,",
+       2.22,
+       2.62
+      ],
+      [
+       "kota",
+       2.88,
+       3.3
+      ],
+      [
+       "itu",
+       3.3,
+       3.54
+      ],
+      [
+       "akhirnya",
+       3.54,
+       4.26
+      ],
+      [
+       "jatuh.",
+       4.26,
+       4.6
+      ]
+     ],
+     "from": 1530,
+     "to": 1671,
+     "words": [
+      {
+       "w": "Tiga",
+       "from": 1530,
+       "to": 1542
+      },
+      {
+       "w": "minggu",
+       "from": 1542,
+       "to": 1559
+      },
+      {
+       "w": "bertempur,",
+       "from": 1559,
+       "to": 1580
+      },
+      {
+       "w": "ribuan",
+       "from": 1586,
+       "to": 1597
+      },
+      {
+       "w": "gugur,",
+       "from": 1597,
+       "to": 1609
+      },
+      {
+       "w": "kota",
+       "from": 1617,
+       "to": 1629
+      },
+      {
+       "w": "itu",
+       "from": 1629,
+       "to": 1637
+      },
+      {
+       "w": "akhirnya",
+       "from": 1637,
+       "to": 1658
+      },
+      {
+       "w": "jatuh.",
+       "from": 1658,
+       "to": 1668
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "tapi semangatnya menyalakan perlawanan di seluruh negeri.",
+     "score": 0.99,
+     "file": "out/voice/sby/akhir_1.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.64
+      ],
+      [
+       "semangatnya",
+       0.64,
+       1.22
+      ],
+      [
+       "menyalakan",
+       1.22,
+       1.68
+      ],
+      [
+       "pelawanan",
+       1.68,
+       2.16
+      ],
+      [
+       "di",
+       2.16,
+       2.28
+      ],
+      [
+       "seluruh",
+       2.28,
+       2.6
+      ],
+      [
+       "negeri.",
+       2.6,
+       2.9
+      ]
+     ],
+     "from": 1676,
+     "to": 1767,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 1676,
+       "to": 1695
+      },
+      {
+       "w": "semangatnya",
+       "from": 1695,
+       "to": 1712
+      },
+      {
+       "w": "menyalakan",
+       "from": 1712,
+       "to": 1726
+      },
+      {
+       "w": "pelawanan",
+       "from": 1726,
+       "to": 1740
+      },
+      {
+       "w": "di",
+       "from": 1740,
+       "to": 1744
+      },
+      {
+       "w": "seluruh",
+       "from": 1744,
+       "to": 1754
+      },
+      {
+       "w": "negeri.",
+       "from": 1754,
+       "to": 1763
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "pahlawan",
+   "from": 1780,
+   "to": 1922,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Karena itu, setiap sepuluh November, kita mengenangnya sebagai Hari Pahlawan.",
+     "score": 1.0,
+     "file": "out/voice/sby/pahlawan_0.wav",
+     "wordsSec": [
+      [
+       "Karena",
+       0.0,
+       0.24
+      ],
+      [
+       "itu",
+       0.24,
+       0.56
+      ],
+      [
+       "setiap",
+       0.56,
+       1.12
+      ],
+      [
+       "10",
+       1.12,
+       1.4
+      ],
+      [
+       "November,",
+       1.4,
+       1.92
+      ],
+      [
+       "kita",
+       2.22,
+       2.38
+      ],
+      [
+       "mengenangnya",
+       2.38,
+       3.0
+      ],
+      [
+       "sebagai",
+       3.0,
+       3.22
+      ],
+      [
+       "hari",
+       3.22,
+       3.6
+      ],
+      [
+       "pahlawan.",
+       3.6,
+       4.14
+      ]
+     ],
+     "from": 1780,
+     "to": 1908,
+     "words": [
+      {
+       "w": "Karena",
+       "from": 1780,
+       "to": 1788
+      },
+      {
+       "w": "itu",
+       "from": 1788,
+       "to": 1797
+      },
+      {
+       "w": "setiap",
+       "from": 1797,
+       "to": 1814
+      },
+      {
+       "w": "10",
+       "from": 1814,
+       "to": 1822
+      },
+      {
+       "w": "November,",
+       "from": 1822,
+       "to": 1838
+      },
+      {
+       "w": "kita",
+       "from": 1847,
+       "to": 1852
+      },
+      {
+       "w": "mengenangnya",
+       "from": 1852,
+       "to": 1870
+      },
+      {
+       "w": "sebagai",
+       "from": 1870,
+       "to": 1877
+      },
+      {
+       "w": "hari",
+       "from": 1877,
+       "to": 1888
+      },
+      {
+       "w": "pahlawan.",
+       "from": 1888,
+       "to": 1905
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
