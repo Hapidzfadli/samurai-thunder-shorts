@@ -247,7 +247,7 @@ export type Bean3Params = {
   glove?: string; // warna tangan (bola)
   skin?: string; // warna kepala
   sleeve?: string;
-  hat?: "peaked" | "slouch" | "wide" | "fedora" | "cap" | "none";
+  hat?: "peaked" | "slouch" | "wide" | "fedora" | "cap" | "peci" | "none";
   hatColor?: string;
   hatBand?: string;
   expr?: Expr3;
@@ -529,6 +529,15 @@ export const Hat: React.FC<{ kind: Bean3Params["hat"]; c: string; band: string; 
         {/* pet topi menonjol ke depan, di atas alis */}
         <T g={G.cyl(r * 0.98, r * 0.98, 0.025, 28, false, -Math.PI / 2, Math.PI)} c="#1a1814" position={[0, -r * 0.02, r * 0.05]} rotation={[0.2, 0, 0]} scale={[0.82, 1, 1]} o={2} />
         <T g={G.sph(r * 0.08, 10, 8)} c="#e8c050" position={[0, r * 0.26, r * 0.86]} o={2} emissive="#6a4a00" ei={0.4} />
+      </group>
+    );
+  if (kind === "peci")
+    // peci/songkok hitam: rendah di atas dahi, alis tetap terlihat
+    return (
+      <group position={[0, r * 0.62, -r * 0.04]} rotation={[-0.14, 0, 0]}>
+        <T g={G.cyl(r * 0.8, r * 0.86, r * 0.44, 28)} c={c} position={[0, r * 0.16, 0]} scale={[1, 1, 0.94]} />
+        <T g={G.cyl(r * 0.81, r * 0.81, r * 0.02, 28)} c={band} position={[0, r * 0.36, 0]} scale={[1, 1, 0.94]} o={false} />
+        <T g={G.cyl(r * 0.865, r * 0.87, r * 0.05, 28)} c={band} position={[0, -r * 0.04, 0]} scale={[1, 1, 0.94]} o={2} />
       </group>
     );
   if (kind === "cap")
