@@ -3,6 +3,7 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/noto-serif-jp/900.css";
 import { Composition } from "remotion";
+import { ApacheDetailed, TOTAL_FRAMES_APACHE } from "./ApacheDetailed";
 import { CharacterShowcase } from "./CharacterShowcase";
 import { RailroadExpansion, TOTAL_FRAMES_RAILROAD } from "./RailroadExpansion";
 import { CHARACTER_PRESETS } from "./three/characters";
@@ -13,6 +14,14 @@ import { TOTAL_FRAMES_WEWE, WeweGombel } from "./WeweGombel";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="ApacheDetailed"
+        component={ApacheDetailed}
+        durationInFrames={TOTAL_FRAMES_APACHE}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="RailroadExpansion"
         component={RailroadExpansion}
