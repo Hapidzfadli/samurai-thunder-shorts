@@ -48,7 +48,26 @@ tts_model = TTSModel.load_model(config=POCKET_CONFIG, eos_threshold=-3.5, temp=0
 VOICE_STATES = {k: tts_model.get_state_for_audio_prompt(str(v)) for k, v in PROMPTS.items()}
 
 
-def synth_phrase(text: str, emotion: str = "narasi") -> np.ndarray:
+import difflib
+import re
+
+from faster_whisper import WhisperModel
+
+ASR = WhisperModel("small", device="cpu", compute_type="int8")
+
+
+def _letters(x: str) -> str:
+    return re.sub(r"[^a-z]", "", x.lower())
+
+
+def clean_for_tts(text: str) -> str:
+    """The emotion prompts make the model tack a stray syllable ("inder") onto '!' endings.
+    Keep the words, but end exclamations with a full stop and turn '...' into a comma pause."""
+    t = text.replace("...", ",").replace("!", ".")
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _synth_once(text: str, emotion: str) -> np.ndarray:
     state = VOICE_STATES.get(emotion, VOICE_STATES["narasi"])
     audio_tensor = tts_model.generate_audio(state, text, max_tokens=110)
     raw = audio_tensor.detach().cpu().numpy().squeeze().astype(np.float32)
@@ -60,6 +79,29 @@ def synth_phrase(text: str, emotion: str = "narasi") -> np.ndarray:
         raw = raw[max(0, idx[0] - 600):min(len(raw), idx[-1] + 900)]
     peak = np.max(np.abs(raw)) + 1e-6
     return (raw / peak) * 0.88
+
+
+def _heard(clip: np.ndarray) -> str:
+    a16 = signal.resample(clip, int(len(clip) * 16000 / SR)).astype(np.float32)
+    segs, _ = ASR.transcribe(a16, language="id", beam_size=1)
+    return " ".join(x.text for x in segs)
+
+
+def synth_phrase(text: str, emotion: str = "narasi", n: int = 3) -> np.ndarray:
+    """Generate n takes and keep the one speech recognition hears closest to the script
+    (rejects takes with swallowed words or stray syllables)."""
+    clean = clean_for_tts(text)
+    best, best_score = None, -1.0
+    for i in range(n):
+        clip = _synth_once(clean, emotion)
+        heard = _heard(clip)
+        score = difflib.SequenceMatcher(None, _letters(clean), _letters(heard)).ratio()
+        print(f"      take {i + 1}/{n}: {score:.2f} <- {heard.strip()}")
+        if score > best_score:
+            best, best_score = clip, score
+        if score > 0.97:
+            break
+    return best
 
 
 # Story script split into short phrases with per-phrase emotion tags
