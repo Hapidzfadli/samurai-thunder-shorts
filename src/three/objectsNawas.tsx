@@ -243,7 +243,7 @@ export const Sign: React.FC<{ position?: Vec3; rotation?: Vec3; w?: number; h?: 
 );
 
 /* ================= tanaman & perabot kecil ================= */
-const Plant: React.FC<{ position: Vec3; s?: number }> = ({ position, s = 1 }) => (
+export const Plant: React.FC<{ position: Vec3; s?: number }> = ({ position, s = 1 }) => (
   <group position={position} scale={s}>
     <T g={G.cyl(0.2, 0.15, 0.4, 12)} c="#f0ece4" position={[0, 0.2, 0]} />
     {[0, 1, 2, 3, 4, 5, 6].map((i) => (
@@ -271,7 +271,7 @@ const Monitor: React.FC<{ position: Vec3; rotation?: Vec3; screen?: string }> = 
 );
 
 /** stopkontak dinding + charger yang berderet */
-const PowerStrip: React.FC<{ position: Vec3; locked?: boolean }> = ({ position, locked = true }) => (
+export const PowerStrip: React.FC<{ position: Vec3; locked?: boolean }> = ({ position, locked = true }) => (
   <group position={position}>
     <T g={G.box(0.5, 0.09, 0.05)} c="#f4f4f4" />
     {[0, 1, 2, 3].map((i) => (
@@ -288,7 +288,7 @@ const PowerStrip: React.FC<{ position: Vec3; locked?: boolean }> = ({ position, 
 );
 
 /* ================= LOKASI 1: ruang kerja kantor startup (siang) ================= */
-export const OpenOfficeSet: React.FC<{ signPeel?: number; freeSign?: number }> = ({ signPeel = 0, freeSign = 0 }) => (
+export const OpenOfficeSet: React.FC<{ signPeel?: number; freeSign?: number; sign?: boolean; locked?: boolean }> = ({ signPeel = 0, freeSign = 0, sign = true, locked = true }) => (
   <group>
     {/* lantai vinyl kayu muda + karpet abu */}
     <T g={G.box(9, 0.1, 7)} c="#d8c0a0" position={[0, -0.05, 0]} o={false} />
@@ -301,7 +301,7 @@ export const OpenOfficeSet: React.FC<{ signPeel?: number; freeSign?: number }> =
     <T g={G.box(3.2, 3.4, 0.14)} c="#ffd23f" position={[-2.6, 1.7, -2.58]} />
     <T g={G.box(0.12, 3.4, 7)} c="#ece8de" position={[-4.0, 1.7, 0]} />
     {/* logo perusahaan */}
-    <Sign position={[-2.6, 2.55, -2.5]} w={2.2} h={0.6} lines={["PT. HEMAT JAYA", "startup paling efisien"]} bg="#ffd23f" fg="#1e2240" />
+    <Sign position={[-2.6, 2.45, -2.5]} w={2.2} h={0.6} lines={["PT. HEMAT JAYA", "startup paling efisien"]} bg="#ffd23f" fg="#1e2240" />
     {/* jendela kaca besar dengan gedung kota */}
     <group position={[1.6, 1.85, -2.52]}>
       <T g={G.box(2.8, 1.9, 0.05)} c="#2a2c34" />
@@ -333,13 +333,15 @@ export const OpenOfficeSet: React.FC<{ signPeel?: number; freeSign?: number }> =
         <T key={x} g={G.box(0.04, 1.85, 0.06)} c="#2a2c34" position={[x, 0, 0.03]} o={false} />
       ))}
     </group>
-    {/* stopkontak terkunci + papan "cas berbayar" */}
-    <PowerStrip position={[-1.0, 1.15, -2.5]} />
-    {freeSign > 0 ? (
-      <Sign position={[-1.0, 1.55, -2.48]} w={0.8} h={0.42} lines={["CAS GRATIS", "untuk semua 😊"]} bg="#d8ffd8" fg="#1a7a3a" />
-    ) : (
-      <Sign position={[-1.0, 1.55, -2.48]} w={0.8} h={0.42} lines={["CAS HP", "Rp2.000/JAM"]} peel={signPeel} />
-    )}
+    {/* stopkontak terkunci + papan "cas berbayar" (di dinding kuning, bisa dijangkau) */}
+    <PowerStrip position={[-2.5, 0.95, -2.5]} locked={locked} />
+    {sign ? (
+      freeSign > 0 ? (
+        <Sign position={[-2.5, 1.4, -2.48]} w={0.8} h={0.42} lines={["CAS GRATIS", "untuk semua"]} bg="#d8ffd8" fg="#1a7a3a" />
+      ) : (
+        <Sign position={[-2.5, 1.4, -2.48]} w={0.8} h={0.42} lines={["CAS HP", "Rp2.000/JAM"]} peel={signPeel} />
+      )
+    ) : null}
     {/* meja kerja panjang bersama (benching) */}
     <group position={[0.2, 0, -1.2]}>
       <T g={G.box(3.2, 0.05, 0.9)} c="#f4f0e8" position={[0, 0.74, 0]} />

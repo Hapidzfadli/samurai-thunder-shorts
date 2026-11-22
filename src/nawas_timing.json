@@ -1,0 +1,752 @@
+{
+ "fps": 30,
+ "order": [
+  "hook",
+  "pelit",
+  "pinjam",
+  "lahir",
+  "hpemas",
+  "meninggal",
+  "punchline",
+  "gratis"
+ ],
+ "scenes": {
+  "hook": {
+   "from": 0,
+   "dur": 213
+  },
+  "pelit": {
+   "from": 213,
+   "dur": 327
+  },
+  "pinjam": {
+   "from": 540,
+   "dur": 308
+  },
+  "lahir": {
+   "from": 848,
+   "dur": 367
+  },
+  "hpemas": {
+   "from": 1215,
+   "dur": 305
+  },
+  "meninggal": {
+   "from": 1520,
+   "dur": 289
+  },
+  "punchline": {
+   "from": 1809,
+   "dur": 267
+  },
+  "gratis": {
+   "from": 2076,
+   "dur": 379
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "text": "Kang Nawas mengembalikan powerbank bosnya... plus satu bayi powerbank.",
+    "style": "narasi",
+    "from": 15,
+    "to": 172,
+    "words": [
+     {
+      "w": "Kang",
+      "from": 15,
+      "to": 26
+     },
+     {
+      "w": "Nawas",
+      "from": 28,
+      "to": 41
+     },
+     {
+      "w": "mengembalikan",
+      "from": 43,
+      "to": 72
+     },
+     {
+      "w": "powerbank",
+      "from": 73,
+      "to": 94
+     },
+     {
+      "w": "bosnya...",
+      "from": 96,
+      "to": 111
+     },
+     {
+      "w": "plus",
+      "from": 113,
+      "to": 124
+     },
+     {
+      "w": "satu",
+      "from": 126,
+      "to": 137
+     },
+     {
+      "w": "bayi",
+      "from": 138,
+      "to": 150
+     },
+     {
+      "w": "powerbank.",
+      "from": 151,
+      "to": 172
+     }
+    ]
+   }
+  ],
+  "pelit": [
+   {
+    "text": "Pak Bos paling pelit sekantor. Colokan pun digembok, cas HP bayar dua ribu sejam.",
+    "style": "santai",
+    "from": 12,
+    "to": 209,
+    "words": [
+     {
+      "w": "Pak",
+      "from": 12,
+      "to": 21
+     },
+     {
+      "w": "Bos",
+      "from": 23,
+      "to": 32
+     },
+     {
+      "w": "paling",
+      "from": 34,
+      "to": 49
+     },
+     {
+      "w": "pelit",
+      "from": 51,
+      "to": 64
+     },
+     {
+      "w": "sekantor.",
+      "from": 66,
+      "to": 85
+     },
+     {
+      "w": "Colokan",
+      "from": 86,
+      "to": 104
+     },
+     {
+      "w": "pun",
+      "from": 105,
+      "to": 114
+     },
+     {
+      "w": "digembok,",
+      "from": 116,
+      "to": 135
+     },
+     {
+      "w": "cas",
+      "from": 137,
+      "to": 146
+     },
+     {
+      "w": "HP",
+      "from": 148,
+      "to": 155
+     },
+     {
+      "w": "bayar",
+      "from": 157,
+      "to": 170
+     },
+     {
+      "w": "dua",
+      "from": 171,
+      "to": 181
+     },
+     {
+      "w": "ribu",
+      "from": 182,
+      "to": 194
+     },
+     {
+      "w": "sejam.",
+      "from": 195,
+      "to": 209
+     }
+    ]
+   },
+   {
+    "text": "Pinjam sehari, kembalikan dua!",
+    "style": "tegas",
+    "from": 228,
+    "to": 296,
+    "words": [
+     {
+      "w": "Pinjam",
+      "from": 228,
+      "to": 243
+     },
+     {
+      "w": "sehari,",
+      "from": 245,
+      "to": 260
+     },
+     {
+      "w": "kembalikan",
+      "from": 262,
+      "to": 285
+     },
+     {
+      "w": "dua!",
+      "from": 286,
+      "to": 296
+     }
+    ]
+   }
+  ],
+  "pinjam": [
+   {
+    "text": "Suatu sore, baterai HP Kang Nawas tinggal satu persen.",
+    "style": "narasi",
+    "from": 12,
+    "to": 142,
+    "words": [
+     {
+      "w": "Suatu",
+      "from": 12,
+      "to": 25
+     },
+     {
+      "w": "sore,",
+      "from": 27,
+      "to": 38
+     },
+     {
+      "w": "baterai",
+      "from": 40,
+      "to": 57
+     },
+     {
+      "w": "HP",
+      "from": 58,
+      "to": 66
+     },
+     {
+      "w": "Kang",
+      "from": 68,
+      "to": 79
+     },
+     {
+      "w": "Nawas",
+      "from": 80,
+      "to": 94
+     },
+     {
+      "w": "tinggal",
+      "from": 95,
+      "to": 112
+     },
+     {
+      "w": "satu",
+      "from": 114,
+      "to": 125
+     },
+     {
+      "w": "persen.",
+      "from": 127,
+      "to": 142
+     }
+    ]
+   },
+   {
+    "text": "Pak, boleh pinjam powerbank-nya?",
+    "style": "santai",
+    "from": 171,
+    "to": 240,
+    "words": [
+     {
+      "w": "Pak,",
+      "from": 171,
+      "to": 180
+     },
+     {
+      "w": "boleh",
+      "from": 182,
+      "to": 195
+     },
+     {
+      "w": "pinjam",
+      "from": 197,
+      "to": 212
+     },
+     {
+      "w": "powerbank-nya?",
+      "from": 213,
+      "to": 240
+     }
+    ]
+   }
+  ],
+  "lahir": [
+   {
+    "text": "Selamat, Pak! Powerbank Bapak melahirkan tadi malam!",
+    "style": "santai",
+    "from": 48,
+    "to": 166,
+    "words": [
+     {
+      "w": "Selamat,",
+      "from": 48,
+      "to": 65
+     },
+     {
+      "w": "Pak!",
+      "from": 67,
+      "to": 76
+     },
+     {
+      "w": "Powerbank",
+      "from": 78,
+      "to": 99
+     },
+     {
+      "w": "Bapak",
+      "from": 100,
+      "to": 114
+     },
+     {
+      "w": "melahirkan",
+      "from": 115,
+      "to": 138
+     },
+     {
+      "w": "tadi",
+      "from": 140,
+      "to": 151
+     },
+     {
+      "w": "malam!",
+      "from": 153,
+      "to": 166
+     }
+    ]
+   },
+   {
+    "text": "Pak Bos girang. Tanpa curiga, bayinya langsung diterima.",
+    "style": "narasi",
+    "from": 189,
+    "to": 318,
+    "words": [
+     {
+      "w": "Pak",
+      "from": 189,
+      "to": 198
+     },
+     {
+      "w": "Bos",
+      "from": 200,
+      "to": 209
+     },
+     {
+      "w": "girang.",
+      "from": 210,
+      "to": 226
+     },
+     {
+      "w": "Tanpa",
+      "from": 227,
+      "to": 241
+     },
+     {
+      "w": "curiga,",
+      "from": 242,
+      "to": 257
+     },
+     {
+      "w": "bayinya",
+      "from": 259,
+      "to": 276
+     },
+     {
+      "w": "langsung",
+      "from": 278,
+      "to": 297
+     },
+     {
+      "w": "diterima.",
+      "from": 298,
+      "to": 318
+     }
+    ]
+   }
+  ],
+  "hpemas": [
+   {
+    "text": "Seminggu kemudian, Kang Nawas meminjam HP terbaru Pak Bos.",
+    "style": "narasi",
+    "from": 12,
+    "to": 150,
+    "words": [
+     {
+      "w": "Seminggu",
+      "from": 12,
+      "to": 31
+     },
+     {
+      "w": "kemudian,",
+      "from": 33,
+      "to": 52
+     },
+     {
+      "w": "Kang",
+      "from": 53,
+      "to": 65
+     },
+     {
+      "w": "Nawas",
+      "from": 66,
+      "to": 80
+     },
+     {
+      "w": "meminjam",
+      "from": 81,
+      "to": 100
+     },
+     {
+      "w": "HP",
+      "from": 102,
+      "to": 109
+     },
+     {
+      "w": "terbaru",
+      "from": 111,
+      "to": 128
+     },
+     {
+      "w": "Pak",
+      "from": 130,
+      "to": 139
+     },
+     {
+      "w": "Bos.",
+      "from": 141,
+      "to": 150
+     }
+    ]
+   },
+   {
+    "text": "Boleh! Asal kembali bawa anaknya!",
+    "style": "tegas",
+    "from": 167,
+    "to": 243,
+    "words": [
+     {
+      "w": "Boleh!",
+      "from": 167,
+      "to": 180
+     },
+     {
+      "w": "Asal",
+      "from": 181,
+      "to": 193
+     },
+     {
+      "w": "kembali",
+      "from": 194,
+      "to": 212
+     },
+     {
+      "w": "bawa",
+      "from": 213,
+      "to": 224
+     },
+     {
+      "w": "anaknya!",
+      "from": 226,
+      "to": 243
+     }
+    ]
+   }
+  ],
+  "meninggal": [
+   {
+    "text": "Innalillahi, Pak... HP Bapak meninggal dunia.",
+    "style": "bisik",
+    "from": 54,
+    "to": 151,
+    "words": [
+     {
+      "w": "Innalillahi,",
+      "from": 54,
+      "to": 79
+     },
+     {
+      "w": "Pak...",
+      "from": 81,
+      "to": 90
+     },
+     {
+      "w": "HP",
+      "from": 92,
+      "to": 99
+     },
+     {
+      "w": "Bapak",
+      "from": 100,
+      "to": 114
+     },
+     {
+      "w": "meninggal",
+      "from": 115,
+      "to": 136
+     },
+     {
+      "w": "dunia.",
+      "from": 138,
+      "to": 151
+     }
+    ]
+   },
+   {
+    "text": "Ngawur! Mana ada HP bisa meninggal!",
+    "style": "tegas",
+    "from": 177,
+    "to": 261,
+    "words": [
+     {
+      "w": "Ngawur!",
+      "from": 177,
+      "to": 192
+     },
+     {
+      "w": "Mana",
+      "from": 194,
+      "to": 205
+     },
+     {
+      "w": "ada",
+      "from": 207,
+      "to": 216
+     },
+     {
+      "w": "HP",
+      "from": 218,
+      "to": 225
+     },
+     {
+      "w": "bisa",
+      "from": 226,
+      "to": 238
+     },
+     {
+      "w": "meninggal!",
+      "from": 239,
+      "to": 261
+     }
+    ]
+   }
+  ],
+  "punchline": [
+   {
+    "text": "Lho, powerbank bisa melahirkan Bapak percaya... masa HP meninggal nggak percaya?",
+    "style": "santai",
+    "from": 12,
+    "to": 193,
+    "words": [
+     {
+      "w": "Lho,",
+      "from": 12,
+      "to": 21
+     },
+     {
+      "w": "powerbank",
+      "from": 23,
+      "to": 44
+     },
+     {
+      "w": "bisa",
+      "from": 46,
+      "to": 57
+     },
+     {
+      "w": "melahirkan",
+      "from": 58,
+      "to": 82
+     },
+     {
+      "w": "Bapak",
+      "from": 83,
+      "to": 96
+     },
+     {
+      "w": "percaya...",
+      "from": 98,
+      "to": 115
+     },
+     {
+      "w": "masa",
+      "from": 117,
+      "to": 128
+     },
+     {
+      "w": "HP",
+      "from": 130,
+      "to": 137
+     },
+     {
+      "w": "meninggal",
+      "from": 139,
+      "to": 160
+     },
+     {
+      "w": "nggak",
+      "from": 161,
+      "to": 175
+     },
+     {
+      "w": "percaya?",
+      "from": 176,
+      "to": 193
+     }
+    ]
+   }
+  ],
+  "gratis": [
+   {
+    "text": "Sejak hari itu, cas HP di kantor... gratis.",
+    "style": "narasi",
+    "from": 12,
+    "to": 112,
+    "words": [
+     {
+      "w": "Sejak",
+      "from": 12,
+      "to": 25
+     },
+     {
+      "w": "hari",
+      "from": 27,
+      "to": 38
+     },
+     {
+      "w": "itu,",
+      "from": 40,
+      "to": 49
+     },
+     {
+      "w": "cas",
+      "from": 51,
+      "to": 60
+     },
+     {
+      "w": "HP",
+      "from": 62,
+      "to": 69
+     },
+     {
+      "w": "di",
+      "from": 71,
+      "to": 78
+     },
+     {
+      "w": "kantor...",
+      "from": 80,
+      "to": 95
+     },
+     {
+      "w": "gratis.",
+      "from": 96,
+      "to": 112
+     }
+    ]
+   },
+   {
+    "text": "Alhamdulillah, Pak. HP Bapak hidup lagi... habis dicas gratis.",
+    "style": "santai",
+    "from": 149,
+    "to": 287,
+    "words": [
+     {
+      "w": "Alhamdulillah,",
+      "from": 149,
+      "to": 178
+     },
+     {
+      "w": "Pak.",
+      "from": 180,
+      "to": 189
+     },
+     {
+      "w": "HP",
+      "from": 191,
+      "to": 198
+     },
+     {
+      "w": "Bapak",
+      "from": 200,
+      "to": 213
+     },
+     {
+      "w": "hidup",
+      "from": 214,
+      "to": 228
+     },
+     {
+      "w": "lagi...",
+      "from": 229,
+      "to": 241
+     },
+     {
+      "w": "habis",
+      "from": 242,
+      "to": 256
+     },
+     {
+      "w": "dicas",
+      "from": 257,
+      "to": 270
+     },
+     {
+      "w": "gratis.",
+      "from": 272,
+      "to": 287
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.give": 39,
+  "hook.bayi": 135,
+  "pelit.gembok": 82,
+  "pelit.bayar": 153,
+  "pelit.bos": 225,
+  "pinjam.batt": 91,
+  "pinjam.ask": 169,
+  "pinjam.give": 244,
+  "lahir.selamat": 46,
+  "lahir.lahir": 112,
+  "lahir.girang": 207,
+  "lahir.terima": 286,
+  "hp.pamer": 107,
+  "hp.boleh": 165,
+  "hp.give": 224,
+  "mati.start": 52,
+  "mati.word": 112,
+  "mati.bentak": 175,
+  "punch.start": 12,
+  "punch.lahir": 55,
+  "punch.mati": 136,
+  "punch.melongo": 193,
+  "gratis.cabut": 72,
+  "gratis.gratis": 93,
+  "gratis.balik": 206,
+  "gratis.end": 297
+ },
+ "placeholder": true,
+ "total": 2455
+}
