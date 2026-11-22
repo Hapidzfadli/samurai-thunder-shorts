@@ -30,6 +30,7 @@ Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh*
 
 ## 4. Suara
 - Narasi pakai suara klon dengan penekanan kata (emph), intonasi naik untuk pertanyaan, pelan/berbisik untuk momen licik.
+- **Narasi harus mengalir, tidak tersendat**: buat suara per adegan dalam satu tarikan (2-4 kalimat utuh sekaligus), JANGAN memotong kalimat jadi frasa pendek lalu disambung (hasilnya cepat-berhenti-cepat-berhenti). Referensi suara dipotong di batas kalimat utuh + transkripnya (mode lanjutan VoxCPM2: `scripts/tts_lab_smooth.py`), normalisasi loudness seluruh trek (bukan per frasa). Cek: kecepatan ~2,4-3 kata/detik, tidak ada jeda aneh di tengah kalimat.
 - **Tawa tidak boleh datar**: pakai tawa sintetis dari suku kata (`scripts/laugh_lab.py`, hasil di `exports/riset/tawa/`), naik-turun nada, melambat, ada tarikan napas; tawa ramai = beberapa lapis.
 - Setiap aksi penting punya efek suara (langkah, pintu, botol, sumbat "pop", angin, dll). Musik ducking di bawah suara.
 
