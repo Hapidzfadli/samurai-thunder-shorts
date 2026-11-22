@@ -56,8 +56,14 @@ from faster_whisper import WhisperModel
 ASR = WhisperModel("small", device="cpu", compute_type="int8")
 
 
+_NUM_WORDS = r"\b(se|satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan|sepuluh|sebelas|belas|puluh|ratus|ratusan|ribu|ribuan|juta|nol)\b"
+
+
 def _letters(x: str) -> str:
-    return re.sub(r"[^a-z]", "", x.lower())
+    # Whisper menulis angka sebagai digit ("1932", "20.000"); kata bilangan di naskah dan digit
+    # di transkrip sama-sama dibuang supaya take yang benar tidak dinilai salah.
+    x = re.sub(_NUM_WORDS, " ", x.lower())
+    return re.sub(r"[^a-z]", "", x)
 
 
 def clean_for_tts(text: str) -> str:
@@ -173,6 +179,14 @@ SCENES = [
     },
 ]
 
+# Naskah lain bisa diberikan lewat argumen: python3 build_audio_expressive.py naskah.json
+# (format: [{"scene": "...", "phrases": [["narasi", "kalimat"], ...]}, ...]); nama output = <stem>_expressive.
+import sys
+NAME = "kabayan_expressive"
+if len(sys.argv) > 1:
+    SCENES = json.loads(Path(sys.argv[1]).read_text())
+    NAME = Path(sys.argv[1]).stem + "_expressive"
+
 chunks = []
 timeline = []
 cursor_s = 0.25
@@ -222,9 +236,9 @@ env = np.abs(voice_track)
 duck = 1.0 - np.clip(signal.lfilter(np.ones(2200) / 2200, 1, env) * 4.5, 0, 0.78)
 mix = np.clip(voice_track + bgm * duck, -0.95, 0.95)
 
-wav_out = Path("/tmp/kabayan_expressive.wav")
-mp3_out = OUT_DIR / "kabayan_expressive.mp3"
-json_out = OUT_DIR / "kabayan_expressive_timeline.json"
+wav_out = Path(f"/tmp/{NAME}.wav")
+mp3_out = OUT_DIR / f"{NAME}.mp3"
+json_out = OUT_DIR / f"{NAME}_timeline.json"
 
 with wave.open(str(wav_out), "wb") as wf:
     wf.setnchannels(1)
