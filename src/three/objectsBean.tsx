@@ -15,7 +15,18 @@ export type BeanParams = {
   skin?: string;
   torso?: string;
   pants?: string;
-  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet";
+  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping";
+  pangsi?: string; // loose trousers drawn over the legs
+  sleeves?: string; // long sleeves (kampret / kebaya)
+  kebaya?: string; // kebaya top with lace edge (uses torso colour)
+  skirt?: string; // sinjang / batik skirt to the calves
+  batik?: string; // batik motif colour for skirt / iket
+  slung?: string; // sarung slung over the shoulder
+  selendang?: string;
+  golok?: boolean;
+  wet?: number; // 0..1 soaked from the feet up
+  gooColor?: string;
+  barefoot?: boolean;
   beard?: string;
   robe?: string; // long robe to the ankles
   robeTrim?: string;
@@ -106,6 +117,41 @@ const sleeve = (c: CanvasRenderingContext2D, x: number, y: number, a: [number, n
 };
 const slipper = (c: CanvasRenderingContext2D, x: number, y: number, col: string) => {
   poly(c, [[x - 18, y - 16], [x + 30, y - 14], [x + 58, y - 22], [x + 62, y - 34], [x + 70, y - 22], [x + 56, y + 6], [x - 20, y + 6]], col, INKC, 6);
+};
+
+const trouser = (c: CanvasRenderingContext2D, x: number, y: number, a: [number, number], col: string) => {
+  const k = tip(x, y, 165, a[0]);
+  const f = tip(k[0], k[1], 150, a[0] + a[1]);
+  const band = (p0: [number, number], p1: [number, number], w0: number, w1: number) => {
+    const dx = p1[0] - p0[0];
+    const dy = p1[1] - p0[1];
+    const L = Math.hypot(dx, dy) || 1;
+    const nx = -dy / L;
+    const ny = dx / L;
+    poly(c, [[p0[0] + nx * w0, p0[1] + ny * w0], [p1[0] + nx * w1, p1[1] + ny * w1], [p1[0] - nx * w1, p1[1] - ny * w1], [p0[0] - nx * w0, p0[1] - ny * w0]], col, INKC, 6);
+  };
+  band([x, y - 10], k, 34, 28);
+  band(k, f, 28, 30);
+  c.fillStyle = col;
+  c.beginPath();
+  c.arc(k[0], k[1], 27, 0, Math.PI * 2);
+  c.fill();
+};
+const batikDots = (c: CanvasRenderingContext2D, x0: number, y0: number, x1: number, y1: number, col: string, step = 26) => {
+  c.save();
+  c.strokeStyle = col;
+  c.lineWidth = 4;
+  for (let y = y0 + step / 2; y < y1; y += step)
+    for (let x = x0 + ((y / step) % 2 ? step / 2 : 0); x < x1; x += step) {
+      c.beginPath();
+      c.moveTo(x - 7, y + 7);
+      c.lineTo(x + 7, y - 7);
+      c.stroke();
+      c.beginPath();
+      c.arc(x + 8, y + 6, 3, 0, Math.PI * 2);
+      c.stroke();
+    }
+  c.restore();
 };
 const drawProp = (c: CanvasRenderingContext2D, p: BeanParams, hx: number, hy: number, ang: number) => {
   if (!p.prop || p.prop === "none") return;
@@ -214,9 +260,12 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   limb(c, 280, hipY, 165, 170, lL, 10);
   const footL = tip(...tip(280, hipY, 165, lL[0]), 170, lL[0] + lL[1]);
   if (p.robe) slipper(c, footL[0], footL[1], p.robeTrim ?? "#8a3a2a");
-  else seg(c, footL[0], footL[1], footL[0] + 40, footL[1], 10);
+  else if (!p.barefoot) seg(c, footL[0], footL[1], footL[0] + 40, footL[1], 10);
+  else poly(c, [[footL[0] - 8, footL[1] - 8], [footL[0] + 36, footL[1] - 6], [footL[0] + 40, footL[1] + 6], [footL[0] - 8, footL[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
+  if (p.pangsi) trouser(c, 280, hipY, lL, p.pangsi);
   const handL = limb(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, 130, 120, aL, 9);
   if (p.robe) sleeve(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, aL, p.robe, p.robeTrim ?? p.sash);
+  else if (p.sleeves) sleeve(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, aL, p.sleeves);
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handL[0], handL[1], 12, 0, Math.PI * 2);
@@ -270,7 +319,57 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   limb(c, 322, hipY, 165, 170, lR, 10);
   const footR = tip(...tip(322, hipY, 165, lR[0]), 170, lR[0] + lR[1]);
   if (p.robe) slipper(c, footR[0], footR[1], p.robeTrim ?? "#8a3a2a");
-  else seg(c, footR[0], footR[1], footR[0] + 40, footR[1], 10);
+  else if (!p.barefoot) seg(c, footR[0], footR[1], footR[0] + 40, footR[1], 10);
+  else poly(c, [[footR[0] - 8, footR[1] - 8], [footR[0] + 36, footR[1] - 6], [footR[0] + 40, footR[1] + 6], [footR[0] - 8, footR[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
+  if (p.pangsi) trouser(c, 322, hipY, lR, p.pangsi);
+  if (p.skirt) {
+    const wd = p.wide ?? 1;
+    poly(c, [[300 - 66 * wd, hipY - 30], [300 + 66 * wd, hipY - 30], [300 + 80 * wd, 868], [300 - 80 * wd, 868]], p.skirt, INKC, 8);
+    c.save();
+    c.beginPath();
+    c.moveTo(300 - 66 * wd, hipY - 30);
+    c.lineTo(300 + 66 * wd, hipY - 30);
+    c.lineTo(300 + 80 * wd, 868);
+    c.lineTo(300 - 80 * wd, 868);
+    c.closePath();
+    c.clip();
+    batikDots(c, 200, hipY - 30, 400, 868, p.batik ?? "#f2d8a0");
+    c.restore();
+    seg(c, 300 + 30 * wd, hipY - 20, 300 + 46 * wd, 866, 4, INKC);
+  }
+  if (p.kebaya) {
+    const wd = p.wide ?? 1;
+    poly(c, [[300 - 54 * wd + tx, shY - 2], [300 + 54 * wd + tx, shY - 2], [300 + 70 * wd, shY + 150], [300 + 72 * wd, hipY + 40], [300 - 72 * wd, hipY + 40], [300 - 70 * wd, shY + 150]], p.kebaya, INKC, 8);
+    for (let k = 0; k < 8; k++) {
+      c.beginPath();
+      c.arc(300 - 64 * wd + k * 18 * wd, hipY + 40, 9, 0, Math.PI);
+      c.fillStyle = "#fff6f0";
+      c.fill();
+      c.strokeStyle = INKC;
+      c.lineWidth = 3;
+      c.stroke();
+    }
+    poly(c, [[300 - 26 + tx, shY - 4], [300 + 26 + tx, shY - 4], [300 + 8, hipY + 36], [300 - 8, hipY + 36]], "#fff6f0", INKC, 4);
+    [0, 1, 2].forEach((k) => {
+      c.fillStyle = "#e0b040";
+      c.beginPath();
+      c.arc(300 + tx * (1 - k * 0.3), shY + 70 + k * 70, 7, 0, Math.PI * 2);
+      c.fill();
+      c.stroke();
+    });
+  }
+  if (p.selendang) poly(c, [[300 + 50 + tx, shY - 4], [300 + 76 + tx, shY + 10], [300 - 50, hipY + 50], [300 - 74, hipY + 30]], p.selendang, INKC, 5);
+  if (p.slung) {
+    poly(c, [[300 + 40 + tx, shY - 10], [300 + 74 + tx, shY + 14], [300 - 56, hipY + 40], [300 - 84, hipY + 10]], p.slung, INKC, 6);
+    for (let k = 1; k < 6; k++) {
+      const a = k / 6;
+      seg(c, 300 + 40 + tx + (-96 - tx) * a, shY - 10 + (hipY + 20 - shY) * a, 300 + 74 + tx + (-130 - tx) * a, shY + 14 + (hipY + 26 - shY - 14) * a, 4, "rgba(255,255,255,0.45)");
+    }
+  }
+  if (p.golok) {
+    poly(c, [[300 - 70, hipY - 6], [300 - 50, hipY - 16], [300 - 126, hipY + 150], [300 - 146, hipY + 140]], "#5a3a1a", INKC, 5);
+    poly(c, [[300 - 52, hipY - 14], [300 - 36, hipY - 40], [300 - 22, hipY - 34], [300 - 38, hipY - 8]], "#2a1a10", INKC, 4);
+  }
   if (p.robe) {
     const wd = p.wide ?? 1;
     poly(c, [[300 - 56 * wd + tx, shY - 2], [300 + 56 * wd + tx, shY - 2], [300 + 92 * wd, 905], [300 - 92 * wd, 905]], p.robe, INKC, 8);
@@ -506,6 +605,39 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   } else if (hat === "kerchief") {
     poly(c, [[190, 170], [210, 100], [300, 78], [390, 100], [410, 170], [350, 128], [250, 128]], hatCol, INKC, 8);
     poly(c, [[392, 160], [440, 190], [420, 230], [396, 180]], hatCol, INKC, 6);
+  } else if (hat === "iket") {
+    poly(c, [[190, 172], [196, 112], [300, 88], [404, 112], [410, 172], [300, 156]], hatCol, INKC, 7);
+    c.save();
+    c.beginPath();
+    c.moveTo(190, 172);
+    c.lineTo(196, 112);
+    c.lineTo(300, 88);
+    c.lineTo(404, 112);
+    c.lineTo(410, 172);
+    c.closePath();
+    c.clip();
+    batikDots(c, 186, 86, 414, 176, p.batik ?? "#e8c070", 22);
+    c.restore();
+    poly(c, [[252, 120], [300, 40], [348, 120]], hatCol, INKC, 7);
+    poly(c, [[392, 140], [452, 112], [446, 152], [404, 166]], hatCol, INKC, 6);
+    seg(c, 196, 150, 404, 150, 4, "rgba(0,0,0,0.3)");
+  } else if (hat === "sanggul") {
+    c.fillStyle = p.hair ?? "#1c1418";
+    c.beginPath();
+    c.arc(400, 140, 44, 0, Math.PI * 2);
+    c.fill();
+    c.strokeStyle = INKC;
+    c.lineWidth = 6;
+    c.stroke();
+    poly(c, [[186, 196], [192, 122], [250, 84], [350, 84], [408, 122], [414, 196], [390, 150], [300, 128], [210, 150]], p.hair ?? "#1c1418", INKC, 6);
+    seg(c, 380, 108, 430, 90, 5, "#e0b040");
+    c.fillStyle = "#e0b040";
+    c.beginPath();
+    c.arc(432, 88, 8, 0, Math.PI * 2);
+    c.fill();
+  } else if (hat === "caping") {
+    poly(c, [[140, 170], [300, 40], [460, 170]], hatCol, INKC, 7);
+    [200, 250, 300, 350, 400].forEach((x) => seg(c, 300, 48, x, 166, 3, "rgba(0,0,0,0.25)"));
   } else if (hat === "turban") {
     c.fillStyle = hatCol;
     poly(c, [[190, 170], [196, 110], [250, 76], [350, 76], [404, 110], [410, 170], [300, 150]], hatCol, INKC, 7);
@@ -576,6 +708,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   // near arm
   const handR = limb(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aR, 9);
   if (p.robe) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.robe, p.robeTrim ?? p.sash);
+  else if (p.sleeves) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.sleeves);
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handR[0], handR[1], 12, 0, Math.PI * 2);
@@ -587,7 +720,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.save();
     c.globalCompositeOperation = "source-atop";
     const top = 980 - p.goo * 900;
-    c.fillStyle = "#5a2a10";
+    c.fillStyle = p.gooColor ?? "#5a2a10";
     c.beginPath();
     c.moveTo(0, 1000);
     c.lineTo(0, top);
@@ -598,6 +731,28 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.fillStyle = "rgba(255,180,90,0.35)";
     c.fillRect(80, top + 6, 440, 6);
     c.restore();
+  }
+  if (p.wet && p.wet > 0) {
+    c.save();
+    c.globalCompositeOperation = "source-atop";
+    c.fillStyle = `rgba(40,80,140,${0.22 * Math.min(1, p.wet * 1.5)})`;
+    const wy = Math.max(372, 1000 - p.wet * 1000);
+    c.fillRect(0, wy, BW, 1000 - wy);
+    c.restore();
+    c.fillStyle = "#8fd3ff";
+    c.strokeStyle = INKC;
+    c.lineWidth = 3;
+    const sd = p.seed ?? 0;
+    for (let k = 0; k < Math.round(8 * p.wet); k++) {
+      const x = 220 + ((k * 73 + sd * 31) % 160);
+      const y = 300 + ((k * 137 + sd * 17) % 560);
+      c.beginPath();
+      c.moveTo(x, y - 14);
+      c.quadraticCurveTo(x + 9, y, x, y + 8);
+      c.quadraticCurveTo(x - 9, y, x, y - 14);
+      c.fill();
+      c.stroke();
+    }
   }
 };
 
