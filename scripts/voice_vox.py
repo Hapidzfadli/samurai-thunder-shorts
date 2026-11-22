@@ -87,9 +87,23 @@ def build(script_path: Path, name: str):
         sc_from = cur; lines = []
         for li, (style, text) in enumerate(sc["lines"]):
             t0 = time.time(); print(f"[{sc['scene']} | {style}] {text}", flush=True)
-            score, y, words = v.line(text, style, n=sc.get("takes", 3))
+            cached = WORK / name / f"{sc['scene']}_{li}.wav"
+            if cached.exists():  # lanjutkan proses yang terhenti: pakai potongan yang sudah jadi
+                with wave.open(str(cached)) as wf:
+                    y = np.frombuffer(wf.readframes(wf.getnframes()), np.int16).astype(np.float32) / 32767
+                heard, words = v.hear(y, sr)
+                score = difflib.SequenceMatcher(None, letters(text), letters(heard)).ratio()
+                print(f"    (cache) {score:.2f} <- {heard}", flush=True)
+            else:
+                score, y, words = v.line(text, style, n=sc.get("takes", 3))
             y = y.copy(); y[:fade] *= np.linspace(0, 1, fade); y[-fade:] *= np.linspace(1, 0, fade)
-            lines.append({"style": style, "text": text, "score": round(score, 3), "from": int(round(cur * FPS)),
+            # simpan juga potongan per kalimat (untuk ditata ulang oleh skrip mix per video)
+            clip_dir = WORK / name; clip_dir.mkdir(parents=True, exist_ok=True)
+            clip_path = clip_dir / f"{sc['scene']}_{li}.wav"
+            with wave.open(str(clip_path), "wb") as wf:
+                wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(sr); wf.writeframes((np.clip(y, -1, 1) * 32767).astype(np.int16).tobytes())
+            lines.append({"style": style, "text": text, "score": round(score, 3), "file": str(clip_path.relative_to(ROOT)),
+                          "wordsSec": [[w, round(a, 3), round(b, 3)] for w, a, b in words], "from": int(round(cur * FPS)),
                           "to": int(round((cur + len(y) / sr) * FPS)),
                           "words": [{"w": w, "from": int(round((cur + a) * FPS)), "to": int(round((cur + b) * FPS))} for w, a, b in words]})
             # jeda alami: koma/elipsis pendek, akhir kalimat sedang, akhir adegan lebih panjang

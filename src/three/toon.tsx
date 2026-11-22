@@ -23,6 +23,7 @@ export const G = {
   cyl: (rt: number, rb: number, h: number, s = 18, open = false, t0 = 0, tl = Math.PI * 2) =>
     memo(`cyl${rt},${rb},${h},${s},${open},${t0},${tl}`, () => new THREE.CylinderGeometry(rt, rb, h, s, 1, open, t0, tl)),
   sph: (r: number, w = 28, h = 18) => memo(`sph${r},${w},${h}`, () => new THREE.SphereGeometry(r, w, h)),
+  dome: (r: number, th: number, w = 28) => memo(`dome${r},${th},${w}`, () => new THREE.SphereGeometry(r, w, 12, 0, Math.PI * 2, 0, th)),
   cap: (r: number, len: number, s = 16) => memo(`cap${r},${len},${s}`, () => new THREE.CapsuleGeometry(r, len, 6, s)),
   cone: (r: number, h: number, s = 14) => memo(`cone${r},${h},${s}`, () => new THREE.ConeGeometry(r, h, s)),
   tor: (R: number, r: number, rs = 8, ts = 28, arc = Math.PI * 2) => memo(`tor${R},${r},${rs},${ts},${arc}`, () => new THREE.TorusGeometry(R, r, rs, ts, arc)),
@@ -238,7 +239,7 @@ export const BlueGrid: React.FC<{ size?: number; y?: number }> = ({ size = 60, y
 };
 
 /* ---------------- tokoh kepala bulat 3D ---------------- */
-export type Expr3 = "neutral" | "smug" | "shock" | "angry" | "happy" | "worried" | "determined" | "laugh" | "puzzled";
+export type Expr3 = "neutral" | "smug" | "shock" | "angry" | "happy" | "worried" | "determined" | "laugh" | "puzzled" | "shout" | "proud";
 export type Bean3Params = {
   body: string; // warna baju
   pants?: string;
@@ -246,7 +247,7 @@ export type Bean3Params = {
   glove?: string; // warna tangan (bola)
   skin?: string; // warna kepala
   sleeve?: string;
-  hat?: "peaked" | "slouch" | "wide" | "none";
+  hat?: "peaked" | "slouch" | "wide" | "fedora" | "none";
   hatColor?: string;
   hatBand?: string;
   expr?: Expr3;
@@ -264,10 +265,19 @@ export type Bean3Params = {
   lean?: number; // condong maju (rad)
   headTilt?: number;
   headTurn?: number;
+  walk?: number; // fase langkah (rad); undefined = berdiri
+  talk?: number; // 0..1 bukaan mulut saat bicara
+  hair?: string; // rambut (untuk tokoh tanpa topi)
+  seated?: boolean; // duduk (kaki ke depan)
+  kneel?: number; // 0..1 berlutut/jongkok di balik karung pasir
+  tie?: string; // dasi (jas)
+  shirt?: string; // kerah kemeja di balik jas
+  medal?: boolean; // medali veteran di dada
+  hide?: "hat"[]; // sembunyikan bagian (topi dipegang/terlempar sebagai benda terpisah)
 };
 const FACE = 512;
 type FaceSlot = { cv: HTMLCanvasElement; tex: THREE.DataTexture; buf: Uint8Array; key: string };
-const drawFace = (ctx: CanvasRenderingContext2D, expr: Expr3, look: number, mustache: boolean) => {
+const drawFace = (ctx: CanvasRenderingContext2D, expr: Expr3, look: number, mustache: boolean, talk = 0) => {
   const W = FACE;
   ctx.clearRect(0, 0, W, W);
   const ink = "#3b3a44";
@@ -311,8 +321,20 @@ const drawFace = (ctx: CanvasRenderingContext2D, expr: Expr3, look: number, must
     else ctx.arc(x, y - r * 0.5, r, Math.PI * 0.15, Math.PI * 0.85);
     ctx.stroke();
   };
-  const mouth = (kind: "line" | "smirk" | "o" | "frown" | "smile" | "open" | "wavy") => {
+  const mouth = (kind0: "line" | "smirk" | "o" | "frown" | "smile" | "open" | "wavy") => {
     const my = W * 0.715;
+    let kind = kind0;
+    if (talk > 0.12 && kind0 !== "open" && kind0 !== "o") {
+      // mulut bicara: elips terbuka, tinggi mengikuti suara
+      ctx.strokeStyle = ink;
+      ctx.fillStyle = "#4a2a30";
+      ctx.lineWidth = 9;
+      ctx.beginPath();
+      ctx.ellipse(ex, my + 4, 30 + talk * 10, 8 + talk * 30, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      return;
+    }
     ctx.strokeStyle = ink;
     ctx.fillStyle = "#4a2a30";
     ctx.lineWidth = 9;
@@ -401,6 +423,20 @@ const drawFace = (ctx: CanvasRenderingContext2D, expr: Expr3, look: number, must
       eye(ex + dx, ey + 2, 0.7);
       mouth("line");
       break;
+    case "shout":
+      brow(ex - dx, by + 6, 0.42, 80, 26);
+      brow(ex + dx, by + 6, -0.42, 80, 26);
+      eye(ex - dx, ey + 4, 0.6);
+      eye(ex + dx, ey + 4, 0.6);
+      mouth("open");
+      break;
+    case "proud":
+      brow(ex - dx, by - 10, -0.12, 74, 22, 6);
+      brow(ex + dx, by - 10, 0.12, 74, 22, 6);
+      eye(ex - dx, ey + 4, 0.4);
+      eye(ex + dx, ey + 4, 0.4);
+      mouth("smirk");
+      break;
     case "puzzled":
       brow(ex - dx, by - 20, -0.1, 70, 22, 12);
       brow(ex + dx, by + 6, -0.22, 70, 22);
@@ -429,7 +465,7 @@ const drawFace = (ctx: CanvasRenderingContext2D, expr: Expr3, look: number, must
   }
 };
 
-const FaceDecal: React.FC<{ r: number; expr: Expr3; look: number; mustache: boolean }> = ({ r, expr, look, mustache }) => {
+const FaceDecal: React.FC<{ r: number; expr: Expr3; look: number; mustache: boolean; talk?: number }> = ({ r, expr, look, mustache, talk = 0 }) => {
   const slot = useMemo<FaceSlot>(() => {
     const cv = document.createElement("canvas");
     cv.width = cv.height = FACE;
@@ -442,10 +478,11 @@ const FaceDecal: React.FC<{ r: number; expr: Expr3; look: number; mustache: bool
     tex.magFilter = THREE.LinearFilter;
     return { cv, tex, buf, key: "" };
   }, []);
-  const key = `${expr}|${look.toFixed(2)}|${mustache}`;
+  const tq = Math.round(talk * 6) / 6;
+  const key = `${expr}|${look.toFixed(2)}|${mustache}|${tq}`;
   if (slot.key !== key) {
     const ctx = slot.cv.getContext("2d", { willReadFrequently: true })!;
-    drawFace(ctx, expr, look, mustache);
+    drawFace(ctx, expr, look, mustache, tq);
     slot.buf.set(ctx.getImageData(0, 0, FACE, FACE).data);
     slot.key = key;
   }
@@ -461,7 +498,7 @@ const FaceDecal: React.FC<{ r: number; expr: Expr3; look: number; mustache: bool
   );
 };
 
-const Hat: React.FC<{ kind: Bean3Params["hat"]; c: string; band: string; r: number }> = ({ kind, c, band, r }) => {
+export const Hat: React.FC<{ kind: Bean3Params["hat"]; c: string; band: string; r: number }> = ({ kind, c, band, r }) => {
   if (!kind || kind === "none") return null;
   if (kind === "peaked")
     return (
@@ -471,6 +508,15 @@ const Hat: React.FC<{ kind: Bean3Params["hat"]; c: string; band: string; r: numb
         {/* pet topi menonjol ke depan, di atas alis */}
         <T g={G.cyl(r * 0.98, r * 0.98, 0.025, 28, false, -Math.PI / 2, Math.PI)} c="#1a1814" position={[0, -r * 0.02, r * 0.05]} rotation={[0.2, 0, 0]} scale={[0.82, 1, 1]} o={2} />
         <T g={G.sph(r * 0.08, 10, 8)} c="#e8c050" position={[0, r * 0.26, r * 0.86]} o={2} emissive="#6a4a00" ei={0.4} />
+      </group>
+    );
+  if (kind === "fedora")
+    return (
+      <group position={[0, r * 0.66, 0]} rotation={[-0.1, 0, 0.06]}>
+        <T g={G.cyl(r * 0.6, r * 0.78, r * 0.48, 24)} c={c} position={[0, r * 0.24, 0]} scale={[1, 1, 0.9]} />
+        <T g={G.box(r * 0.5, r * 0.08, r * 0.2)} c={c} position={[0, r * 0.49, 0]} o={2} />
+        <T g={G.cyl(r * 0.79, r * 0.79, r * 0.12, 24)} c={band} position={[0, r * 0.04, 0]} scale={[1, 1, 0.9]} o={2} />
+        <T g={G.annulus(r * 0.75, r * 1.25, 0, Math.PI * 2)} c={c} o={2} scale={[1, 1, 0.92]} />
       </group>
     );
   if (kind === "slouch")
@@ -495,32 +541,77 @@ const Hat: React.FC<{ kind: Bean3Params["hat"]; c: string; band: string; r: numb
   );
 };
 
+export const HEAD_R = 0.46;
+const bodyOffset = (p: Bean3Params): Vec3 => {
+  const walkBob = p.walk !== undefined ? Math.abs(Math.sin(p.walk)) * 0.035 : 0;
+  const kneel = p.kneel ?? 0;
+  return [0, (p.bob ?? 0) + walkBob - kneel * 0.32 - (p.seated ? 0.2 : 0), 0];
+};
+const defaultHand = (p: Bean3Params, side: -1 | 1): Vec3 => {
+  const sw = p.walk !== undefined ? Math.sin(p.walk) * 0.16 * side : 0;
+  return [side * 0.42, 0.6, 0.1 + sw];
+};
+/** posisi dunia tangan tokoh (untuk benda yang dipegang / berpindah tangan) */
+export const bean3HandWorld = (p: Bean3Params, side: "L" | "R", position: Vec3, rotY = 0, scale = 1): Vec3 => {
+  const h = side === "L" ? p.handL ?? defaultHand(p, -1) : p.handR ?? defaultHand(p, 1);
+  const off = bodyOffset(p);
+  const lean = p.lean ?? 0;
+  const y = h[1] * Math.cos(lean) - h[2] * Math.sin(lean);
+  const z = h[1] * Math.sin(lean) + h[2] * Math.cos(lean);
+  const lx = h[0] * scale,
+    ly = (y + off[1]) * scale,
+    lz = z * scale;
+  return [position[0] + lx * Math.cos(rotY) + lz * Math.sin(rotY), position[1] + ly, position[2] - lx * Math.sin(rotY) + lz * Math.cos(rotY)];
+};
+/** posisi dunia puncak kepala (untuk topi yang dipakaikan) */
+export const bean3HeadWorld = (p: Bean3Params, position: Vec3, rotY = 0, scale = 1): Vec3 => {
+  const off = bodyOffset(p);
+  return [position[0], position[1] + (1.42 + off[1]) * scale, position[2]];
+};
+
 export const Bean3: React.FC<{ p: Bean3Params; position?: Vec3; rotation?: Vec3; scale?: number; children?: React.ReactNode }> = ({ p, position = [0, 0, 0], rotation = [0, 0, 0], scale = 1, children }) => {
-  const R = 0.46; // jari-jari kepala
+  const R = HEAD_R;
   const skin = p.skin ?? "#f4f1ec";
   const glove = p.glove ?? "#2a2a2e";
   const sleeve = p.sleeve ?? p.body;
   const pants = p.pants ?? p.body;
   const boots = p.boots ?? "#2e241c";
-  const bob = p.bob ?? 0;
+  const off = bodyOffset(p);
   const SH: Vec3[] = [
-    [-0.25, 1.0 + bob, 0.02],
-    [0.25, 1.0 + bob, 0.02],
+    [-0.25, 1.0, 0.02],
+    [0.25, 1.0, 0.02],
   ];
-  const hL = p.handL ?? [-0.42, 0.6 + bob, 0.1];
-  const hR = p.handR ?? [0.42, 0.6 + bob, 0.1];
+  const hL = p.handL ?? defaultHand(p, -1);
+  const hR = p.handR ?? defaultHand(p, 1);
+  const kneel = p.kneel ?? 0;
+  const leg = (side: -1 | 1) => {
+    const x = side * 0.12;
+    if (p.seated)
+      return (
+        <group key={side} position={[x, 0.2, 0]}>
+          <Limb a={[0, 0, 0]} b={[0, 0, 0.34]} r={0.075} c={pants} />
+          <Limb a={[0, 0, 0.34]} b={[0, -0.2, 0.36]} r={0.07} c={pants} />
+          <T g={G.rbox(0.17, 0.11, 0.26, 0.5)} c={boots} position={[0, -0.25, 0.42]} />
+        </group>
+      );
+    const swing = p.walk !== undefined ? Math.sin(p.walk) * 0.55 * -side : 0;
+    const lift = p.walk !== undefined ? Math.max(0, Math.sin(p.walk * side)) * 0.05 : 0;
+    return (
+      <group key={side} position={[x, 0.38 - kneel * 0.32 + lift, 0]} rotation={[swing - kneel * 0.9, 0, 0]}>
+        <T g={G.cyl(0.075, 0.07, 0.36, 12)} c={pants} position={[0, -0.18, 0]} />
+        <T g={G.rbox(0.17, 0.11, 0.26, 0.5)} c={boots} position={[0, -0.325, 0.04]} rotation={[kneel * 0.9, 0, 0]} />
+      </group>
+    );
+  };
   return (
     <group position={position} rotation={rotation} scale={scale}>
-      {/* kaki & sepatu bot */}
-      {[-0.12, 0.12].map((x) => (
-        <group key={x}>
-          <T g={G.cyl(0.075, 0.07, 0.36, 12)} c={pants} position={[x, 0.2, 0]} />
-          <T g={G.rbox(0.17, 0.11, 0.26, 0.5)} c={boots} position={[x, 0.055, 0.04]} />
-        </group>
-      ))}
-      <group position={[0, bob, 0]} rotation={[p.lean ?? 0, 0, 0]}>
+      {leg(-1)}
+      {leg(1)}
+      <group position={off} rotation={[p.lean ?? 0, 0, 0]}>
         {/* badan */}
         <T g={G.cap(0.29, 0.42, 20)} c={p.body} position={[0, 0.76, 0]} />
+        {p.shirt ? <T g={G.cone(0.13, 0.3, 3)} c={p.shirt} position={[0, 0.97, 0.235]} rotation={[0.25, 0, Math.PI]} o={2} /> : null}
+        {p.tie ? <T g={G.box(0.06, 0.26, 0.02)} c={p.tie} position={[0, 0.9, 0.285]} rotation={[-0.1, 0, 0]} o={2} /> : null}
         {p.plaid ? (
           <>
             {[-0.16, 0, 0.16].map((x) => (
@@ -540,6 +631,12 @@ export const Bean3: React.FC<{ p: Bean3Params; position?: Vec3; rotation?: Vec3;
             ))}
           </>
         ) : null}
+        {p.medal ? (
+          <group position={[-0.14, 0.9, 0.27]}>
+            <T g={G.box(0.05, 0.07, 0.015)} c="#c8323a" o={2} position={[0, 0.04, 0]} />
+            <T g={G.cyl(0.035, 0.035, 0.015, 14)} c="#e8c050" o={2} rotation={[Math.PI / 2, 0, 0]} emissive="#6a4a00" ei={0.4} />
+          </group>
+        ) : null}
         {p.collar ? <T g={G.cyl(0.2, 0.26, 0.08, 18)} c={p.collar} position={[0, 1.06, 0]} o={2} /> : null}
         {p.belt ? <T g={G.tor(0.29, 0.035, 6, 28)} c={p.belt} position={[0, 0.55, 0]} rotation={[Math.PI / 2, 0, 0]} o={2} /> : null}
         {p.strap ? <T g={G.box(0.05, 0.62, 0.02)} c={p.strap} position={[0.02, 0.8, 0.27]} rotation={[0, 0, -0.55]} o={2} /> : null}
@@ -554,8 +651,9 @@ export const Bean3: React.FC<{ p: Bean3Params; position?: Vec3; rotation?: Vec3;
         {/* kepala */}
         <group position={[0, 1.42, 0]} rotation={[p.headTilt ?? 0, p.headTurn ?? 0, 0]}>
           <T g={G.sph(R, 36, 24)} c={skin} emissive="#ffffff" ei={0.08} />
-          <FaceDecal r={R} expr={p.expr ?? "neutral"} look={p.look ?? 0} mustache={!!p.mustache} />
-          <Hat kind={p.hat} c={p.hatColor ?? "#6a6a4a"} band={p.hatBand ?? "#3a2a1a"} r={R} />
+          <FaceDecal r={R} expr={p.expr ?? "neutral"} look={p.look ?? 0} mustache={!!p.mustache} talk={p.talk ?? 0} />
+          {p.hair ? <T g={G.dome(R * 1.035, 1.2)} c={p.hair} rotation={[-0.42, 0, 0]} o={2} /> : null}
+          {p.hide?.includes("hat") ? null : <Hat kind={p.hat} c={p.hatColor ?? "#6a6a4a"} band={p.hatBand ?? "#3a2a1a"} r={R} />}
         </group>
         {children}
       </group>
@@ -609,5 +707,58 @@ export const ToonSky: React.FC<{ top: string; horizon: string; bottom?: string; 
     <mesh material={mat}>
       <sphereGeometry args={[r, 32, 16]} />
     </mesh>
+  );
+};
+
+/* ---------------- tekstur kanvas (diunggah ulang tiap frame, aturan render video) ---------------- */
+type CvSlot = { cv: HTMLCanvasElement; tex: THREE.DataTexture; buf: Uint8Array; key: string };
+export const useCanvasTex = (w: number, h: number, key: string, draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void) => {
+  const slot = useMemo<CvSlot>(() => {
+    const cv = document.createElement("canvas");
+    cv.width = w;
+    cv.height = h;
+    const buf = new Uint8Array(w * h * 4);
+    const tex = new THREE.DataTexture(buf, w, h, THREE.RGBAFormat, THREE.UnsignedByteType);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    tex.flipY = true;
+    tex.generateMipmaps = true;
+    tex.minFilter = THREE.LinearMipmapLinearFilter;
+    tex.magFilter = THREE.LinearFilter;
+    tex.anisotropy = 4;
+    return { cv, tex, buf, key: "" };
+  }, [w, h]);
+  if (slot.key !== key) {
+    const ctx = slot.cv.getContext("2d", { willReadFrequently: true })!;
+    ctx.clearRect(0, 0, w, h);
+    draw(ctx, w, h);
+    slot.buf.set(ctx.getImageData(0, 0, w, h).data);
+    slot.key = key;
+  }
+  slot.tex.needsUpdate = true;
+  return slot.tex;
+};
+/** bidang bertekstur kanvas (kertas, papan nama, peta, koran) */
+export const CanvasPlane: React.FC<{ w: number; h: number; px?: number; drawKey: string; draw: (ctx: CanvasRenderingContext2D, w: number, h: number) => void; position?: Vec3; rotation?: Vec3; toon?: boolean; o?: number | false }> = ({
+  w,
+  h,
+  px = 512,
+  drawKey,
+  draw,
+  position,
+  rotation,
+  toon = true,
+  o = 2,
+}) => {
+  const tw = px;
+  const th = Math.max(8, Math.round((px * h) / w));
+  const tex = useCanvasTex(tw, th, drawKey, draw);
+  const g = G.box(w, h, 0.004);
+  return (
+    <group position={position} rotation={rotation}>
+      <mesh geometry={g} receiveShadow>
+        {toon ? <meshToonMaterial map={tex} gradientMap={toonGradient()} /> : <meshBasicMaterial map={tex} toneMapped={false} />}
+      </mesh>
+      {o ? <mesh geometry={hullOf(g)} material={outlineMat(o)} /> : null}
+    </group>
   );
 };
