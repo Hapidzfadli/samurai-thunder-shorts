@@ -122,3 +122,30 @@ const Sheet: React.FC<{ title: string; rows: Row[]; rot: number[]; bg: string }>
 const BG = "linear-gradient(#1e1a2e 0%, #6a3a2a 45%, #c8743a 62%, #3a2a24 63%, #2a201c 100%)";
 export const SheetSurabaya: React.FC = () => <Sheet title="KARAKTER · PIHAK INDONESIA · SURABAYA 1945" rows={INDONESIA} rot={[0.3, 0.15, 0.1, -0.1]} bg={BG} />;
 export const SheetSurabayaInggris: React.FC = () => <Sheet title="KARAKTER · PIHAK INGGRIS (SEKUTU) · SURABAYA 1945" rows={INGGRIS} rot={[0.25, -0.15, -0.25]} bg="linear-gradient(#141a24 0%, #3a3a4a 45%, #8a6a4a 62%, #2a2a26 63%, #1e1e1c 100%)" />;
+
+/* close-up wajah (cek detail) */
+const FACES: [string, HeroP][] = [
+  ["Arek Suroboyo · berteriak", { ...AREK, armL: undefined, armR: undefined }],
+  ["Pejuang TKR · tegas", { ...TKR, armL: undefined, armR: undefined }],
+  ["Orator Radio · berapi-api", { ...ORATOR, armL: undefined, armR: undefined }],
+  ["Relawan PMI · tegar", { ...PMI, armL: undefined, armR: undefined }],
+  ["Prajurit Gurkha · marah", { ...GURKHA, armL: undefined, armR: undefined }],
+  ["Perwira Inggris · angkuh", { ...OFFICER, armL: undefined, armR: undefined }],
+];
+export const SheetSurabayaWajah: React.FC = () => (
+  <AbsoluteFill style={{ background: "linear-gradient(#2a2030, #6a4030)", display: "flex", flexWrap: "wrap" }}>
+    {FACES.map(([n, p], i) => (
+      <div key={i} style={{ position: "relative", width: 666, height: 575, overflow: "hidden" }}>
+        <ThreeCanvas width={666} height={575} flat camera={{ fov: 20, near: 0.05, far: 50, position: [0, 1.85, 1.3] }}>
+          <ToonRes />
+          <CameraRig position={[0.12, 1.86, 1.25]} lookAt={[0, 1.83, 0]} fov={20} />
+          <hemisphereLight args={["#ffe2c4", "#4a3a3a", 1.15]} />
+          <directionalLight position={[-3, 4, 5]} intensity={1.9} color="#fff0dc" />
+          <directionalLight position={[4, 2, -3]} intensity={1.0} color="#ff9a5a" />
+          <Hero p={p} scale={1.1} />
+        </ThreeCanvas>
+        <div style={{ position: "absolute", bottom: 12, left: 0, right: 0, textAlign: "center", fontFamily: "Inter, sans-serif", fontWeight: 900, fontSize: 26, color: "#fff4e0", textShadow: "2px 2px 0 #000" }}>{n}</div>
+      </div>
+    ))}
+  </AbsoluteFill>
+);

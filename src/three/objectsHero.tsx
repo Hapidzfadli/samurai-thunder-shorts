@@ -1,7 +1,52 @@
 // Rig tokoh "Hero": proporsi heroik (±7,5 kepala), bahu lebar, wajah berfitur (rahang, hidung, telinga, alis tegas),
 // pakaian berlapis + atribut lengkap. Gaya toon + garis tepi (sama dengan toon.tsx). Untuk video perang Surabaya 1945.
 import React from "react";
+import * as THREE from "three";
 import { CanvasPlane, G, Limb, T, Vec3 } from "./toon";
+
+/* kepala bermesh halus: bola dideformasi (dagu meruncing, rahang, pipi, dahi, belakang kepala) */
+let HEAD_GEO: THREE.BufferGeometry | null = null;
+const headGeo = (female = false) => {
+  if (HEAD_GEO && !female) return HEAD_GEO;
+  const R = 0.112;
+  const g = new THREE.SphereGeometry(R, 56, 42);
+  const pos = g.attributes.position as THREE.BufferAttribute;
+  for (let i = 0; i < pos.count; i++) {
+    let x = pos.getX(i),
+      y = pos.getY(i),
+      z = pos.getZ(i);
+    const v = y / R; // -1 (dagu) .. 1 (ubun)
+    const front = z > 0 ? z / R : 0;
+    // tinggi kepala sedikit lonjong
+    y *= 1.12;
+    // wajah bawah menyempit ke dagu; garis rahang tetap tegas (pria)
+    if (v < 0) {
+      const k = Math.pow(-v, 2.4);
+      const jaw = female ? 0.3 : 0.16;
+      x *= 1 - jaw * k;
+      // dagu agak persegi: bagian paling bawah dipipihkan
+      if (v < -0.82) y = -0.82 * R + (y + 0.82 * R) * 0.45;
+      z *= 1 - 0.12 * k;
+      // dagu maju sedikit
+      if (front > 0.3) z += 0.012 * k * front;
+      y -= 0.01 * k;
+    }
+    // pelipis & pipi: sisi sedikit rata
+    x *= 0.9 + 0.04 * Math.cos(v * Math.PI);
+    // muka depan agak datar, belakang kepala menonjol
+    if (z > 0) z *= 0.93;
+    else z *= 1.06;
+    // tulang pipi
+    if (front > 0.4 && v > -0.35 && v < 0.05) x *= 1.03;
+    pos.setXYZ(i, x, y, z);
+  }
+  g.computeVertexNormals();
+  if (!female) HEAD_GEO = g;
+  return g;
+};
+let HEAD_GEO_F: THREE.BufferGeometry | null = null;
+const headGeoF = () => (HEAD_GEO_F ??= headGeo(true));
+
 
 export type HeroExpr = "determined" | "shout" | "angry" | "sad" | "calm" | "smile";
 export type HeroHead = "ikat" | "helmJP" | "brodie" | "slouch" | "peci" | "fieldcap" | "peaked" | "none";
@@ -74,63 +119,139 @@ export const heroHand = (p: HeroP, side: "L" | "R"): Vec3 => {
   return W;
 };
 
-/* ---------------- wajah ---------------- */
+/* ---------------- wajah (organik) ---------------- */
 const Face: React.FC<{ p: HeroP }> = ({ p }) => {
   const e = p.expr ?? "determined";
   const skin = p.skin ?? "#c98e62";
+  const shade = "#00000000";
+  void shade;
   const ink = "#1a120e";
-  const browA = e === "angry" || e === "shout" ? 0.32 : e === "sad" ? -0.3 : e === "determined" ? 0.16 : 0.02;
-  const browY = e === "sad" ? 0.045 : 0.035;
-  const lid = e === "angry" || e === "determined" ? 0.55 : 0.75;
-  const lx = (p.look ?? 0) * 0.012;
+  const hair = p.hair ?? "#1a1410";
+  // alis: sudut & tinggi per ekspresi
+  const browA = e === "angry" || e === "shout" ? 0.42 : e === "sad" ? -0.35 : e === "determined" ? 0.26 : 0.06;
+  const browLift = e === "sad" ? 0.006 : e === "shout" ? 0.004 : 0;
+  const lidOpen = e === "angry" || e === "determined" ? 0.72 : e === "shout" ? 1.0 : e === "sad" ? 0.75 : 0.9;
+  const lx = (p.look ?? 0) * 0.008;
   const open = e === "shout" ? 1 : (p.talk ?? 0);
   return (
     <group>
-      {/* kepala: tengkorak + rahang tegas + dagu */}
-      <T g={G.sph(0.112, 24, 18)} c={skin} scale={[0.92, 1.08, 1.0]} position={[0, 0.02, 0]} />
-      <T g={G.rbox(0.165, 0.095, 0.15, 0.55)} c={skin} position={[0, -0.058, 0.012]} o={2} />
-      <T g={G.sph(0.045, 12, 10)} c={skin} position={[0, -0.095, 0.07]} scale={[1.3, 0.8, 0.9]} o={false} />
+      <T g={p.female ? headGeoF() : headGeo()} c={skin} position={[0, 0.015, 0]} />
       {/* telinga */}
       {[-1, 1].map((s) => (
-        <T key={s} g={G.sph(0.028, 10, 8)} c={skin} position={[s * 0.103, 0.0, -0.005]} scale={[0.5, 1, 0.8]} o={2} />
-      ))}
-      {/* hidung */}
-      <T g={G.cone(0.022, 0.06, 8)} c={skin} position={[0, -0.005, 0.118]} rotation={[Math.PI / 2 + 0.25, 0, 0]} o={2} />
-      {/* mata: putih + pupil + kelopak atas */}
-      {[-1, 1].map((s) => (
-        <group key={s} position={[s * 0.042, 0.022, 0.1]}>
-          <T g={G.sph(0.019, 12, 10)} c="#f8f4ee" scale={[1.2, 0.8 * lid + 0.25, 0.5]} o={false} />
-          <T g={G.sph(0.01, 10, 8)} c={ink} position={[lx, -0.002, 0.008]} o={false} />
-          <T g={G.box(0.048, 0.008, 0.02)} c={ink} position={[0, 0.012 * lid + 0.004, 0.004]} o={false} />
+        <group key={s} position={[s * 0.1, 0.0, -0.008]} rotation={[0, s * 0.35, 0]}>
+          <T g={G.sph(0.026, 12, 10)} c={skin} scale={[0.45, 1.05, 0.75]} o={2} />
+          <T g={G.sph(0.012, 8, 6)} c="#a8684a" position={[s * 0.006, 0, 0.004]} scale={[0.4, 1, 0.6]} o={false} />
+          {p.female ? <T g={G.sph(0.006, 8, 6)} c="#e8c040" emissive="#6a4a00" ei={0.4} position={[s * 0.004, -0.028, 0.004]} o={false} /> : null}
         </group>
       ))}
-      {/* alis tebal */}
+      {/* mata: putih almond + iris cokelat + pupil + kilau + garis kelopak atas */}
       {[-1, 1].map((s) => (
-        <T key={s} g={G.box(0.05, 0.013, 0.02)} c={p.hair ?? ink} position={[s * 0.044, 0.022 + browY, 0.108]} rotation={[0, 0, -s * browA]} o={false} />
+        <group key={s} position={[s * 0.04, 0.022, 0.093]} rotation={[0, s * 0.18, 0]}>
+          <mesh scale={[1.4, 0.55 * lidOpen + 0.16, 0.45]}>
+            <sphereGeometry args={[0.0135, 16, 12]} />
+            <meshBasicMaterial color="#f6f1ea" />
+          </mesh>
+          <mesh position={[lx, -0.001, 0.005]} scale={[1, Math.min(1, 0.55 * lidOpen + 0.45), 0.5]}>
+            <sphereGeometry args={[0.0098, 14, 10]} />
+            <meshBasicMaterial color="#4a2e1c" />
+          </mesh>
+          <mesh position={[lx, -0.001, 0.0095]} scale={[1, 1, 0.4]}>
+            <sphereGeometry args={[0.005, 10, 8]} />
+            <meshBasicMaterial color="#0a0604" />
+          </mesh>
+          <mesh position={[lx + 0.003, 0.003, 0.011]}>
+            <sphereGeometry args={[0.0018, 6, 6]} />
+            <meshBasicMaterial color="#ffffff" />
+          </mesh>
+          {/* garis kelopak (bulu mata atas) melengkung */}
+          <mesh position={[0, 0.0005 + 0.0055 * lidOpen - 0.003, 0.004]} rotation={[0, 0, 0]} scale={[1.45, 0.75 * lidOpen + 0.2, 1]}>
+            <torusGeometry args={[0.0145, 0.0022, 6, 18, Math.PI]} />
+            <meshBasicMaterial color={ink} />
+          </mesh>
+          {p.female ? (
+            <mesh position={[s * 0.019, 0.004, 0.004]} rotation={[0, 0, s * 0.5]}>
+              <boxGeometry args={[0.008, 0.0025, 0.002]} />
+              <meshBasicMaterial color={ink} />
+            </mesh>
+          ) : null}
+          {/* lipatan kelopak di atasnya (kesan dalam) */}
+          <mesh position={[0, 0.011, 0.001]} scale={[1.5, 0.5, 1]}>
+            <torusGeometry args={[0.0145, 0.0012, 6, 16, Math.PI]} />
+            <meshBasicMaterial color="#8a5236" />
+          </mesh>
+        </group>
       ))}
-      {/* mulut */}
+      {/* alis melengkung tebal */}
+      {[-1, 1].map((s) => (
+        <group key={s} position={[s * 0.041, 0.047 + browLift, 0.097]} rotation={[0, s * 0.2, s * browA]}>
+          <mesh scale={[1.55, p.female ? 0.45 : 0.32, 1]} position={[0, -0.004, 0]} rotation={[0, 0, Math.PI * 0.075]}>
+            <torusGeometry args={[0.017, p.female ? 0.0032 : 0.0058, 6, 16, Math.PI * 0.85]} />
+            <meshBasicMaterial color={hair} />
+          </mesh>
+        </group>
+      ))}
+      {/* hidung: batang + ujung bulat + cuping */}
+      <T g={G.cap(0.011, 0.034, 10)} c={skin} position={[0, 0.002, 0.104]} rotation={[0.42, 0, 0]} o={false} />
+      <T g={G.sph(0.0145, 14, 10)} c={skin} position={[0, -0.02, 0.116]} o={2} />
+      {[-1, 1].map((s) => (
+        <group key={s}>
+          <T g={G.sph(0.0095, 10, 8)} c={skin} position={[s * 0.012, -0.023, 0.108]} o={false} />
+          <mesh position={[s * 0.0075, -0.0285, 0.112]} scale={[1, 0.6, 1]}>
+            <sphereGeometry args={[0.0035, 8, 6]} />
+            <meshBasicMaterial color="#3a1a10" />
+          </mesh>
+        </group>
+      ))}
+      {/* garis senyum (nasolabial) halus */}
+      {[-1, 1].map((s) => (
+        <mesh key={s} position={[s * 0.026, -0.036, 0.1]} rotation={[0, s * 0.35, s * 0.35]}>
+          <torusGeometry args={[0.014, 0.0012, 4, 10, Math.PI * 0.5]} />
+          <meshBasicMaterial color="#9a5a3a" />
+        </mesh>
+      ))}
+      {/* mulut / bibir */}
       {open > 0.15 ? (
-        <group position={[0, -0.062, 0.1]}>
-          <T g={G.sph(0.026, 12, 10)} c="#3a1210" scale={[1.2, 0.5 + open * 0.6, 0.4]} o={false} />
-          <T g={G.box(0.036, 0.006, 0.01)} c="#f4f0e8" position={[0, 0.008 + open * 0.004, 0.006]} o={false} />
+        <group position={[0, -0.056, 0.1]}>
+          <mesh scale={[1.25, 0.45 + open * 0.55, 0.5]}>
+            <sphereGeometry args={[0.02, 16, 12]} />
+            <meshBasicMaterial color="#3a0e0c" />
+          </mesh>
+          <mesh position={[0, 0.0065 + open * 0.004, 0.006]} scale={[1, 0.5, 0.5]}>
+            <boxGeometry args={[0.03, 0.006, 0.01]} />
+            <meshBasicMaterial color="#f2ece2" />
+          </mesh>
+          <mesh position={[0, -0.009 - open * 0.006, 0.004]} scale={[1.3, 0.55, 0.6]}>
+            <torusGeometry args={[0.014, 0.0035, 6, 16, Math.PI]} />
+            <meshBasicMaterial color="#9a4a3a" />
+          </mesh>
         </group>
       ) : (
-        <T g={G.box(0.042, 0.006, 0.01)} c="#5a2a22" position={[0, -0.062, 0.108]} rotation={[0, 0, e === "smile" ? 0 : e === "sad" ? 0.0 : 0]} scale={[1, e === "smile" ? 1.6 : 1, 1]} o={false} />
+        <group position={[0, -0.057, 0.103]}>
+          {/* bibir atas (garis) + bibir bawah penuh */}
+          <mesh rotation={[0, 0, e === "smile" ? Math.PI : 0]} position={[0, e === "smile" ? 0.004 : 0, 0]} scale={[1.6, e === "smile" ? 0.7 : e === "sad" ? 0.35 : 0.18, 1]}>
+            <torusGeometry args={[0.013, 0.0022, 6, 16, Math.PI]} />
+            <meshBasicMaterial color="#4a1a14" />
+          </mesh>
+          <T g={G.sph(0.012, 12, 8)} c={p.female ? "#c8504a" : "#a8604a"} position={[0, -0.007, -0.002]} scale={[1.4, p.female ? 0.6 : 0.45, 0.6]} o={false} />
+          {p.female ? <T g={G.sph(0.011, 12, 8)} c="#c8504a" position={[0, 0.003, -0.002]} scale={[1.5, 0.4, 0.6]} o={false} /> : null}
+        </group>
       )}
-      {e === "smile" ? <T g={G.tor(0.02, 0.004, 6, 12, Math.PI)} c="#5a2a22" position={[0, -0.056, 0.106]} rotation={[0, 0, Math.PI]} o={false} /> : null}
-      {p.mustache ? <T g={G.box(0.05, 0.01, 0.012)} c={p.hair ?? ink} position={[0, -0.045, 0.112]} o={false} /> : null}
-      {/* garis tulang pipi (bayangan) */}
-      {[-1, 1].map((s) => (
-        <T key={s} g={G.box(0.004, 0.03, 0.004)} c="#8a5a3a" position={[s * 0.07, -0.035, 0.09]} rotation={[0, 0, s * 0.3]} o={false} />
-      ))}
+      {p.mustache ? (
+        <mesh position={[0, -0.041, 0.111]} scale={[1.7, 0.5, 1]} rotation={[0, 0, Math.PI]}>
+          <torusGeometry args={[0.014, 0.004, 6, 16, Math.PI]} />
+          <meshBasicMaterial color={hair} />
+        </mesh>
+      ) : null}
       {/* rambut */}
       {p.hairStyle !== "none" ? (
         <group>
-          <T g={G.dome(0.118, p.hairStyle === "crop" ? 1.05 : 1.25)} c={p.hair ?? "#1a1410"} position={[0, 0.035, -0.008]} scale={[0.95, p.hairStyle === "slick" ? 0.95 : 0.9, 1.02]} />
-          {p.hairStyle === "slick" ? <T g={G.box(0.17, 0.03, 0.06)} c={p.hair ?? "#1a1410"} position={[0, 0.115, 0.06]} rotation={[0.35, 0, 0]} o={2} /> : null}
-          {p.hairLong ? <T g={G.sph(0.05, 12, 10)} c={p.hair ?? "#1a1410"} position={[0, 0.03, -0.12]} o={2} /> : null}
+          <T g={G.dome(0.119, p.hairStyle === "crop" ? 1.02 : 1.2)} c={hair} position={[0, 0.04, -0.01]} scale={[0.93, p.hairStyle === "slick" ? 1.02 : 0.98, 1.04]} />
+          {p.hairStyle === "slick" ? <T g={G.dome(0.08, 1.0)} c={hair} position={[0.015, 0.105, 0.05]} rotation={[0.5, 0, -0.2]} scale={[1.2, 0.5, 0.8]} o={2} /> : null}
+          {p.hairStyle === "short" ? <T g={G.dome(0.07, 1.0)} c={hair} position={[0, 0.1, 0.06]} rotation={[0.6, 0, 0]} scale={[1.3, 0.45, 0.7]} o={2} /> : null}
+          {p.hairLong ? <T g={G.sph(0.05, 14, 10)} c={hair} position={[0, 0.03, -0.125]} o={2} /> : null}
+          {/* cambang */}
           {[-1, 1].map((s) => (
-            <T key={s} g={G.box(0.02, 0.05, 0.05)} c={p.hair ?? "#1a1410"} position={[s * 0.1, 0.035, 0.03]} o={false} />
+            <T key={s} g={G.cap(0.008, 0.03, 6)} c={hair} position={[s * 0.096, 0.03, 0.03]} o={false} />
           ))}
         </group>
       ) : null}
@@ -440,7 +561,7 @@ export const Hero: React.FC<{ p: HeroP; position?: Vec3; rotation?: Vec3; scale?
           {/* syal */}
           {p.scarf ? <T g={G.tor(0.075, 0.025, 8, 18)} c={p.scarf} position={[0, 1.48, 0.01]} rotation={[Math.PI / 2 - 0.2, 0, 0]} /> : null}
           {/* leher + kepala */}
-          <T g={G.cyl(0.05, 0.06, 0.1, 12)} c={p.skin ?? "#c98e62"} position={[0, 1.52, 0]} />
+          <T g={G.cyl(p.female ? 0.048 : 0.062, p.female ? 0.056 : 0.074, 0.11, 14)} c={p.skin ?? "#c98e62"} position={[0, 1.52, -0.005]} />
           <group position={[0, HEAD_Y, 0.005]}>
             <Face p={p} />
             {p.head && p.head !== "none" ? <HeadGear kind={p.head} c={p.headColor} /> : null}
