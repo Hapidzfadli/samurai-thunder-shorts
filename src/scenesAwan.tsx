@@ -126,13 +126,13 @@ export const SceneAwPerintah: React.FC = () => {
   const bP: Bean3Params = { ...BOS, expr: f >= geb ? "shout" : "angry", handR: bR, handL: bL, talk: Math.max(talkAt(f, LN("perintah", 0), 1), talkAt(f, LN("perintah", 1), 1)), lean: f >= hit && f < hit + 8 ? 0.15 : 0 };
   const back = rp(f, pec, pec + 10) * 0.35;
   const emp: [Bean3Params, Vec3, number][] = [
-    [SINTA, [-1.0, 0, -0.45 + back], 0.75],
-    [NAWAS, [1.0, 0, -0.4 + back], -0.75],
-    [UDIN, [0.45, 0, 0.35 + back], -0.3],
+    [SINTA, [-1.05, 0, -0.5 + back], 0.8],
+    [NAWAS, [1.05, 0, -0.45 + back], -0.8],
+    [UDIN, [-0.85, 0, 0.55 + back], 0.6],
   ];
   const shake = kick(f, [hit], 0.07);
   const jump = (i: number) => (f >= hit ? Math.max(0, Math.sin(((f - hit - i * 2) / 10) * Math.PI)) * 0.12 * (f < hit + 10 + i * 2 ? 1 : 0) : 0);
-  const cam = shotCam(f, [{ to: D, p0: [0.1, 1.85, 4.9], l0: [0, 1.25, -0.9], p1: [0.05, 1.8, 4.3], l1: [0, 1.3, -0.9], fov: 44 }]);
+  const cam = shotCam(f, [{ to: D, p0: [0.15, 1.95, 5.6], l0: [0, 1.25, -0.9], p1: [0.1, 1.9, 5.0], l1: [0, 1.3, -0.9], fov: 44 }]);
   return (
     <AbsoluteFill>
       <Stage cam={cam} shake={shake} bg="#e8dcc8">
@@ -174,7 +174,7 @@ export const SceneAwSedih: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "#101828" }}>
       <Panel w={1080} h={960}>
-        <Stage cam={{ pos: [0.35, 1.45, 1.9 - f * 0.002], look: [0.02, 1.2, 0.2], fov: 38 }} h={960} bg="#e8eef2">
+        <Stage cam={{ pos: [0.45, 1.5, 2.9 - f * 0.002], look: [0.02, 1.12, 0.2], fov: 38 }} h={960} bg="#e8eef2">
           <Day />
           <OpenOfficeSet />
           <Bean3 p={uP} />
@@ -184,7 +184,7 @@ export const SceneAwSedih: React.FC = () => {
         <Chip at={ud} to={D} top={60} color="#ff9ac0">👶 Udin · baru jadi ayah</Chip>
       </Panel>
       <Panel y={960} w={1080} h={960}>
-        <Stage cam={{ pos: [-0.3, 1.45, 1.9 - f * 0.002], look: [0.02, 1.15, 0.2], fov: 38 }} h={960} bg="#e8eef2">
+        <Stage cam={{ pos: [-0.4, 1.5, 2.9 - f * 0.002], look: [0.02, 1.1, 0.2], fov: 38 }} h={960} bg="#e8eef2">
           <Day />
           <OpenOfficeSet />
           <Bean3 p={sP} />
@@ -301,7 +301,7 @@ export const SceneAwHariH: React.FC = () => {
   const ter = EV("harih.teriak");
   const D = DUR_AW("harih");
   const up = f >= ter;
-  const bWalk = walkLerp(f, tiba, ter - 6, [-2.5, 0, 1.4], [-1.45, 0, 1.0]);
+  const bWalk = walkLerp(f, tiba, ter - 6, [-2.3, 0, 1.6], [-1.05, 0, 1.15]);
   const bYaw = f < ter - 6 ? bWalk.yaw : 0.5;
   const crew = CREW(f, up);
   const cam = shotCam(f, [{ to: D, p0: [0.0, 2.0, 6.6], l0: [-0.3, 1.25, -0.3], p1: [-0.1, 1.85, 5.6], l1: [-0.3, 1.35, -0.3], fov: 46 }]);
@@ -375,7 +375,7 @@ export const SceneAwLempar: React.FC = () => {
   const flyY = b1 ? b1[1] : b2 ? b2[1] : 1.3;
   const shake = kick(f, [land1, land2], 0.06);
   const crew = CREW(f, false).map(([p, pos, yaw]) => [{ ...p, expr: f >= land1 ? "laugh" : "puzzled", lean: (b1 || b2) ? -0.15 : 0, handR: REST_R, handL: REST_L } as Bean3Params, [pos[0] + 0.1, 0, pos[2] - 0.75] as Vec3, yaw] as [Bean3Params, Vec3, number]);
-  const base: Cam = { pos: [0.85, 1.9, 6.4], look: [0.75, 1.15, -0.1], fov: 46 };
+  const base: Cam = { pos: [0.45, 2.0, 7.4], look: [0.4, 1.15, -0.1], fov: 46 };
   const cam: Cam = { ...base, look: [base.look[0], lerp(base.look[1], Math.min(4.2, flyY), b1 || b2 ? 0.55 : 0), base.look[2]] };
   return (
     <AbsoluteFill>
@@ -429,7 +429,7 @@ export const SceneAwRuntuh: React.FC = () => {
     const drop = ((f - inA) % 24) / 24;
     return (
       <AbsoluteFill>
-        <Insert set={<RooftopSet dusk={dusk} car={false} chair={false} />} at={at} dist={0.62} f={f} from={inA} bg="#ff9a5a" warm>
+        <Insert set={<RooftopSet dusk={dusk} car={false} chair={false} />} at={at} dist={0.85} f={f} from={inA} bg="#ff9a5a" warm>
           <Sky dusk={dusk} />
           <OldPhoto position={at} rotation={[0, 0, 0.04]} scale={2.0} />
           <Hand at={[at[0] + 0.16, at[1] - 0.09, at[2] - 0.01]} sleeve={BOS.sleeve!} glove={BOS.glove} dir={[0.4, -0.5, 0.4]} r={0.04} />
@@ -488,15 +488,15 @@ export const SceneAwKejutan: React.FC = () => {
   const bP: Bean3Params = { ...BOS, seated: bStand < 0.5, expr: f >= tarik + 14 ? (f >= peluk ? "laugh" : "shock") : "worried", walk: bWalk.walk, handL: hug > 0 ? [-0.4, 1.0, 0.35] : REST_L, handR: hug > 0 ? [0.4, 1.0, 0.35] : REST_R };
   const head: Vec3 = [bPos[0], bStand < 0.5 ? 1.22 : 1.42, bPos[2]];
   const center: Vec3 = [-0.75, 0, 0.0];
-  const hugPos = (p0: Vec3, ang: number): Vec3 => lv(p0, [center[0] + Math.sin(ang) * 0.62, 0, center[2] + Math.cos(ang) * 0.62], hug);
+  const hugPos = (p0: Vec3, ang: number): Vec3 => lv(p0, [center[0] + Math.sin(ang) * 0.85, 0, center[2] + Math.cos(ang) * 0.85], hug);
   const crew: [Bean3Params, Vec3, number][] = [
-    [{ ...SINTA_H, expr: f >= peluk ? "laugh" : "happy", handR: hug > 0 ? [0.35, 1.0, 0.35] : CHEST_R, handL: hug > 0 ? [-0.35, 1.0, 0.35] : REST_L }, hugPos([-1.2, 0, 0.75], -0.9), 0.4 + hug * 0.6],
-    [{ ...UDIN_H, expr: f >= peluk ? "laugh" : "happy", handR: hug > 0 ? [0.35, 1.0, 0.35] : REST_R, handL: hug > 0 ? [-0.35, 1.0, 0.35] : REST_L }, hugPos([0.55, 0, -0.5], 1.1), -0.4 - hug * 0.9],
+    [{ ...SINTA_H, expr: f >= peluk ? "laugh" : "happy", handR: hug > 0 ? [0.35, 1.0, 0.35] : CHEST_R, handL: hug > 0 ? [-0.35, 1.0, 0.35] : REST_L }, hugPos([-1.2, 0, 0.75], -1.45), 0.4 + hug * 0.5],
+    [{ ...UDIN_H, expr: f >= peluk ? "laugh" : "happy", handR: hug > 0 ? [0.35, 1.0, 0.35] : REST_R, handL: hug > 0 ? [-0.35, 1.0, 0.35] : REST_L }, hugPos([0.55, 0, -0.5], 1.45), -0.4 - hug * 0.5],
   ];
-  const nHug = hugPos(nPos, 0.25);
+  const nHug = hugPos(nPos, 2.7);
   const cam = shotCam(f, [
     { to: tarik + 30, p0: [0.4, 1.8, 5.2], l0: [-0.7, 1.15, -0.8], p1: [0.2, 1.75, 4.7], l1: [-0.8, 1.15, -0.9], fov: 46 },
-    { to: D, p0: [0.2, 1.75, 4.7], l0: [-0.8, 1.15, -0.9], p1: [-0.4, 1.55, 3.6], l1: [-0.8, 1.15, -0.5], fov: 44 },
+    { to: D, p0: [0.2, 1.75, 4.7], l0: [-0.8, 1.15, -0.9], p1: [-0.5, 1.75, 5.3], l1: [-0.8, 1.2, -0.4], fov: 44 },
   ]);
   return (
     <AbsoluteFill>
@@ -506,9 +506,9 @@ export const SceneAwKejutan: React.FC = () => {
         <RooftopSet dusk={1} carPos={CAR_POS} carRot={CAR_ROT} dent={1} chair={false} office={<CardboardOffice position={off} tarp={tarp} />} />
         {lights ? <pointLight position={[off[0], 1.4, off[2] + 0.2]} intensity={1.6} distance={4} color="#ffd890" /> : null}
         {bStand < 0.5 ? <PlasticChair position={[-0.15, 0, 0.08]} /> : <PlasticChair position={[-0.15, 0, 0.08]} rotation={[0, 0.2, 0]} />}
-        <Bean3 p={bP} position={bPos} rotation={[0, f < tarik + 14 ? 0 : f < peluk ? -0.6 : 0.3, 0]} />
-        {f >= tarik + 14 && f < peluk + 40 ? <Tears head={head} f={f} yaw={f < peluk ? -0.6 : 0.3} /> : null}
-        <Bean3 p={{ ...NAWAS_H, expr: f >= peluk ? "laugh" : f >= tarik ? "happy" : "smug", handR: hug > 0 ? [0.35, 1.0, 0.35] : nR, talk: talkAt(f, LN("kejutan", 0), 0.7), walk: nWalk.walk }} position={hug > 0 ? nHug : nPos} rotation={[0, hug > 0 ? lerp(nYaw, Math.PI + 0.25, hug) : nYaw, 0]} />
+        <Bean3 p={bP} position={bPos} rotation={[0, f < tarik + 14 ? 0 : f < peluk ? -0.6 : 0, 0]} />
+        {f >= tarik + 14 && f < peluk + 40 ? <Tears head={head} f={f} yaw={f < peluk ? -0.6 : 0} /> : null}
+        <Bean3 p={{ ...NAWAS_H, expr: f >= peluk ? "laugh" : f >= tarik ? "happy" : "smug", handR: hug > 0 ? [0.35, 1.0, 0.35] : nR, talk: talkAt(f, LN("kejutan", 0), 0.7), walk: nWalk.walk }} position={hug > 0 ? nHug : nPos} rotation={[0, hug > 0 ? lerp(nYaw, 0.4, hug) : nYaw, 0]} />
         {crew.map(([p, pos, yaw], i) => (
           <Bean3 key={i} p={p} position={pos} rotation={[0, yaw, 0]} />
         ))}
