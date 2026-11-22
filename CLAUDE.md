@@ -41,3 +41,34 @@ Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh*
 - Jangan import `*_timing.json` yang belum ada dari `src/Root.tsx` (bundle gagal).
 - Render: `npx remotion render src/index.ts <Comp> out/<x>-silent.mp4 --gl=swangle --browser-executable=/opt/pw-browsers/chromium_headless_shell --concurrency=4 --muted`, lalu mux dengan ffmpeg ke `exports/<judul>.mp4`. Periksa nama file output skrip render setelah meng-copy skrip lama.
 - Topik politik/tokoh nyata: tokoh terduga dibuat fiktif, selalu "diduga", kartu parodi + praduga tak bersalah.
+
+## 6. Gaya standar & perkakas yang dipakai ulang (jangan menulis ulang dari nol)
+- Gaya video standar = **3D explainer** (referensi Apache, contoh: `exports/perang-emu-1932.mp4`, `exports/kerja-kelompok.mp4`):
+  - toon + garis tepi, tokoh kepala bulat 3D, efek X-ray, hologram grid biru, layar terbelah, subtitle 1 kata;
+  - judul pancingan rasa penasaran di 2–3 detik pertama.
+- Perkakas:
+  - `src/three/toon.tsx`: `Bean3` (tokoh; tangan → `bean3HandWorld`), `Hat`, `T`/`Limb`/`G` (bentuk toon), `XR` + `BlueGrid` (X-ray/hologram), `CanvasPlane` (teks/layar/kertas), `WordSub`;
+  - `src/sceneKit.tsx`: `shotCam`, `pullBack`, `Stage`, `SubWord`, `Chip`, `BigTitle`, `walkLerp`, `talkAt`;
+  - properti siap pakai:
+    - `objectsEmu.tsx`, `objectsEmu2.tsx`: ladang, truk, kantor, kemah, efek tembak;
+    - `objectsKelompok.tsx`: kelas, kos, kafe, HP, laptop, kalender, chat 3D.
+- Audio:
+  - suara: `scripts/voice_vox.py naskah.json <nama>`; bisa melanjutkan proses yang terhenti; potongan per kalimat disimpan di `out/voice/<nama>/`;
+  - mix + jadwal: salin pola `scripts/build_audio_kelompok.py` (`SCENE_CFG` + `EVENTS` dipakai bersama efek suara & animasi; efek suara diambil dari `build_audio_emu.py`).
+- Pola file per video:
+  - kode: `scripts/naskah/<x>.json` → `scripts/build_audio_<x>.py` → `src/scenes<X>.tsx` + `src/<X>.tsx` + `src/Sheet<X>.tsx`;
+  - render: `out/l30/render_<x>.sh`.
+- Kamera vertikal 1080×1920 sangat sempit ke samping:
+  - pada jarak 4 m hanya ±0,9 m kiri-kanan yang terlihat;
+  - tokoh berbaris dibuat bertingkat (depan/belakang), bukan berjajar;
+  - cek proyeksi sebelum still.
+
+## 7. Hemat token
+- **Satu sesi = satu video.** Mulai sesi baru untuk tiap video baru; aturan & perkakas sudah ada di repo, jadi riwayat lama tidak perlu.
+- Sebelum membangun, minta persetujuan lembar karakter/properti/adegan dalam **satu** kali kirim; revisi rancangan jauh lebih murah daripada revisi video.
+- Minta user mengirim **semua catatan revisi sekaligus** setelah menonton (bernomor, dengan detik), lalu kerjakan sekaligus dalam satu putaran.
+- Still-check hemat:
+  - satu lembar kontak (±12–20 frame kecil, `--scale=0.5`) per putaran, bukan banyak gambar terpisah;
+  - render ulang hanya frame yang diperbaiki.
+- Saat render berjalan: jalankan di latar belakang dengan notifikasi selesai; jawab pertanyaan progres singkat tanpa membaca file besar.
+- Jangan membaca ulang file besar yang isinya sudah diketahui; edit dengan potongan kecil.
