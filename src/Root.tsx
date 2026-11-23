@@ -52,6 +52,7 @@ import { SheetPropsDapur, SheetPropsKantor, SheetPropsLuar, SheetPropsSidang, Sh
 import { Ancol, TOTAL_FRAMES_ANCOL } from "./Ancol";
 import { Perang, TOTAL_FRAMES_PERANG } from "./Perang";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
+import { SheetBandungKarakter, SheetBandungProperti } from "./SheetBandung";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -59,6 +60,8 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="ApacheDetailed" component={ApacheDetailed} durationInFrames={TOTAL_FRAMES_APACHE} fps={30} width={1080} height={1920} />
       <Composition id="RailroadExpansion" component={RailroadExpansion} durationInFrames={TOTAL_FRAMES_RAILROAD} fps={30} width={1080} height={1920} />
       <Composition id="CharacterShowcase" component={CharacterShowcase} durationInFrames={CHARACTER_PRESETS.length} fps={30} width={1920} height={1080} />
+      <Composition id="SheetBandungKarakter" component={SheetBandungKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
+      <Composition id="SheetBandungProperti" component={SheetBandungProperti} durationInFrames={1} fps={30} width={2000} height={1440} />
       <Composition
         id="Karaoke"
         component={Karaoke}

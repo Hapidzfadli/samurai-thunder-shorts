@@ -15,7 +15,7 @@ export type BeanParams = {
   skin?: string;
   torso?: string;
   pants?: string;
-  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping";
+  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping" | "brodie" | "steel90" | "headband" | "officer";
   pangsi?: string; // loose trousers drawn over the legs
   sleeves?: string; // long sleeves (kampret / kebaya)
   kebaya?: string; // kebaya top with lace edge (uses torso colour)
@@ -24,6 +24,13 @@ export type BeanParams = {
   slung?: string; // sarung slung over the shoulder
   selendang?: string;
   golok?: boolean;
+  bandolier?: string; // diagonal leather ammo belt across chest
+  armband?: "redwhite" | "redcross"; // combat/medic armband on sleeve
+  pouches?: boolean; // waist ammo pouches + grenade
+  backpack?: string; // military canvas field pack behind shoulders
+  boots?: string; // military combat boots + calf puttees
+  medals?: boolean; // officer medals & chest ribbons
+  soot?: number; // 0..1 battle soot/dirt on cheeks & clothes
   wet?: number; // 0..1 soaked from the feet up
   gooColor?: string;
   barefoot?: boolean;
@@ -51,7 +58,7 @@ export type BeanParams = {
   armR?: [number, number];
   lean?: number;
   bob?: number;
-  prop?: "none" | "brush" | "bucket" | "paper" | "gavel" | "stamp" | "jar" | "pen" | "umbrella" | "phone" | "headset" | "button" | "bottle" | "sack" | "net" | "spear" | "fan" | "scroll";
+  prop?: "none" | "brush" | "bucket" | "paper" | "gavel" | "stamp" | "jar" | "pen" | "umbrella" | "phone" | "headset" | "button" | "bottle" | "sack" | "net" | "spear" | "fan" | "scroll" | "rifle" | "bamboo" | "torch" | "dynamite" | "grenade" | "medkit";
   propHand?: "L" | "R";
   propRot?: number;
   goo?: number; // 0..1 brown coverage from the feet up
@@ -235,6 +242,57 @@ const drawProp = (c: CanvasRenderingContext2D, p: BeanParams, hx: number, hy: nu
     case "umbrella":
       seg(c, 0, 0, 0, 200, 8, "#3a2a1a");
       break;
+    case "rifle":
+      // Wooden stock + steel barrel + bayonet
+      poly(c, [[-10, 80], [10, 80], [16, 150], [-14, 150]], "#6b4222", INKC, 5);
+      poly(c, [[-9, -110], [9, -110], [10, 82], [-10, 82]], "#7c4e2a", INKC, 5);
+      seg(c, 0, -185, 0, -108, 9, "#3a4048");
+      poly(c, [[8, -172], [22, -172], [13, -242]], "#cfd6de", INKC, 4); // bayonet
+      poly(c, [[9, 10], [22, 10], [22, 34], [9, 34]], "#2a2e34", INKC, 4); // bolt/trigger guard
+      break;
+    case "bamboo":
+      // Sharpened bamboo spear with Red-White cloth flag
+      poly(c, [[-9, -180], [9, -165], [10, 145], [-10, 145]], "#c49d56", INKC, 6);
+      [-90, -15, 60].forEach((y) => seg(c, -10, y, 10, y, 4, "#7a5c28"));
+      poly(c, [[10, -145], [110, -135], [102, -105], [10, -112]], "#d62828", INKC, 5);
+      poly(c, [[10, -112], [102, -105], [96, -78], [10, -82]], "#fffaf0", INKC, 5);
+      break;
+    case "torch":
+      poly(c, [[-10, -110], [10, -110], [7, 70], [-7, 70]], "#6e4423", INKC, 6);
+      poly(c, [[-20, -138], [20, -138], [14, -102], [-14, -102]], "#4a301e", INKC, 5);
+      // Stylized layered flame
+      poly(c, [[-28, -138], [-12, -198], [4, -172], [16, -218], [30, -155], [18, -132], [-18, -132]], "#ff7b1c", INKC, 5);
+      poly(c, [[-14, -138], [0, -182], [14, -138]], "#ffe047", INKC, 3);
+      break;
+    case "dynamite":
+      // Bundled red TNT sticks with tape and sparkling fuse
+      [-16, 0, 16].forEach((dx) => poly(c, [[dx - 8, -32], [dx + 8, -32], [dx + 8, 52], [dx - 8, 52]], "#d62828", INKC, 4));
+      poly(c, [[-26, -8], [26, -8], [26, 6], [-26, 6]], "#241726", INKC, 2);
+      poly(c, [[-26, 26], [26, 26], [26, 40], [-26, 40]], "#241726", INKC, 2);
+      seg(c, 0, -32, 16, -66, 5, "#d4b483");
+      c.fillStyle = "#ffe047";
+      c.beginPath();
+      c.arc(18, -68, 12, 0, Math.PI * 2);
+      c.fill();
+      c.strokeStyle = "#ff5a1f";
+      c.lineWidth = 4;
+      c.stroke();
+      break;
+    case "grenade":
+      poly(c, [[-18, -10], [18, -10], [22, 34], [0, 48], [-22, 34]], "#4f6342", INKC, 5);
+      poly(c, [[-8, -26], [8, -26], [8, -10], [-8, -10]], "#8a929a", INKC, 4);
+      c.strokeStyle = "#e0b040";
+      c.lineWidth = 4;
+      c.beginPath();
+      c.arc(16, -20, 10, 0, Math.PI * 2);
+      c.stroke();
+      break;
+    case "medkit":
+      poly(c, [[-44, 6], [44, 6], [44, 74], [-44, 74]], "#f8f4ea", INKC, 6);
+      poly(c, [[-18, -10], [18, -10], [18, 6], [-18, 6]], "#c9c0b0", INKC, 5);
+      poly(c, [[-7, 20], [7, 20], [7, 60], [-7, 60]], "#d62828", "#d62828", 1);
+      poly(c, [[-20, 33], [20, 33], [20, 47], [-20, 47]], "#d62828", "#d62828", 1);
+      break;
   }
   c.restore();
 };
@@ -260,6 +318,12 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   limb(c, 280, hipY, 165, 170, lL, 10);
   const footL = tip(...tip(280, hipY, 165, lL[0]), 170, lL[0] + lL[1]);
   if (p.robe) slipper(c, footL[0], footL[1], p.robeTrim ?? "#8a3a2a");
+  else if (p.boots) {
+    const kneeL = tip(280, hipY, 165, lL[0]);
+    seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 22, "#7a6a4a"); // calf puttees
+    seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 14, "#92805a");
+    poly(c, [[footL[0] - 14, footL[1] - 28], [footL[0] + 14, footL[1] - 28], [footL[0] + 44, footL[1] - 6], [footL[0] + 44, footL[1] + 10], [footL[0] - 16, footL[1] + 10]], p.boots, INKC, 6);
+  }
   else if (!p.barefoot) seg(c, footL[0], footL[1], footL[0] + 40, footL[1], 10);
   else poly(c, [[footL[0] - 8, footL[1] - 8], [footL[0] + 36, footL[1] - 6], [footL[0] + 40, footL[1] + 6], [footL[0] - 8, footL[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
   if (p.pangsi) trouser(c, 280, hipY, lL, p.pangsi);
@@ -271,8 +335,15 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   c.arc(handL[0], handL[1], 12, 0, Math.PI * 2);
   c.fill();
   if (p.propHand === "L") drawProp(c, p, handL[0], handL[1], handL[2]);
-  // torso (lean: shift top)
+  // military field backpack behind torso
   const tx = lean * 3.2;
+  if (p.backpack) {
+    poly(c, [[204 + tx * 0.7, shY + 20], [268 + tx * 0.7, shY + 20], [262, hipY - 20], [198, hipY - 20]], p.backpack, INKC, 7);
+    poly(c, [[196 + tx * 0.7, shY - 6], [266 + tx * 0.7, shY - 6], [266 + tx * 0.7, shY + 24], [196 + tx * 0.7, shY + 24]], "#6b5a3e", INKC, 5); // rolled bedroll
+    seg(c, 214 + tx * 0.7, shY + 24, 210, hipY - 24, 5, "#4a321e");
+    seg(c, 246 + tx * 0.7, shY + 24, 244, hipY - 24, 5, "#4a321e");
+  }
+  // torso (lean: shift top)
   if (p.coat) {
     poly(c, [[238 + tx, shY - 4], [362 + tx, shY - 4], [372, hipY + 40], [228, hipY + 40]], torso, INKC, 8);
     poly(c, [[286 + tx, shY - 4], [314 + tx, shY - 4], [300 + tx * 0.6, shY + 90]], "#f5efe0", INKC, 5);
@@ -290,7 +361,16 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
         c.fill();
       });
     }
+    if (p.tie && !p.coat) {
+      poly(c, [[294 + tx, shY + 10], [306 + tx, shY + 10], [310 + tx * 0.8, shY + 115], [300 + tx * 0.8, shY + 130], [290 + tx * 0.8, shY + 115]], p.tie, INKC, 4);
+    }
     if (p.badge) poly(c, [[262 + tx, shY + 46], [282 + tx, shY + 46], [282 + tx, shY + 66], [272 + tx, shY + 78], [262 + tx, shY + 66]], "#e0b040", INKC, 3);
+    if (p.medals) {
+      // Officer chest medal ribbons + shoulder epaulettes
+      poly(c, [[316 + tx, shY + 36], [354 + tx, shY + 36], [354 + tx, shY + 48], [316 + tx, shY + 48]], "#d62828", INKC, 3);
+      poly(c, [[328 + tx, shY + 36], [342 + tx, shY + 36], [342 + tx, shY + 48], [328 + tx, shY + 48]], "#f2c230", INKC, 2);
+      [-1, 1].forEach((sd) => poly(c, [[300 + sd * 28 * wd + tx, shY - 8], [300 + sd * 56 * wd + tx, shY - 4], [300 + sd * 54 * wd + tx, shY + 12], [300 + sd * 26 * wd + tx, shY + 8]], "#b88a28", INKC, 3));
+    }
     if (p.stars) {
       [-1, 1].forEach((sd) => {
         for (let k = 0; k < p.stars!; k++) {
@@ -311,7 +391,25 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
         }
       });
     }
-    if (p.belt) poly(c, [[300 - 64 * wd, hipY - 8], [300 + 64 * wd, hipY - 8], [300 + 64 * wd, hipY + 12], [300 - 64 * wd, hipY + 12]], p.belt, INKC, 4);
+    if (p.bandolier) {
+      // Diagonal leather ammo belt across chest with brass cartridges
+      poly(c, [[300 - 52 * wd + tx, shY + 6], [300 - 24 * wd + tx, shY - 2], [300 + 64 * wd, hipY - 12], [300 + 38 * wd, hipY + 8]], p.bandolier, INKC, 5);
+      for (let k = 1; k <= 5; k++) {
+        const a = k / 6;
+        const bx = (300 - 38 * wd + tx) + (89 * wd - tx) * a;
+        const by = (shY + 4) + (hipY - 6 - shY) * a;
+        poly(c, [[bx - 9, by - 11], [bx + 9, by - 11], [bx + 9, by + 11], [bx - 9, by + 11]], "#d4a437", INKC, 3);
+      }
+    }
+    if (p.belt) {
+      poly(c, [[300 - 64 * wd, hipY - 10], [300 + 64 * wd, hipY - 10], [300 + 64 * wd, hipY + 14], [300 - 64 * wd, hipY + 14]], p.belt, INKC, 5);
+      poly(c, [[288, hipY - 12], [312, hipY - 12], [312, hipY + 16], [288, hipY + 16]], "#e0b040", INKC, 4); // brass buckle
+    }
+    if (p.pouches) {
+      // Waist ammo pouches + grenade
+      poly(c, [[300 - 58 * wd, hipY - 14], [300 - 24 * wd, hipY - 14], [300 - 24 * wd, hipY + 24], [300 - 58 * wd, hipY + 24]], "#6a4a2a", INKC, 4);
+      poly(c, [[300 + 24 * wd, hipY - 14], [300 + 58 * wd, hipY - 14], [300 + 58 * wd, hipY + 24], [300 + 24 * wd, hipY + 24]], "#6a4a2a", INKC, 4);
+    }
   }
   if (p.apron) poly(c, [[260 + tx * 0.8, shY + 60], [340 + tx * 0.8, shY + 60], [352, hipY + 130], [248, hipY + 130]], p.apron, INKC, 6);
   if (!p.coat) poly(c, [[246, hipY + 10], [354, hipY + 10], [350, hipY + 40], [250, hipY + 40]], pants, INKC, 6);
@@ -319,6 +417,12 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   limb(c, 322, hipY, 165, 170, lR, 10);
   const footR = tip(...tip(322, hipY, 165, lR[0]), 170, lR[0] + lR[1]);
   if (p.robe) slipper(c, footR[0], footR[1], p.robeTrim ?? "#8a3a2a");
+  else if (p.boots) {
+    const kneeR = tip(322, hipY, 165, lR[0]);
+    seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 22, "#7a6a4a");
+    seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 14, "#92805a");
+    poly(c, [[footR[0] - 14, footR[1] - 28], [footR[0] + 14, footR[1] - 28], [footR[0] + 44, footR[1] - 6], [footR[0] + 44, footR[1] + 10], [footR[0] - 16, footR[1] + 10]], p.boots, INKC, 6);
+  }
   else if (!p.barefoot) seg(c, footR[0], footR[1], footR[0] + 40, footR[1], 10);
   else poly(c, [[footR[0] - 8, footR[1] - 8], [footR[0] + 36, footR[1] - 6], [footR[0] + 40, footR[1] + 6], [footR[0] - 8, footR[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
   if (p.pangsi) trouser(c, 322, hipY, lR, p.pangsi);
@@ -673,6 +777,42 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     poly(c, [[204, 150], [212, 118], [176, 90], [300, 62], [424, 90], [388, 118], [396, 150]], hatCol, INKC, 7);
     poly(c, [[204, 150], [396, 150], [380, 176], [220, 176]], "#121216", INKC, 6);
     poly(c, [[288, 96], [312, 96], [314, 120], [300, 130], [286, 120]], "#e0b040", INKC, 3);
+  } else if (hat === "brodie") {
+    // British/Allied WW2 wide-brimmed steel Brodie helmet
+    poly(c, [[210, 146], [226, 92], [300, 74], [374, 92], [390, 146]], hatCol, INKC, 7);
+    poly(c, [[150, 154], [450, 154], [434, 174], [166, 174]], hatCol, INKC, 7);
+    seg(c, 224, 174, 240, 292, 5, "#4a3822"); // chinstrap
+    seg(c, 376, 174, 360, 292, 5, "#4a3822");
+    seg(c, 240, 292, 360, 292, 5, "#4a3822");
+  } else if (hat === "steel90") {
+    // Captured Japanese Type-90 steel helmet worn by TRI/pejuang
+    poly(c, [[190, 166], [202, 100], [300, 74], [398, 100], [410, 166], [300, 154]], hatCol, INKC, 7);
+    seg(c, 200, 146, 400, 146, 4, "rgba(0,0,0,0.28)");
+    poly(c, [[288, 106], [312, 106], [312, 118], [288, 118]], "#d62828", INKC, 2); // merah putih emblem
+    poly(c, [[288, 118], [312, 118], [312, 130], [288, 130]], "#fffaf0", INKC, 2);
+    seg(c, 206, 164, 228, 286, 5, "#4a3822");
+    seg(c, 394, 164, 372, 286, 5, "#4a3822");
+  } else if (hat === "headband") {
+    // Tousled dark hair + Red-White headband (ikat kepala Merah Putih) with fluttering knot tails
+    c.fillStyle = p.hair ?? "#1c1412";
+    c.beginPath();
+    c.moveTo(186, 170);
+    c.bezierCurveTo(192, 92, 258, 72, 300, 76);
+    c.bezierCurveTo(352, 72, 412, 94, 416, 170);
+    c.bezierCurveTo(380, 130, 220, 130, 186, 170);
+    c.fill();
+    c.stroke();
+    poly(c, [[188, 132], [412, 132], [414, 152], [186, 152]], "#d62828", INKC, 5);
+    poly(c, [[186, 152], [414, 152], [412, 170], [188, 170]], "#fffaf0", INKC, 5);
+    // Knot & fluttering ribbons on the side
+    poly(c, [[406, 142], [462, 128], [452, 156], [408, 158]], "#d62828", INKC, 5);
+    poly(c, [[408, 156], [456, 176], [442, 198], [406, 170]], "#fffaf0", INKC, 5);
+  } else if (hat === "officer") {
+    // Peaked officer military cap
+    poly(c, [[196, 148], [184, 92], [300, 68], [416, 92], [404, 148]], hatCol, INKC, 7);
+    poly(c, [[202, 142], [398, 142], [398, 158], [202, 158]], "#1c1816", INKC, 5);
+    poly(c, [[208, 158], [392, 158], [374, 182], [226, 182]], "#141214", INKC, 6); // visor
+    poly(c, [[284, 102], [316, 102], [308, 126], [292, 126]], "#f2c230", INKC, 3); // gold emblem
   } else if (hat === "wig") {
     poly(c, [[170, 250], [176, 120], [300, 60], [424, 120], [430, 250], [400, 190], [200, 190]], "#f2f2f2", INKC, 7);
   } else if (p.hair) {
@@ -684,6 +824,14 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.bezierCurveTo(380, 130, 220, 130, 188, 170);
     c.fill();
     c.stroke();
+  }
+  if (p.soot && p.soot > 0) {
+    c.fillStyle = `rgba(36, 23, 38, ${0.22 * p.soot})`;
+    [[232, 248, 22, 10], [362, 254, 18, 9], [280, 180, 14, 7]].forEach(([sx, sy, rx, ry]) => {
+      c.beginPath();
+      c.ellipse(sx, sy, rx, ry, -0.2, 0, Math.PI * 2);
+      c.fill();
+    });
   }
   if (p.headphones) {
     c.strokeStyle = INKC;
@@ -709,6 +857,27 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   const handR = limb(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aR, 9);
   if (p.robe) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.robe, p.robeTrim ?? p.sash);
   else if (p.sleeves) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.sleeves);
+  if (p.armband) {
+    const shR: [number, number] = [300 + 40 * (p.wide ?? 0.95) + tx, shY + 14];
+    const m1 = tip(shR[0], shR[1], 45, aR[0]);
+    const m2 = tip(shR[0], shR[1], 88, aR[0]);
+    const dx = m2[0] - m1[0];
+    const dy = m2[1] - m1[1];
+    const L = Math.hypot(dx, dy) || 1;
+    const nx = (-dy / L) * 20;
+    const ny = (dx / L) * 20;
+    if (p.armband === "redwhite") {
+      const mm: [number, number] = [(m1[0] + m2[0]) / 2, (m1[1] + m2[1]) / 2];
+      poly(c, [[m1[0] + nx, m1[1] + ny], [mm[0] + nx, mm[1] + ny], [mm[0] - nx, mm[1] - ny], [m1[0] - nx, m1[1] - ny]], "#d62828", INKC, 4);
+      poly(c, [[mm[0] + nx, mm[1] + ny], [m2[0] + nx, m2[1] + ny], [m2[0] - nx, m2[1] - ny], [mm[0] - nx, mm[1] - ny]], "#fffaf0", INKC, 4);
+    } else {
+      poly(c, [[m1[0] + nx, m1[1] + ny], [m2[0] + nx, m2[1] + ny], [m2[0] - nx, m2[1] - ny], [m1[0] - nx, m1[1] - ny]], "#fffaf0", INKC, 4);
+      const cx = (m1[0] + m2[0]) / 2;
+      const cy = (m1[1] + m2[1]) / 2;
+      seg(c, cx - 10, cy, cx + 10, cy, 6, "#d62828");
+      seg(c, cx, cy - 10, cx, cy + 10, 6, "#d62828");
+    }
+  }
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handR[0], handR[1], 12, 0, Math.PI * 2);
