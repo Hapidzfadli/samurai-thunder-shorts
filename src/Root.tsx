@@ -48,11 +48,13 @@ import { SheetPropsDapur, SheetPropsKantor, SheetPropsLuar, SheetPropsSidang, Sh
 import { Ancol, TOTAL_FRAMES_ANCOL } from "./Ancol";
 import { Perang, TOTAL_FRAMES_PERANG } from "./Perang";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
+import { Bandung, TOTAL_FRAMES_BANDUNG } from "./Bandung";
 import { SheetBandungKarakter, SheetBandungProperti } from "./SheetBandung";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Bandung" component={Bandung} durationInFrames={TOTAL_FRAMES_BANDUNG} fps={30} width={1080} height={1920} />
       <Composition id="SheetBandungKarakter" component={SheetBandungKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetBandungProperti" component={SheetBandungProperti} durationInFrames={1} fps={30} width={2000} height={1440} />
       <Composition
