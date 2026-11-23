@@ -1,0 +1,979 @@
+{
+  "fps": 30,
+  "totalDurationSec": 75.8,
+  "totalFrames": 2274,
+  "order": [
+    "hook",
+    "koridor",
+    "chef",
+    "menyambar",
+    "gayung",
+    "heboh",
+    "handuk",
+    "makan"
+  ],
+  "scenes": {
+    "hook": {
+      "startSec": 0.0,
+      "endSec": 8.7,
+      "startFrame": 0,
+      "durationInFrames": 261
+    },
+    "koridor": {
+      "startSec": 8.7,
+      "endSec": 17.7,
+      "startFrame": 261,
+      "durationInFrames": 270
+    },
+    "chef": {
+      "startSec": 17.7,
+      "endSec": 26.6,
+      "startFrame": 531,
+      "durationInFrames": 267
+    },
+    "menyambar": {
+      "startSec": 26.6,
+      "endSec": 35.133,
+      "startFrame": 798,
+      "durationInFrames": 256
+    },
+    "gayung": {
+      "startSec": 35.133,
+      "endSec": 44.267,
+      "startFrame": 1054,
+      "durationInFrames": 274
+    },
+    "heboh": {
+      "startSec": 44.267,
+      "endSec": 54.8,
+      "startFrame": 1328,
+      "durationInFrames": 316
+    },
+    "handuk": {
+      "startSec": 54.8,
+      "endSec": 65.133,
+      "startFrame": 1644,
+      "durationInFrames": 310
+    },
+    "makan": {
+      "startSec": 65.133,
+      "endSec": 75.8,
+      "startFrame": 1954,
+      "durationInFrames": 320
+    }
+  },
+  "lines": {
+    "h1": {
+      "scene": "hook",
+      "emotion": "tegang",
+      "text": "Jam dua pagi, perut anak kos ini keroncongan parah, niatnya cuma mau masak mie instan.",
+      "startSec": 0.4,
+      "endSec": 4.72,
+      "from": 12,
+      "to": 142,
+      "globalFrom": 12,
+      "globalTo": 142
+    },
+    "h2": {
+      "scene": "hook",
+      "emotion": "santai",
+      "text": "Tapi entah kenapa, ujung-ujungnya malah bikin kebakaran satu kosan!",
+      "startSec": 4.97,
+      "endSec": 8.155,
+      "from": 149,
+      "to": 245,
+      "globalFrom": 149,
+      "globalTo": 245
+    },
+    "k1": {
+      "scene": "koridor",
+      "emotion": "narasi",
+      "text": "Dengan langkah super pelan, Riko mengendap melewati kamar tetangga biar tidak ketahuan Ibu Kos.",
+      "startSec": 9.1,
+      "endSec": 14.22,
+      "from": 12,
+      "to": 166,
+      "globalFrom": 273,
+      "globalTo": 427
+    },
+    "k2": {
+      "scene": "koridor",
+      "emotion": "santai",
+      "text": "Pelan-pelan saja, pokoknya jangan sampai Bu Tini bangun.",
+      "startSec": 14.47,
+      "endSec": 17.19,
+      "from": 173,
+      "to": 255,
+      "globalFrom": 434,
+      "globalTo": 516
+    },
+    "c1": {
+      "scene": "chef",
+      "emotion": "narasi",
+      "text": "Sampai di dapur, Riko malah kesurupan gaya koki restoran bintang lima.",
+      "startSec": 18.1,
+      "endSec": 22.213,
+      "from": 12,
+      "to": 135,
+      "globalFrom": 543,
+      "globalTo": 666
+    },
+    "c2": {
+      "scene": "chef",
+      "emotion": "santai",
+      "text": "Minyaknya dituang segalon, wajan digoyang-goyang, biar makin estetik katanya.",
+      "startSec": 22.493,
+      "endSec": 26.05,
+      "from": 144,
+      "to": 251,
+      "globalFrom": 675,
+      "globalTo": 782
+    },
+    "s1": {
+      "scene": "menyambar",
+      "emotion": "tegang",
+      "text": "Belum sempat masuk bumbu, lidah api langsung menyambar tinggi dari wajan!",
+      "startSec": 26.95,
+      "endSec": 30.63,
+      "from": 10,
+      "to": 121,
+      "globalFrom": 809,
+      "globalTo": 919
+    },
+    "s2": {
+      "scene": "menyambar",
+      "emotion": "tegang",
+      "text": "Asap mengepul, lemari dapur Bu Tini mulai gosong menghitam!",
+      "startSec": 30.91,
+      "endSec": 34.55,
+      "from": 129,
+      "to": 239,
+      "globalFrom": 927,
+      "globalTo": 1037
+    },
+    "g1": {
+      "scene": "gayung",
+      "emotion": "tegang",
+      "text": "Karena panik berat, Riko malah menyiram minyak panas pakai satu gayung air!",
+      "startSec": 35.483,
+      "endSec": 39.643,
+      "from": 10,
+      "to": 135,
+      "globalFrom": 1064,
+      "globalTo": 1189
+    },
+    "g2": {
+      "scene": "gayung",
+      "emotion": "tegas",
+      "text": "Seketika api meledak setinggi plafon, dapur berubah jadi arena sirkus!",
+      "startSec": 39.893,
+      "endSec": 43.568,
+      "from": 143,
+      "to": 253,
+      "globalFrom": 1197,
+      "globalTo": 1307
+    },
+    "b1": {
+      "scene": "heboh",
+      "emotion": "narasi",
+      "text": "Satu kosan langsung heboh, pintu kamar terbuka satu per satu sambil lari berhamburan.",
+      "startSec": 44.617,
+      "endSec": 49.517,
+      "from": 10,
+      "to": 157,
+      "globalFrom": 1338,
+      "globalTo": 1485
+    },
+    "b2": {
+      "scene": "heboh",
+      "emotion": "tegas",
+      "text": "Tiba-tiba, Bu Tini mendobrak masuk dengan tatapan paling mengerikan sedunia!",
+      "startSec": 49.817,
+      "endSec": 54.137,
+      "from": 166,
+      "to": 296,
+      "globalFrom": 1494,
+      "globalTo": 1624
+    },
+    "d1": {
+      "scene": "handuk",
+      "emotion": "narasi",
+      "text": "Tanpa banyak bicara, Bu Tini langsung melempar handuk basah tepat menutup wajan.",
+      "startSec": 55.2,
+      "endSec": 60.259,
+      "from": 12,
+      "to": 164,
+      "globalFrom": 1656,
+      "globalTo": 1808
+    },
+    "d2": {
+      "scene": "handuk",
+      "emotion": "santai",
+      "text": "Api langsung padam, tapi aroma mie gorengnya malah menusuk hidung Bu Tini.",
+      "startSec": 60.579,
+      "endSec": 64.374,
+      "from": 173,
+      "to": 287,
+      "globalFrom": 1817,
+      "globalTo": 1931
+    },
+    "m1": {
+      "scene": "makan",
+      "emotion": "santai",
+      "text": "Bukannya diusir, jam dua pagi itu seluruh kosan malah makan mie bareng dengan lahap.",
+      "startSec": 65.583,
+      "endSec": 69.58,
+      "from": 14,
+      "to": 133,
+      "globalFrom": 1967,
+      "globalTo": 2087
+    },
+    "m2": {
+      "scene": "makan",
+      "emotion": "tegas",
+      "text": "Besok cat ulang lemari ya Riko, tapi sekarang tambah telor satu lagi!",
+      "startSec": 69.93,
+      "endSec": 74.35,
+      "from": 144,
+      "to": 277,
+      "globalFrom": 2098,
+      "globalTo": 2231
+    }
+  },
+  "events": {
+    "hook.keroncong": 62,
+    "hook.kebakaran": 212,
+    "koridor.endap": 57,
+    "koridor.tini": 231,
+    "chef.koki": 84,
+    "chef.minyak": 141,
+    "chef.wajan": 181,
+    "sambar.api": 57,
+    "sambar.gosong": 203,
+    "gayung.siram": 60,
+    "gayung.meledak": 162,
+    "heboh.pintu": 54,
+    "heboh.dobrak": 201,
+    "handuk.lempar": 84,
+    "handuk.padam": 187,
+    "handuk.aroma": 216,
+    "makan.bareng": 94,
+    "makan.telor": 235
+  },
+  "captions": [
+    {
+      "text": "Jam dua",
+      "startFrame": 12,
+      "endFrame": 29,
+      "highlight": true
+    },
+    {
+      "text": "pagi,",
+      "startFrame": 29,
+      "endFrame": 41,
+      "highlight": true
+    },
+    {
+      "text": "perut anak",
+      "startFrame": 41,
+      "endFrame": 54,
+      "highlight": false
+    },
+    {
+      "text": "kos ini",
+      "startFrame": 54,
+      "endFrame": 65,
+      "highlight": false
+    },
+    {
+      "text": "keroncongan",
+      "startFrame": 65,
+      "endFrame": 80,
+      "highlight": false
+    },
+    {
+      "text": "parah,",
+      "startFrame": 80,
+      "endFrame": 93,
+      "highlight": false
+    },
+    {
+      "text": "niatnya cuma",
+      "startFrame": 93,
+      "endFrame": 108,
+      "highlight": false
+    },
+    {
+      "text": "mau masak",
+      "startFrame": 108,
+      "endFrame": 124,
+      "highlight": false
+    },
+    {
+      "text": "mie instan.",
+      "startFrame": 124,
+      "endFrame": 134,
+      "highlight": true
+    },
+    {
+      "text": "Tapi entah",
+      "startFrame": 149,
+      "endFrame": 168,
+      "highlight": true
+    },
+    {
+      "text": "kenapa,",
+      "startFrame": 168,
+      "endFrame": 185,
+      "highlight": false
+    },
+    {
+      "text": "ujung-ujungnya",
+      "startFrame": 185,
+      "endFrame": 200,
+      "highlight": false
+    },
+    {
+      "text": "malah bikin",
+      "startFrame": 200,
+      "endFrame": 214,
+      "highlight": false
+    },
+    {
+      "text": "kebakaran",
+      "startFrame": 214,
+      "endFrame": 225,
+      "highlight": true
+    },
+    {
+      "text": "satu kosan!",
+      "startFrame": 225,
+      "endFrame": 242,
+      "highlight": true
+    },
+    {
+      "text": "Dengan",
+      "startFrame": 273,
+      "endFrame": 283,
+      "highlight": false
+    },
+    {
+      "text": "langkah super",
+      "startFrame": 283,
+      "endFrame": 298,
+      "highlight": false
+    },
+    {
+      "text": "pelan,",
+      "startFrame": 298,
+      "endFrame": 316,
+      "highlight": true
+    },
+    {
+      "text": "Riko",
+      "startFrame": 316,
+      "endFrame": 320,
+      "highlight": true
+    },
+    {
+      "text": "mengendap",
+      "startFrame": 320,
+      "endFrame": 335,
+      "highlight": false
+    },
+    {
+      "text": "melewati",
+      "startFrame": 335,
+      "endFrame": 349,
+      "highlight": false
+    },
+    {
+      "text": "kamar",
+      "startFrame": 349,
+      "endFrame": 359,
+      "highlight": false
+    },
+    {
+      "text": "tetangga biar",
+      "startFrame": 359,
+      "endFrame": 383,
+      "highlight": false
+    },
+    {
+      "text": "tidak",
+      "startFrame": 383,
+      "endFrame": 389,
+      "highlight": false
+    },
+    {
+      "text": "ketahuan Ibu",
+      "startFrame": 389,
+      "endFrame": 412,
+      "highlight": false
+    },
+    {
+      "text": "Kos.",
+      "startFrame": 412,
+      "endFrame": 419,
+      "highlight": false
+    },
+    {
+      "text": "Pelan-pelan",
+      "startFrame": 434,
+      "endFrame": 451,
+      "highlight": true
+    },
+    {
+      "text": "saja,",
+      "startFrame": 451,
+      "endFrame": 457,
+      "highlight": false
+    },
+    {
+      "text": "pokoknya",
+      "startFrame": 457,
+      "endFrame": 474,
+      "highlight": false
+    },
+    {
+      "text": "jangan sampai",
+      "startFrame": 474,
+      "endFrame": 490,
+      "highlight": false
+    },
+    {
+      "text": "Bu Tini",
+      "startFrame": 490,
+      "endFrame": 501,
+      "highlight": true
+    },
+    {
+      "text": "bangun.",
+      "startFrame": 501,
+      "endFrame": 510,
+      "highlight": false
+    },
+    {
+      "text": "Sampai di",
+      "startFrame": 543,
+      "endFrame": 556,
+      "highlight": false
+    },
+    {
+      "text": "dapur,",
+      "startFrame": 556,
+      "endFrame": 567,
+      "highlight": false
+    },
+    {
+      "text": "Riko malah",
+      "startFrame": 567,
+      "endFrame": 596,
+      "highlight": true
+    },
+    {
+      "text": "kesurupan",
+      "startFrame": 596,
+      "endFrame": 608,
+      "highlight": false
+    },
+    {
+      "text": "gaya koki",
+      "startFrame": 608,
+      "endFrame": 627,
+      "highlight": true
+    },
+    {
+      "text": "restoran",
+      "startFrame": 627,
+      "endFrame": 635,
+      "highlight": false
+    },
+    {
+      "text": "bintang lima.",
+      "startFrame": 635,
+      "endFrame": 660,
+      "highlight": false
+    },
+    {
+      "text": "Minyaknya",
+      "startFrame": 675,
+      "endFrame": 687,
+      "highlight": false
+    },
+    {
+      "text": "dituang",
+      "startFrame": 687,
+      "endFrame": 696,
+      "highlight": false
+    },
+    {
+      "text": "segalon,",
+      "startFrame": 696,
+      "endFrame": 714,
+      "highlight": true
+    },
+    {
+      "text": "wajan",
+      "startFrame": 714,
+      "endFrame": 722,
+      "highlight": false
+    },
+    {
+      "text": "digoyang-goyang,",
+      "startFrame": 722,
+      "endFrame": 743,
+      "highlight": false
+    },
+    {
+      "text": "biar makin",
+      "startFrame": 743,
+      "endFrame": 756,
+      "highlight": false
+    },
+    {
+      "text": "estetik",
+      "startFrame": 756,
+      "endFrame": 769,
+      "highlight": true
+    },
+    {
+      "text": "katanya.",
+      "startFrame": 769,
+      "endFrame": 776,
+      "highlight": false
+    },
+    {
+      "text": "Belum sempat",
+      "startFrame": 809,
+      "endFrame": 827,
+      "highlight": false
+    },
+    {
+      "text": "masuk bumbu,",
+      "startFrame": 827,
+      "endFrame": 849,
+      "highlight": false
+    },
+    {
+      "text": "lidah api",
+      "startFrame": 849,
+      "endFrame": 867,
+      "highlight": true
+    },
+    {
+      "text": "langsung",
+      "startFrame": 867,
+      "endFrame": 878,
+      "highlight": false
+    },
+    {
+      "text": "menyambar",
+      "startFrame": 878,
+      "endFrame": 890,
+      "highlight": true
+    },
+    {
+      "text": "tinggi dari",
+      "startFrame": 890,
+      "endFrame": 903,
+      "highlight": false
+    },
+    {
+      "text": "wajan!",
+      "startFrame": 903,
+      "endFrame": 916,
+      "highlight": false
+    },
+    {
+      "text": "Asap",
+      "startFrame": 927,
+      "endFrame": 937,
+      "highlight": false
+    },
+    {
+      "text": "mengepul,",
+      "startFrame": 937,
+      "endFrame": 957,
+      "highlight": false
+    },
+    {
+      "text": "lemari dapur",
+      "startFrame": 957,
+      "endFrame": 976,
+      "highlight": false
+    },
+    {
+      "text": "Bu Tini",
+      "startFrame": 976,
+      "endFrame": 991,
+      "highlight": true
+    },
+    {
+      "text": "mulai gosong",
+      "startFrame": 991,
+      "endFrame": 1014,
+      "highlight": true
+    },
+    {
+      "text": "menghitam!",
+      "startFrame": 1014,
+      "endFrame": 1030,
+      "highlight": false
+    },
+    {
+      "text": "Karena panik",
+      "startFrame": 1064,
+      "endFrame": 1082,
+      "highlight": true
+    },
+    {
+      "text": "berat,",
+      "startFrame": 1082,
+      "endFrame": 1093,
+      "highlight": false
+    },
+    {
+      "text": "Riko malah",
+      "startFrame": 1093,
+      "endFrame": 1117,
+      "highlight": true
+    },
+    {
+      "text": "menyiram",
+      "startFrame": 1117,
+      "endFrame": 1129,
+      "highlight": false
+    },
+    {
+      "text": "minyak panas",
+      "startFrame": 1129,
+      "endFrame": 1146,
+      "highlight": false
+    },
+    {
+      "text": "pakai satu",
+      "startFrame": 1146,
+      "endFrame": 1163,
+      "highlight": false
+    },
+    {
+      "text": "gayung air!",
+      "startFrame": 1163,
+      "endFrame": 1180,
+      "highlight": true
+    },
+    {
+      "text": "Seketika api",
+      "startFrame": 1197,
+      "endFrame": 1219,
+      "highlight": true
+    },
+    {
+      "text": "meledak",
+      "startFrame": 1219,
+      "endFrame": 1229,
+      "highlight": true
+    },
+    {
+      "text": "setinggi",
+      "startFrame": 1229,
+      "endFrame": 1240,
+      "highlight": false
+    },
+    {
+      "text": "plafon,",
+      "startFrame": 1240,
+      "endFrame": 1258,
+      "highlight": true
+    },
+    {
+      "text": "dapur berubah",
+      "startFrame": 1258,
+      "endFrame": 1275,
+      "highlight": false
+    },
+    {
+      "text": "jadi arena",
+      "startFrame": 1275,
+      "endFrame": 1287,
+      "highlight": false
+    },
+    {
+      "text": "sirkus!",
+      "startFrame": 1287,
+      "endFrame": 1299,
+      "highlight": false
+    },
+    {
+      "text": "Satu kosan",
+      "startFrame": 1338,
+      "endFrame": 1360,
+      "highlight": true
+    },
+    {
+      "text": "langsung",
+      "startFrame": 1360,
+      "endFrame": 1368,
+      "highlight": false
+    },
+    {
+      "text": "heboh,",
+      "startFrame": 1368,
+      "endFrame": 1385,
+      "highlight": true
+    },
+    {
+      "text": "pintu kamar",
+      "startFrame": 1385,
+      "endFrame": 1400,
+      "highlight": false
+    },
+    {
+      "text": "terbuka satu",
+      "startFrame": 1400,
+      "endFrame": 1421,
+      "highlight": false
+    },
+    {
+      "text": "per satu",
+      "startFrame": 1421,
+      "endFrame": 1437,
+      "highlight": false
+    },
+    {
+      "text": "sambil lari",
+      "startFrame": 1437,
+      "endFrame": 1463,
+      "highlight": false
+    },
+    {
+      "text": "berhamburan.",
+      "startFrame": 1463,
+      "endFrame": 1478,
+      "highlight": false
+    },
+    {
+      "text": "Tiba-tiba,",
+      "startFrame": 1494,
+      "endFrame": 1519,
+      "highlight": false
+    },
+    {
+      "text": "Bu Tini",
+      "startFrame": 1519,
+      "endFrame": 1532,
+      "highlight": true
+    },
+    {
+      "text": "mendobrak",
+      "startFrame": 1532,
+      "endFrame": 1551,
+      "highlight": true
+    },
+    {
+      "text": "masuk dengan",
+      "startFrame": 1551,
+      "endFrame": 1567,
+      "highlight": false
+    },
+    {
+      "text": "tatapan",
+      "startFrame": 1567,
+      "endFrame": 1582,
+      "highlight": false
+    },
+    {
+      "text": "paling",
+      "startFrame": 1582,
+      "endFrame": 1592,
+      "highlight": false
+    },
+    {
+      "text": "mengerikan",
+      "startFrame": 1592,
+      "endFrame": 1605,
+      "highlight": false
+    },
+    {
+      "text": "sedunia!",
+      "startFrame": 1605,
+      "endFrame": 1620,
+      "highlight": false
+    },
+    {
+      "text": "Tanpa banyak",
+      "startFrame": 1656,
+      "endFrame": 1680,
+      "highlight": false
+    },
+    {
+      "text": "bicara,",
+      "startFrame": 1680,
+      "endFrame": 1703,
+      "highlight": false
+    },
+    {
+      "text": "Bu Tini",
+      "startFrame": 1703,
+      "endFrame": 1716,
+      "highlight": true
+    },
+    {
+      "text": "langsung",
+      "startFrame": 1716,
+      "endFrame": 1731,
+      "highlight": false
+    },
+    {
+      "text": "melempar",
+      "startFrame": 1731,
+      "endFrame": 1745,
+      "highlight": false
+    },
+    {
+      "text": "handuk basah",
+      "startFrame": 1745,
+      "endFrame": 1768,
+      "highlight": true
+    },
+    {
+      "text": "tepat menutup",
+      "startFrame": 1768,
+      "endFrame": 1792,
+      "highlight": false
+    },
+    {
+      "text": "wajan.",
+      "startFrame": 1792,
+      "endFrame": 1804,
+      "highlight": false
+    },
+    {
+      "text": "Api langsung",
+      "startFrame": 1817,
+      "endFrame": 1833,
+      "highlight": true
+    },
+    {
+      "text": "padam,",
+      "startFrame": 1833,
+      "endFrame": 1847,
+      "highlight": true
+    },
+    {
+      "text": "tapi aroma",
+      "startFrame": 1847,
+      "endFrame": 1872,
+      "highlight": true
+    },
+    {
+      "text": "mie gorengnya",
+      "startFrame": 1872,
+      "endFrame": 1890,
+      "highlight": true
+    },
+    {
+      "text": "malah menusuk",
+      "startFrame": 1890,
+      "endFrame": 1906,
+      "highlight": false
+    },
+    {
+      "text": "hidung Bu",
+      "startFrame": 1906,
+      "endFrame": 1915,
+      "highlight": false
+    },
+    {
+      "text": "Tini.",
+      "startFrame": 1915,
+      "endFrame": 1922,
+      "highlight": true
+    },
+    {
+      "text": "Bukannya",
+      "startFrame": 1967,
+      "endFrame": 1977,
+      "highlight": false
+    },
+    {
+      "text": "diusir,",
+      "startFrame": 1977,
+      "endFrame": 1992,
+      "highlight": false
+    },
+    {
+      "text": "jam dua",
+      "startFrame": 1992,
+      "endFrame": 2010,
+      "highlight": true
+    },
+    {
+      "text": "pagi itu",
+      "startFrame": 2010,
+      "endFrame": 2023,
+      "highlight": true
+    },
+    {
+      "text": "seluruh kosan",
+      "startFrame": 2023,
+      "endFrame": 2043,
+      "highlight": true
+    },
+    {
+      "text": "malah makan",
+      "startFrame": 2043,
+      "endFrame": 2056,
+      "highlight": true
+    },
+    {
+      "text": "mie bareng",
+      "startFrame": 2056,
+      "endFrame": 2069,
+      "highlight": true
+    },
+    {
+      "text": "dengan lahap.",
+      "startFrame": 2069,
+      "endFrame": 2084,
+      "highlight": false
+    },
+    {
+      "text": "Besok cat",
+      "startFrame": 2098,
+      "endFrame": 2119,
+      "highlight": false
+    },
+    {
+      "text": "ulang lemari",
+      "startFrame": 2119,
+      "endFrame": 2139,
+      "highlight": false
+    },
+    {
+      "text": "ya Riko,",
+      "startFrame": 2139,
+      "endFrame": 2151,
+      "highlight": true
+    },
+    {
+      "text": "tapi sekarang",
+      "startFrame": 2151,
+      "endFrame": 2180,
+      "highlight": true
+    },
+    {
+      "text": "tambah telor",
+      "startFrame": 2180,
+      "endFrame": 2203,
+      "highlight": true
+    },
+    {
+      "text": "satu lagi!",
+      "startFrame": 2203,
+      "endFrame": 2220,
+      "highlight": false
+    }
+  ]
+}

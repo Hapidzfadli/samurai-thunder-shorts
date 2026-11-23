@@ -1,0 +1,66 @@
+[
+  {
+    "scene": "hook",
+    "takes": 1,
+    "lines": [
+      ["tegang", "Jam dua pagi, perut anak kos ini keroncongan parah, niatnya cuma mau masak mie instan."],
+      ["santai", "Tapi entah kenapa, ujung-ujungnya malah bikin kebakaran satu kosan!"]
+    ]
+  },
+  {
+    "scene": "koridor",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Dengan langkah super pelan, Riko mengendap melewati kamar tetangga biar tidak ketahuan Ibu Kos."],
+      ["santai", "Pelan-pelan saja, pokoknya jangan sampai Bu Tini bangun."]
+    ]
+  },
+  {
+    "scene": "chef",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Sampai di dapur, Riko malah kesurupan gaya koki restoran bintang lima."],
+      ["santai", "Minyaknya dituang segalon, wajan digoyang-goyang, biar makin estetik katanya."]
+    ]
+  },
+  {
+    "scene": "menyambar",
+    "takes": 1,
+    "lines": [
+      ["tegang", "Belum sempat masuk bumbu, lidah api langsung menyambar tinggi dari wajan!"],
+      ["tegang", "Asap mengepul, lemari dapur Bu Tini mulai gosong menghitam!"]
+    ]
+  },
+  {
+    "scene": "gayung",
+    "takes": 1,
+    "lines": [
+      ["tegang", "Karena panik berat, Riko malah menyiram minyak panas pakai satu gayung air!"],
+      ["tegas", "Seketika api meledak setinggi plafon, dapur berubah jadi arena sirkus!"]
+    ]
+  },
+  {
+    "scene": "heboh",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Satu kosan langsung heboh, pintu kamar terbuka satu per satu sambil lari berhamburan."],
+      ["tegas", "Tiba-tiba, Bu Tini mendobrak masuk dengan tatapan paling mengerikan sedunia!"]
+    ]
+  },
+  {
+    "scene": "handuk",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Tanpa banyak bicara, Bu Tini langsung melempar handuk basah tepat menutup wajan."],
+      ["santai", "Api langsung padam, tapi aroma mie gorengnya malah menusuk hidung Bu Tini."]
+    ]
+  },
+  {
+    "scene": "makan",
+    "takes": 1,
+    "lines": [
+      ["santai", "Bukannya diusir, jam dua pagi itu seluruh kosan malah makan mie bareng dengan lahap."],
+      ["tegas", "Besok cat ulang lemari ya Riko, tapi sekarang tambah telor satu lagi!"]
+    ]
+  }
+]

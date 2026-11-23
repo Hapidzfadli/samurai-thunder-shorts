@@ -1,0 +1,2034 @@
+{
+ "fps": 30,
+ "totalFrames": 2126,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 254,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Jam dua pagi, perut anak kos ini keroncongan parah, niatnya cuma mau masak mie instan.",
+     "score": 0.985,
+     "file": "out/voice/mie/hook_0.wav",
+     "wordsSec": [
+      [
+       "Jam",
+       0.0,
+       0.2
+      ],
+      [
+       "2",
+       0.2,
+       0.38
+      ],
+      [
+       "pagi,",
+       0.38,
+       0.76
+      ],
+      [
+       "perut",
+       0.9,
+       1.14
+      ],
+      [
+       "anak",
+       1.14,
+       1.32
+      ],
+      [
+       "kos",
+       1.32,
+       1.52
+      ],
+      [
+       "ini",
+       1.52,
+       1.72
+      ],
+      [
+       "keroncongan",
+       1.72,
+       2.18
+      ],
+      [
+       "parah,",
+       2.18,
+       2.56
+      ],
+      [
+       "niatnya",
+       2.66,
+       3.02
+      ],
+      [
+       "cuma",
+       3.02,
+       3.18
+      ],
+      [
+       "mau",
+       3.18,
+       3.4
+      ],
+      [
+       "masak",
+       3.4,
+       3.72
+      ],
+      [
+       "Mi",
+       3.72,
+       3.84
+      ],
+      [
+       "Instant.",
+       3.84,
+       4.08
+      ]
+     ],
+     "from": 8,
+     "to": 137,
+     "words": [
+      {
+       "w": "Jam",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "2",
+       "from": 14,
+       "to": 19
+      },
+      {
+       "w": "pagi,",
+       "from": 19,
+       "to": 30
+      },
+      {
+       "w": "perut",
+       "from": 34,
+       "to": 42
+      },
+      {
+       "w": "anak",
+       "from": 42,
+       "to": 47
+      },
+      {
+       "w": "kos",
+       "from": 47,
+       "to": 53
+      },
+      {
+       "w": "ini",
+       "from": 53,
+       "to": 59
+      },
+      {
+       "w": "keroncongan",
+       "from": 59,
+       "to": 73
+      },
+      {
+       "w": "parah,",
+       "from": 73,
+       "to": 84
+      },
+      {
+       "w": "niatnya",
+       "from": 87,
+       "to": 98
+      },
+      {
+       "w": "cuma",
+       "from": 98,
+       "to": 103
+      },
+      {
+       "w": "mau",
+       "from": 103,
+       "to": 110
+      },
+      {
+       "w": "masak",
+       "from": 110,
+       "to": 119
+      },
+      {
+       "w": "Mi",
+       "from": 119,
+       "to": 123
+      },
+      {
+       "w": "Instant.",
+       "from": 123,
+       "to": 130
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Tapi entah kenapa, ujung-ujungnya malah bikin kebakaran satu kosan!",
+     "score": 1.0,
+     "file": "out/voice/mie/hook_1.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.32
+      ],
+      [
+       "entah",
+       0.32,
+       0.64
+      ],
+      [
+       "kenapa,",
+       0.64,
+       0.94
+      ],
+      [
+       "ujung",
+       1.2,
+       1.36
+      ],
+      [
+       "-ujungnya",
+       1.36,
+       1.7
+      ],
+      [
+       "malah",
+       1.7,
+       1.96
+      ],
+      [
+       "bikin",
+       1.96,
+       2.16
+      ],
+      [
+       "kebakaran",
+       2.16,
+       2.54
+      ],
+      [
+       "satu",
+       2.54,
+       2.72
+      ],
+      [
+       "kosan.",
+       2.72,
+       3.08
+      ]
+     ],
+     "from": 145,
+     "to": 240,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 145,
+       "to": 154
+      },
+      {
+       "w": "entah",
+       "from": 154,
+       "to": 164
+      },
+      {
+       "w": "kenapa,",
+       "from": 164,
+       "to": 173
+      },
+      {
+       "w": "ujung",
+       "from": 181,
+       "to": 186
+      },
+      {
+       "w": "-ujungnya",
+       "from": 186,
+       "to": 196
+      },
+      {
+       "w": "malah",
+       "from": 196,
+       "to": 204
+      },
+      {
+       "w": "bikin",
+       "from": 204,
+       "to": 210
+      },
+      {
+       "w": "kebakaran",
+       "from": 210,
+       "to": 221
+      },
+      {
+       "w": "satu",
+       "from": 221,
+       "to": 227
+      },
+      {
+       "w": "kosan.",
+       "from": 227,
+       "to": 237
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "koridor",
+   "from": 254,
+   "to": 510,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Dengan langkah super pelan, Riko mengendap melewati kamar tetangga biar tidak ketahuan Ibu Kos.",
+     "score": 0.988,
+     "file": "out/voice/mie/koridor_0.wav",
+     "wordsSec": [
+      [
+       "Dengan",
+       0.0,
+       0.32
+      ],
+      [
+       "langkah",
+       0.32,
+       0.62
+      ],
+      [
+       "super",
+       0.62,
+       0.84
+      ],
+      [
+       "pelan,",
+       0.84,
+       1.26
+      ],
+      [
+       "Rico",
+       1.42,
+       1.58
+      ],
+      [
+       "mengendap",
+       1.58,
+       2.08
+      ],
+      [
+       "melewati",
+       2.08,
+       2.54
+      ],
+      [
+       "kamar",
+       2.54,
+       2.88
+      ],
+      [
+       "tetangga",
+       2.88,
+       3.36
+      ],
+      [
+       "biar",
+       3.36,
+       3.68
+      ],
+      [
+       "tidak",
+       3.68,
+       3.86
+      ],
+      [
+       "ketahuan",
+       3.86,
+       4.38
+      ],
+      [
+       "ibu",
+       4.38,
+       4.64
+      ],
+      [
+       "Kos.",
+       4.64,
+       4.88
+      ]
+     ],
+     "from": 254,
+     "to": 408,
+     "words": [
+      {
+       "w": "Dengan",
+       "from": 254,
+       "to": 264
+      },
+      {
+       "w": "langkah",
+       "from": 264,
+       "to": 273
+      },
+      {
+       "w": "super",
+       "from": 273,
+       "to": 279
+      },
+      {
+       "w": "pelan,",
+       "from": 279,
+       "to": 292
+      },
+      {
+       "w": "Rico",
+       "from": 297,
+       "to": 301
+      },
+      {
+       "w": "mengendap",
+       "from": 301,
+       "to": 316
+      },
+      {
+       "w": "melewati",
+       "from": 316,
+       "to": 330
+      },
+      {
+       "w": "kamar",
+       "from": 330,
+       "to": 340
+      },
+      {
+       "w": "tetangga",
+       "from": 340,
+       "to": 355
+      },
+      {
+       "w": "biar",
+       "from": 355,
+       "to": 364
+      },
+      {
+       "w": "tidak",
+       "from": 364,
+       "to": 370
+      },
+      {
+       "w": "ketahuan",
+       "from": 370,
+       "to": 385
+      },
+      {
+       "w": "ibu",
+       "from": 385,
+       "to": 393
+      },
+      {
+       "w": "Kos.",
+       "from": 393,
+       "to": 400
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Pelan-pelan saja, pokoknya jangan sampai Bu Tini bangun.",
+     "score": 0.989,
+     "file": "out/voice/mie/koridor_1.wav",
+     "wordsSec": [
+      [
+       "Pelan",
+       0.0,
+       0.26
+      ],
+      [
+       "-pelan",
+       0.26,
+       0.54
+      ],
+      [
+       "saja",
+       0.54,
+       0.74
+      ],
+      [
+       "pokoknya",
+       0.74,
+       1.3
+      ],
+      [
+       "jangan",
+       1.3,
+       1.5
+      ],
+      [
+       "sampai",
+       1.5,
+       1.82
+      ],
+      [
+       "butin",
+       1.82,
+       2.14
+      ],
+      [
+       "dibangun.",
+       2.14,
+       2.52
+      ]
+     ],
+     "from": 415,
+     "to": 497,
+     "words": [
+      {
+       "w": "Pelan",
+       "from": 415,
+       "to": 423
+      },
+      {
+       "w": "-pelan",
+       "from": 423,
+       "to": 432
+      },
+      {
+       "w": "saja",
+       "from": 432,
+       "to": 438
+      },
+      {
+       "w": "pokoknya",
+       "from": 438,
+       "to": 454
+      },
+      {
+       "w": "jangan",
+       "from": 454,
+       "to": 460
+      },
+      {
+       "w": "sampai",
+       "from": 460,
+       "to": 470
+      },
+      {
+       "w": "butin",
+       "from": 470,
+       "to": 480
+      },
+      {
+       "w": "dibangun.",
+       "from": 480,
+       "to": 491
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "chef",
+   "from": 510,
+   "to": 762,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Sampai di dapur, Riko malah kesurupan gaya koki restoran bintang lima.",
+     "score": 0.964,
+     "file": "out/voice/mie/chef_0.wav",
+     "wordsSec": [
+      [
+       "Sampai",
+       0.0,
+       0.34
+      ],
+      [
+       "di",
+       0.34,
+       0.44
+      ],
+      [
+       "Dapur,",
+       0.44,
+       0.82
+      ],
+      [
+       "Riko",
+       1.12,
+       1.48
+      ],
+      [
+       "malah",
+       1.48,
+       1.78
+      ],
+      [
+       "kesurupan",
+       1.78,
+       2.2
+      ],
+      [
+       "Gaya",
+       2.2,
+       2.52
+      ],
+      [
+       "Koki",
+       2.52,
+       2.84
+      ],
+      [
+       "Restaurant",
+       2.84,
+       3.14
+      ],
+      [
+       "Bintang",
+       3.14,
+       3.66
+      ],
+      [
+       "5.",
+       3.66,
+       3.9
+      ]
+     ],
+     "from": 510,
+     "to": 634,
+     "words": [
+      {
+       "w": "Sampai",
+       "from": 510,
+       "to": 521
+      },
+      {
+       "w": "di",
+       "from": 521,
+       "to": 524
+      },
+      {
+       "w": "Dapur,",
+       "from": 524,
+       "to": 535
+      },
+      {
+       "w": "Riko",
+       "from": 544,
+       "to": 555
+      },
+      {
+       "w": "malah",
+       "from": 555,
+       "to": 564
+      },
+      {
+       "w": "kesurupan",
+       "from": 564,
+       "to": 576
+      },
+      {
+       "w": "Gaya",
+       "from": 576,
+       "to": 586
+      },
+      {
+       "w": "Koki",
+       "from": 586,
+       "to": 596
+      },
+      {
+       "w": "Restaurant",
+       "from": 596,
+       "to": 605
+      },
+      {
+       "w": "Bintang",
+       "from": 605,
+       "to": 620
+      },
+      {
+       "w": "5.",
+       "from": 620,
+       "to": 627
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Minyaknya dituang segalon, wajan digoyang-goyang, biar makin estetik katanya.",
+     "score": 0.985,
+     "file": "out/voice/mie/chef_1.wav",
+     "wordsSec": [
+      [
+       "Menyaknya",
+       0.0,
+       0.42
+      ],
+      [
+       "dituang",
+       0.42,
+       0.72
+      ],
+      [
+       "segalon,",
+       0.72,
+       1.1
+      ],
+      [
+       "wajan",
+       1.3,
+       1.56
+      ],
+      [
+       "digoyang",
+       1.56,
+       1.86
+      ],
+      [
+       "-goyang,",
+       1.86,
+       2.2
+      ],
+      [
+       "biar",
+       2.28,
+       2.46
+      ],
+      [
+       "makin",
+       2.46,
+       2.7
+      ],
+      [
+       "estetik",
+       2.7,
+       3.14
+      ],
+      [
+       "katanya.",
+       3.14,
+       3.38
+      ]
+     ],
+     "from": 642,
+     "to": 748,
+     "words": [
+      {
+       "w": "Menyaknya",
+       "from": 642,
+       "to": 654
+      },
+      {
+       "w": "dituang",
+       "from": 654,
+       "to": 663
+      },
+      {
+       "w": "segalon,",
+       "from": 663,
+       "to": 675
+      },
+      {
+       "w": "wajan",
+       "from": 681,
+       "to": 688
+      },
+      {
+       "w": "digoyang",
+       "from": 688,
+       "to": 697
+      },
+      {
+       "w": "-goyang,",
+       "from": 697,
+       "to": 708
+      },
+      {
+       "w": "biar",
+       "from": 710,
+       "to": 715
+      },
+      {
+       "w": "makin",
+       "from": 715,
+       "to": 723
+      },
+      {
+       "w": "estetik",
+       "from": 723,
+       "to": 736
+      },
+      {
+       "w": "katanya.",
+       "from": 736,
+       "to": 743
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "menyambar",
+   "from": 762,
+   "to": 1003,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Belum sempat masuk bumbu, lidah api langsung menyambar tinggi dari wajan!",
+     "score": 1.0,
+     "file": "out/voice/mie/menyambar_0.wav",
+     "wordsSec": [
+      [
+       "Belum",
+       0.0,
+       0.3
+      ],
+      [
+       "sempat",
+       0.3,
+       0.6
+      ],
+      [
+       "masuk",
+       0.6,
+       0.78
+      ],
+      [
+       "bumbu,",
+       0.78,
+       1.18
+      ],
+      [
+       "lidah",
+       1.36,
+       1.66
+      ],
+      [
+       "api",
+       1.66,
+       1.94
+      ],
+      [
+       "langsung",
+       1.94,
+       2.32
+      ],
+      [
+       "menyambar",
+       2.32,
+       2.72
+      ],
+      [
+       "tinggi",
+       2.72,
+       2.98
+      ],
+      [
+       "dari",
+       2.98,
+       3.14
+      ],
+      [
+       "wajan.",
+       3.14,
+       3.58
+      ]
+     ],
+     "from": 762,
+     "to": 872,
+     "words": [
+      {
+       "w": "Belum",
+       "from": 762,
+       "to": 771
+      },
+      {
+       "w": "sempat",
+       "from": 771,
+       "to": 780
+      },
+      {
+       "w": "masuk",
+       "from": 780,
+       "to": 785
+      },
+      {
+       "w": "bumbu,",
+       "from": 785,
+       "to": 797
+      },
+      {
+       "w": "lidah",
+       "from": 803,
+       "to": 812
+      },
+      {
+       "w": "api",
+       "from": 812,
+       "to": 820
+      },
+      {
+       "w": "langsung",
+       "from": 820,
+       "to": 831
+      },
+      {
+       "w": "menyambar",
+       "from": 831,
+       "to": 843
+      },
+      {
+       "w": "tinggi",
+       "from": 843,
+       "to": 851
+      },
+      {
+       "w": "dari",
+       "from": 851,
+       "to": 856
+      },
+      {
+       "w": "wajan.",
+       "from": 856,
+       "to": 869
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "text": "Asap mengepul, lemari dapur Bu Tini mulai gosong menghitam!",
+     "score": 1.0,
+     "file": "out/voice/mie/menyambar_1.wav",
+     "wordsSec": [
+      [
+       "Asap",
+       0.0,
+       0.32
+      ],
+      [
+       "mengepul,",
+       0.32,
+       0.76
+      ],
+      [
+       "lemari",
+       1.0,
+       1.32
+      ],
+      [
+       "dapur",
+       1.32,
+       1.62
+      ],
+      [
+       "butini",
+       1.62,
+       2.12
+      ],
+      [
+       "mulai",
+       2.12,
+       2.52
+      ],
+      [
+       "gosong",
+       2.52,
+       2.88
+      ],
+      [
+       "menghitam.",
+       2.88,
+       3.42
+      ]
+     ],
+     "from": 880,
+     "to": 989,
+     "words": [
+      {
+       "w": "Asap",
+       "from": 880,
+       "to": 890
+      },
+      {
+       "w": "mengepul,",
+       "from": 890,
+       "to": 903
+      },
+      {
+       "w": "lemari",
+       "from": 910,
+       "to": 920
+      },
+      {
+       "w": "dapur",
+       "from": 920,
+       "to": 929
+      },
+      {
+       "w": "butini",
+       "from": 929,
+       "to": 944
+      },
+      {
+       "w": "mulai",
+       "from": 944,
+       "to": 956
+      },
+      {
+       "w": "gosong",
+       "from": 956,
+       "to": 966
+      },
+      {
+       "w": "menghitam.",
+       "from": 966,
+       "to": 983
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "gayung",
+   "from": 1003,
+   "to": 1259,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Karena panik berat, Riko malah menyiram minyak panas pakai satu gayung air!",
+     "score": 0.957,
+     "file": "out/voice/mie/gayung_0.wav",
+     "wordsSec": [
+      [
+       "Karena",
+       0.0,
+       0.22
+      ],
+      [
+       "panik",
+       0.22,
+       0.6
+      ],
+      [
+       "berat,",
+       0.6,
+       0.98
+      ],
+      [
+       "Riko",
+       1.12,
+       1.48
+      ],
+      [
+       "malah",
+       1.48,
+       1.78
+      ],
+      [
+       "menyeram",
+       1.78,
+       2.18
+      ],
+      [
+       "minyak",
+       2.18,
+       2.44
+      ],
+      [
+       "panas",
+       2.44,
+       2.78
+      ],
+      [
+       "pake",
+       2.78,
+       3.04
+      ],
+      [
+       "satu",
+       3.04,
+       3.26
+      ],
+      [
+       "gayung",
+       3.26,
+       3.66
+      ],
+      [
+       "air.",
+       3.66,
+       3.86
+      ]
+     ],
+     "from": 1003,
+     "to": 1128,
+     "words": [
+      {
+       "w": "Karena",
+       "from": 1003,
+       "to": 1009
+      },
+      {
+       "w": "panik",
+       "from": 1009,
+       "to": 1021
+      },
+      {
+       "w": "berat,",
+       "from": 1021,
+       "to": 1032
+      },
+      {
+       "w": "Riko",
+       "from": 1036,
+       "to": 1047
+      },
+      {
+       "w": "malah",
+       "from": 1047,
+       "to": 1056
+      },
+      {
+       "w": "menyeram",
+       "from": 1056,
+       "to": 1068
+      },
+      {
+       "w": "minyak",
+       "from": 1068,
+       "to": 1076
+      },
+      {
+       "w": "panas",
+       "from": 1076,
+       "to": 1086
+      },
+      {
+       "w": "pake",
+       "from": 1086,
+       "to": 1094
+      },
+      {
+       "w": "satu",
+       "from": 1094,
+       "to": 1101
+      },
+      {
+       "w": "gayung",
+       "from": 1101,
+       "to": 1113
+      },
+      {
+       "w": "air.",
+       "from": 1113,
+       "to": 1119
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Seketika api meledak setinggi plafon, dapur berubah jadi arena sirkus!",
+     "score": 1.0,
+     "file": "out/voice/mie/gayung_1.wav",
+     "wordsSec": [
+      [
+       "Seketika",
+       0.0,
+       0.46
+      ],
+      [
+       "api",
+       0.46,
+       0.74
+      ],
+      [
+       "meledak",
+       0.74,
+       1.08
+      ],
+      [
+       "setinggi",
+       1.08,
+       1.44
+      ],
+      [
+       "plafon,",
+       1.44,
+       1.9
+      ],
+      [
+       "dapur",
+       2.04,
+       2.32
+      ],
+      [
+       "berubah",
+       2.32,
+       2.62
+      ],
+      [
+       "jadi",
+       2.62,
+       2.8
+      ],
+      [
+       "arena",
+       2.8,
+       3.02
+      ],
+      [
+       "sirkus.",
+       3.02,
+       3.4
+      ]
+     ],
+     "from": 1135,
+     "to": 1246,
+     "words": [
+      {
+       "w": "Seketika",
+       "from": 1135,
+       "to": 1149
+      },
+      {
+       "w": "api",
+       "from": 1149,
+       "to": 1158
+      },
+      {
+       "w": "meledak",
+       "from": 1158,
+       "to": 1168
+      },
+      {
+       "w": "setinggi",
+       "from": 1168,
+       "to": 1179
+      },
+      {
+       "w": "plafon,",
+       "from": 1179,
+       "to": 1192
+      },
+      {
+       "w": "dapur",
+       "from": 1197,
+       "to": 1205
+      },
+      {
+       "w": "berubah",
+       "from": 1205,
+       "to": 1214
+      },
+      {
+       "w": "jadi",
+       "from": 1214,
+       "to": 1219
+      },
+      {
+       "w": "arena",
+       "from": 1219,
+       "to": 1226
+      },
+      {
+       "w": "sirkus.",
+       "from": 1226,
+       "to": 1237
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "heboh",
+   "from": 1259,
+   "to": 1557,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Satu kosan langsung heboh, pintu kamar terbuka satu per satu sambil lari berhamburan.",
+     "score": 0.967,
+     "file": "out/voice/mie/heboh_0.wav",
+     "wordsSec": [
+      [
+       "Satu",
+       0.0,
+       0.36
+      ],
+      [
+       "kosan",
+       0.36,
+       0.7
+      ],
+      [
+       "langsung",
+       0.7,
+       1.0
+      ],
+      [
+       "heboh,",
+       1.0,
+       1.38
+      ],
+      [
+       "pintu",
+       1.56,
+       1.8
+      ],
+      [
+       "kamar",
+       1.8,
+       2.06
+      ],
+      [
+       "terbuka",
+       2.06,
+       2.44
+      ],
+      [
+       "satu",
+       2.44,
+       2.74
+      ],
+      [
+       "persatu",
+       2.74,
+       3.28
+      ],
+      [
+       "sambil",
+       3.28,
+       3.88
+      ],
+      [
+       "lari",
+       3.88,
+       4.14
+      ],
+      [
+       "berhamburan.",
+       4.14,
+       4.66
+      ]
+     ],
+     "from": 1259,
+     "to": 1406,
+     "words": [
+      {
+       "w": "Satu",
+       "from": 1259,
+       "to": 1270
+      },
+      {
+       "w": "kosan",
+       "from": 1270,
+       "to": 1280
+      },
+      {
+       "w": "langsung",
+       "from": 1280,
+       "to": 1289
+      },
+      {
+       "w": "heboh,",
+       "from": 1289,
+       "to": 1301
+      },
+      {
+       "w": "pintu",
+       "from": 1306,
+       "to": 1313
+      },
+      {
+       "w": "kamar",
+       "from": 1313,
+       "to": 1321
+      },
+      {
+       "w": "terbuka",
+       "from": 1321,
+       "to": 1332
+      },
+      {
+       "w": "satu",
+       "from": 1332,
+       "to": 1341
+      },
+      {
+       "w": "persatu",
+       "from": 1341,
+       "to": 1358
+      },
+      {
+       "w": "sambil",
+       "from": 1358,
+       "to": 1376
+      },
+      {
+       "w": "lari",
+       "from": 1376,
+       "to": 1383
+      },
+      {
+       "w": "berhamburan.",
+       "from": 1383,
+       "to": 1399
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Tiba-tiba, Bu Tini mendobrak masuk dengan tatapan paling mengerikan sedunia!",
+     "score": 1.0,
+     "file": "out/voice/mie/heboh_1.wav",
+     "wordsSec": [
+      [
+       "Tiba",
+       0.0,
+       0.28
+      ],
+      [
+       "-tiba,",
+       0.28,
+       0.68
+      ],
+      [
+       "Butini",
+       0.82,
+       1.26
+      ],
+      [
+       "mendobrak",
+       1.26,
+       1.88
+      ],
+      [
+       "masuk",
+       1.88,
+       2.16
+      ],
+      [
+       "dengan",
+       2.16,
+       2.42
+      ],
+      [
+       "tatapan",
+       2.42,
+       2.92
+      ],
+      [
+       "paling",
+       2.92,
+       3.24
+      ],
+      [
+       "mengerikan",
+       3.24,
+       3.7
+      ],
+      [
+       "sedunia.",
+       3.7,
+       4.18
+      ]
+     ],
+     "from": 1414,
+     "to": 1544,
+     "words": [
+      {
+       "w": "Tiba",
+       "from": 1414,
+       "to": 1422
+      },
+      {
+       "w": "-tiba,",
+       "from": 1422,
+       "to": 1434
+      },
+      {
+       "w": "Butini",
+       "from": 1439,
+       "to": 1452
+      },
+      {
+       "w": "mendobrak",
+       "from": 1452,
+       "to": 1470
+      },
+      {
+       "w": "masuk",
+       "from": 1470,
+       "to": 1479
+      },
+      {
+       "w": "dengan",
+       "from": 1479,
+       "to": 1487
+      },
+      {
+       "w": "tatapan",
+       "from": 1487,
+       "to": 1502
+      },
+      {
+       "w": "paling",
+       "from": 1502,
+       "to": 1511
+      },
+      {
+       "w": "mengerikan",
+       "from": 1511,
+       "to": 1525
+      },
+      {
+       "w": "sedunia.",
+       "from": 1525,
+       "to": 1539
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "handuk",
+   "from": 1557,
+   "to": 1844,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Tanpa banyak bicara, Bu Tini langsung melempar handuk basah tepat menutup wajan.",
+     "score": 1.0,
+     "file": "out/voice/mie/handuk_0.wav",
+     "wordsSec": [
+      [
+       "Tanpa",
+       0.0,
+       0.46
+      ],
+      [
+       "banyak",
+       0.46,
+       0.8
+      ],
+      [
+       "bicara,",
+       0.8,
+       1.32
+      ],
+      [
+       "butini",
+       1.56,
+       2.0
+      ],
+      [
+       "langsung",
+       2.0,
+       2.5
+      ],
+      [
+       "melempar",
+       2.5,
+       2.96
+      ],
+      [
+       "handuk",
+       2.96,
+       3.26
+      ],
+      [
+       "basah",
+       3.26,
+       3.74
+      ],
+      [
+       "tepat",
+       3.74,
+       4.16
+      ],
+      [
+       "menutup",
+       4.16,
+       4.54
+      ],
+      [
+       "wajan.",
+       4.54,
+       4.92
+      ]
+     ],
+     "from": 1557,
+     "to": 1709,
+     "words": [
+      {
+       "w": "Tanpa",
+       "from": 1557,
+       "to": 1571
+      },
+      {
+       "w": "banyak",
+       "from": 1571,
+       "to": 1581
+      },
+      {
+       "w": "bicara,",
+       "from": 1581,
+       "to": 1597
+      },
+      {
+       "w": "butini",
+       "from": 1604,
+       "to": 1617
+      },
+      {
+       "w": "langsung",
+       "from": 1617,
+       "to": 1632
+      },
+      {
+       "w": "melempar",
+       "from": 1632,
+       "to": 1646
+      },
+      {
+       "w": "handuk",
+       "from": 1646,
+       "to": 1655
+      },
+      {
+       "w": "basah",
+       "from": 1655,
+       "to": 1669
+      },
+      {
+       "w": "tepat",
+       "from": 1669,
+       "to": 1682
+      },
+      {
+       "w": "menutup",
+       "from": 1682,
+       "to": 1693
+      },
+      {
+       "w": "wajan.",
+       "from": 1693,
+       "to": 1705
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Api langsung padam, tapi aroma mie gorengnya malah menusuk hidung Bu Tini.",
+     "score": 0.992,
+     "file": "out/voice/mie/handuk_1.wav",
+     "wordsSec": [
+      [
+       "Api",
+       0.0,
+       0.32
+      ],
+      [
+       "langsung",
+       0.32,
+       0.52
+      ],
+      [
+       "padam,",
+       0.52,
+       1.0
+      ],
+      [
+       "tapi",
+       1.12,
+       1.52
+      ],
+      [
+       "aromami",
+       1.52,
+       1.98
+      ],
+      [
+       "gorengnya",
+       1.98,
+       2.4
+      ],
+      [
+       "malah",
+       2.4,
+       2.64
+      ],
+      [
+       "menusuk",
+       2.64,
+       2.94
+      ],
+      [
+       "hidung",
+       2.94,
+       3.16
+      ],
+      [
+       "butini.",
+       3.16,
+       3.48
+      ]
+     ],
+     "from": 1717,
+     "to": 1830,
+     "words": [
+      {
+       "w": "Api",
+       "from": 1717,
+       "to": 1726
+      },
+      {
+       "w": "langsung",
+       "from": 1726,
+       "to": 1732
+      },
+      {
+       "w": "padam,",
+       "from": 1732,
+       "to": 1747
+      },
+      {
+       "w": "tapi",
+       "from": 1750,
+       "to": 1762
+      },
+      {
+       "w": "aromami",
+       "from": 1762,
+       "to": 1776
+      },
+      {
+       "w": "gorengnya",
+       "from": 1776,
+       "to": 1789
+      },
+      {
+       "w": "malah",
+       "from": 1789,
+       "to": 1796
+      },
+      {
+       "w": "menusuk",
+       "from": 1796,
+       "to": 1805
+      },
+      {
+       "w": "hidung",
+       "from": 1805,
+       "to": 1811
+      },
+      {
+       "w": "butini.",
+       "from": 1811,
+       "to": 1821
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "makan",
+   "from": 1844,
+   "to": 2118,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Bukannya diusir, jam dua pagi itu seluruh kosan malah makan mie bareng dengan lahap.",
+     "score": 0.985,
+     "file": "out/voice/mie/makan_0.wav",
+     "wordsSec": [
+      [
+       "Bukannya",
+       0.0,
+       0.34
+      ],
+      [
+       "diusir",
+       0.34,
+       0.84
+      ],
+      [
+       "jam",
+       0.84,
+       1.1
+      ],
+      [
+       "2",
+       1.1,
+       1.28
+      ],
+      [
+       "pagi",
+       1.28,
+       1.62
+      ],
+      [
+       "itu",
+       1.62,
+       1.78
+      ],
+      [
+       "seluruh",
+       1.78,
+       2.16
+      ],
+      [
+       "kosan",
+       2.16,
+       2.46
+      ],
+      [
+       "malah",
+       2.46,
+       2.72
+      ],
+      [
+       "makan",
+       2.72,
+       2.92
+      ],
+      [
+       "mee",
+       2.92,
+       3.06
+      ],
+      [
+       "bareng",
+       3.06,
+       3.36
+      ],
+      [
+       "dengan",
+       3.36,
+       3.52
+      ],
+      [
+       "lahap.",
+       3.52,
+       3.88
+      ]
+     ],
+     "from": 1844,
+     "to": 1964,
+     "words": [
+      {
+       "w": "Bukannya",
+       "from": 1844,
+       "to": 1854
+      },
+      {
+       "w": "diusir",
+       "from": 1854,
+       "to": 1869
+      },
+      {
+       "w": "jam",
+       "from": 1869,
+       "to": 1877
+      },
+      {
+       "w": "2",
+       "from": 1877,
+       "to": 1882
+      },
+      {
+       "w": "pagi",
+       "from": 1882,
+       "to": 1893
+      },
+      {
+       "w": "itu",
+       "from": 1893,
+       "to": 1897
+      },
+      {
+       "w": "seluruh",
+       "from": 1897,
+       "to": 1909
+      },
+      {
+       "w": "kosan",
+       "from": 1909,
+       "to": 1918
+      },
+      {
+       "w": "malah",
+       "from": 1918,
+       "to": 1926
+      },
+      {
+       "w": "makan",
+       "from": 1926,
+       "to": 1932
+      },
+      {
+       "w": "mee",
+       "from": 1932,
+       "to": 1936
+      },
+      {
+       "w": "bareng",
+       "from": 1936,
+       "to": 1945
+      },
+      {
+       "w": "dengan",
+       "from": 1945,
+       "to": 1950
+      },
+      {
+       "w": "lahap.",
+       "from": 1950,
+       "to": 1960
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Besok cat ulang lemari ya Riko, tapi sekarang tambah telor satu lagi!",
+     "score": 0.942,
+     "file": "out/voice/mie/makan_1.wav",
+     "wordsSec": [
+      [
+       "Besok",
+       0.0,
+       0.42
+      ],
+      [
+       "kat",
+       0.42,
+       0.7
+      ],
+      [
+       "ulang",
+       0.7,
+       1.04
+      ],
+      [
+       "lemari",
+       1.04,
+       1.38
+      ],
+      [
+       "ya",
+       1.38,
+       1.5
+      ],
+      [
+       "Rico",
+       1.5,
+       1.78
+      ],
+      [
+       "Tapi",
+       1.78,
+       2.3
+      ],
+      [
+       "sekarang",
+       2.3,
+       2.74
+      ],
+      [
+       "tambah",
+       2.74,
+       3.1
+      ],
+      [
+       "telur,",
+       3.1,
+       3.46
+      ],
+      [
+       "satu",
+       3.5,
+       3.78
+      ],
+      [
+       "lagi",
+       3.78,
+       4.08
+      ]
+     ],
+     "from": 1972,
+     "to": 2104,
+     "words": [
+      {
+       "w": "Besok",
+       "from": 1972,
+       "to": 1984
+      },
+      {
+       "w": "kat",
+       "from": 1984,
+       "to": 1993
+      },
+      {
+       "w": "ulang",
+       "from": 1993,
+       "to": 2003
+      },
+      {
+       "w": "lemari",
+       "from": 2003,
+       "to": 2013
+      },
+      {
+       "w": "ya",
+       "from": 2013,
+       "to": 2017
+      },
+      {
+       "w": "Rico",
+       "from": 2017,
+       "to": 2025
+      },
+      {
+       "w": "Tapi",
+       "from": 2025,
+       "to": 2041
+      },
+      {
+       "w": "sekarang",
+       "from": 2041,
+       "to": 2054
+      },
+      {
+       "w": "tambah",
+       "from": 2054,
+       "to": 2065
+      },
+      {
+       "w": "telur,",
+       "from": 2065,
+       "to": 2075
+      },
+      {
+       "w": "satu",
+       "from": 2077,
+       "to": 2085
+      },
+      {
+       "w": "lagi",
+       "from": 2085,
+       "to": 2094
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
