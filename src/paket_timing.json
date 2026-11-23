@@ -1,0 +1,187 @@
+{
+ "fps": 30,
+ "total_frames": 1711,
+ "scenes": {
+  "hook": 218,
+  "router": 211,
+  "tiang": 338,
+  "laut": 260,
+  "server": 220,
+  "bts": 180,
+  "akhir": 284
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Jam sebelas lewat lima puluh sembilan. Rina menekan kirim.",
+   "from": 4,
+   "to": 87
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Tugasnya jadi satu paket data. Namanya Pak Paket.",
+   "from": 92,
+   "to": 157
+  },
+  "hook_3": {
+   "scene": "hook",
+   "text": "Waktunya cuma enam puluh detik.",
+   "from": 162,
+   "to": 209
+  },
+  "router_1": {
+   "scene": "router",
+   "text": "Pertama, dia masuk ke router.",
+   "from": 4,
+   "to": 58
+  },
+  "router_2": {
+   "scene": "router",
+   "text": "Lampunya berkedip, semua paket antre.",
+   "from": 63,
+   "to": 124
+  },
+  "router_3": {
+   "scene": "router",
+   "text": "Permisi, permisi, darurat.",
+   "from": 128,
+   "to": 172
+  },
+  "router_4": {
+   "scene": "router",
+   "text": "Antre, Pak.",
+   "from": 176,
+   "to": 202
+  },
+  "tiang_1": {
+   "scene": "tiang",
+   "text": "Dari rumah, dia lari lewat kabel serat optik di tiang listrik.",
+   "from": 4,
+   "to": 106
+  },
+  "tiang_2": {
+   "scene": "tiang",
+   "text": "Di sini, dia berubah jadi cahaya.",
+   "from": 111,
+   "to": 170
+  },
+  "tiang_3": {
+   "scene": "tiang",
+   "text": "Kecepatannya, sekitar dua ratus ribu kilometer per detik.",
+   "from": 175,
+   "to": 253
+  },
+  "tiang_4": {
+   "scene": "tiang",
+   "text": "Layangan nyangkut di kabel, tapi cahaya nggak peduli.",
+   "from": 258,
+   "to": 329
+  },
+  "laut_1": {
+   "scene": "laut",
+   "text": "Lalu, dia menyeberang lautan lewat kabel di dasar laut.",
+   "from": 4,
+   "to": 82
+  },
+  "laut_2": {
+   "scene": "laut",
+   "text": "Seekor hiu menggigit kabelnya.",
+   "from": 87,
+   "to": 143
+  },
+  "laut_3": {
+   "scene": "laut",
+   "text": "Nyam, enak.",
+   "from": 147,
+   "to": 191
+  },
+  "laut_4": {
+   "scene": "laut",
+   "text": "Untung, kabelnya berlapis baja.",
+   "from": 198,
+   "to": 251
+  },
+  "server_1": {
+   "scene": "server",
+   "text": "Sampai di gedung server, ribuan komputer menyala dua puluh empat jam.",
+   "from": 4,
+   "to": 95
+  },
+  "server_2": {
+   "scene": "server",
+   "text": "Ruangannya dingin banget, supaya mesinnya nggak kepanasan.",
+   "from": 100,
+   "to": 164
+  },
+  "server_3": {
+   "scene": "server",
+   "text": "Tiket mana, tiket?",
+   "from": 168,
+   "to": 211
+  },
+  "bts_1": {
+   "scene": "bts",
+   "text": "Terakhir, menara sinyal mengubahnya jadi gelombang radio.",
+   "from": 4,
+   "to": 95
+  },
+  "bts_2": {
+   "scene": "bts",
+   "text": "Terbang ke HP dosen yang lagi ngopi.",
+   "from": 100,
+   "to": 153
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Lima puluh sembilan detik. Tepat waktu.",
+   "from": 6,
+   "to": 62
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Kok filenya kosong?",
+   "from": 68,
+   "to": 108
+  },
+  "akhir_3": {
+   "scene": "akhir",
+   "text": "Rina salah kirim. Namanya, tugas final revisi tiga beneran.",
+   "from": 114,
+   "to": 203
+  },
+  "akhir_4": {
+   "scene": "akhir",
+   "text": "Saya pensiun.",
+   "from": 211,
+   "to": 239
+  }
+ },
+ "events": {
+  "hook.send": 56,
+  "hook.pack": 125,
+  "hook.timer": 163,
+  "router.in": 20,
+  "router.queue": 82,
+  "router.say": 128,
+  "router.reply": 176,
+  "tiang.run": 4,
+  "tiang.light": 111,
+  "tiang.speed": 175,
+  "tiang.kite": 258,
+  "laut.sea": 4,
+  "laut.shark": 88,
+  "laut.chomp": 147,
+  "laut.armor": 214,
+  "server.in": 4,
+  "server.cold": 100,
+  "server.ticket": 168,
+  "bts.tower": 4,
+  "bts.fly": 100,
+  "akhir.time": 6,
+  "akhir.empty": 69,
+  "akhir.wrong": 115,
+  "akhir.quit": 212,
+  "akhir.card": 245
+ },
+ "stepF": {}
+}

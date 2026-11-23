@@ -1,0 +1,156 @@
+{
+ "fps": 30,
+ "total_frames": 2209,
+ "scenes": {
+  "istana": 165,
+  "kerja": 195,
+  "server": 246,
+  "daftar": 305,
+  "bosan": 165,
+  "hapus": 225,
+  "lapor": 270,
+  "bareskrim": 300,
+  "penutup": 338
+ },
+ "lines": {
+  "i1": {
+   "scene": "istana",
+   "text": "Di istana, Pak Presiden sedang asyik joget, sambil menelepon.",
+   "from": 3,
+   "to": 96
+  },
+  "i2": {
+   "scene": "istana",
+   "text": "Beliau tidak tahu, ada yang ikut mendengarkan.",
+   "from": 99,
+   "to": 158
+  },
+  "k1": {
+   "scene": "kerja",
+   "text": "Bobby, nanti makan siang pakai sambal ya. Yang pedas.",
+   "from": 3,
+   "to": 97
+  },
+  "k2": {
+   "scene": "kerja",
+   "text": "Isi teleponnya? Rahasia negara tingkat tinggi. Soal sambal.",
+   "from": 100,
+   "to": 182
+  },
+  "v1": {
+   "scene": "server",
+   "text": "Menurut penyidik, nomor itu diduga dimasukkan ke sistem penyadapan resmi bernama LIMS, tanpa prosedur verifikasi.",
+   "from": 3,
+   "to": 172
+  },
+  "v2": {
+   "scene": "server",
+   "text": "Pintu verifikasinya ada. Cuma, tidak dilewati.",
+   "from": 176,
+   "to": 238
+  },
+  "d1": {
+   "scene": "daftar",
+   "text": "Dan bukan cuma nomor Presiden. Yang diduga ikut disadap: pejabat, politisi, jurnalis, ormas, LSM, sampai pengusaha.",
+   "from": 3,
+   "to": 193
+  },
+  "d2": {
+   "scene": "daftar",
+   "text": "Kalau daftarnya dicetak, struknya lebih panjang dari struk belanja bulanan.",
+   "from": 196,
+   "to": 297
+  },
+  "b1": {
+   "scene": "bosan",
+   "text": "Isinya cuma kucing sama sambal lagi.",
+   "from": 3,
+   "to": 57
+  },
+  "b2": {
+   "scene": "bosan",
+   "text": "Ternyata, menyadap itu tidak seseru di film.",
+   "from": 60,
+   "to": 127
+  },
+  "h1": {
+   "scene": "hapus",
+   "text": "Lalu sekitar Oktober, rekaman hasil penyadapan diduga diperintahkan untuk dihapus.",
+   "from": 3,
+   "to": 115
+  },
+  "h2": {
+   "scene": "hapus",
+   "text": "Seperti menghapus riwayat chat, sebelum HP dicek ibu.",
+   "from": 119,
+   "to": 203
+  },
+  "l1": {
+   "scene": "lapor",
+   "text": "Tapi pada tiga puluh Oktober, seorang petugas melapor.",
+   "from": 3,
+   "to": 78
+  },
+  "l2": {
+   "scene": "lapor",
+   "text": "Lapor, Ndan. Ini tidak sesuai SOP.",
+   "from": 81,
+   "to": 139
+  },
+  "l3": {
+   "scene": "lapor",
+   "text": "Sistem secanggih apa pun, kalah oleh satu orang yang masih membaca SOP.",
+   "from": 142,
+   "to": 246
+  },
+  "r1": {
+   "scene": "bareskrim",
+   "text": "Bareskrim pun menetapkan sejumlah perwira tinggi sebagai tersangka. Ada yang menjalani sidang etik.",
+   "from": 3,
+   "to": 135
+  },
+  "r2": {
+   "scene": "bareskrim",
+   "text": "Pemerintah menyebut, kasus ini mengarah ke dugaan makar. Dalang dan motifnya, masih didalami.",
+   "from": 138,
+   "to": 278
+  },
+  "p1": {
+   "scene": "penutup",
+   "text": "Kalau mau tahu isi HP saya, tanya saja. Isinya joget, sama foto Bobby.",
+   "from": 4,
+   "to": 133
+  },
+  "p2": {
+   "scene": "penutup",
+   "text": "Ini parodi. Kasusnya masih berjalan, dan semua tersangka berhak atas praduga tak bersalah.",
+   "from": 138,
+   "to": 293
+  }
+ },
+ "events": {
+  "istana.joget": 40,
+  "istana.rec": 117,
+  "kerja.talk": 3,
+  "kerja.meow": 31,
+  "kerja.stamp": 137,
+  "server.toss": 62,
+  "server.door": 176,
+  "server.chain": 213,
+  "daftar.print": 69,
+  "daftar.long": 227,
+  "bosan.yawn": 3,
+  "bosan.film": 80,
+  "hapus.press": 70,
+  "hapus.chat": 119,
+  "lapor.read": 3,
+  "lapor.salute": 81,
+  "lapor.sop": 194,
+  "bareskrim.set": 55,
+  "bareskrim.etik": 108,
+  "bareskrim.makar": 180,
+  "penutup.phone": 43,
+  "penutup.card": 138
+ },
+ "stepF": {}
+}

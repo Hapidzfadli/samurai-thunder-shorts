@@ -1,0 +1,161 @@
+{
+ "fps": 30,
+ "total_frames": 1568,
+ "scenes": {
+  "hook": 211,
+  "lidah": 271,
+  "saraf": 175,
+  "otak": 314,
+  "air": 347,
+  "akhir": 250
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Cabai level tiga puluh. Mas Budi menggigitnya.",
+   "from": 4,
+   "to": 66
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Diam. Satu detik. Dua detik.",
+   "from": 71,
+   "to": 135
+  },
+  "hook_3": {
+   "scene": "hook",
+   "text": "Lalu, kamera masuk ke mulutnya.",
+   "from": 142,
+   "to": 200
+  },
+  "lidah_1": {
+   "scene": "lidah",
+   "text": "Di lidah, ada satpam kecil bernama reseptor.",
+   "from": 6,
+   "to": 104
+  },
+  "lidah_2": {
+   "scene": "lidah",
+   "text": "Cabai membawa capsaicin. Zat ini menipu mereka, seolah lidahnya terbakar.",
+   "from": 110,
+   "to": 219
+  },
+  "lidah_3": {
+   "scene": "lidah",
+   "text": "Kebakaran, kebakaran.",
+   "from": 224,
+   "to": 262
+  },
+  "saraf_1": {
+   "scene": "saraf",
+   "text": "Kabar bohong itu berlari lewat saraf, langsung menuju otak.",
+   "from": 4,
+   "to": 108
+  },
+  "saraf_2": {
+   "scene": "saraf",
+   "text": "Dan otak, percaya begitu saja.",
+   "from": 114,
+   "to": 166
+  },
+  "otak_1": {
+   "scene": "otak",
+   "text": "Di ruang kendali, operator otak langsung panik.",
+   "from": 4,
+   "to": 72
+  },
+  "otak_2": {
+   "scene": "otak",
+   "text": "Air mata, keluarkan. Ingus, keluarkan. Keringat, keluarkan semuanya.",
+   "from": 77,
+   "to": 179
+  },
+  "otak_3": {
+   "scene": "otak",
+   "text": "Mas Budi menangis, ingusan, dan basah kuyup, padahal baru satu gigitan.",
+   "from": 186,
+   "to": 305
+  },
+  "air_1": {
+   "scene": "air",
+   "text": "Dia menenggak air sebanyak-banyaknya.",
+   "from": 4,
+   "to": 58
+  },
+  "air_2": {
+   "scene": "air",
+   "text": "Tapi capsaicin larut di minyak, bukan di air. Airnya cuma lewat, capsaicin tetap nempel.",
+   "from": 63,
+   "to": 204
+  },
+  "air_3": {
+   "scene": "air",
+   "text": "Nggak mempan, nggak mempan.",
+   "from": 207,
+   "to": 247
+  },
+  "air_4": {
+   "scene": "air",
+   "text": "Yang berhasil justru susu. Lemaknya menarik capsaicin pergi.",
+   "from": 253,
+   "to": 338
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Satu gelas susu, dan semuanya tenang.",
+   "from": 4,
+   "to": 75
+  },
+  "akhir_2": {
+   "scene": "akhir",
+   "text": "Mau tambah level tiga puluh satu?",
+   "from": 84,
+   "to": 126
+  },
+  "akhir_3": {
+   "scene": "akhir",
+   "text": "Mas Budi mengangguk.",
+   "from": 132,
+   "to": 170
+  },
+  "akhir_4": {
+   "scene": "akhir",
+   "text": "Lagi.",
+   "from": 178,
+   "to": 205
+  }
+ },
+ "events": {
+  "hook.bite": 42,
+  "hook.freeze": 71,
+  "hook.dive": 157,
+  "lidah.guards": 6,
+  "lidah.chili": 113,
+  "lidah.cheat": 170,
+  "lidah.alarm": 225,
+  "saraf.run": 4,
+  "saraf.brain": 78,
+  "saraf.believe": 115,
+  "otak.room": 4,
+  "otak.panic": 42,
+  "otak.b1": 86,
+  "otak.b2": 116,
+  "otak.b3": 147,
+  "otak.cry": 186,
+  "otak.snot": 236,
+  "otak.sweat": 269,
+  "air.chug": 4,
+  "air.macro": 64,
+  "air.bounce": 122,
+  "air.stick": 173,
+  "air.nope": 208,
+  "air.milk": 254,
+  "air.pull": 300,
+  "akhir.calm": 18,
+  "akhir.waiter": 85,
+  "akhir.nod": 147,
+  "akhir.sigh": 178,
+  "akhir.card": 211
+ },
+ "stepF": {}
+}

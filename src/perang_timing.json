@@ -1,0 +1,109 @@
+{
+ "fps": 30,
+ "total_frames": 1560,
+ "scenes": {
+  "hook": 240,
+  "pagar": 240,
+  "serbu": 210,
+  "tembak": 270,
+  "runtuh": 210,
+  "panglima": 180,
+  "akhir": 210
+ },
+ "lines": {
+  "hook_1": {
+   "scene": "hook",
+   "text": "Tahun seribu lima ratus tujuh puluh lima. Di Nagashino, dua pasukan siap berperang.",
+   "from": 6,
+   "to": 115
+  },
+  "hook_2": {
+   "scene": "hook",
+   "text": "Pasukan berkuda Takeda, ditakuti di seluruh Jepang.",
+   "from": 123,
+   "to": 210
+  },
+  "pagar_1": {
+   "scene": "pagar",
+   "text": "Tapi Oda Nobunaga punya rencana: tiga ribu penembak, di balik pagar kayu.",
+   "from": 4,
+   "to": 134
+  },
+  "pagar_2": {
+   "scene": "pagar",
+   "text": "Sumbu senapan dinyalakan, satu per satu.",
+   "from": 142,
+   "to": 202
+  },
+  "serbu_1": {
+   "scene": "serbu",
+   "text": "Kavaleri Takeda menyerbu, dengan kecepatan penuh.",
+   "from": 4,
+   "to": 88
+  },
+  "serbu_2": {
+   "scene": "serbu",
+   "text": "Serbu!",
+   "from": 93,
+   "to": 121
+  },
+  "tembak_1": {
+   "scene": "tembak",
+   "text": "Penembak Oda maju dalam tiga barisan: tembak, mundur, isi ulang.",
+   "from": 4,
+   "to": 121
+  },
+  "tembak_2": {
+   "scene": "tembak",
+   "text": "Tembak!",
+   "from": 129,
+   "to": 145
+  },
+  "tembak_3": {
+   "scene": "tembak",
+   "text": "Peluru tidak pernah berhenti.",
+   "from": 192,
+   "to": 235
+  },
+  "runtuh_1": {
+   "scene": "runtuh",
+   "text": "Kuda demi kuda tumbang. Serbuan yang paling ditakuti, hancur.",
+   "from": 4,
+   "to": 113
+  },
+  "panglima_1": {
+   "scene": "panglima",
+   "text": "Dari atas bukit, Nobunaga hanya mengamati.",
+   "from": 6,
+   "to": 80
+  },
+  "akhir_1": {
+   "scene": "akhir",
+   "text": "Hari itu, era kavaleri samurai mulai berakhir.",
+   "from": 6,
+   "to": 91
+  }
+ },
+ "events": {
+  "hook.pan": 6,
+  "hook.title": 44,
+  "hook.takeda": 123,
+  "pagar.line": 17,
+  "pagar.count": 75,
+  "pagar.match": 142,
+  "serbu.charge": 13,
+  "serbu.rumble": 46,
+  "serbu.shout": 93,
+  "tembak.rows": 4,
+  "tembak.v1": 129,
+  "tembak.v2": 162,
+  "tembak.v3": 195,
+  "tembak.never": 193,
+  "runtuh.fall": 15,
+  "runtuh.last": 75,
+  "panglima.hill": 17,
+  "akhir.end": 31,
+  "akhir.card": 100
+ },
+ "stepF": {}
+}

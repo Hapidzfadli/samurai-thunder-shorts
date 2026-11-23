@@ -1,0 +1,34 @@
+[
+ {"scene": "hook", "lines": [
+   ["narasi", "Tahun sembilan belas tiga puluh dua, Australia menyatakan perang..."],
+   ["santai", "melawan burung."]]},
+ {"scene": "serbu", "lines": [
+   ["narasi", "Dua puluh ribu emu menyerbu ladang gandum milik para veteran perang."],
+   ["tegang", "Pagar roboh, gandum habis dipatuki, kelinci pun ikut masuk."]]},
+ {"scene": "kantor", "lines": [
+   ["narasi", "Para petani datang ke Menteri Pertahanan. Permintaan mereka singkat."],
+   ["tegas", "Kirim senapan mesin!"],
+   ["santai", "Dan Pak Menteri... setuju."]]},
+ {"scene": "datang", "lines": [
+   ["narasi", "Datanglah Mayor Meredith, dua senapan mesin Lewis, dan sepuluh ribu peluru."]]},
+ {"scene": "gerilya", "lines": [
+   ["tegang", "Tapi emu tidak mau berbaris."],
+   ["narasi", "Mereka berpencar jadi kelompok kecil, seperti pasukan gerilya."]]},
+ {"scene": "bendungan", "lines": [
+   ["bisik", "Di dekat bendungan, seribu emu datang untuk minum. Pasukan menunggu."],
+   ["tegas", "Tembak!"],
+   ["tegang", "Tapi baru sebentar menembak, senapannya macet."],
+   ["santai", "Dan emunya? Kabur dengan santai."]]},
+ {"scene": "truk", "lines": [
+   ["narasi", "Senapan lalu dipasang di atas truk."],
+   ["tegang", "Tapi jalannya bergelombang, penembak tidak bisa membidik."],
+   ["santai", "Lagipula, emu bisa berlari lima puluh kilometer per jam."]]},
+ {"scene": "kutipan", "lines": [
+   ["narasi", "Mayor Meredith sampai berkata kepada wartawan:"],
+   ["tegang", "Burung ini bisa menghadapi senapan mesin, sekebal tank."],
+   ["narasi", "Koran menertawakan. Pasukan ditarik, dikirim lagi, lalu akhirnya pulang di bulan Desember."]]},
+ {"scene": "akhir", "lines": [
+   ["narasi", "Ribuan peluru ditembakkan, tapi ladang tetap diserbu."],
+   ["santai", "Jadi, siapa pemenang perang ini?"],
+   ["santai", "Ya... emu."]]}
+]

@@ -1,0 +1,74 @@
+# Aturan produksi video shorts (wajib diikuti setiap membuat/merevisi video)
+
+Bahasa komunikasi dengan user: Bahasa Indonesia. Format video: vertikal 1080x1920, 30 fps.
+
+## 1. Alur kerja (jangan dilompati)
+1. **Riset dulu**: fakta cerita + sumber, ciri visual tokoh, latar (luar & dalam ruangan) dan properti era/tempatnya.
+2. **Ajukan ke user dan tunggu persetujuan** sebelum membangun apa pun:
+   - lembar karakter (nama & gender sesuai, pakaian, ekspresi wajah yang akan dipakai),
+   - lembar properti per latar (setiap ruangan/lokasi punya properti lengkap, bukan latar kosong),
+   - daftar adegan **plus daftar gerakan (action beats) per adegan** (lihat bagian 3).
+3. Baru setelah disetujui: naskah + audio, lalu adegan, lalu still-check, lalu render.
+4. **Cek frame dari file video final** (bukan hanya still) sebelum dikirim. Kirim via SendUserFile + link GitHub `exports/` (user tidak bisa unduh dari kartu lampiran).
+5. Commit & push setiap selesai satu tahap; file kerja sementara (out/...) dimasukkan ke `.git/info/exclude`.
+
+## 2. Tampilan
+- Setiap latar padat properti (dinding bertekstur, perabot, dekorasi, lampu, tanaman, dll). Tidak ada ruangan kosong.
+- Karakter: pakaian berdetail (lipatan/bayangan, kelim, aksesoris, alas kaki), ekspresi wajah tidak tertutup janggut/kumis/topi.
+- Kamera tenang: glide lembut, push-in pelan, selalu menjauh lagi setelah close-up. Karakter tidak boleh saling menutupi wajah atau terpotong di tepi frame pada shot dialog.
+- Background terang dan jelas kecuali cerita butuh malam.
+
+## 3. GERAKAN HARUS MASUK AKAL (aturan paling penting)
+Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh**, tidak boleh "tiba-tiba sudah terjadi".
+- **Benda penting (botol, sumbat, telur, surat, HP, dll) dibuat sebagai objek 3D terpisah** yang posisinya mengikuti titik tangan karakter yang memegang (pakai `beanHandWorld` di `src/three/objectsBean.tsx`), BUKAN digambar di dalam gambar karakter. Dengan begitu benda bisa berpindah tangan.
+- **Serah-terima** dipecah: mendekat → menjulurkan tangan → tangan penerima terjulur → benda berpindah (terlihat melayang dari tangan ke tangan dalam 10-20 frame) → penerima menarik benda ke badannya.
+- **Aksi kecil (membuka tutup, mencabut sumbat, menulis, menekan tombol, memasukkan sesuatu)** wajib punya **close-up insert** (ilustrasi SVG tangan besar bergaya sama) 1-2 detik, lalu kembali ke shot lebar.
+- Arah aksi harus benar secara fisik: mis. menangkap kentut = mulut botol diarahkan ke belakang/bokong, gas terlihat masuk ke botol, lalu disumbat.
+- Setiap reaksi muncul 0-3 frame sebelum kata yang memicunya di narasi.
+- Tulis daftar gerakan per adegan sebelum membangun, contoh:
+  `serah botol: Abu jalan ke depan singgasana (0-40f) → membungkuk & julurkan botol (40-55f) → Raja julurkan tangan (50-60f) → botol pindah (60-75f) → Raja tarik botol ke dada (75-90f)`.
+
+## 4. Suara
+- Narasi pakai suara klon dengan penekanan kata (emph), intonasi naik untuk pertanyaan, pelan/berbisik untuk momen licik.
+- **Mesin suara standar: VoxCPM2** (`scripts/voice_vox.py`, jalankan dengan `.venv/bin/python`). Patokan yang dipilih user: `exports/riset/suara/voxcpm2-pembuka-perang-emu.mp3`. Mode referensi (contoh suara dodi per emosi, dipotong di batas kalimat) + tag gaya per kalimat (narasi/santai/tegang/tegas/bisik). Jangan pakai mode lanjutan (prompt_text): tag gaya ikut terbaca.
+- **Narasi tidak boleh tersendat**: satuan = kalimat UTUH, jangan pecah jadi frasa pendek lalu disambung (hasilnya cepat-berhenti-cepat-berhenti). Jeda pecahan hanya untuk efek komedi yang disengaja ("perang... melawan burung"). Whisper memilih take terbaik; loudness dinormalisasi seluruh trek. Timing kata ada di `src/<nama>_voice.json` untuk sinkron reaksi.
+- Siapkan `.venv` bila belum ada: `python3 -m venv --system-site-packages .venv && .venv/bin/pip install omnivoice==0.2.1 && .venv/bin/pip install --no-deps voxcpm==2.0.3 inflect addict simplejson sortedcontainers argbind` (model diunduh otomatis dari Hugging Face).
+- **Tawa tidak boleh datar**: pakai tawa sintetis dari suku kata (`scripts/laugh_lab.py`, hasil di `exports/riset/tawa/`), naik-turun nada, melambat, ada tarikan napas; tawa ramai = beberapa lapis.
+- Setiap aksi penting punya efek suara (langkah, pintu, botol, sumbat "pop", angin, dll). Musik ducking di bawah suara.
+
+## 5. Teknis yang sering salah
+- Kartu karakter 2D harus dibuat ulang tiap frame (DataTexture baru) atau akan kosong di render video.
+- Jangan import `*_timing.json` yang belum ada dari `src/Root.tsx` (bundle gagal).
+- Render: `npx remotion render src/index.ts <Comp> out/<x>-silent.mp4 --gl=swangle --browser-executable=/opt/pw-browsers/chromium_headless_shell --concurrency=4 --muted`, lalu mux dengan ffmpeg ke `exports/<judul>.mp4`. Periksa nama file output skrip render setelah meng-copy skrip lama.
+- Topik politik/tokoh nyata: tokoh terduga dibuat fiktif, selalu "diduga", kartu parodi + praduga tak bersalah.
+
+## 6. Gaya standar & perkakas yang dipakai ulang (jangan menulis ulang dari nol)
+- Gaya video standar = **3D explainer** (referensi Apache, contoh: `exports/perang-emu-1932.mp4`, `exports/kerja-kelompok.mp4`):
+  - toon + garis tepi, tokoh kepala bulat 3D, efek X-ray, hologram grid biru, layar terbelah, subtitle 1 kata;
+  - judul pancingan rasa penasaran di 2–3 detik pertama.
+- Perkakas:
+  - `src/three/toon.tsx`: `Bean3` (tokoh; tangan → `bean3HandWorld`), `Hat`, `T`/`Limb`/`G` (bentuk toon), `XR` + `BlueGrid` (X-ray/hologram), `CanvasPlane` (teks/layar/kertas), `WordSub`;
+  - `src/sceneKit.tsx`: `shotCam`, `pullBack`, `Stage`, `SubWord`, `Chip`, `BigTitle`, `walkLerp`, `talkAt`;
+  - properti siap pakai:
+    - `objectsEmu.tsx`, `objectsEmu2.tsx`: ladang, truk, kantor, kemah, efek tembak;
+    - `objectsKelompok.tsx`: kelas, kos, kafe, HP, laptop, kalender, chat 3D.
+- Audio:
+  - suara: `scripts/voice_vox.py naskah.json <nama>`; bisa melanjutkan proses yang terhenti; potongan per kalimat disimpan di `out/voice/<nama>/`;
+  - mix + jadwal: salin pola `scripts/build_audio_kelompok.py` (`SCENE_CFG` + `EVENTS` dipakai bersama efek suara & animasi; efek suara diambil dari `build_audio_emu.py`).
+- Pola file per video:
+  - kode: `scripts/naskah/<x>.json` → `scripts/build_audio_<x>.py` → `src/scenes<X>.tsx` + `src/<X>.tsx` + `src/Sheet<X>.tsx`;
+  - render: `out/l30/render_<x>.sh`.
+- Kamera vertikal 1080×1920 sangat sempit ke samping:
+  - pada jarak 4 m hanya ±0,9 m kiri-kanan yang terlihat;
+  - tokoh berbaris dibuat bertingkat (depan/belakang), bukan berjajar;
+  - cek proyeksi sebelum still.
+
+## 7. Hemat token
+- **Satu sesi = satu video.** Mulai sesi baru untuk tiap video baru; aturan & perkakas sudah ada di repo, jadi riwayat lama tidak perlu.
+- Sebelum membangun, minta persetujuan lembar karakter/properti/adegan dalam **satu** kali kirim; revisi rancangan jauh lebih murah daripada revisi video.
+- Minta user mengirim **semua catatan revisi sekaligus** setelah menonton (bernomor, dengan detik), lalu kerjakan sekaligus dalam satu putaran.
+- Still-check hemat:
+  - satu lembar kontak (±12–20 frame kecil, `--scale=0.5`) per putaran, bukan banyak gambar terpisah;
+  - render ulang hanya frame yang diperbaiki.
+- Saat render berjalan: jalankan di latar belakang dengan notifikasi selesai; jawab pertanyaan progres singkat tanpa membaca file besar.
+- Jangan membaca ulang file besar yang isinya sudah diketahui; edit dengan potongan kecil.

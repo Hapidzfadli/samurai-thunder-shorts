@@ -1,0 +1,1320 @@
+{
+ "fps": 30,
+ "totalFrames": 1574,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 148,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Kang Nawas mengembalikan powerbank bosnya... plus satu bayi powerbank.",
+     "score": 0.991,
+     "file": "out/voice/nawas/hook_0.wav",
+     "wordsSec": [
+      [
+       "Kang",
+       0.0,
+       0.22
+      ],
+      [
+       "Nawas",
+       0.22,
+       0.66
+      ],
+      [
+       "menggembalikan",
+       0.66,
+       1.36
+      ],
+      [
+       "powerbank",
+       1.36,
+       1.86
+      ],
+      [
+       "bosnya",
+       1.86,
+       2.34
+      ],
+      [
+       "plus",
+       2.34,
+       2.84
+      ],
+      [
+       "satu",
+       2.84,
+       3.28
+      ],
+      [
+       "bayi",
+       3.28,
+       3.6
+      ],
+      [
+       "powerbank.",
+       3.6,
+       4.04
+      ]
+     ],
+     "from": 8,
+     "to": 135,
+     "words": [
+      {
+       "w": "Kang",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "Nawas",
+       "from": 14,
+       "to": 27
+      },
+      {
+       "w": "menggembalikan",
+       "from": 27,
+       "to": 48
+      },
+      {
+       "w": "powerbank",
+       "from": 48,
+       "to": 63
+      },
+      {
+       "w": "bosnya",
+       "from": 63,
+       "to": 78
+      },
+      {
+       "w": "plus",
+       "from": 78,
+       "to": 93
+      },
+      {
+       "w": "satu",
+       "from": 93,
+       "to": 106
+      },
+      {
+       "w": "bayi",
+       "from": 106,
+       "to": 116
+      },
+      {
+       "w": "powerbank.",
+       "from": 116,
+       "to": 129
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "pelit",
+   "from": 148,
+   "to": 335,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Pak Bos paling pelit sekantor. Colokan pun digembok, cas HP bayar dua ribu sejam.",
+     "score": 0.983,
+     "file": "out/voice/nawas/pelit_0.wav",
+     "wordsSec": [
+      [
+       "Pak",
+       0.0,
+       0.12
+      ],
+      [
+       "Bos",
+       0.12,
+       0.28
+      ],
+      [
+       "paling",
+       0.28,
+       0.54
+      ],
+      [
+       "pelit",
+       0.54,
+       0.8
+      ],
+      [
+       "sekantor,",
+       0.8,
+       1.28
+      ],
+      [
+       "solokan",
+       1.52,
+       1.88
+      ],
+      [
+       "pun",
+       1.88,
+       1.98
+      ],
+      [
+       "digembok,",
+       1.98,
+       2.42
+      ],
+      [
+       "cas",
+       2.62,
+       2.72
+      ],
+      [
+       "HP",
+       2.72,
+       3.0
+      ],
+      [
+       "bayar",
+       3.0,
+       3.32
+      ],
+      [
+       "2000",
+       3.32,
+       3.5
+      ],
+      [
+       "sejam.",
+       3.5,
+       3.96
+      ]
+     ],
+     "from": 148,
+     "to": 272,
+     "words": [
+      {
+       "w": "Pak",
+       "from": 148,
+       "to": 152
+      },
+      {
+       "w": "Bos",
+       "from": 152,
+       "to": 157
+      },
+      {
+       "w": "paling",
+       "from": 157,
+       "to": 164
+      },
+      {
+       "w": "pelit",
+       "from": 164,
+       "to": 172
+      },
+      {
+       "w": "sekantor,",
+       "from": 172,
+       "to": 187
+      },
+      {
+       "w": "solokan",
+       "from": 194,
+       "to": 205
+      },
+      {
+       "w": "pun",
+       "from": 205,
+       "to": 208
+      },
+      {
+       "w": "digembok,",
+       "from": 208,
+       "to": 221
+      },
+      {
+       "w": "cas",
+       "from": 227,
+       "to": 230
+      },
+      {
+       "w": "HP",
+       "from": 230,
+       "to": 238
+      },
+      {
+       "w": "bayar",
+       "from": 238,
+       "to": 248
+      },
+      {
+       "w": "2000",
+       "from": 248,
+       "to": 253
+      },
+      {
+       "w": "sejam.",
+       "from": 253,
+       "to": 267
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Pinjam sehari, kembalikan dua!",
+     "score": 1.0,
+     "file": "out/voice/nawas/pelit_1.wav",
+     "wordsSec": [
+      [
+       "Pinjam",
+       0.0,
+       0.3
+      ],
+      [
+       "sehari",
+       0.3,
+       0.62
+      ],
+      [
+       "kembalikan",
+       0.62,
+       1.0
+      ],
+      [
+       "dua.",
+       1.0,
+       1.18
+      ]
+     ],
+     "from": 279,
+     "to": 322,
+     "words": [
+      {
+       "w": "Pinjam",
+       "from": 279,
+       "to": 288
+      },
+      {
+       "w": "sehari",
+       "from": 288,
+       "to": 298
+      },
+      {
+       "w": "kembalikan",
+       "from": 298,
+       "to": 309
+      },
+      {
+       "w": "dua.",
+       "from": 309,
+       "to": 315
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "pinjam",
+   "from": 335,
+   "to": 510,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Suatu sore, baterai HP Kang Nawas tinggal satu persen.",
+     "score": 0.919,
+     "file": "out/voice/nawas/pinjam_0.wav",
+     "wordsSec": [
+      [
+       "suatu",
+       0.0,
+       0.34
+      ],
+      [
+       "sore",
+       0.34,
+       0.68
+      ],
+      [
+       "baterai",
+       0.68,
+       1.34
+      ],
+      [
+       "HP",
+       1.34,
+       1.6
+      ],
+      [
+       "Kang",
+       1.6,
+       1.94
+      ],
+      [
+       "Nawas",
+       1.94,
+       2.4
+      ],
+      [
+       "tinggal",
+       2.4,
+       2.92
+      ],
+      [
+       "1%.",
+       2.92,
+       3.42
+      ]
+     ],
+     "from": 335,
+     "to": 446,
+     "words": [
+      {
+       "w": "suatu",
+       "from": 335,
+       "to": 346
+      },
+      {
+       "w": "sore",
+       "from": 346,
+       "to": 356
+      },
+      {
+       "w": "baterai",
+       "from": 356,
+       "to": 376
+      },
+      {
+       "w": "HP",
+       "from": 376,
+       "to": 383
+      },
+      {
+       "w": "Kang",
+       "from": 383,
+       "to": 394
+      },
+      {
+       "w": "Nawas",
+       "from": 394,
+       "to": 407
+      },
+      {
+       "w": "tinggal",
+       "from": 407,
+       "to": 423
+      },
+      {
+       "w": "1%.",
+       "from": 423,
+       "to": 438
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Pak, boleh pinjam powerbank-nya?",
+     "score": 1.0,
+     "file": "out/voice/nawas/pinjam_1.wav",
+     "wordsSec": [
+      [
+       "Pak,",
+       0.0,
+       0.12
+      ],
+      [
+       "boleh",
+       0.3,
+       0.42
+      ],
+      [
+       "pinjam",
+       0.42,
+       0.74
+      ],
+      [
+       "power",
+       0.74,
+       0.9
+      ],
+      [
+       "banknya?",
+       0.9,
+       1.28
+      ]
+     ],
+     "from": 454,
+     "to": 497,
+     "words": [
+      {
+       "w": "Pak,",
+       "from": 454,
+       "to": 457
+      },
+      {
+       "w": "boleh",
+       "from": 463,
+       "to": 466
+      },
+      {
+       "w": "pinjam",
+       "from": 466,
+       "to": 476
+      },
+      {
+       "w": "power",
+       "from": 476,
+       "to": 481
+      },
+      {
+       "w": "banknya?",
+       "from": 481,
+       "to": 492
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "lahir",
+   "from": 510,
+   "to": 738,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Selamat, Pak! Powerbank Bapak melahirkan tadi malam!",
+     "score": 1.0,
+     "file": "out/voice/nawas/lahir_0.wav",
+     "wordsSec": [
+      [
+       "Selamat",
+       0.0,
+       0.76
+      ],
+      [
+       "pak,",
+       0.76,
+       1.06
+      ],
+      [
+       "power",
+       1.22,
+       1.4
+      ],
+      [
+       "bank",
+       1.4,
+       1.62
+      ],
+      [
+       "bapak",
+       1.62,
+       1.94
+      ],
+      [
+       "melahirkan",
+       1.94,
+       2.42
+      ],
+      [
+       "tadi",
+       2.42,
+       2.62
+      ],
+      [
+       "malam",
+       2.62,
+       2.96
+      ]
+     ],
+     "from": 510,
+     "to": 602,
+     "words": [
+      {
+       "w": "Selamat",
+       "from": 510,
+       "to": 533
+      },
+      {
+       "w": "pak,",
+       "from": 533,
+       "to": 542
+      },
+      {
+       "w": "power",
+       "from": 547,
+       "to": 552
+      },
+      {
+       "w": "bank",
+       "from": 552,
+       "to": 559
+      },
+      {
+       "w": "bapak",
+       "from": 559,
+       "to": 569
+      },
+      {
+       "w": "melahirkan",
+       "from": 569,
+       "to": 583
+      },
+      {
+       "w": "tadi",
+       "from": 583,
+       "to": 589
+      },
+      {
+       "w": "malam",
+       "from": 589,
+       "to": 599
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "text": "Pak Bos girang. Tanpa curiga, bayinya langsung diterima.",
+     "score": 0.978,
+     "file": "out/voice/nawas/lahir_1.wav",
+     "wordsSec": [
+      [
+       "Pak",
+       0.0,
+       0.16
+      ],
+      [
+       "Bos",
+       0.16,
+       0.46
+      ],
+      [
+       "Girang,",
+       0.46,
+       0.94
+      ],
+      [
+       "tanpa",
+       1.16,
+       1.54
+      ],
+      [
+       "kuriga,",
+       1.54,
+       2.0
+      ],
+      [
+       "bayinya",
+       2.28,
+       2.64
+      ],
+      [
+       "langsung",
+       2.64,
+       3.06
+      ],
+      [
+       "diterima.",
+       3.06,
+       3.58
+      ]
+     ],
+     "from": 610,
+     "to": 724,
+     "words": [
+      {
+       "w": "Pak",
+       "from": 610,
+       "to": 614
+      },
+      {
+       "w": "Bos",
+       "from": 614,
+       "to": 623
+      },
+      {
+       "w": "Girang,",
+       "from": 623,
+       "to": 638
+      },
+      {
+       "w": "tanpa",
+       "from": 644,
+       "to": 656
+      },
+      {
+       "w": "kuriga,",
+       "from": 656,
+       "to": 670
+      },
+      {
+       "w": "bayinya",
+       "from": 678,
+       "to": 689
+      },
+      {
+       "w": "langsung",
+       "from": 689,
+       "to": 701
+      },
+      {
+       "w": "diterima.",
+       "from": 701,
+       "to": 717
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "hpemas",
+   "from": 738,
+   "to": 941,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Seminggu kemudian, Kang Nawas meminjam HP terbaru Pak Bos.",
+     "score": 0.979,
+     "file": "out/voice/nawas/hpemas_0.wav",
+     "wordsSec": [
+      [
+       "Seminggu",
+       0.0,
+       0.52
+      ],
+      [
+       "kemudian,",
+       0.52,
+       1.12
+      ],
+      [
+       "Kang",
+       1.28,
+       1.44
+      ],
+      [
+       "Nawas",
+       1.44,
+       1.8
+      ],
+      [
+       "meminjam",
+       1.8,
+       2.24
+      ],
+      [
+       "HP",
+       2.24,
+       2.5
+      ],
+      [
+       "terbaru",
+       2.5,
+       2.98
+      ],
+      [
+       "PAPBOS.",
+       2.98,
+       3.44
+      ]
+     ],
+     "from": 738,
+     "to": 848,
+     "words": [
+      {
+       "w": "Seminggu",
+       "from": 738,
+       "to": 753
+      },
+      {
+       "w": "kemudian,",
+       "from": 753,
+       "to": 771
+      },
+      {
+       "w": "Kang",
+       "from": 776,
+       "to": 781
+      },
+      {
+       "w": "Nawas",
+       "from": 781,
+       "to": 792
+      },
+      {
+       "w": "meminjam",
+       "from": 792,
+       "to": 805
+      },
+      {
+       "w": "HP",
+       "from": 805,
+       "to": 813
+      },
+      {
+       "w": "terbaru",
+       "from": 813,
+       "to": 827
+      },
+      {
+       "w": "PAPBOS.",
+       "from": 827,
+       "to": 841
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Boleh! Asal kembali bawa anaknya!",
+     "score": 1.0,
+     "file": "out/voice/nawas/hpemas_1.wav",
+     "wordsSec": [
+      [
+       "Boleh,",
+       0.0,
+       0.34
+      ],
+      [
+       "asal",
+       0.78,
+       1.14
+      ],
+      [
+       "kembali",
+       1.14,
+       1.54
+      ],
+      [
+       "bawa",
+       1.54,
+       1.78
+      ],
+      [
+       "anaknya.",
+       1.78,
+       2.24
+      ]
+     ],
+     "from": 856,
+     "to": 928,
+     "words": [
+      {
+       "w": "Boleh,",
+       "from": 856,
+       "to": 866
+      },
+      {
+       "w": "asal",
+       "from": 879,
+       "to": 890
+      },
+      {
+       "w": "kembali",
+       "from": 890,
+       "to": 902
+      },
+      {
+       "w": "bawa",
+       "from": 902,
+       "to": 909
+      },
+      {
+       "w": "anaknya.",
+       "from": 909,
+       "to": 923
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "meninggal",
+   "from": 941,
+   "to": 1125,
+   "lines": [
+    {
+     "style": "bisik",
+     "text": "Innalillahi, Pak... HP Bapak meninggal dunia.",
+     "score": 0.912,
+     "file": "out/voice/nawas/meninggal_0.wav",
+     "wordsSec": [
+      [
+       "Inalilah,",
+       0.0,
+       0.52
+      ],
+      [
+       "Pak.",
+       0.72,
+       0.9
+      ],
+      [
+       "Api",
+       1.22,
+       1.56
+      ],
+      [
+       "Bapak",
+       1.56,
+       1.92
+      ],
+      [
+       "meninggal",
+       1.92,
+       2.34
+      ],
+      [
+       "dunia.",
+       2.34,
+       2.8
+      ]
+     ],
+     "from": 941,
+     "to": 1032,
+     "words": [
+      {
+       "w": "Inalilah,",
+       "from": 941,
+       "to": 957
+      },
+      {
+       "w": "Pak.",
+       "from": 963,
+       "to": 968
+      },
+      {
+       "w": "Api",
+       "from": 978,
+       "to": 988
+      },
+      {
+       "w": "Bapak",
+       "from": 988,
+       "to": 999
+      },
+      {
+       "w": "meninggal",
+       "from": 999,
+       "to": 1011
+      },
+      {
+       "w": "dunia.",
+       "from": 1011,
+       "to": 1025
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Ngawur! Mana ada HP bisa meninggal!",
+     "score": 0.966,
+     "file": "out/voice/nawas/meninggal_1.wav",
+     "wordsSec": [
+      [
+       "Ngawur!",
+       0.0,
+       0.46
+      ],
+      [
+       "Mana",
+       0.78,
+       0.92
+      ],
+      [
+       "ada",
+       0.92,
+       1.14
+      ],
+      [
+       "hape",
+       1.14,
+       1.44
+      ],
+      [
+       "bisa",
+       1.44,
+       1.64
+      ],
+      [
+       "meninggal!",
+       1.64,
+       2.2
+      ]
+     ],
+     "from": 1040,
+     "to": 1112,
+     "words": [
+      {
+       "w": "Ngawur!",
+       "from": 1040,
+       "to": 1053
+      },
+      {
+       "w": "Mana",
+       "from": 1063,
+       "to": 1067
+      },
+      {
+       "w": "ada",
+       "from": 1067,
+       "to": 1074
+      },
+      {
+       "w": "hape",
+       "from": 1074,
+       "to": 1083
+      },
+      {
+       "w": "bisa",
+       "from": 1083,
+       "to": 1089
+      },
+      {
+       "w": "meninggal!",
+       "from": 1089,
+       "to": 1106
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "punchline",
+   "from": 1125,
+   "to": 1292,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Lho, powerbank bisa melahirkan Bapak percaya... masa HP meninggal nggak percaya?",
+     "score": 0.97,
+     "file": "out/voice/nawas/punchline_0.wav",
+     "wordsSec": [
+      [
+       "Loh,",
+       0.0,
+       0.4
+      ],
+      [
+       "power",
+       0.78,
+       1.1
+      ],
+      [
+       "bank",
+       1.1,
+       1.34
+      ],
+      [
+       "bisa",
+       1.34,
+       1.56
+      ],
+      [
+       "melahirkan",
+       1.56,
+       2.04
+      ],
+      [
+       "bapak",
+       2.04,
+       2.34
+      ],
+      [
+       "percaya.",
+       2.34,
+       2.8
+      ],
+      [
+       "Masa",
+       3.36,
+       3.7
+      ],
+      [
+       "hape",
+       3.7,
+       3.9
+      ],
+      [
+       "meninggal",
+       3.9,
+       4.32
+      ],
+      [
+       "nggak",
+       4.32,
+       4.44
+      ],
+      [
+       "percaya?",
+       4.44,
+       4.84
+      ]
+     ],
+     "from": 1125,
+     "to": 1279,
+     "words": [
+      {
+       "w": "Loh,",
+       "from": 1125,
+       "to": 1137
+      },
+      {
+       "w": "power",
+       "from": 1149,
+       "to": 1158
+      },
+      {
+       "w": "bank",
+       "from": 1158,
+       "to": 1165
+      },
+      {
+       "w": "bisa",
+       "from": 1165,
+       "to": 1172
+      },
+      {
+       "w": "melahirkan",
+       "from": 1172,
+       "to": 1186
+      },
+      {
+       "w": "bapak",
+       "from": 1186,
+       "to": 1195
+      },
+      {
+       "w": "percaya.",
+       "from": 1195,
+       "to": 1209
+      },
+      {
+       "w": "Masa",
+       "from": 1226,
+       "to": 1236
+      },
+      {
+       "w": "hape",
+       "from": 1236,
+       "to": 1242
+      },
+      {
+       "w": "meninggal",
+       "from": 1242,
+       "to": 1255
+      },
+      {
+       "w": "nggak",
+       "from": 1255,
+       "to": 1258
+      },
+      {
+       "w": "percaya?",
+       "from": 1258,
+       "to": 1270
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "gratis",
+   "from": 1292,
+   "to": 1566,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Sejak hari itu, cas HP di kantor... gratis.",
+     "score": 1.0,
+     "file": "out/voice/nawas/gratis_0.wav",
+     "wordsSec": [
+      [
+       "Sejak",
+       0.0,
+       0.38
+      ],
+      [
+       "hari",
+       0.38,
+       0.56
+      ],
+      [
+       "itu,",
+       0.56,
+       0.84
+      ],
+      [
+       "cas",
+       1.12,
+       1.28
+      ],
+      [
+       "HP",
+       1.28,
+       1.6
+      ],
+      [
+       "di",
+       1.6,
+       1.78
+      ],
+      [
+       "kantor",
+       1.78,
+       2.16
+      ],
+      [
+       "gratis.",
+       2.16,
+       2.76
+      ]
+     ],
+     "from": 1292,
+     "to": 1382,
+     "words": [
+      {
+       "w": "Sejak",
+       "from": 1292,
+       "to": 1304
+      },
+      {
+       "w": "hari",
+       "from": 1304,
+       "to": 1309
+      },
+      {
+       "w": "itu,",
+       "from": 1309,
+       "to": 1317
+      },
+      {
+       "w": "cas",
+       "from": 1326,
+       "to": 1331
+      },
+      {
+       "w": "HP",
+       "from": 1331,
+       "to": 1340
+      },
+      {
+       "w": "di",
+       "from": 1340,
+       "to": 1346
+      },
+      {
+       "w": "kantor",
+       "from": 1346,
+       "to": 1357
+      },
+      {
+       "w": "gratis.",
+       "from": 1357,
+       "to": 1375
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Alhamdulillah, Pak. HP Bapak hidup lagi... habis dicas gratis.",
+     "score": 1.0,
+     "file": "out/voice/nawas/gratis_1.wav",
+     "wordsSec": [
+      [
+       "Alhamdulillah,",
+       0.0,
+       0.74
+      ],
+      [
+       "Pak!",
+       0.78,
+       0.88
+      ],
+      [
+       "Hp",
+       1.52,
+       2.1
+      ],
+      [
+       "Bapak",
+       2.1,
+       2.56
+      ],
+      [
+       "Hidup",
+       2.56,
+       2.88
+      ],
+      [
+       "lagi,",
+       2.88,
+       3.14
+      ],
+      [
+       "habis",
+       3.8,
+       4.22
+      ],
+      [
+       "dicas",
+       4.22,
+       4.64
+      ],
+      [
+       "gratis.",
+       4.64,
+       5.24
+      ]
+     ],
+     "from": 1389,
+     "to": 1553,
+     "words": [
+      {
+       "w": "Alhamdulillah,",
+       "from": 1389,
+       "to": 1412
+      },
+      {
+       "w": "Pak!",
+       "from": 1413,
+       "to": 1416
+      },
+      {
+       "w": "Hp",
+       "from": 1435,
+       "to": 1452
+      },
+      {
+       "w": "Bapak",
+       "from": 1452,
+       "to": 1466
+      },
+      {
+       "w": "Hidup",
+       "from": 1466,
+       "to": 1476
+      },
+      {
+       "w": "lagi,",
+       "from": 1476,
+       "to": 1484
+      },
+      {
+       "w": "habis",
+       "from": 1503,
+       "to": 1516
+      },
+      {
+       "w": "dicas",
+       "from": 1516,
+       "to": 1529
+      },
+      {
+       "w": "gratis.",
+       "from": 1529,
+       "to": 1547
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

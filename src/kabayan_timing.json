@@ -1,0 +1,156 @@
+{
+ "fps": 30,
+ "total_frames": 2326,
+ "scenes": {
+  "pagi": 346,
+  "jalan": 180,
+  "pematang": 390,
+  "saung": 240,
+  "sore": 330,
+  "seret": 240,
+  "dorong": 240,
+  "akhir": 360
+ },
+ "lines": {
+  "n1": {
+   "scene": "pagi",
+   "text": "Pagi-pagi, Si Kabayan masih mendengkur di bale-bale.",
+   "from": 3,
+   "to": 89
+  },
+  "a1": {
+   "scene": "pagi",
+   "text": "Kabayan! Bangun! Cari tutut ke sawah, buat lauk makan siang!",
+   "from": 94,
+   "to": 194
+  },
+  "n2": {
+   "scene": "pagi",
+   "text": "Dengan malas, Kabayan bangun. Nyi Iteung menyerahkan korang.",
+   "from": 197,
+   "to": 292
+  },
+  "i1": {
+   "scene": "pagi",
+   "text": "Yang banyak ya, Kang.",
+   "from": 295,
+   "to": 337
+  },
+  "n3": {
+   "scene": "jalan",
+   "text": "Kabayan berjalan ke sawah, sambil bersiul santai.",
+   "from": 3,
+   "to": 84
+  },
+  "n4": {
+   "scene": "pematang",
+   "text": "Sampai di pematang, ia hendak turun ke sawah. Tapi begitu melihat ke bawah...",
+   "from": 3,
+   "to": 118
+  },
+  "k1": {
+   "scene": "pematang",
+   "text": "Euleuh! Sawahnya dalam sekali! Ada langitnya di bawah!",
+   "from": 132,
+   "to": 208
+  },
+  "n5": {
+   "scene": "pematang",
+   "text": "Di air sawah, terlihat langit biru, lengkap dengan awannya.",
+   "from": 213,
+   "to": 310
+  },
+  "n6": {
+   "scene": "saung",
+   "text": "Kabayan tidak berani turun. Ia duduk di saung, menunggu, sampai ketiduran. Sampai sore.",
+   "from": 3,
+   "to": 154
+  },
+  "a2": {
+   "scene": "sore",
+   "text": "Kabayan! Mana tututnya?",
+   "from": 3,
+   "to": 42
+  },
+  "k2": {
+   "scene": "sore",
+   "text": "Sawahnya dalam, Bah. Sedalam langit! Nanti saya tenggelam.",
+   "from": 47,
+   "to": 130
+  },
+  "n7": {
+   "scene": "sore",
+   "text": "Abah langsung naik darah.",
+   "from": 134,
+   "to": 176
+  },
+  "a3": {
+   "scene": "seret",
+   "text": "Dalam bagaimana? Ayo ikut!",
+   "from": 3,
+   "to": 42
+  },
+  "k3": {
+   "scene": "seret",
+   "text": "Tuh, Bah, lihat sendiri. Ada langitnya!",
+   "from": 47,
+   "to": 115
+  },
+  "n8": {
+   "scene": "dorong",
+   "text": "Tanpa banyak bicara, Abah mendorong Kabayan ke sawah.",
+   "from": 3,
+   "to": 84
+  },
+  "n9": {
+   "scene": "dorong",
+   "text": "Ternyata, airnya cuma sebetis.",
+   "from": 137,
+   "to": 186
+  },
+  "k4": {
+   "scene": "akhir",
+   "text": "Geuning... langitnya cuma sebetis, Bah.",
+   "from": 3,
+   "to": 71
+  },
+  "n10": {
+   "scene": "akhir",
+   "text": "Hari itu, Kabayan pulang membawa tutut. Dan juga, lumpur sampai ke telinga.",
+   "from": 160,
+   "to": 298
+  }
+ },
+ "events": {
+  "pagi.snore": 29,
+  "pagi.call": 95,
+  "pagi.shake": 110,
+  "pagi.wake": 207,
+  "pagi.give": 256,
+  "pagi.thank": 296,
+  "jalan.whistle": 43,
+  "pematang.crouch": 43,
+  "pematang.foot": 74,
+  "pematang.look": 104,
+  "pematang.shock": 133,
+  "pematang.pov": 214,
+  "saung.sit": 41,
+  "saung.sleep": 86,
+  "saung.dusk": 131,
+  "sore.ask": 3,
+  "sore.flip": 51,
+  "sore.angry": 134,
+  "seret.drag": 3,
+  "seret.point": 64,
+  "dorong.walk": 3,
+  "dorong.push": 65,
+  "dorong.splash": 92,
+  "dorong.stand": 137,
+  "akhir.grin": 3,
+  "akhir.facepalm": 75,
+  "akhir.laugh": 83,
+  "akhir.pick": 202,
+  "akhir.title": 264
+ },
+ "stepF": {}
+}

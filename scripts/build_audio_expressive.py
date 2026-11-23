@@ -34,12 +34,12 @@ def extract_wav(src: Path, out: Path, ss: float, dur: float) -> Path:
     return out
 
 
-# Prepare 4 distinct emotion voice prompts (Mak Ijah multi-emotion style)
+# Prepare 4 distinct emotion voice prompts
 PROMPTS = {
-    "santai": ID_PROMPTS / "makijah_santai.wav",
-    "narasi": ID_PROMPTS / "makijah_narasi.wav",
-    "tegang": ID_PROMPTS / "makijah_panik.wav",
-    "tegas": ID_PROMPTS / "makijah_sombong.wav",
+    "santai": extract_wav(DODI_MP3, PROMPT_CACHE / "santai.wav", 1.0, 10.0),
+    "narasi": extract_wav(DODI_MP3, PROMPT_CACHE / "narasi.wav", 18.0, 12.0),
+    "tegang": extract_wav(DODI_MP3, PROMPT_CACHE / "tegang.wav", 36.5, 11.0),
+    "tegas": ID_PROMPTS / "common_voice_id_19961910.wav",
 }
 
 POCKET_CONFIG = "hf://anak10thn/pocket-tts-indonesian/indonesian_6l.yaml@17257664e384561c957b02ac92edd1a24807f0e5"
@@ -48,7 +48,32 @@ tts_model = TTSModel.load_model(config=POCKET_CONFIG, eos_threshold=-3.5, temp=0
 VOICE_STATES = {k: tts_model.get_state_for_audio_prompt(str(v)) for k, v in PROMPTS.items()}
 
 
-def synth_phrase(text: str, emotion: str = "narasi") -> np.ndarray:
+import difflib
+import re
+
+from faster_whisper import WhisperModel
+
+ASR = WhisperModel("small", device="cpu", compute_type="int8")
+
+
+_NUM_WORDS = r"\b(se|satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan|sepuluh|sebelas|belas|puluh|ratus|ratusan|ribu|ribuan|juta|nol)\b"
+
+
+def _letters(x: str) -> str:
+    # Whisper menulis angka sebagai digit ("1932", "20.000"); kata bilangan di naskah dan digit
+    # di transkrip sama-sama dibuang supaya take yang benar tidak dinilai salah.
+    x = re.sub(_NUM_WORDS, " ", x.lower())
+    return re.sub(r"[^a-z]", "", x)
+
+
+def clean_for_tts(text: str) -> str:
+    """The emotion prompts make the model tack a stray syllable ("inder") onto '!' endings.
+    Keep the words, but end exclamations with a full stop and turn '...' into a comma pause."""
+    t = text.replace("...", ",").replace("!", ".")
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _synth_once(text: str, emotion: str) -> np.ndarray:
     state = VOICE_STATES.get(emotion, VOICE_STATES["narasi"])
     audio_tensor = tts_model.generate_audio(state, text, max_tokens=110)
     raw = audio_tensor.detach().cpu().numpy().squeeze().astype(np.float32)
@@ -62,53 +87,105 @@ def synth_phrase(text: str, emotion: str = "narasi") -> np.ndarray:
     return (raw / peak) * 0.88
 
 
+def _heard(clip: np.ndarray) -> str:
+    a16 = signal.resample(clip, int(len(clip) * 16000 / SR)).astype(np.float32)
+    segs, _ = ASR.transcribe(a16, language="id", beam_size=1)
+    return " ".join(x.text for x in segs)
+
+
+def synth_phrase(text: str, emotion: str = "narasi", n: int = 3) -> np.ndarray:
+    """Generate n takes and keep the one speech recognition hears closest to the script
+    (rejects takes with swallowed words or stray syllables)."""
+    clean = clean_for_tts(text)
+    best, best_score = None, -1.0
+    for i in range(n):
+        clip = _synth_once(clean, emotion)
+        heard = _heard(clip)
+        score = difflib.SequenceMatcher(None, _letters(clean), _letters(heard)).ratio()
+        print(f"      take {i + 1}/{n}: {score:.2f} <- {heard.strip()}")
+        if score > best_score:
+            best, best_score = clip, score
+        if score > 0.97:
+            break
+    return best
+
+
 # Story script split into short phrases with per-phrase emotion tags
+# Cerita: "Si Kabayan Ngala Tutut" (cerita rakyat Sunda).
+# Emosi: "narasi" (pendongeng netral), "santai" (malas/ringan), "tegang" (kaget/dramatis), "tegas" (perintah/marah).
 SCENES = [
     {
-        "scene": "hook",
+        "scene": "pagi",
         "phrases": [
-            ("narasi", "Dia menggergaji celah di setiap rel kereta."),
-            ("tegang", "Semua orang mengira dia sudah gila!"),
+            ("narasi", "Pagi-pagi, Si Kabayan masih mendengkur."),
+            ("tegas", "Kabayan! Bangun!"),
+            ("tegas", "Cari tutut ke sawah, buat lauk!"),
+            ("santai", "Dengan malas, Kabayan pun bangun."),
+            ("santai", "Yang banyak ya, Kang."),
         ],
     },
     {
-        "scene": "stakes",
+        "scene": "jalan",
         "phrases": [
-            ("narasi", "Dua perusahaan berlomba menaklukkan ngarai terdalam."),
-            ("tegas", "Siapa paling cepat, dia kuasai bisnis seluruh negeri."),
+            ("santai", "Kabayan berjalan ke sawah, sambil bersiul."),
         ],
     },
     {
-        "scene": "conflict",
+        "scene": "pematang",
         "phrases": [
-            ("tegang", "Bosnya murka sampai wajahnya berubah ungu!"),
-            ("tegas", "Kau merusak rel keretaku!"),
-            ("santai", "Tapi insinyur muda itu tetap menolak."),
+            ("narasi", "Sampai di pematang, ia hendak turun."),
+            ("tegang", "Tapi begitu melihat ke bawah..."),
+            ("tegang", "Euleuh! Sawahnya dalam sekali!"),
+            ("tegang", "Ada langitnya di bawah!"),
+            ("narasi", "Di air sawah, terpantul langit biru dan awan."),
         ],
     },
     {
-        "scene": "rival",
+        "scene": "saung",
         "phrases": [
-            ("narasi", "Perusahaan lawan memasang rel mulus tanpa celah."),
-            ("santai", "Kereta mereka melaju senyap, sedangkan keretanya berisik."),
+            ("santai", "Kabayan tidak berani turun."),
+            ("santai", "Ia menunggu di saung, sampai ketiduran."),
         ],
     },
     {
-        "scene": "heat",
+        "scene": "sore",
         "phrases": [
-            ("tegang", "Lalu musim panas tiba!"),
-            ("narasi", "Celah relnya menyusut perlahan."),
-            ("tegang", "Sementara rel lawan mulai menjerit kepanasan!"),
+            ("tegas", "Kabayan! Mana tututnya?"),
+            ("santai", "Sawahnya dalam, Bah. Sedalam langit!"),
+            ("tegang", "Abah langsung naik darah!"),
         ],
     },
     {
-        "scene": "climax",
+        "scene": "seret",
         "phrases": [
-            ("santai", "Di hari terpanas, celahnya menutup pas."),
-            ("tegang", "Rel sempurna lawan melengkung seperti ular, lalu meledak!"),
+            ("tegas", "Dalam bagaimana? Ayo ikut!"),
+            ("santai", "Tuh, Bah. Ada langitnya!"),
+        ],
+    },
+    {
+        "scene": "dorong",
+        "phrases": [
+            ("tegang", "Abah mendorong Kabayan ke sawah!"),
+            ("narasi", "Ternyata, airnya cuma sebetis."),
+        ],
+    },
+    {
+        "scene": "akhir",
+        "phrases": [
+            ("santai", "Geuning... langitnya cuma sebetis, Bah."),
+            ("narasi", "Kabayan pulang membawa tutut."),
+            ("santai", "Dan lumpur, sampai ke telinga."),
         ],
     },
 ]
+
+# Naskah lain bisa diberikan lewat argumen: python3 build_audio_expressive.py naskah.json
+# (format: [{"scene": "...", "phrases": [["narasi", "kalimat"], ...]}, ...]); nama output = <stem>_expressive.
+import sys
+NAME = "kabayan_expressive"
+if len(sys.argv) > 1:
+    SCENES = json.loads(Path(sys.argv[1]).read_text())
+    NAME = Path(sys.argv[1]).stem + "_expressive"
 
 chunks = []
 timeline = []
@@ -159,9 +236,9 @@ env = np.abs(voice_track)
 duck = 1.0 - np.clip(signal.lfilter(np.ones(2200) / 2200, 1, env) * 4.5, 0, 0.78)
 mix = np.clip(voice_track + bgm * duck, -0.95, 0.95)
 
-wav_out = Path("/tmp/railroad_expressive.wav")
-mp3_out = OUT_DIR / "railroad_expressive.mp3"
-json_out = OUT_DIR / "railroad_expressive_timeline.json"
+wav_out = Path(f"/tmp/{NAME}.wav")
+mp3_out = OUT_DIR / f"{NAME}.mp3"
+json_out = OUT_DIR / f"{NAME}_timeline.json"
 
 with wave.open(str(wav_out), "wb") as wf:
     wf.setnchannels(1)

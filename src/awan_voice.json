@@ -1,0 +1,1478 @@
+{
+ "fps": 30,
+ "totalFrames": 1596,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 93,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Bos menyuruh membangun kantor... di atas awan.",
+     "score": 0.986,
+     "file": "out/voice/awan/hook_0.wav",
+     "wordsSec": [
+      [
+       "Boss",
+       0.0,
+       0.16
+      ],
+      [
+       "menyuruh",
+       0.16,
+       0.58
+      ],
+      [
+       "membangun",
+       0.58,
+       0.9
+      ],
+      [
+       "kantor",
+       0.9,
+       1.32
+      ],
+      [
+       "di",
+       1.32,
+       1.64
+      ],
+      [
+       "atas",
+       1.64,
+       1.96
+      ],
+      [
+       "awan.",
+       1.96,
+       2.3
+      ]
+     ],
+     "from": 8,
+     "to": 80,
+     "words": [
+      {
+       "w": "Boss",
+       "from": 8,
+       "to": 12
+      },
+      {
+       "w": "menyuruh",
+       "from": 12,
+       "to": 25
+      },
+      {
+       "w": "membangun",
+       "from": 25,
+       "to": 34
+      },
+      {
+       "w": "kantor",
+       "from": 34,
+       "to": 47
+      },
+      {
+       "w": "di",
+       "from": 47,
+       "to": 57
+      },
+      {
+       "w": "atas",
+       "from": 57,
+       "to": 66
+      },
+      {
+       "w": "awan.",
+       "from": 66,
+       "to": 76
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "perintah",
+   "from": 93,
+   "to": 319,
+   "lines": [
+    {
+     "style": "tegas",
+     "text": "Investor datang minggu depan! Kita startup cloud, jadi kantornya harus di atas awan!",
+     "score": 0.978,
+     "file": "out/voice/awan/perintah_0.wav",
+     "wordsSec": [
+      [
+       "Investor",
+       0.0,
+       0.44
+      ],
+      [
+       "datang",
+       0.44,
+       0.7
+      ],
+      [
+       "minggu",
+       0.7,
+       0.86
+      ],
+      [
+       "depan,",
+       0.86,
+       1.14
+      ],
+      [
+       "kita",
+       1.3,
+       1.44
+      ],
+      [
+       "starat",
+       1.44,
+       1.78
+      ],
+      [
+       "cloud,",
+       1.78,
+       2.0
+      ],
+      [
+       "jadi",
+       2.14,
+       2.24
+      ],
+      [
+       "kantornya",
+       2.24,
+       2.74
+      ],
+      [
+       "harus",
+       2.74,
+       2.88
+      ],
+      [
+       "di",
+       2.88,
+       3.04
+      ],
+      [
+       "atas",
+       3.04,
+       3.24
+      ],
+      [
+       "awan.",
+       3.24,
+       3.54
+      ]
+     ],
+     "from": 93,
+     "to": 203,
+     "words": [
+      {
+       "w": "Investor",
+       "from": 93,
+       "to": 106
+      },
+      {
+       "w": "datang",
+       "from": 106,
+       "to": 114
+      },
+      {
+       "w": "minggu",
+       "from": 114,
+       "to": 119
+      },
+      {
+       "w": "depan,",
+       "from": 119,
+       "to": 127
+      },
+      {
+       "w": "kita",
+       "from": 132,
+       "to": 136
+      },
+      {
+       "w": "starat",
+       "from": 136,
+       "to": 146
+      },
+      {
+       "w": "cloud,",
+       "from": 146,
+       "to": 153
+      },
+      {
+       "w": "jadi",
+       "from": 157,
+       "to": 160
+      },
+      {
+       "w": "kantornya",
+       "from": 160,
+       "to": 175
+      },
+      {
+       "w": "harus",
+       "from": 175,
+       "to": 179
+      },
+      {
+       "w": "di",
+       "from": 179,
+       "to": 184
+      },
+      {
+       "w": "atas",
+       "from": 184,
+       "to": 190
+      },
+      {
+       "w": "awan.",
+       "from": 190,
+       "to": 199
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Seminggu! Kalau gagal, semua dipecat!",
+     "score": 1.0,
+     "file": "out/voice/awan/perintah_1.wav",
+     "wordsSec": [
+      [
+       "Seminggu",
+       0.0,
+       0.8
+      ],
+      [
+       "kalau",
+       0.8,
+       1.16
+      ],
+      [
+       "gagal,",
+       1.16,
+       1.84
+      ],
+      [
+       "semua",
+       1.86,
+       2.36
+      ],
+      [
+       "dipecat",
+       2.36,
+       2.94
+      ]
+     ],
+     "from": 211,
+     "to": 305,
+     "words": [
+      {
+       "w": "Seminggu",
+       "from": 211,
+       "to": 235
+      },
+      {
+       "w": "kalau",
+       "from": 235,
+       "to": 246
+      },
+      {
+       "w": "gagal,",
+       "from": 246,
+       "to": 266
+      },
+      {
+       "w": "semua",
+       "from": 267,
+       "to": 282
+      },
+      {
+       "w": "dipecat",
+       "from": 282,
+       "to": 299
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "sedih",
+   "from": 319,
+   "to": 456,
+   "lines": [
+    {
+     "style": "bisik",
+     "text": "Mas Udin baru punya bayi. Mbak Sinta harus membeli obat untuk ibunya.",
+     "score": 0.973,
+     "file": "out/voice/awan/sedih_0.wav",
+     "wordsSec": [
+      [
+       "Mas",
+       0.0,
+       0.22
+      ],
+      [
+       "Udin",
+       0.22,
+       0.56
+      ],
+      [
+       "baru",
+       0.56,
+       0.8
+      ],
+      [
+       "punya",
+       0.8,
+       1.04
+      ],
+      [
+       "bayi,",
+       1.04,
+       1.64
+      ],
+      [
+       "Baa",
+       1.66,
+       1.98
+      ],
+      [
+       "Sinta",
+       1.98,
+       2.26
+      ],
+      [
+       "harus",
+       2.26,
+       2.56
+      ],
+      [
+       "membeli",
+       2.56,
+       2.98
+      ],
+      [
+       "obat",
+       2.98,
+       3.28
+      ],
+      [
+       "untuk",
+       3.28,
+       3.46
+      ],
+      [
+       "ibunya.",
+       3.46,
+       3.88
+      ]
+     ],
+     "from": 319,
+     "to": 442,
+     "words": [
+      {
+       "w": "Mas",
+       "from": 319,
+       "to": 325
+      },
+      {
+       "w": "Udin",
+       "from": 325,
+       "to": 336
+      },
+      {
+       "w": "baru",
+       "from": 336,
+       "to": 343
+      },
+      {
+       "w": "punya",
+       "from": 343,
+       "to": 350
+      },
+      {
+       "w": "bayi,",
+       "from": 350,
+       "to": 368
+      },
+      {
+       "w": "Baa",
+       "from": 369,
+       "to": 378
+      },
+      {
+       "w": "Sinta",
+       "from": 378,
+       "to": 387
+      },
+      {
+       "w": "harus",
+       "from": 387,
+       "to": 396
+      },
+      {
+       "w": "membeli",
+       "from": 396,
+       "to": 408
+      },
+      {
+       "w": "obat",
+       "from": 408,
+       "to": 417
+      },
+      {
+       "w": "untuk",
+       "from": 417,
+       "to": 423
+      },
+      {
+       "w": "ibunya.",
+       "from": 423,
+       "to": 435
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "sanggup",
+   "from": 456,
+   "to": 645,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Siap, Pak. Tapi syaratnya satu, bahan bangunannya Bapak yang kirim ke atas.",
+     "score": 1.0,
+     "file": "out/voice/awan/sanggup_0.wav",
+     "wordsSec": [
+      [
+       "Siap",
+       0.0,
+       0.5
+      ],
+      [
+       "pak,",
+       0.5,
+       0.64
+      ],
+      [
+       "tapi",
+       0.9,
+       1.12
+      ],
+      [
+       "syaratnya",
+       1.12,
+       1.6
+      ],
+      [
+       "satu,",
+       1.6,
+       1.92
+      ],
+      [
+       "bahan",
+       2.24,
+       2.48
+      ],
+      [
+       "bangunannya",
+       2.48,
+       2.96
+      ],
+      [
+       "bapak",
+       2.96,
+       3.36
+      ],
+      [
+       "yang",
+       3.36,
+       3.5
+      ],
+      [
+       "kirim",
+       3.5,
+       3.84
+      ],
+      [
+       "ke",
+       3.84,
+       3.94
+      ],
+      [
+       "atas.",
+       3.94,
+       4.32
+      ]
+     ],
+     "from": 456,
+     "to": 590,
+     "words": [
+      {
+       "w": "Siap",
+       "from": 456,
+       "to": 471
+      },
+      {
+       "w": "pak,",
+       "from": 471,
+       "to": 475
+      },
+      {
+       "w": "tapi",
+       "from": 483,
+       "to": 489
+      },
+      {
+       "w": "syaratnya",
+       "from": 489,
+       "to": 504
+      },
+      {
+       "w": "satu,",
+       "from": 504,
+       "to": 513
+      },
+      {
+       "w": "bahan",
+       "from": 523,
+       "to": 530
+      },
+      {
+       "w": "bangunannya",
+       "from": 530,
+       "to": 544
+      },
+      {
+       "w": "bapak",
+       "from": 544,
+       "to": 556
+      },
+      {
+       "w": "yang",
+       "from": 556,
+       "to": 561
+      },
+      {
+       "w": "kirim",
+       "from": 561,
+       "to": 571
+      },
+      {
+       "w": "ke",
+       "from": 571,
+       "to": 574
+      },
+      {
+       "w": "atas.",
+       "from": 574,
+       "to": 585
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Gampang!",
+     "score": 1.0,
+     "file": "out/voice/awan/sanggup_1.wav",
+     "wordsSec": [
+      [
+       "Gampang.",
+       0.0,
+       0.54
+      ]
+     ],
+     "from": 598,
+     "to": 631,
+     "words": [
+      {
+       "w": "Gampang.",
+       "from": 598,
+       "to": 614
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "siap",
+   "from": 645,
+   "to": 769,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Seminggu penuh, Kang Nawas cuma main layang-layang... dan drone.",
+     "score": 0.99,
+     "file": "out/voice/awan/siap_0.wav",
+     "wordsSec": [
+      [
+       "seminggu",
+       0.0,
+       0.58
+      ],
+      [
+       "penuh,",
+       0.58,
+       0.92
+      ],
+      [
+       "Kang",
+       1.24,
+       1.38
+      ],
+      [
+       "Nawas",
+       1.38,
+       1.78
+      ],
+      [
+       "cuma",
+       1.78,
+       1.98
+      ],
+      [
+       "main",
+       1.98,
+       2.3
+      ],
+      [
+       "layang",
+       2.3,
+       2.64
+      ],
+      [
+       "-layang",
+       2.64,
+       2.98
+      ],
+      [
+       "dan",
+       2.98,
+       3.1
+      ],
+      [
+       "dron",
+       3.1,
+       3.48
+      ]
+     ],
+     "from": 645,
+     "to": 755,
+     "words": [
+      {
+       "w": "seminggu",
+       "from": 645,
+       "to": 662
+      },
+      {
+       "w": "penuh,",
+       "from": 662,
+       "to": 672
+      },
+      {
+       "w": "Kang",
+       "from": 682,
+       "to": 686
+      },
+      {
+       "w": "Nawas",
+       "from": 686,
+       "to": 698
+      },
+      {
+       "w": "cuma",
+       "from": 698,
+       "to": 704
+      },
+      {
+       "w": "main",
+       "from": 704,
+       "to": 714
+      },
+      {
+       "w": "layang",
+       "from": 714,
+       "to": 724
+      },
+      {
+       "w": "-layang",
+       "from": 724,
+       "to": 734
+      },
+      {
+       "w": "dan",
+       "from": 734,
+       "to": 738
+      },
+      {
+       "w": "dron",
+       "from": 738,
+       "to": 749
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "harih",
+   "from": 769,
+   "to": 915,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Hari yang ditunggu pun tiba.",
+     "score": 1.0,
+     "file": "out/voice/awan/harih_0.wav",
+     "wordsSec": [
+      [
+       "Hari",
+       0.0,
+       0.26
+      ],
+      [
+       "yang",
+       0.26,
+       0.44
+      ],
+      [
+       "ditunggu",
+       0.44,
+       0.88
+      ],
+      [
+       "pun",
+       0.88,
+       1.02
+      ],
+      [
+       "tiba",
+       1.02,
+       1.28
+      ]
+     ],
+     "from": 769,
+     "to": 812,
+     "words": [
+      {
+       "w": "Hari",
+       "from": 769,
+       "to": 777
+      },
+      {
+       "w": "yang",
+       "from": 777,
+       "to": 782
+      },
+      {
+       "w": "ditunggu",
+       "from": 782,
+       "to": 795
+      },
+      {
+       "w": "pun",
+       "from": 795,
+       "to": 799
+      },
+      {
+       "w": "tiba",
+       "from": 799,
+       "to": 807
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "text": "Pak! Mana batanya? Kirim ke atas, Pak!",
+     "score": 1.0,
+     "file": "out/voice/awan/harih_1.wav",
+     "wordsSec": [
+      [
+       "Pak!",
+       0.0,
+       0.16
+      ],
+      [
+       "Mana",
+       0.54,
+       0.82
+      ],
+      [
+       "batanya?",
+       0.82,
+       1.32
+      ],
+      [
+       "Kirim",
+       1.66,
+       1.92
+      ],
+      [
+       "ke",
+       1.92,
+       2.04
+      ],
+      [
+       "atas,",
+       2.04,
+       2.4
+      ],
+      [
+       "Pak!",
+       2.42,
+       2.54
+      ]
+     ],
+     "from": 820,
+     "to": 901,
+     "words": [
+      {
+       "w": "Pak!",
+       "from": 820,
+       "to": 825
+      },
+      {
+       "w": "Mana",
+       "from": 836,
+       "to": 844
+      },
+      {
+       "w": "batanya?",
+       "from": 844,
+       "to": 859
+      },
+      {
+       "w": "Kirim",
+       "from": 870,
+       "to": 877
+      },
+      {
+       "w": "ke",
+       "from": 877,
+       "to": 881
+      },
+      {
+       "w": "atas,",
+       "from": 881,
+       "to": 892
+      },
+      {
+       "w": "Pak!",
+       "from": 892,
+       "to": 896
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "lempar",
+   "from": 915,
+   "to": 1159,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Pak Bos melempar bata sekuat tenaga.",
+     "score": 0.984,
+     "file": "out/voice/awan/lempar_0.wav",
+     "wordsSec": [
+      [
+       "Pak",
+       0.0,
+       0.14
+      ],
+      [
+       "Bos,",
+       0.14,
+       0.42
+      ],
+      [
+       "melempar",
+       0.6,
+       1.12
+      ],
+      [
+       "batas",
+       1.12,
+       1.48
+      ],
+      [
+       "sekuat",
+       1.48,
+       1.84
+      ],
+      [
+       "tenaga.",
+       1.84,
+       2.18
+      ]
+     ],
+     "from": 915,
+     "to": 987,
+     "words": [
+      {
+       "w": "Pak",
+       "from": 915,
+       "to": 919
+      },
+      {
+       "w": "Bos,",
+       "from": 919,
+       "to": 927
+      },
+      {
+       "w": "melempar",
+       "from": 933,
+       "to": 948
+      },
+      {
+       "w": "batas",
+       "from": 948,
+       "to": 959
+      },
+      {
+       "w": "sekuat",
+       "from": 959,
+       "to": 970
+      },
+      {
+       "w": "tenaga.",
+       "from": 970,
+       "to": 980
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Batanya jatuh... tepat di mobilnya sendiri.",
+     "score": 0.986,
+     "file": "out/voice/awan/lempar_1.wav",
+     "wordsSec": [
+      [
+       "Batahnya",
+       0.0,
+       0.28
+      ],
+      [
+       "jatuh,",
+       0.28,
+       0.68
+      ],
+      [
+       "tepat",
+       1.1,
+       1.52
+      ],
+      [
+       "di",
+       1.52,
+       1.62
+      ],
+      [
+       "mobilnya",
+       1.62,
+       1.96
+      ],
+      [
+       "sendiri.",
+       1.96,
+       2.14
+      ]
+     ],
+     "from": 995,
+     "to": 1067,
+     "words": [
+      {
+       "w": "Batahnya",
+       "from": 995,
+       "to": 1003
+      },
+      {
+       "w": "jatuh,",
+       "from": 1003,
+       "to": 1015
+      },
+      {
+       "w": "tepat",
+       "from": 1028,
+       "to": 1040
+      },
+      {
+       "w": "di",
+       "from": 1040,
+       "to": 1043
+      },
+      {
+       "w": "mobilnya",
+       "from": 1043,
+       "to": 1053
+      },
+      {
+       "w": "sendiri.",
+       "from": 1053,
+       "to": 1059
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Lemparan kedua? Kena celengannya.",
+     "score": 1.0,
+     "file": "out/voice/awan/lempar_2.wav",
+     "wordsSec": [
+      [
+       "Lemparan",
+       0.0,
+       0.6
+      ],
+      [
+       "kedua,",
+       0.6,
+       0.98
+      ],
+      [
+       "kena",
+       1.3,
+       1.68
+      ],
+      [
+       "celengannya",
+       1.68,
+       2.14
+      ]
+     ],
+     "from": 1074,
+     "to": 1146,
+     "words": [
+      {
+       "w": "Lemparan",
+       "from": 1074,
+       "to": 1092
+      },
+      {
+       "w": "kedua,",
+       "from": 1092,
+       "to": 1104
+      },
+      {
+       "w": "kena",
+       "from": 1113,
+       "to": 1125
+      },
+      {
+       "w": "celengannya",
+       "from": 1125,
+       "to": 1139
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "runtuh",
+   "from": 1159,
+   "to": 1263,
+   "lines": [
+    {
+     "style": "bisik",
+     "text": "Saya cuma takut... perusahaan peninggalan Bapak saya hilang.",
+     "score": 1.0,
+     "file": "out/voice/awan/runtuh_0.wav",
+     "wordsSec": [
+      [
+       "Saya",
+       0.0,
+       0.22
+      ],
+      [
+       "cuma",
+       0.22,
+       0.4
+      ],
+      [
+       "takut",
+       0.4,
+       0.9
+      ],
+      [
+       "perusahaan",
+       0.9,
+       1.66
+      ],
+      [
+       "peninggalan",
+       1.66,
+       2.1
+      ],
+      [
+       "bapak",
+       2.1,
+       2.4
+      ],
+      [
+       "saya",
+       2.4,
+       2.56
+      ],
+      [
+       "hilang.",
+       2.56,
+       2.9
+      ]
+     ],
+     "from": 1159,
+     "to": 1249,
+     "words": [
+      {
+       "w": "Saya",
+       "from": 1159,
+       "to": 1166
+      },
+      {
+       "w": "cuma",
+       "from": 1166,
+       "to": 1171
+      },
+      {
+       "w": "takut",
+       "from": 1171,
+       "to": 1186
+      },
+      {
+       "w": "perusahaan",
+       "from": 1186,
+       "to": 1209
+      },
+      {
+       "w": "peninggalan",
+       "from": 1209,
+       "to": 1222
+      },
+      {
+       "w": "bapak",
+       "from": 1222,
+       "to": 1231
+      },
+      {
+       "w": "saya",
+       "from": 1231,
+       "to": 1236
+      },
+      {
+       "w": "hilang.",
+       "from": 1236,
+       "to": 1246
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kejutan",
+   "from": 1263,
+   "to": 1396,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Pak, kantor paling tinggi itu bukan yang di atas awan... tapi yang dibangun bareng-bareng.",
+     "score": 1.0,
+     "file": "out/voice/awan/kejutan_0.wav",
+     "wordsSec": [
+      [
+       "Pak,",
+       0.0,
+       0.14
+      ],
+      [
+       "kantor",
+       0.32,
+       0.64
+      ],
+      [
+       "paling",
+       0.64,
+       0.84
+      ],
+      [
+       "tinggi",
+       0.84,
+       1.18
+      ],
+      [
+       "itu",
+       1.18,
+       1.3
+      ],
+      [
+       "bukan",
+       1.3,
+       1.54
+      ],
+      [
+       "yang",
+       1.54,
+       1.72
+      ],
+      [
+       "diatas",
+       1.72,
+       2.0
+      ],
+      [
+       "awan,",
+       2.0,
+       2.46
+      ],
+      [
+       "tapi",
+       2.58,
+       2.8
+      ],
+      [
+       "yang",
+       2.8,
+       2.96
+      ],
+      [
+       "dibangun",
+       2.96,
+       3.36
+      ],
+      [
+       "bareng",
+       3.36,
+       3.6
+      ],
+      [
+       "-bareng.",
+       3.6,
+       3.92
+      ]
+     ],
+     "from": 1263,
+     "to": 1383,
+     "words": [
+      {
+       "w": "Pak,",
+       "from": 1263,
+       "to": 1267
+      },
+      {
+       "w": "kantor",
+       "from": 1272,
+       "to": 1282
+      },
+      {
+       "w": "paling",
+       "from": 1282,
+       "to": 1288
+      },
+      {
+       "w": "tinggi",
+       "from": 1288,
+       "to": 1298
+      },
+      {
+       "w": "itu",
+       "from": 1298,
+       "to": 1302
+      },
+      {
+       "w": "bukan",
+       "from": 1302,
+       "to": 1309
+      },
+      {
+       "w": "yang",
+       "from": 1309,
+       "to": 1314
+      },
+      {
+       "w": "diatas",
+       "from": 1314,
+       "to": 1323
+      },
+      {
+       "w": "awan,",
+       "from": 1323,
+       "to": 1336
+      },
+      {
+       "w": "tapi",
+       "from": 1340,
+       "to": 1347
+      },
+      {
+       "w": "yang",
+       "from": 1347,
+       "to": 1351
+      },
+      {
+       "w": "dibangun",
+       "from": 1351,
+       "to": 1363
+      },
+      {
+       "w": "bareng",
+       "from": 1363,
+       "to": 1371
+      },
+      {
+       "w": "-bareng.",
+       "from": 1371,
+       "to": 1380
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "bulan",
+   "from": 1396,
+   "to": 1588,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Investornya terharu, dan langsung setuju.",
+     "score": 1.0,
+     "file": "out/voice/awan/bulan_0.wav",
+     "wordsSec": [
+      [
+       "Investornya",
+       0.0,
+       0.8
+      ],
+      [
+       "terharu",
+       0.8,
+       1.56
+      ],
+      [
+       "dan",
+       1.56,
+       1.8
+      ],
+      [
+       "langsung",
+       1.8,
+       2.32
+      ],
+      [
+       "setuju.",
+       2.32,
+       2.78
+      ]
+     ],
+     "from": 1396,
+     "to": 1486,
+     "words": [
+      {
+       "w": "Investornya",
+       "from": 1396,
+       "to": 1420
+      },
+      {
+       "w": "terharu",
+       "from": 1420,
+       "to": 1443
+      },
+      {
+       "w": "dan",
+       "from": 1443,
+       "to": 1450
+      },
+      {
+       "w": "langsung",
+       "from": 1450,
+       "to": 1466
+      },
+      {
+       "w": "setuju.",
+       "from": 1466,
+       "to": 1480
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Bagus! Bulan depan, kantor di bulan!",
+     "score": 1.0,
+     "file": "out/voice/awan/bulan_1.wav",
+     "wordsSec": [
+      [
+       "Bagus!",
+       0.0,
+       0.5
+      ],
+      [
+       "Bulan",
+       0.78,
+       1.06
+      ],
+      [
+       "depan,",
+       1.06,
+       1.42
+      ],
+      [
+       "kantor",
+       1.7,
+       2.06
+      ],
+      [
+       "di",
+       2.06,
+       2.16
+      ],
+      [
+       "bulan!",
+       2.16,
+       2.5
+      ]
+     ],
+     "from": 1494,
+     "to": 1574,
+     "words": [
+      {
+       "w": "Bagus!",
+       "from": 1494,
+       "to": 1509
+      },
+      {
+       "w": "Bulan",
+       "from": 1517,
+       "to": 1526
+      },
+      {
+       "w": "depan,",
+       "from": 1526,
+       "to": 1536
+      },
+      {
+       "w": "kantor",
+       "from": 1545,
+       "to": 1556
+      },
+      {
+       "w": "di",
+       "from": 1556,
+       "to": 1559
+      },
+      {
+       "w": "bulan!",
+       "from": 1559,
+       "to": 1569
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

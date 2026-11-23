@@ -1,0 +1,24 @@
+[
+ {"scene": "hook", "lines": [
+   ["narasi", "Kang Nawas mengembalikan powerbank bosnya... plus satu bayi powerbank."]]},
+ {"scene": "pelit", "lines": [
+   ["santai", "Pak Bos paling pelit sekantor. Colokan pun digembok, cas HP bayar dua ribu sejam."],
+   ["tegas", "Pinjam sehari, kembalikan dua!"]]},
+ {"scene": "pinjam", "lines": [
+   ["narasi", "Suatu sore, baterai HP Kang Nawas tinggal satu persen."],
+   ["santai", "Pak, boleh pinjam powerbank-nya?"]]},
+ {"scene": "lahir", "lines": [
+   ["santai", "Selamat, Pak! Powerbank Bapak melahirkan tadi malam!"],
+   ["narasi", "Pak Bos girang. Tanpa curiga, bayinya langsung diterima."]]},
+ {"scene": "hpemas", "lines": [
+   ["narasi", "Seminggu kemudian, Kang Nawas meminjam HP terbaru Pak Bos."],
+   ["tegas", "Boleh! Asal kembali bawa anaknya!"]]},
+ {"scene": "meninggal", "lines": [
+   ["bisik", "Innalillahi, Pak... HP Bapak meninggal dunia."],
+   ["tegas", "Ngawur! Mana ada HP bisa meninggal!"]]},
+ {"scene": "punchline", "lines": [
+   ["santai", "Lho, powerbank bisa melahirkan Bapak percaya... masa HP meninggal nggak percaya?"]]},
+ {"scene": "gratis", "lines": [
+   ["narasi", "Sejak hari itu, cas HP di kantor... gratis."],
+   ["santai", "Alhamdulillah, Pak. HP Bapak hidup lagi... habis dicas gratis."]]}
+]

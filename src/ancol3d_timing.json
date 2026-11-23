@@ -1,0 +1,285 @@
+{
+ "fps": 30,
+ "total_frames": 4322,
+ "scenes": {
+  "chat": 240,
+  "rencana": 332,
+  "bersiap": 180,
+  "jemput": 480,
+  "motor": 210,
+  "foto": 330,
+  "muter": 300,
+  "cair": 510,
+  "biang": 330,
+  "makan": 390,
+  "coaster": 420,
+  "pulang": 300,
+  "akhir": 300
+ },
+ "lines": {
+  "c1": {
+   "scene": "chat",
+   "text": "Aku dan Asti kenal lewat Facebook. Awalnya cuma saling sapa, tapi lama-lama, kami chatting setiap hari.",
+   "from": 4,
+   "to": 161
+  },
+  "c2": {
+   "scene": "chat",
+   "text": "Sampai akhirnya, aku ingin bertemu langsung.",
+   "from": 166,
+   "to": 228
+  },
+  "r1": {
+   "scene": "rencana",
+   "text": "Aku beranikan diri, mengajaknya ke Ancol.",
+   "from": 4,
+   "to": 70
+  },
+  "r2": {
+   "scene": "rencana",
+   "text": "Dek Asti, kita ke Ancol yuk?",
+   "from": 73,
+   "to": 120
+  },
+  "r3": {
+   "scene": "rencana",
+   "text": "Boleh, Kak Hapid!",
+   "from": 124,
+   "to": 168
+  },
+  "r4": {
+   "scene": "rencana",
+   "text": "Kami sepakat berangkat di waktu yang pas, dan dapat voucher diskon, jadi hemat beberapa ribu.",
+   "from": 173,
+   "to": 323
+  },
+  "b1": {
+   "scene": "bersiap",
+   "text": "Hari yang ditunggu pun tiba. Aku grogi sekali, sampai memakai masker.",
+   "from": 4,
+   "to": 118
+  },
+  "j1": {
+   "scene": "jemput",
+   "text": "Aku menjemputnya ke kosan. Pertama kali bertemu, kami cuma saling memandang. Dia tidak pakai masker, jadi dia malu.",
+   "from": 4,
+   "to": 180
+  },
+  "j2": {
+   "scene": "jemput",
+   "text": "Dia menutupi wajahnya dengan tangan, lalu naik ke motorku.",
+   "from": 183,
+   "to": 272
+  },
+  "j3": {
+   "scene": "jemput",
+   "text": "Kak Hapid, sebentar ya. Aku pinjam masker ke temanku dulu.",
+   "from": 275,
+   "to": 372
+  },
+  "j4": {
+   "scene": "jemput",
+   "text": "Dia pun berlari mencari masker, dan aku cuma bisa tertawa.",
+   "from": 376,
+   "to": 471
+  },
+  "m1": {
+   "scene": "motor",
+   "text": "Dengan masker baru, kami berangkat ke Ancol. Sepanjang jalan, jantungku berdebar.",
+   "from": 4,
+   "to": 139
+  },
+  "f1": {
+   "scene": "foto",
+   "text": "Di Ancol, kami masih malu-malu. Aku minta tolong seorang kakak, untuk memotret kami.",
+   "from": 4,
+   "to": 161
+  },
+  "f2": {
+   "scene": "foto",
+   "text": "Semoga langgeng ya, Kak!",
+   "from": 164,
+   "to": 201
+  },
+  "f3": {
+   "scene": "foto",
+   "text": "Kami langsung tertawa. Pacaran saja belum!",
+   "from": 206,
+   "to": 271
+  },
+  "w1": {
+   "scene": "muter",
+   "text": "Setelah mengantre, kami naik wahana pertama. Wahana yang berputar-putar.",
+   "from": 4,
+   "to": 118
+  },
+  "w2": {
+   "scene": "muter",
+   "text": "Kak Hapid, aku mual.",
+   "from": 122,
+   "to": 161
+  },
+  "w3": {
+   "scene": "muter",
+   "text": "Asti sampai mual. Tapi menurutku, seru banget!",
+   "from": 164,
+   "to": 250
+  },
+  "e1": {
+   "scene": "cair",
+   "text": "Kami mau minum, tapi sama-sama tidak mau membuka masker. Jadi, kami minum bergantian, sambil saling membelakangi.",
+   "from": 4,
+   "to": 189
+  },
+  "e2": {
+   "scene": "cair",
+   "text": "Lalu kami beli es krim. Masih malu-malu, sampai es krimku jatuh.",
+   "from": 193,
+   "to": 293
+  },
+  "e3": {
+   "scene": "cair",
+   "text": "Yah, Kak, es krimnya jatuh!",
+   "from": 296,
+   "to": 353
+  },
+  "e4": {
+   "scene": "cair",
+   "text": "Akhirnya, kami sepakat, membuka masker bersama-sama.",
+   "from": 358,
+   "to": 437
+  },
+  "g1": {
+   "scene": "biang",
+   "text": "Kami naik biang lala, sambil melihat pemandangan laut Ancol yang indah.",
+   "from": 4,
+   "to": 111
+  },
+  "g2": {
+   "scene": "biang",
+   "text": "Indah banget ya, Kak Hapid.",
+   "from": 115,
+   "to": 173
+  },
+  "g3": {
+   "scene": "biang",
+   "text": "Aku cuma tersenyum. Dalam hati, aku berharap, waktu berhenti sebentar.",
+   "from": 178,
+   "to": 286
+  },
+  "k1": {
+   "scene": "makan",
+   "text": "Kami makan di sebuah tempat makan. Saat membayar, dompetku jatuh.",
+   "from": 4,
+   "to": 108
+  },
+  "k2": {
+   "scene": "makan",
+   "text": "Mas, ini dompetnya jatuh.",
+   "from": 112,
+   "to": 156
+  },
+  "k3": {
+   "scene": "makan",
+   "text": "Alhamdulillah, petugasnya baik, dan mengembalikannya. Sambil makan, kami ngobrol panjang, seperti sudah kenal lama.",
+   "from": 160,
+   "to": 364
+  },
+  "s1": {
+   "scene": "coaster",
+   "text": "Lalu kami naik wahana yang lebih ekstrem, roller coaster. Antreannya panjang sekali.",
+   "from": 4,
+   "to": 132
+  },
+  "s2": {
+   "scene": "coaster",
+   "text": "Kak Hapid, aku deg-degan.",
+   "from": 136,
+   "to": 181
+  },
+  "s3": {
+   "scene": "coaster",
+   "text": "Ternyata, seru banget! Kami berteriak sepanjang permainan. Setelahnya agak pusing, tapi kami bahagia.",
+   "from": 184,
+   "to": 332
+  },
+  "p1": {
+   "scene": "pulang",
+   "text": "Hari mulai petang, kami pulang. Aku antar Asti, sampai ke kosannya.",
+   "from": 4,
+   "to": 117
+  },
+  "p2": {
+   "scene": "pulang",
+   "text": "Makasih ya, Kak Hapid. Hari ini seru banget.",
+   "from": 120,
+   "to": 200
+  },
+  "p3": {
+   "scene": "pulang",
+   "text": "Sama-sama, Dek. Hati-hati ya.",
+   "from": 204,
+   "to": 247
+  },
+  "a1": {
+   "scene": "akhir",
+   "text": "Dalam perjalanan pulang, aku senyum-senyum sendiri. Ini adalah hari yang spesial, bagiku.",
+   "from": 6,
+   "to": 129
+  }
+ },
+ "events": {
+  "chat.cal": 28,
+  "chat.type": 67,
+  "chat.heart": 129,
+  "chat.meet": 191,
+  "rencana.ask": 74,
+  "rencana.yes": 124,
+  "rencana.voucher": 241,
+  "bersiap.mirror": 39,
+  "bersiap.mask": 93,
+  "jemput.arrive": 4,
+  "jemput.look": 83,
+  "jemput.cover": 184,
+  "jemput.mount": 249,
+  "jemput.ask": 276,
+  "jemput.go": 376,
+  "jemput.back": 442,
+  "motor.go": 4,
+  "motor.heart": 85,
+  "foto.ask": 98,
+  "foto.say": 165,
+  "foto.flash": 199,
+  "foto.laugh": 207,
+  "muter.start": 72,
+  "muter.mual": 122,
+  "muter.fun": 212,
+  "cair.want": 23,
+  "cair.turn": 97,
+  "cair.buy": 193,
+  "cair.drop": 278,
+  "cair.sigh": 297,
+  "cair.mask": 398,
+  "biang.ride": 4,
+  "biang.view": 68,
+  "biang.say": 115,
+  "biang.smile": 179,
+  "makan.pay": 61,
+  "makan.drop": 92,
+  "makan.give": 112,
+  "makan.thanks": 191,
+  "makan.talk": 272,
+  "coaster.queue": 68,
+  "coaster.nerv": 136,
+  "coaster.go": 185,
+  "coaster.scream": 236,
+  "coaster.dizzy": 295,
+  "pulang.ride": 4,
+  "pulang.arrive": 83,
+  "pulang.thanks": 121,
+  "pulang.reply": 204,
+  "akhir.smile": 6,
+  "akhir.sunset": 80
+ },
+ "stepF": {}
+}
