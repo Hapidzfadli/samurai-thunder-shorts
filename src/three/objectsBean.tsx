@@ -58,6 +58,9 @@ export type BeanParams = {
   armR?: [number, number];
   lean?: number;
   bob?: number;
+  headTilt?: number; // independent head nod/tilt in degrees
+  squash?: number; // subtle elastic squash/stretch around feet pivot (-0.1..0.1)
+  footBend?: boolean; // align feet naturally with shin angle during walking/running
   prop?: "none" | "brush" | "bucket" | "paper" | "gavel" | "stamp" | "jar" | "pen" | "umbrella" | "phone" | "headset" | "button" | "bottle" | "sack" | "net" | "spear" | "fan" | "scroll" | "rifle" | "bamboo" | "torch" | "dynamite" | "grenade" | "medkit";
   propHand?: "L" | "R";
   propRot?: number;
@@ -304,13 +307,21 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   const pants = p.pants ?? "#3a3a4a";
   const lean = p.lean ?? 0;
   const bob = p.bob ?? 0;
+  const sq = p.squash ?? 0;
+  const tx = lean * 3.2;
   const lL = p.legL ?? [0, 0];
   const lR = p.legR ?? [0, 0];
   const aL = p.armL ?? [-6, -8];
   const aR = p.armR ?? [6, -8];
+  const drawFoot = (fx: number, fy: number, shinAng: number) => {
+    const fa = p.footBend ? R(-shinAng * 0.45) : 0;
+    const dx = Math.cos(fa) * 40;
+    const dy = Math.sin(fa) * 40;
+    seg(c, fx, fy, fx + dx, fy + dy, 10);
+  };
   c.save();
   c.translate(300, 975);
-  c.rotate(R(lean) * 0.0);
+  c.scale(1 - sq, 1 + sq);
   c.translate(-300, -975 - bob);
   const hipY = 640;
   const shY = 350;
@@ -324,19 +335,18 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 14, "#92805a");
     poly(c, [[footL[0] - 14, footL[1] - 28], [footL[0] + 14, footL[1] - 28], [footL[0] + 44, footL[1] - 6], [footL[0] + 44, footL[1] + 10], [footL[0] - 16, footL[1] + 10]], p.boots, INKC, 6);
   }
-  else if (!p.barefoot) seg(c, footL[0], footL[1], footL[0] + 40, footL[1], 10);
+  else if (!p.barefoot) drawFoot(footL[0], footL[1], lL[0] + lL[1]);
   else poly(c, [[footL[0] - 8, footL[1] - 8], [footL[0] + 36, footL[1] - 6], [footL[0] + 40, footL[1] + 6], [footL[0] - 8, footL[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
   if (p.pangsi) trouser(c, 280, hipY, lL, p.pangsi);
-  const handL = limb(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, 130, 120, aL, 9);
-  if (p.robe) sleeve(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, aL, p.robe, p.robeTrim ?? p.sash);
-  else if (p.sleeves) sleeve(c, 300 - 40 * (p.wide ?? 0.95), shY + 14, aL, p.sleeves);
+  const handL = limb(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aL, 9);
+  if (p.robe) sleeve(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, aL, p.robe, p.robeTrim ?? p.sash);
+  else if (p.sleeves) sleeve(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, aL, p.sleeves);
   c.fillStyle = INKC;
   c.beginPath();
   c.arc(handL[0], handL[1], 12, 0, Math.PI * 2);
   c.fill();
   if (p.propHand === "L") drawProp(c, p, handL[0], handL[1], handL[2]);
   // military field backpack behind torso
-  const tx = lean * 3.2;
   if (p.backpack) {
     poly(c, [[204 + tx * 0.7, shY + 20], [268 + tx * 0.7, shY + 20], [262, hipY - 20], [198, hipY - 20]], p.backpack, INKC, 7);
     poly(c, [[196 + tx * 0.7, shY - 6], [266 + tx * 0.7, shY - 6], [266 + tx * 0.7, shY + 24], [196 + tx * 0.7, shY + 24]], "#6b5a3e", INKC, 5); // rolled bedroll
@@ -423,7 +433,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 14, "#92805a");
     poly(c, [[footR[0] - 14, footR[1] - 28], [footR[0] + 14, footR[1] - 28], [footR[0] + 44, footR[1] - 6], [footR[0] + 44, footR[1] + 10], [footR[0] - 16, footR[1] + 10]], p.boots, INKC, 6);
   }
-  else if (!p.barefoot) seg(c, footR[0], footR[1], footR[0] + 40, footR[1], 10);
+  else if (!p.barefoot) drawFoot(footR[0], footR[1], lR[0] + lR[1]);
   else poly(c, [[footR[0] - 8, footR[1] - 8], [footR[0] + 36, footR[1] - 6], [footR[0] + 40, footR[1] + 6], [footR[0] - 8, footR[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
   if (p.pangsi) trouser(c, 322, hipY, lR, p.pangsi);
   if (p.skirt) {
@@ -507,7 +517,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   const hx = 300 + tx * 1.3;
   c.save();
   c.translate(hx, 330);
-  c.rotate(R(lean) * 0.6);
+  c.rotate(R(lean * 0.6 + (p.headTilt ?? 0)));
   c.translate(-300, -330);
   // neck
   seg(c, 300, 326, 300, 352, 9);
@@ -991,12 +1001,15 @@ export const beanWalk = (phase: number, amp = 1): Partial<BeanParams> => {
 export const beanHandCanvas = (p: BeanParams, side: "L" | "R"): [number, number] => {
   const wide = p.wide ?? 0.95;
   const tx = (p.lean ?? 0) * 3.2;
+  const sq = p.squash ?? 0;
   const a = side === "L" ? (p.armL ?? [-6, -8]) : (p.armR ?? [6, -8]);
-  const sx = side === "L" ? 300 - 40 * wide : 300 + 40 * wide + tx;
+  const sx = (side === "L" ? 300 - 40 * wide : 300 + 40 * wide) + tx;
   const sy = 350 + 14;
   const e = tip(sx, sy, 130, a[0]);
   const h = tip(e[0], e[1], 120, a[0] + a[1]);
-  return [h[0], h[1] - (p.bob ?? 0)];
+  const bx = 300 + (h[0] - 300) * (1 - sq);
+  const by = 975 + (h[1] - (p.bob ?? 0) - 975) * (1 + sq);
+  return [bx, by];
 };
 export const beanCanvasToWorld = (cx: number, cy: number, position: Vec3, height: number, camPos: Vec3, flip = false, toCam = 0.04): Vec3 => {
   const w = (height * BW) / BH;

@@ -430,33 +430,46 @@ export const GasStove3D: React.FC<{ pos?: V3; burnerOn?: boolean; t?: number }> 
   </group>
 );
 
-/* Wok Pan with Curly Yellow Noodles + Fried Egg */
-export const WokPan3D: React.FC<{ pos?: V3; rot?: V3; hasNoodles?: boolean; scale?: number }> = ({
+/* Wok Pan with Curly Yellow Noodles + Fried Egg (supports animated chef wok-toss!) */
+export const WokPan3D: React.FC<{ pos?: V3; rot?: V3; hasNoodles?: boolean; scale?: number; toss?: number }> = ({
   pos = [0, 0, 0],
   rot = [0, 0, 0],
   hasNoodles = true,
   scale = 1,
-}) => (
-  <group position={pos} rotation={rot} scale={scale}>
-    {/* Wok bowl */}
-    <Cyl pos={[0, 0.12, 0]} r={0.24} rTop={0.42} h={0.22} color="#27272a" hull={0.07} seg={16} />
-    {/* Wooden handle */}
-    <Cyl pos={[0.62, 0.26, 0]} r={0.045} h={0.56} rot={[0, 0, -1.22]} color="#92400e" hull={0.12} />
-    {/* Small ear handle */}
-    <B pos={[-0.44, 0.22, 0]} size={[0.10, 0.05, 0.18]} color="#18181b" ink={0.02} />
-    {hasNoodles && (
-      <group position={[0, 0.20, 0]}>
-        <P geo={() => <sphereGeometry args={[0.31, 12, 8]} />} color="#f59e0b" pos={[0, 0.0, 0]} scale={[1, 0.35, 1]} hull={0.05} />
-        {/* Sunny-side up egg */}
-        <Cyl pos={[0.08, 0.10, 0.04]} r={0.14} h={0.03} color="#fffbeb" hull={0.06} />
-        <P geo={() => <sphereGeometry args={[0.065, 10, 8]} />} color="#facc15" pos={[0.09, 0.13, 0.04]} scale={[1, 0.55, 1]} hull={0.08} />
-        {/* Chili slices */}
-        <B pos={[-0.12, 0.11, 0.08]} size={[0.07, 0.025, 0.04]} color="#dc2626" ink={0.01} />
-        <B pos={[-0.04, 0.11, -0.10]} size={[0.07, 0.025, 0.04]} color="#16a34a" ink={0.01} />
-      </group>
-    )}
-  </group>
-);
+  toss = 0,
+}) => {
+  const lift = Math.max(0, Math.sin(toss * Math.PI));
+  const foodArc = Math.pow(lift, 0.72);
+  return (
+    <group position={[pos[0], pos[1] + lift * 0.14, pos[2]]} rotation={[rot[0] - lift * 0.16, rot[1], rot[2] + lift * 0.26]} scale={scale}>
+      {/* Wok bowl */}
+      <Cyl pos={[0, 0.12, 0]} r={0.24} rTop={0.42} h={0.22} color="#27272a" hull={0.07} seg={16} />
+      {/* Wooden handle */}
+      <Cyl pos={[0.62, 0.26, 0]} r={0.045} h={0.56} rot={[0, 0, -1.22]} color="#92400e" hull={0.12} />
+      {/* Small ear handle */}
+      <B pos={[-0.44, 0.22, 0]} size={[0.10, 0.05, 0.18]} color="#18181b" ink={0.02} />
+      {hasNoodles && (
+        <group position={[0, 0.20 + foodArc * 0.44, 0]} rotation={[foodArc * 0.6, foodArc * 0.9, -foodArc * 0.4]}>
+          <P geo={() => <sphereGeometry args={[0.31, 12, 8]} />} color="#f59e0b" pos={[0, 0.0, 0]} scale={[1, 0.35 + foodArc * 0.18, 1]} hull={0.05} />
+          {/* Sunny-side up egg tossing slightly higher */}
+          <group position={[0.08, 0.10 + foodArc * 0.14, 0.04]} rotation={[foodArc * 0.45, 0, foodArc * 0.35]}>
+            <Cyl pos={[0, 0, 0]} r={0.14} h={0.03} color="#fffbeb" hull={0.06} />
+            <P geo={() => <sphereGeometry args={[0.065, 10, 8]} />} color="#facc15" pos={[0.01, 0.03, 0]} scale={[1, 0.55, 1]} hull={0.08} />
+          </group>
+          {/* Chili & scallion slices flying in the wok toss */}
+          <B pos={[-0.12 - foodArc * 0.08, 0.11 + foodArc * 0.22, 0.08]} size={[0.07, 0.025, 0.04]} rot={[foodArc * 1.4, 0, foodArc * 1.1]} color="#dc2626" ink={0.01} />
+          <B pos={[-0.04 + foodArc * 0.10, 0.11 + foodArc * 0.26, -0.10]} size={[0.07, 0.025, 0.04]} rot={[-foodArc * 1.2, foodArc, 0]} color="#16a34a" ink={0.01} />
+          {foodArc > 0.12 && (
+            <>
+              <B pos={[0.14, 0.12 + foodArc * 0.20, -0.06]} size={[0.09, 0.03, 0.03]} rot={[0.4, foodArc * 2, 0.8]} color="#fbbf24" ink={0.01} />
+              <B pos={[-0.15, 0.08 + foodArc * 0.16, -0.04]} size={[0.09, 0.03, 0.03]} rot={[-0.5, foodArc * 1.8, -0.6]} color="#f59e0b" ink={0.01} />
+            </>
+          )}
+        </group>
+      )}
+    </group>
+  );
+};
 
 /* Iconic Indonesian "Mangkok Ayam Jago" with Steaming Noodles */
 export const NoodleBowl3D: React.FC<{ pos?: V3; scale?: number; t?: number; steam?: boolean }> = ({
@@ -583,8 +596,9 @@ export const KosanKitchenCounter: React.FC<{
   burnerOn?: boolean;
   scorchLevel?: number;
   fireScale?: number;
+  wokToss?: number;
   t?: number;
-}> = ({ pos = [0, 0, 0], burnerOn = true, scorchLevel = 0, fireScale = 0, t = 0 }) => {
+}> = ({ pos = [0, 0, 0], burnerOn = true, scorchLevel = 0, fireScale = 0, wokToss = 0, t = 0 }) => {
   const tile = useMemo(() => kitchenTileTex(), []);
   return (
     <group position={pos}>
@@ -617,7 +631,7 @@ export const KosanKitchenCounter: React.FC<{
 
       {/* 2-Burner Gas Stove + Wok Pan */}
       <GasStove3D pos={[0.35, 1.12, 0.02]} burnerOn={burnerOn} t={t} />
-      <WokPan3D pos={[0.79, 1.42, 0.02]} hasNoodles />
+      <WokPan3D pos={[0.79, 1.42, 0.02]} hasNoodles toss={wokToss} />
 
       {/* Upgraded Realistic Flame erupting from Wok! */}
       {fireScale > 0.01 && <RealisticFlame3D pos={[0.79, 1.58, 0.02]} scale={fireScale} heightMul={1.25} t={t} seed={3} />}
