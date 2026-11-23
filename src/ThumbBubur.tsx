@@ -94,9 +94,9 @@ const ThumbBuburStage: React.FC<{
       <Spoon3D pos={[rHand[0], rHand[1] - 0.1, rHand[2] + 0.1]} rot={[0.1, 0.15, -0.78]} scale={1.8} glow="#38bdf8" />
       <Spoon3D pos={[bHand[0], bHand[1] - 0.1, bHand[2] + 0.1]} rot={[0.1, -0.15, 0.78]} scale={1.8} glow="#f59e0b" />
 
-      <ClashAura3D pos={[-1.05, 2.15, 0.22]} scale={1.12} t={0.4} />
-      <LightningBolt3D pos={[-1.55, 1.85, -0.1]} color="#38bdf8" scale={1.2} t={0.2} />
-      <LightningBolt3D pos={[-0.65, 1.85, -0.1]} color="#f59e0b" scale={1.2} t={0.7} />
+      <ClashAura3D pos={[-1.05, 2.25, -0.22]} scale={0.74} t={0.4} />
+      <LightningBolt3D pos={[-1.45, 2.05, -0.30]} color="#38bdf8" scale={1.1} t={0.2} />
+      <LightningBolt3D pos={[-0.72, 2.05, -0.30]} color="#f59e0b" scale={1.1} t={0.7} />
 
       <Kerupuk3D pos={[-2.05, 2.55, 1.15]} rot={[0.6, 0.4, 0.3]} scale={1.08} />
       <Kerupuk3D pos={[0.05, 2.68, 1.25]} rot={[-0.5, 0.8, -0.4]} scale={1.12} />
