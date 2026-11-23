@@ -52,11 +52,14 @@ import { Bandung, TOTAL_FRAMES_BANDUNG } from "./Bandung";
 import { SheetBandungKarakter, SheetBandungProperti } from "./SheetBandung";
 import { Mie, TOTAL_FRAMES_MIE } from "./Mie";
 import { SheetMieKarakter, SheetMieProperti } from "./SheetMie";
+import { ThumbMieShorts, ThumbMieYoutube } from "./ThumbMie";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition id="Mie" component={Mie} durationInFrames={TOTAL_FRAMES_MIE} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbMieShorts" component={ThumbMieShorts} durationInFrames={1} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbMieYoutube" component={ThumbMieYoutube} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="SheetMieKarakter" component={SheetMieKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetMieProperti" component={SheetMieProperti} durationInFrames={1} fps={30} width={2000} height={1380} />
       <Composition id="Bandung" component={Bandung} durationInFrames={TOTAL_FRAMES_BANDUNG} fps={30} width={1080} height={1920} />
