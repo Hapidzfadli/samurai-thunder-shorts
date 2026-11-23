@@ -1,0 +1,66 @@
+[
+  {
+    "scene": "hook",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Pagi cerah di depan Kos Bu Tini, Riko dan Bagas cuma berniat sarapan bubur ayam hangat."],
+      ["tegang", "Tapi satu tusukan sendok langsung memicu perang saudara paling panas se-Indonesia!"]
+    ]
+  },
+  {
+    "scene": "rapi",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Sebagai ketua tim tidak diaduk, Riko menatap mangkok buburnya seperti melihat karya seni."],
+      ["santai", "Kuah kuning, ayam suwir, dan kerupuk wajib rapi terpisah, biar tiap suapan terasa elegan."]
+    ]
+  },
+  {
+    "scene": "aduk",
+    "takes": 1,
+    "lines": [
+      ["tegang", "Tiba-tiba Bagas menyeringai licik, menancapkan sendok, lalu mengaduk buburnya sekuat tenaga!"],
+      ["tegas", "Seketika toping rapi berubah jadi pusaran kecap cokelat, membuat mata Riko langsung melotot!"]
+    ]
+  },
+  {
+    "scene": "kubu",
+    "takes": 1,
+    "lines": [
+      ["tegas", "Riko langsung protes keras, itu bubur ayam atau adukan semen proyek?"],
+      ["narasi", "Satu kosan pun terbelah dua, Bu Tini membela tim rapi, Mbak Nisa membela tim diaduk, dan Mas Dedi panik di tengah!"]
+    ]
+  },
+  {
+    "scene": "duel",
+    "takes": 1,
+    "lines": [
+      ["tegang", "Suasana memanas bagai film laga, Riko dan Bagas melompat mengadu sendok raksasa sampai petir menyambar!"],
+      ["santai", "Gelombang kerupuk melayang beterbangan, sampai wajah Mas Dedi penuh remahan kerupuk!"]
+    ]
+  },
+  {
+    "scene": "udin",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Tepat saat gerobak hampir terguling, Bang Udin mengetuk dandang bubur dengan tatapan super datar."],
+      ["tegang", "Semua langsung terdiam kaku ketika Bang Udin mengeluarkan buku biru keramat dari saku celemeknya."]
+    ]
+  },
+  {
+    "scene": "bon",
+    "takes": 1,
+    "lines": [
+      ["tegas", "Mau diaduk atau tidak diaduk terserah kalian, yang penting bayar dulu utang bubur kemarin yang belum lunas!"],
+      ["santai", "Riko dan Bagas langsung melongo merogoh kantong kosong, sementara satu kosan tertawa terbahak-bahak!"]
+    ]
+  },
+  {
+    "scene": "ending",
+    "takes": 1,
+    "lines": [
+      ["santai", "Akhirnya perang pun damai seketika, mereka makan bubur bersama dengan gaya masing-masing."],
+      ["tegas", "Kalau kamu tim diaduk atau tim tidak diaduk? Tulis di komentar, dan sebutkan mau perang apa lagi besok!"]
+    ]
+  }
+]

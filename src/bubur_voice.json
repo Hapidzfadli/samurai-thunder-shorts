@@ -1,0 +1,2444 @@
+{
+ "fps": 30,
+ "totalFrames": 2715,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 281,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Pagi cerah di depan Kos Bu Tini, Riko dan Bagas cuma berniat sarapan bubur ayam hangat.",
+     "score": 0.978,
+     "file": "out/voice/bubur/hook_0.wav",
+     "wordsSec": [
+      [
+       "Pagi",
+       0.0,
+       0.22
+      ],
+      [
+       "cara",
+       0.22,
+       0.4
+      ],
+      [
+       "di",
+       0.4,
+       0.56
+      ],
+      [
+       "depan",
+       0.56,
+       0.82
+      ],
+      [
+       "Kosbutini,",
+       0.82,
+       1.36
+      ],
+      [
+       "Riko",
+       1.56,
+       1.94
+      ],
+      [
+       "dan",
+       1.94,
+       2.1
+      ],
+      [
+       "Bagas",
+       2.1,
+       2.44
+      ],
+      [
+       "cuma",
+       2.44,
+       2.6
+      ],
+      [
+       "berniat",
+       2.6,
+       2.98
+      ],
+      [
+       "sarapan",
+       2.98,
+       3.34
+      ],
+      [
+       "bubur",
+       3.34,
+       3.68
+      ],
+      [
+       "ayam",
+       3.68,
+       3.96
+      ],
+      [
+       "hangat.",
+       3.96,
+       4.24
+      ]
+     ],
+     "from": 8,
+     "to": 137,
+     "words": [
+      {
+       "w": "Pagi",
+       "from": 8,
+       "to": 14
+      },
+      {
+       "w": "cara",
+       "from": 14,
+       "to": 20
+      },
+      {
+       "w": "di",
+       "from": 20,
+       "to": 24
+      },
+      {
+       "w": "depan",
+       "from": 24,
+       "to": 32
+      },
+      {
+       "w": "Kosbutini,",
+       "from": 32,
+       "to": 48
+      },
+      {
+       "w": "Riko",
+       "from": 54,
+       "to": 66
+      },
+      {
+       "w": "dan",
+       "from": 66,
+       "to": 70
+      },
+      {
+       "w": "Bagas",
+       "from": 70,
+       "to": 81
+      },
+      {
+       "w": "cuma",
+       "from": 81,
+       "to": 86
+      },
+      {
+       "w": "berniat",
+       "from": 86,
+       "to": 97
+      },
+      {
+       "w": "sarapan",
+       "from": 97,
+       "to": 108
+      },
+      {
+       "w": "bubur",
+       "from": 108,
+       "to": 118
+      },
+      {
+       "w": "ayam",
+       "from": 118,
+       "to": 126
+      },
+      {
+       "w": "hangat.",
+       "from": 126,
+       "to": 135
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "text": "Tapi satu tusukan sendok langsung memicu perang saudara paling panas se-Indonesia!",
+     "score": 0.985,
+     "file": "out/voice/bubur/hook_1.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.2
+      ],
+      [
+       "satu",
+       0.2,
+       0.44
+      ],
+      [
+       "tusukan",
+       0.44,
+       0.8
+      ],
+      [
+       "sendok",
+       0.8,
+       1.24
+      ],
+      [
+       "langsung",
+       1.24,
+       1.6
+      ],
+      [
+       "memicu",
+       1.6,
+       2.02
+      ],
+      [
+       "perang",
+       2.02,
+       2.3
+      ],
+      [
+       "saudara",
+       2.3,
+       2.66
+      ],
+      [
+       "paling",
+       2.66,
+       2.92
+      ],
+      [
+       "panas",
+       2.92,
+       3.32
+      ],
+      [
+       "seIndonesia.",
+       3.32,
+       3.92
+      ]
+     ],
+     "from": 145,
+     "to": 267,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 145,
+       "to": 151
+      },
+      {
+       "w": "satu",
+       "from": 151,
+       "to": 158
+      },
+      {
+       "w": "tusukan",
+       "from": 158,
+       "to": 169
+      },
+      {
+       "w": "sendok",
+       "from": 169,
+       "to": 182
+      },
+      {
+       "w": "langsung",
+       "from": 182,
+       "to": 193
+      },
+      {
+       "w": "memicu",
+       "from": 193,
+       "to": 206
+      },
+      {
+       "w": "perang",
+       "from": 206,
+       "to": 214
+      },
+      {
+       "w": "saudara",
+       "from": 214,
+       "to": 225
+      },
+      {
+       "w": "paling",
+       "from": 225,
+       "to": 232
+      },
+      {
+       "w": "panas",
+       "from": 232,
+       "to": 244
+      },
+      {
+       "w": "seIndonesia.",
+       "from": 244,
+       "to": 262
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "rapi",
+   "from": 281,
+   "to": 623,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Sebagai ketua tim tidak diaduk, Riko menatap mangkok buburnya seperti melihat karya seni.",
+     "score": 1.0,
+     "file": "out/voice/bubur/rapi_0.wav",
+     "wordsSec": [
+      [
+       "Sebagai",
+       0.0,
+       0.4
+      ],
+      [
+       "ketua",
+       0.4,
+       0.74
+      ],
+      [
+       "tim",
+       0.74,
+       0.9
+      ],
+      [
+       "tidak",
+       0.9,
+       1.08
+      ],
+      [
+       "diaduk,",
+       1.08,
+       1.56
+      ],
+      [
+       "Riko",
+       1.8,
+       2.14
+      ],
+      [
+       "menatap",
+       2.14,
+       2.56
+      ],
+      [
+       "mangkok",
+       2.56,
+       2.88
+      ],
+      [
+       "buburnya",
+       2.88,
+       3.42
+      ],
+      [
+       "seperti",
+       3.42,
+       3.86
+      ],
+      [
+       "melihat",
+       3.86,
+       4.38
+      ],
+      [
+       "karya",
+       4.38,
+       4.64
+      ],
+      [
+       "seni.",
+       4.64,
+       4.86
+      ]
+     ],
+     "from": 281,
+     "to": 434,
+     "words": [
+      {
+       "w": "Sebagai",
+       "from": 281,
+       "to": 293
+      },
+      {
+       "w": "ketua",
+       "from": 293,
+       "to": 303
+      },
+      {
+       "w": "tim",
+       "from": 303,
+       "to": 308
+      },
+      {
+       "w": "tidak",
+       "from": 308,
+       "to": 313
+      },
+      {
+       "w": "diaduk,",
+       "from": 313,
+       "to": 328
+      },
+      {
+       "w": "Riko",
+       "from": 335,
+       "to": 345
+      },
+      {
+       "w": "menatap",
+       "from": 345,
+       "to": 358
+      },
+      {
+       "w": "mangkok",
+       "from": 358,
+       "to": 367
+      },
+      {
+       "w": "buburnya",
+       "from": 367,
+       "to": 384
+      },
+      {
+       "w": "seperti",
+       "from": 384,
+       "to": 397
+      },
+      {
+       "w": "melihat",
+       "from": 397,
+       "to": 412
+      },
+      {
+       "w": "karya",
+       "from": 412,
+       "to": 420
+      },
+      {
+       "w": "seni.",
+       "from": 420,
+       "to": 427
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Kuah kuning, ayam suwir, dan kerupuk wajib rapi terpisah, biar tiap suapan terasa elegan.",
+     "score": 0.972,
+     "file": "out/voice/bubur/rapi_1.wav",
+     "wordsSec": [
+      [
+       "Gua",
+       0.0,
+       0.26
+      ],
+      [
+       "kuning,",
+       0.26,
+       0.72
+      ],
+      [
+       "ayam",
+       0.86,
+       1.08
+      ],
+      [
+       "suir,",
+       1.08,
+       1.5
+      ],
+      [
+       "dan",
+       1.82,
+       1.86
+      ],
+      [
+       "kerupuk",
+       1.86,
+       2.26
+      ],
+      [
+       "wajib",
+       2.26,
+       2.56
+      ],
+      [
+       "rapi",
+       2.56,
+       2.86
+      ],
+      [
+       "terpisah",
+       2.86,
+       3.42
+      ],
+      [
+       "biar",
+       3.42,
+       3.88
+      ],
+      [
+       "tiap",
+       3.88,
+       4.2
+      ],
+      [
+       "suapan",
+       4.2,
+       4.56
+      ],
+      [
+       "terasa",
+       4.56,
+       4.94
+      ],
+      [
+       "elegan.",
+       4.94,
+       5.38
+      ]
+     ],
+     "from": 442,
+     "to": 610,
+     "words": [
+      {
+       "w": "Gua",
+       "from": 442,
+       "to": 449
+      },
+      {
+       "w": "kuning,",
+       "from": 449,
+       "to": 463
+      },
+      {
+       "w": "ayam",
+       "from": 467,
+       "to": 474
+      },
+      {
+       "w": "suir,",
+       "from": 474,
+       "to": 487
+      },
+      {
+       "w": "dan",
+       "from": 496,
+       "to": 497
+      },
+      {
+       "w": "kerupuk",
+       "from": 497,
+       "to": 509
+      },
+      {
+       "w": "wajib",
+       "from": 509,
+       "to": 518
+      },
+      {
+       "w": "rapi",
+       "from": 518,
+       "to": 527
+      },
+      {
+       "w": "terpisah",
+       "from": 527,
+       "to": 544
+      },
+      {
+       "w": "biar",
+       "from": 544,
+       "to": 558
+      },
+      {
+       "w": "tiap",
+       "from": 558,
+       "to": 568
+      },
+      {
+       "w": "suapan",
+       "from": 568,
+       "to": 578
+      },
+      {
+       "w": "terasa",
+       "from": 578,
+       "to": 590
+      },
+      {
+       "w": "elegan.",
+       "from": 590,
+       "to": 603
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "aduk",
+   "from": 623,
+   "to": 980,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Tiba-tiba Bagas menyeringai licik, menancapkan sendok, lalu mengaduk buburnya sekuat tenaga!",
+     "score": 1.0,
+     "file": "out/voice/bubur/aduk_0.wav",
+     "wordsSec": [
+      [
+       "Tiba",
+       0.0,
+       0.26
+      ],
+      [
+       "-tiba",
+       0.26,
+       0.68
+      ],
+      [
+       "bagas",
+       0.68,
+       1.24
+      ],
+      [
+       "menyeringai",
+       1.24,
+       1.74
+      ],
+      [
+       "licik",
+       1.74,
+       2.22
+      ],
+      [
+       "menancapkan",
+       2.22,
+       2.98
+      ],
+      [
+       "sendok,",
+       2.98,
+       3.44
+      ],
+      [
+       "lalu",
+       3.74,
+       3.96
+      ],
+      [
+       "mengaduk",
+       3.96,
+       4.36
+      ],
+      [
+       "buburnya",
+       4.36,
+       4.92
+      ],
+      [
+       "sekuat",
+       4.92,
+       5.56
+      ],
+      [
+       "tenaga.",
+       5.56,
+       5.92
+      ]
+     ],
+     "from": 623,
+     "to": 805,
+     "words": [
+      {
+       "w": "Tiba",
+       "from": 623,
+       "to": 631
+      },
+      {
+       "w": "-tiba",
+       "from": 631,
+       "to": 643
+      },
+      {
+       "w": "bagas",
+       "from": 643,
+       "to": 660
+      },
+      {
+       "w": "menyeringai",
+       "from": 660,
+       "to": 675
+      },
+      {
+       "w": "licik",
+       "from": 675,
+       "to": 690
+      },
+      {
+       "w": "menancapkan",
+       "from": 690,
+       "to": 712
+      },
+      {
+       "w": "sendok,",
+       "from": 712,
+       "to": 726
+      },
+      {
+       "w": "lalu",
+       "from": 735,
+       "to": 742
+      },
+      {
+       "w": "mengaduk",
+       "from": 742,
+       "to": 754
+      },
+      {
+       "w": "buburnya",
+       "from": 754,
+       "to": 771
+      },
+      {
+       "w": "sekuat",
+       "from": 771,
+       "to": 790
+      },
+      {
+       "w": "tenaga.",
+       "from": 790,
+       "to": 801
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Seketika toping rapi berubah jadi pusaran kecap cokelat, membuat mata Riko langsung melotot!",
+     "score": 0.987,
+     "file": "out/voice/bubur/aduk_1.wav",
+     "wordsSec": [
+      [
+       "Seketika",
+       0.0,
+       0.52
+      ],
+      [
+       "topping",
+       0.52,
+       0.8
+      ],
+      [
+       "rapi",
+       0.8,
+       1.22
+      ],
+      [
+       "berubah",
+       1.22,
+       1.64
+      ],
+      [
+       "jadi",
+       1.64,
+       1.84
+      ],
+      [
+       "pusaran",
+       1.84,
+       2.26
+      ],
+      [
+       "kecap",
+       2.26,
+       2.58
+      ],
+      [
+       "coklat",
+       2.58,
+       3.02
+      ],
+      [
+       "membuat",
+       3.02,
+       3.52
+      ],
+      [
+       "matariko",
+       3.52,
+       4.14
+      ],
+      [
+       "langsung",
+       4.14,
+       4.6
+      ],
+      [
+       "melotot.",
+       4.6,
+       5.0
+      ]
+     ],
+     "from": 813,
+     "to": 967,
+     "words": [
+      {
+       "w": "Seketika",
+       "from": 813,
+       "to": 829
+      },
+      {
+       "w": "topping",
+       "from": 829,
+       "to": 837
+      },
+      {
+       "w": "rapi",
+       "from": 837,
+       "to": 850
+      },
+      {
+       "w": "berubah",
+       "from": 850,
+       "to": 862
+      },
+      {
+       "w": "jadi",
+       "from": 862,
+       "to": 868
+      },
+      {
+       "w": "pusaran",
+       "from": 868,
+       "to": 881
+      },
+      {
+       "w": "kecap",
+       "from": 881,
+       "to": 890
+      },
+      {
+       "w": "coklat",
+       "from": 890,
+       "to": 904
+      },
+      {
+       "w": "membuat",
+       "from": 904,
+       "to": 919
+      },
+      {
+       "w": "matariko",
+       "from": 919,
+       "to": 937
+      },
+      {
+       "w": "langsung",
+       "from": 937,
+       "to": 951
+      },
+      {
+       "w": "melotot.",
+       "from": 951,
+       "to": 963
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kubu",
+   "from": 980,
+   "to": 1328,
+   "lines": [
+    {
+     "style": "tegas",
+     "text": "Riko langsung protes keras, itu bubur ayam atau adukan semen proyek?",
+     "score": 0.982,
+     "file": "out/voice/bubur/kubu_0.wav",
+     "wordsSec": [
+      [
+       "Riku",
+       0.0,
+       0.24
+      ],
+      [
+       "langsung",
+       0.24,
+       0.52
+      ],
+      [
+       "protes",
+       0.52,
+       0.82
+      ],
+      [
+       "keras,",
+       0.82,
+       1.12
+      ],
+      [
+       "itu",
+       1.38,
+       1.52
+      ],
+      [
+       "bubur",
+       1.52,
+       1.8
+      ],
+      [
+       "ayam",
+       1.8,
+       2.1
+      ],
+      [
+       "atau",
+       2.1,
+       2.24
+      ],
+      [
+       "adukan",
+       2.24,
+       2.54
+      ],
+      [
+       "semen",
+       2.54,
+       2.76
+      ],
+      [
+       "proyek.",
+       2.76,
+       3.12
+      ]
+     ],
+     "from": 980,
+     "to": 1076,
+     "words": [
+      {
+       "w": "Riku",
+       "from": 980,
+       "to": 987
+      },
+      {
+       "w": "langsung",
+       "from": 987,
+       "to": 996
+      },
+      {
+       "w": "protes",
+       "from": 996,
+       "to": 1005
+      },
+      {
+       "w": "keras,",
+       "from": 1005,
+       "to": 1014
+      },
+      {
+       "w": "itu",
+       "from": 1022,
+       "to": 1026
+      },
+      {
+       "w": "bubur",
+       "from": 1026,
+       "to": 1034
+      },
+      {
+       "w": "ayam",
+       "from": 1034,
+       "to": 1043
+      },
+      {
+       "w": "atau",
+       "from": 1043,
+       "to": 1047
+      },
+      {
+       "w": "adukan",
+       "from": 1047,
+       "to": 1056
+      },
+      {
+       "w": "semen",
+       "from": 1056,
+       "to": 1063
+      },
+      {
+       "w": "proyek.",
+       "from": 1063,
+       "to": 1074
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "text": "Satu kosan pun terbelah dua, Bu Tini membela tim rapi, Mbak Nisa membela tim diaduk, dan Mas Dedi panik di tengah!",
+     "score": 0.952,
+     "file": "out/voice/bubur/kubu_1.wav",
+     "wordsSec": [
+      [
+       "Satu",
+       0.0,
+       0.4
+      ],
+      [
+       "kosan",
+       0.4,
+       0.74
+      ],
+      [
+       "pun",
+       0.74,
+       0.84
+      ],
+      [
+       "terbelah",
+       0.84,
+       1.34
+      ],
+      [
+       "dua.",
+       1.34,
+       1.58
+      ],
+      [
+       "Buti",
+       1.94,
+       2.44
+      ],
+      [
+       "ini",
+       2.44,
+       2.54
+      ],
+      [
+       "membelah",
+       2.54,
+       3.02
+      ],
+      [
+       "tim",
+       3.02,
+       3.14
+      ],
+      [
+       "rapi,",
+       3.14,
+       3.62
+      ],
+      [
+       "Pak",
+       3.96,
+       4.16
+      ],
+      [
+       "Nisa",
+       4.16,
+       4.52
+      ],
+      [
+       "membelah",
+       4.52,
+       5.02
+      ],
+      [
+       "tim",
+       5.02,
+       5.14
+      ],
+      [
+       "diaduk,",
+       5.14,
+       5.8
+      ],
+      [
+       "dan",
+       5.82,
+       6.06
+      ],
+      [
+       "Mas",
+       6.06,
+       6.36
+      ],
+      [
+       "Dedy",
+       6.36,
+       6.68
+      ],
+      [
+       "panik",
+       6.68,
+       7.12
+      ],
+      [
+       "di",
+       7.12,
+       7.26
+      ],
+      [
+       "tengah.",
+       7.26,
+       7.6
+      ]
+     ],
+     "from": 1084,
+     "to": 1314,
+     "words": [
+      {
+       "w": "Satu",
+       "from": 1084,
+       "to": 1096
+      },
+      {
+       "w": "kosan",
+       "from": 1096,
+       "to": 1106
+      },
+      {
+       "w": "pun",
+       "from": 1106,
+       "to": 1109
+      },
+      {
+       "w": "terbelah",
+       "from": 1109,
+       "to": 1124
+      },
+      {
+       "w": "dua.",
+       "from": 1124,
+       "to": 1131
+      },
+      {
+       "w": "Buti",
+       "from": 1142,
+       "to": 1157
+      },
+      {
+       "w": "ini",
+       "from": 1157,
+       "to": 1160
+      },
+      {
+       "w": "membelah",
+       "from": 1160,
+       "to": 1175
+      },
+      {
+       "w": "tim",
+       "from": 1175,
+       "to": 1178
+      },
+      {
+       "w": "rapi,",
+       "from": 1178,
+       "to": 1193
+      },
+      {
+       "w": "Pak",
+       "from": 1203,
+       "to": 1209
+      },
+      {
+       "w": "Nisa",
+       "from": 1209,
+       "to": 1220
+      },
+      {
+       "w": "membelah",
+       "from": 1220,
+       "to": 1235
+      },
+      {
+       "w": "tim",
+       "from": 1235,
+       "to": 1238
+      },
+      {
+       "w": "diaduk,",
+       "from": 1238,
+       "to": 1258
+      },
+      {
+       "w": "dan",
+       "from": 1259,
+       "to": 1266
+      },
+      {
+       "w": "Mas",
+       "from": 1266,
+       "to": 1275
+      },
+      {
+       "w": "Dedy",
+       "from": 1275,
+       "to": 1284
+      },
+      {
+       "w": "panik",
+       "from": 1284,
+       "to": 1298
+      },
+      {
+       "w": "di",
+       "from": 1298,
+       "to": 1302
+      },
+      {
+       "w": "tengah.",
+       "from": 1302,
+       "to": 1312
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "duel",
+   "from": 1328,
+   "to": 1698,
+   "lines": [
+    {
+     "style": "tegang",
+     "text": "Suasana memanas bagai film laga, Riko dan Bagas melompat mengadu sendok raksasa sampai petir menyambar!",
+     "score": 0.983,
+     "file": "out/voice/bubur/duel_0.wav",
+     "wordsSec": [
+      [
+       "Suasana",
+       0.0,
+       0.54
+      ],
+      [
+       "memanas",
+       0.54,
+       0.96
+      ],
+      [
+       "bagi",
+       0.96,
+       1.28
+      ],
+      [
+       "film",
+       1.28,
+       1.46
+      ],
+      [
+       "laga,",
+       1.46,
+       1.9
+      ],
+      [
+       "Rico",
+       2.18,
+       2.46
+      ],
+      [
+       "dan",
+       2.46,
+       2.72
+      ],
+      [
+       "Bagas",
+       2.72,
+       3.14
+      ],
+      [
+       "melompat",
+       3.14,
+       3.64
+      ],
+      [
+       "mengadu",
+       3.64,
+       4.02
+      ],
+      [
+       "sendok",
+       4.02,
+       4.44
+      ],
+      [
+       "raksasa",
+       4.44,
+       5.02
+      ],
+      [
+       "sampai",
+       5.02,
+       5.52
+      ],
+      [
+       "petir",
+       5.52,
+       5.96
+      ],
+      [
+       "menyambar.",
+       5.96,
+       6.54
+      ]
+     ],
+     "from": 1328,
+     "to": 1525,
+     "words": [
+      {
+       "w": "Suasana",
+       "from": 1328,
+       "to": 1344
+      },
+      {
+       "w": "memanas",
+       "from": 1344,
+       "to": 1357
+      },
+      {
+       "w": "bagi",
+       "from": 1357,
+       "to": 1366
+      },
+      {
+       "w": "film",
+       "from": 1366,
+       "to": 1372
+      },
+      {
+       "w": "laga,",
+       "from": 1372,
+       "to": 1385
+      },
+      {
+       "w": "Rico",
+       "from": 1393,
+       "to": 1402
+      },
+      {
+       "w": "dan",
+       "from": 1402,
+       "to": 1409
+      },
+      {
+       "w": "Bagas",
+       "from": 1409,
+       "to": 1422
+      },
+      {
+       "w": "melompat",
+       "from": 1422,
+       "to": 1437
+      },
+      {
+       "w": "mengadu",
+       "from": 1437,
+       "to": 1448
+      },
+      {
+       "w": "sendok",
+       "from": 1448,
+       "to": 1461
+      },
+      {
+       "w": "raksasa",
+       "from": 1461,
+       "to": 1478
+      },
+      {
+       "w": "sampai",
+       "from": 1478,
+       "to": 1493
+      },
+      {
+       "w": "petir",
+       "from": 1493,
+       "to": 1507
+      },
+      {
+       "w": "menyambar.",
+       "from": 1507,
+       "to": 1524
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Gelombang kerupuk melayang beterbangan, sampai wajah Mas Dedi penuh remahan kerupuk!",
+     "score": 0.964,
+     "file": "out/voice/bubur/duel_1.wav",
+     "wordsSec": [
+      [
+       "Glombang",
+       0.0,
+       0.52
+      ],
+      [
+       "krupuk",
+       0.52,
+       0.88
+      ],
+      [
+       "melayang",
+       0.88,
+       1.34
+      ],
+      [
+       "beterbangan,",
+       1.34,
+       1.92
+      ],
+      [
+       "sampai",
+       2.14,
+       2.6
+      ],
+      [
+       "wajah",
+       2.6,
+       3.18
+      ],
+      [
+       "mas",
+       3.18,
+       3.36
+      ],
+      [
+       "dedi",
+       3.36,
+       3.72
+      ],
+      [
+       "penurmahan",
+       3.72,
+       4.48
+      ],
+      [
+       "krupuk.",
+       4.48,
+       4.98
+      ]
+     ],
+     "from": 1532,
+     "to": 1685,
+     "words": [
+      {
+       "w": "Glombang",
+       "from": 1532,
+       "to": 1548
+      },
+      {
+       "w": "krupuk",
+       "from": 1548,
+       "to": 1559
+      },
+      {
+       "w": "melayang",
+       "from": 1559,
+       "to": 1573
+      },
+      {
+       "w": "beterbangan,",
+       "from": 1573,
+       "to": 1590
+      },
+      {
+       "w": "sampai",
+       "from": 1597,
+       "to": 1610
+      },
+      {
+       "w": "wajah",
+       "from": 1610,
+       "to": 1628
+      },
+      {
+       "w": "mas",
+       "from": 1628,
+       "to": 1633
+      },
+      {
+       "w": "dedi",
+       "from": 1633,
+       "to": 1644
+      },
+      {
+       "w": "penurmahan",
+       "from": 1644,
+       "to": 1667
+      },
+      {
+       "w": "krupuk.",
+       "from": 1667,
+       "to": 1682
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "udin",
+   "from": 1698,
+   "to": 2059,
+   "lines": [
+    {
+     "style": "narasi",
+     "text": "Tepat saat gerobak hampir terguling, Bang Udin mengetuk dandang bubur dengan tatapan super datar.",
+     "score": 1.0,
+     "file": "out/voice/bubur/udin_0.wav",
+     "wordsSec": [
+      [
+       "Tepat",
+       0.0,
+       0.42
+      ],
+      [
+       "saat",
+       0.42,
+       0.6
+      ],
+      [
+       "gerobak",
+       0.6,
+       1.04
+      ],
+      [
+       "hampir",
+       1.04,
+       1.46
+      ],
+      [
+       "terguling,",
+       1.46,
+       2.02
+      ],
+      [
+       "Bang",
+       2.16,
+       2.5
+      ],
+      [
+       "Udin",
+       2.5,
+       2.9
+      ],
+      [
+       "mengetuk",
+       2.9,
+       3.52
+      ],
+      [
+       "dandang",
+       3.52,
+       3.86
+      ],
+      [
+       "bubur",
+       3.86,
+       4.24
+      ],
+      [
+       "dengan",
+       4.24,
+       4.46
+      ],
+      [
+       "tatapan",
+       4.46,
+       4.94
+      ],
+      [
+       "superdatar.",
+       4.94,
+       5.64
+      ]
+     ],
+     "from": 1698,
+     "to": 1874,
+     "words": [
+      {
+       "w": "Tepat",
+       "from": 1698,
+       "to": 1711
+      },
+      {
+       "w": "saat",
+       "from": 1711,
+       "to": 1716
+      },
+      {
+       "w": "gerobak",
+       "from": 1716,
+       "to": 1729
+      },
+      {
+       "w": "hampir",
+       "from": 1729,
+       "to": 1742
+      },
+      {
+       "w": "terguling,",
+       "from": 1742,
+       "to": 1759
+      },
+      {
+       "w": "Bang",
+       "from": 1763,
+       "to": 1773
+      },
+      {
+       "w": "Udin",
+       "from": 1773,
+       "to": 1785
+      },
+      {
+       "w": "mengetuk",
+       "from": 1785,
+       "to": 1804
+      },
+      {
+       "w": "dandang",
+       "from": 1804,
+       "to": 1814
+      },
+      {
+       "w": "bubur",
+       "from": 1814,
+       "to": 1825
+      },
+      {
+       "w": "dengan",
+       "from": 1825,
+       "to": 1832
+      },
+      {
+       "w": "tatapan",
+       "from": 1832,
+       "to": 1846
+      },
+      {
+       "w": "superdatar.",
+       "from": 1846,
+       "to": 1867
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "text": "Semua langsung terdiam kaku ketika Bang Udin mengeluarkan buku biru keramat dari saku celemeknya.",
+     "score": 0.988,
+     "file": "out/voice/bubur/udin_1.wav",
+     "wordsSec": [
+      [
+       "Semua",
+       0.0,
+       0.42
+      ],
+      [
+       "langsung",
+       0.42,
+       0.72
+      ],
+      [
+       "terdiam",
+       0.72,
+       1.2
+      ],
+      [
+       "kaku",
+       1.2,
+       1.62
+      ],
+      [
+       "ketika",
+       1.62,
+       2.12
+      ],
+      [
+       "bang",
+       2.12,
+       2.34
+      ],
+      [
+       "Udin",
+       2.34,
+       2.58
+      ],
+      [
+       "mengeluarkan",
+       2.58,
+       3.08
+      ],
+      [
+       "buku",
+       3.08,
+       3.4
+      ],
+      [
+       "biru",
+       3.4,
+       3.72
+      ],
+      [
+       "keramat",
+       3.72,
+       4.06
+      ],
+      [
+       "dari",
+       4.06,
+       4.34
+      ],
+      [
+       "Sakucalemeknya.",
+       4.34,
+       5.24
+      ]
+     ],
+     "from": 1882,
+     "to": 2045,
+     "words": [
+      {
+       "w": "Semua",
+       "from": 1882,
+       "to": 1895
+      },
+      {
+       "w": "langsung",
+       "from": 1895,
+       "to": 1904
+      },
+      {
+       "w": "terdiam",
+       "from": 1904,
+       "to": 1918
+      },
+      {
+       "w": "kaku",
+       "from": 1918,
+       "to": 1931
+      },
+      {
+       "w": "ketika",
+       "from": 1931,
+       "to": 1946
+      },
+      {
+       "w": "bang",
+       "from": 1946,
+       "to": 1952
+      },
+      {
+       "w": "Udin",
+       "from": 1952,
+       "to": 1960
+      },
+      {
+       "w": "mengeluarkan",
+       "from": 1960,
+       "to": 1975
+      },
+      {
+       "w": "buku",
+       "from": 1975,
+       "to": 1984
+      },
+      {
+       "w": "biru",
+       "from": 1984,
+       "to": 1994
+      },
+      {
+       "w": "keramat",
+       "from": 1994,
+       "to": 2004
+      },
+      {
+       "w": "dari",
+       "from": 2004,
+       "to": 2012
+      },
+      {
+       "w": "Sakucalemeknya.",
+       "from": 2012,
+       "to": 2039
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "bon",
+   "from": 2059,
+   "to": 2394,
+   "lines": [
+    {
+     "style": "tegas",
+     "text": "Mau diaduk atau tidak diaduk terserah kalian, yang penting bayar dulu utang bubur kemarin yang belum lunas!",
+     "score": 1.0,
+     "file": "out/voice/bubur/bon_0.wav",
+     "wordsSec": [
+      [
+       "Mau",
+       0.0,
+       0.16
+      ],
+      [
+       "diaduk",
+       0.16,
+       0.68
+      ],
+      [
+       "atau",
+       0.68,
+       0.84
+      ],
+      [
+       "tidak",
+       0.84,
+       1.12
+      ],
+      [
+       "diaduk",
+       1.12,
+       1.52
+      ],
+      [
+       "terserah",
+       1.52,
+       1.88
+      ],
+      [
+       "kalian,",
+       1.88,
+       2.18
+      ],
+      [
+       "yang",
+       2.58,
+       2.64
+      ],
+      [
+       "penting",
+       2.64,
+       3.0
+      ],
+      [
+       "bayar",
+       3.0,
+       3.28
+      ],
+      [
+       "dulu",
+       3.28,
+       3.46
+      ],
+      [
+       "utang",
+       3.46,
+       3.82
+      ],
+      [
+       "bubur",
+       3.82,
+       4.08
+      ],
+      [
+       "kemarin",
+       4.08,
+       4.46
+      ],
+      [
+       "yang",
+       4.46,
+       4.58
+      ],
+      [
+       "belum",
+       4.58,
+       4.76
+      ],
+      [
+       "lunas.",
+       4.76,
+       5.24
+      ]
+     ],
+     "from": 2059,
+     "to": 2222,
+     "words": [
+      {
+       "w": "Mau",
+       "from": 2059,
+       "to": 2064
+      },
+      {
+       "w": "diaduk",
+       "from": 2064,
+       "to": 2079
+      },
+      {
+       "w": "atau",
+       "from": 2079,
+       "to": 2084
+      },
+      {
+       "w": "tidak",
+       "from": 2084,
+       "to": 2092
+      },
+      {
+       "w": "diaduk",
+       "from": 2092,
+       "to": 2104
+      },
+      {
+       "w": "terserah",
+       "from": 2104,
+       "to": 2115
+      },
+      {
+       "w": "kalian,",
+       "from": 2115,
+       "to": 2124
+      },
+      {
+       "w": "yang",
+       "from": 2136,
+       "to": 2138
+      },
+      {
+       "w": "penting",
+       "from": 2138,
+       "to": 2149
+      },
+      {
+       "w": "bayar",
+       "from": 2149,
+       "to": 2157
+      },
+      {
+       "w": "dulu",
+       "from": 2157,
+       "to": 2163
+      },
+      {
+       "w": "utang",
+       "from": 2163,
+       "to": 2173
+      },
+      {
+       "w": "bubur",
+       "from": 2173,
+       "to": 2181
+      },
+      {
+       "w": "kemarin",
+       "from": 2181,
+       "to": 2193
+      },
+      {
+       "w": "yang",
+       "from": 2193,
+       "to": 2196
+      },
+      {
+       "w": "belum",
+       "from": 2196,
+       "to": 2202
+      },
+      {
+       "w": "lunas.",
+       "from": 2202,
+       "to": 2216
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "text": "Riko dan Bagas langsung melongo merogoh kantong kosong, sementara satu kosan tertawa terbahak-bahak!",
+     "score": 0.957,
+     "file": "out/voice/bubur/bon_1.wav",
+     "wordsSec": [
+      [
+       "Rico",
+       0.0,
+       0.26
+      ],
+      [
+       "dan",
+       0.26,
+       0.48
+      ],
+      [
+       "Bagas",
+       0.48,
+       0.84
+      ],
+      [
+       "langsung",
+       0.84,
+       1.16
+      ],
+      [
+       "melunggu",
+       1.16,
+       1.56
+      ],
+      [
+       "-merogoh",
+       1.56,
+       2.0
+      ],
+      [
+       "kantong",
+       2.0,
+       2.4
+      ],
+      [
+       "kosong,",
+       2.4,
+       2.82
+      ],
+      [
+       "sementara",
+       2.96,
+       3.36
+      ],
+      [
+       "satu",
+       3.36,
+       3.56
+      ],
+      [
+       "kosan",
+       3.56,
+       3.9
+      ],
+      [
+       "tertawa",
+       3.9,
+       4.22
+      ],
+      [
+       "terbahak",
+       4.22,
+       4.7
+      ],
+      [
+       "-bahak.",
+       4.7,
+       4.98
+      ]
+     ],
+     "from": 2230,
+     "to": 2380,
+     "words": [
+      {
+       "w": "Rico",
+       "from": 2230,
+       "to": 2238
+      },
+      {
+       "w": "dan",
+       "from": 2238,
+       "to": 2244
+      },
+      {
+       "w": "Bagas",
+       "from": 2244,
+       "to": 2255
+      },
+      {
+       "w": "langsung",
+       "from": 2255,
+       "to": 2265
+      },
+      {
+       "w": "melunggu",
+       "from": 2265,
+       "to": 2277
+      },
+      {
+       "w": "-merogoh",
+       "from": 2277,
+       "to": 2290
+      },
+      {
+       "w": "kantong",
+       "from": 2290,
+       "to": 2302
+      },
+      {
+       "w": "kosong,",
+       "from": 2302,
+       "to": 2314
+      },
+      {
+       "w": "sementara",
+       "from": 2319,
+       "to": 2331
+      },
+      {
+       "w": "satu",
+       "from": 2331,
+       "to": 2337
+      },
+      {
+       "w": "kosan",
+       "from": 2337,
+       "to": 2347
+      },
+      {
+       "w": "tertawa",
+       "from": 2347,
+       "to": 2356
+      },
+      {
+       "w": "terbahak",
+       "from": 2356,
+       "to": 2371
+      },
+      {
+       "w": "-bahak.",
+       "from": 2371,
+       "to": 2379
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ending",
+   "from": 2394,
+   "to": 2707,
+   "lines": [
+    {
+     "style": "santai",
+     "text": "Akhirnya perang pun damai seketika, mereka makan bubur bersama dengan gaya masing-masing.",
+     "score": 1.0,
+     "file": "out/voice/bubur/ending_0.wav",
+     "wordsSec": [
+      [
+       "Akhirnya,",
+       0.0,
+       0.52
+      ],
+      [
+       "perangpun",
+       0.64,
+       1.04
+      ],
+      [
+       "damai",
+       1.04,
+       1.34
+      ],
+      [
+       "seketika,",
+       1.34,
+       1.86
+      ],
+      [
+       "mereka",
+       1.98,
+       2.3
+      ],
+      [
+       "makan",
+       2.3,
+       2.6
+      ],
+      [
+       "bubur",
+       2.6,
+       2.98
+      ],
+      [
+       "bersama",
+       2.98,
+       3.3
+      ],
+      [
+       "dengan",
+       3.3,
+       3.5
+      ],
+      [
+       "gaya",
+       3.5,
+       3.86
+      ],
+      [
+       "masing",
+       3.86,
+       4.12
+      ],
+      [
+       "-masing.",
+       4.12,
+       4.38
+      ]
+     ],
+     "from": 2394,
+     "to": 2532,
+     "words": [
+      {
+       "w": "Akhirnya,",
+       "from": 2394,
+       "to": 2409
+      },
+      {
+       "w": "perangpun",
+       "from": 2413,
+       "to": 2425
+      },
+      {
+       "w": "damai",
+       "from": 2425,
+       "to": 2434
+      },
+      {
+       "w": "seketika,",
+       "from": 2434,
+       "to": 2450
+      },
+      {
+       "w": "mereka",
+       "from": 2453,
+       "to": 2463
+      },
+      {
+       "w": "makan",
+       "from": 2463,
+       "to": 2472
+      },
+      {
+       "w": "bubur",
+       "from": 2472,
+       "to": 2483
+      },
+      {
+       "w": "bersama",
+       "from": 2483,
+       "to": 2493
+      },
+      {
+       "w": "dengan",
+       "from": 2493,
+       "to": 2499
+      },
+      {
+       "w": "gaya",
+       "from": 2499,
+       "to": 2510
+      },
+      {
+       "w": "masing",
+       "from": 2510,
+       "to": 2517
+      },
+      {
+       "w": "-masing.",
+       "from": 2517,
+       "to": 2525
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "text": "Kalau kamu tim diaduk atau tim tidak diaduk? Tulis di komentar, dan sebutkan mau perang apa lagi besok!",
+     "score": 1.0,
+     "file": "out/voice/bubur/ending_1.wav",
+     "wordsSec": [
+      [
+       "Kalau",
+       0.0,
+       0.14
+      ],
+      [
+       "kamu",
+       0.14,
+       0.36
+      ],
+      [
+       "tim",
+       0.36,
+       0.58
+      ],
+      [
+       "diaduk",
+       0.58,
+       0.98
+      ],
+      [
+       "atau",
+       0.98,
+       1.22
+      ],
+      [
+       "tim",
+       1.22,
+       1.48
+      ],
+      [
+       "tidak",
+       1.48,
+       1.72
+      ],
+      [
+       "diaduk,",
+       1.72,
+       2.18
+      ],
+      [
+       "tulis",
+       2.28,
+       2.54
+      ],
+      [
+       "di",
+       2.54,
+       2.66
+      ],
+      [
+       "komentar",
+       2.66,
+       3.14
+      ],
+      [
+       "dan",
+       3.14,
+       3.42
+      ],
+      [
+       "sebutkan",
+       3.42,
+       3.9
+      ],
+      [
+       "mau",
+       3.9,
+       4.06
+      ],
+      [
+       "perang",
+       4.06,
+       4.38
+      ],
+      [
+       "apalagi",
+       4.38,
+       4.76
+      ],
+      [
+       "besok.",
+       4.76,
+       5.06
+      ]
+     ],
+     "from": 2540,
+     "to": 2694,
+     "words": [
+      {
+       "w": "Kalau",
+       "from": 2540,
+       "to": 2544
+      },
+      {
+       "w": "kamu",
+       "from": 2544,
+       "to": 2551
+      },
+      {
+       "w": "tim",
+       "from": 2551,
+       "to": 2558
+      },
+      {
+       "w": "diaduk",
+       "from": 2558,
+       "to": 2570
+      },
+      {
+       "w": "atau",
+       "from": 2570,
+       "to": 2577
+      },
+      {
+       "w": "tim",
+       "from": 2577,
+       "to": 2585
+      },
+      {
+       "w": "tidak",
+       "from": 2585,
+       "to": 2592
+      },
+      {
+       "w": "diaduk,",
+       "from": 2592,
+       "to": 2606
+      },
+      {
+       "w": "tulis",
+       "from": 2609,
+       "to": 2616
+      },
+      {
+       "w": "di",
+       "from": 2616,
+       "to": 2620
+      },
+      {
+       "w": "komentar",
+       "from": 2620,
+       "to": 2634
+      },
+      {
+       "w": "dan",
+       "from": 2634,
+       "to": 2643
+      },
+      {
+       "w": "sebutkan",
+       "from": 2643,
+       "to": 2657
+      },
+      {
+       "w": "mau",
+       "from": 2657,
+       "to": 2662
+      },
+      {
+       "w": "perang",
+       "from": 2662,
+       "to": 2672
+      },
+      {
+       "w": "apalagi",
+       "from": 2672,
+       "to": 2683
+      },
+      {
+       "w": "besok.",
+       "from": 2683,
+       "to": 2692
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

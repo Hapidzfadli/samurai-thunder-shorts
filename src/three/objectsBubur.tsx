@@ -475,56 +475,305 @@ export const OrenCat3D: React.FC<{ pos?: V3; rot?: V3; scale?: number; t?: numbe
 };
 
 /* ================================================================== */
-/* 5. BRIGHT INDONESIAN MORNING KOSAN STREET ENVIRONMENT              */
+/* 5. LUSH, ULTRA-DETAILED INDONESIAN MORNING KOSAN STREET DIORAMA    */
 /* ================================================================== */
+const pavingBlockTex = (): THREE.CanvasTexture => {
+  const cv = document.createElement("canvas");
+  cv.width = 256;
+  cv.height = 256;
+  const c = cv.getContext("2d")!;
+  c.fillStyle = "#e7dfd3";
+  c.fillRect(0, 0, 256, 256);
+  const rows = 8;
+  const cols = 4;
+  const rh = 256 / rows;
+  const cw = 256 / cols;
+  for (let r = 0; r < rows; r++) {
+    const off = (r % 2) * (cw / 2);
+    for (let col = -1; col <= cols; col++) {
+      c.fillStyle = (r + col) % 3 === 0 ? "#ded4c5" : (r + col) % 3 === 1 ? "#ebe3d7" : "#e3d9ca";
+      c.fillRect(col * cw + off + 2, r * rh + 2, cw - 4, rh - 4);
+      c.strokeStyle = "#b8ab9a";
+      c.lineWidth = 2;
+      c.strokeRect(col * cw + off + 2, r * rh + 2, cw - 4, rh - 4);
+    }
+  }
+  const t = new THREE.CanvasTexture(cv);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.wrapS = THREE.RepeatWrapping;
+  t.wrapT = THREE.RepeatWrapping;
+  t.repeat.set(9, 2.5);
+  return t;
+};
+
+/** 3D Parked Indonesian Scooter (Motor Matic) adding scale & 3D parallax */
+const Scooter3D: React.FC<{ pos?: V3; rot?: V3; color?: string }> = ({
+  pos = [0, 0, 0],
+  rot = [0, 0, 0],
+  color = "#0d9488",
+}) => (
+  <group position={pos} rotation={rot}>
+    {/* Front & Rear Tires */}
+    <P geo={() => <torusGeometry args={[0.26, 0.08, 8, 18]} />} color="#18181b" pos={[-0.62, 0.30, 0]} hull={0.07} />
+    <P geo={() => <torusGeometry args={[0.26, 0.08, 8, 18]} />} color="#18181b" pos={[0.62, 0.30, 0]} hull={0.07} />
+    <Cyl pos={[-0.62, 0.30, 0]} r={0.13} h={0.09} rot={[Math.PI / 2, 0, 0]} color="#94a3b8" hull={0.05} />
+    <Cyl pos={[0.62, 0.30, 0]} r={0.13} h={0.09} rot={[Math.PI / 2, 0, 0]} color="#94a3b8" hull={0.05} />
+    {/* Body Deck + Rear Fairing + Black Seat */}
+    <B pos={[0.02, 0.44, 0]} size={[1.18, 0.16, 0.44]} color="#27272a" ink={0.03} />
+    <B pos={[0.38, 0.68, 0]} size={[0.84, 0.34, 0.48]} color={color} ink={0.04} />
+    <B pos={[0.34, 0.90, 0]} size={[0.76, 0.15, 0.40]} color="#18181b" ink={0.03} />
+    {/* Front Leg Shield + Handlebars + Glowing Round Headlight + Mirrors */}
+    <B pos={[-0.50, 0.78, 0]} size={[0.26, 0.72, 0.44]} rot={[0, 0, 0.18]} color={color} ink={0.04} />
+    <B pos={[-0.56, 1.18, 0]} size={[0.16, 0.14, 0.68]} color="#1e293b" ink={0.025} />
+    <Cyl pos={[-0.66, 1.16, 0]} r={0.10} h={0.08} rot={[0, 0, Math.PI / 2]} color="#fef9c3" hull={0.05} />
+    <Cyl pos={[-0.54, 1.32, 0.24]} r={0.015} h={0.22} rot={[0.2, 0, 0]} color="#64748b" />
+    <Cyl pos={[-0.54, 1.32, -0.24]} r={0.015} h={0.22} rot={[-0.2, 0, 0]} color="#64748b" />
+    {/* Rear license plate */}
+    <B pos={[0.82, 0.56, 0]} size={[0.04, 0.14, 0.24]} color="#18181b" ink={0.01} />
+  </group>
+);
+
+/** Stacked Classic Red & Blue Plastic Street-Food Stools (Kursi Bakso) */
+const PlasticStool3D: React.FC<{ pos?: V3; color?: string }> = ({ pos = [0, 0, 0], color = "#ef4444" }) => (
+  <group position={pos}>
+    <B pos={[0, 0.44, 0]} size={[0.36, 0.06, 0.36]} color={color} ink={0.02} />
+    {[-0.14, 0.14].map((x) =>
+      [-0.14, 0.14].map((z) => (
+        <B key={`${x}_${z}`} pos={[x, 0.22, z]} size={[0.05, 0.44, 0.05]} rot={[z * 0.25, 0, -x * 0.25]} color={color} ink={0.015} />
+      ))
+    )}
+  </group>
+);
+
+/** Lush Tropical Neighborhood Mango Tree with Dappled Foliage & Bougainvillea Accents */
+const TropicalTree3D: React.FC<{ pos?: V3; scale?: number; t?: number }> = ({ pos = [0, 0, 0], scale = 1, t = 0 }) => {
+  const sway = Math.sin(t * 1.4) * 0.03;
+  return (
+    <group position={pos} scale={scale}>
+      {/* Planter ring & curved trunk */}
+      <Cyl pos={[0, 0.18, 0]} r={0.58} h={0.36} color="#a8a29e" hull={0.05} />
+      <Cyl pos={[0, 1.45, 0]} r={0.22} rTop={0.14} h={2.5} rot={[0, 0, 0.06]} color="#78350f" hull={0.06} />
+      <Cyl pos={[0.38, 2.65, 0.1]} r={0.11} rTop={0.07} h={1.2} rot={[0.1, 0, -0.58]} color="#78350f" hull={0.06} />
+      <Cyl pos={[-0.36, 2.55, -0.08]} r={0.11} rTop={0.07} h={1.15} rot={[-0.1, 0, 0.55]} color="#78350f" hull={0.06} />
+      {/* Layered lush green canopy clusters swaying softly */}
+      <group rotation={[0, 0, sway]}>
+        <P geo={() => <dodecahedronGeometry args={[1.18, 1]} />} color="#15803d" pos={[0, 3.55, 0]} hull={0.04} />
+        <P geo={() => <dodecahedronGeometry args={[0.92, 1]} />} color="#16a34a" pos={[0.88, 3.15, 0.25]} hull={0.04} />
+        <P geo={() => <dodecahedronGeometry args={[0.88, 1]} />} color="#22c55e" pos={[-0.82, 3.25, 0.18]} hull={0.04} />
+        <P geo={() => <dodecahedronGeometry args={[0.78, 1]} />} color="#4ade80" pos={[0.25, 4.15, 0.35]} hull={0.04} />
+        {/* Tiny ripe yellow-orange mangoes hanging in the canopy */}
+        <P geo={() => <sphereGeometry args={[0.10, 8, 8]} />} color="#facc15" pos={[0.62, 2.52, 0.55]} hull={0.05} />
+        <P geo={() => <sphereGeometry args={[0.09, 8, 8]} />} color="#fb923c" pos={[-0.45, 2.62, 0.52]} hull={0.05} />
+      </group>
+    </group>
+  );
+};
+
 export const KosanMorningStreet: React.FC<{ t?: number; showCat?: boolean; dramatic?: number }> = ({
   t = 0,
   showCat = false,
   dramatic = 0,
 }) => {
   const roadTex = useMemo(() => roadAsphaltTex(), []);
+  const paveTex = useMemo(() => pavingBlockTex(), []);
+  const breeze = Math.sin(t * 2.4);
+
   return (
     <group>
-      {/* Textured Morning Street Asphalt + Sidewalk */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 2.2]} receiveShadow>
-        <planeGeometry args={[28, 16]} />
-        <meshStandardMaterial map={roadTex} roughness={0.96} />
-      </mesh>
-      {/* Elevated Sidewalk & Black-White Indonesian Street Curb */}
-      <B pos={[0, 0.08, -2.5]} size={[28, 0.16, 6.2]} color="#e7e5e4" ink={0.02} />
-      {Array.from({ length: 14 }).map((_, i) => (
-        <B key={i} pos={[-9.5 + i * 1.45, 0.09, 0.62]} size={[1.4, 0.18, 0.18]} color={i % 2 === 0 ? "#18181b" : "#f8fafc"} ink={0.01} />
+      {/* Golden Morning Sun & Floating Puffy 3D Clouds (hide sun during dark anime storm!) */}
+      {dramatic < 0.5 && (
+        <group>
+          <mesh position={[-6.8, 7.6, -12.5]}>
+            <sphereGeometry args={[1.35, 16, 12]} />
+            <meshBasicMaterial color="#fef08a" />
+          </mesh>
+          <mesh position={[-6.8, 7.6, -12.7]}>
+            <sphereGeometry args={[1.95, 16, 12]} />
+            <meshBasicMaterial color="#fde047" transparent opacity={0.28} depthWrite={false} />
+          </mesh>
+        </group>
+      )}
+      {[
+        [-5.2, 6.9, -10.5, 1.15],
+        [1.8, 7.4, -11.2, 1.35],
+        [7.2, 6.6, -10.0, 1.05],
+      ].map(([cx, cy, cz, sc], idx) => (
+        <group key={idx} position={[cx + Math.sin(t * 0.25 + idx * 2) * 0.65, cy, cz]} scale={sc}>
+          <P geo={() => <dodecahedronGeometry args={[0.72, 1]} />} color={dramatic > 0.4 ? "#312e81" : "#ffffff"} pos={[0, 0, 0]} hull={0.02} />
+          <P geo={() => <dodecahedronGeometry args={[0.56, 1]} />} color={dramatic > 0.4 ? "#3730a3" : "#f8fafc"} pos={[0.62, -0.08, 0.1]} hull={0.02} />
+          <P geo={() => <dodecahedronGeometry args={[0.52, 1]} />} color={dramatic > 0.4 ? "#312e81" : "#f1f5f9"} pos={[-0.58, -0.1, 0.05]} hull={0.02} />
+        </group>
       ))}
 
-      {/* Kos Bu Tini Front Wall & Gate Backdrop */}
-      <B pos={[-3.2, 2.4, -4.6]} size={[9.5, 4.8, 0.35]} color="#fef3c7" ink={0.05} />
-      <B pos={[-3.2, 4.85, -4.45]} size={[9.8, 0.35, 0.65]} color="#991b1b" ink={0.04} />
-      {/* Green Iron Kosan Gate */}
-      <B pos={[-3.4, 1.5, -4.38]} size={[2.6, 2.9, 0.12]} color="#15803d" ink={0.03} />
-      <Sign pos={[-3.4, 3.45, -4.34]} w={2.75} h={0.68} text="KOS BU TINI" bg="#fef08a" fg="#991b1b" />
+      {/* Textured Morning Street Asphalt + White Road Dashes */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 3.2]} receiveShadow>
+        <planeGeometry args={[34, 18]} />
+        <meshStandardMaterial map={roadTex} roughness={0.96} />
+      </mesh>
+      {[-7.2, -3.6, 0, 3.6, 7.2].map((dx, i) => (
+        <B key={i} pos={[dx, 0.015, 2.95]} size={[1.85, 0.02, 0.16]} color="#f8fafc" ink={0.005} />
+      ))}
 
-      {/* Neighboring Terracotta-Roof House on Right */}
-      <B pos={[5.2, 2.5, -4.8]} size={[7.2, 5.0, 0.35]} color="#e0f2fe" ink={0.05} />
-      <B pos={[5.2, 5.1, -4.6]} size={[7.6, 0.45, 0.75]} color="#c2410c" ink={0.04} />
-      <B pos={[4.8, 2.6, -4.55]} size={[1.5, 1.25, 0.10]} color="#38bdf8" ink={0.03} />
+      {/* Textured Paving-Block Sidewalk + Iconic Black-White Curb */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.165, -2.5]} receiveShadow>
+        <planeGeometry args={[32, 6.2]} />
+        <meshStandardMaterial map={paveTex} roughness={0.92} />
+      </mesh>
+      <B pos={[0, 0.08, -2.5]} size={[32, 0.16, 6.2]} color="#d6cfc5" ink={0.015} />
+      {Array.from({ length: 18 }).map((_, i) => (
+        <B key={i} pos={[-11.5 + i * 1.4, 0.095, 0.62]} size={[1.35, 0.19, 0.2]} color={i % 2 === 0 ? "#18181b" : "#f8fafc"} ink={0.01} />
+      ))}
 
-      {/* Tropical Potted Bush + Wooden Street Utility Pole */}
-      <Cyl pos={[-6.4, 0.42, -3.5]} r={0.28} rTop={0.34} h={0.62} color="#b45309" />
-      <P geo={() => <dodecahedronGeometry args={[0.68, 1]} />} color="#16a34a" pos={[-6.4, 1.15, -3.5]} hull={0.05} />
-      <P geo={() => <dodecahedronGeometry args={[0.52, 1]} />} color="#22c55e" pos={[-5.95, 0.95, -3.35]} hull={0.05} />
-      <Cyl pos={[3.6, 3.2, -3.2]} r={0.11} h={6.4} color="#57534e" hull={0.06} />
-      <B pos={[3.6, 5.4, -3.2]} size={[1.4, 0.10, 0.10]} color="#44403c" ink={0.02} />
+      {/* ============================================================ */}
+      {/* 2-STORY KOS BU TINI BUILDING (LEFT-CENTER BACKDROP)          */}
+      {/* ============================================================ */}
+      <group position={[-3.35, 0, -4.75]}>
+        {/* Ground-floor cream wall + gray river-stone wainscot */}
+        <B pos={[0, 1.9, 0]} size={[9.2, 3.6, 0.42]} color="#fef3c7" ink={0.045} />
+        <B pos={[0, 0.55, 0.05]} size={[9.26, 0.95, 0.38]} color="#78716c" ink={0.03} />
+        {/* Terracotta floor divider ledge */}
+        <B pos={[0, 3.72, 0.28]} size={[9.5, 0.22, 0.72]} color="#b45309" ink={0.035} />
+        {/* Second-floor kosan rooms wall + balcony railing */}
+        <B pos={[0, 5.15, -0.35]} size={[9.1, 2.7, 0.35]} color="#fde68a" ink={0.045} />
+        {/* 2nd floor iron balcony railing */}
+        <B pos={[0, 4.48, 0.56]} size={[9.2, 0.07, 0.07]} color="#1e293b" ink={0.015} />
+        {[-4.2, -3.1, -2.0, -0.9, 0.2, 1.3, 2.4, 3.5, 4.3].map((bx, i) => (
+          <B key={i} pos={[bx, 4.12, 0.56]} size={[0.05, 0.72, 0.05]} color="#334155" ink={0.01} />
+        ))}
+        {/* Swaying colorful kosan clothes drying on 2nd-floor balcony! */}
+        <group position={[1.45, 4.45, 0.62]} rotation={[breeze * 0.08, 0, 0]}>
+          <B pos={[-0.75, -0.34, 0]} size={[0.52, 0.62, 0.06]} color="#38bdf8" ink={0.02} />
+          <B pos={[0.0, -0.38, 0]} size={[0.48, 0.70, 0.06]} color="#f472b6" ink={0.02} />
+          <B pos={[0.78, -0.32, 0]} size={[0.54, 0.58, 0.06]} color="#4ade80" ink={0.02} />
+        </group>
+        {/* 2nd-floor wooden louvered windows + blue sky reflection */}
+        {[-2.4, 2.4].map((wx, i) => (
+          <group key={i} position={[wx, 5.15, -0.14]}>
+            <B pos={[0, 0, 0]} size={[1.45, 1.25, 0.1]} color="#7c2d12" ink={0.03} />
+            <B pos={[0, 0, 0.04]} size={[1.22, 1.02, 0.06]} color="#7dd3fc" ink={0.015} />
+            <B pos={[0, 0, 0.07]} size={[0.06, 1.02, 0.04]} color="#7c2d12" ink={0.01} />
+          </group>
+        ))}
+        {/* Slanted Indonesian Clay-Tile Roof (Genteng Oranye) */}
+        <B pos={[0, 6.75, 0.05]} size={[9.9, 0.42, 2.15]} rot={[0.24, 0, 0]} color="#b91c1c" ink={0.04} />
+        <B pos={[0, 7.05, -0.82]} size={[10.0, 0.24, 0.35]} color="#991b1b" ink={0.03} />
 
-      {/* Main Hero Props: Gerobak Bubur Ayam Bang Udin + Street Eating Table */}
-      <BuburCart3D pos={[1.35, 0, -2.15]} rot={[0, -0.24, 0]} t={t} />
-      <WarungTableSet3D pos={[-1.05, 0, -0.35]} rot={[0, 0.08, 0]} />
+        {/* Detailed Kos Bu Tini Iron-Bar Gate + Brick Pillars + Globe Lamps */}
+        <group position={[-0.3, 0, 0.24]}>
+          {/* Dark interior corridor behind gate */}
+          <B pos={[0, 1.48, -0.05]} size={[2.55, 2.85, 0.08]} color="#1e1b2e" ink={0.02} />
+          {/* Green wrought-iron gate frame + vertical bars */}
+          <B pos={[0, 0.48, 0.04]} size={[2.52, 0.86, 0.09]} color="#15803d" ink={0.025} />
+          <B pos={[0, 2.78, 0.04]} size={[2.52, 0.14, 0.10]} color="#15803d" ink={0.02} />
+          {[-1.05, -0.7, -0.35, 0, 0.35, 0.7, 1.05].map((gx, i) => (
+            <B key={i} pos={[gx, 1.82, 0.04]} size={[0.06, 1.85, 0.06]} color="#166534" ink={0.01} />
+          ))}
+          {/* Twin Stone Gate Pillars + Warm Morning Globe Lamps */}
+          {[-1.48, 1.48].map((px, i) => (
+            <group key={i} position={[px, 0, 0.12]}>
+              <B pos={[0, 1.62, 0]} size={[0.42, 3.2, 0.42]} color="#a8a29e" ink={0.035} />
+              <B pos={[0, 3.26, 0]} size={[0.50, 0.12, 0.50]} color="#78716c" ink={0.02} />
+              <P geo={() => <sphereGeometry args={[0.16, 10, 8]} />} color="#fef9c3" pos={[0, 3.46, 0]} hull={0.05} />
+            </group>
+          ))}
+          <Sign pos={[0, 3.42, 0.18]} w={2.75} h={0.68} text="KOS BU TINI" bg="#fef08a" fg="#991b1b" />
+        </group>
+
+        {/* Ground-floor Kosan Window + Hanging Birdcage + Magenta Bougainvillea Planter */}
+        <group position={[2.85, 2.05, 0.24]}>
+          <B pos={[0, 0, 0]} size={[1.45, 1.25, 0.1]} color="#7c2d12" ink={0.03} />
+          <B pos={[0, 0, 0.04]} size={[1.22, 1.02, 0.06]} color="#bae6fd" ink={0.015} />
+          <B pos={[0, -0.75, 0.18]} size={[1.55, 0.26, 0.34]} color="#b45309" ink={0.025} />
+          {/* Blooming magenta bougainvillea! */}
+          <P geo={() => <dodecahedronGeometry args={[0.26, 1]} />} color="#16a34a" pos={[-0.4, -0.52, 0.22]} hull={0.04} />
+          <P geo={() => <dodecahedronGeometry args={[0.26, 1]} />} color="#15803d" pos={[0.35, -0.52, 0.22]} hull={0.04} />
+          <P geo={() => <sphereGeometry args={[0.14, 8, 8]} />} color="#ec4899" pos={[-0.45, -0.38, 0.30]} hull={0.04} />
+          <P geo={() => <sphereGeometry args={[0.16, 8, 8]} />} color="#db2777" pos={[0.0, -0.40, 0.32]} hull={0.04} />
+          <P geo={() => <sphereGeometry args={[0.14, 8, 8]} />} color="#f472b6" pos={[0.42, -0.36, 0.28]} hull={0.04} />
+        </group>
+        {/* Classic Indonesian Hanging Wooden Birdcage under porch */}
+        <group position={[-3.35, 2.85, 0.58]} rotation={[0, 0, breeze * 0.06]}>
+          <Cyl pos={[0, 0.38, 0]} r={0.018} h={0.42} color="#18181b" />
+          <Cyl pos={[0, 0, 0]} r={0.22} h={0.44} color="#d97706" hull={0.05} seg={10} />
+          <P geo={() => <coneGeometry args={[0.24, 0.18, 10]} />} color="#92400e" pos={[0, 0.30, 0]} hull={0.05} />
+        </group>
+      </group>
+
+      {/* ============================================================ */}
+      {/* NEIGHBORING PASTEL-MINT HOUSE + AWNING + PARKED SCOOTER      */}
+      {/* ============================================================ */}
+      <group position={[5.15, 0, -4.85]}>
+        <B pos={[0, 2.55, 0]} size={[7.4, 5.1, 0.42]} color="#d1fae5" ink={0.045} />
+        <B pos={[0, 0.55, 0.04]} size={[7.46, 0.95, 0.38]} color="#64748b" ink={0.025} />
+        <B pos={[0, 5.25, 0.18]} size={[7.9, 0.48, 1.55]} rot={[0.22, 0, 0]} color="#c2410c" ink={0.04} />
+        {/* Striped Green-White Terrace Awning */}
+        {[-2.1, -1.4, -0.7, 0, 0.7, 1.4, 2.1].map((ax, i) => (
+          <B key={i} pos={[ax, 3.15, 0.78]} size={[0.7, 0.12, 1.25]} rot={[0.28, 0, 0]} color={i % 2 === 0 ? "#059669" : "#ffffff"} ink={0.015} />
+        ))}
+        {/* Neighbor Door & Shuttered Window */}
+        <B pos={[-1.4, 1.35, 0.24]} size={[1.15, 2.4, 0.10]} color="#92400e" ink={0.03} />
+        <B pos={[0.85, 2.15, 0.24]} size={[1.65, 1.25, 0.10]} color="#78350f" ink={0.03} />
+        <B pos={[0.85, 2.15, 0.28]} size={[1.42, 1.02, 0.06]} color="#7dd3fc" ink={0.015} />
+      </group>
+
+      {/* Parked 3D Indonesian Motor Matic Scooter along right curb! */}
+      <Scooter3D pos={[4.35, 0.16, -0.55]} rot={[0, -0.45, 0]} color="#0284c7" />
+
+      {/* Lush Tropical Mango Tree on Left + Bougainvillea Bush */}
+      <TropicalTree3D pos={[-6.85, 0.16, -2.75]} scale={1.15} t={t} />
+      <group position={[6.9, 0.16, -3.1]}>
+        <Cyl pos={[0, 0.32, 0]} r={0.30} rTop={0.36} h={0.58} color="#b45309" />
+        <P geo={() => <dodecahedronGeometry args={[0.58, 1]} />} color="#16a34a" pos={[0, 0.92, 0]} hull={0.04} />
+        <P geo={() => <sphereGeometry args={[0.18, 8, 8]} />} color="#ec4899" pos={[-0.22, 1.15, 0.32]} hull={0.04} />
+        <P geo={() => <sphereGeometry args={[0.16, 8, 8]} />} color="#f43f5e" pos={[0.24, 1.02, 0.30]} hull={0.04} />
+      </group>
+
+      {/* Detailed Utility Pole + Street Lamp + Overhead Power Cables + Festive Alley Bunting Flags! */}
+      <group position={[3.65, 0.16, -3.25]}>
+        <Cyl pos={[0, 3.35, 0]} r={0.11} h={6.7} color="#57534e" hull={0.06} />
+        <B pos={[0, 5.55, 0]} size={[1.5, 0.11, 0.11]} color="#44403c" ink={0.02} />
+        <B pos={[-0.75, 4.95, 0.42]} size={[0.08, 0.08, 0.95]} rot={[-0.25, 0, 0]} color="#64748b" ink={0.015} />
+        <B pos={[-0.75, 5.06, 0.88]} size={[0.38, 0.12, 0.24]} color="#fef9c3" emissive="#fde68a" ink={0.02} />
+      </group>
+      {/* Overhead Power Cables + Colorful Festive Alley Pennant Flags stretching across the sky! */}
+      <B pos={[-1.4, 5.35, -3.4]} size={[11.2, 0.035, 0.035]} rot={[0, 0.05, 0.02]} color="#18181b" ink={0.005} />
+      <B pos={[-1.4, 4.95, -3.1]} size={[11.2, 0.03, 0.03]} rot={[0, 0.04, -0.02]} color="#27272a" ink={0.005} />
+      {Array.from({ length: 11 }).map((_, i) => {
+        const fx = -5.4 + i * 0.84;
+        const sag = Math.sin((i / 10) * Math.PI) * 0.42;
+        const flagCols = ["#ef4444", "#facc15", "#38bdf8", "#22c55e", "#f472b6"];
+        return (
+          <P
+            key={i}
+            geo={() => <coneGeometry args={[0.16, 0.34, 4]} />}
+            color={flagCols[i % flagCols.length]}
+            pos={[fx, 4.82 - sag, -3.1]}
+            rot={[Math.PI + breeze * 0.14, 0, 0]}
+            hull={0.04}
+          />
+        );
+      })}
+
+      {/* Neighborhood Yellow-Blue Trash Bin on Left Curb */}
+      <group position={[-4.55, 0.16, -0.65]}>
+        <Cyl pos={[0, 0.34, 0]} r={0.22} rTop={0.26} h={0.68} color="#facc15" hull={0.05} />
+        <Cyl pos={[0, 0.70, 0]} r={0.27} h={0.07} color="#0284c7" hull={0.04} />
+      </group>
+
+      {/* Main Hero Props: Gerobak Bubur Ayam Bang Udin + Street Eating Table + Plastic Stools + Wash Bucket */}
+      <BuburCart3D pos={[1.35, 0.16, -2.15]} rot={[0, -0.24, 0]} t={t} />
+      <Cyl pos={[2.68, 0.38, -2.35]} r={0.20} rTop={0.24} h={0.42} color="#0ea5e9" hull={0.05} />
+      <WarungTableSet3D pos={[-1.05, 0.16, -0.35]} rot={[0, 0.08, 0]} />
+      <PlasticStool3D pos={[-2.48, 0.16, -0.25]} color="#ef4444" />
+      <PlasticStool3D pos={[0.38, 0.16, -0.25]} color="#3b82f6" />
 
       {/* Hidden Easter Egg Kucing Oren peeking playfully beside the cart wheel! */}
-      {showCat && <OrenCat3D pos={[2.75, 0.16, -1.65]} rot={[0, -0.55, 0]} scale={0.95} t={t} />}
+      {showCat && <OrenCat3D pos={[2.48, 0.16, -1.35]} rot={[0, -0.45, 0]} scale={1.02} t={t} />}
 
-      {/* Warm Sunny Morning Lighting (dims slightly during dramatic anime duel!) */}
-      <hemisphereLight args={[dramatic > 0.3 ? "#93c5fd" : "#e0f2fe", "#785848", 1.55 - dramatic * 0.45]} />
-      <directionalLight position={[5, 9, 7]} intensity={1.75 - dramatic * 0.4} color="#fff7dc" castShadow shadow-mapSize={[1024, 1024]} />
+      {/* Warm Sunny Golden-Hour Morning Lighting (shifts to dramatic storm blue-gold during anime duel!) */}
+      <hemisphereLight args={[dramatic > 0.3 ? "#818cf8" : "#fff4dc", dramatic > 0.3 ? "#312e81" : "#7c5e4c", 1.55 - dramatic * 0.45]} />
+      <directionalLight position={[-5, 9, 7]} intensity={1.82 - dramatic * 0.45} color={dramatic > 0.3 ? "#c7d2fe" : "#fff2cc"} castShadow shadow-mapSize={[1024, 1024]} />
+      <directionalLight position={[6, 5, 4]} intensity={0.45} color="#bae6fd" />
     </group>
   );
 };

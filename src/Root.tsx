@@ -54,10 +54,15 @@ import { Mie, TOTAL_FRAMES_MIE } from "./Mie";
 import { SheetMieKarakter, SheetMieProperti } from "./SheetMie";
 import { ThumbMieShorts, ThumbMieYoutube } from "./ThumbMie";
 import { SheetBuburKarakter, SheetBuburProperti } from "./SheetBubur";
+import { Bubur, TOTAL_FRAMES_BUBUR } from "./Bubur";
+import { ThumbBuburShorts, ThumbBuburYoutube } from "./ThumbBubur";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Bubur" component={Bubur} durationInFrames={TOTAL_FRAMES_BUBUR} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbBuburShorts" component={ThumbBuburShorts} durationInFrames={1} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbBuburYoutube" component={ThumbBuburYoutube} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="SheetBuburKarakter" component={SheetBuburKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetBuburProperti" component={SheetBuburProperti} durationInFrames={1} fps={30} width={2000} height={1380} />
       <Composition id="Mie" component={Mie} durationInFrames={TOTAL_FRAMES_MIE} fps={30} width={1080} height={1920} />
