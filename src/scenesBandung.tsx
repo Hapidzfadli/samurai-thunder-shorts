@@ -530,7 +530,9 @@ export const SceneBdMarkas: React.FC = () => {
   const walkIn = smoother(cl(f / 45));
   const ramX = lerpN(-2.6, -0.88, walkIn);
   const handOverK = smoother(cl((f - 48) / 28));
-  const talking = f >= 122 && f <= 232;
+  const m2From = timing.lines.m2.from;
+  const m2To = timing.lines.m2.to;
+  const talking = f >= m2From && f <= m2To;
 
   const ramP = bean(RAMDAN, {
     ...(f < 44 ? beanWalk(t * 2.4, 0.9) : idle(t, 3)),
@@ -543,7 +545,7 @@ export const SceneBdMarkas: React.FC = () => {
     expr: talking ? "talk" : f > 85 ? "angry" : "think",
     mouthOpen: talking ? talkMouth(t) : 0,
     armL: f >= 50 && f < 95 ? [-75, 22] : [-15, -18],
-    armR: f >= 105 ? [115, -20] : [18, -22],
+    armR: f >= Math.min(105, m2From) ? [115, -20] : [18, -22],
     prop: "none",
   });
 
@@ -588,7 +590,7 @@ export const SceneBdMarkas: React.FC = () => {
       </Stage>
       <Grade warm={0.35} />
       <Tag label="POS MARKAS DIVISI III TRI" from={6} to={dur - 12} color="#f59e0b" />
-      <Bubble x={540} y={265} w={540} size={42} text="BUMIHANGUSKAN BANDUNG!" from={124} to={dur - 12} />
+      <Bubble x={540} y={265} w={540} size={42} text="BUMIHANGUSKAN BANDUNG!" from={Math.max(95, m2From - 4)} to={dur - 10} />
     </AbsoluteFill>
   );
 };
@@ -741,8 +743,11 @@ export const SceneBdDinamit: React.FC = () => {
   const tohaX = lerpN(-1.45, -0.55, tohaWalk);
   const placed = f >= 78;
   const fuseLit = f >= 84;
-  const talking = f >= 128 && f <= 232;
-  const ramRetreat = smoother(cl((f - 145) / 85));
+  const d2From = timing.lines.d2.from;
+  const d2To = timing.lines.d2.to;
+  const talking = f >= d2From && f <= d2To;
+  const retreatStart = d2From + 12;
+  const ramRetreat = smoother(cl((f - retreatStart) / 85));
   const ramX = lerpN(0.88, 3.8, ramRetreat);
 
   const tohaP = bean(TOHA, {
@@ -774,9 +779,9 @@ export const SceneBdDinamit: React.FC = () => {
         <BeanCard
           position={[ramX, 0, 0.85]}
           height={2.1}
-          flip={f < 145}
+          flip={f < retreatStart}
           params={bean(RAMDAN, {
-            ...(f >= 145 ? beanWalk(t * 2.6, 1.0) : idle(t, 2)),
+            ...(f >= retreatStart ? beanWalk(t * 2.6, 1.0) : idle(t, 2)),
             expr: "shock",
             sweat: true,
             prop: "rifle",
@@ -787,7 +792,7 @@ export const SceneBdDinamit: React.FC = () => {
         <Dynamite3D pos={dynPos} rot={[0, 0.2, 0.15]} scale={1.15} lit={fuseLit} t={t} />
       </Stage>
       <Grade warm={fuseLit ? 0.45 : 0} cool={fuseLit ? 0 : 0.3} />
-      <Bubble x={540} y={295} w={560} size={42} text="CEPAT MUNDUR, RAMDAN!" from={132} to={dur - 12} />
+      <Bubble x={540} y={295} w={560} size={42} text="CEPAT MUNDUR, RAMDAN!" from={Math.max(95, d2From - 4)} to={dur - 10} />
     </AbsoluteFill>
   );
 };
