@@ -393,7 +393,73 @@ const ColonialHauntedHouse3D: React.FC<{ pos?: V3; t?: number; cozy?: number }> 
   );
 };
 
-/** Full Moonlit Haunted Colonial Mansion Yard Diorama (Shifts from Spooky Blue to Warm Hangout Glow!) */
+/** Dynamic 3D ground contact shadow disc that shrinks as character jumps/floats higher! */
+export const GroundShadow3D: React.FC<{ x: number; z: number; elevation?: number; radius?: number }> = ({
+  x,
+  z,
+  elevation = 0,
+  radius = 0.52,
+}) => {
+  const s = Math.max(0.35, 1 - elevation * 0.28);
+  const op = Math.max(0.12, 0.42 - elevation * 0.14);
+  return (
+    <mesh position={[x, 0.025, z]} rotation={[-Math.PI / 2, 0, 0]} scale={[s, s * 0.65, 1]}>
+      <circleGeometry args={[radius, 20]} />
+      <meshBasicMaterial color="#0b081a" transparent opacity={op} depthWrite={false} />
+    </mesh>
+  );
+};
+
+/** 3D Comic Landing Dust / Magic Shockwave Ring beneath hopping Pocong or leaping Riko! */
+export const HopDustPuff3D: React.FC<{ pos: V3; progress: number; color?: string }> = ({
+  pos,
+  progress,
+  color = "#e2e8f0",
+}) => {
+  if (progress <= 0 || progress >= 1) return null;
+  const r = 0.22 + progress * 0.78;
+  const op = (1 - progress) * 0.65;
+  return (
+    <group position={[pos[0], pos[1] + 0.06, pos[2]]}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[r * 0.62, r, 22]} />
+        <meshBasicMaterial color={color} transparent opacity={op} side={THREE.DoubleSide} depthWrite={false} />
+      </mesh>
+      {[0, 1, 2, 3, 4, 5].map((k) => {
+        const a = (k / 6) * Math.PI * 2 + progress * 0.6;
+        return (
+          <mesh key={k} position={[Math.cos(a) * r * 0.85, progress * 0.24, Math.sin(a) * r * 0.85]} scale={0.14 * (1 - progress * 0.6)}>
+            <dodecahedronGeometry args={[1, 0]} />
+            <meshBasicMaterial color={color} transparent opacity={op * 0.9} depthWrite={false} />
+          </mesh>
+        );
+      })}
+    </group>
+  );
+};
+
+/** Ornate 3D Colonial Stone Garden Lantern for dramatic 3D foreground/midground parallax */
+export const GardenLantern3D: React.FC<{ pos: V3; cozy?: number; t?: number }> = ({ pos, cozy = 0, t = 0 }) => {
+  const pulse = 0.85 + Math.sin(t * 7.5 + pos[0]) * 0.15;
+  return (
+    <group position={pos}>
+      <B pos={[0, 0.18, 0]} size={[0.52, 0.36, 0.52]} color="#475569" ink={0.03} />
+      <B pos={[0, 0.68, 0]} size={[0.26, 0.72, 0.26]} color="#64748b" ink={0.025} />
+      <B pos={[0, 1.12, 0]} size={[0.46, 0.10, 0.46]} color="#475569" ink={0.02} />
+      {/* Glowing glass lantern chamber */}
+      <B pos={[0, 1.34, 0]} size={[0.30, 0.34, 0.30]} color={cozy > 0.4 ? "#fde047" : "#93c5fd"} emissive={cozy > 0.4 ? "#f59e0b" : "#38bdf8"} ink={0.02} />
+      <mesh position={[0, 1.34, 0]}>
+        <sphereGeometry args={[0.34 + cozy * 0.12, 12, 10]} />
+        <meshBasicMaterial color={cozy > 0.4 ? "#fbbf24" : "#60a5fa"} transparent opacity={(0.22 + cozy * 0.22) * pulse} depthWrite={false} />
+      </mesh>
+      {/* Pagoda-colonial stone cap */}
+      <B pos={[0, 1.58, 0]} size={[0.54, 0.14, 0.54]} color="#334155" ink={0.025} />
+      <P geo={() => <coneGeometry args={[0.26, 0.24, 4]} />} color="#475569" pos={[0, 1.75, 0]} rot={[0, Math.PI / 4, 0]} hull={0.04} />
+    </group>
+  );
+};
+
+/** Full 360-Degree Moonlit Haunted Colonial Mansion Yard Diorama (Shifts from Spooky Blue to Warm Hangout Glow!) */
 export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?: boolean; hideGate?: boolean }> = ({
   t = 0,
   cozy = 0,
@@ -418,6 +484,23 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
           <meshBasicMaterial color="#818cf8" transparent opacity={0.12} depthWrite={false} />
         </mesh>
       </group>
+      {/* Diagonal 3D Volumetric Moonlight Shafts slanting down across the misty yard */}
+      {[
+        [1.8, 3.8, -4.8, 0.34, 1.3],
+        [-1.1, 3.4, -2.6, 0.30, 1.15],
+        [2.6, 3.1, -1.2, 0.32, 1.0],
+      ].map(([bx, by, bz, rz, sc], i) => (
+        <mesh key={i} position={[bx, by, bz]} rotation={[0.08, 0, rz]} scale={sc}>
+          <cylinderGeometry args={[0.35, 1.35, 7.6, 12, 1, true]} />
+          <meshBasicMaterial
+            color={cozy > 0.5 ? "#fde68a" : "#bae6fd"}
+            transparent
+            opacity={0.055 + (1 - cozy) * 0.03}
+            side={THREE.DoubleSide}
+            depthWrite={false}
+          />
+        </mesh>
+      ))}
       {[
         [-7.5, 8.8, -14],
         [-3.4, 9.4, -15],
@@ -425,6 +508,9 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
         [-5.8, 7.2, -14],
         [8.2, 8.4, -14],
         [2.2, 9.6, -15],
+        [-6.5, 8.2, 14],
+        [3.5, 9.0, 15],
+        [7.2, 7.8, 13.5],
       ].map(([sx, sy, sz], i) => (
         <mesh key={i} position={[sx, sy, sz]} scale={0.11 + Math.abs(Math.sin(t * 2.5 + i)) * 0.08}>
           <octahedronGeometry args={[1, 0]} />
@@ -443,12 +529,12 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
         </group>
       ))}
 
-      {/* Moonlit Grass Ground + Broken Stone Garden Walkway */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0.5]} receiveShadow>
-        <planeGeometry args={[36, 28]} />
+      {/* Moonlit Grass Ground + Broken Stone Garden Walkway (extended 360-deg for reverse OTS cameras!) */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 1.5]} receiveShadow>
+        <planeGeometry args={[42, 38]} />
         <meshStandardMaterial map={grassTex} roughness={0.96} />
       </mesh>
-      {[-2.4, -1.35, -0.35, 0.65, 1.65, 2.65, 3.65].map((wz, i) => (
+      {[-2.4, -1.35, -0.35, 0.65, 1.65, 2.65, 3.65, 4.75, 5.85].map((wz, i) => (
         <B
           key={i}
           pos={[(i % 2 === 0 ? -0.18 : 0.22), 0.03, wz]}
@@ -464,6 +550,10 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
 
       {/* Monumental Sacred Banyan Tree (Pohon Beringin Keramat) Left-Midground */}
       <BanyanTree3D pos={[-5.15, 0, -2.55]} scale={1.15} t={t} />
+
+      {/* Ornate 3D Stone Garden Lanterns flanking the yard for rich 3D parallax during orbits! */}
+      <GardenLantern3D pos={[-3.35, 0, 1.85]} cozy={cozy} t={t} />
+      <GardenLantern3D pos={[3.25, 0, 1.95]} cozy={cozy} t={t} />
 
       {/* Cozy Wooden Garden Bench & Low Stone Table in Front Yard (Hangout Spot for Gorengan!) */}
       <group position={[-0.65, 0, -0.35]}>
@@ -504,11 +594,46 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
         </group>
       )}
 
-      {/* Lush Night Ferns & Wild Bushes on Right Yard */}
+      {/* 360-Degree Reverse-Angle Moonlit Village Road, Streetlamp & Distant Trees (for OTS Reverse Shots!) */}
+      <group position={[0, 0, 10.5]}>
+        {/* Village asphalt/cobble lane */}
+        <B pos={[0, 0.02, -0.8]} size={[28, 0.04, 3.4]} color="#262c3e" ink={0.015} />
+        {/* Vintage glowing iron streetlamp across the lane */}
+        <group position={[-3.2, 0, 1.2]}>
+          <Cyl pos={[0, 2.1, 0]} r={0.07} h={4.2} color="#1e293b" />
+          <B pos={[0.45, 4.12, 0]} size={[0.95, 0.08, 0.08]} color="#1e293b" ink={0.015} />
+          <P geo={() => <sphereGeometry args={[0.24, 12, 10]} />} color="#fef08a" pos={[0.85, 3.92, 0]} hull={0.04} />
+          <mesh position={[0.85, 3.92, 0]}>
+            <sphereGeometry args={[0.65, 12, 10]} />
+            <meshBasicMaterial color="#fbbf24" transparent opacity={0.22} depthWrite={false} />
+          </mesh>
+        </group>
+        {/* Distant cozy kampung house & silhouetted night trees */}
+        <group position={[4.2, 0, 2.8]}>
+          <B pos={[0, 1.4, 0]} size={[4.2, 2.8, 3.0]} color="#3b3556" ink={0.03} />
+          <B pos={[-0.9, 1.5, -1.52]} size={[0.85, 0.95, 0.06]} color="#fde68a" emissive="#f59e0b" ink={0.015} />
+          <B pos={[0.9, 1.5, -1.52]} size={[0.85, 0.95, 0.06]} color="#fde68a" emissive="#f59e0b" ink={0.015} />
+          <P geo={() => <coneGeometry args={[3.2, 1.8, 4]} />} color="#451a1a" pos={[0, 3.6, 0]} rot={[0, Math.PI / 4, 0]} hull={0.04} />
+        </group>
+        {[
+          [-6.2, 1.6, 2.0, 1.35],
+          [-0.8, 1.5, 3.2, 1.25],
+          [8.0, 1.7, 1.8, 1.45],
+        ].map(([tx, ty, tz, sc], i) => (
+          <group key={i} position={[tx, 0, tz]} scale={sc}>
+            <Cyl pos={[0, 1.0, 0]} r={0.22} h={2.0} color="#3b2618" />
+            <P geo={() => <dodecahedronGeometry args={[1.15, 1]} />} color="#14532d" pos={[0, ty + 0.85, 0]} hull={0.04} />
+          </group>
+        ))}
+      </group>
+
+      {/* Lush Night Ferns & Wild Bushes framing left & right yard perimeter */}
       {[
         [3.65, 0.45, -1.65, 0.78],
         [4.55, 0.55, -2.45, 0.95],
         [-3.65, 0.42, 1.35, 0.68],
+        [4.15, 0.48, 0.65, 0.76],
+        [-4.25, 0.52, -0.35, 0.84],
       ].map(([bx, by, bz, sc], i) => (
         <group key={i} position={[bx, by, bz]} scale={sc}>
           <P geo={() => <dodecahedronGeometry args={[0.72, 1]} />} color="#14532d" pos={[0, 0, 0]} hull={0.04} />
@@ -516,7 +641,7 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
         </group>
       ))}
 
-      {/* Twinkling Golden Fireflies (Kunang-Kunang) gently dancing around the banyan & yard! */}
+      {/* Multi-Depth 3D Twinkling Golden Fireflies (Kunang-Kunang) dancing in foreground, midground & background! */}
       {[
         [-3.2, 1.85, -1.2],
         [-2.1, 2.35, -2.0],
@@ -524,11 +649,14 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
         [2.9, 2.45, -0.8],
         [-0.4, 2.65, -2.4],
         [0.9, 1.55, 0.6],
+        [-2.2, 1.65, 2.4],
+        [2.1, 2.05, 2.6],
+        [0.2, 2.85, 3.1],
       ].map(([fx, fy, fz], i) => (
         <mesh
           key={i}
-          position={[fx + Math.sin(t * 1.8 + i * 1.4) * 0.35, fy + Math.cos(t * 2.2 + i) * 0.24, fz]}
-          scale={0.045 + Math.abs(Math.sin(t * 4.2 + i)) * 0.035}
+          position={[fx + Math.sin(t * 1.8 + i * 1.4) * 0.42, fy + Math.cos(t * 2.2 + i) * 0.28, fz + Math.sin(t * 1.3 + i) * 0.32]}
+          scale={0.048 + Math.abs(Math.sin(t * 4.2 + i)) * 0.038}
         >
           <sphereGeometry args={[1, 8, 8]} />
           <meshBasicMaterial color="#fef08a" />
@@ -543,8 +671,9 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
           [2.9, 0.34, -1.2],
           [-1.5, 0.25, 1.4],
           [2.1, 0.28, 1.2],
+          [-0.2, 0.30, 3.2],
         ].map(([mx, my, mz], i) => (
-          <mesh key={i} position={[mx + Math.sin(t * 0.4 + i) * 0.45, my, mz]} scale={[1.85, 0.42, 1.35]}>
+          <mesh key={i} position={[mx + Math.sin(t * 0.4 + i) * 0.55, my, mz]} scale={[1.85, 0.42, 1.35]}>
             <dodecahedronGeometry args={[0.82, 1]} />
             <meshBasicMaterial color="#bae6fd" transparent opacity={0.18 * (1 - cozy)} depthWrite={false} />
           </mesh>
