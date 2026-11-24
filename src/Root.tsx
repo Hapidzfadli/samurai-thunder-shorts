@@ -63,10 +63,17 @@ import { ThumbBuburShorts, ThumbBuburYoutube } from "./ThumbBubur";
 import { SheetHororKarakter, SheetHororProperti } from "./SheetHoror";
 import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
 import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
+import { SheetRaziaKarakter, SheetRaziaOren, SheetRaziaProperti } from "./SheetRazia";
+import { ThumbRaziaShorts, ThumbRaziaYoutube } from "./ThumbRazia";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="SheetRaziaKarakter" component={SheetRaziaKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
+      <Composition id="SheetRaziaOren" component={SheetRaziaOren} durationInFrames={1} fps={30} width={2000} height={1150} />
+      <Composition id="SheetRaziaProperti" component={SheetRaziaProperti} durationInFrames={1} fps={30} width={2000} height={1440} />
+      <Composition id="ThumbRaziaShorts" component={ThumbRaziaShorts} durationInFrames={1} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbRaziaYoutube" component={ThumbRaziaYoutube} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="ApacheDetailed" component={ApacheDetailed} durationInFrames={TOTAL_FRAMES_APACHE} fps={30} width={1080} height={1920} />
       <Composition id="RailroadExpansion" component={RailroadExpansion} durationInFrames={TOTAL_FRAMES_RAILROAD} fps={30} width={1080} height={1920} />
       <Composition id="CharacterShowcase" component={CharacterShowcase} durationInFrames={CHARACTER_PRESETS.length} fps={30} width={1920} height={1080} />

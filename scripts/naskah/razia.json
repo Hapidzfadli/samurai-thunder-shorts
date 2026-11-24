@@ -1,0 +1,66 @@
+[
+  {
+    "scene": "hook",
+    "takes": 1,
+    "lines": [
+      ["nadia", "narasi", "Hai wak! Di kosan Bu Tini aturan nomor satunya dilarang pelihara hewan, tapi Riko malah diam-diam kasih ikan tongkol ke kucing oren!"],
+      ["riko", "bisik", "Ssst, makan pelan-pelan ya Oren! Kalau ketahuan Bu Tini, kita berdua langsung angkat koper sore ini!"]
+    ]
+  },
+  {
+    "scene": "alarm",
+    "takes": 1,
+    "lines": [
+      ["bu_tini", "tegas_galak", "Perhatian semua penghuni lantai dua! Sore ini ada razia kamar kos mendadak! Siapkan kunci pintu!"],
+      ["riko", "panik", "Gawat Gas, gawat! Itu suara Bu Tini bawa sapu! Sembunyiin Oren sekarang juga!"]
+    ]
+  },
+  {
+    "scene": "nyamar",
+    "takes": 1,
+    "lines": [
+      ["riko", "panik", "Masuk lemari penuh baju! Masuk ember kekecilan! Aduh Gas, taruh mana dong kucing gembul ini?!"],
+      ["bagas", "santai", "Tenang Rik, otak jeniusku kerja! Bungkus sarung bantal kuning, jadi bantal bulu edisi terbatas!"]
+    ]
+  },
+  {
+    "scene": "dobrak",
+    "takes": 1,
+    "lines": [
+      ["bu_tini", "galak", "Riko! Kenapa kamar kamu bau ikan tongkol menyengat begini?! Kamu sembunyiin kucing ya?!"],
+      ["riko", "ngeles", "Bukan ikan tongkol Bu, itu... parfum baru aroma pantai Ancol! Lagi tren banget di kalangan mahasiswa!"]
+    ]
+  },
+  {
+    "scene": "bocor",
+    "takes": 1,
+    "lines": [
+      ["ara", "polos", "Eh Riko, bantal bulu di kasur kamu lucu banget! Tapi kok kupingnya gerak-gerak terus barusan ngeong?!"],
+      ["riko", "panik", "Aduh Mbak Ara, jangan kencang-kencang! Tamat sudah riwayatku hari ini!"]
+    ]
+  },
+  {
+    "scene": "twist",
+    "takes": 1,
+    "lines": [
+      ["bu_tini", "galak", "Aha! Ketangkap basah kamu Riko! Sini saya tarik selimutnya sekarang!"],
+      ["bu_tini", "luluh", "Ya ampun... Gusti... matanya berbinar banget! Gemoy banget sih kamu, pus!"]
+    ]
+  },
+  {
+    "scene": "rebutan",
+    "takes": 1,
+    "lines": [
+      ["bu_tini", "gemes", "Sudah, mulai hari ini Oren ikut Ibu ke dapur makan ikan pindang! Kalian berdua keluar sana!"],
+      ["bagas", "santai", "Lho Bu, kok malah kita yang diusir dari kamar sendiri sih?!"],
+      ["ara", "polos", "Wah asyik! Berarti besok aku boleh pelihara bebek di kamar juga ya Bu?!"]
+    ]
+  },
+  {
+    "scene": "ending",
+    "takes": 1,
+    "lines": [
+      ["nadia", "narasi_tutup", "Hahaha, aturan galak langsung kalah sama tatapan kucing oren! Menurut kamu wak, kosan boleh pelihara kucing atau dilarang keras? Vote di komen!"]
+    ]
+  }
+]
