@@ -1,0 +1,1378 @@
+{
+  "fps": 30,
+  "totalDurationSec": 96.833,
+  "totalFrames": 2905,
+  "order": [
+    "hook",
+    "masuk",
+    "muncul",
+    "tawar",
+    "curhat",
+    "viral",
+    "foto",
+    "ending"
+  ],
+  "scenes": {
+    "hook": {
+      "startSec": 0.0,
+      "endSec": 13.567,
+      "startFrame": 0,
+      "durationInFrames": 407
+    },
+    "masuk": {
+      "startSec": 13.567,
+      "endSec": 24.033,
+      "startFrame": 407,
+      "durationInFrames": 314
+    },
+    "muncul": {
+      "startSec": 24.033,
+      "endSec": 33.3,
+      "startFrame": 721,
+      "durationInFrames": 278
+    },
+    "tawar": {
+      "startSec": 33.3,
+      "endSec": 49.933,
+      "startFrame": 999,
+      "durationInFrames": 499
+    },
+    "curhat": {
+      "startSec": 49.933,
+      "endSec": 67.433,
+      "startFrame": 1498,
+      "durationInFrames": 525
+    },
+    "viral": {
+      "startSec": 67.433,
+      "endSec": 79.7,
+      "startFrame": 2023,
+      "durationInFrames": 368
+    },
+    "foto": {
+      "startSec": 79.7,
+      "endSec": 89.9,
+      "startFrame": 2391,
+      "durationInFrames": 306
+    },
+    "ending": {
+      "startSec": 89.9,
+      "endSec": 96.833,
+      "startFrame": 2697,
+      "durationInFrames": 208
+    }
+  },
+  "lines": {
+    "h1": {
+      "scene": "hook",
+      "speaker": "narator",
+      "emotion": "narasi",
+      "text": "Malam Jumat tepat tengah malam, Riko nekat bikin konten uji nyali di rumah kosong angker!",
+      "startSec": 0.35,
+      "endSec": 5.31,
+      "from": 10,
+      "to": 159,
+      "globalFrom": 10,
+      "globalTo": 159
+    },
+    "h2": {
+      "scene": "hook",
+      "speaker": "riko",
+      "emotion": "tegang",
+      "text": "Gas, serius nih rumah ini angker banget! Tunggu, kamu bawa apaan tuh?!",
+      "startSec": 5.53,
+      "endSec": 9.05,
+      "from": 166,
+      "to": 271,
+      "globalFrom": 166,
+      "globalTo": 271
+    },
+    "h3": {
+      "scene": "hook",
+      "speaker": "bagas",
+      "emotion": "santai",
+      "text": "Tenang Rik, pisang goreng hangat sama kopi hitam! Siapa tahu hantunya lapar!",
+      "startSec": 9.27,
+      "endSec": 13.11,
+      "from": 278,
+      "to": 393,
+      "globalFrom": 278,
+      "globalTo": 393
+    },
+    "m1": {
+      "scene": "masuk",
+      "speaker": "riko",
+      "emotion": "tegang",
+      "text": "Pelan-pelan Mas Dedi, senter ke arah beringin! Eh, lampu terasnya kok berkedip sendiri?!",
+      "startSec": 13.917,
+      "endSec": 18.557,
+      "from": 10,
+      "to": 150,
+      "globalFrom": 418,
+      "globalTo": 557
+    },
+    "m2": {
+      "scene": "masuk",
+      "speaker": "bagas",
+      "emotion": "santai",
+      "text": "Santai aja, mungkin kabelnya kendor. Tapi kok ada bau menyan campur pisang goreng ya?",
+      "startSec": 18.797,
+      "endSec": 23.58,
+      "from": 157,
+      "to": 300,
+      "globalFrom": 564,
+      "globalTo": 707
+    },
+    "u1": {
+      "scene": "muncul",
+      "speaker": "pocong",
+      "emotion": "tegang",
+      "text": "Berani sekali kalian masuk rumah ini! Mau lari ke mana kalian?!",
+      "startSec": 24.483,
+      "endSec": 27.797,
+      "from": 14,
+      "to": 113,
+      "globalFrom": 734,
+      "globalTo": 834
+    },
+    "u2": {
+      "scene": "muncul",
+      "speaker": "riko",
+      "emotion": "tegas",
+      "text": "Ampun Kang Pocong! Mbak Kunti! Tolong, kakiku kaku tidak bisa lari!!",
+      "startSec": 27.997,
+      "endSec": 32.792,
+      "from": 119,
+      "to": 263,
+      "globalFrom": 840,
+      "globalTo": 984
+    },
+    "t1": {
+      "scene": "tawar",
+      "speaker": "bagas",
+      "emotion": "santai",
+      "text": "Eits, jangan seram-seram dulu Kang! Nih pisang goreng masih panas sama kopi hitam, monggo!",
+      "startSec": 33.62,
+      "endSec": 39.36,
+      "from": 10,
+      "to": 182,
+      "globalFrom": 1009,
+      "globalTo": 1181
+    },
+    "t2": {
+      "scene": "tawar",
+      "speaker": "pocong",
+      "emotion": "santai",
+      "text": "Eh, sebentar... ini pisang goreng kepok yang renyah itu ya? Boleh dicoba satu, Mas?",
+      "startSec": 39.6,
+      "endSec": 44.945,
+      "from": 189,
+      "to": 349,
+      "globalFrom": 1188,
+      "globalTo": 1348
+    },
+    "t3": {
+      "scene": "tawar",
+      "speaker": "kunti",
+      "emotion": "santai",
+      "text": "Wah, ada tahu isi juga! Ya ampun Mas, aromanya bikin lupa cara menakuti orang!",
+      "startSec": 45.165,
+      "endSec": 49.485,
+      "from": 356,
+      "to": 486,
+      "globalFrom": 1355,
+      "globalTo": 1485
+    },
+    "c1": {
+      "scene": "curhat",
+      "speaker": "kunti",
+      "emotion": "santai",
+      "text": "Aslinya capek banget tahu, Mas. Tiap malam Jumat harus lembur terbang demi konten uji nyali!",
+      "startSec": 50.283,
+      "endSec": 55.233,
+      "from": 10,
+      "to": 159,
+      "globalFrom": 1508,
+      "globalTo": 1657
+    },
+    "c2": {
+      "scene": "curhat",
+      "speaker": "pocong",
+      "emotion": "narasi",
+      "text": "Iya nih, betis saya pegal banget melompat terus! Padahal maunya cuma rebahan sambil ngopi!",
+      "startSec": 55.453,
+      "endSec": 60.964,
+      "from": 166,
+      "to": 331,
+      "globalFrom": 1664,
+      "globalTo": 1829
+    },
+    "c3": {
+      "scene": "curhat",
+      "speaker": "bagas",
+      "emotion": "santai",
+      "text": "Waduh, ternyata hantu juga butuh istirahat ya Kang! Ambil lagi tahu isinya, masih banyak!",
+      "startSec": 61.184,
+      "endSec": 66.994,
+      "from": 338,
+      "to": 512,
+      "globalFrom": 1836,
+      "globalTo": 2010
+    },
+    "v1": {
+      "scene": "viral",
+      "speaker": "riko",
+      "emotion": "tegas",
+      "text": "Waduh Gas! Siaran langsung di ponselku masih menyala! Penontonnya tembus ribuan!!",
+      "startSec": 67.753,
+      "endSec": 72.793,
+      "from": 10,
+      "to": 161,
+      "globalFrom": 2033,
+      "globalTo": 2184
+    },
+    "v2": {
+      "scene": "viral",
+      "speaker": "pocong",
+      "emotion": "santai",
+      "text": "Halo penonton di rumah! Ini bukan uji nyali, ini acara ngopi dan gorengan tengah malam!",
+      "startSec": 73.033,
+      "endSec": 79.21,
+      "from": 168,
+      "to": 353,
+      "globalFrom": 2191,
+      "globalTo": 2376
+    },
+    "f1": {
+      "scene": "foto",
+      "speaker": "kunti",
+      "emotion": "santai",
+      "text": "Ayo foto bareng dulu! Eh, minggu depan bawa bakwan ekstra sama cabai rawit ya!",
+      "startSec": 80.05,
+      "endSec": 84.191,
+      "from": 10,
+      "to": 135,
+      "globalFrom": 2402,
+      "globalTo": 2526
+    },
+    "f2": {
+      "scene": "foto",
+      "speaker": "riko",
+      "emotion": "santai",
+      "text": "Siap Mbak Kunti, Kang Pocong! Satu, dua, tiga... cekrek!",
+      "startSec": 84.431,
+      "endSec": 89.338,
+      "from": 142,
+      "to": 289,
+      "globalFrom": 2533,
+      "globalTo": 2680
+    },
+    "e1": {
+      "scene": "ending",
+      "speaker": "narator",
+      "emotion": "tegas",
+      "text": "Kalau kamu ketemu hantu ramah kayak gini, pilih kabur atau ajak ngopi? Tulis pertanyaanmu di komentar!",
+      "startSec": 90.25,
+      "endSec": 95.19,
+      "from": 10,
+      "to": 159,
+      "globalFrom": 2708,
+      "globalTo": 2856
+    }
+  },
+  "events": {
+    "hook.nyali": 111,
+    "hook.apaan": 240,
+    "hook.goreng": 290,
+    "masuk.senter": 35,
+    "masuk.berkedip": 119,
+    "masuk.menyan": 247,
+    "muncul.masuk": 6,
+    "muncul.lari": 76,
+    "muncul.ampun": 117,
+    "muncul.kaku": 217,
+    "tawar.seram": 8,
+    "tawar.pisang": 92,
+    "tawar.kopi": 128,
+    "tawar.pocong": 214,
+    "tawar.kunti": 369,
+    "curhat.lembur": 100,
+    "curhat.pegal": 195,
+    "curhat.melompat": 214,
+    "curhat.bagas": 393,
+    "viral.waduh": 8,
+    "viral.ribuan": 143,
+    "viral.halo": 166,
+    "viral.gorengan": 312,
+    "foto.bakwan": 78,
+    "foto.cekrek": 274,
+    "ending.kabur": 74,
+    "ending.komentar": 138
+  },
+  "captions": [
+    {
+      "text": "Malam Jumat",
+      "speaker": "narator",
+      "startFrame": 10,
+      "endFrame": 31,
+      "highlight": true
+    },
+    {
+      "text": "tepat tengah",
+      "speaker": "narator",
+      "startFrame": 31,
+      "endFrame": 47,
+      "highlight": false
+    },
+    {
+      "text": "malam,",
+      "speaker": "narator",
+      "startFrame": 47,
+      "endFrame": 68,
+      "highlight": false
+    },
+    {
+      "text": "Riko nekat",
+      "speaker": "narator",
+      "startFrame": 68,
+      "endFrame": 85,
+      "highlight": false
+    },
+    {
+      "text": "bikin konten",
+      "speaker": "narator",
+      "startFrame": 85,
+      "endFrame": 106,
+      "highlight": false
+    },
+    {
+      "text": "uji nyali",
+      "speaker": "narator",
+      "startFrame": 106,
+      "endFrame": 124,
+      "highlight": true
+    },
+    {
+      "text": "di rumah",
+      "speaker": "narator",
+      "startFrame": 124,
+      "endFrame": 133,
+      "highlight": false
+    },
+    {
+      "text": "kosong",
+      "speaker": "narator",
+      "startFrame": 133,
+      "endFrame": 145,
+      "highlight": false
+    },
+    {
+      "text": "angker!",
+      "speaker": "narator",
+      "startFrame": 145,
+      "endFrame": 156,
+      "highlight": true
+    },
+    {
+      "text": "Gas,",
+      "speaker": "riko",
+      "startFrame": 166,
+      "endFrame": 176,
+      "highlight": false
+    },
+    {
+      "text": "serius nih",
+      "speaker": "riko",
+      "startFrame": 176,
+      "endFrame": 196,
+      "highlight": false
+    },
+    {
+      "text": "rumah ini",
+      "speaker": "riko",
+      "startFrame": 196,
+      "endFrame": 206,
+      "highlight": false
+    },
+    {
+      "text": "angker",
+      "speaker": "riko",
+      "startFrame": 206,
+      "endFrame": 217,
+      "highlight": true
+    },
+    {
+      "text": "banget!",
+      "speaker": "riko",
+      "startFrame": 217,
+      "endFrame": 226,
+      "highlight": false
+    },
+    {
+      "text": "Tunggu,",
+      "speaker": "riko",
+      "startFrame": 226,
+      "endFrame": 236,
+      "highlight": false
+    },
+    {
+      "text": "kamu bawa",
+      "speaker": "riko",
+      "startFrame": 236,
+      "endFrame": 253,
+      "highlight": false
+    },
+    {
+      "text": "apaan tuh?!",
+      "speaker": "riko",
+      "startFrame": 253,
+      "endFrame": 267,
+      "highlight": false
+    },
+    {
+      "text": "Tenang Rik,",
+      "speaker": "bagas",
+      "startFrame": 278,
+      "endFrame": 292,
+      "highlight": false
+    },
+    {
+      "text": "pisang goreng",
+      "speaker": "bagas",
+      "startFrame": 292,
+      "endFrame": 312,
+      "highlight": true
+    },
+    {
+      "text": "hangat sama",
+      "speaker": "bagas",
+      "startFrame": 312,
+      "endFrame": 322,
+      "highlight": false
+    },
+    {
+      "text": "kopi hitam!",
+      "speaker": "bagas",
+      "startFrame": 322,
+      "endFrame": 340,
+      "highlight": true
+    },
+    {
+      "text": "Siapa tahu",
+      "speaker": "bagas",
+      "startFrame": 340,
+      "endFrame": 368,
+      "highlight": true
+    },
+    {
+      "text": "hantunya",
+      "speaker": "bagas",
+      "startFrame": 368,
+      "endFrame": 379,
+      "highlight": false
+    },
+    {
+      "text": "lapar!",
+      "speaker": "bagas",
+      "startFrame": 379,
+      "endFrame": 390,
+      "highlight": false
+    },
+    {
+      "text": "Pelan-pelan",
+      "speaker": "riko",
+      "startFrame": 418,
+      "endFrame": 434,
+      "highlight": false
+    },
+    {
+      "text": "Mas Dedi,",
+      "speaker": "riko",
+      "startFrame": 434,
+      "endFrame": 444,
+      "highlight": false
+    },
+    {
+      "text": "senter ke",
+      "speaker": "riko",
+      "startFrame": 444,
+      "endFrame": 464,
+      "highlight": true
+    },
+    {
+      "text": "arah",
+      "speaker": "riko",
+      "startFrame": 464,
+      "endFrame": 472,
+      "highlight": false
+    },
+    {
+      "text": "beringin!",
+      "speaker": "riko",
+      "startFrame": 472,
+      "endFrame": 485,
+      "highlight": true
+    },
+    {
+      "text": "Eh,",
+      "speaker": "riko",
+      "startFrame": 485,
+      "endFrame": 495,
+      "highlight": false
+    },
+    {
+      "text": "lampu",
+      "speaker": "riko",
+      "startFrame": 495,
+      "endFrame": 513,
+      "highlight": false
+    },
+    {
+      "text": "terasnya kok",
+      "speaker": "riko",
+      "startFrame": 513,
+      "endFrame": 528,
+      "highlight": false
+    },
+    {
+      "text": "berkedip",
+      "speaker": "riko",
+      "startFrame": 528,
+      "endFrame": 539,
+      "highlight": true
+    },
+    {
+      "text": "sendiri?!",
+      "speaker": "riko",
+      "startFrame": 539,
+      "endFrame": 547,
+      "highlight": false
+    },
+    {
+      "text": "Santai aja,",
+      "speaker": "bagas",
+      "startFrame": 564,
+      "endFrame": 581,
+      "highlight": false
+    },
+    {
+      "text": "mungkin",
+      "speaker": "bagas",
+      "startFrame": 581,
+      "endFrame": 589,
+      "highlight": false
+    },
+    {
+      "text": "kabelnya",
+      "speaker": "bagas",
+      "startFrame": 589,
+      "endFrame": 605,
+      "highlight": false
+    },
+    {
+      "text": "kendor.",
+      "speaker": "bagas",
+      "startFrame": 605,
+      "endFrame": 619,
+      "highlight": false
+    },
+    {
+      "text": "Tapi kok",
+      "speaker": "bagas",
+      "startFrame": 619,
+      "endFrame": 642,
+      "highlight": false
+    },
+    {
+      "text": "ada bau",
+      "speaker": "bagas",
+      "startFrame": 642,
+      "endFrame": 656,
+      "highlight": false
+    },
+    {
+      "text": "menyan campur",
+      "speaker": "bagas",
+      "startFrame": 656,
+      "endFrame": 681,
+      "highlight": false
+    },
+    {
+      "text": "pisang goreng",
+      "speaker": "bagas",
+      "startFrame": 681,
+      "endFrame": 700,
+      "highlight": true
+    },
+    {
+      "text": "ya?",
+      "speaker": "bagas",
+      "startFrame": 700,
+      "endFrame": 702,
+      "highlight": false
+    },
+    {
+      "text": "Berani sekali",
+      "speaker": "pocong",
+      "startFrame": 734,
+      "endFrame": 751,
+      "highlight": true
+    },
+    {
+      "text": "kalian masuk",
+      "speaker": "pocong",
+      "startFrame": 751,
+      "endFrame": 769,
+      "highlight": false
+    },
+    {
+      "text": "rumah ini!",
+      "speaker": "pocong",
+      "startFrame": 769,
+      "endFrame": 783,
+      "highlight": false
+    },
+    {
+      "text": "Mau lari",
+      "speaker": "pocong",
+      "startFrame": 783,
+      "endFrame": 807,
+      "highlight": false
+    },
+    {
+      "text": "ke mana",
+      "speaker": "pocong",
+      "startFrame": 807,
+      "endFrame": 814,
+      "highlight": false
+    },
+    {
+      "text": "kalian?!",
+      "speaker": "pocong",
+      "startFrame": 814,
+      "endFrame": 821,
+      "highlight": false
+    },
+    {
+      "text": "Ampun Kang",
+      "speaker": "riko",
+      "startFrame": 840,
+      "endFrame": 859,
+      "highlight": true
+    },
+    {
+      "text": "Pocong!",
+      "speaker": "riko",
+      "startFrame": 859,
+      "endFrame": 878,
+      "highlight": true
+    },
+    {
+      "text": "Mbak Kunti!",
+      "speaker": "riko",
+      "startFrame": 878,
+      "endFrame": 912,
+      "highlight": true
+    },
+    {
+      "text": "Tolong,",
+      "speaker": "riko",
+      "startFrame": 912,
+      "endFrame": 931,
+      "highlight": false
+    },
+    {
+      "text": "kakiku kaku",
+      "speaker": "riko",
+      "startFrame": 931,
+      "endFrame": 951,
+      "highlight": true
+    },
+    {
+      "text": "tidak bisa",
+      "speaker": "riko",
+      "startFrame": 951,
+      "endFrame": 965,
+      "highlight": false
+    },
+    {
+      "text": "lari!!",
+      "speaker": "riko",
+      "startFrame": 965,
+      "endFrame": 978,
+      "highlight": false
+    },
+    {
+      "text": "Eits,",
+      "speaker": "bagas",
+      "startFrame": 1009,
+      "endFrame": 1017,
+      "highlight": true
+    },
+    {
+      "text": "jangan",
+      "speaker": "bagas",
+      "startFrame": 1017,
+      "endFrame": 1028,
+      "highlight": false
+    },
+    {
+      "text": "seram-seram",
+      "speaker": "bagas",
+      "startFrame": 1028,
+      "endFrame": 1044,
+      "highlight": false
+    },
+    {
+      "text": "dulu Kang!",
+      "speaker": "bagas",
+      "startFrame": 1044,
+      "endFrame": 1086,
+      "highlight": false
+    },
+    {
+      "text": "Nih pisang",
+      "speaker": "bagas",
+      "startFrame": 1086,
+      "endFrame": 1101,
+      "highlight": true
+    },
+    {
+      "text": "goreng masih",
+      "speaker": "bagas",
+      "startFrame": 1101,
+      "endFrame": 1115,
+      "highlight": true
+    },
+    {
+      "text": "panas sama",
+      "speaker": "bagas",
+      "startFrame": 1115,
+      "endFrame": 1129,
+      "highlight": false
+    },
+    {
+      "text": "kopi hitam,",
+      "speaker": "bagas",
+      "startFrame": 1129,
+      "endFrame": 1163,
+      "highlight": true
+    },
+    {
+      "text": "monggo!",
+      "speaker": "bagas",
+      "startFrame": 1163,
+      "endFrame": 1176,
+      "highlight": false
+    },
+    {
+      "text": "Eh,",
+      "speaker": "pocong",
+      "startFrame": 1188,
+      "endFrame": 1215,
+      "highlight": false
+    },
+    {
+      "text": "sebentar...",
+      "speaker": "pocong",
+      "startFrame": 1215,
+      "endFrame": 1247,
+      "highlight": false
+    },
+    {
+      "text": "ini pisang",
+      "speaker": "pocong",
+      "startFrame": 1247,
+      "endFrame": 1260,
+      "highlight": true
+    },
+    {
+      "text": "goreng kepok",
+      "speaker": "pocong",
+      "startFrame": 1260,
+      "endFrame": 1275,
+      "highlight": true
+    },
+    {
+      "text": "yang renyah",
+      "speaker": "pocong",
+      "startFrame": 1275,
+      "endFrame": 1289,
+      "highlight": true
+    },
+    {
+      "text": "itu ya?",
+      "speaker": "pocong",
+      "startFrame": 1289,
+      "endFrame": 1313,
+      "highlight": false
+    },
+    {
+      "text": "Boleh dicoba",
+      "speaker": "pocong",
+      "startFrame": 1313,
+      "endFrame": 1329,
+      "highlight": false
+    },
+    {
+      "text": "satu,",
+      "speaker": "pocong",
+      "startFrame": 1329,
+      "endFrame": 1337,
+      "highlight": false
+    },
+    {
+      "text": "Mas?",
+      "speaker": "pocong",
+      "startFrame": 1337,
+      "endFrame": 1340,
+      "highlight": false
+    },
+    {
+      "text": "Wah,",
+      "speaker": "kunti",
+      "startFrame": 1355,
+      "endFrame": 1361,
+      "highlight": false
+    },
+    {
+      "text": "ada tahu",
+      "speaker": "kunti",
+      "startFrame": 1361,
+      "endFrame": 1379,
+      "highlight": true
+    },
+    {
+      "text": "isi juga!",
+      "speaker": "kunti",
+      "startFrame": 1379,
+      "endFrame": 1403,
+      "highlight": false
+    },
+    {
+      "text": "Ya ampun",
+      "speaker": "kunti",
+      "startFrame": 1403,
+      "endFrame": 1416,
+      "highlight": true
+    },
+    {
+      "text": "Mas,",
+      "speaker": "kunti",
+      "startFrame": 1416,
+      "endFrame": 1424,
+      "highlight": false
+    },
+    {
+      "text": "aromanya",
+      "speaker": "kunti",
+      "startFrame": 1424,
+      "endFrame": 1435,
+      "highlight": true
+    },
+    {
+      "text": "bikin lupa",
+      "speaker": "kunti",
+      "startFrame": 1435,
+      "endFrame": 1448,
+      "highlight": false
+    },
+    {
+      "text": "cara menakuti",
+      "speaker": "kunti",
+      "startFrame": 1448,
+      "endFrame": 1469,
+      "highlight": false
+    },
+    {
+      "text": "orang!",
+      "speaker": "kunti",
+      "startFrame": 1469,
+      "endFrame": 1476,
+      "highlight": false
+    },
+    {
+      "text": "Aslinya capek",
+      "speaker": "kunti",
+      "startFrame": 1508,
+      "endFrame": 1532,
+      "highlight": true
+    },
+    {
+      "text": "banget tahu,",
+      "speaker": "kunti",
+      "startFrame": 1532,
+      "endFrame": 1548,
+      "highlight": true
+    },
+    {
+      "text": "Mas.",
+      "speaker": "kunti",
+      "startFrame": 1548,
+      "endFrame": 1572,
+      "highlight": false
+    },
+    {
+      "text": "Tiap malam",
+      "speaker": "kunti",
+      "startFrame": 1572,
+      "endFrame": 1587,
+      "highlight": false
+    },
+    {
+      "text": "Jumat harus",
+      "speaker": "kunti",
+      "startFrame": 1587,
+      "endFrame": 1600,
+      "highlight": true
+    },
+    {
+      "text": "lembur",
+      "speaker": "kunti",
+      "startFrame": 1600,
+      "endFrame": 1610,
+      "highlight": true
+    },
+    {
+      "text": "terbang demi",
+      "speaker": "kunti",
+      "startFrame": 1610,
+      "endFrame": 1624,
+      "highlight": false
+    },
+    {
+      "text": "konten uji",
+      "speaker": "kunti",
+      "startFrame": 1624,
+      "endFrame": 1641,
+      "highlight": true
+    },
+    {
+      "text": "nyali!",
+      "speaker": "kunti",
+      "startFrame": 1641,
+      "endFrame": 1648,
+      "highlight": true
+    },
+    {
+      "text": "Iya nih,",
+      "speaker": "pocong",
+      "startFrame": 1664,
+      "endFrame": 1674,
+      "highlight": false
+    },
+    {
+      "text": "betis saya",
+      "speaker": "pocong",
+      "startFrame": 1674,
+      "endFrame": 1695,
+      "highlight": false
+    },
+    {
+      "text": "pegal banget",
+      "speaker": "pocong",
+      "startFrame": 1695,
+      "endFrame": 1714,
+      "highlight": true
+    },
+    {
+      "text": "melompat",
+      "speaker": "pocong",
+      "startFrame": 1714,
+      "endFrame": 1728,
+      "highlight": true
+    },
+    {
+      "text": "terus!",
+      "speaker": "pocong",
+      "startFrame": 1728,
+      "endFrame": 1750,
+      "highlight": false
+    },
+    {
+      "text": "Padahal",
+      "speaker": "pocong",
+      "startFrame": 1750,
+      "endFrame": 1769,
+      "highlight": false
+    },
+    {
+      "text": "maunya cuma",
+      "speaker": "pocong",
+      "startFrame": 1769,
+      "endFrame": 1787,
+      "highlight": false
+    },
+    {
+      "text": "rebahan",
+      "speaker": "pocong",
+      "startFrame": 1787,
+      "endFrame": 1802,
+      "highlight": false
+    },
+    {
+      "text": "sambil ngopi!",
+      "speaker": "pocong",
+      "startFrame": 1802,
+      "endFrame": 1826,
+      "highlight": true
+    },
+    {
+      "text": "Waduh,",
+      "speaker": "bagas",
+      "startFrame": 1836,
+      "endFrame": 1857,
+      "highlight": true
+    },
+    {
+      "text": "ternyata",
+      "speaker": "bagas",
+      "startFrame": 1857,
+      "endFrame": 1869,
+      "highlight": false
+    },
+    {
+      "text": "hantu juga",
+      "speaker": "bagas",
+      "startFrame": 1869,
+      "endFrame": 1885,
+      "highlight": false
+    },
+    {
+      "text": "butuh",
+      "speaker": "bagas",
+      "startFrame": 1885,
+      "endFrame": 1893,
+      "highlight": false
+    },
+    {
+      "text": "istirahat ya",
+      "speaker": "bagas",
+      "startFrame": 1893,
+      "endFrame": 1914,
+      "highlight": true
+    },
+    {
+      "text": "Kang!",
+      "speaker": "bagas",
+      "startFrame": 1914,
+      "endFrame": 1940,
+      "highlight": false
+    },
+    {
+      "text": "Ambil lagi",
+      "speaker": "bagas",
+      "startFrame": 1940,
+      "endFrame": 1960,
+      "highlight": false
+    },
+    {
+      "text": "tahu isinya,",
+      "speaker": "bagas",
+      "startFrame": 1960,
+      "endFrame": 1980,
+      "highlight": true
+    },
+    {
+      "text": "masih banyak!",
+      "speaker": "bagas",
+      "startFrame": 1980,
+      "endFrame": 1996,
+      "highlight": false
+    },
+    {
+      "text": "Waduh Gas!",
+      "speaker": "riko",
+      "startFrame": 2033,
+      "endFrame": 2060,
+      "highlight": true
+    },
+    {
+      "text": "Siaran",
+      "speaker": "riko",
+      "startFrame": 2060,
+      "endFrame": 2073,
+      "highlight": false
+    },
+    {
+      "text": "langsung di",
+      "speaker": "riko",
+      "startFrame": 2073,
+      "endFrame": 2092,
+      "highlight": true
+    },
+    {
+      "text": "ponselku",
+      "speaker": "riko",
+      "startFrame": 2092,
+      "endFrame": 2108,
+      "highlight": false
+    },
+    {
+      "text": "masih",
+      "speaker": "riko",
+      "startFrame": 2108,
+      "endFrame": 2115,
+      "highlight": false
+    },
+    {
+      "text": "menyala!",
+      "speaker": "riko",
+      "startFrame": 2115,
+      "endFrame": 2138,
+      "highlight": false
+    },
+    {
+      "text": "Penontonnya",
+      "speaker": "riko",
+      "startFrame": 2138,
+      "endFrame": 2154,
+      "highlight": false
+    },
+    {
+      "text": "tembus",
+      "speaker": "riko",
+      "startFrame": 2154,
+      "endFrame": 2168,
+      "highlight": false
+    },
+    {
+      "text": "ribuan!!",
+      "speaker": "riko",
+      "startFrame": 2168,
+      "endFrame": 2180,
+      "highlight": true
+    },
+    {
+      "text": "Halo penonton",
+      "speaker": "pocong",
+      "startFrame": 2191,
+      "endFrame": 2222,
+      "highlight": true
+    },
+    {
+      "text": "di rumah!",
+      "speaker": "pocong",
+      "startFrame": 2222,
+      "endFrame": 2258,
+      "highlight": false
+    },
+    {
+      "text": "Ini bukan",
+      "speaker": "pocong",
+      "startFrame": 2258,
+      "endFrame": 2271,
+      "highlight": false
+    },
+    {
+      "text": "uji nyali,",
+      "speaker": "pocong",
+      "startFrame": 2271,
+      "endFrame": 2304,
+      "highlight": true
+    },
+    {
+      "text": "ini acara",
+      "speaker": "pocong",
+      "startFrame": 2304,
+      "endFrame": 2322,
+      "highlight": false
+    },
+    {
+      "text": "ngopi dan",
+      "speaker": "pocong",
+      "startFrame": 2322,
+      "endFrame": 2337,
+      "highlight": true
+    },
+    {
+      "text": "gorengan",
+      "speaker": "pocong",
+      "startFrame": 2337,
+      "endFrame": 2350,
+      "highlight": true
+    },
+    {
+      "text": "tengah malam!",
+      "speaker": "pocong",
+      "startFrame": 2350,
+      "endFrame": 2372,
+      "highlight": false
+    },
+    {
+      "text": "Ayo foto",
+      "speaker": "kunti",
+      "startFrame": 2402,
+      "endFrame": 2416,
+      "highlight": true
+    },
+    {
+      "text": "bareng dulu!",
+      "speaker": "kunti",
+      "startFrame": 2416,
+      "endFrame": 2433,
+      "highlight": false
+    },
+    {
+      "text": "Eh,",
+      "speaker": "kunti",
+      "startFrame": 2433,
+      "endFrame": 2444,
+      "highlight": false
+    },
+    {
+      "text": "minggu depan",
+      "speaker": "kunti",
+      "startFrame": 2444,
+      "endFrame": 2464,
+      "highlight": false
+    },
+    {
+      "text": "bawa bakwan",
+      "speaker": "kunti",
+      "startFrame": 2464,
+      "endFrame": 2480,
+      "highlight": true
+    },
+    {
+      "text": "ekstra sama",
+      "speaker": "kunti",
+      "startFrame": 2480,
+      "endFrame": 2495,
+      "highlight": false
+    },
+    {
+      "text": "cabai rawit",
+      "speaker": "kunti",
+      "startFrame": 2495,
+      "endFrame": 2515,
+      "highlight": true
+    },
+    {
+      "text": "ya!",
+      "speaker": "kunti",
+      "startFrame": 2515,
+      "endFrame": 2518,
+      "highlight": false
+    },
+    {
+      "text": "Siap Mbak",
+      "speaker": "riko",
+      "startFrame": 2533,
+      "endFrame": 2549,
+      "highlight": false
+    },
+    {
+      "text": "Kunti,",
+      "speaker": "riko",
+      "startFrame": 2549,
+      "endFrame": 2555,
+      "highlight": true
+    },
+    {
+      "text": "Kang Pocong!",
+      "speaker": "riko",
+      "startFrame": 2555,
+      "endFrame": 2568,
+      "highlight": true
+    },
+    {
+      "text": "Satu,",
+      "speaker": "riko",
+      "startFrame": 2568,
+      "endFrame": 2574,
+      "highlight": false
+    },
+    {
+      "text": "dua,",
+      "speaker": "riko",
+      "startFrame": 2574,
+      "endFrame": 2619,
+      "highlight": false
+    },
+    {
+      "text": "tiga...",
+      "speaker": "riko",
+      "startFrame": 2619,
+      "endFrame": 2667,
+      "highlight": false
+    },
+    {
+      "text": "cekrek!",
+      "speaker": "riko",
+      "startFrame": 2667,
+      "endFrame": 2677,
+      "highlight": true
+    },
+    {
+      "text": "Kalau kamu",
+      "speaker": "narator",
+      "startFrame": 2708,
+      "endFrame": 2719,
+      "highlight": false
+    },
+    {
+      "text": "ketemu hantu",
+      "speaker": "narator",
+      "startFrame": 2719,
+      "endFrame": 2735,
+      "highlight": false
+    },
+    {
+      "text": "ramah kayak",
+      "speaker": "narator",
+      "startFrame": 2735,
+      "endFrame": 2748,
+      "highlight": false
+    },
+    {
+      "text": "gini,",
+      "speaker": "narator",
+      "startFrame": 2748,
+      "endFrame": 2764,
+      "highlight": false
+    },
+    {
+      "text": "pilih kabur",
+      "speaker": "narator",
+      "startFrame": 2764,
+      "endFrame": 2780,
+      "highlight": true
+    },
+    {
+      "text": "atau ajak",
+      "speaker": "narator",
+      "startFrame": 2780,
+      "endFrame": 2795,
+      "highlight": false
+    },
+    {
+      "text": "ngopi?",
+      "speaker": "narator",
+      "startFrame": 2795,
+      "endFrame": 2809,
+      "highlight": true
+    },
+    {
+      "text": "Tulis",
+      "speaker": "narator",
+      "startFrame": 2809,
+      "endFrame": 2818,
+      "highlight": false
+    },
+    {
+      "text": "pertanyaanmu",
+      "speaker": "narator",
+      "startFrame": 2818,
+      "endFrame": 2834,
+      "highlight": false
+    },
+    {
+      "text": "di komentar!",
+      "speaker": "narator",
+      "startFrame": 2834,
+      "endFrame": 2849,
+      "highlight": true
+    }
+  ]
+}

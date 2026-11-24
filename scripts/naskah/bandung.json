@@ -1,0 +1,66 @@
+[
+  {
+    "scene": "hook",
+    "takes": 2,
+    "lines": [
+      ["tegang", "Bulan Maret, tahun seribu sembilan ratus empat puluh enam, ratusan ribu warga Bandung membakar rumah mereka sendiri."],
+      ["narasi", "Mengapa mereka mengubah kota tercinta menjadi lautan api?"]
+    ]
+  },
+  {
+    "scene": "ultimatum",
+    "takes": 2,
+    "lines": [
+      ["narasi", "Semua berawal saat pasukan Sekutu menjatuhkan selebaran ultimatum dari udara."],
+      ["tegas", "Kosongkan Bandung Selatan sebelum tengah malam! Waktunya hanya tujuh jam!"]
+    ]
+  },
+  {
+    "scene": "markas",
+    "takes": 2,
+    "lines": [
+      ["narasi", "Di pos markas, Kolonel Nasution menatap peta Bandung dengan keputusan berat."],
+      ["tegas", "Lebih baik kita bumihanguskan, daripada kota ini jadi markas musuh!"]
+    ]
+  },
+  {
+    "scene": "bakar",
+    "takes": 2,
+    "lines": [
+      ["santai", "Malam itu, dua ratus ribu warga mengungsi... sambil menyulut obor ke rumah sendiri."],
+      ["tegang", "Dalam sekejap, lautan api membentang sepanjang sebelas kilometer."]
+    ]
+  },
+  {
+    "scene": "susup",
+    "takes": 2,
+    "lines": [
+      ["narasi", "Di tengah kobaran api, Mohammad Toha dan Ramdan menjalankan misi paling nekat."],
+      ["tegang", "Menyusup menembus lampu sorot menuju gudang mesiu raksasa di Dayeuhkolot."]
+    ]
+  },
+  {
+    "scene": "dinamit",
+    "takes": 2,
+    "lines": [
+      ["narasi", "Di dalam gudang penuh peti peledak, Toha meletakkan dinamit lalu menyalakan sumbunya."],
+      ["tegas", "Cepat mundur, Ramdan! Biar aku yang menyelesaikan ini!"]
+    ]
+  },
+  {
+    "scene": "ledakan",
+    "takes": 2,
+    "lines": [
+      ["tegang", "Seketika, ledakan dahsyat mengguncang seluruh Bandung Selatan!"],
+      ["narasi", "Delapan belas ribu ton mesiu Sekutu hancur berkeping-keping."]
+    ]
+  },
+  {
+    "scene": "fajar",
+    "takes": 2,
+    "lines": [
+      ["santai", "Esok paginya, Bandung tinggal asap dan bara... namun semangat mereka tak pernah padam."],
+      ["narasi", "Inilah kisah keberanian abadi, Bandung Lautan Api."]
+    ]
+  }
+]

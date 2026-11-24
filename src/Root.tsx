@@ -52,7 +52,17 @@ import { SheetPropsDapur, SheetPropsKantor, SheetPropsLuar, SheetPropsSidang, Sh
 import { Ancol, TOTAL_FRAMES_ANCOL } from "./Ancol";
 import { Perang, TOTAL_FRAMES_PERANG } from "./Perang";
 import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
+import { Bandung, TOTAL_FRAMES_BANDUNG } from "./Bandung";
 import { SheetBandungKarakter, SheetBandungProperti } from "./SheetBandung";
+import { Mie, TOTAL_FRAMES_MIE } from "./Mie";
+import { SheetMieKarakter, SheetMieProperti } from "./SheetMie";
+import { ThumbMieShorts, ThumbMieYoutube } from "./ThumbMie";
+import { SheetBuburKarakter, SheetBuburProperti } from "./SheetBubur";
+import { Bubur, TOTAL_FRAMES_BUBUR } from "./Bubur";
+import { ThumbBuburShorts, ThumbBuburYoutube } from "./ThumbBubur";
+import { SheetHororKarakter, SheetHororProperti } from "./SheetHoror";
+import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
+import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
 
 export const RemotionRoot: React.FC = () => {
   return (

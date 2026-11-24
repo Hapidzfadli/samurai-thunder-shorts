@@ -1,0 +1,948 @@
+{
+  "fps": 30,
+  "totalDurationSec": 75.867,
+  "totalFrames": 2276,
+  "order": [
+    "hook",
+    "ultimatum",
+    "markas",
+    "bakar",
+    "susup",
+    "dinamit",
+    "ledakan",
+    "fajar"
+  ],
+  "scenes": {
+    "hook": {
+      "startSec": 0.0,
+      "endSec": 9.8,
+      "startFrame": 0,
+      "durationInFrames": 294
+    },
+    "ultimatum": {
+      "startSec": 9.8,
+      "endSec": 18.7,
+      "startFrame": 294,
+      "durationInFrames": 267
+    },
+    "markas": {
+      "startSec": 18.7,
+      "endSec": 28.067,
+      "startFrame": 561,
+      "durationInFrames": 281
+    },
+    "bakar": {
+      "startSec": 28.067,
+      "endSec": 37.667,
+      "startFrame": 842,
+      "durationInFrames": 288
+    },
+    "susup": {
+      "startSec": 37.667,
+      "endSec": 48.0,
+      "startFrame": 1130,
+      "durationInFrames": 310
+    },
+    "dinamit": {
+      "startSec": 48.0,
+      "endSec": 57.533,
+      "startFrame": 1440,
+      "durationInFrames": 286
+    },
+    "ledakan": {
+      "startSec": 57.533,
+      "endSec": 65.733,
+      "startFrame": 1726,
+      "durationInFrames": 246
+    },
+    "fajar": {
+      "startSec": 65.733,
+      "endSec": 75.867,
+      "startFrame": 1972,
+      "durationInFrames": 304
+    }
+  },
+  "lines": {
+    "h1": {
+      "scene": "hook",
+      "emotion": "tegang",
+      "text": "Bulan Maret, tahun seribu sembilan ratus empat puluh enam, ratusan ribu warga Bandung membakar rumah mereka sendiri.",
+      "startSec": 0.35,
+      "endSec": 6.11,
+      "from": 10,
+      "to": 183,
+      "globalFrom": 10,
+      "globalTo": 183
+    },
+    "h2": {
+      "scene": "hook",
+      "emotion": "narasi",
+      "text": "Mengapa mereka mengubah kota tercinta menjadi lautan api?",
+      "startSec": 6.36,
+      "endSec": 9.24,
+      "from": 191,
+      "to": 277,
+      "globalFrom": 191,
+      "globalTo": 277
+    },
+    "u1": {
+      "scene": "ultimatum",
+      "emotion": "narasi",
+      "text": "Semua berawal saat pasukan Sekutu menjatuhkan selebaran ultimatum dari udara.",
+      "startSec": 10.25,
+      "endSec": 13.93,
+      "from": 14,
+      "to": 124,
+      "globalFrom": 308,
+      "globalTo": 418
+    },
+    "u2": {
+      "scene": "ultimatum",
+      "emotion": "tegas",
+      "text": "Kosongkan Bandung Selatan sebelum tengah malam! Waktunya hanya tujuh jam!",
+      "startSec": 14.21,
+      "endSec": 18.05,
+      "from": 132,
+      "to": 248,
+      "globalFrom": 426,
+      "globalTo": 542
+    },
+    "m1": {
+      "scene": "markas",
+      "emotion": "narasi",
+      "text": "Di pos markas, Kolonel Nasution menatap peta Bandung dengan keputusan berat.",
+      "startSec": 19.15,
+      "endSec": 23.359,
+      "from": 14,
+      "to": 140,
+      "globalFrom": 575,
+      "globalTo": 701
+    },
+    "m2": {
+      "scene": "markas",
+      "emotion": "tegas",
+      "text": "Lebih baik kita bumihanguskan, daripada kota ini jadi markas musuh!",
+      "startSec": 23.639,
+      "endSec": 27.479,
+      "from": 148,
+      "to": 263,
+      "globalFrom": 709,
+      "globalTo": 824
+    },
+    "b1": {
+      "scene": "bakar",
+      "emotion": "santai",
+      "text": "Malam itu, dua ratus ribu warga mengungsi... sambil menyulut obor ke rumah sendiri.",
+      "startSec": 28.617,
+      "endSec": 32.937,
+      "from": 16,
+      "to": 146,
+      "globalFrom": 859,
+      "globalTo": 988
+    },
+    "b2": {
+      "scene": "bakar",
+      "emotion": "tegang",
+      "text": "Dalam sekejap, lautan api membentang sepanjang sebelas kilometer.",
+      "startSec": 33.287,
+      "endSec": 36.927,
+      "from": 157,
+      "to": 266,
+      "globalFrom": 999,
+      "globalTo": 1108
+    },
+    "s1": {
+      "scene": "susup",
+      "emotion": "narasi",
+      "text": "Di tengah kobaran api, Mohammad Toha dan Ramdan menjalankan misi paling nekat.",
+      "startSec": 38.117,
+      "endSec": 42.475,
+      "from": 14,
+      "to": 144,
+      "globalFrom": 1144,
+      "globalTo": 1274
+    },
+    "s2": {
+      "scene": "susup",
+      "emotion": "tegang",
+      "text": "Menyusup menembus lampu sorot menuju gudang mesiu raksasa di Dayeuhkolot.",
+      "startSec": 42.755,
+      "endSec": 47.395,
+      "from": 153,
+      "to": 292,
+      "globalFrom": 1283,
+      "globalTo": 1422
+    },
+    "d1": {
+      "scene": "dinamit",
+      "emotion": "narasi",
+      "text": "Di dalam gudang penuh peti peledak, Toha meletakkan dinamit lalu menyalakan sumbunya.",
+      "startSec": 48.45,
+      "endSec": 53.09,
+      "from": 14,
+      "to": 153,
+      "globalFrom": 1454,
+      "globalTo": 1593
+    },
+    "d2": {
+      "scene": "dinamit",
+      "emotion": "tegas",
+      "text": "Cepat mundur, Ramdan! Biar aku yang menyelesaikan ini!",
+      "startSec": 53.39,
+      "endSec": 56.89,
+      "from": 162,
+      "to": 267,
+      "globalFrom": 1602,
+      "globalTo": 1707
+    },
+    "l1": {
+      "scene": "ledakan",
+      "emotion": "tegang",
+      "text": "Seketika, ledakan dahsyat mengguncang seluruh Bandung Selatan!",
+      "startSec": 57.933,
+      "endSec": 61.118,
+      "from": 12,
+      "to": 108,
+      "globalFrom": 1738,
+      "globalTo": 1834
+    },
+    "l2": {
+      "scene": "ledakan",
+      "emotion": "narasi",
+      "text": "Delapan belas ribu ton mesiu Sekutu hancur berkeping-keping.",
+      "startSec": 61.418,
+      "endSec": 64.938,
+      "from": 117,
+      "to": 222,
+      "globalFrom": 1843,
+      "globalTo": 1948
+    },
+    "f1": {
+      "scene": "fajar",
+      "emotion": "santai",
+      "text": "Esok paginya, Bandung tinggal asap dan bara... namun semangat mereka tak pernah padam.",
+      "startSec": 66.383,
+      "endSec": 71.183,
+      "from": 20,
+      "to": 164,
+      "globalFrom": 1992,
+      "globalTo": 2136
+    },
+    "f2": {
+      "scene": "fajar",
+      "emotion": "narasi",
+      "text": "Inilah kisah keberanian abadi, Bandung Lautan Api.",
+      "startSec": 71.583,
+      "endSec": 74.454,
+      "from": 176,
+      "to": 262,
+      "globalFrom": 2148,
+      "globalTo": 2234
+    }
+  },
+  "events": {
+    "hook.bakar": 146,
+    "hook.api": 248,
+    "ult.udara": 105,
+    "ult.ultimatum": 89,
+    "ult.jam": 217,
+    "markas.peta": 81,
+    "markas.bumi": 170,
+    "bakar.obor": 110,
+    "bakar.api": 176,
+    "susup.sorot": 200,
+    "susup.gudang": 222,
+    "dinamit.letak": 77,
+    "dinamit.sumbu": 128,
+    "dinamit.mundur": 180,
+    "ledakan.boom": 6,
+    "ledakan.hancur": 185,
+    "fajar.akhir": 228
+  },
+  "captions": [
+    {
+      "text": "Bulan Maret,",
+      "startFrame": 10,
+      "endFrame": 24,
+      "highlight": false
+    },
+    {
+      "text": "tahun seribu",
+      "startFrame": 24,
+      "endFrame": 35,
+      "highlight": true
+    },
+    {
+      "text": "sembilan",
+      "startFrame": 35,
+      "endFrame": 95,
+      "highlight": false
+    },
+    {
+      "text": "ratus empat",
+      "startFrame": 95,
+      "endFrame": 107,
+      "highlight": true
+    },
+    {
+      "text": "puluh enam,",
+      "startFrame": 107,
+      "endFrame": 119,
+      "highlight": false
+    },
+    {
+      "text": "ratusan ribu",
+      "startFrame": 119,
+      "endFrame": 131,
+      "highlight": true
+    },
+    {
+      "text": "warga Bandung",
+      "startFrame": 131,
+      "endFrame": 149,
+      "highlight": true
+    },
+    {
+      "text": "membakar",
+      "startFrame": 149,
+      "endFrame": 156,
+      "highlight": true
+    },
+    {
+      "text": "rumah mereka",
+      "startFrame": 156,
+      "endFrame": 167,
+      "highlight": false
+    },
+    {
+      "text": "sendiri.",
+      "startFrame": 167,
+      "endFrame": 175,
+      "highlight": false
+    },
+    {
+      "text": "Mengapa",
+      "startFrame": 191,
+      "endFrame": 200,
+      "highlight": false
+    },
+    {
+      "text": "mereka",
+      "startFrame": 200,
+      "endFrame": 206,
+      "highlight": false
+    },
+    {
+      "text": "mengubah kota",
+      "startFrame": 206,
+      "endFrame": 229,
+      "highlight": false
+    },
+    {
+      "text": "tercinta",
+      "startFrame": 229,
+      "endFrame": 242,
+      "highlight": false
+    },
+    {
+      "text": "menjadi",
+      "startFrame": 242,
+      "endFrame": 250,
+      "highlight": false
+    },
+    {
+      "text": "lautan api?",
+      "startFrame": 250,
+      "endFrame": 272,
+      "highlight": true
+    },
+    {
+      "text": "Semua berawal",
+      "startFrame": 308,
+      "endFrame": 328,
+      "highlight": false
+    },
+    {
+      "text": "saat pasukan",
+      "startFrame": 328,
+      "endFrame": 345,
+      "highlight": false
+    },
+    {
+      "text": "Sekutu",
+      "startFrame": 345,
+      "endFrame": 357,
+      "highlight": false
+    },
+    {
+      "text": "menjatuhkan",
+      "startFrame": 357,
+      "endFrame": 371,
+      "highlight": false
+    },
+    {
+      "text": "selebaran",
+      "startFrame": 371,
+      "endFrame": 385,
+      "highlight": false
+    },
+    {
+      "text": "ultimatum",
+      "startFrame": 385,
+      "endFrame": 400,
+      "highlight": true
+    },
+    {
+      "text": "dari udara.",
+      "startFrame": 400,
+      "endFrame": 414,
+      "highlight": false
+    },
+    {
+      "text": "Kosongkan",
+      "startFrame": 426,
+      "endFrame": 441,
+      "highlight": false
+    },
+    {
+      "text": "Bandung",
+      "startFrame": 441,
+      "endFrame": 451,
+      "highlight": true
+    },
+    {
+      "text": "Selatan",
+      "startFrame": 451,
+      "endFrame": 462,
+      "highlight": false
+    },
+    {
+      "text": "sebelum",
+      "startFrame": 462,
+      "endFrame": 472,
+      "highlight": false
+    },
+    {
+      "text": "tengah malam!",
+      "startFrame": 472,
+      "endFrame": 487,
+      "highlight": false
+    },
+    {
+      "text": "Waktunya",
+      "startFrame": 487,
+      "endFrame": 507,
+      "highlight": false
+    },
+    {
+      "text": "hanya tujuh",
+      "startFrame": 507,
+      "endFrame": 526,
+      "highlight": true
+    },
+    {
+      "text": "jam!",
+      "startFrame": 526,
+      "endFrame": 534,
+      "highlight": true
+    },
+    {
+      "text": "Di pos",
+      "startFrame": 575,
+      "endFrame": 584,
+      "highlight": false
+    },
+    {
+      "text": "markas,",
+      "startFrame": 584,
+      "endFrame": 605,
+      "highlight": false
+    },
+    {
+      "text": "Kolonel",
+      "startFrame": 605,
+      "endFrame": 618,
+      "highlight": false
+    },
+    {
+      "text": "Nasution",
+      "startFrame": 618,
+      "endFrame": 632,
+      "highlight": true
+    },
+    {
+      "text": "menatap peta",
+      "startFrame": 632,
+      "endFrame": 652,
+      "highlight": false
+    },
+    {
+      "text": "Bandung",
+      "startFrame": 652,
+      "endFrame": 664,
+      "highlight": true
+    },
+    {
+      "text": "dengan",
+      "startFrame": 664,
+      "endFrame": 672,
+      "highlight": false
+    },
+    {
+      "text": "keputusan",
+      "startFrame": 672,
+      "endFrame": 690,
+      "highlight": false
+    },
+    {
+      "text": "berat.",
+      "startFrame": 690,
+      "endFrame": 698,
+      "highlight": false
+    },
+    {
+      "text": "Lebih baik",
+      "startFrame": 709,
+      "endFrame": 725,
+      "highlight": false
+    },
+    {
+      "text": "kita",
+      "startFrame": 725,
+      "endFrame": 734,
+      "highlight": false
+    },
+    {
+      "text": "bumihanguskan,",
+      "startFrame": 734,
+      "endFrame": 758,
+      "highlight": true
+    },
+    {
+      "text": "daripada kota",
+      "startFrame": 758,
+      "endFrame": 783,
+      "highlight": false
+    },
+    {
+      "text": "ini jadi",
+      "startFrame": 783,
+      "endFrame": 799,
+      "highlight": false
+    },
+    {
+      "text": "markas musuh!",
+      "startFrame": 799,
+      "endFrame": 821,
+      "highlight": false
+    },
+    {
+      "text": "Malam itu,",
+      "startFrame": 859,
+      "endFrame": 872,
+      "highlight": false
+    },
+    {
+      "text": "dua ratus",
+      "startFrame": 872,
+      "endFrame": 901,
+      "highlight": true
+    },
+    {
+      "text": "ribu warga",
+      "startFrame": 901,
+      "endFrame": 916,
+      "highlight": true
+    },
+    {
+      "text": "mengungsi...",
+      "startFrame": 916,
+      "endFrame": 932,
+      "highlight": false
+    },
+    {
+      "text": "sambil",
+      "startFrame": 932,
+      "endFrame": 945,
+      "highlight": false
+    },
+    {
+      "text": "menyulut obor",
+      "startFrame": 945,
+      "endFrame": 964,
+      "highlight": false
+    },
+    {
+      "text": "ke rumah",
+      "startFrame": 964,
+      "endFrame": 971,
+      "highlight": false
+    },
+    {
+      "text": "sendiri.",
+      "startFrame": 971,
+      "endFrame": 980,
+      "highlight": false
+    },
+    {
+      "text": "Dalam",
+      "startFrame": 999,
+      "endFrame": 1006,
+      "highlight": false
+    },
+    {
+      "text": "sekejap,",
+      "startFrame": 1006,
+      "endFrame": 1021,
+      "highlight": false
+    },
+    {
+      "text": "lautan api",
+      "startFrame": 1021,
+      "endFrame": 1040,
+      "highlight": true
+    },
+    {
+      "text": "membentang",
+      "startFrame": 1040,
+      "endFrame": 1057,
+      "highlight": false
+    },
+    {
+      "text": "sepanjang",
+      "startFrame": 1057,
+      "endFrame": 1068,
+      "highlight": false
+    },
+    {
+      "text": "sebelas",
+      "startFrame": 1068,
+      "endFrame": 1075,
+      "highlight": true
+    },
+    {
+      "text": "kilometer.",
+      "startFrame": 1075,
+      "endFrame": 1096,
+      "highlight": false
+    },
+    {
+      "text": "Di tengah",
+      "startFrame": 1144,
+      "endFrame": 1156,
+      "highlight": false
+    },
+    {
+      "text": "kobaran api,",
+      "startFrame": 1156,
+      "endFrame": 1184,
+      "highlight": true
+    },
+    {
+      "text": "Mohammad Toha",
+      "startFrame": 1184,
+      "endFrame": 1205,
+      "highlight": true
+    },
+    {
+      "text": "dan Ramdan",
+      "startFrame": 1205,
+      "endFrame": 1223,
+      "highlight": true
+    },
+    {
+      "text": "menjalankan",
+      "startFrame": 1223,
+      "endFrame": 1247,
+      "highlight": false
+    },
+    {
+      "text": "misi paling",
+      "startFrame": 1247,
+      "endFrame": 1262,
+      "highlight": false
+    },
+    {
+      "text": "nekat.",
+      "startFrame": 1262,
+      "endFrame": 1271,
+      "highlight": false
+    },
+    {
+      "text": "Menyusup",
+      "startFrame": 1283,
+      "endFrame": 1300,
+      "highlight": false
+    },
+    {
+      "text": "menembus",
+      "startFrame": 1300,
+      "endFrame": 1316,
+      "highlight": false
+    },
+    {
+      "text": "lampu sorot",
+      "startFrame": 1316,
+      "endFrame": 1344,
+      "highlight": false
+    },
+    {
+      "text": "menuju gudang",
+      "startFrame": 1344,
+      "endFrame": 1364,
+      "highlight": false
+    },
+    {
+      "text": "mesiu raksasa",
+      "startFrame": 1364,
+      "endFrame": 1390,
+      "highlight": false
+    },
+    {
+      "text": "di",
+      "startFrame": 1390,
+      "endFrame": 1394,
+      "highlight": false
+    },
+    {
+      "text": "Dayeuhkolot.",
+      "startFrame": 1394,
+      "endFrame": 1420,
+      "highlight": true
+    },
+    {
+      "text": "Di dalam",
+      "startFrame": 1454,
+      "endFrame": 1465,
+      "highlight": false
+    },
+    {
+      "text": "gudang penuh",
+      "startFrame": 1465,
+      "endFrame": 1483,
+      "highlight": false
+    },
+    {
+      "text": "peti peledak,",
+      "startFrame": 1483,
+      "endFrame": 1505,
+      "highlight": false
+    },
+    {
+      "text": "Toha",
+      "startFrame": 1505,
+      "endFrame": 1520,
+      "highlight": true
+    },
+    {
+      "text": "meletakkan",
+      "startFrame": 1520,
+      "endFrame": 1535,
+      "highlight": false
+    },
+    {
+      "text": "dinamit lalu",
+      "startFrame": 1535,
+      "endFrame": 1559,
+      "highlight": true
+    },
+    {
+      "text": "menyalakan",
+      "startFrame": 1559,
+      "endFrame": 1572,
+      "highlight": false
+    },
+    {
+      "text": "sumbunya.",
+      "startFrame": 1572,
+      "endFrame": 1586,
+      "highlight": false
+    },
+    {
+      "text": "Cepat mundur,",
+      "startFrame": 1602,
+      "endFrame": 1638,
+      "highlight": false
+    },
+    {
+      "text": "Ramdan!",
+      "startFrame": 1638,
+      "endFrame": 1657,
+      "highlight": true
+    },
+    {
+      "text": "Biar aku",
+      "startFrame": 1657,
+      "endFrame": 1672,
+      "highlight": false
+    },
+    {
+      "text": "yang",
+      "startFrame": 1672,
+      "endFrame": 1676,
+      "highlight": false
+    },
+    {
+      "text": "menyelesaikan",
+      "startFrame": 1676,
+      "endFrame": 1692,
+      "highlight": false
+    },
+    {
+      "text": "ini!",
+      "startFrame": 1692,
+      "endFrame": 1699,
+      "highlight": false
+    },
+    {
+      "text": "Seketika,",
+      "startFrame": 1738,
+      "endFrame": 1757,
+      "highlight": false
+    },
+    {
+      "text": "ledakan",
+      "startFrame": 1757,
+      "endFrame": 1770,
+      "highlight": true
+    },
+    {
+      "text": "dahsyat",
+      "startFrame": 1770,
+      "endFrame": 1780,
+      "highlight": true
+    },
+    {
+      "text": "mengguncang",
+      "startFrame": 1780,
+      "endFrame": 1796,
+      "highlight": false
+    },
+    {
+      "text": "seluruh",
+      "startFrame": 1796,
+      "endFrame": 1808,
+      "highlight": false
+    },
+    {
+      "text": "Bandung",
+      "startFrame": 1808,
+      "endFrame": 1814,
+      "highlight": true
+    },
+    {
+      "text": "Selatan!",
+      "startFrame": 1814,
+      "endFrame": 1825,
+      "highlight": false
+    },
+    {
+      "text": "Delapan belas",
+      "startFrame": 1843,
+      "endFrame": 1877,
+      "highlight": true
+    },
+    {
+      "text": "ribu ton",
+      "startFrame": 1877,
+      "endFrame": 1893,
+      "highlight": true
+    },
+    {
+      "text": "mesiu Sekutu",
+      "startFrame": 1893,
+      "endFrame": 1914,
+      "highlight": false
+    },
+    {
+      "text": "hancur",
+      "startFrame": 1914,
+      "endFrame": 1923,
+      "highlight": false
+    },
+    {
+      "text": "berkeping-keping.",
+      "startFrame": 1923,
+      "endFrame": 1943,
+      "highlight": false
+    },
+    {
+      "text": "Esok paginya,",
+      "startFrame": 1992,
+      "endFrame": 2021,
+      "highlight": false
+    },
+    {
+      "text": "Bandung",
+      "startFrame": 2021,
+      "endFrame": 2031,
+      "highlight": true
+    },
+    {
+      "text": "tinggal asap",
+      "startFrame": 2031,
+      "endFrame": 2050,
+      "highlight": false
+    },
+    {
+      "text": "dan bara...",
+      "startFrame": 2050,
+      "endFrame": 2065,
+      "highlight": false
+    },
+    {
+      "text": "namun",
+      "startFrame": 2065,
+      "endFrame": 2080,
+      "highlight": false
+    },
+    {
+      "text": "semangat",
+      "startFrame": 2080,
+      "endFrame": 2092,
+      "highlight": false
+    },
+    {
+      "text": "mereka tak",
+      "startFrame": 2092,
+      "endFrame": 2106,
+      "highlight": false
+    },
+    {
+      "text": "pernah padam.",
+      "startFrame": 2106,
+      "endFrame": 2132,
+      "highlight": false
+    },
+    {
+      "text": "Inilah kisah",
+      "startFrame": 2148,
+      "endFrame": 2168,
+      "highlight": false
+    },
+    {
+      "text": "keberanian",
+      "startFrame": 2168,
+      "endFrame": 2182,
+      "highlight": false
+    },
+    {
+      "text": "abadi,",
+      "startFrame": 2182,
+      "endFrame": 2202,
+      "highlight": true
+    },
+    {
+      "text": "Bandung",
+      "startFrame": 2202,
+      "endFrame": 2210,
+      "highlight": true
+    },
+    {
+      "text": "Lautan Api.",
+      "startFrame": 2210,
+      "endFrame": 2230,
+      "highlight": true
+    }
+  ]
+}

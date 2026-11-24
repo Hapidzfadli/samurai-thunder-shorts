@@ -1,0 +1,68 @@
+[
+  {
+    "scene": "hook",
+    "takes": 1,
+    "lines": [
+      ["narator", "narasi", "Malam Jumat tepat tengah malam, Riko nekat bikin konten uji nyali di rumah kosong angker!"],
+      ["riko", "tegang", "Gas, serius nih rumah ini angker banget! Tunggu, kamu bawa apaan tuh?!"],
+      ["bagas", "santai", "Tenang Rik, pisang goreng hangat sama kopi hitam! Siapa tahu hantunya lapar!"]
+    ]
+  },
+  {
+    "scene": "masuk",
+    "takes": 1,
+    "lines": [
+      ["riko", "tegang", "Pelan-pelan Mas Dedi, senter ke arah beringin! Eh, lampu terasnya kok berkedip sendiri?!"],
+      ["bagas", "santai", "Santai aja, mungkin kabelnya kendor. Tapi kok ada bau menyan campur pisang goreng ya?"]
+    ]
+  },
+  {
+    "scene": "muncul",
+    "takes": 1,
+    "lines": [
+      ["pocong", "tegang", "Berani sekali kalian masuk rumah ini! Mau lari ke mana kalian?!"],
+      ["riko", "tegas", "Ampun Kang Pocong! Mbak Kunti! Tolong, kakiku kaku tidak bisa lari!!"]
+    ]
+  },
+  {
+    "scene": "tawar",
+    "takes": 1,
+    "lines": [
+      ["bagas", "santai", "Eits, jangan seram-seram dulu Kang! Nih pisang goreng masih panas sama kopi hitam, monggo!"],
+      ["pocong", "santai", "Eh, sebentar... ini pisang goreng kepok yang renyah itu ya? Boleh dicoba satu, Mas?"],
+      ["kunti", "santai", "Wah, ada tahu isi juga! Ya ampun Mas, aromanya bikin lupa cara menakuti orang!"]
+    ]
+  },
+  {
+    "scene": "curhat",
+    "takes": 1,
+    "lines": [
+      ["kunti", "santai", "Aslinya capek banget tahu, Mas. Tiap malam Jumat harus lembur terbang demi konten uji nyali!"],
+      ["pocong", "narasi", "Iya nih, betis saya pegal banget melompat terus! Padahal maunya cuma rebahan sambil ngopi!"],
+      ["bagas", "santai", "Waduh, ternyata hantu juga butuh istirahat ya Kang! Ambil lagi tahu isinya, masih banyak!"]
+    ]
+  },
+  {
+    "scene": "viral",
+    "takes": 1,
+    "lines": [
+      ["riko", "tegas", "Waduh Gas! Siaran langsung di ponselku masih menyala! Penontonnya tembus ribuan!!"],
+      ["pocong", "santai", "Halo penonton di rumah! Ini bukan uji nyali, ini acara ngopi dan gorengan tengah malam!"]
+    ]
+  },
+  {
+    "scene": "foto",
+    "takes": 1,
+    "lines": [
+      ["kunti", "santai", "Ayo foto bareng dulu! Eh, minggu depan bawa bakwan ekstra sama cabai rawit ya!"],
+      ["riko", "santai", "Siap Mbak Kunti, Kang Pocong! Satu, dua, tiga... cekrek!"]
+    ]
+  },
+  {
+    "scene": "ending",
+    "takes": 1,
+    "lines": [
+      ["narator", "tegas", "Kalau kamu ketemu hantu ramah kayak gini, pilih kabur atau ajak ngopi? Tulis pertanyaanmu di komentar!"]
+    ]
+  }
+]

@@ -1,0 +1,2646 @@
+{
+ "fps": 30,
+ "totalFrames": 2778,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 402,
+   "lines": [
+    {
+     "speaker": "narator",
+     "style": "narasi",
+     "text": "Malam Jumat tepat tengah malam, Riko nekat bikin konten uji nyali di rumah kosong angker!",
+     "score": 0.993,
+     "file": "out/voice/horor_v2/hook_0.wav",
+     "wordsSec": [
+      [
+       "Malam",
+       0.0,
+       0.36
+      ],
+      [
+       "jumat",
+       0.36,
+       0.66
+      ],
+      [
+       "tepat",
+       0.66,
+       0.92
+      ],
+      [
+       "tengah",
+       0.92,
+       1.2
+      ],
+      [
+       "malam,",
+       1.2,
+       1.66
+      ],
+      [
+       "Rikon",
+       1.88,
+       2.2
+      ],
+      [
+       "nekat",
+       2.2,
+       2.5
+      ],
+      [
+       "bikin",
+       2.5,
+       2.86
+      ],
+      [
+       "konten",
+       2.86,
+       3.22
+      ],
+      [
+       "ujinyali",
+       3.22,
+       3.8
+      ],
+      [
+       "di",
+       3.8,
+       3.88
+      ],
+      [
+       "rumah",
+       3.88,
+       4.08
+      ],
+      [
+       "kosong",
+       4.08,
+       4.5
+      ],
+      [
+       "angker.",
+       4.5,
+       4.84
+      ]
+     ],
+     "from": 8,
+     "to": 156,
+     "words": [
+      {
+       "w": "Malam",
+       "from": 8,
+       "to": 18
+      },
+      {
+       "w": "jumat",
+       "from": 18,
+       "to": 27
+      },
+      {
+       "w": "tepat",
+       "from": 27,
+       "to": 35
+      },
+      {
+       "w": "tengah",
+       "from": 35,
+       "to": 44
+      },
+      {
+       "w": "malam,",
+       "from": 44,
+       "to": 57
+      },
+      {
+       "w": "Rikon",
+       "from": 64,
+       "to": 74
+      },
+      {
+       "w": "nekat",
+       "from": 74,
+       "to": 82
+      },
+      {
+       "w": "bikin",
+       "from": 82,
+       "to": 93
+      },
+      {
+       "w": "konten",
+       "from": 93,
+       "to": 104
+      },
+      {
+       "w": "ujinyali",
+       "from": 104,
+       "to": 122
+      },
+      {
+       "w": "di",
+       "from": 122,
+       "to": 124
+      },
+      {
+       "w": "rumah",
+       "from": 124,
+       "to": 130
+      },
+      {
+       "w": "kosong",
+       "from": 130,
+       "to": 142
+      },
+      {
+       "w": "angker.",
+       "from": 142,
+       "to": 153
+      }
+     ]
+    },
+    {
+     "speaker": "riko",
+     "style": "tegang",
+     "text": "Gas, serius nih rumah ini angker banget! Tunggu, kamu bawa apaan tuh?!",
+     "score": 0.882,
+     "file": "out/voice/horor_v2/hook_1.wav",
+     "wordsSec": [
+      [
+       "Gas",
+       0.0,
+       0.38
+      ],
+      [
+       "serius",
+       0.38,
+       0.86
+      ],
+      [
+       "di",
+       0.86,
+       1.04
+      ],
+      [
+       "rumah",
+       1.04,
+       1.22
+      ],
+      [
+       "ini",
+       1.22,
+       1.44
+      ],
+      [
+       "anker",
+       1.44,
+       1.78
+      ],
+      [
+       "banget",
+       1.78,
+       2.06
+      ],
+      [
+       "tuh,",
+       2.06,
+       2.28
+      ],
+      [
+       "gue",
+       2.32,
+       2.4
+      ],
+      [
+       "bawa",
+       2.4,
+       2.82
+      ],
+      [
+       "apaan",
+       2.82,
+       3.22
+      ],
+      [
+       "tuh?",
+       3.22,
+       3.38
+      ]
+     ],
+     "from": 162,
+     "to": 268,
+     "words": [
+      {
+       "w": "Gas",
+       "from": 162,
+       "to": 174
+      },
+      {
+       "w": "serius",
+       "from": 174,
+       "to": 188
+      },
+      {
+       "w": "di",
+       "from": 188,
+       "to": 194
+      },
+      {
+       "w": "rumah",
+       "from": 194,
+       "to": 199
+      },
+      {
+       "w": "ini",
+       "from": 199,
+       "to": 206
+      },
+      {
+       "w": "anker",
+       "from": 206,
+       "to": 216
+      },
+      {
+       "w": "banget",
+       "from": 216,
+       "to": 224
+      },
+      {
+       "w": "tuh,",
+       "from": 224,
+       "to": 231
+      },
+      {
+       "w": "gue",
+       "from": 232,
+       "to": 234
+      },
+      {
+       "w": "bawa",
+       "from": 234,
+       "to": 247
+      },
+      {
+       "w": "apaan",
+       "from": 247,
+       "to": 259
+      },
+      {
+       "w": "tuh?",
+       "from": 259,
+       "to": 264
+      }
+     ]
+    },
+    {
+     "speaker": "bagas",
+     "style": "santai",
+     "text": "Tenang Rik, pisang goreng hangat sama kopi hitam! Siapa tahu hantunya lapar!",
+     "score": 0.935,
+     "file": "out/voice/horor_v2/hook_2.wav",
+     "wordsSec": [
+      [
+       "Tenang",
+       0.0,
+       0.34
+      ],
+      [
+       "Rick,",
+       0.34,
+       0.52
+      ],
+      [
+       "pisang",
+       0.62,
+       0.88
+      ],
+      [
+       "goreng",
+       0.88,
+       1.16
+      ],
+      [
+       "hangat",
+       1.16,
+       1.38
+      ],
+      [
+       "sama",
+       1.38,
+       1.5
+      ],
+      [
+       "kopi",
+       1.5,
+       1.84
+      ],
+      [
+       "hitam.",
+       1.84,
+       2.14
+      ],
+      [
+       "Gapet",
+       2.32,
+       2.64
+      ],
+      [
+       "tau,",
+       2.64,
+       2.82
+      ],
+      [
+       "hantunya",
+       3.0,
+       3.36
+      ],
+      [
+       "lapar.",
+       3.36,
+       3.72
+      ]
+     ],
+     "from": 274,
+     "to": 389,
+     "words": [
+      {
+       "w": "Tenang",
+       "from": 274,
+       "to": 284
+      },
+      {
+       "w": "Rick,",
+       "from": 284,
+       "to": 290
+      },
+      {
+       "w": "pisang",
+       "from": 292,
+       "to": 300
+      },
+      {
+       "w": "goreng",
+       "from": 300,
+       "to": 309
+      },
+      {
+       "w": "hangat",
+       "from": 309,
+       "to": 315
+      },
+      {
+       "w": "sama",
+       "from": 315,
+       "to": 319
+      },
+      {
+       "w": "kopi",
+       "from": 319,
+       "to": 329
+      },
+      {
+       "w": "hitam.",
+       "from": 329,
+       "to": 338
+      },
+      {
+       "w": "Gapet",
+       "from": 344,
+       "to": 353
+      },
+      {
+       "w": "tau,",
+       "from": 353,
+       "to": 359
+      },
+      {
+       "w": "hantunya",
+       "from": 364,
+       "to": 375
+      },
+      {
+       "w": "lapar.",
+       "from": 375,
+       "to": 386
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "masuk",
+   "from": 402,
+   "to": 703,
+   "lines": [
+    {
+     "speaker": "riko",
+     "style": "tegang",
+     "text": "Pelan-pelan Mas Dedi, senter ke arah beringin! Eh, lampu terasnya kok berkedip sendiri?!",
+     "score": 0.95,
+     "file": "out/voice/horor_v2/masuk_0.wav",
+     "wordsSec": [
+      [
+       "Pelan",
+       0.0,
+       0.28
+      ],
+      [
+       "pelan",
+       0.28,
+       0.56
+      ],
+      [
+       "mas",
+       0.56,
+       0.68
+      ],
+      [
+       "daddy,",
+       0.68,
+       0.9
+      ],
+      [
+       "center",
+       1.16,
+       1.4
+      ],
+      [
+       "ke",
+       1.4,
+       1.62
+      ],
+      [
+       "arah",
+       1.62,
+       1.84
+      ],
+      [
+       "beringin.",
+       1.84,
+       2.26
+      ],
+      [
+       "Eh",
+       2.44,
+       2.62
+      ],
+      [
+       "lampu",
+       2.62,
+       3.22
+      ],
+      [
+       "terasnya",
+       3.22,
+       3.56
+      ],
+      [
+       "kok",
+       3.56,
+       3.68
+      ],
+      [
+       "berkedip",
+       3.68,
+       4.06
+      ],
+      [
+       "sendiri.",
+       4.06,
+       4.32
+      ]
+     ],
+     "from": 402,
+     "to": 541,
+     "words": [
+      {
+       "w": "Pelan",
+       "from": 402,
+       "to": 410
+      },
+      {
+       "w": "pelan",
+       "from": 410,
+       "to": 419
+      },
+      {
+       "w": "mas",
+       "from": 419,
+       "to": 422
+      },
+      {
+       "w": "daddy,",
+       "from": 422,
+       "to": 429
+      },
+      {
+       "w": "center",
+       "from": 436,
+       "to": 444
+      },
+      {
+       "w": "ke",
+       "from": 444,
+       "to": 450
+      },
+      {
+       "w": "arah",
+       "from": 450,
+       "to": 457
+      },
+      {
+       "w": "beringin.",
+       "from": 457,
+       "to": 470
+      },
+      {
+       "w": "Eh",
+       "from": 475,
+       "to": 480
+      },
+      {
+       "w": "lampu",
+       "from": 480,
+       "to": 498
+      },
+      {
+       "w": "terasnya",
+       "from": 498,
+       "to": 508
+      },
+      {
+       "w": "kok",
+       "from": 508,
+       "to": 512
+      },
+      {
+       "w": "berkedip",
+       "from": 512,
+       "to": 524
+      },
+      {
+       "w": "sendiri.",
+       "from": 524,
+       "to": 531
+      }
+     ]
+    },
+    {
+     "speaker": "bagas",
+     "style": "santai",
+     "text": "Santai aja, mungkin kabelnya kendor. Tapi kok ada bau menyan campur pisang goreng ya?",
+     "score": 0.978,
+     "file": "out/voice/horor_v2/masuk_1.wav",
+     "wordsSec": [
+      [
+       "Santai",
+       0.0,
+       0.38
+      ],
+      [
+       "aja",
+       0.38,
+       0.56
+      ],
+      [
+       "mungkin",
+       0.56,
+       0.82
+      ],
+      [
+       "kabelnya",
+       0.82,
+       1.36
+      ],
+      [
+       "kendoor,",
+       1.36,
+       1.88
+      ],
+      [
+       "tapi",
+       2.06,
+       2.5
+      ],
+      [
+       "kok",
+       2.5,
+       2.64
+      ],
+      [
+       "ada",
+       2.64,
+       2.84
+      ],
+      [
+       "bau",
+       2.84,
+       3.1
+      ],
+      [
+       "menyencampur",
+       3.1,
+       3.92
+      ],
+      [
+       "pisang",
+       3.92,
+       4.2
+      ],
+      [
+       "goreng",
+       4.2,
+       4.54
+      ],
+      [
+       "ya?",
+       4.54,
+       4.62
+      ]
+     ],
+     "from": 547,
+     "to": 690,
+     "words": [
+      {
+       "w": "Santai",
+       "from": 547,
+       "to": 558
+      },
+      {
+       "w": "aja",
+       "from": 558,
+       "to": 564
+      },
+      {
+       "w": "mungkin",
+       "from": 564,
+       "to": 572
+      },
+      {
+       "w": "kabelnya",
+       "from": 572,
+       "to": 588
+      },
+      {
+       "w": "kendoor,",
+       "from": 588,
+       "to": 603
+      },
+      {
+       "w": "tapi",
+       "from": 609,
+       "to": 622
+      },
+      {
+       "w": "kok",
+       "from": 622,
+       "to": 626
+      },
+      {
+       "w": "ada",
+       "from": 626,
+       "to": 632
+      },
+      {
+       "w": "bau",
+       "from": 632,
+       "to": 640
+      },
+      {
+       "w": "menyencampur",
+       "from": 640,
+       "to": 664
+      },
+      {
+       "w": "pisang",
+       "from": 664,
+       "to": 673
+      },
+      {
+       "w": "goreng",
+       "from": 673,
+       "to": 683
+      },
+      {
+       "w": "ya?",
+       "from": 683,
+       "to": 686
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "muncul",
+   "from": 703,
+   "to": 965,
+   "lines": [
+    {
+     "speaker": "pocong",
+     "style": "tegang",
+     "text": "Berani sekali kalian masuk rumah ini! Mau lari ke mana kalian?!",
+     "score": 0.98,
+     "file": "out/voice/horor_v2/muncul_0.wav",
+     "wordsSec": [
+      [
+       "Berani",
+       0.0,
+       0.38
+      ],
+      [
+       "sekali",
+       0.38,
+       0.58
+      ],
+      [
+       "kalian",
+       0.58,
+       0.92
+      ],
+      [
+       "masuk",
+       0.92,
+       1.22
+      ],
+      [
+       "rumah",
+       1.22,
+       1.48
+      ],
+      [
+       "ini,",
+       1.48,
+       1.7
+      ],
+      [
+       "mulai",
+       2.02,
+       2.38
+      ],
+      [
+       "kemana",
+       2.38,
+       2.64
+      ],
+      [
+       "kalian",
+       2.64,
+       2.9
+      ]
+     ],
+     "from": 703,
+     "to": 802,
+     "words": [
+      {
+       "w": "Berani",
+       "from": 703,
+       "to": 714
+      },
+      {
+       "w": "sekali",
+       "from": 714,
+       "to": 720
+      },
+      {
+       "w": "kalian",
+       "from": 720,
+       "to": 731
+      },
+      {
+       "w": "masuk",
+       "from": 731,
+       "to": 740
+      },
+      {
+       "w": "rumah",
+       "from": 740,
+       "to": 747
+      },
+      {
+       "w": "ini,",
+       "from": 747,
+       "to": 754
+      },
+      {
+       "w": "mulai",
+       "from": 764,
+       "to": 774
+      },
+      {
+       "w": "kemana",
+       "from": 774,
+       "to": 782
+      },
+      {
+       "w": "kalian",
+       "from": 782,
+       "to": 790
+      }
+     ]
+    },
+    {
+     "speaker": "riko",
+     "style": "tegas",
+     "text": "Ampun Kang Pocong! Mbak Kunti! Tolong, kakiku kaku tidak bisa lari!!",
+     "score": 0.972,
+     "file": "out/voice/horor_v2/muncul_1.wav",
+     "wordsSec": [
+      [
+       "Ampun",
+       0.0,
+       0.36
+      ],
+      [
+       "Gangpocong,",
+       0.36,
+       1.04
+      ],
+      [
+       "Mbak",
+       1.24,
+       1.56
+      ],
+      [
+       "Kunti,",
+       1.56,
+       2.16
+      ],
+      [
+       "tolong,",
+       2.38,
+       2.8
+      ],
+      [
+       "keakiku",
+       3.0,
+       3.34
+      ],
+      [
+       "-kaku",
+       3.34,
+       3.72
+      ],
+      [
+       "tidak",
+       3.72,
+       3.94
+      ],
+      [
+       "bisa",
+       3.94,
+       4.18
+      ],
+      [
+       "lari!",
+       4.18,
+       4.6
+      ]
+     ],
+     "from": 808,
+     "to": 952,
+     "words": [
+      {
+       "w": "Ampun",
+       "from": 808,
+       "to": 819
+      },
+      {
+       "w": "Gangpocong,",
+       "from": 819,
+       "to": 840
+      },
+      {
+       "w": "Mbak",
+       "from": 846,
+       "to": 855
+      },
+      {
+       "w": "Kunti,",
+       "from": 855,
+       "to": 873
+      },
+      {
+       "w": "tolong,",
+       "from": 880,
+       "to": 892
+      },
+      {
+       "w": "keakiku",
+       "from": 898,
+       "to": 909
+      },
+      {
+       "w": "-kaku",
+       "from": 909,
+       "to": 920
+      },
+      {
+       "w": "tidak",
+       "from": 920,
+       "to": 927
+      },
+      {
+       "w": "bisa",
+       "from": 927,
+       "to": 934
+      },
+      {
+       "w": "lari!",
+       "from": 934,
+       "to": 946
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "tawar",
+   "from": 965,
+   "to": 1452,
+   "lines": [
+    {
+     "speaker": "bagas",
+     "style": "santai",
+     "text": "Eits, jangan seram-seram dulu Kang! Nih pisang goreng masih panas sama kopi hitam, monggo!",
+     "score": 0.958,
+     "file": "out/voice/horor_v2/tawar_0.wav",
+     "wordsSec": [
+      [
+       "Eh",
+       0.0,
+       0.16
+      ],
+      [
+       "jangan",
+       0.16,
+       0.56
+      ],
+      [
+       "seram",
+       0.56,
+       0.86
+      ],
+      [
+       "-seram",
+       0.86,
+       1.1
+      ],
+      [
+       "dulu",
+       1.1,
+       1.28
+      ],
+      [
+       "kang,",
+       1.28,
+       2.44
+      ],
+      [
+       "ini",
+       2.44,
+       2.76
+      ],
+      [
+       "pisang",
+       2.76,
+       3.04
+      ],
+      [
+       "goreng",
+       3.04,
+       3.36
+      ],
+      [
+       "masih",
+       3.36,
+       3.5
+      ],
+      [
+       "panas",
+       3.5,
+       3.84
+      ],
+      [
+       "sama",
+       3.84,
+       4.0
+      ],
+      [
+       "kopi",
+       4.0,
+       4.28
+      ],
+      [
+       "hitam,",
+       4.28,
+       4.72
+      ],
+      [
+       "monggo.",
+       5.12,
+       5.58
+      ]
+     ],
+     "from": 965,
+     "to": 1137,
+     "words": [
+      {
+       "w": "Eh",
+       "from": 965,
+       "to": 970
+      },
+      {
+       "w": "jangan",
+       "from": 970,
+       "to": 982
+      },
+      {
+       "w": "seram",
+       "from": 982,
+       "to": 991
+      },
+      {
+       "w": "-seram",
+       "from": 991,
+       "to": 998
+      },
+      {
+       "w": "dulu",
+       "from": 998,
+       "to": 1003
+      },
+      {
+       "w": "kang,",
+       "from": 1003,
+       "to": 1038
+      },
+      {
+       "w": "ini",
+       "from": 1038,
+       "to": 1048
+      },
+      {
+       "w": "pisang",
+       "from": 1048,
+       "to": 1056
+      },
+      {
+       "w": "goreng",
+       "from": 1056,
+       "to": 1066
+      },
+      {
+       "w": "masih",
+       "from": 1066,
+       "to": 1070
+      },
+      {
+       "w": "panas",
+       "from": 1070,
+       "to": 1080
+      },
+      {
+       "w": "sama",
+       "from": 1080,
+       "to": 1085
+      },
+      {
+       "w": "kopi",
+       "from": 1085,
+       "to": 1093
+      },
+      {
+       "w": "hitam,",
+       "from": 1093,
+       "to": 1106
+      },
+      {
+       "w": "monggo.",
+       "from": 1118,
+       "to": 1132
+      }
+     ]
+    },
+    {
+     "speaker": "pocong",
+     "style": "santai",
+     "text": "Eh, sebentar... ini pisang goreng kepok yang renyah itu ya? Boleh dicoba satu, Mas?",
+     "score": 0.983,
+     "file": "out/voice/horor_v2/tawar_1.wav",
+     "wordsSec": [
+      [
+       "Eh,",
+       0.0,
+       0.22
+      ],
+      [
+       "sebentar,",
+       0.9,
+       1.4
+      ],
+      [
+       "ini",
+       1.98,
+       2.1
+      ],
+      [
+       "pisang",
+       2.1,
+       2.4
+      ],
+      [
+       "goreng",
+       2.4,
+       2.66
+      ],
+      [
+       "kepok",
+       2.66,
+       2.9
+      ],
+      [
+       "yang",
+       2.9,
+       3.02
+      ],
+      [
+       "renyai",
+       3.02,
+       3.38
+      ],
+      [
+       "itu",
+       3.38,
+       3.56
+      ],
+      [
+       "ya,",
+       3.56,
+       3.7
+      ],
+      [
+       "boleh",
+       4.18,
+       4.4
+      ],
+      [
+       "dicoba",
+       4.4,
+       4.7
+      ],
+      [
+       "satu",
+       4.7,
+       4.98
+      ],
+      [
+       "mas",
+       4.98,
+       5.08
+      ]
+     ],
+     "from": 1143,
+     "to": 1303,
+     "words": [
+      {
+       "w": "Eh,",
+       "from": 1143,
+       "to": 1150
+      },
+      {
+       "w": "sebentar,",
+       "from": 1170,
+       "to": 1185
+      },
+      {
+       "w": "ini",
+       "from": 1202,
+       "to": 1206
+      },
+      {
+       "w": "pisang",
+       "from": 1206,
+       "to": 1215
+      },
+      {
+       "w": "goreng",
+       "from": 1215,
+       "to": 1223
+      },
+      {
+       "w": "kepok",
+       "from": 1223,
+       "to": 1230
+      },
+      {
+       "w": "yang",
+       "from": 1230,
+       "to": 1234
+      },
+      {
+       "w": "renyai",
+       "from": 1234,
+       "to": 1244
+      },
+      {
+       "w": "itu",
+       "from": 1244,
+       "to": 1250
+      },
+      {
+       "w": "ya,",
+       "from": 1250,
+       "to": 1254
+      },
+      {
+       "w": "boleh",
+       "from": 1268,
+       "to": 1275
+      },
+      {
+       "w": "dicoba",
+       "from": 1275,
+       "to": 1284
+      },
+      {
+       "w": "satu",
+       "from": 1284,
+       "to": 1292
+      },
+      {
+       "w": "mas",
+       "from": 1292,
+       "to": 1295
+      }
+     ]
+    },
+    {
+     "speaker": "kunti",
+     "style": "santai",
+     "text": "Wah, ada tahu isi juga! Ya ampun Mas, aromanya bikin lupa cara menakuti orang!",
+     "score": 0.992,
+     "file": "out/voice/horor_v2/tawar_2.wav",
+     "wordsSec": [
+      [
+       "Wah",
+       0.0,
+       0.22
+      ],
+      [
+       "ada",
+       0.22,
+       0.52
+      ],
+      [
+       "tau",
+       0.52,
+       0.74
+      ],
+      [
+       "isi",
+       0.74,
+       0.98
+      ],
+      [
+       "juga,",
+       0.98,
+       1.28
+      ],
+      [
+       "ya",
+       1.58,
+       1.68
+      ],
+      [
+       "ampun",
+       1.68,
+       2.0
+      ],
+      [
+       "mas,",
+       2.0,
+       2.2
+      ],
+      [
+       "aromanya",
+       2.26,
+       2.64
+      ],
+      [
+       "bikin",
+       2.64,
+       2.92
+      ],
+      [
+       "lupa",
+       2.92,
+       3.1
+      ],
+      [
+       "cara",
+       3.1,
+       3.3
+      ],
+      [
+       "menakuti",
+       3.3,
+       3.8
+      ],
+      [
+       "orang",
+       3.8,
+       4.04
+      ]
+     ],
+     "from": 1309,
+     "to": 1439,
+     "words": [
+      {
+       "w": "Wah",
+       "from": 1309,
+       "to": 1316
+      },
+      {
+       "w": "ada",
+       "from": 1316,
+       "to": 1325
+      },
+      {
+       "w": "tau",
+       "from": 1325,
+       "to": 1332
+      },
+      {
+       "w": "isi",
+       "from": 1332,
+       "to": 1339
+      },
+      {
+       "w": "juga,",
+       "from": 1339,
+       "to": 1348
+      },
+      {
+       "w": "ya",
+       "from": 1357,
+       "to": 1360
+      },
+      {
+       "w": "ampun",
+       "from": 1360,
+       "to": 1369
+      },
+      {
+       "w": "mas,",
+       "from": 1369,
+       "to": 1375
+      },
+      {
+       "w": "aromanya",
+       "from": 1377,
+       "to": 1389
+      },
+      {
+       "w": "bikin",
+       "from": 1389,
+       "to": 1397
+      },
+      {
+       "w": "lupa",
+       "from": 1397,
+       "to": 1402
+      },
+      {
+       "w": "cara",
+       "from": 1402,
+       "to": 1408
+      },
+      {
+       "w": "menakuti",
+       "from": 1408,
+       "to": 1423
+      },
+      {
+       "w": "orang",
+       "from": 1423,
+       "to": 1431
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "curhat",
+   "from": 1452,
+   "to": 1964,
+   "lines": [
+    {
+     "speaker": "kunti",
+     "style": "santai",
+     "text": "Aslinya capek banget tahu, Mas. Tiap malam Jumat harus lembur terbang demi konten uji nyali!",
+     "score": 0.973,
+     "file": "out/voice/horor_v2/curhat_0.wav",
+     "wordsSec": [
+      [
+       "Aslinya",
+       0.0,
+       0.44
+      ],
+      [
+       "capek",
+       0.44,
+       0.8
+      ],
+      [
+       "banget",
+       0.8,
+       0.98
+      ],
+      [
+       "tau",
+       0.98,
+       1.26
+      ],
+      [
+       "mas,",
+       1.26,
+       1.7
+      ],
+      [
+       "tiap",
+       2.1,
+       2.34
+      ],
+      [
+       "malam",
+       2.34,
+       2.62
+      ],
+      [
+       "cuma",
+       2.62,
+       2.78
+      ],
+      [
+       "harus",
+       2.78,
+       3.0
+      ],
+      [
+       "lembur",
+       3.0,
+       3.34
+      ],
+      [
+       "terbang",
+       3.34,
+       3.64
+      ],
+      [
+       "demi",
+       3.64,
+       3.82
+      ],
+      [
+       "konten",
+       3.82,
+       4.18
+      ],
+      [
+       "uji",
+       4.18,
+       4.42
+      ],
+      [
+       "nyali.",
+       4.42,
+       4.66
+      ]
+     ],
+     "from": 1452,
+     "to": 1600,
+     "words": [
+      {
+       "w": "Aslinya",
+       "from": 1452,
+       "to": 1465
+      },
+      {
+       "w": "capek",
+       "from": 1465,
+       "to": 1476
+      },
+      {
+       "w": "banget",
+       "from": 1476,
+       "to": 1481
+      },
+      {
+       "w": "tau",
+       "from": 1481,
+       "to": 1489
+      },
+      {
+       "w": "mas,",
+       "from": 1489,
+       "to": 1503
+      },
+      {
+       "w": "tiap",
+       "from": 1515,
+       "to": 1522
+      },
+      {
+       "w": "malam",
+       "from": 1522,
+       "to": 1530
+      },
+      {
+       "w": "cuma",
+       "from": 1530,
+       "to": 1535
+      },
+      {
+       "w": "harus",
+       "from": 1535,
+       "to": 1542
+      },
+      {
+       "w": "lembur",
+       "from": 1542,
+       "to": 1552
+      },
+      {
+       "w": "terbang",
+       "from": 1552,
+       "to": 1561
+      },
+      {
+       "w": "demi",
+       "from": 1561,
+       "to": 1566
+      },
+      {
+       "w": "konten",
+       "from": 1566,
+       "to": 1577
+      },
+      {
+       "w": "uji",
+       "from": 1577,
+       "to": 1584
+      },
+      {
+       "w": "nyali.",
+       "from": 1584,
+       "to": 1591
+      }
+     ]
+    },
+    {
+     "speaker": "pocong",
+     "style": "narasi",
+     "text": "Iya nih, betis saya pegal banget melompat terus! Padahal maunya cuma rebahan sambil ngopi!",
+     "score": 0.993,
+     "file": "out/voice/horor_v2/curhat_1.wav",
+     "wordsSec": [
+      [
+       "Iya",
+       0.0,
+       0.18
+      ],
+      [
+       "nih,",
+       0.18,
+       0.36
+      ],
+      [
+       "beti",
+       0.6,
+       0.84
+      ],
+      [
+       "saya",
+       0.84,
+       0.98
+      ],
+      [
+       "pegal",
+       0.98,
+       1.34
+      ],
+      [
+       "banget",
+       1.34,
+       1.66
+      ],
+      [
+       "melompat",
+       1.66,
+       2.12
+      ],
+      [
+       "terus,",
+       2.12,
+       2.36
+      ],
+      [
+       "padahal",
+       2.84,
+       3.5
+      ],
+      [
+       "maunya",
+       3.5,
+       3.8
+      ],
+      [
+       "cuma",
+       3.8,
+       4.08
+      ],
+      [
+       "rebahan",
+       4.08,
+       4.62
+      ],
+      [
+       "sambil",
+       4.62,
+       4.96
+      ],
+      [
+       "ngopi.",
+       4.96,
+       5.4
+      ]
+     ],
+     "from": 1606,
+     "to": 1771,
+     "words": [
+      {
+       "w": "Iya",
+       "from": 1606,
+       "to": 1611
+      },
+      {
+       "w": "nih,",
+       "from": 1611,
+       "to": 1617
+      },
+      {
+       "w": "beti",
+       "from": 1624,
+       "to": 1631
+      },
+      {
+       "w": "saya",
+       "from": 1631,
+       "to": 1635
+      },
+      {
+       "w": "pegal",
+       "from": 1635,
+       "to": 1646
+      },
+      {
+       "w": "banget",
+       "from": 1646,
+       "to": 1656
+      },
+      {
+       "w": "melompat",
+       "from": 1656,
+       "to": 1670
+      },
+      {
+       "w": "terus,",
+       "from": 1670,
+       "to": 1677
+      },
+      {
+       "w": "padahal",
+       "from": 1691,
+       "to": 1711
+      },
+      {
+       "w": "maunya",
+       "from": 1711,
+       "to": 1720
+      },
+      {
+       "w": "cuma",
+       "from": 1720,
+       "to": 1728
+      },
+      {
+       "w": "rebahan",
+       "from": 1728,
+       "to": 1745
+      },
+      {
+       "w": "sambil",
+       "from": 1745,
+       "to": 1755
+      },
+      {
+       "w": "ngopi.",
+       "from": 1755,
+       "to": 1768
+      }
+     ]
+    },
+    {
+     "speaker": "bagas",
+     "style": "santai",
+     "text": "Waduh, ternyata hantu juga butuh istirahat ya Kang! Ambil lagi tahu isinya, masih banyak!",
+     "score": 0.944,
+     "file": "out/voice/horor_v2/curhat_2.wav",
+     "wordsSec": [
+      [
+       "Waduh,",
+       0.0,
+       0.52
+      ],
+      [
+       "ternyata",
+       0.72,
+       1.1
+      ],
+      [
+       "hantu",
+       1.1,
+       1.42
+      ],
+      [
+       "juga",
+       1.42,
+       1.64
+      ],
+      [
+       "butuh",
+       1.64,
+       1.92
+      ],
+      [
+       "istirahat",
+       1.92,
+       2.4
+      ],
+      [
+       "ya,",
+       2.4,
+       2.48
+      ],
+      [
+       "kang.",
+       2.6,
+       3.3
+      ],
+      [
+       "Mereli",
+       3.48,
+       4.04
+      ],
+      [
+       "lagi",
+       4.04,
+       4.18
+      ],
+      [
+       "tau",
+       4.18,
+       4.46
+      ],
+      [
+       "isinya",
+       4.46,
+       4.82
+      ],
+      [
+       "masih",
+       4.82,
+       5.04
+      ],
+      [
+       "banyak.",
+       5.04,
+       5.36
+      ]
+     ],
+     "from": 1777,
+     "to": 1952,
+     "words": [
+      {
+       "w": "Waduh,",
+       "from": 1777,
+       "to": 1793
+      },
+      {
+       "w": "ternyata",
+       "from": 1799,
+       "to": 1810
+      },
+      {
+       "w": "hantu",
+       "from": 1810,
+       "to": 1820
+      },
+      {
+       "w": "juga",
+       "from": 1820,
+       "to": 1827
+      },
+      {
+       "w": "butuh",
+       "from": 1827,
+       "to": 1835
+      },
+      {
+       "w": "istirahat",
+       "from": 1835,
+       "to": 1849
+      },
+      {
+       "w": "ya,",
+       "from": 1849,
+       "to": 1852
+      },
+      {
+       "w": "kang.",
+       "from": 1855,
+       "to": 1876
+      },
+      {
+       "w": "Mereli",
+       "from": 1882,
+       "to": 1899
+      },
+      {
+       "w": "lagi",
+       "from": 1899,
+       "to": 1903
+      },
+      {
+       "w": "tau",
+       "from": 1903,
+       "to": 1911
+      },
+      {
+       "w": "isinya",
+       "from": 1911,
+       "to": 1922
+      },
+      {
+       "w": "masih",
+       "from": 1922,
+       "to": 1929
+      },
+      {
+       "w": "banyak.",
+       "from": 1929,
+       "to": 1938
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "viral",
+   "from": 1964,
+   "to": 2319,
+   "lines": [
+    {
+     "speaker": "riko",
+     "style": "tegas",
+     "text": "Waduh Gas! Siaran langsung di ponselku masih menyala! Penontonnya tembus ribuan!!",
+     "score": 1.0,
+     "file": "out/voice/horor_v2/viral_0.wav",
+     "wordsSec": [
+      [
+       "Waduh",
+       0.0,
+       0.32
+      ],
+      [
+       "gas,",
+       0.32,
+       0.58
+      ],
+      [
+       "siaran",
+       0.92,
+       1.36
+      ],
+      [
+       "langsung",
+       1.36,
+       1.84
+      ],
+      [
+       "di",
+       1.84,
+       1.98
+      ],
+      [
+       "ponselku",
+       1.98,
+       2.52
+      ],
+      [
+       "masih",
+       2.52,
+       2.76
+      ],
+      [
+       "menyala,",
+       2.76,
+       3.26
+      ],
+      [
+       "penontonnya",
+       3.52,
+       4.06
+      ],
+      [
+       "tembus",
+       4.06,
+       4.5
+      ],
+      [
+       "ribuan",
+       4.5,
+       4.92
+      ]
+     ],
+     "from": 1964,
+     "to": 2116,
+     "words": [
+      {
+       "w": "Waduh",
+       "from": 1964,
+       "to": 1974
+      },
+      {
+       "w": "gas,",
+       "from": 1974,
+       "to": 1982
+      },
+      {
+       "w": "siaran",
+       "from": 1992,
+       "to": 2005
+      },
+      {
+       "w": "langsung",
+       "from": 2005,
+       "to": 2020
+      },
+      {
+       "w": "di",
+       "from": 2020,
+       "to": 2024
+      },
+      {
+       "w": "ponselku",
+       "from": 2024,
+       "to": 2040
+      },
+      {
+       "w": "masih",
+       "from": 2040,
+       "to": 2047
+      },
+      {
+       "w": "menyala,",
+       "from": 2047,
+       "to": 2062
+      },
+      {
+       "w": "penontonnya",
+       "from": 2070,
+       "to": 2086
+      },
+      {
+       "w": "tembus",
+       "from": 2086,
+       "to": 2099
+      },
+      {
+       "w": "ribuan",
+       "from": 2099,
+       "to": 2112
+      }
+     ]
+    },
+    {
+     "speaker": "pocong",
+     "style": "santai",
+     "text": "Halo penonton di rumah! Ini bukan uji nyali, ini acara ngopi dan gorengan tengah malam!",
+     "score": 1.0,
+     "file": "out/voice/horor_v2/viral_1.wav",
+     "wordsSec": [
+      [
+       "Halo",
+       0.0,
+       0.4
+      ],
+      [
+       "penonton",
+       0.4,
+       1.02
+      ],
+      [
+       "di",
+       1.02,
+       1.28
+      ],
+      [
+       "rumah,",
+       1.28,
+       1.66
+      ],
+      [
+       "ini",
+       2.22,
+       2.4
+      ],
+      [
+       "bukan",
+       2.4,
+       2.68
+      ],
+      [
+       "uji",
+       2.68,
+       3.08
+      ],
+      [
+       "nyali,",
+       3.08,
+       3.5
+      ],
+      [
+       "ini",
+       3.78,
+       3.94
+      ],
+      [
+       "acara",
+       3.94,
+       4.36
+      ],
+      [
+       "ngopi",
+       4.36,
+       4.76
+      ],
+      [
+       "dan",
+       4.76,
+       4.88
+      ],
+      [
+       "gorengan",
+       4.88,
+       5.3
+      ],
+      [
+       "tengah",
+       5.3,
+       5.58
+      ],
+      [
+       "malam.",
+       5.58,
+       6.04
+      ]
+     ],
+     "from": 2122,
+     "to": 2307,
+     "words": [
+      {
+       "w": "Halo",
+       "from": 2122,
+       "to": 2134
+      },
+      {
+       "w": "penonton",
+       "from": 2134,
+       "to": 2152
+      },
+      {
+       "w": "di",
+       "from": 2152,
+       "to": 2160
+      },
+      {
+       "w": "rumah,",
+       "from": 2160,
+       "to": 2171
+      },
+      {
+       "w": "ini",
+       "from": 2188,
+       "to": 2194
+      },
+      {
+       "w": "bukan",
+       "from": 2194,
+       "to": 2202
+      },
+      {
+       "w": "uji",
+       "from": 2202,
+       "to": 2214
+      },
+      {
+       "w": "nyali,",
+       "from": 2214,
+       "to": 2227
+      },
+      {
+       "w": "ini",
+       "from": 2235,
+       "to": 2240
+      },
+      {
+       "w": "acara",
+       "from": 2240,
+       "to": 2252
+      },
+      {
+       "w": "ngopi",
+       "from": 2252,
+       "to": 2264
+      },
+      {
+       "w": "dan",
+       "from": 2264,
+       "to": 2268
+      },
+      {
+       "w": "gorengan",
+       "from": 2268,
+       "to": 2281
+      },
+      {
+       "w": "tengah",
+       "from": 2281,
+       "to": 2289
+      },
+      {
+       "w": "malam.",
+       "from": 2289,
+       "to": 2303
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "foto",
+   "from": 2319,
+   "to": 2610,
+   "lines": [
+    {
+     "speaker": "kunti",
+     "style": "santai",
+     "text": "Ayo foto bareng dulu! Eh, minggu depan bawa bakwan ekstra sama cabai rawit ya!",
+     "score": 0.976,
+     "file": "out/voice/horor_v2/foto_0.wav",
+     "wordsSec": [
+      [
+       "ayo",
+       0.0,
+       0.28
+      ],
+      [
+       "foto",
+       0.28,
+       0.48
+      ],
+      [
+       "bareng",
+       0.48,
+       0.86
+      ],
+      [
+       "dulu",
+       0.86,
+       1.08
+      ],
+      [
+       "eh",
+       1.08,
+       1.46
+      ],
+      [
+       "minggu",
+       1.46,
+       1.88
+      ],
+      [
+       "depan",
+       1.88,
+       2.12
+      ],
+      [
+       "bawa",
+       2.12,
+       2.34
+      ],
+      [
+       "bakuan",
+       2.34,
+       2.66
+      ],
+      [
+       "ekstra",
+       2.66,
+       2.94
+      ],
+      [
+       "sama",
+       2.94,
+       3.16
+      ],
+      [
+       "cabir",
+       3.16,
+       3.52
+      ],
+      [
+       "awit",
+       3.52,
+       3.78
+      ],
+      [
+       "ya",
+       3.78,
+       3.9
+      ]
+     ],
+     "from": 2319,
+     "to": 2444,
+     "words": [
+      {
+       "w": "ayo",
+       "from": 2319,
+       "to": 2328
+      },
+      {
+       "w": "foto",
+       "from": 2328,
+       "to": 2334
+      },
+      {
+       "w": "bareng",
+       "from": 2334,
+       "to": 2345
+      },
+      {
+       "w": "dulu",
+       "from": 2345,
+       "to": 2352
+      },
+      {
+       "w": "eh",
+       "from": 2352,
+       "to": 2363
+      },
+      {
+       "w": "minggu",
+       "from": 2363,
+       "to": 2376
+      },
+      {
+       "w": "depan",
+       "from": 2376,
+       "to": 2383
+      },
+      {
+       "w": "bawa",
+       "from": 2383,
+       "to": 2390
+      },
+      {
+       "w": "bakuan",
+       "from": 2390,
+       "to": 2399
+      },
+      {
+       "w": "ekstra",
+       "from": 2399,
+       "to": 2408
+      },
+      {
+       "w": "sama",
+       "from": 2408,
+       "to": 2414
+      },
+      {
+       "w": "cabir",
+       "from": 2414,
+       "to": 2425
+      },
+      {
+       "w": "awit",
+       "from": 2425,
+       "to": 2433
+      },
+      {
+       "w": "ya",
+       "from": 2433,
+       "to": 2436
+      }
+     ]
+    },
+    {
+     "speaker": "riko",
+     "style": "santai",
+     "text": "Siap Mbak Kunti, Kang Pocong! Satu, dua, tiga... cekrek!",
+     "score": 0.982,
+     "file": "out/voice/horor_v2/foto_1.wav",
+     "wordsSec": [
+      [
+       "Siap,",
+       0.0,
+       0.32
+      ],
+      [
+       "Mak",
+       0.52,
+       0.52
+      ],
+      [
+       "Kunti,",
+       0.52,
+       0.86
+      ],
+      [
+       "Kang",
+       0.96,
+       1.04
+      ],
+      [
+       "Pocong,",
+       1.04,
+       1.46
+      ],
+      [
+       "1,",
+       1.74,
+       2.32
+      ],
+      [
+       "2,",
+       2.8,
+       3.14
+      ],
+      [
+       "3,",
+       3.42,
+       3.96
+      ],
+      [
+       "Cekrek!",
+       4.38,
+       4.8
+      ]
+     ],
+     "from": 2450,
+     "to": 2597,
+     "words": [
+      {
+       "w": "Siap,",
+       "from": 2450,
+       "to": 2459
+      },
+      {
+       "w": "Mak",
+       "from": 2465,
+       "to": 2465
+      },
+      {
+       "w": "Kunti,",
+       "from": 2465,
+       "to": 2475
+      },
+      {
+       "w": "Kang",
+       "from": 2478,
+       "to": 2481
+      },
+      {
+       "w": "Pocong,",
+       "from": 2481,
+       "to": 2493
+      },
+      {
+       "w": "1,",
+       "from": 2502,
+       "to": 2519
+      },
+      {
+       "w": "2,",
+       "from": 2534,
+       "to": 2544
+      },
+      {
+       "w": "3,",
+       "from": 2552,
+       "to": 2568
+      },
+      {
+       "w": "Cekrek!",
+       "from": 2581,
+       "to": 2594
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ending",
+   "from": 2610,
+   "to": 2770,
+   "lines": [
+    {
+     "speaker": "narator",
+     "style": "tegas",
+     "text": "Kalau kamu ketemu hantu ramah kayak gini, pilih kabur atau ajak ngopi? Tulis pertanyaanmu di komentar!",
+     "score": 0.994,
+     "file": "out/voice/horor_v2/ending_0.wav",
+     "wordsSec": [
+      [
+       "Kalau",
+       0.0,
+       0.16
+      ],
+      [
+       "kamu",
+       0.16,
+       0.38
+      ],
+      [
+       "ketemu",
+       0.38,
+       0.7
+      ],
+      [
+       "hantur",
+       0.7,
+       0.98
+      ],
+      [
+       "ama",
+       0.98,
+       1.12
+      ],
+      [
+       "kayak",
+       1.12,
+       1.32
+      ],
+      [
+       "gini,",
+       1.32,
+       1.6
+      ],
+      [
+       "pilih",
+       1.86,
+       2.16
+      ],
+      [
+       "kabur",
+       2.16,
+       2.4
+      ],
+      [
+       "atau",
+       2.4,
+       2.6
+      ],
+      [
+       "ajak",
+       2.6,
+       2.88
+      ],
+      [
+       "ngopi,",
+       2.88,
+       3.22
+      ],
+      [
+       "tulis",
+       3.38,
+       3.66
+      ],
+      [
+       "pertanyaanmu",
+       3.66,
+       4.22
+      ],
+      [
+       "di",
+       4.22,
+       4.32
+      ],
+      [
+       "komentar.",
+       4.32,
+       4.72
+      ]
+     ],
+     "from": 2610,
+     "to": 2758,
+     "words": [
+      {
+       "w": "Kalau",
+       "from": 2610,
+       "to": 2614
+      },
+      {
+       "w": "kamu",
+       "from": 2614,
+       "to": 2621
+      },
+      {
+       "w": "ketemu",
+       "from": 2621,
+       "to": 2631
+      },
+      {
+       "w": "hantur",
+       "from": 2631,
+       "to": 2639
+      },
+      {
+       "w": "ama",
+       "from": 2639,
+       "to": 2643
+      },
+      {
+       "w": "kayak",
+       "from": 2643,
+       "to": 2649
+      },
+      {
+       "w": "gini,",
+       "from": 2649,
+       "to": 2658
+      },
+      {
+       "w": "pilih",
+       "from": 2665,
+       "to": 2674
+      },
+      {
+       "w": "kabur",
+       "from": 2674,
+       "to": 2682
+      },
+      {
+       "w": "atau",
+       "from": 2682,
+       "to": 2688
+      },
+      {
+       "w": "ajak",
+       "from": 2688,
+       "to": 2696
+      },
+      {
+       "w": "ngopi,",
+       "from": 2696,
+       "to": 2706
+      },
+      {
+       "w": "tulis",
+       "from": 2711,
+       "to": 2719
+      },
+      {
+       "w": "pertanyaanmu",
+       "from": 2719,
+       "to": 2736
+      },
+      {
+       "w": "di",
+       "from": 2736,
+       "to": 2739
+      },
+      {
+       "w": "komentar.",
+       "from": 2739,
+       "to": 2751
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
