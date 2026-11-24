@@ -15,7 +15,10 @@ export type BeanParams = {
   skin?: string;
   torso?: string;
   pants?: string;
-  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping" | "brodie" | "steel90" | "headband" | "officer";
+  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping" | "brodie" | "steel90" | "headband" | "officer" | "pocong" | "kunti";
+  pocong?: boolean; // comedic Indonesian wrapped kain kafan shroud with top knot & ties
+  kunti?: boolean; // comedic floating long-haired ghost with flowing scalloped white gown
+  tired?: boolean; // subtle tired dark under-eye bags (overworked Friday-night ghosts!)
   pangsi?: string; // loose trousers drawn over the legs
   sleeves?: string; // long sleeves (kampret / kebaya)
   kebaya?: string; // kebaya top with lace edge (uses torso colour)
@@ -325,27 +328,47 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   c.translate(-300, -975 - bob);
   const hipY = 640;
   const shY = 350;
-  // far leg + arm
-  limb(c, 280, hipY, 165, 170, lL, 10);
-  const footL = tip(...tip(280, hipY, 165, lL[0]), 170, lL[0] + lL[1]);
-  if (p.robe) slipper(c, footL[0], footL[1], p.robeTrim ?? "#8a3a2a");
-  else if (p.boots) {
-    const kneeL = tip(280, hipY, 165, lL[0]);
-    seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 22, "#7a6a4a"); // calf puttees
-    seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 14, "#92805a");
-    poly(c, [[footL[0] - 14, footL[1] - 28], [footL[0] + 14, footL[1] - 28], [footL[0] + 44, footL[1] - 6], [footL[0] + 44, footL[1] + 10], [footL[0] - 16, footL[1] + 10]], p.boots, INKC, 6);
+  // long flowing back hair behind shoulders for Mbak Kunti
+  if (p.kunti) {
+    c.fillStyle = p.hair ?? "#17131e";
+    c.strokeStyle = INKC;
+    c.lineWidth = 8;
+    c.beginPath();
+    c.moveTo(208 + tx, 175);
+    c.bezierCurveTo(166 + tx, 340, 152, 540, 176, 735);
+    c.quadraticCurveTo(235, 765, 300, 745);
+    c.quadraticCurveTo(365, 765, 424, 735);
+    c.bezierCurveTo(448, 540, 434 + tx, 340, 392 + tx, 175);
+    c.closePath();
+    c.fill();
+    c.stroke();
   }
-  else if (!p.barefoot) drawFoot(footL[0], footL[1], lL[0] + lL[1]);
-  else poly(c, [[footL[0] - 8, footL[1] - 8], [footL[0] + 36, footL[1] - 6], [footL[0] + 40, footL[1] + 6], [footL[0] - 8, footL[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
-  if (p.pangsi) trouser(c, 280, hipY, lL, p.pangsi);
-  const handL = limb(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aL, 9);
-  if (p.robe) sleeve(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, aL, p.robe, p.robeTrim ?? p.sash);
-  else if (p.sleeves) sleeve(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, aL, p.sleeves);
-  c.fillStyle = INKC;
-  c.beginPath();
-  c.arc(handL[0], handL[1], 12, 0, Math.PI * 2);
-  c.fill();
-  if (p.propHand === "L") drawProp(c, p, handL[0], handL[1], handL[2]);
+  // far leg + arm
+  if (!p.pocong && !p.kunti) {
+    limb(c, 280, hipY, 165, 170, lL, 10);
+    const footL = tip(...tip(280, hipY, 165, lL[0]), 170, lL[0] + lL[1]);
+    if (p.robe) slipper(c, footL[0], footL[1], p.robeTrim ?? "#8a3a2a");
+    else if (p.boots) {
+      const kneeL = tip(280, hipY, 165, lL[0]);
+      seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 22, "#7a6a4a"); // calf puttees
+      seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 14, "#92805a");
+      poly(c, [[footL[0] - 14, footL[1] - 28], [footL[0] + 14, footL[1] - 28], [footL[0] + 44, footL[1] - 6], [footL[0] + 44, footL[1] + 10], [footL[0] - 16, footL[1] + 10]], p.boots, INKC, 6);
+    }
+    else if (!p.barefoot) drawFoot(footL[0], footL[1], lL[0] + lL[1]);
+    else poly(c, [[footL[0] - 8, footL[1] - 8], [footL[0] + 36, footL[1] - 6], [footL[0] + 40, footL[1] + 6], [footL[0] - 8, footL[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
+    if (p.pangsi) trouser(c, 280, hipY, lL, p.pangsi);
+  }
+  if (!p.pocong) {
+    const handL = limb(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aL, 9);
+    if (p.kunti) sleeve(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, aL, p.torso ?? "#f8fafc");
+    else if (p.robe) sleeve(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, aL, p.robe, p.robeTrim ?? p.sash);
+    else if (p.sleeves) sleeve(c, 300 - 40 * (p.wide ?? 0.95) + tx, shY + 14, aL, p.sleeves);
+    c.fillStyle = INKC;
+    c.beginPath();
+    c.arc(handL[0], handL[1], 12, 0, Math.PI * 2);
+    c.fill();
+    if (p.propHand === "L") drawProp(c, p, handL[0], handL[1], handL[2]);
+  }
   // military field backpack behind torso
   if (p.backpack) {
     poly(c, [[204 + tx * 0.7, shY + 20], [268 + tx * 0.7, shY + 20], [262, hipY - 20], [198, hipY - 20]], p.backpack, INKC, 7);
@@ -422,20 +445,79 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     }
   }
   if (p.apron) poly(c, [[260 + tx * 0.8, shY + 60], [340 + tx * 0.8, shY + 60], [352, hipY + 130], [248, hipY + 130]], p.apron, INKC, 6);
-  if (!p.coat) poly(c, [[246, hipY + 10], [354, hipY + 10], [350, hipY + 40], [250, hipY + 40]], pants, INKC, 6);
+  if (!p.coat && !p.pocong && !p.kunti) poly(c, [[246, hipY + 10], [354, hipY + 10], [350, hipY + 40], [250, hipY + 40]], pants, INKC, 6);
   // near leg
-  limb(c, 322, hipY, 165, 170, lR, 10);
-  const footR = tip(...tip(322, hipY, 165, lR[0]), 170, lR[0] + lR[1]);
-  if (p.robe) slipper(c, footR[0], footR[1], p.robeTrim ?? "#8a3a2a");
-  else if (p.boots) {
-    const kneeR = tip(322, hipY, 165, lR[0]);
-    seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 22, "#7a6a4a");
-    seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 14, "#92805a");
-    poly(c, [[footR[0] - 14, footR[1] - 28], [footR[0] + 14, footR[1] - 28], [footR[0] + 44, footR[1] - 6], [footR[0] + 44, footR[1] + 10], [footR[0] - 16, footR[1] + 10]], p.boots, INKC, 6);
+  if (!p.pocong && !p.kunti) {
+    limb(c, 322, hipY, 165, 170, lR, 10);
+    const footR = tip(...tip(322, hipY, 165, lR[0]), 170, lR[0] + lR[1]);
+    if (p.robe) slipper(c, footR[0], footR[1], p.robeTrim ?? "#8a3a2a");
+    else if (p.boots) {
+      const kneeR = tip(322, hipY, 165, lR[0]);
+      seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 22, "#7a6a4a");
+      seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 14, "#92805a");
+      poly(c, [[footR[0] - 14, footR[1] - 28], [footR[0] + 14, footR[1] - 28], [footR[0] + 44, footR[1] - 6], [footR[0] + 44, footR[1] + 10], [footR[0] - 16, footR[1] + 10]], p.boots, INKC, 6);
+    }
+    else if (!p.barefoot) drawFoot(footR[0], footR[1], lR[0] + lR[1]);
+    else poly(c, [[footR[0] - 8, footR[1] - 8], [footR[0] + 36, footR[1] - 6], [footR[0] + 40, footR[1] + 6], [footR[0] - 8, footR[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
+    if (p.pangsi) trouser(c, 322, hipY, lR, p.pangsi);
   }
-  else if (!p.barefoot) drawFoot(footR[0], footR[1], lR[0] + lR[1]);
-  else poly(c, [[footR[0] - 8, footR[1] - 8], [footR[0] + 36, footR[1] - 6], [footR[0] + 40, footR[1] + 6], [footR[0] - 8, footR[1] + 6]], p.skin ?? "#f7ead6", INKC, 5);
-  if (p.pangsi) trouser(c, 322, hipY, lR, p.pangsi);
+  if (p.pocong) {
+    // Iconic comedic Indonesian kain kafan shroud wrapped snugly with waist & ankle ties!
+    const shCol = p.torso ?? "#f5f2e6";
+    c.fillStyle = shCol;
+    c.strokeStyle = INKC;
+    c.lineWidth = 9;
+    c.beginPath();
+    c.moveTo(234 + tx, shY - 8);
+    c.bezierCurveTo(208 + tx * 0.7, 470, 212, 690, 246, 912);
+    c.quadraticCurveTo(300, 956, 354, 912);
+    c.bezierCurveTo(388, 690, 392 + tx * 0.7, 470, 366 + tx, shY - 8);
+    c.closePath();
+    c.fill();
+    c.stroke();
+    // Soft cloth shadow & creases
+    c.fillStyle = "rgba(100,116,139,0.16)";
+    c.beginPath();
+    c.moveTo(318 + tx, shY);
+    c.bezierCurveTo(346 + tx * 0.6, 510, 344, 720, 330, 922);
+    c.lineTo(354, 912);
+    c.bezierCurveTo(388, 690, 392 + tx * 0.7, 470, 366 + tx, shY - 8);
+    c.closePath();
+    c.fill();
+    // Classic horizontal kain kafan tie bands (neck, waist, ankles) + little tied cloth bows!
+    [
+      [350, 64, tx],
+      [626, 76, tx * 0.3],
+      [858, 56, 0],
+    ].forEach(([ty, hw, ox]) => {
+      poly(c, [[300 - hw + ox, ty - 11], [300 + hw + ox, ty - 11], [300 + hw + ox, ty + 11], [300 - hw + ox, ty + 11]], "#e7e2d1", INKC, 6);
+      poly(c, [[300 + hw - 6 + ox, ty - 6], [300 + hw + 28 + ox, ty - 18], [300 + hw + 24 + ox, ty + 4]], "#e7e2d1", INKC, 4);
+      poly(c, [[300 + hw - 6 + ox, ty + 4], [300 + hw + 26 + ox, ty + 18], [300 + hw + 18 + ox, ty + 28]], "#e7e2d1", INKC, 4);
+    });
+    // Bottom tied cloth tuft
+    poly(c, [[276, 926], [324, 926], [336, 968], [300, 954], [264, 968]], "#ebe6d6", INKC, 6);
+  }
+  if (p.kunti) {
+    // Flowing moonlit white ghost gown with gentle scalloped hovering hem!
+    const gCol = p.torso ?? "#f8fafc";
+    c.fillStyle = gCol;
+    c.strokeStyle = INKC;
+    c.lineWidth = 8;
+    c.beginPath();
+    c.moveTo(244 + tx, shY - 6);
+    c.lineTo(356 + tx, shY - 6);
+    c.bezierCurveTo(382, 560, 404, 740, 412, 895);
+    c.quadraticCurveTo(382, 928, 352, 892);
+    c.quadraticCurveTo(324, 932, 300, 896);
+    c.quadraticCurveTo(276, 932, 248, 892);
+    c.quadraticCurveTo(218, 928, 188, 895);
+    c.bezierCurveTo(196, 740, 218, 560, 244 + tx, shY - 6);
+    c.closePath();
+    c.fill();
+    c.stroke();
+    // Soft moonlit cyan-blue vertical gown folds
+    [-0.36, 0.12, 0.42].forEach((k) => seg(c, 300 + k * 75 + tx * 0.5, shY + 95, 300 + k * 125, 868, 4, "rgba(125,211,252,0.42)"));
+  }
   if (p.skirt) {
     const wd = p.wide ?? 1;
     poly(c, [[300 - 66 * wd, hipY - 30], [300 + 66 * wd, hipY - 30], [300 + 80 * wd, 868], [300 - 80 * wd, 868]], p.skirt, INKC, 8);
@@ -595,6 +677,13 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.rotate(R(ang));
     seg(c, -17, 0, 17, 0, 7);
     c.restore();
+    if (p.tired) {
+      c.strokeStyle = "rgba(88, 72, 118, 0.72)";
+      c.lineWidth = 4.5;
+      c.beginPath();
+      c.arc(x, eyeY + 23, 15, 0.2, Math.PI - 0.2);
+      c.stroke();
+    }
   });
   if (p.beard) {
     c.fillStyle = p.beard;
@@ -823,6 +912,47 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     poly(c, [[202, 142], [398, 142], [398, 158], [202, 158]], "#1c1816", INKC, 5);
     poly(c, [[208, 158], [392, 158], [374, 182], [226, 182]], "#141214", INKC, 6); // visor
     poly(c, [[284, 102], [316, 102], [308, 126], [292, 126]], "#f2c230", INKC, 3); // gold emblem
+  } else if (hat === "pocong") {
+    // White kain kafan wrap framing the expressive face + iconic tied bunny-ear topknot!
+    const shCol = p.hatColor ?? "#f5f2e6";
+    c.fillStyle = shCol;
+    c.strokeStyle = INKC;
+    c.lineWidth = 8;
+    // Outer hood ring framing forehead, cheeks, and chin
+    c.beginPath();
+    c.arc(300, 210, 134, 0, Math.PI * 2);
+    c.arc(300, 224, 92, 0, Math.PI * 2, true);
+    c.fill("evenodd");
+    c.beginPath();
+    c.arc(300, 210, 134, 0, Math.PI * 2);
+    c.stroke();
+    c.lineWidth = 6;
+    c.beginPath();
+    c.arc(300, 224, 92, 0, Math.PI * 2);
+    c.stroke();
+    // Iconic top cloth knot + fluffy tied ears on top of head!
+    poly(c, [[274, 86], [326, 86], [320, 62], [280, 62]], "#e7e2d1", INKC, 6);
+    poly(c, [[284, 64], [254, 16], [296, 36], [306, 64]], shCol, INKC, 6);
+    poly(c, [[298, 64], [344, 12], [352, 46], [316, 64]], shCol, INKC, 6);
+  } else if (hat === "kunti") {
+    // Sleek glossy midnight-black parted bangs & long flowing side locks framing Mbak Kunti's face
+    const hCol = p.hair ?? "#17131e";
+    c.fillStyle = hCol;
+    c.strokeStyle = INKC;
+    c.lineWidth = 7;
+    c.beginPath();
+    c.moveTo(176, 212);
+    c.bezierCurveTo(176, 108, 240, 74, 300, 76);
+    c.bezierCurveTo(360, 74, 424, 108, 424, 212);
+    c.bezierCurveTo(426, 290, 412, 345, 396, 365);
+    c.bezierCurveTo(388, 260, 394, 180, 366, 148);
+    c.quadraticCurveTo(332, 134, 300, 152);
+    c.quadraticCurveTo(268, 134, 234, 148);
+    c.bezierCurveTo(206, 180, 212, 260, 204, 365);
+    c.bezierCurveTo(188, 345, 174, 290, 176, 212);
+    c.closePath();
+    c.fill();
+    c.stroke();
   } else if (hat === "wig") {
     poly(c, [[170, 250], [176, 120], [300, 60], [424, 120], [430, 250], [400, 190], [200, 190]], "#f2f2f2", INKC, 7);
   } else if (p.hair) {
@@ -864,35 +994,38 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   }
   c.restore();
   // near arm
-  const handR = limb(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aR, 9);
-  if (p.robe) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.robe, p.robeTrim ?? p.sash);
-  else if (p.sleeves) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.sleeves);
-  if (p.armband) {
-    const shR: [number, number] = [300 + 40 * (p.wide ?? 0.95) + tx, shY + 14];
-    const m1 = tip(shR[0], shR[1], 45, aR[0]);
-    const m2 = tip(shR[0], shR[1], 88, aR[0]);
-    const dx = m2[0] - m1[0];
-    const dy = m2[1] - m1[1];
-    const L = Math.hypot(dx, dy) || 1;
-    const nx = (-dy / L) * 20;
-    const ny = (dx / L) * 20;
-    if (p.armband === "redwhite") {
-      const mm: [number, number] = [(m1[0] + m2[0]) / 2, (m1[1] + m2[1]) / 2];
-      poly(c, [[m1[0] + nx, m1[1] + ny], [mm[0] + nx, mm[1] + ny], [mm[0] - nx, mm[1] - ny], [m1[0] - nx, m1[1] - ny]], "#d62828", INKC, 4);
-      poly(c, [[mm[0] + nx, mm[1] + ny], [m2[0] + nx, m2[1] + ny], [m2[0] - nx, m2[1] - ny], [mm[0] - nx, mm[1] - ny]], "#fffaf0", INKC, 4);
-    } else {
-      poly(c, [[m1[0] + nx, m1[1] + ny], [m2[0] + nx, m2[1] + ny], [m2[0] - nx, m2[1] - ny], [m1[0] - nx, m1[1] - ny]], "#fffaf0", INKC, 4);
-      const cx = (m1[0] + m2[0]) / 2;
-      const cy = (m1[1] + m2[1]) / 2;
-      seg(c, cx - 10, cy, cx + 10, cy, 6, "#d62828");
-      seg(c, cx, cy - 10, cx, cy + 10, 6, "#d62828");
+  if (!p.pocong) {
+    const handR = limb(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, 130, 120, aR, 9);
+    if (p.kunti) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.torso ?? "#f8fafc");
+    else if (p.robe) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.robe, p.robeTrim ?? p.sash);
+    else if (p.sleeves) sleeve(c, 300 + 40 * (p.wide ?? 0.95) + tx, shY + 14, aR, p.sleeves);
+    if (p.armband) {
+      const shR: [number, number] = [300 + 40 * (p.wide ?? 0.95) + tx, shY + 14];
+      const m1 = tip(shR[0], shR[1], 45, aR[0]);
+      const m2 = tip(shR[0], shR[1], 88, aR[0]);
+      const dx = m2[0] - m1[0];
+      const dy = m2[1] - m1[1];
+      const L = Math.hypot(dx, dy) || 1;
+      const nx = (-dy / L) * 20;
+      const ny = (dx / L) * 20;
+      if (p.armband === "redwhite") {
+        const mm: [number, number] = [(m1[0] + m2[0]) / 2, (m1[1] + m2[1]) / 2];
+        poly(c, [[m1[0] + nx, m1[1] + ny], [mm[0] + nx, mm[1] + ny], [mm[0] - nx, mm[1] - ny], [m1[0] - nx, m1[1] - ny]], "#d62828", INKC, 4);
+        poly(c, [[mm[0] + nx, mm[1] + ny], [m2[0] + nx, m2[1] + ny], [m2[0] - nx, m2[1] - ny], [mm[0] - nx, mm[1] - ny]], "#fffaf0", INKC, 4);
+      } else {
+        poly(c, [[m1[0] + nx, m1[1] + ny], [m2[0] + nx, m2[1] + ny], [m2[0] - nx, m2[1] - ny], [m1[0] - nx, m1[1] - ny]], "#fffaf0", INKC, 4);
+        const cx = (m1[0] + m2[0]) / 2;
+        const cy = (m1[1] + m2[1]) / 2;
+        seg(c, cx - 10, cy, cx + 10, cy, 6, "#d62828");
+        seg(c, cx, cy - 10, cx, cy + 10, 6, "#d62828");
+      }
     }
+    c.fillStyle = INKC;
+    c.beginPath();
+    c.arc(handR[0], handR[1], 12, 0, Math.PI * 2);
+    c.fill();
+    if (p.propHand !== "L") drawProp(c, p, handR[0], handR[1], handR[2]);
   }
-  c.fillStyle = INKC;
-  c.beginPath();
-  c.arc(handR[0], handR[1], 12, 0, Math.PI * 2);
-  c.fill();
-  if (p.propHand !== "L") drawProp(c, p, handR[0], handR[1], handR[2]);
   c.restore();
   // goo coverage from the feet up (only where the character is drawn)
   if (p.goo && p.goo > 0) {
