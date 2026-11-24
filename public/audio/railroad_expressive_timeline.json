@@ -1,0 +1,144 @@
+{
+  "totalDurationSec": 39.735,
+  "totalFrames": 1192,
+  "scenes": [
+    {
+      "scene": "hook",
+      "startSec": 0.25,
+      "endSec": 5.571,
+      "startFrame": 8,
+      "durationInFrames": 160,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Dia menggergaji celah di setiap rel kereta.",
+          "startSec": 0.25,
+          "endSec": 2.561
+        },
+        {
+          "emotion": "tegang",
+          "text": "Semua orang mengira dia sudah gila!",
+          "startSec": 2.781,
+          "endSec": 5.101
+        }
+      ]
+    },
+    {
+      "scene": "stakes",
+      "startSec": 5.571,
+      "endSec": 12.269,
+      "startFrame": 167,
+      "durationInFrames": 201,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Dua perusahaan berlomba menaklukkan ngarai terdalam.",
+          "startSec": 5.571,
+          "endSec": 8.606
+        },
+        {
+          "emotion": "tegas",
+          "text": "Siapa paling cepat, dia kuasai bisnis seluruh negeri.",
+          "startSec": 8.826,
+          "endSec": 11.799
+        }
+      ]
+    },
+    {
+      "scene": "conflict",
+      "startSec": 12.269,
+      "endSec": 20.114,
+      "startFrame": 368,
+      "durationInFrames": 235,
+      "phrases": [
+        {
+          "emotion": "tegang",
+          "text": "Bosnya murka sampai wajahnya berubah ungu!",
+          "startSec": 12.269,
+          "endSec": 15.33
+        },
+        {
+          "emotion": "tegas",
+          "text": "Kau merusak rel keretaku!",
+          "startSec": 15.55,
+          "endSec": 17.344
+        },
+        {
+          "emotion": "santai",
+          "text": "Tapi insinyur muda itu tetap menolak.",
+          "startSec": 17.564,
+          "endSec": 19.644
+        }
+      ]
+    },
+    {
+      "scene": "rival",
+      "startSec": 20.114,
+      "endSec": 26.314,
+      "startFrame": 603,
+      "durationInFrames": 186,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Perusahaan lawan memasang rel mulus tanpa celah.",
+          "startSec": 20.114,
+          "endSec": 22.468
+        },
+        {
+          "emotion": "santai",
+          "text": "Kereta mereka melaju senyap, sedangkan keretanya berisik.",
+          "startSec": 22.688,
+          "endSec": 25.844
+        }
+      ]
+    },
+    {
+      "scene": "heat",
+      "startSec": 26.314,
+      "endSec": 33.468,
+      "startFrame": 789,
+      "durationInFrames": 215,
+      "phrases": [
+        {
+          "emotion": "tegang",
+          "text": "Lalu musim panas tiba!",
+          "startSec": 26.314,
+          "endSec": 28.232
+        },
+        {
+          "emotion": "narasi",
+          "text": "Celah relnya menyusut perlahan.",
+          "startSec": 28.452,
+          "endSec": 30.138
+        },
+        {
+          "emotion": "tegang",
+          "text": "Sementara rel lawan mulai menjerit kepanasan!",
+          "startSec": 30.358,
+          "endSec": 32.998
+        }
+      ]
+    },
+    {
+      "scene": "climax",
+      "startSec": 33.468,
+      "endSec": 39.735,
+      "startFrame": 1004,
+      "durationInFrames": 188,
+      "phrases": [
+        {
+          "emotion": "santai",
+          "text": "Di hari terpanas, celahnya menutup pas.",
+          "startSec": 33.468,
+          "endSec": 35.685
+        },
+        {
+          "emotion": "tegang",
+          "text": "Rel sempurna lawan melengkung seperti ular, lalu meledak!",
+          "startSec": 35.905,
+          "endSec": 39.265
+        }
+      ]
+    }
+  ]
+}

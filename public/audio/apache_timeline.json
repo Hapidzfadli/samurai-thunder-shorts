@@ -1,0 +1,560 @@
+{
+  "totalDurationSec": 45.838,
+  "totalFrames": 1375,
+  "scenes": [
+    {
+      "scene": "hook",
+      "startSec": 0.25,
+      "endSec": 7.652,
+      "startFrame": 8,
+      "durationInFrames": 222,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Di helikopter Apache, pilot cukup menoleh dan meriamnya ikut menoleh.",
+          "startSec": 0.25,
+          "endSec": 4.219
+        },
+        {
+          "emotion": "santai",
+          "text": "Tanpa tuas, tanpa joystick, bagaimana caranya?",
+          "startSec": 4.399,
+          "endSec": 7.192
+        }
+      ]
+    },
+    {
+      "scene": "cannon_xray",
+      "startSec": 7.652,
+      "endSec": 15.277,
+      "startFrame": 230,
+      "durationInFrames": 228,
+      "phrases": [
+        {
+          "emotion": "tegas",
+          "text": "Di bawah hidungnya ada kanon rantai tiga puluh milimeter.",
+          "startSec": 7.652,
+          "endSec": 10.494
+        },
+        {
+          "emotion": "narasi",
+          "text": "Menembakkan enam ratus peluru per menit, dari magazen seribu dua ratus butir.",
+          "startSec": 10.674,
+          "endSec": 14.817
+        }
+      ]
+    },
+    {
+      "scene": "ir_tracking",
+      "startSec": 15.277,
+      "endSec": 23.814,
+      "startFrame": 458,
+      "durationInFrames": 256,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Di kokpit dua kursi, sensor inframerah terus melacak posisi helm.",
+          "startSec": 15.277,
+          "endSec": 19.214
+        },
+        {
+          "emotion": "santai",
+          "text": "Ke mana mata melihat, komputer langsung memutar meriam ke arah yang sama.",
+          "startSec": 19.394,
+          "endSec": 23.354
+        }
+      ]
+    },
+    {
+      "scene": "flir_split",
+      "startSec": 23.814,
+      "endSec": 31.082,
+      "startFrame": 714,
+      "durationInFrames": 218,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Kamera panas di hidungnya mengirim gambar ke lensa kecil di mata kanan.",
+          "startSec": 23.814,
+          "endSec": 27.164
+        },
+        {
+          "emotion": "tegang",
+          "text": "Mata kanan melihat panas musuh, mata kiri melihat kokpit gelap.",
+          "startSec": 27.344,
+          "endSec": 30.622
+        }
+      ]
+    },
+    {
+      "scene": "ballistic_strike",
+      "startSec": 31.082,
+      "endSec": 37.726,
+      "startFrame": 932,
+      "durationInFrames": 200,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Laser mengukur jarak dan angin, lalu peluru mengunci target.",
+          "startSec": 31.082,
+          "endSec": 34.25
+        },
+        {
+          "emotion": "tegas",
+          "text": "Sekali tembak, kendaraan lapis baja langsung hancur.",
+          "startSec": 34.43,
+          "endSec": 37.266
+        }
+      ]
+    },
+    {
+      "scene": "safety_outro",
+      "startSec": 37.726,
+      "endSec": 45.238,
+      "startFrame": 1132,
+      "durationInFrames": 243,
+      "phrases": [
+        {
+          "emotion": "narasi",
+          "text": "Kalau helikopter jatuh, meriamnya melipat ke celah antar kursi agar kru selamat.",
+          "startSec": 37.726,
+          "endSec": 41.655
+        },
+        {
+          "emotion": "santai",
+          "text": "Semua itu cukup dengan satu gerakan sederhana, menoleh.",
+          "startSec": 41.835,
+          "endSec": 44.778
+        }
+      ]
+    }
+  ],
+  "captions": [
+    {
+      "text": "Di helikopter",
+      "startFrame": 8,
+      "endFrame": 31,
+      "highlight": false
+    },
+    {
+      "text": "Apache, pilot",
+      "startFrame": 31,
+      "endFrame": 55,
+      "highlight": true
+    },
+    {
+      "text": "cukup menoleh",
+      "startFrame": 55,
+      "endFrame": 79,
+      "highlight": true
+    },
+    {
+      "text": "dan meriamnya",
+      "startFrame": 79,
+      "endFrame": 103,
+      "highlight": true
+    },
+    {
+      "text": "ikut menoleh.",
+      "startFrame": 103,
+      "endFrame": 127,
+      "highlight": true
+    },
+    {
+      "text": "Tanpa tuas,",
+      "startFrame": 132,
+      "endFrame": 154,
+      "highlight": false
+    },
+    {
+      "text": "tanpa",
+      "startFrame": 154,
+      "endFrame": 164,
+      "highlight": false
+    },
+    {
+      "text": "joystick,",
+      "startFrame": 164,
+      "endFrame": 182,
+      "highlight": false
+    },
+    {
+      "text": "bagaimana",
+      "startFrame": 182,
+      "endFrame": 200,
+      "highlight": false
+    },
+    {
+      "text": "caranya?",
+      "startFrame": 200,
+      "endFrame": 216,
+      "highlight": false
+    },
+    {
+      "text": "Di bawah",
+      "startFrame": 230,
+      "endFrame": 242,
+      "highlight": false
+    },
+    {
+      "text": "hidungnya ada",
+      "startFrame": 242,
+      "endFrame": 263,
+      "highlight": false
+    },
+    {
+      "text": "kanon rantai",
+      "startFrame": 263,
+      "endFrame": 283,
+      "highlight": true
+    },
+    {
+      "text": "tiga puluh",
+      "startFrame": 283,
+      "endFrame": 299,
+      "highlight": false
+    },
+    {
+      "text": "milimeter.",
+      "startFrame": 299,
+      "endFrame": 315,
+      "highlight": false
+    },
+    {
+      "text": "Menembakkan",
+      "startFrame": 320,
+      "endFrame": 339,
+      "highlight": false
+    },
+    {
+      "text": "enam ratus",
+      "startFrame": 339,
+      "endFrame": 357,
+      "highlight": false
+    },
+    {
+      "text": "peluru per",
+      "startFrame": 357,
+      "endFrame": 374,
+      "highlight": true
+    },
+    {
+      "text": "menit, dari",
+      "startFrame": 374,
+      "endFrame": 394,
+      "highlight": false
+    },
+    {
+      "text": "magazen seribu",
+      "startFrame": 394,
+      "endFrame": 418,
+      "highlight": true
+    },
+    {
+      "text": "dua ratus",
+      "startFrame": 418,
+      "endFrame": 434,
+      "highlight": false
+    },
+    {
+      "text": "butir.",
+      "startFrame": 434,
+      "endFrame": 445,
+      "highlight": false
+    },
+    {
+      "text": "Di kokpit",
+      "startFrame": 458,
+      "endFrame": 476,
+      "highlight": false
+    },
+    {
+      "text": "dua kursi,",
+      "startFrame": 476,
+      "endFrame": 496,
+      "highlight": false
+    },
+    {
+      "text": "sensor",
+      "startFrame": 496,
+      "endFrame": 508,
+      "highlight": false
+    },
+    {
+      "text": "inframerah",
+      "startFrame": 508,
+      "endFrame": 527,
+      "highlight": true
+    },
+    {
+      "text": "terus melacak",
+      "startFrame": 527,
+      "endFrame": 553,
+      "highlight": false
+    },
+    {
+      "text": "posisi helm.",
+      "startFrame": 553,
+      "endFrame": 576,
+      "highlight": true
+    },
+    {
+      "text": "Ke mana",
+      "startFrame": 582,
+      "endFrame": 594,
+      "highlight": false
+    },
+    {
+      "text": "mata melihat,",
+      "startFrame": 594,
+      "endFrame": 617,
+      "highlight": false
+    },
+    {
+      "text": "komputer",
+      "startFrame": 617,
+      "endFrame": 631,
+      "highlight": false
+    },
+    {
+      "text": "langsung",
+      "startFrame": 631,
+      "endFrame": 646,
+      "highlight": false
+    },
+    {
+      "text": "memutar meriam",
+      "startFrame": 646,
+      "endFrame": 670,
+      "highlight": false
+    },
+    {
+      "text": "ke arah",
+      "startFrame": 670,
+      "endFrame": 683,
+      "highlight": false
+    },
+    {
+      "text": "yang sama.",
+      "startFrame": 683,
+      "endFrame": 701,
+      "highlight": false
+    },
+    {
+      "text": "Kamera panas",
+      "startFrame": 714,
+      "endFrame": 733,
+      "highlight": true
+    },
+    {
+      "text": "di hidungnya",
+      "startFrame": 733,
+      "endFrame": 752,
+      "highlight": false
+    },
+    {
+      "text": "mengirim",
+      "startFrame": 752,
+      "endFrame": 764,
+      "highlight": false
+    },
+    {
+      "text": "gambar ke",
+      "startFrame": 764,
+      "endFrame": 778,
+      "highlight": false
+    },
+    {
+      "text": "lensa kecil",
+      "startFrame": 778,
+      "endFrame": 795,
+      "highlight": false
+    },
+    {
+      "text": "di mata",
+      "startFrame": 795,
+      "endFrame": 806,
+      "highlight": false
+    },
+    {
+      "text": "kanan.",
+      "startFrame": 806,
+      "endFrame": 815,
+      "highlight": false
+    },
+    {
+      "text": "Mata kanan",
+      "startFrame": 820,
+      "endFrame": 837,
+      "highlight": false
+    },
+    {
+      "text": "melihat panas",
+      "startFrame": 837,
+      "endFrame": 859,
+      "highlight": true
+    },
+    {
+      "text": "musuh, mata",
+      "startFrame": 859,
+      "endFrame": 877,
+      "highlight": false
+    },
+    {
+      "text": "kiri melihat",
+      "startFrame": 877,
+      "endFrame": 897,
+      "highlight": false
+    },
+    {
+      "text": "kokpit gelap.",
+      "startFrame": 897,
+      "endFrame": 919,
+      "highlight": false
+    },
+    {
+      "text": "Laser mengukur",
+      "startFrame": 932,
+      "endFrame": 957,
+      "highlight": true
+    },
+    {
+      "text": "jarak dan",
+      "startFrame": 957,
+      "endFrame": 972,
+      "highlight": false
+    },
+    {
+      "text": "angin, lalu",
+      "startFrame": 972,
+      "endFrame": 991,
+      "highlight": false
+    },
+    {
+      "text": "peluru",
+      "startFrame": 991,
+      "endFrame": 1002,
+      "highlight": true
+    },
+    {
+      "text": "mengunci",
+      "startFrame": 1002,
+      "endFrame": 1015,
+      "highlight": false
+    },
+    {
+      "text": "target.",
+      "startFrame": 1015,
+      "endFrame": 1027,
+      "highlight": false
+    },
+    {
+      "text": "Sekali tembak,",
+      "startFrame": 1033,
+      "endFrame": 1058,
+      "highlight": false
+    },
+    {
+      "text": "kendaraan",
+      "startFrame": 1058,
+      "endFrame": 1074,
+      "highlight": false
+    },
+    {
+      "text": "lapis baja",
+      "startFrame": 1074,
+      "endFrame": 1091,
+      "highlight": false
+    },
+    {
+      "text": "langsung",
+      "startFrame": 1091,
+      "endFrame": 1106,
+      "highlight": false
+    },
+    {
+      "text": "hancur.",
+      "startFrame": 1106,
+      "endFrame": 1118,
+      "highlight": true
+    },
+    {
+      "text": "Kalau",
+      "startFrame": 1132,
+      "endFrame": 1140,
+      "highlight": false
+    },
+    {
+      "text": "helikopter",
+      "startFrame": 1140,
+      "endFrame": 1156,
+      "highlight": false
+    },
+    {
+      "text": "jatuh,",
+      "startFrame": 1156,
+      "endFrame": 1166,
+      "highlight": false
+    },
+    {
+      "text": "meriamnya",
+      "startFrame": 1166,
+      "endFrame": 1180,
+      "highlight": true
+    },
+    {
+      "text": "melipat ke",
+      "startFrame": 1180,
+      "endFrame": 1196,
+      "highlight": true
+    },
+    {
+      "text": "celah antar",
+      "startFrame": 1196,
+      "endFrame": 1214,
+      "highlight": false
+    },
+    {
+      "text": "kursi agar",
+      "startFrame": 1214,
+      "endFrame": 1230,
+      "highlight": false
+    },
+    {
+      "text": "kru selamat.",
+      "startFrame": 1230,
+      "endFrame": 1250,
+      "highlight": true
+    },
+    {
+      "text": "Semua itu",
+      "startFrame": 1255,
+      "endFrame": 1271,
+      "highlight": false
+    },
+    {
+      "text": "cukup dengan",
+      "startFrame": 1271,
+      "endFrame": 1291,
+      "highlight": false
+    },
+    {
+      "text": "satu gerakan",
+      "startFrame": 1291,
+      "endFrame": 1312,
+      "highlight": false
+    },
+    {
+      "text": "sederhana,",
+      "startFrame": 1312,
+      "endFrame": 1330,
+      "highlight": false
+    },
+    {
+      "text": "menoleh.",
+      "startFrame": 1330,
+      "endFrame": 1343,
+      "highlight": true
+    }
+  ]
+}
