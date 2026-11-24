@@ -1,0 +1,287 @@
+{
+  "total": 14,
+  "voices": [
+    {
+      "id": "01_nadia_storyteller",
+      "name": "Mbak Nadia",
+      "role": "Storyteller Ceplas-Ceplos",
+      "inspiration": "Gaya Nadia Omara",
+      "category": "cewek",
+      "emoji": "🎙️",
+      "base": "wanita_storyteller",
+      "style": "warm expressive female storyteller, conversational, slightly amused, intimate",
+      "filters": [
+        "highpass=f=80",
+        "rubberband=pitch=0.985:formant=preserved:pitchq=quality",
+        "equalizer=f=200:t=q:w=1.2:g=1.8",
+        "equalizer=f=3200:t=q:w=1.2:g=2.0"
+      ],
+      "text": "Hai wak! Pernah nggak sih niat bikin konten horor tengah malam, eh malah ujungnya nongkrong bareng hantunya sambil makan pisang goreng?!",
+      "use_case": "Narator cewek horor-komedi, pembuka cerita viral, komentar ceplas-ceplos.",
+      "durationSec": 6.88,
+      "whisperScore": 0.969,
+      "wavRef": "voices/bank_karakter/01_nadia_storyteller.wav",
+      "mp3": "public/audio/bank_karakter/01_nadia_storyteller.mp3"
+    },
+    {
+      "id": "02_cewek_polos_lucu",
+      "name": "Mbak Ara",
+      "role": "Cewek Polos Cempreng Lucu",
+      "inspiration": "Gaya Arafah Rianti",
+      "category": "cewek",
+      "emoji": "🤭",
+      "base": "wanita_cerah",
+      "style": "naive, bright youthful funny girl, playful confused comedic tone",
+      "filters": [
+        "highpass=f=95",
+        "rubberband=pitch=1.10:tempo=1.04:formant=preserved:pitchq=quality",
+        "equalizer=f=3500:t=q:w=1.1:g=2.8"
+      ],
+      "text": "Hah, serius itu hantu beneran?! Aku kira tetangga sebelah lagi pakai selimut putih gara-gara kipas anginnya rusak!",
+      "use_case": "Karakter cewek polos-absurd, punchline receh yang tak terduga.",
+      "durationSec": 5.65,
+      "whisperScore": 0.984,
+      "wavRef": "voices/bank_karakter/02_cewek_polos_lucu.wav",
+      "mp3": "public/audio/bank_karakter/02_cewek_polos_lucu.mp3"
+    },
+    {
+      "id": "03_cewek_heboh_kartun",
+      "name": "Cici Heboh",
+      "role": "Cewek Kartun Hiperaktif",
+      "inspiration": "Gaya Kobo Kanaeru / Kartun",
+      "category": "cewek",
+      "emoji": "⚡",
+      "base": "wanita_cerah",
+      "style": "hyperactive, excited, loud playful cartoon girl, dramatic panic",
+      "filters": [
+        "highpass=f=105",
+        "rubberband=pitch=1.15:tempo=1.07:formant=shifted:pitchq=quality",
+        "equalizer=f=3800:t=q:w=1.1:g=2.5"
+      ],
+      "text": "Woy tunggu dulu jangan ditinggal!! Kalau aku diculik pocong terus disuruh bayar kosan dua kali gimana dong?!",
+      "use_case": "Karakter bocil/cewek hiperaktif, adegan panik kartun & anime komedi.",
+      "durationSec": 5.32,
+      "whisperScore": 0.959,
+      "wavRef": "voices/bank_karakter/03_cewek_heboh_kartun.wav",
+      "mp3": "public/audio/bank_karakter/03_cewek_heboh_kartun.mp3"
+    },
+    {
+      "id": "04_bu_tini_ibu_kos",
+      "name": "Bu Tini",
+      "role": "Ibu Kos Galak tapi Kocak",
+      "inspiration": "Gaya Emak Heboh / Rachel",
+      "category": "cewek",
+      "emoji": "🩴",
+      "base": "wanita_storyteller",
+      "style": "strict, loud, bossy landlady, dramatic scolding, comedic motherly anger",
+      "filters": [
+        "highpass=f=75",
+        "rubberband=pitch=0.92:tempo=1.03:formant=preserved:pitchq=quality",
+        "equalizer=f=240:t=q:w=1.1:g=2.4",
+        "equalizer=f=1800:t=q:w=1.1:g=2.6"
+      ],
+      "text": "Heh Riko! Jam dua pagi bukannya tidur malah bikin asap sekosan! Panci gosong itu potong uang jajan kamu ya!",
+      "use_case": "Bu Tini ibu kos, ibu warung cerewet, adegan ngomel yang bikin ngakak.",
+      "durationSec": 5.49,
+      "whisperScore": 0.877,
+      "wavRef": "voices/bank_karakter/04_bu_tini_ibu_kos.wav",
+      "mp3": "public/audio/bank_karakter/04_bu_tini_ibu_kos.mp3"
+    },
+    {
+      "id": "05_mbak_nisa_santai",
+      "name": "Mbak Nisa",
+      "role": "Cewek Santai & Nyindir Halus",
+      "inspiration": "Gaya Bestie Realistis",
+      "category": "cewek",
+      "emoji": "💅",
+      "base": "wanita_cerah",
+      "style": "relaxed, slightly sarcastic, calm friendly amused woman",
+      "filters": [
+        "highpass=f=80",
+        "rubberband=pitch=0.96:formant=preserved:pitchq=quality",
+        "equalizer=f=280:t=q:w=1.2:g=1.5",
+        "equalizer=f=3000:t=q:w=1.2:g=1.5"
+      ],
+      "text": "Udah deh, daripada ribut bubur diaduk apa nggak, mending kalian lunasin dulu utang gorengan minggu lalu.",
+      "use_case": "Penengah waras di tengah keributan, sindiran halus penutup komedi.",
+      "durationSec": 4.96,
+      "whisperScore": 0.982,
+      "wavRef": "voices/bank_karakter/05_mbak_nisa_santai.wav",
+      "mp3": "public/audio/bank_karakter/05_mbak_nisa_santai.mp3"
+    },
+    {
+      "id": "06_riko_panikan",
+      "name": "Riko",
+      "role": "Anak Kos Panikan (Tektokan)",
+      "inspiration": "Gaya Dalang Pelo / Tekotok",
+      "category": "cowok",
+      "emoji": "😱",
+      "base": "dodi_tegas",
+      "style": "panicked, fast energetic young man, frantic, loud comedic urgency",
+      "filters": [
+        "highpass=f=85",
+        "rubberband=pitch=1.09:tempo=1.05:formant=preserved:pitchq=quality",
+        "equalizer=f=2800:t=q:w=1.2:g=2.5"
+      ],
+      "text": "Gawat Gas, gawat! Itu bukan angin biasa, lampu terasnya kedap-kedip sendiri kayak disko kampung!",
+      "use_case": "Karakter utama panikan, dialog tektokan cepat & overreacting.",
+      "durationSec": 5.14,
+      "whisperScore": 1.0,
+      "wavRef": "voices/bank_karakter/06_riko_panikan.wav",
+      "mp3": "public/audio/bank_karakter/06_riko_panikan.mp3"
+    },
+    {
+      "id": "07_bagas_santai",
+      "name": "Bagas",
+      "role": "Bestie Santai & Deadpan",
+      "inspiration": "Gaya Teman Receh Santuy",
+      "category": "cowok",
+      "emoji": "😎",
+      "base": "pria_hangat",
+      "style": "super chill, deadpan funny, warm friendly relaxed guy",
+      "filters": [
+        "highpass=f=75",
+        "equalizer=f=240:t=q:w=1.2:g=2.2"
+      ],
+      "text": "Tenang aja Rik, hantu juga butuh karbohidrat. Nih aku bawa pisang goreng hangat sama kopi hitam!",
+      "use_case": "Pasangan tektokan Riko yang selalu santai di situasi genting.",
+      "durationSec": 5.12,
+      "whisperScore": 0.981,
+      "wavRef": "voices/bank_karakter/07_bagas_santai.wav",
+      "mp3": "public/audio/bank_karakter/07_bagas_santai.mp3"
+    },
+    {
+      "id": "08_narator_komedi",
+      "name": "Dodi Narator",
+      "role": "Narator Komedi Enerjik",
+      "inspiration": "Gaya Shorts Viral",
+      "category": "cowok",
+      "emoji": "🎬",
+      "base": "dodi_narasi",
+      "style": "lively energetic Indonesian comedy narrator, punchy, expressive storytelling",
+      "filters": [
+        "highpass=f=75",
+        "equalizer=f=2600:t=q:w=1.2:g=1.8"
+      ],
+      "text": "Di Kos Bu Tini, masalah sekecil apa pun selalu bisa berubah jadi perang dunia dalam waktu tiga detik!",
+      "use_case": "Narator hook 3 detik pertama, narasi cepat penuh energi.",
+      "durationSec": 5.28,
+      "whisperScore": 0.987,
+      "wavRef": "voices/bank_karakter/08_narator_komedi.wav",
+      "mp3": "public/audio/bank_karakter/08_narator_komedi.mp3"
+    },
+    {
+      "id": "09_narator_qinmu_epik",
+      "name": "Narator Epik",
+      "role": "Storyteller Donghua & Aksi",
+      "inspiration": "Gaya Qin Mu / Promen",
+      "category": "cowok",
+      "emoji": "⚔️",
+      "base": "qinmu_dry",
+      "style": "epic dramatic storyteller, clear authoritative narrator, engaging rhythm",
+      "filters": [
+        "highpass=f=70",
+        "equalizer=f=160:t=q:w=1.2:g=2.4",
+        "equalizer=f=3200:t=q:w=1.2:g=2.0"
+      ],
+      "text": "Aura kedua pendekar itu langsung beradu di udara! Tidak ada yang menyangka, pertarungan ini cuma gara-gara rebutan kerupuk terakhir!",
+      "use_case": "Narasi aksi parodi anime, sejarah epik, atau cerita donghua/silat.",
+      "durationSec": 5.44,
+      "whisperScore": 0.977,
+      "wavRef": "voices/bank_karakter/09_narator_qinmu_epik.wav",
+      "mp3": "public/audio/bank_karakter/09_narator_qinmu_epik.mp3"
+    },
+    {
+      "id": "10_bapak_bang_udin",
+      "name": "Bang Udin / Pak RT",
+      "role": "Bapak-Bapak Bariton Kocak",
+      "inspiration": "Gaya Bimo Kusumo Bapak",
+      "category": "cowok",
+      "emoji": "🧔",
+      "base": "pria_bariton",
+      "style": "warm humorous older man, booming friendly fatherly voice, amused",
+      "filters": [
+        "highpass=f=65",
+        "rubberband=pitch=0.94:formant=preserved:pitchq=quality",
+        "equalizer=f=160:t=q:w=1.1:g=3.0"
+      ],
+      "text": "Woi anak-anak muda! Mau bubur diaduk kek, nggak diaduk kek, yang penting bon utangnya dibayar dulu dong!",
+      "use_case": "Penjual warung, Pak RT, sesepuh kampung, suara berwibawa tapi kocak.",
+      "durationSec": 5.9,
+      "whisperScore": 0.958,
+      "wavRef": "voices/bank_karakter/10_bapak_bang_udin.wav",
+      "mp3": "public/audio/bank_karakter/10_bapak_bang_udin.mp3"
+    },
+    {
+      "id": "11_rival_sombong",
+      "name": "Mas Sombong",
+      "role": "Rival Lebay & Teatrikal",
+      "inspiration": "Gaya Animasi Sombong",
+      "category": "cowok",
+      "emoji": "🦚",
+      "base": "makijah_sombong",
+      "style": "arrogant, theatrical, boastful comedic show-off guy",
+      "filters": [
+        "highpass=f=80",
+        "rubberband=pitch=1.02:tempo=1.03:formant=preserved:pitchq=quality",
+        "equalizer=f=2400:t=q:w=1.2:g=2.2"
+      ],
+      "text": "Halah, uji nyali lima menit aja gemetaran! Lihat nih master pemberani, jangankan pocong, tagihan listrik aja aku hadapi!",
+      "use_case": "Karakter sok jago yang ujungnya kena karma paling lucu.",
+      "durationSec": 8.75,
+      "whisperScore": 0.995,
+      "wavRef": "voices/bank_karakter/11_rival_sombong.wav",
+      "mp3": "public/audio/bank_karakter/11_rival_sombong.mp3"
+    },
+    {
+      "id": "12_hantu_pocong_lucu",
+      "name": "Kang Pocong",
+      "role": "Hantu Bariton Curhat Lucu",
+      "inspiration": "Horor → Komedi Lokal",
+      "category": "cowok",
+      "emoji": "👻",
+      "base": "pria_bariton",
+      "style": "deep resonant spooky ghost turning friendly, tired, humorous",
+      "filters": [
+        "highpass=f=65",
+        "rubberband=pitch=0.88:formant=preserved:pitchq=quality",
+        "equalizer=f=150:t=q:w=1.1:g=3.2",
+        "aecho=0.8:0.7:65:0.22"
+      ],
+      "text": "Hiii... eh maaf mas, betis saya kram gara-gara lompat dari ujung gang. Boleh minta pisang gorengnya satu nggak?",
+      "use_case": "Karakter hantu kocak, monster ramah, efek suara gua/mistis.",
+      "durationSec": 7.54,
+      "whisperScore": 0.944,
+      "wavRef": "voices/bank_karakter/12_hantu_pocong_lucu.wav",
+      "mp3": "public/audio/bank_karakter/12_hantu_pocong_lucu.mp3"
+    },
+    {
+      "id": "13_demo_tektokan_horor",
+      "name": "Tektokan Horor Cepat",
+      "role": "Riko + Mbak Ara + Kang Pocong",
+      "inspiration": "Timing Rapat ala Dalang Pelo",
+      "category": "tektokan",
+      "emoji": "🎭",
+      "text": "Riko: \"Lari Ra lari! Di belakang ada pocong melotot!\"  |  Mbak Ara: \"Hah, yang pakai baju putih itu? Kirain paket kasur gulung aku baru nyampe!\"  |  Kang Pocong: \"Heh enak aja kasur gulung! Ini kain kafan baru disetrika tahu!\"",
+      "use_case": "Contoh dialog 3 karakter sahut-sahutan super rapat (jeda 0,09 detik) untuk komedi animasi.",
+      "durationSec": 11.34,
+      "whisperScore": 0.937,
+      "wavRef": null,
+      "mp3": "public/audio/bank_karakter/13_demo_tektokan_horor.mp3"
+    },
+    {
+      "id": "14_demo_tektokan_kosan",
+      "name": "Storyteller → Tektokan Kosan",
+      "role": "Mbak Nadia + Riko + Bu Tini",
+      "inspiration": "Transisi Nadia Omara → Komedi",
+      "category": "tektokan",
+      "emoji": "🔥",
+      "text": "Mbak Nadia: \"Hai wak! Jadi malam itu Riko sok-sokan bikin konten masak jam dua pagi.\"  |  Riko: \"Ssttt diem dulu, ini resep rahasia bintang lima!\"  |  Bu Tini: \"Bintang lima apanya?! Dapur Ibu udah kayak knalpot bajaj nih!\"",
+      "use_case": "Contoh format narator cewek ceplas-ceplos disambung langsung tektokan panik & emak ngegas.",
+      "durationSec": 13.07,
+      "whisperScore": 0.835,
+      "wavRef": null,
+      "mp3": "public/audio/bank_karakter/14_demo_tektokan_kosan.mp3"
+    }
+  ]
+}
