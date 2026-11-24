@@ -807,7 +807,7 @@ const Plant: React.FC<{ pos: V3; s?: number; t?: number }> = ({ pos, s = 1, t = 
   </group>
 );
 
-export const KamarKosRiko: React.FC<{ t?: number; fanOn?: boolean; sun?: number; signShake?: number; lemariL?: number; lemariR?: number; lemariShake?: number; doorOpen?: number; doorBang?: number; showPillow?: boolean; cozy?: number; hideFront?: boolean }> = ({
+export const KamarKosRiko: React.FC<{ t?: number; fanOn?: boolean; sun?: number; signShake?: number; lemariL?: number; lemariR?: number; lemariShake?: number; doorOpen?: number; doorBang?: number; showPillow?: boolean; cozy?: number; hideFront?: boolean; hideWardrobe?: boolean }> = ({
   t = 0,
   fanOn = true,
   sun = 1,
@@ -820,6 +820,7 @@ export const KamarKosRiko: React.FC<{ t?: number; fanOn?: boolean; sun?: number;
   showPillow = true,
   cozy = 0,
   hideFront = false,
+  hideWardrobe = false,
 }) => {
   const tx = useMemo(
     () => ({
@@ -922,29 +923,33 @@ export const KamarKosRiko: React.FC<{ t?: number; fanOn?: boolean; sun?: number;
       <KipasAngin3D pos={[1.95, 0, -0.75]} rot={[0, -0.9, 0]} t={t} on={fanOn} />
 
       {/* ---------- DINDING KIRI: lemari 2 pintu + gantungan handuk ---------- */}
-      <Lemari2Pintu3D pos={[xMin + 0.3, 0, 0.1]} rot={[0, Math.PI / 2, 0]} openL={lemariL} openR={lemariR} shake={lemariShake} />
-      <group position={[xMin + 0.03, 1.6, 1.4]} rotation={[0, Math.PI / 2, 0]}>
-        <Poster
-          pos={[0, 0.25, 0]}
-          w={0.6}
-          h={0.82}
-          draw={(c) => {
-            c.fillStyle = "#1e1b4b";
-            c.fillRect(0, 0, 256, 350);
-            c.fillStyle = "#facc15";
-            c.font = "900 40px Arial";
-            c.textAlign = "center";
-            c.fillText("KONSER", 128, 70);
-            c.fillText("INDIE", 128, 116);
-            c.fillStyle = "#f472b6";
-            c.beginPath();
-            c.arc(128, 220, 70, 0, Math.PI * 2);
-            c.fill();
-          }}
-        />
-        <Cyl pos={[0, -0.35, 0.05]} r={0.012} h={0.5} rot={[0, 0, Math.PI / 2]} color="#94a3b8" hull={0.1} />
-        <B pos={[-0.1, -0.62, 0.06]} size={[0.3, 0.55, 0.03]} color="#06b6d4" ink={0.01} />
-      </group>
+      {!hideWardrobe && (
+        <>
+          <Lemari2Pintu3D pos={[xMin + 0.3, 0, 0.1]} rot={[0, Math.PI / 2, 0]} openL={lemariL} openR={lemariR} shake={lemariShake} />
+          <group position={[xMin + 0.03, 1.6, 1.4]} rotation={[0, Math.PI / 2, 0]}>
+            <Poster
+              pos={[0, 0.25, 0]}
+              w={0.6}
+              h={0.82}
+              draw={(c) => {
+                c.fillStyle = "#1e1b4b";
+                c.fillRect(0, 0, 256, 350);
+                c.fillStyle = "#facc15";
+                c.font = "900 40px Arial";
+                c.textAlign = "center";
+                c.fillText("KONSER", 128, 70);
+                c.fillText("INDIE", 128, 116);
+                c.fillStyle = "#f472b6";
+                c.beginPath();
+                c.arc(128, 220, 70, 0, Math.PI * 2);
+                c.fill();
+              }}
+            />
+            <Cyl pos={[0, -0.35, 0.05]} r={0.012} h={0.5} rot={[0, 0, Math.PI / 2]} color="#94a3b8" hull={0.1} />
+            <B pos={[-0.1, -0.62, 0.06]} size={[0.3, 0.55, 0.03]} color="#06b6d4" ink={0.01} />
+          </group>
+        </>
+      )}
 
       {/* ---------- DINDING KANAN: pintu ke koridor + rak sepatu + gantungan kunci ---------- */}
       <PintuKos3D pos={[xMax, 0, 0.8]} rot={[0, -Math.PI / 2, 0]} open={doorOpen} num="01" bang={doorBang} />

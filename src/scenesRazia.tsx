@@ -147,18 +147,29 @@ const Rig: React.FC<{ cam: Cam; shake?: Vec3 }> = ({ cam, shake = [0, 0, 0] }) =
 
 const Stage: React.FC<{ cam: Cam; shake?: Vec3; bg?: string; children: React.ReactNode }> = ({ cam, shake, bg = "#291810", children }) => {
   const { width, height } = useVideoConfig();
+  const rw = 720;
+  const rh = 1280;
+  const sx = width / rw;
+  const sy = height / rh;
   return (
-    <AbsoluteFill style={{ background: bg }}>
-      <ThreeCanvas width={width} height={height} shadows camera={{ fov: cam.fov, near: 0.05, far: 120, position: cam.pos }}>
-        <Rig cam={cam} shake={shake} />
-        <color attach="background" args={[bg]} />
-        {children}
-      </ThreeCanvas>
+    <AbsoluteFill style={{ background: bg, overflow: "hidden" }}>
+      <div style={{ width: rw, height: rh, transform: `scale(${sx}, ${sy})`, transformOrigin: "0 0" }}>
+        <ThreeCanvas
+          width={rw}
+          height={rh}
+          gl={{ antialias: true, powerPreference: "high-performance" }}
+          camera={{ fov: cam.fov, near: 0.05, far: 120, position: cam.pos }}
+        >
+          <Rig cam={cam} shake={shake} />
+          <color attach="background" args={[bg]} />
+          {children}
+        </ThreeCanvas>
+      </div>
     </AbsoluteFill>
   );
 };
 
-/* Clean Color Grade WITHOUT SwANGLE-buggy backdropFilter blur */
+/* Clean fast Color Grade (no SwANGLE-slow backdropFilter or software mixBlendMode readbacks) */
 const Grade: React.FC<{ warm?: number; pastel?: number; spy?: number; flash?: number; flashCol?: string }> = ({
   warm = 0,
   pastel = 0,
@@ -167,11 +178,11 @@ const Grade: React.FC<{ warm?: number; pastel?: number; spy?: number; flash?: nu
   flashCol = "#ffffff",
 }) => (
   <>
-    {warm > 0 && <AbsoluteFill style={{ mixBlendMode: "soft-light", background: `rgba(255,180,80,${0.32 * warm})` }} />}
-    {pastel > 0 && <AbsoluteFill style={{ mixBlendMode: "soft-light", background: `rgba(255,215,150,${0.44 * pastel})` }} />}
-    {spy > 0 && <AbsoluteFill style={{ mixBlendMode: "multiply", background: `rgba(30,40,75,${0.22 * spy})` }} />}
-    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 44%, rgba(0,0,0,0) 56%, rgba(16,8,6,0.40) 100%)" }} />
-    <AbsoluteFill style={{ background: "linear-gradient(rgba(16,8,6,0) 72%, rgba(16,8,6,0.42) 89%, rgba(16,8,6,0.68) 100%)" }} />
+    {warm > 0 && <AbsoluteFill style={{ background: `rgba(255,180,80,${0.12 * warm})` }} />}
+    {pastel > 0 && <AbsoluteFill style={{ background: `rgba(255,220,155,${0.18 * pastel})` }} />}
+    {spy > 0 && <AbsoluteFill style={{ background: `rgba(20,30,65,${0.14 * spy})` }} />}
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 44%, rgba(0,0,0,0) 56%, rgba(16,8,6,0.38) 100%)" }} />
+    <AbsoluteFill style={{ background: "linear-gradient(rgba(16,8,6,0) 72%, rgba(16,8,6,0.40) 89%, rgba(16,8,6,0.66) 100%)" }} />
     {flash > 0 && <AbsoluteFill style={{ background: flashCol, opacity: flash }} />}
   </>
 );
@@ -1047,7 +1058,7 @@ const SceneRebutan: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage cam={cam}>
-        <KamarKosRiko t={t} cozy={1} sun={1.4} doorOpen={0.96} showPillow={false} hideFront={cam.pos[2] > 2.1} />
+        <KamarKosRiko t={t} cozy={1} sun={1.4} doorOpen={0.96} showPillow={false} hideFront={cam.pos[2] > 2.1} hideWardrobe={cam.pos[0] < -1.65} />
         <BeanCard position={tiniPos} height={2.0} params={tiniP} />
         <OrenHero3D pos={orenHeldPos} rot={[0, Math.atan2(cam.pos[0] - orenHeldPos[0], cam.pos[2] - orenHeldPos[2]), 0]} scale={1.15} t={t} pose="held" purr={1} tailAmp={0.45} />
         <BesekPindang3D pos={[tiniR[0] + 0.06, tiniR[1] - 0.06, tiniR[2] + 0.1]} rot={[0.1, -0.4, 0]} scale={0.95} lid={1} />
