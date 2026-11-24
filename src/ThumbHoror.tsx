@@ -93,19 +93,19 @@ const ThumbHororStage: React.FC<{
 
 export const ThumbHororShorts: React.FC = () => {
   const { width, height } = useVideoConfig();
-  const camPos: Vec3 = [-0.25, 2.05, 6.45];
-  const look: Vec3 = [-0.25, 1.55, -0.65];
+  const camPos: Vec3 = [-0.05, 2.08, 7.75];
+  const look: Vec3 = [-0.05, 1.55, -0.65];
   return (
     <AbsoluteFill style={{ background: "#0f122a" }}>
-      <ThreeCanvas width={width} height={height} shadows camera={{ fov: 44, near: 0.08, far: 140, position: camPos }}>
-        <ThumbRig pos={camPos} look={look} fov={44} roll={-3.0} />
+      <ThreeCanvas width={width} height={height} shadows camera={{ fov: 45, near: 0.08, far: 140, position: camPos }}>
+        <ThumbRig pos={camPos} look={look} fov={45} roll={-2.5} />
         <color attach="background" args={["#0f122a"]} />
         <ThumbHororStage
           camPos={camPos}
-          rikoPos={[-1.45, 0, 0.35]}
-          bagasPos={[-0.45, 0, 0.65]}
-          pocongPos={[0.52, 0.18, -0.75]}
-          kuntiPos={[1.28, 0.30, -0.15]}
+          rikoPos={[-1.28, 0, 0.35]}
+          bagasPos={[-0.38, 0, 0.65]}
+          pocongPos={[0.45, 0.18, -0.75]}
+          kuntiPos={[1.15, 0.30, -0.15]}
         />
       </ThreeCanvas>
       <AbsoluteFill
