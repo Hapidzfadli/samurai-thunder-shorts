@@ -1001,7 +1001,7 @@ export const KamarKosRiko: React.FC<{ t?: number; fanOn?: boolean; sun?: number;
 /* ---------------------------------------------------------------------- */
 export const KORIDOR = { x0: 2.34, x1: 4.3, z0: -5.5, z1: 6 };
 
-export const KoridorLantai2: React.FC<{ t?: number; noticeGlow?: number }> = ({ t = 0, noticeGlow = 0 }) => {
+export const KoridorLantai2: React.FC<{ t?: number; noticeGlow?: number; hideRoof?: boolean }> = ({ t = 0, noticeGlow = 0, hideRoof = false }) => {
   const tx = useMemo(
     () => ({
       wall: plasterTex("#fde7c4", [4, 1]),
@@ -1045,7 +1045,7 @@ export const KoridorLantai2: React.FC<{ t?: number; noticeGlow?: number }> = ({ 
       {/* dinding luar deretan kamar (menghadap +x) */}
       <Wall pos={[x0, 1.45, zc]} rot={[0, Math.PI / 2, 0]} w={L} h={2.9} map={tx.wall} />
       {/* atap/kanopi koridor */}
-      <B pos={[(x0 + x1) / 2 + 0.2, 3.0, zc]} size={[x1 - x0 + 0.6, 0.1, L]} color="#9a3412" ink={0.02} />
+      {!hideRoof && <B pos={[(x0 + x1) / 2 + 0.2, 3.0, zc]} size={[x1 - x0 + 0.6, 0.1, L]} color="#9a3412" ink={0.02} />}
       {/* pagar besi + pot tanaman di pagar + jemuran */}
       <B pos={[x1, 1.0, zc]} size={[0.06, 0.06, L]} color="#1f2937" ink={0.012} />
       <B pos={[x1, 0.08, zc]} size={[0.08, 0.16, L]} color="#d6d3d1" ink={0.012} />

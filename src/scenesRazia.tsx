@@ -271,8 +271,8 @@ const PillowDisguiseInsert: React.FC<{ from: number; to: number }> = ({ from, to
   const p = cl((f - from) / Math.max(1, to - from));
   const enter = spring({ frame: f - from, fps: 30, config: { damping: 12, stiffness: 220 } });
   const exit = interpolate(f, [to - 7, to], [1, 0], clamp);
-  const slipY = interpolate(p, [0.1, 0.72], [-75, 0], clamp);
-  const earPop = spring({ frame: Math.max(0, f - (from + Math.round((to - from) * 0.52))), fps: 30, config: { damping: 9, stiffness: 260 } });
+  const slipY = interpolate(p, [0.05, 0.35], [-75, 0], clamp);
+  const earPop = spring({ frame: Math.max(0, f - (from + Math.round((to - from) * 0.22))), fps: 30, config: { damping: 9, stiffness: 260 } });
 
   return (
     <div
@@ -489,15 +489,15 @@ const SceneHook: React.FC = () => {
 
   // Camera starts looking at the red "DILARANG PELIHARA HEWAN!" sign -> pans down to Riko feeding Oren!
   const cam = evalCam(f, [
-    { kind: "linear", to: evDilarang + 48, p0: [0.95, 2.2, 0.1], p1: [0.95, 2.2, -0.45], l0: [1.0, 2.2, -2.18], l1: [1.0, 2.2, -2.18], fov0: 44, fov1: 38 },
-    { kind: "linear", to: evTongkol + 35, p0: [0.95, 2.2, -0.45], p1: [0.15, 1.38, 3.65], l0: [1.0, 2.2, -2.18], l1: [-0.25, 0.78, -0.6], fov0: 38, fov1: 54 },
-    { kind: "orbit", to: dur, target0: [-0.25, 0.65, -0.2], target1: [-0.2, 0.55, 0.0], ang0: 0.14, ang1: -0.22, rad0: 3.4, rad1: 2.95, y0: 1.32, y1: 1.05, fov0: 54, fov1: 50 },
+    { kind: "linear", to: evDilarang + 48, p0: [0.98, 2.2, 0.55], p1: [0.98, 2.2, 0.05], l0: [1.0, 2.2, -2.18], l1: [1.0, 2.2, -2.18], fov0: 46, fov1: 42 },
+    { kind: "linear", to: evTongkol + 35, p0: [0.98, 2.2, 0.05], p1: [0.15, 1.38, 3.85], l0: [1.0, 2.2, -2.18], l1: [-0.2, 0.82, -0.5], fov0: 42, fov1: 54 },
+    { kind: "orbit", to: dur, target0: [-0.2, 0.68, -0.15], target1: [-0.15, 0.62, 0.05], ang0: 0.14, ang1: -0.18, rad0: 3.55, rad1: 3.15, y0: 1.34, y1: 1.12, fov0: 54, fov1: 50 },
   ]);
 
   const signShake = f >= evDilarang && f < evDilarang + 40 ? (f - evDilarang) / 30 : 0;
-  // Riko carries plate from right -> sets it cleanly on floor at [-0.12, 0, 0.35] for Oren!
+  // Riko carries plate from right -> sets it cleanly on floor at [0.02, 0, 0.35] for Oren!
   const setK = smoothStep(f, evTongkol - 20, 40);
-  const rikoPos: Vec3 = [-0.78, 0, 0.05];
+  const rikoPos: Vec3 = [-0.68, 0, 0.05];
   const rikoMouth = talkMouth(f, ["h2"]);
   const rikoPose: Pose =
     f < evTongkol + 20
@@ -527,18 +527,18 @@ const SceneHook: React.FC = () => {
   const eating = f >= evTongkol + 24;
   const orenChew = eating ? 1 : 0;
 
-  // Nadia cameo peeking smoothly from bottom-left corner while narrating h1!
+  // Nadia cameo badge smoothly below chip so it never overlaps!
   const nadiaMouth = talkMouth(f, ["h1"]);
   const nadiaShow = inLine(f, "h1", 8);
 
   return (
     <AbsoluteFill>
       <Stage cam={cam} shake={kick(f, [evDilarang], 0.07)}>
-        <KamarKosRiko t={t} signShake={signShake} sun={1.2} hideFront={cam.pos[2] > 2.2} />
+        <KamarKosRiko t={t} signShake={signShake} sun={1.2} hideFront={cam.pos[2] > 2.1} />
         <BeanCard position={rikoPos} height={1.94} params={rikoP} />
         <IkanTongkol3D pos={platePos} scale={1.08} eaten={eating ? cl((f - (evTongkol + 24)) / 140, 0, 0.65) : 0} t={t} steam />
         <OrenHero3D
-          pos={[0.45, 0.01, 0.38]}
+          pos={[0.42, 0.01, 0.38]}
           rot={[0, -1.25, 0]}
           scale={1.32}
           t={t}
@@ -561,16 +561,16 @@ const SceneHook: React.FC = () => {
       <Chip from={2} to={evDilarang + 44} top={215} color="#dc2626">
         🚫 RAZIA KUCING OREN!
       </Chip>
-      {nadiaShow && (
+      {nadiaShow && f > evDilarang + 46 && (
         <div
           style={{
             position: "absolute",
-            top: 220,
-            right: 42,
-            background: "rgba(14,165,233,0.94)",
+            top: 215,
+            right: 48,
+            background: "rgba(14,165,233,0.95)",
             border: "5px solid #ffffff",
             borderRadius: 22,
-            padding: "8px 18px",
+            padding: "8px 20px",
             fontFamily: FONT_BODY,
             fontWeight: 900,
             fontSize: 28,
@@ -602,7 +602,7 @@ const SceneAlarm: React.FC = () => {
     { kind: "linear", to: evGawat, p0: [3.65, 1.48, 3.8], p1: [3.55, 1.42, 2.55], l0: [2.85, 1.25, -1.2], l1: [2.75, 1.32, 0.2], fov0: 54, fov1: 48, roll0: -1.5, roll1: 1.5 },
   ]);
   const camRoom = evalCam(Math.max(0, f - (evGawat - 4)), [
-    { kind: "linear", to: dur - evGawat + 6, p0: [-0.1, 1.38, 3.55], p1: [0.25, 1.45, 3.1], l0: [0.3, 1.05, 0.1], l1: [0.65, 1.12, 0.4], fov0: 55, fov1: 48, roll0: 2.5, roll1: -2.0 },
+    { kind: "linear", to: dur - evGawat + 6, p0: [0.02, 1.44, 4.15], p1: [0.08, 1.42, 3.75], l0: [0.05, 1.02, 0.1], l1: [0.15, 1.02, 0.2], fov0: 56, fov1: 52, roll0: 2.0, roll1: -1.8 },
   ]);
 
   const cam = inRoom ? camRoom : camCorridor;
@@ -618,9 +618,9 @@ const SceneAlarm: React.FC = () => {
   const tiniHand = beanHandWorld(tiniP, "R", tiniPos, 2.02, cam.pos, true);
 
   const rikoMouth = talkMouth(f, ["a2"]);
-  const rikoPos: Vec3 = [-0.55, 0, 0.15];
+  const rikoPos: Vec3 = [-0.35, 0, 0.15];
   const rikoP = toBean(RIKO_RAZIA, panicPose(t, 1), t, 1, { expr: "shock", sweat: true, mouthOpen: rikoMouth });
-  const bagasPos: Vec3 = [-1.45, 0, -0.55];
+  const bagasPos: Vec3 = [-0.95, 0, -0.68];
   const bagasP = toBean(BAGAS_RAZIA, { ...idlePose(t, 3), armR: [42, 34] }, t, 3, { expr: "neutral" });
 
   return (
@@ -639,10 +639,10 @@ const SceneAlarm: React.FC = () => {
         ) : (
           <>
             <KamarKosRiko t={t} sun={1.15} hideFront />
-            <BeanCard position={rikoPos} height={1.96} params={rikoP} />
-            <BeanCard position={bagasPos} height={1.94} params={bagasP} />
-            <OrenHero3D pos={[0.58, 0.01, 0.35]} rot={[0, -0.6, 0]} scale={1.32} t={t} pose="sit" sparkle={0.35} tailAmp={0.75} look={[0.4, -0.2]} />
-            <IkanTongkol3D pos={[0.25, 0.01, 0.72]} scale={1.0} eaten={0.5} t={t} steam />
+            <BeanCard position={rikoPos} height={1.94} params={rikoP} />
+            <BeanCard position={bagasPos} height={1.9} params={bagasP} />
+            <OrenHero3D pos={[0.52, 0.01, 0.42]} rot={[0, -0.55, 0]} scale={1.32} t={t} pose="sit" sparkle={0.35} tailAmp={0.75} look={[0.4, -0.2]} />
+            <IkanTongkol3D pos={[0.18, 0.01, 0.78]} scale={1.0} eaten={0.5} t={t} steam />
           </>
         )}
       </Stage>
@@ -737,8 +737,8 @@ const SceneDobrak: React.FC = () => {
   const evAncol = EV["dobrak.ancol"] ?? 220;
 
   const cam = evalCam(f, [
-    { kind: "linear", to: 38, p0: [-0.2, 1.48, 3.65], p1: [0.2, 1.45, 3.35], l0: [1.35, 1.15, 0.6], l1: [0.55, 1.1, 0.3], fov0: 56, fov1: 52, roll0: -2.2, roll1: 0.8 },
-    { kind: "orbit", to: dur, target0: [0.2, 1.05, 0.05], target1: [-0.1, 1.08, -0.25], ang0: 0.16, ang1: -0.2, rad0: 3.5, rad1: 3.35, y0: 1.45, y1: 1.42, fov0: 52, fov1: 50 },
+    { kind: "linear", to: 38, p0: [-0.05, 1.5, 4.2], p1: [0.05, 1.48, 3.95], l0: [0.65, 1.08, 0.4], l1: [0.05, 1.04, 0.15], fov0: 56, fov1: 54, roll0: -2.0, roll1: 0.6 },
+    { kind: "orbit", to: dur, target0: [0.0, 1.04, 0.05], target1: [-0.08, 1.04, -0.15], ang0: 0.1, ang1: -0.16, rad0: 4.1, rad1: 3.9, y0: 1.48, y1: 1.44, fov0: 54, fov1: 52 },
   ]);
 
   // Door flies open at frame 2!
@@ -747,45 +747,45 @@ const SceneDobrak: React.FC = () => {
 
   // Bu Tini storms through the door holding Sapu Ijuk, then leans sniffing toward the fish plate!
   const stepIn = smoothStep(f, 5, 26);
-  const tiniPos: Vec3 = lerpV([2.15, 0, 0.82], [0.85, 0, 0.42], stepIn);
+  const tiniPos: Vec3 = lerpV([1.95, 0, 0.78], [0.58, 0, 0.35], stepIn);
   const tiniMouth = talkMouth(f, ["d1"]);
-  const tiniBasePose = stepIn < 0.98 ? walkPose(t, 9.0, 1.0) : { ...idlePose(t, 2), lean: 14, armR: [128, 18], armL: [-42, 40] };
+  const tiniBasePose: Pose = stepIn < 0.98 ? walkPose(t, 9.0, 1.0) : { ...idlePose(t, 2), lean: 12, armR: [112, 18], armL: [-42, 40] };
   const tiniP = toBean(BU_TINI_RAZIA, tiniBasePose, t, 2, { expr: "angry", mouthOpen: tiniMouth });
-  const tiniHand = beanHandWorld(tiniP, "R", tiniPos, 2.02, cam.pos, true);
+  const tiniHand = beanHandWorld(tiniP, "R", tiniPos, 2.0, cam.pos, true);
 
   // Riko backs up nervously waving hands while making up "Parfum Pantai Ancol"!
   const rikoStep = smoothStep(f, 12, 24);
-  const rikoPos: Vec3 = lerpV([-0.35, 0, 0.35], [-0.85, 0, 0.15], rikoStep);
+  const rikoPos: Vec3 = lerpV([-0.28, 0, 0.32], [-0.62, 0, 0.15], rikoStep);
   const rikoMouth = talkMouth(f, ["d2"]);
   const rikoPose: Pose =
     f >= evParfum - 6
       ? {
           ...idlePose(t, 1),
-          armL: [-82 + Math.sin(t * 11) * 18, 28],
-          armR: [88 - Math.sin(t * 11) * 18, 28],
-          lean: -8,
+          armL: [-80 + Math.sin(t * 11) * 16, 26],
+          armR: [84 - Math.sin(t * 11) * 16, 26],
+          lean: -6,
           bob: Math.abs(Math.sin(t * 10)) * 8,
           headTilt: Math.sin(t * 9) * 7,
         }
       : panicPose(t, 1);
   const rikoP = toBean(RIKO_RAZIA, rikoPose, t, 1, { expr: f >= evParfum ? "worried" : "shock", sweat: true, mouthOpen: rikoMouth });
 
-  const bagasPos: Vec3 = [-1.52, 0, -0.68];
+  const bagasPos: Vec3 = [-1.15, 0, -0.78];
   const bagasP = toBean(BAGAS_RAZIA, { ...idlePose(t, 3), armR: [35, 28] }, t, 3, { expr: "smug" });
 
   return (
     <AbsoluteFill>
       <Stage cam={cam} shake={kick(f, [3, 8], 0.16)}>
-        <KamarKosRiko t={t} doorOpen={doorOpen} doorBang={doorBang} showPillow={false} hideFront={cam.pos[2] > 2.2} />
-        <BeanCard position={tiniPos} height={2.02} params={tiniP} flip />
-        <SapuIjuk3D pos={[tiniHand[0] - 0.12, tiniHand[1] + 0.16, tiniHand[2] + 0.08]} rot={[0.1, 0.25, -0.58]} scale={1.06} />
-        <BeanCard position={rikoPos} height={1.96} params={rikoP} />
-        <BeanCard position={bagasPos} height={1.94} params={bagasP} />
+        <KamarKosRiko t={t} doorOpen={doorOpen} doorBang={doorBang} showPillow={false} hideFront={cam.pos[2] > 2.1} />
+        <BeanCard position={tiniPos} height={2.0} params={tiniP} flip />
+        <SapuIjuk3D pos={[tiniHand[0] + 0.04, tiniHand[1] + 0.38, tiniHand[2] + 0.06]} rot={[0.08, 0.12, 0.24]} scale={1.02} />
+        <BeanCard position={rikoPos} height={1.94} params={rikoP} />
+        <BeanCard position={bagasPos} height={1.9} params={bagasP} />
         {/* Oren tetap menyamar sebagai bantal bulu di kasur + selimut menutupi sebagian */}
         <OrenHero3D pos={[-1.25, 0.46, -1.58]} rot={[0, 0.35, 0]} scale={1.15} t={t} pose="loaf" disguise={1} tailAmp={0.18} />
         <Selimut3D pos={[-1.25, 0.46, -1.58]} pull={0.0} t={t} />
         {/* Piring ikan tongkol masih mengepul di lantai! */}
-        <IkanTongkol3D pos={[0.05, 0.01, 0.68]} scale={1.08} eaten={0.55} t={t} steam />
+        <IkanTongkol3D pos={[0.0, 0.01, 0.72]} scale={1.08} eaten={0.55} t={t} steam />
       </Stage>
       <Grade warm={0.22} spy={0.3} flash={f >= 2 && f <= 6 ? 0.4 : 0} flashCol="#fff7ed" />
       <Tag label="💥 DOBRAK PINTU! BAU IKAN TONGKOL!" to={dur - 8} color="#dc2626" />
@@ -815,20 +815,19 @@ const SceneBocor: React.FC = () => {
   const evTamat = EV["bocor.tamat"] ?? 215;
 
   // 160° REVERSE-ANGLE from behind the bed looking toward the open door & Mbak Ara peeking in!
-  // Front-wall props (dispenser/mirror) are visible naturally in the background!
   const cam = evalCam(f, [
-    { kind: "linear", to: evNgeong, p0: [-1.85, 1.38, -1.85], p1: [-1.62, 1.32, -1.52], l0: [1.15, 1.12, 0.65], l1: [0.85, 1.05, 0.55], fov0: 56, fov1: 52 },
-    { kind: "linear", to: dur, p0: [-1.62, 1.32, -1.52], p1: [-1.35, 1.25, -1.1], l0: [0.85, 1.05, 0.55], l1: [-0.25, 1.02, 0.35], fov0: 52, fov1: 50, roll0: 0, roll1: -2.0 },
+    { kind: "linear", to: evNgeong, p0: [-1.85, 1.48, -1.92], p1: [-1.62, 1.4, -1.62], l0: [0.68, 1.05, 0.65], l1: [0.42, 1.02, 0.55], fov0: 58, fov1: 54 },
+    { kind: "linear", to: dur, p0: [-1.62, 1.4, -1.62], p1: [-1.45, 1.35, -1.35], l0: [0.42, 1.02, 0.55], l1: [0.15, 1.0, 0.52], fov0: 54, fov1: 52, roll0: 0, roll1: -1.8 },
   ]);
 
   // Mbak Ara leans cheerfully through the open door pointing right at the "bantal bulu"!
-  const araPos: Vec3 = [1.82, 0, 0.85];
+  const araPos: Vec3 = [1.42, 0, 0.62];
   const araMouth = talkMouth(f, ["b1"]);
   const araP = toBean(
     ARA,
     {
       ...idlePose(t, 5),
-      lean: 14,
+      lean: 12,
       armR: [108 + Math.sin(t * 5) * 10, 18],
       armL: [-28, 32],
       headTilt: 10,
@@ -840,18 +839,18 @@ const SceneBocor: React.FC = () => {
   );
 
   // Bu Tini spins her glare from Riko straight toward the bed!
-  const tiniPos: Vec3 = [0.75, 0, 0.45];
-  const tiniP = toBean(BU_TINI_RAZIA, { ...idlePose(t, 2), armR: [125, 18], lean: 12 }, t, 2, {
+  const tiniPos: Vec3 = [0.55, 0, 0.42];
+  const tiniP = toBean(BU_TINI_RAZIA, { ...idlePose(t, 2), armR: [110, 18], lean: 10 }, t, 2, {
     expr: f >= evGerak ? "shock" : "angry",
   });
-  const tiniHand = beanHandWorld(tiniP, "R", tiniPos, 2.02, cam.pos, true);
+  const tiniHand = beanHandWorld(tiniP, "R", tiniPos, 2.0, cam.pos, true);
 
-  // Riko facepalms in absolute despair!
-  const rikoPos: Vec3 = [-0.25, 0, 0.65];
+  // Riko facepalms in absolute despair — cleanly inside frame!
+  const rikoPos: Vec3 = [-0.28, 0, 0.88];
   const rikoMouth = talkMouth(f, ["b2"]);
   const rikoPose: Pose =
     f >= evNgeong - 6
-      ? { ...panicPose(t, 1), armR: [148, -42], armL: [-148, 42], lean: -10 }
+      ? { ...panicPose(t, 1), armR: [148, -42], armL: [-148, 42], lean: -8 }
       : { ...idlePose(t, 1), armR: [75, 35], armL: [-75, -35], lean: -4 };
   const rikoP = toBean(RIKO_RAZIA, rikoPose, t, 1, { expr: f >= evNgeong ? "scared" : "worried", sweat: true, mouthOpen: rikoMouth });
 
@@ -863,11 +862,11 @@ const SceneBocor: React.FC = () => {
       <Stage cam={cam} shake={kick(f, [evNgeong, evTamat], 0.11)}>
         <KamarKosRiko t={t} doorOpen={0.94} showPillow={false} />
         <BeanCard position={araPos} height={1.9} params={araP} flip />
-        <BeanCard position={tiniPos} height={2.02} params={tiniP} flip />
-        <SapuIjuk3D pos={[tiniHand[0] - 0.12, tiniHand[1] + 0.14, tiniHand[2] + 0.08]} rot={[0.1, 0.25, -0.58]} scale={1.06} />
-        <BeanCard position={rikoPos} height={1.96} params={rikoP} />
+        <BeanCard position={tiniPos} height={2.0} params={tiniP} flip />
+        <SapuIjuk3D pos={[tiniHand[0] + 0.04, tiniHand[1] + 0.36, tiniHand[2] + 0.06]} rot={[0.08, 0.12, 0.24]} scale={1.02} />
+        <BeanCard position={rikoPos} height={1.94} params={rikoP} />
         {/* Foreground disguised Oren pillow wiggling on bed corner! */}
-        <OrenHero3D pos={[-1.12, 0.46, -1.25]} rot={[0, 0.9 + wiggle, wiggle * 0.6]} scale={1.12} t={t} pose="loaf" disguise={1} tailAmp={f >= evGerak ? 0.9 : 0.25} />
+        <OrenHero3D pos={[-1.02, 0.56, -0.95]} rot={[0, 0.9 + wiggle, wiggle * 0.6]} scale={1.15} t={t} pose="loaf" disguise={1} tailAmp={f >= evGerak ? 0.9 : 0.25} />
       </Stage>
       <Grade warm={0.22} spy={0.28} />
       <Tag label="🤭 160° REVERSE ANGLE · BOCOR!" to={dur - 8} color="#c026d3" />
@@ -891,17 +890,16 @@ const SceneTwist: React.FC = () => {
   const evPullDone = EV["twist.pull_done"] ?? 108;
   const evMeow = EV["twist.meow"] ?? 120;
   const evScratch = EV["twist.scratch"] ?? 142;
-  const evLuluh = EV["twist.luluh"] ?? 155;
 
   // 1. Wide shot Bu Tini marching to bed & yanking blanket off
-  // 2. DRAMATIC VERTIGO ZOOM straight into Oren's sparkling Puss-in-Boots eyes!
-  // 3. HARD RECORD SCRATCH -> cut back to Bu Tini dropping her broom & melting!
+  // 2. UNOBSTRUCTED VERTIGO ZOOM straight into Oren's sparkling Puss-in-Boots eyes!
+  // 3. HARD RECORD SCRATCH -> pull back to reveal Bu Tini dropping her broom & melting!
   const cam = evalCam(f, [
     { kind: "linear", to: evPullDone, p0: [0.35, 1.42, 1.65], p1: [-0.25, 1.25, 0.85], l0: [-1.15, 0.85, -1.4], l1: [-1.22, 0.82, -1.55], fov0: 54, fov1: 48 },
-    // Vertigo Zoom: dolly-in + telephoto FOV squeeze right into Oren's starry eyes!
-    { kind: "linear", to: evScratch + 2, p0: [-0.75, 1.12, -0.35], p1: [-1.08, 1.04, -0.82], l0: [-1.22, 0.92, -1.58], l1: [-1.22, 0.96, -1.58], fov0: 56, fov1: 28, roll0: 0, roll1: -4.5 },
+    // Vertigo Zoom directly in front of Oren — zero props between camera and Oren's starry face!
+    { kind: "linear", to: evScratch + 2, p0: [-1.02, 1.12, -0.35], p1: [-1.14, 1.04, -0.82], l0: [-1.22, 0.94, -1.58], l1: [-1.22, 0.96, -1.58], fov0: 54, fov1: 28, roll0: 0, roll1: -4.0 },
     // Pull back to reveal Bu Tini completely melted in pastel golden glow!
-    { kind: "orbit", to: dur, target0: [-0.75, 1.05, -1.2], target1: [-0.75, 1.08, -1.15], ang0: 0.45, ang1: -0.18, rad0: 2.35, rad1: 2.6, y0: 1.38, y1: 1.45, fov0: 50, fov1: 52, roll0: 0, roll1: 0 },
+    { kind: "orbit", to: dur, target0: [-0.65, 1.05, -1.2], target1: [-0.65, 1.08, -1.15], ang0: 0.42, ang1: -0.15, rad0: 2.55, rad1: 2.75, y0: 1.4, y1: 1.45, fov0: 52, fov1: 54, roll0: 0, roll1: 0 },
   ]);
 
   const pullK = smoothStep(f, evTarik, 28);
@@ -910,24 +908,24 @@ const SceneTwist: React.FC = () => {
   const melted = f >= evScratch;
   const cozyK = smoothStep(f, evScratch, 22);
 
-  // Bu Tini steps to bed, pulls blanket, then drops broom & melts!
+  // Bu Tini stands slightly right of Oren (x = +0.16) so broom never crosses Oren's face!
   const tiniStep = smoothStep(f, 0, 32);
-  const tiniPos: Vec3 = lerpV([0.45, 0, -0.25], [-0.32, 0, -1.05], tiniStep);
+  const tiniPos: Vec3 = lerpV([0.65, 0, -0.25], [0.16, 0, -1.08], tiniStep);
   const tiniMouth = talkMouth(f, ["t1", "t2"]);
   const tiniPose: Pose = melted
     ? {
         ...idlePose(t, 2),
-        lean: 16,
-        armL: [-62, 58], // kedua tangan gemes di pipi/depan!
+        lean: 14,
+        armL: [-62, 58],
         armR: [62, 58],
         bob: 6 + Math.sin(t * 5) * 6,
         headTilt: Math.sin(t * 4) * 10,
       }
     : {
         ...idlePose(t, 2),
-        lean: 14,
+        lean: 12,
         armL: [lerpN(-30, -95, pullK), lerpN(20, 10, pullK)],
-        armR: [122, 22],
+        armR: [110, 20],
       };
   const tiniP = toBean(BU_TINI_RAZIA, tiniPose, t, 2, {
     expr: melted ? "laugh" : "angry",
@@ -935,12 +933,12 @@ const SceneTwist: React.FC = () => {
   });
   const tiniHand = beanHandWorld(tiniP, "R", tiniPos, 2.02, cam.pos, true);
 
-  // Broom drops physically from Bu Tini's hand onto the floor right after Record Scratch!
+  // Broom angled cleanly away on Bu Tini's right, then drops onto the floor right after Record Scratch!
   const dropK = smoothStep(f, evScratch + 2, 14);
-  const broomPos = lerpV([tiniHand[0] - 0.1, tiniHand[1] + 0.14, tiniHand[2] + 0.08], [0.15, 0.07, -0.75], dropK);
-  const broomRot: Vec3 = [lerpN(0.1, Math.PI / 2, dropK), lerpN(0.25, 0.6, dropK), lerpN(-0.55, 0.85, dropK)];
+  const broomPos = lerpV([tiniHand[0] + 0.08, tiniHand[1] + 0.34, tiniHand[2] + 0.05], [0.42, 0.07, -0.75], dropK);
+  const broomRot: Vec3 = [lerpN(0.08, Math.PI / 2, dropK), lerpN(0.15, 0.6, dropK), lerpN(0.26, 0.85, dropK)];
 
-  const rikoPos: Vec3 = [0.78, 0, 0.25];
+  const rikoPos: Vec3 = [1.05, 0, 0.25];
   const rikoP = toBean(RIKO_RAZIA, { ...idlePose(t, 1), armL: [-55, 42], armR: [55, 42] }, t, 1, { expr: melted ? "shock" : "scared", sweat: true });
 
   const scratchFlash = f >= evScratch - 1 && f <= evScratch + 5 ? (1 - (f - (evScratch - 1)) / 6) * 0.85 : 0;
@@ -948,14 +946,14 @@ const SceneTwist: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage cam={cam} shake={kick(f, [evTarik, evScratch], 0.15)}>
-        <KamarKosRiko t={t} cozy={cozyK} sun={1.15 + cozyK * 0.35} showPillow={false} doorOpen={0.94} hideFront={cam.pos[2] > 2.2} />
+        <KamarKosRiko t={t} cozy={cozyK} sun={1.15 + cozyK * 0.35} showPillow={false} doorOpen={0.94} hideFront={cam.pos[2] > 2.1} />
         <BeanCard position={tiniPos} height={2.02} params={tiniP} flip />
-        <SapuIjuk3D pos={broomPos} rot={broomRot} scale={1.04} />
+        <SapuIjuk3D pos={broomPos} rot={broomRot} scale={1.02} />
         <BeanCard position={rikoPos} height={1.96} params={rikoP} flip />
         {/* Hero Oren: blanket ripped off -> giant starry Puss-in-Boots eyes! */}
         <OrenHero3D
           pos={[-1.22, 0.46, -1.58]}
-          rot={[0, 0.42, 0]}
+          rot={[0, 0.25, 0]}
           scale={1.25}
           t={t}
           pose={pullK > 0.35 ? "sit" : "loaf"}
@@ -991,15 +989,15 @@ const SceneRebutan: React.FC = () => {
   const evDiusir = EV["rebutan.diusir"] ?? 210;
   const evBebek = EV["rebutan.bebek"] ?? 310;
 
-  // Full 360° warm golden pastel orbit INSIDE the room (radius 2.05m so all 4 walls & furniture glide around!)
+  // Smooth full 360° warm golden pastel orbit with generous 2.45m clearance from all characters!
   const cam = evalCam(f, [
-    { kind: "orbit", to: evDiusir + 20, target0: [0.05, 1.05, 0.05], target1: [0.25, 1.08, 0.25], ang0: -0.25, ang1: Math.PI * 1.45, rad0: 2.15, rad1: 2.05, y0: 1.42, y1: 1.52, fov0: 58, fov1: 56 },
-    { kind: "orbit", to: dur, target0: [0.25, 1.08, 0.25], target1: [0.55, 1.12, 0.45], ang0: Math.PI * 1.45, ang1: Math.PI * 2.15, rad0: 2.05, rad1: 2.25, y0: 1.52, y1: 1.48, fov0: 56, fov1: 54 },
+    { kind: "orbit", to: evDiusir + 20, target0: [0.05, 1.02, 0.05], target1: [0.15, 1.05, 0.05], ang0: -0.25, ang1: Math.PI * 1.35, rad0: 2.45, rad1: 2.38, y0: 1.58, y1: 1.66, fov0: 58, fov1: 56 },
+    { kind: "orbit", to: dur, target0: [0.15, 1.05, 0.05], target1: [0.25, 1.06, 0.1], ang0: Math.PI * 1.35, ang1: Math.PI * 2.1, rad0: 2.38, rad1: 2.52, y0: 1.66, y1: 1.56, fov0: 56, fov1: 54 },
   ]);
 
   // Bu Tini scoops Oren into her arms (15f hand transfer) + holds Besek Pindang!
   const scoopK = smoothStep(f, 4, 18);
-  const tiniPos: Vec3 = lerpV([-0.35, 0, -0.55], [0.15, 0, 0.15], smoothStep(f, 0, 60));
+  const tiniPos: Vec3 = lerpV([-0.25, 0, -0.38], [0.02, 0, -0.02], smoothStep(f, 0, 60));
   const tiniMouth = talkMouth(f, ["r1"]);
   const tiniP = toBean(
     BU_TINI_RAZIA,
@@ -1014,16 +1012,16 @@ const SceneRebutan: React.FC = () => {
     2,
     { expr: "laugh", mouthOpen: tiniMouth },
   );
-  const tiniL = beanHandWorld(tiniP, "L", tiniPos, 2.02, cam.pos, false);
-  const tiniR = beanHandWorld(tiniP, "R", tiniPos, 2.02, cam.pos, false);
+  const tiniL = beanHandWorld(tiniP, "L", tiniPos, 2.0, cam.pos, false);
+  const tiniR = beanHandWorld(tiniP, "R", tiniPos, 2.0, cam.pos, false);
 
   // Oren physically transfers from bed into Bu Tini's cuddling arms (pose="held", purr=1)!
   const orenHeldPos = lerpV(SPOT.bedCenter, [tiniL[0] + 0.08, tiniL[1] - 0.18, tiniL[2] + 0.12], scoopK);
 
-  // Riko & Bagas get shooed toward the door looking totally bewildered!
+  // Riko & Bagas get shooed toward the door — kept cleanly inside orbit clearance!
   const kickOutK = smoothStep(f, evKeluar, 65);
-  const rikoPos = lerpV([-0.85, 0, 0.35], [1.45, 0, 0.95], kickOutK);
-  const bagasPos = lerpV([-1.35, 0, -0.25], [1.18, 0, 1.38], kickOutK);
+  const rikoPos = lerpV([-0.75, 0, 0.35], [1.02, 0, 0.72], kickOutK);
+  const bagasPos = lerpV([-1.05, 0, -0.25], [0.68, 0, 1.02], kickOutK);
   const bagasMouth = talkMouth(f, ["r2"]);
   const rikoP = toBean(RIKO_RAZIA, kickOutK > 0.05 && kickOutK < 0.95 ? walkPose(t, 7.5, 0.85) : idlePose(t, 1), t, 1, { expr: "shock", sweat: true });
   const bagasP = toBean(BAGAS_RAZIA, kickOutK > 0.05 && kickOutK < 0.95 ? walkPose(t, 7.0, 0.85) : { ...idlePose(t, 3), armL: [-78, 30], armR: [78, 30] }, t, 3, {
@@ -1031,8 +1029,8 @@ const SceneRebutan: React.FC = () => {
     mouthOpen: bagasMouth,
   });
 
-  // Mbak Ara eagerly raises her hand asking if she can keep a duck!
-  const araPos: Vec3 = [1.55, 0, 0.08];
+  // Mbak Ara eagerly raises her hand asking if she can keep a duck — nestled near desk/door, never intersecting orbit!
+  const araPos: Vec3 = [0.88, 0, -0.58];
   const araMouth = talkMouth(f, ["r3"]);
   const araP = toBean(
     ARA,
@@ -1049,13 +1047,13 @@ const SceneRebutan: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage cam={cam}>
-        <KamarKosRiko t={t} cozy={1} sun={1.4} doorOpen={0.96} showPillow={false} />
-        <BeanCard position={tiniPos} height={2.02} params={tiniP} />
+        <KamarKosRiko t={t} cozy={1} sun={1.4} doorOpen={0.96} showPillow={false} hideFront={cam.pos[2] > 2.1} />
+        <BeanCard position={tiniPos} height={2.0} params={tiniP} />
         <OrenHero3D pos={orenHeldPos} rot={[0, Math.atan2(cam.pos[0] - orenHeldPos[0], cam.pos[2] - orenHeldPos[2]), 0]} scale={1.15} t={t} pose="held" purr={1} tailAmp={0.45} />
         <BesekPindang3D pos={[tiniR[0] + 0.06, tiniR[1] - 0.06, tiniR[2] + 0.1]} rot={[0.1, -0.4, 0]} scale={0.95} lid={1} />
-        <BeanCard position={rikoPos} height={1.96} params={rikoP} flip />
-        <BeanCard position={bagasPos} height={1.94} params={bagasP} flip />
-        <BeanCard position={araPos} height={1.9} params={araP} flip />
+        <BeanCard position={rikoPos} height={1.94} params={rikoP} flip />
+        <BeanCard position={bagasPos} height={1.92} params={bagasP} flip />
+        <BeanCard position={araPos} height={1.88} params={araP} flip />
         <SapuIjuk3D pos={[-0.65, 0.07, -0.75]} rot={[Math.PI / 2, 0.5, 0.9]} scale={0.95} />
       </Stage>
       <Grade warm={0.35} pastel={0.85} />
@@ -1078,9 +1076,9 @@ const SceneEnding: React.FC = () => {
   const t = f / 30;
   const evBoleh = EV["ending.boleh"] ?? 72;
 
-  // Pixar Crane-Up smoothly soaring above the dollhouse ceiling (ceiling FrontSide auto-culls from above!)
+  // Pixar Crane-Up soaring cleanly above the dollhouse ceiling & roof-free corridor!
   const cam = evalCam(f, [
-    { kind: "orbit", to: dur, target0: [0.5, 1.0, 0.2], target1: [0.85, 0.85, 0.4], ang0: 0.25, ang1: 0.72, rad0: 3.4, rad1: 5.4, y0: 1.75, y1: 4.55, fov0: 54, fov1: 48 },
+    { kind: "orbit", to: dur, target0: [0.45, 0.95, 0.15], target1: [0.9, 0.78, 0.35], ang0: 0.15, ang1: 0.58, rad0: 3.6, rad1: 5.3, y0: 1.85, y1: 4.45, fov0: 54, fov1: 48 },
   ]);
 
   const wave = (ph: number): Pose => {
@@ -1100,7 +1098,7 @@ const SceneEnding: React.FC = () => {
     <AbsoluteFill>
       <Stage cam={cam} bg="#3b1d0c">
         <KamarKosRiko t={t} cozy={1} sun={1.45} doorOpen={0.96} showPillow={false} hideFront />
-        <KoridorLantai2 t={t} noticeGlow={0} />
+        <KoridorLantai2 t={t} noticeGlow={0} hideRoof />
         {/* Bu Tini happily spoiling Oren with pindang inside */}
         <BeanCard position={[-0.35, 0, -0.15]} height={2.02} params={tiniP} />
         <OrenHero3D pos={[0.25, 0.01, 0.15]} rot={[0, -0.45, 0]} scale={1.32} t={t} pose="loaf" purr={1} chew={0.7} tailAmp={0.55} />

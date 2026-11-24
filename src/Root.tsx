@@ -64,11 +64,13 @@ import { SheetHororKarakter, SheetHororProperti } from "./SheetHoror";
 import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
 import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
 import { SheetRaziaKarakter, SheetRaziaOren, SheetRaziaProperti } from "./SheetRazia";
+import { Razia, TOTAL_FRAMES_RAZIA } from "./Razia";
 import { ThumbRaziaShorts, ThumbRaziaYoutube } from "./ThumbRazia";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Razia" component={Razia} durationInFrames={TOTAL_FRAMES_RAZIA} fps={30} width={1080} height={1920} />
       <Composition id="SheetRaziaKarakter" component={SheetRaziaKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetRaziaOren" component={SheetRaziaOren} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetRaziaProperti" component={SheetRaziaProperti} durationInFrames={1} fps={30} width={2000} height={1440} />

@@ -1,0 +1,2590 @@
+{
+ "fps": 30,
+ "totalFrames": 2627,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 436,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "narasi",
+     "text": "Hai wak! Di kosan Bu Tini aturan nomor satunya dilarang pelihara hewan, tapi Riko malah diam-diam kasih ikan tongkol ke kucing oren!",
+     "score": 0.986,
+     "file": "out/voice/razia/hook_0.wav",
+     "wordsSec": [
+      [
+       "Hai",
+       0.0,
+       0.24
+      ],
+      [
+       "Wak,",
+       0.24,
+       0.6
+      ],
+      [
+       "di",
+       1.46,
+       1.6
+      ],
+      [
+       "kosan",
+       1.6,
+       1.96
+      ],
+      [
+       "buti",
+       1.96,
+       2.32
+      ],
+      [
+       "ini",
+       2.32,
+       2.42
+      ],
+      [
+       "aturan",
+       2.42,
+       2.78
+      ],
+      [
+       "nomor",
+       2.78,
+       3.08
+      ],
+      [
+       "satunya",
+       3.08,
+       3.42
+      ],
+      [
+       "di",
+       3.42,
+       3.6
+      ],
+      [
+       "larang",
+       3.6,
+       3.92
+      ],
+      [
+       "pelihara",
+       3.92,
+       4.3
+      ],
+      [
+       "hewan,",
+       4.3,
+       4.82
+      ],
+      [
+       "tapi",
+       5.0,
+       5.38
+      ],
+      [
+       "Riko",
+       5.38,
+       5.72
+      ],
+      [
+       "malah",
+       5.72,
+       6.12
+      ],
+      [
+       "diam",
+       6.12,
+       6.24
+      ],
+      [
+       "-diam",
+       6.24,
+       6.58
+      ],
+      [
+       "kasih",
+       6.58,
+       6.82
+      ],
+      [
+       "ikan",
+       6.82,
+       7.1
+      ],
+      [
+       "kongkol",
+       7.1,
+       7.44
+      ],
+      [
+       "ke",
+       7.44,
+       7.58
+      ],
+      [
+       "kucing",
+       7.58,
+       7.88
+      ],
+      [
+       "oren.",
+       7.88,
+       8.24
+      ]
+     ],
+     "from": 8,
+     "to": 259,
+     "words": [
+      {
+       "w": "Hai",
+       "from": 8,
+       "to": 15
+      },
+      {
+       "w": "Wak,",
+       "from": 15,
+       "to": 26
+      },
+      {
+       "w": "di",
+       "from": 51,
+       "to": 56
+      },
+      {
+       "w": "kosan",
+       "from": 56,
+       "to": 66
+      },
+      {
+       "w": "buti",
+       "from": 66,
+       "to": 77
+      },
+      {
+       "w": "ini",
+       "from": 77,
+       "to": 80
+      },
+      {
+       "w": "aturan",
+       "from": 80,
+       "to": 91
+      },
+      {
+       "w": "nomor",
+       "from": 91,
+       "to": 100
+      },
+      {
+       "w": "satunya",
+       "from": 100,
+       "to": 110
+      },
+      {
+       "w": "di",
+       "from": 110,
+       "to": 116
+      },
+      {
+       "w": "larang",
+       "from": 116,
+       "to": 125
+      },
+      {
+       "w": "pelihara",
+       "from": 125,
+       "to": 136
+      },
+      {
+       "w": "hewan,",
+       "from": 136,
+       "to": 152
+      },
+      {
+       "w": "tapi",
+       "from": 158,
+       "to": 169
+      },
+      {
+       "w": "Riko",
+       "from": 169,
+       "to": 179
+      },
+      {
+       "w": "malah",
+       "from": 179,
+       "to": 191
+      },
+      {
+       "w": "diam",
+       "from": 191,
+       "to": 195
+      },
+      {
+       "w": "-diam",
+       "from": 195,
+       "to": 205
+      },
+      {
+       "w": "kasih",
+       "from": 205,
+       "to": 212
+      },
+      {
+       "w": "ikan",
+       "from": 212,
+       "to": 220
+      },
+      {
+       "w": "kongkol",
+       "from": 220,
+       "to": 231
+      },
+      {
+       "w": "ke",
+       "from": 231,
+       "to": 235
+      },
+      {
+       "w": "kucing",
+       "from": 235,
+       "to": 244
+      },
+      {
+       "w": "oren.",
+       "from": 244,
+       "to": 255
+      }
+     ]
+    },
+    {
+     "speaker": "riko",
+     "style": "bisik",
+     "text": "Ssst, makan pelan-pelan ya Oren! Kalau ketahuan Bu Tini, kita berdua langsung angkat koper sore ini!",
+     "score": 0.957,
+     "file": "out/voice/razia/hook_1.wav",
+     "wordsSec": [
+      [
+       "Setsemakan",
+       0.0,
+       0.74
+      ],
+      [
+       "pelan",
+       0.74,
+       1.04
+      ],
+      [
+       "-pelan",
+       1.04,
+       1.36
+      ],
+      [
+       "ya",
+       1.36,
+       1.48
+      ],
+      [
+       "Horen,",
+       1.48,
+       1.76
+      ],
+      [
+       "kalau",
+       1.96,
+       2.34
+      ],
+      [
+       "ketahuan",
+       2.34,
+       2.76
+      ],
+      [
+       "buti",
+       2.76,
+       3.1
+      ],
+      [
+       "ini,",
+       3.1,
+       3.22
+      ],
+      [
+       "kita",
+       3.42,
+       3.56
+      ],
+      [
+       "berdua",
+       3.56,
+       3.94
+      ],
+      [
+       "langsung",
+       3.94,
+       4.28
+      ],
+      [
+       "angkat",
+       4.28,
+       4.56
+      ],
+      [
+       "kopersore",
+       4.56,
+       5.04
+      ],
+      [
+       "ini",
+       5.04,
+       5.22
+      ]
+     ],
+     "from": 262,
+     "to": 425,
+     "words": [
+      {
+       "w": "Setsemakan",
+       "from": 262,
+       "to": 285
+      },
+      {
+       "w": "pelan",
+       "from": 285,
+       "to": 294
+      },
+      {
+       "w": "-pelan",
+       "from": 294,
+       "to": 303
+      },
+      {
+       "w": "ya",
+       "from": 303,
+       "to": 307
+      },
+      {
+       "w": "Horen,",
+       "from": 307,
+       "to": 315
+      },
+      {
+       "w": "kalau",
+       "from": 321,
+       "to": 333
+      },
+      {
+       "w": "ketahuan",
+       "from": 333,
+       "to": 345
+      },
+      {
+       "w": "buti",
+       "from": 345,
+       "to": 355
+      },
+      {
+       "w": "ini,",
+       "from": 355,
+       "to": 359
+      },
+      {
+       "w": "kita",
+       "from": 365,
+       "to": 369
+      },
+      {
+       "w": "berdua",
+       "from": 369,
+       "to": 381
+      },
+      {
+       "w": "langsung",
+       "from": 381,
+       "to": 391
+      },
+      {
+       "w": "angkat",
+       "from": 391,
+       "to": 399
+      },
+      {
+       "w": "kopersore",
+       "from": 399,
+       "to": 414
+      },
+      {
+       "w": "ini",
+       "from": 414,
+       "to": 419
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "alarm",
+   "from": 436,
+   "to": 771,
+   "lines": [
+    {
+     "speaker": "bu_tini",
+     "style": "tegas_galak",
+     "text": "Perhatian semua penghuni lantai dua! Sore ini ada razia kamar kos mendadak! Siapkan kunci pintu!",
+     "score": 0.892,
+     "file": "out/voice/razia/alarm_0.wav",
+     "wordsSec": [
+      [
+       "Berhatihan",
+       0.0,
+       0.64
+      ],
+      [
+       "semua",
+       0.64,
+       0.9
+      ],
+      [
+       "penghuni",
+       0.9,
+       1.46
+      ],
+      [
+       "langkai",
+       1.46,
+       1.84
+      ],
+      [
+       "dua!",
+       1.84,
+       2.08
+      ],
+      [
+       "Sorry",
+       2.48,
+       2.8
+      ],
+      [
+       "ini",
+       2.8,
+       3.08
+      ],
+      [
+       "ada",
+       3.08,
+       3.3
+      ],
+      [
+       "langsia",
+       3.3,
+       3.68
+      ],
+      [
+       "kamar",
+       3.68,
+       4.0
+      ],
+      [
+       "kot",
+       4.0,
+       4.16
+      ],
+      [
+       "mendadak!",
+       4.16,
+       4.88
+      ],
+      [
+       "Siapkan",
+       5.1,
+       5.6
+      ],
+      [
+       "kunci",
+       5.6,
+       5.98
+      ],
+      [
+       "pintu!",
+       5.98,
+       6.44
+      ]
+     ],
+     "from": 436,
+     "to": 633,
+     "words": [
+      {
+       "w": "Berhatihan",
+       "from": 436,
+       "to": 455
+      },
+      {
+       "w": "semua",
+       "from": 455,
+       "to": 463
+      },
+      {
+       "w": "penghuni",
+       "from": 463,
+       "to": 480
+      },
+      {
+       "w": "langkai",
+       "from": 480,
+       "to": 491
+      },
+      {
+       "w": "dua!",
+       "from": 491,
+       "to": 498
+      },
+      {
+       "w": "Sorry",
+       "from": 510,
+       "to": 520
+      },
+      {
+       "w": "ini",
+       "from": 520,
+       "to": 528
+      },
+      {
+       "w": "ada",
+       "from": 528,
+       "to": 535
+      },
+      {
+       "w": "langsia",
+       "from": 535,
+       "to": 546
+      },
+      {
+       "w": "kamar",
+       "from": 546,
+       "to": 556
+      },
+      {
+       "w": "kot",
+       "from": 556,
+       "to": 561
+      },
+      {
+       "w": "mendadak!",
+       "from": 561,
+       "to": 582
+      },
+      {
+       "w": "Siapkan",
+       "from": 589,
+       "to": 604
+      },
+      {
+       "w": "kunci",
+       "from": 604,
+       "to": 615
+      },
+      {
+       "w": "pintu!",
+       "from": 615,
+       "to": 629
+      }
+     ]
+    },
+    {
+     "speaker": "riko",
+     "style": "panik",
+     "text": "Gawat Gas, gawat! Itu suara Bu Tini bawa sapu! Sembunyiin Oren sekarang juga!",
+     "score": 0.902,
+     "file": "out/voice/razia/alarm_1.wav",
+     "wordsSec": [
+      [
+       "Gawat,",
+       0.0,
+       0.3
+      ],
+      [
+       "gas,",
+       0.4,
+       0.52
+      ],
+      [
+       "gawat!",
+       0.68,
+       0.96
+      ],
+      [
+       "Itu",
+       1.14,
+       1.3
+      ],
+      [
+       "suara",
+       1.3,
+       1.56
+      ],
+      [
+       "putini",
+       1.56,
+       1.88
+      ],
+      [
+       "bawah",
+       1.88,
+       2.1
+      ],
+      [
+       "sapu!",
+       2.1,
+       2.56
+      ],
+      [
+       "Semuanya",
+       2.74,
+       3.18
+      ],
+      [
+       "orang",
+       3.18,
+       3.38
+      ],
+      [
+       "sekarang",
+       3.38,
+       3.68
+      ],
+      [
+       "juga!",
+       3.68,
+       3.94
+      ]
+     ],
+     "from": 637,
+     "to": 761,
+     "words": [
+      {
+       "w": "Gawat,",
+       "from": 637,
+       "to": 646
+      },
+      {
+       "w": "gas,",
+       "from": 649,
+       "to": 652
+      },
+      {
+       "w": "gawat!",
+       "from": 657,
+       "to": 665
+      },
+      {
+       "w": "Itu",
+       "from": 671,
+       "to": 676
+      },
+      {
+       "w": "suara",
+       "from": 676,
+       "to": 683
+      },
+      {
+       "w": "putini",
+       "from": 683,
+       "to": 693
+      },
+      {
+       "w": "bawah",
+       "from": 693,
+       "to": 700
+      },
+      {
+       "w": "sapu!",
+       "from": 700,
+       "to": 713
+      },
+      {
+       "w": "Semuanya",
+       "from": 719,
+       "to": 732
+      },
+      {
+       "w": "orang",
+       "from": 732,
+       "to": 738
+      },
+      {
+       "w": "sekarang",
+       "from": 738,
+       "to": 747
+      },
+      {
+       "w": "juga!",
+       "from": 747,
+       "to": 755
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "nyamar",
+   "from": 771,
+   "to": 1068,
+   "lines": [
+    {
+     "speaker": "riko",
+     "style": "panik",
+     "text": "Masuk lemari penuh baju! Masuk ember kekecilan! Aduh Gas, taruh mana dong kucing gembul ini?!",
+     "score": 1.0,
+     "file": "out/voice/razia/nyamar_0.wav",
+     "wordsSec": [
+      [
+       "Masuk",
+       0.0,
+       0.34
+      ],
+      [
+       "lemari",
+       0.34,
+       0.66
+      ],
+      [
+       "penuh",
+       0.66,
+       0.86
+      ],
+      [
+       "baju,",
+       0.86,
+       1.24
+      ],
+      [
+       "masuk",
+       1.42,
+       1.7
+      ],
+      [
+       "ember",
+       1.7,
+       2.02
+      ],
+      [
+       "ke",
+       2.02,
+       2.12
+      ],
+      [
+       "kecilan,",
+       2.12,
+       2.52
+      ],
+      [
+       "aduh",
+       2.64,
+       2.86
+      ],
+      [
+       "gas,",
+       2.86,
+       3.08
+      ],
+      [
+       "taruh",
+       3.24,
+       3.46
+      ],
+      [
+       "mana",
+       3.46,
+       3.64
+      ],
+      [
+       "dong",
+       3.64,
+       3.82
+      ],
+      [
+       "kucing",
+       3.82,
+       4.1
+      ],
+      [
+       "gembul",
+       4.1,
+       4.4
+      ],
+      [
+       "ini?",
+       4.4,
+       4.5
+      ]
+     ],
+     "from": 771,
+     "to": 914,
+     "words": [
+      {
+       "w": "Masuk",
+       "from": 771,
+       "to": 781
+      },
+      {
+       "w": "lemari",
+       "from": 781,
+       "to": 791
+      },
+      {
+       "w": "penuh",
+       "from": 791,
+       "to": 797
+      },
+      {
+       "w": "baju,",
+       "from": 797,
+       "to": 808
+      },
+      {
+       "w": "masuk",
+       "from": 814,
+       "to": 822
+      },
+      {
+       "w": "ember",
+       "from": 822,
+       "to": 832
+      },
+      {
+       "w": "ke",
+       "from": 832,
+       "to": 835
+      },
+      {
+       "w": "kecilan,",
+       "from": 835,
+       "to": 847
+      },
+      {
+       "w": "aduh",
+       "from": 850,
+       "to": 857
+      },
+      {
+       "w": "gas,",
+       "from": 857,
+       "to": 863
+      },
+      {
+       "w": "taruh",
+       "from": 868,
+       "to": 875
+      },
+      {
+       "w": "mana",
+       "from": 875,
+       "to": 880
+      },
+      {
+       "w": "dong",
+       "from": 880,
+       "to": 886
+      },
+      {
+       "w": "kucing",
+       "from": 886,
+       "to": 894
+      },
+      {
+       "w": "gembul",
+       "from": 894,
+       "to": 903
+      },
+      {
+       "w": "ini?",
+       "from": 903,
+       "to": 906
+      }
+     ]
+    },
+    {
+     "speaker": "bagas",
+     "style": "santai",
+     "text": "Tenang Rik, otak jeniusku kerja! Bungkus sarung bantal kuning, jadi bantal bulu edisi terbatas!",
+     "score": 0.938,
+     "file": "out/voice/razia/nyamar_1.wav",
+     "wordsSec": [
+      [
+       "Tanah",
+       0.0,
+       0.3
+      ],
+      [
+       "ngerik",
+       0.3,
+       0.54
+      ],
+      [
+       "otak",
+       0.54,
+       0.86
+      ],
+      [
+       "geniusku",
+       0.86,
+       1.3
+      ],
+      [
+       "kerja.",
+       1.3,
+       1.68
+      ],
+      [
+       "Memungkus",
+       1.96,
+       2.48
+      ],
+      [
+       "sarung",
+       2.48,
+       2.68
+      ],
+      [
+       "bantal",
+       2.68,
+       2.94
+      ],
+      [
+       "kuning,",
+       2.94,
+       3.2
+      ],
+      [
+       "jadi",
+       3.26,
+       3.38
+      ],
+      [
+       "bantal",
+       3.38,
+       3.7
+      ],
+      [
+       "bulu",
+       3.7,
+       3.88
+      ],
+      [
+       "edisi",
+       3.88,
+       4.12
+      ],
+      [
+       "terbatas.",
+       4.12,
+       4.6
+      ]
+     ],
+     "from": 917,
+     "to": 1058,
+     "words": [
+      {
+       "w": "Tanah",
+       "from": 917,
+       "to": 926
+      },
+      {
+       "w": "ngerik",
+       "from": 926,
+       "to": 934
+      },
+      {
+       "w": "otak",
+       "from": 934,
+       "to": 943
+      },
+      {
+       "w": "geniusku",
+       "from": 943,
+       "to": 956
+      },
+      {
+       "w": "kerja.",
+       "from": 956,
+       "to": 968
+      },
+      {
+       "w": "Memungkus",
+       "from": 976,
+       "to": 992
+      },
+      {
+       "w": "sarung",
+       "from": 992,
+       "to": 998
+      },
+      {
+       "w": "bantal",
+       "from": 998,
+       "to": 1006
+      },
+      {
+       "w": "kuning,",
+       "from": 1006,
+       "to": 1013
+      },
+      {
+       "w": "jadi",
+       "from": 1015,
+       "to": 1019
+      },
+      {
+       "w": "bantal",
+       "from": 1019,
+       "to": 1028
+      },
+      {
+       "w": "bulu",
+       "from": 1028,
+       "to": 1034
+      },
+      {
+       "w": "edisi",
+       "from": 1034,
+       "to": 1041
+      },
+      {
+       "w": "terbatas.",
+       "from": 1041,
+       "to": 1055
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "dobrak",
+   "from": 1068,
+   "to": 1404,
+   "lines": [
+    {
+     "speaker": "bu_tini",
+     "style": "galak",
+     "text": "Riko! Kenapa kamar kamu bau ikan tongkol menyengat begini?! Kamu sembunyiin kucing ya?!",
+     "score": 0.847,
+     "file": "out/voice/razia/dobrak_0.wav",
+     "wordsSec": [
+      [
+       "Nico,",
+       0.0,
+       0.24
+      ],
+      [
+       "kenapa",
+       0.72,
+       1.14
+      ],
+      [
+       "kamar",
+       1.14,
+       1.5
+      ],
+      [
+       "kamu",
+       1.5,
+       1.74
+      ],
+      [
+       "bau",
+       1.74,
+       1.98
+      ],
+      [
+       "cantong",
+       1.98,
+       2.34
+      ],
+      [
+       "kua",
+       2.34,
+       2.52
+      ],
+      [
+       "beningat",
+       2.52,
+       2.8
+      ],
+      [
+       "begini?",
+       2.8,
+       3.36
+      ],
+      [
+       "Kamu",
+       3.54,
+       3.8
+      ],
+      [
+       "sepunyain",
+       3.8,
+       4.14
+      ],
+      [
+       "kucing",
+       4.14,
+       4.5
+      ],
+      [
+       "ya?",
+       4.5,
+       4.66
+      ]
+     ],
+     "from": 1068,
+     "to": 1214,
+     "words": [
+      {
+       "w": "Nico,",
+       "from": 1068,
+       "to": 1076
+      },
+      {
+       "w": "kenapa",
+       "from": 1090,
+       "to": 1103
+      },
+      {
+       "w": "kamar",
+       "from": 1103,
+       "to": 1113
+      },
+      {
+       "w": "kamu",
+       "from": 1113,
+       "to": 1121
+      },
+      {
+       "w": "bau",
+       "from": 1121,
+       "to": 1128
+      },
+      {
+       "w": "cantong",
+       "from": 1128,
+       "to": 1139
+      },
+      {
+       "w": "kua",
+       "from": 1139,
+       "to": 1144
+      },
+      {
+       "w": "beningat",
+       "from": 1144,
+       "to": 1152
+      },
+      {
+       "w": "begini?",
+       "from": 1152,
+       "to": 1169
+      },
+      {
+       "w": "Kamu",
+       "from": 1175,
+       "to": 1182
+      },
+      {
+       "w": "sepunyain",
+       "from": 1182,
+       "to": 1193
+      },
+      {
+       "w": "kucing",
+       "from": 1193,
+       "to": 1203
+      },
+      {
+       "w": "ya?",
+       "from": 1203,
+       "to": 1208
+      }
+     ]
+    },
+    {
+     "speaker": "riko",
+     "style": "ngeles",
+     "text": "Bukan ikan tongkol Bu, itu... parfum baru aroma pantai Ancol! Lagi tren banget di kalangan mahasiswa!",
+     "score": 0.969,
+     "file": "out/voice/razia/dobrak_1.wav",
+     "wordsSec": [
+      [
+       "Bukan",
+       0.0,
+       0.38
+      ],
+      [
+       "ikan",
+       0.38,
+       0.62
+      ],
+      [
+       "tongkol",
+       0.62,
+       1.04
+      ],
+      [
+       "bu",
+       1.04,
+       1.16
+      ],
+      [
+       "itu",
+       1.16,
+       1.48
+      ],
+      [
+       "park",
+       1.48,
+       2.04
+      ],
+      [
+       "Pumbaru,",
+       2.04,
+       2.48
+      ],
+      [
+       "aroma",
+       2.54,
+       2.72
+      ],
+      [
+       "pantai",
+       2.72,
+       3.12
+      ],
+      [
+       "ancol,",
+       3.12,
+       3.54
+      ],
+      [
+       "lagi",
+       3.82,
+       4.14
+      ],
+      [
+       "tren",
+       4.14,
+       4.4
+      ],
+      [
+       "banget",
+       4.4,
+       4.8
+      ],
+      [
+       "di",
+       4.8,
+       4.94
+      ],
+      [
+       "kalangan",
+       4.94,
+       5.16
+      ],
+      [
+       "Masiswa.",
+       5.16,
+       5.76
+      ]
+     ],
+     "from": 1218,
+     "to": 1394,
+     "words": [
+      {
+       "w": "Bukan",
+       "from": 1218,
+       "to": 1229
+      },
+      {
+       "w": "ikan",
+       "from": 1229,
+       "to": 1237
+      },
+      {
+       "w": "tongkol",
+       "from": 1237,
+       "to": 1249
+      },
+      {
+       "w": "bu",
+       "from": 1249,
+       "to": 1253
+      },
+      {
+       "w": "itu",
+       "from": 1253,
+       "to": 1262
+      },
+      {
+       "w": "park",
+       "from": 1262,
+       "to": 1279
+      },
+      {
+       "w": "Pumbaru,",
+       "from": 1279,
+       "to": 1292
+      },
+      {
+       "w": "aroma",
+       "from": 1294,
+       "to": 1300
+      },
+      {
+       "w": "pantai",
+       "from": 1300,
+       "to": 1312
+      },
+      {
+       "w": "ancol,",
+       "from": 1312,
+       "to": 1324
+      },
+      {
+       "w": "lagi",
+       "from": 1333,
+       "to": 1342
+      },
+      {
+       "w": "tren",
+       "from": 1342,
+       "to": 1350
+      },
+      {
+       "w": "banget",
+       "from": 1350,
+       "to": 1362
+      },
+      {
+       "w": "di",
+       "from": 1362,
+       "to": 1366
+      },
+      {
+       "w": "kalangan",
+       "from": 1366,
+       "to": 1373
+      },
+      {
+       "w": "Masiswa.",
+       "from": 1373,
+       "to": 1391
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "bocor",
+   "from": 1404,
+   "to": 1677,
+   "lines": [
+    {
+     "speaker": "ara",
+     "style": "polos",
+     "text": "Eh Riko, bantal bulu di kasur kamu lucu banget! Tapi kok kupingnya gerak-gerak terus barusan ngeong?!",
+     "score": 0.904,
+     "file": "out/voice/razia/bocor_0.wav",
+     "wordsSec": [
+      [
+       "Eh,",
+       0.0,
+       0.22
+      ],
+      [
+       "Niko!",
+       0.32,
+       0.52
+      ],
+      [
+       "Bantah",
+       0.82,
+       1.28
+      ],
+      [
+       "dulu",
+       1.28,
+       1.48
+      ],
+      [
+       "dikasur",
+       1.48,
+       1.88
+      ],
+      [
+       "kamu",
+       1.88,
+       2.06
+      ],
+      [
+       "lucu",
+       2.06,
+       2.36
+      ],
+      [
+       "banget!",
+       2.36,
+       2.64
+      ],
+      [
+       "Tapi",
+       3.02,
+       3.26
+      ],
+      [
+       "kok",
+       3.26,
+       3.42
+      ],
+      [
+       "kupinya",
+       3.42,
+       3.74
+      ],
+      [
+       "gerak",
+       3.74,
+       4.0
+      ],
+      [
+       "-gerak",
+       4.0,
+       4.22
+      ],
+      [
+       "terus",
+       4.22,
+       4.44
+      ],
+      [
+       "baru",
+       4.44,
+       4.68
+      ],
+      [
+       "sangat!",
+       4.68,
+       4.94
+      ]
+     ],
+     "from": 1404,
+     "to": 1565,
+     "words": [
+      {
+       "w": "Eh,",
+       "from": 1404,
+       "to": 1411
+      },
+      {
+       "w": "Niko!",
+       "from": 1414,
+       "to": 1420
+      },
+      {
+       "w": "Bantah",
+       "from": 1429,
+       "to": 1442
+      },
+      {
+       "w": "dulu",
+       "from": 1442,
+       "to": 1448
+      },
+      {
+       "w": "dikasur",
+       "from": 1448,
+       "to": 1460
+      },
+      {
+       "w": "kamu",
+       "from": 1460,
+       "to": 1466
+      },
+      {
+       "w": "lucu",
+       "from": 1466,
+       "to": 1475
+      },
+      {
+       "w": "banget!",
+       "from": 1475,
+       "to": 1483
+      },
+      {
+       "w": "Tapi",
+       "from": 1495,
+       "to": 1502
+      },
+      {
+       "w": "kok",
+       "from": 1502,
+       "to": 1507
+      },
+      {
+       "w": "kupinya",
+       "from": 1507,
+       "to": 1516
+      },
+      {
+       "w": "gerak",
+       "from": 1516,
+       "to": 1524
+      },
+      {
+       "w": "-gerak",
+       "from": 1524,
+       "to": 1531
+      },
+      {
+       "w": "terus",
+       "from": 1531,
+       "to": 1537
+      },
+      {
+       "w": "baru",
+       "from": 1537,
+       "to": 1544
+      },
+      {
+       "w": "sangat!",
+       "from": 1544,
+       "to": 1552
+      }
+     ]
+    },
+    {
+     "speaker": "riko",
+     "style": "panik",
+     "text": "Aduh Mbak Ara, jangan kencang-kencang! Tamat sudah riwayatku hari ini!",
+     "score": 0.92,
+     "file": "out/voice/razia/bocor_1.wav",
+     "wordsSec": [
+      [
+       "Bedum",
+       0.0,
+       0.3
+      ],
+      [
+       "Barah!",
+       0.3,
+       0.76
+      ],
+      [
+       "Jangan",
+       0.9,
+       1.16
+      ],
+      [
+       "kencang",
+       1.16,
+       1.42
+      ],
+      [
+       "-kencang,",
+       1.42,
+       1.74
+      ],
+      [
+       "tamat",
+       1.88,
+       2.12
+      ],
+      [
+       "sudah",
+       2.12,
+       2.26
+      ],
+      [
+       "riwaiatku",
+       2.26,
+       2.7
+      ],
+      [
+       "hari",
+       2.7,
+       2.86
+      ],
+      [
+       "ini!",
+       2.86,
+       3.08
+      ]
+     ],
+     "from": 1568,
+     "to": 1667,
+     "words": [
+      {
+       "w": "Bedum",
+       "from": 1568,
+       "to": 1577
+      },
+      {
+       "w": "Barah!",
+       "from": 1577,
+       "to": 1591
+      },
+      {
+       "w": "Jangan",
+       "from": 1595,
+       "to": 1603
+      },
+      {
+       "w": "kencang",
+       "from": 1603,
+       "to": 1611
+      },
+      {
+       "w": "-kencang,",
+       "from": 1611,
+       "to": 1621
+      },
+      {
+       "w": "tamat",
+       "from": 1625,
+       "to": 1632
+      },
+      {
+       "w": "sudah",
+       "from": 1632,
+       "to": 1636
+      },
+      {
+       "w": "riwaiatku",
+       "from": 1636,
+       "to": 1649
+      },
+      {
+       "w": "hari",
+       "from": 1649,
+       "to": 1654
+      },
+      {
+       "w": "ini!",
+       "from": 1654,
+       "to": 1661
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "twist",
+   "from": 1677,
+   "to": 1958,
+   "lines": [
+    {
+     "speaker": "bu_tini",
+     "style": "galak",
+     "text": "Aha! Ketangkap basah kamu Riko! Sini saya tarik selimutnya sekarang!",
+     "score": 0.948,
+     "file": "out/voice/razia/twist_0.wav",
+     "wordsSec": [
+      [
+       "Yang",
+       0.0,
+       0.0
+      ],
+      [
+       "kak,",
+       0.0,
+       0.28
+      ],
+      [
+       "ketangkap",
+       0.5,
+       0.98
+      ],
+      [
+       "basah",
+       0.98,
+       1.4
+      ],
+      [
+       "kamu",
+       1.4,
+       1.68
+      ],
+      [
+       "riko,",
+       1.68,
+       2.1
+      ],
+      [
+       "sini",
+       2.4,
+       2.6
+      ],
+      [
+       "saya",
+       2.6,
+       2.8
+      ],
+      [
+       "tarik",
+       2.8,
+       3.1
+      ],
+      [
+       "selimutnya",
+       3.1,
+       3.54
+      ],
+      [
+       "sekarang.",
+       3.54,
+       3.82
+      ]
+     ],
+     "from": 1677,
+     "to": 1798,
+     "words": [
+      {
+       "w": "Yang",
+       "from": 1677,
+       "to": 1677
+      },
+      {
+       "w": "kak,",
+       "from": 1677,
+       "to": 1685
+      },
+      {
+       "w": "ketangkap",
+       "from": 1692,
+       "to": 1706
+      },
+      {
+       "w": "basah",
+       "from": 1706,
+       "to": 1719
+      },
+      {
+       "w": "kamu",
+       "from": 1719,
+       "to": 1727
+      },
+      {
+       "w": "riko,",
+       "from": 1727,
+       "to": 1740
+      },
+      {
+       "w": "sini",
+       "from": 1749,
+       "to": 1755
+      },
+      {
+       "w": "saya",
+       "from": 1755,
+       "to": 1761
+      },
+      {
+       "w": "tarik",
+       "from": 1761,
+       "to": 1770
+      },
+      {
+       "w": "selimutnya",
+       "from": 1770,
+       "to": 1783
+      },
+      {
+       "w": "sekarang.",
+       "from": 1783,
+       "to": 1792
+      }
+     ]
+    },
+    {
+     "speaker": "bu_tini",
+     "style": "luluh",
+     "text": "Ya ampun... Gusti... matanya berbinar banget! Gemoy banget sih kamu, pus!",
+     "score": 0.925,
+     "file": "out/voice/razia/twist_1.wav",
+     "wordsSec": [
+      [
+       "Ya",
+       0.0,
+       0.16
+      ],
+      [
+       "ampun,",
+       0.16,
+       0.54
+      ],
+      [
+       "musti",
+       0.9,
+       1.54
+      ],
+      [
+       "matanya",
+       1.54,
+       2.18
+      ],
+      [
+       "berbinar",
+       2.18,
+       2.68
+      ],
+      [
+       "banget,",
+       2.68,
+       3.04
+      ],
+      [
+       "gemoy",
+       3.34,
+       3.7
+      ],
+      [
+       "banget",
+       3.7,
+       3.98
+      ],
+      [
+       "di",
+       3.98,
+       4.2
+      ],
+      [
+       "kamuku!",
+       4.2,
+       4.56
+      ]
+     ],
+     "from": 1802,
+     "to": 1947,
+     "words": [
+      {
+       "w": "Ya",
+       "from": 1802,
+       "to": 1807
+      },
+      {
+       "w": "ampun,",
+       "from": 1807,
+       "to": 1818
+      },
+      {
+       "w": "musti",
+       "from": 1829,
+       "to": 1848
+      },
+      {
+       "w": "matanya",
+       "from": 1848,
+       "to": 1867
+      },
+      {
+       "w": "berbinar",
+       "from": 1867,
+       "to": 1882
+      },
+      {
+       "w": "banget,",
+       "from": 1882,
+       "to": 1893
+      },
+      {
+       "w": "gemoy",
+       "from": 1902,
+       "to": 1913
+      },
+      {
+       "w": "banget",
+       "from": 1913,
+       "to": 1921
+      },
+      {
+       "w": "di",
+       "from": 1921,
+       "to": 1928
+      },
+      {
+       "w": "kamuku!",
+       "from": 1928,
+       "to": 1939
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "rebutan",
+   "from": 1958,
+   "to": 2335,
+   "lines": [
+    {
+     "speaker": "bu_tini",
+     "style": "gemes",
+     "text": "Sudah, mulai hari ini Oren ikut Ibu ke dapur makan ikan pindang! Kalian berdua keluar sana!",
+     "score": 0.926,
+     "file": "out/voice/razia/rebutan_0.wav",
+     "wordsSec": [
+      [
+       "Sudah",
+       0.0,
+       0.34
+      ],
+      [
+       "mulai",
+       0.34,
+       0.7
+      ],
+      [
+       "hari",
+       0.7,
+       0.86
+      ],
+      [
+       "ini",
+       0.86,
+       1.02
+      ],
+      [
+       "orang",
+       1.02,
+       1.18
+      ],
+      [
+       "ikut",
+       1.18,
+       1.5
+      ],
+      [
+       "ibu",
+       1.5,
+       1.7
+      ],
+      [
+       "kedapur",
+       1.7,
+       2.06
+      ],
+      [
+       "pangkat",
+       2.06,
+       2.34
+      ],
+      [
+       "ikan",
+       2.34,
+       2.52
+      ],
+      [
+       "gindang",
+       2.52,
+       2.98
+      ],
+      [
+       "Kalian",
+       2.98,
+       3.48
+      ],
+      [
+       "berdua",
+       3.48,
+       3.8
+      ],
+      [
+       "keluar",
+       3.8,
+       3.98
+      ],
+      [
+       "sana!",
+       3.98,
+       4.28
+      ]
+     ],
+     "from": 1958,
+     "to": 2096,
+     "words": [
+      {
+       "w": "Sudah",
+       "from": 1958,
+       "to": 1968
+      },
+      {
+       "w": "mulai",
+       "from": 1968,
+       "to": 1979
+      },
+      {
+       "w": "hari",
+       "from": 1979,
+       "to": 1984
+      },
+      {
+       "w": "ini",
+       "from": 1984,
+       "to": 1989
+      },
+      {
+       "w": "orang",
+       "from": 1989,
+       "to": 1993
+      },
+      {
+       "w": "ikut",
+       "from": 1993,
+       "to": 2003
+      },
+      {
+       "w": "ibu",
+       "from": 2003,
+       "to": 2009
+      },
+      {
+       "w": "kedapur",
+       "from": 2009,
+       "to": 2020
+      },
+      {
+       "w": "pangkat",
+       "from": 2020,
+       "to": 2028
+      },
+      {
+       "w": "ikan",
+       "from": 2028,
+       "to": 2034
+      },
+      {
+       "w": "gindang",
+       "from": 2034,
+       "to": 2047
+      },
+      {
+       "w": "Kalian",
+       "from": 2047,
+       "to": 2062
+      },
+      {
+       "w": "berdua",
+       "from": 2062,
+       "to": 2072
+      },
+      {
+       "w": "keluar",
+       "from": 2072,
+       "to": 2077
+      },
+      {
+       "w": "sana!",
+       "from": 2077,
+       "to": 2086
+      }
+     ]
+    },
+    {
+     "speaker": "bagas",
+     "style": "santai",
+     "text": "Lho Bu, kok malah kita yang diusir dari kamar sendiri sih?!",
+     "score": 0.978,
+     "file": "out/voice/razia/rebutan_1.wav",
+     "wordsSec": [
+      [
+       "Laobu",
+       0.0,
+       0.58
+      ],
+      [
+       "kok",
+       0.58,
+       0.72
+      ],
+      [
+       "malah",
+       0.72,
+       1.12
+      ],
+      [
+       "kita",
+       1.12,
+       1.42
+      ],
+      [
+       "yang",
+       1.42,
+       1.64
+      ],
+      [
+       "diusir",
+       1.64,
+       2.08
+      ],
+      [
+       "dari",
+       2.08,
+       2.26
+      ],
+      [
+       "kamar",
+       2.26,
+       2.62
+      ],
+      [
+       "sendiri",
+       2.62,
+       2.94
+      ],
+      [
+       "sih?",
+       2.94,
+       3.12
+      ]
+     ],
+     "from": 2099,
+     "to": 2197,
+     "words": [
+      {
+       "w": "Laobu",
+       "from": 2099,
+       "to": 2117
+      },
+      {
+       "w": "kok",
+       "from": 2117,
+       "to": 2121
+      },
+      {
+       "w": "malah",
+       "from": 2121,
+       "to": 2133
+      },
+      {
+       "w": "kita",
+       "from": 2133,
+       "to": 2142
+      },
+      {
+       "w": "yang",
+       "from": 2142,
+       "to": 2148
+      },
+      {
+       "w": "diusir",
+       "from": 2148,
+       "to": 2162
+      },
+      {
+       "w": "dari",
+       "from": 2162,
+       "to": 2167
+      },
+      {
+       "w": "kamar",
+       "from": 2167,
+       "to": 2178
+      },
+      {
+       "w": "sendiri",
+       "from": 2178,
+       "to": 2187
+      },
+      {
+       "w": "sih?",
+       "from": 2187,
+       "to": 2193
+      }
+     ]
+    },
+    {
+     "speaker": "ara",
+     "style": "polos",
+     "text": "Wah asyik! Berarti besok aku boleh pelihara bebek di kamar juga ya Bu?!",
+     "score": 0.945,
+     "file": "out/voice/razia/rebutan_2.wav",
+     "wordsSec": [
+      [
+       "WASIK!",
+       0.0,
+       0.74
+      ],
+      [
+       "Berarti",
+       1.02,
+       1.5
+      ],
+      [
+       "besok",
+       1.5,
+       1.92
+      ],
+      [
+       "aku",
+       1.92,
+       2.12
+      ],
+      [
+       "boleh",
+       2.12,
+       2.36
+      ],
+      [
+       "pelihara",
+       2.36,
+       2.72
+      ],
+      [
+       "bebek",
+       2.72,
+       3.06
+      ],
+      [
+       "di",
+       3.06,
+       3.16
+      ],
+      [
+       "kamar",
+       3.16,
+       3.46
+      ],
+      [
+       "juga",
+       3.46,
+       3.6
+      ],
+      [
+       "ya",
+       3.6,
+       3.78
+      ],
+      [
+       "boh?",
+       3.78,
+       4.04
+      ]
+     ],
+     "from": 2201,
+     "to": 2325,
+     "words": [
+      {
+       "w": "WASIK!",
+       "from": 2201,
+       "to": 2223
+      },
+      {
+       "w": "Berarti",
+       "from": 2232,
+       "to": 2246
+      },
+      {
+       "w": "besok",
+       "from": 2246,
+       "to": 2259
+      },
+      {
+       "w": "aku",
+       "from": 2259,
+       "to": 2265
+      },
+      {
+       "w": "boleh",
+       "from": 2265,
+       "to": 2272
+      },
+      {
+       "w": "pelihara",
+       "from": 2272,
+       "to": 2283
+      },
+      {
+       "w": "bebek",
+       "from": 2283,
+       "to": 2293
+      },
+      {
+       "w": "di",
+       "from": 2293,
+       "to": 2296
+      },
+      {
+       "w": "kamar",
+       "from": 2296,
+       "to": 2305
+      },
+      {
+       "w": "juga",
+       "from": 2305,
+       "to": 2309
+      },
+      {
+       "w": "ya",
+       "from": 2309,
+       "to": 2314
+      },
+      {
+       "w": "boh?",
+       "from": 2314,
+       "to": 2322
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ending",
+   "from": 2335,
+   "to": 2619,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "narasi_tutup",
+     "text": "Hahaha, aturan galak langsung kalah sama tatapan kucing oren! Menurut kamu wak, kosan boleh pelihara kucing atau dilarang keras? Vote di komen!",
+     "score": 0.966,
+     "file": "out/voice/razia/ending_0.wav",
+     "wordsSec": [
+      [
+       "Ha",
+       0.0,
+       0.14
+      ],
+      [
+       "ha",
+       0.14,
+       0.48
+      ],
+      [
+       "ha,",
+       0.48,
+       0.58
+      ],
+      [
+       "aturan",
+       0.78,
+       1.18
+      ],
+      [
+       "galak",
+       1.18,
+       1.56
+      ],
+      [
+       "langsung",
+       1.56,
+       1.9
+      ],
+      [
+       "kalah",
+       1.9,
+       2.2
+      ],
+      [
+       "sama",
+       2.2,
+       2.32
+      ],
+      [
+       "tatapan",
+       2.32,
+       2.84
+      ],
+      [
+       "kucing",
+       2.84,
+       3.2
+      ],
+      [
+       "oren.",
+       3.2,
+       3.62
+      ],
+      [
+       "Menurut",
+       3.74,
+       4.34
+      ],
+      [
+       "kamu,",
+       4.34,
+       4.62
+      ],
+      [
+       "kosan",
+       4.88,
+       5.48
+      ],
+      [
+       "boleh",
+       5.48,
+       5.7
+      ],
+      [
+       "pelihara",
+       5.7,
+       6.16
+      ],
+      [
+       "kucing",
+       6.16,
+       6.6
+      ],
+      [
+       "atau",
+       6.6,
+       6.8
+      ],
+      [
+       "dilarang",
+       6.8,
+       7.26
+      ],
+      [
+       "keras?",
+       7.26,
+       7.58
+      ],
+      [
+       "Koset",
+       7.78,
+       8.32
+      ],
+      [
+       "di",
+       8.32,
+       8.44
+      ],
+      [
+       "komen!",
+       8.44,
+       8.66
+      ]
+     ],
+     "from": 2335,
+     "to": 2608,
+     "words": [
+      {
+       "w": "Ha",
+       "from": 2335,
+       "to": 2340
+      },
+      {
+       "w": "ha",
+       "from": 2340,
+       "to": 2350
+      },
+      {
+       "w": "ha,",
+       "from": 2350,
+       "to": 2353
+      },
+      {
+       "w": "aturan",
+       "from": 2359,
+       "to": 2371
+      },
+      {
+       "w": "galak",
+       "from": 2371,
+       "to": 2382
+      },
+      {
+       "w": "langsung",
+       "from": 2382,
+       "to": 2392
+      },
+      {
+       "w": "kalah",
+       "from": 2392,
+       "to": 2401
+      },
+      {
+       "w": "sama",
+       "from": 2401,
+       "to": 2405
+      },
+      {
+       "w": "tatapan",
+       "from": 2405,
+       "to": 2421
+      },
+      {
+       "w": "kucing",
+       "from": 2421,
+       "to": 2431
+      },
+      {
+       "w": "oren.",
+       "from": 2431,
+       "to": 2444
+      },
+      {
+       "w": "Menurut",
+       "from": 2448,
+       "to": 2466
+      },
+      {
+       "w": "kamu,",
+       "from": 2466,
+       "to": 2474
+      },
+      {
+       "w": "kosan",
+       "from": 2482,
+       "to": 2500
+      },
+      {
+       "w": "boleh",
+       "from": 2500,
+       "to": 2506
+      },
+      {
+       "w": "pelihara",
+       "from": 2506,
+       "to": 2520
+      },
+      {
+       "w": "kucing",
+       "from": 2520,
+       "to": 2533
+      },
+      {
+       "w": "atau",
+       "from": 2533,
+       "to": 2539
+      },
+      {
+       "w": "dilarang",
+       "from": 2539,
+       "to": 2553
+      },
+      {
+       "w": "keras?",
+       "from": 2553,
+       "to": 2563
+      },
+      {
+       "w": "Koset",
+       "from": 2569,
+       "to": 2585
+      },
+      {
+       "w": "di",
+       "from": 2585,
+       "to": 2589
+      },
+      {
+       "w": "komen!",
+       "from": 2589,
+       "to": 2595
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -696,13 +696,16 @@ def main():
     put(sfx, sfx_cute_meow(0.46, 640.0, 81), S["ending"] + 0.18, 0.48, 0.12)
     put(sfx, E.sfx_fanfare(), EV["ending.vote"] + 0.15, 0.34, 0.0)
     if (T_LAUGH / "tawa_istana_ramai.mp3").exists():
-        put(
-            sfx,
-            norm(E.load_mp3(T_LAUGH / "tawa_istana_ramai.mp3", 1.05), 0.22)[: int(SR * 1.4)],
-            S["ending"] + 0.05,
-            0.22,
-            0.0,
+        tmp_l = OUT_MP3.with_suffix(".laugh.wav")
+        subprocess.run(
+            [_ffmpeg_bin(), "-y", "-v", "error", "-i", str(T_LAUGH / "tawa_istana_ramai.mp3"), "-ac", "1", "-ar", str(SR), str(tmp_l)],
+            check=True,
         )
+        with wave.open(str(tmp_l), "rb") as wf:
+            y_l = np.frombuffer(wf.readframes(wf.getnframes()), np.int16).astype(np.float32) / 32768.0
+        tmp_l.unlink(missing_ok=True)
+        if len(y_l) > 0:
+            put(sfx, norm(y_l, 0.22)[: int(SR * 1.4)], S["ending"] + 0.05, 0.22, 0.0)
 
     # Build 2-Act Original Stereo Soundtrack
     mus = build_razia_score(total, S["alarm"], S["dobrak"], EV["twist.scratch"], S["ending"])

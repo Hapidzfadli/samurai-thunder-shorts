@@ -1,0 +1,1339 @@
+{
+  "fps": 30,
+  "totalDurationSec": 92.3,
+  "totalFrames": 2769,
+  "order": [
+    "hook",
+    "alarm",
+    "nyamar",
+    "dobrak",
+    "bocor",
+    "twist",
+    "rebutan",
+    "ending"
+  ],
+  "scenes": {
+    "hook": {
+      "startSec": 0.0,
+      "endSec": 14.633,
+      "startFrame": 0,
+      "durationInFrames": 439
+    },
+    "alarm": {
+      "startSec": 14.633,
+      "endSec": 26.1,
+      "startFrame": 439,
+      "durationInFrames": 344
+    },
+    "nyamar": {
+      "startSec": 26.1,
+      "endSec": 36.333,
+      "startFrame": 783,
+      "durationInFrames": 307
+    },
+    "dobrak": {
+      "startSec": 36.333,
+      "endSec": 47.967,
+      "startFrame": 1090,
+      "durationInFrames": 349
+    },
+    "bocor": {
+      "startSec": 47.967,
+      "endSec": 57.267,
+      "startFrame": 1439,
+      "durationInFrames": 279
+    },
+    "twist": {
+      "startSec": 57.267,
+      "endSec": 68.533,
+      "startFrame": 1718,
+      "durationInFrames": 338
+    },
+    "rebutan": {
+      "startSec": 68.533,
+      "endSec": 81.467,
+      "startFrame": 2056,
+      "durationInFrames": 388
+    },
+    "ending": {
+      "startSec": 81.467,
+      "endSec": 92.3,
+      "startFrame": 2444,
+      "durationInFrames": 325
+    }
+  },
+  "lines": {
+    "h1": {
+      "scene": "hook",
+      "speaker": "nadia",
+      "emotion": "narasi",
+      "text": "Hai wak! Di kosan Bu Tini aturan nomor satunya dilarang pelihara hewan, tapi Riko malah diam-diam kasih ikan tongkol ke kucing oren!",
+      "startSec": 0.32,
+      "endSec": 8.696,
+      "from": 10,
+      "to": 261,
+      "globalFrom": 10,
+      "globalTo": 261
+    },
+    "h2": {
+      "scene": "hook",
+      "speaker": "riko",
+      "emotion": "bisik",
+      "text": "Ssst, makan pelan-pelan ya Oren! Kalau ketahuan Bu Tini, kita berdua langsung angkat koper sore ini!",
+      "startSec": 8.816,
+      "endSec": 14.249,
+      "from": 264,
+      "to": 427,
+      "globalFrom": 264,
+      "globalTo": 427
+    },
+    "a1": {
+      "scene": "alarm",
+      "speaker": "bu_tini",
+      "emotion": "tegas_galak",
+      "text": "Perhatian semua penghuni lantai dua! Sore ini ada razia kamar kos mendadak! Siapkan kunci pintu!",
+      "startSec": 14.973,
+      "endSec": 21.542,
+      "from": 10,
+      "to": 207,
+      "globalFrom": 449,
+      "globalTo": 646
+    },
+    "a2": {
+      "scene": "alarm",
+      "speaker": "riko",
+      "emotion": "panik",
+      "text": "Gawat Gas, gawat! Itu suara Bu Tini bawa sapu! Sembunyiin Oren sekarang juga!",
+      "startSec": 21.642,
+      "endSec": 25.776,
+      "from": 210,
+      "to": 334,
+      "globalFrom": 649,
+      "globalTo": 773
+    },
+    "n1": {
+      "scene": "nyamar",
+      "speaker": "riko",
+      "emotion": "panik",
+      "text": "Masuk lemari penuh baju! Masuk ember kekecilan! Aduh Gas, taruh mana dong kucing gembul ini?!",
+      "startSec": 26.38,
+      "endSec": 31.139,
+      "from": 8,
+      "to": 151,
+      "globalFrom": 791,
+      "globalTo": 934
+    },
+    "n2": {
+      "scene": "nyamar",
+      "speaker": "bagas",
+      "emotion": "santai",
+      "text": "Tenang Rik, otak jeniusku kerja! Bungkus sarung bantal kuning, jadi bantal bulu edisi terbatas!",
+      "startSec": 31.249,
+      "endSec": 35.931,
+      "from": 154,
+      "to": 295,
+      "globalFrom": 937,
+      "globalTo": 1078
+    },
+    "d1": {
+      "scene": "dobrak",
+      "speaker": "bu_tini",
+      "emotion": "galak",
+      "text": "Riko! Kenapa kamar kamu bau ikan tongkol menyengat begini?! Kamu sembunyiin kucing ya?!",
+      "startSec": 36.793,
+      "endSec": 41.661,
+      "from": 14,
+      "to": 160,
+      "globalFrom": 1104,
+      "globalTo": 1250
+    },
+    "d2": {
+      "scene": "dobrak",
+      "speaker": "riko",
+      "emotion": "ngeles",
+      "text": "Bukan ikan tongkol Bu, itu... parfum baru aroma pantai Ancol! Lagi tren banget di kalangan mahasiswa!",
+      "startSec": 41.781,
+      "endSec": 47.633,
+      "from": 163,
+      "to": 339,
+      "globalFrom": 1253,
+      "globalTo": 1429
+    },
+    "b1": {
+      "scene": "bocor",
+      "speaker": "ara",
+      "emotion": "polos",
+      "text": "Eh Riko, bantal bulu di kasur kamu lucu banget! Tapi kok kupingnya gerak-gerak terus barusan ngeong?!",
+      "startSec": 48.247,
+      "endSec": 53.608,
+      "from": 8,
+      "to": 169,
+      "globalFrom": 1447,
+      "globalTo": 1608
+    },
+    "b2": {
+      "scene": "bocor",
+      "speaker": "riko",
+      "emotion": "panik",
+      "text": "Aduh Mbak Ara, jangan kencang-kencang! Tamat sudah riwayatku hari ini!",
+      "startSec": 53.708,
+      "endSec": 56.978,
+      "from": 172,
+      "to": 270,
+      "globalFrom": 1611,
+      "globalTo": 1709
+    },
+    "t1": {
+      "scene": "twist",
+      "speaker": "bu_tini",
+      "emotion": "galak",
+      "text": "Aha! Ketangkap basah kamu Riko! Sini saya tarik selimutnya sekarang!",
+      "startSec": 57.527,
+      "endSec": 61.57,
+      "from": 8,
+      "to": 129,
+      "globalFrom": 1726,
+      "globalTo": 1847
+    },
+    "t2": {
+      "scene": "twist",
+      "speaker": "bu_tini",
+      "emotion": "luluh",
+      "text": "Ya ampun... Gusti... matanya berbinar banget! Gemoy banget sih kamu, pus!",
+      "startSec": 63.29,
+      "endSec": 68.138,
+      "from": 181,
+      "to": 326,
+      "globalFrom": 1899,
+      "globalTo": 2044
+    },
+    "r1": {
+      "scene": "rebutan",
+      "speaker": "bu_tini",
+      "emotion": "gemes",
+      "text": "Sudah, mulai hari ini Oren ikut Ibu ke dapur makan ikan pindang! Kalian berdua keluar sana!",
+      "startSec": 68.813,
+      "endSec": 73.403,
+      "from": 8,
+      "to": 146,
+      "globalFrom": 2064,
+      "globalTo": 2202
+    },
+    "r2": {
+      "scene": "rebutan",
+      "speaker": "bagas",
+      "emotion": "santai",
+      "text": "Lho Bu, kok malah kita yang diusir dari kamar sendiri sih?!",
+      "startSec": 73.523,
+      "endSec": 76.798,
+      "from": 150,
+      "to": 248,
+      "globalFrom": 2206,
+      "globalTo": 2304
+    },
+    "r3": {
+      "scene": "rebutan",
+      "speaker": "ara",
+      "emotion": "polos",
+      "text": "Wah asyik! Berarti besok aku boleh pelihara bebek di kamar juga ya Bu?!",
+      "startSec": 76.928,
+      "endSec": 81.059,
+      "from": 252,
+      "to": 376,
+      "globalFrom": 2308,
+      "globalTo": 2432
+    },
+    "e1": {
+      "scene": "ending",
+      "speaker": "nadia",
+      "emotion": "narasi_tutup",
+      "text": "Hahaha, aturan galak langsung kalah sama tatapan kucing oren! Menurut kamu wak, kosan boleh pelihara kucing atau dilarang keras? Vote di komen!",
+      "startSec": 81.767,
+      "endSec": 90.856,
+      "from": 9,
+      "to": 282,
+      "globalFrom": 2453,
+      "globalTo": 2726
+    }
+  },
+  "events": {
+    "hook.dilarang": 109,
+    "hook.tongkol": 220,
+    "hook.ssst": 283,
+    "hook.koper": 399,
+    "alarm.razia": 106,
+    "alarm.pintu": 187,
+    "alarm.gawat": 208,
+    "alarm.sapu": 270,
+    "nyamar.lemari": 17,
+    "nyamar.ember": 57,
+    "nyamar.jenius": 175,
+    "nyamar.bantal": 231,
+    "dobrak.riko": 12,
+    "dobrak.tongkol": 76,
+    "dobrak.parfum": 205,
+    "dobrak.ancol": 252,
+    "bocor.bantal": 21,
+    "bocor.gerak": 117,
+    "bocor.ngeong": 147,
+    "bocor.tamat": 227,
+    "twist.aha": 6,
+    "twist.tarik": 87,
+    "twist.pull_done": 131,
+    "twist.meow": 142,
+    "twist.scratch": 164,
+    "twist.luluh": 181,
+    "twist.gemoy": 268,
+    "rebutan.pindang": 80,
+    "rebutan.keluar": 120,
+    "rebutan.diusir": 197,
+    "rebutan.bebek": 335,
+    "ending.vote": 244,
+    "ending.boleh": 174
+  },
+  "captions": [
+    {
+      "text": "Hai wak!",
+      "speaker": "nadia",
+      "startFrame": 10,
+      "endFrame": 54,
+      "highlight": false
+    },
+    {
+      "text": "Di kosan",
+      "speaker": "nadia",
+      "startFrame": 54,
+      "endFrame": 69,
+      "highlight": false
+    },
+    {
+      "text": "Bu Tini",
+      "speaker": "nadia",
+      "startFrame": 69,
+      "endFrame": 81,
+      "highlight": false
+    },
+    {
+      "text": "aturan nomor",
+      "speaker": "nadia",
+      "startFrame": 81,
+      "endFrame": 101,
+      "highlight": false
+    },
+    {
+      "text": "satunya",
+      "speaker": "nadia",
+      "startFrame": 101,
+      "endFrame": 111,
+      "highlight": false
+    },
+    {
+      "text": "dilarang",
+      "speaker": "nadia",
+      "startFrame": 111,
+      "endFrame": 126,
+      "highlight": true
+    },
+    {
+      "text": "pelihara",
+      "speaker": "nadia",
+      "startFrame": 126,
+      "endFrame": 138,
+      "highlight": false
+    },
+    {
+      "text": "hewan,",
+      "speaker": "nadia",
+      "startFrame": 138,
+      "endFrame": 153,
+      "highlight": true
+    },
+    {
+      "text": "tapi Riko",
+      "speaker": "nadia",
+      "startFrame": 153,
+      "endFrame": 180,
+      "highlight": false
+    },
+    {
+      "text": "malah",
+      "speaker": "nadia",
+      "startFrame": 180,
+      "endFrame": 192,
+      "highlight": false
+    },
+    {
+      "text": "diam-diam",
+      "speaker": "nadia",
+      "startFrame": 192,
+      "endFrame": 206,
+      "highlight": false
+    },
+    {
+      "text": "kasih ikan",
+      "speaker": "nadia",
+      "startFrame": 206,
+      "endFrame": 222,
+      "highlight": false
+    },
+    {
+      "text": "tongkol ke",
+      "speaker": "nadia",
+      "startFrame": 222,
+      "endFrame": 237,
+      "highlight": true
+    },
+    {
+      "text": "kucing oren!",
+      "speaker": "nadia",
+      "startFrame": 237,
+      "endFrame": 257,
+      "highlight": true
+    },
+    {
+      "text": "Ssst,",
+      "speaker": "riko",
+      "startFrame": 264,
+      "endFrame": 274,
+      "highlight": false
+    },
+    {
+      "text": "makan",
+      "speaker": "riko",
+      "startFrame": 274,
+      "endFrame": 285,
+      "highlight": false
+    },
+    {
+      "text": "pelan-pelan",
+      "speaker": "riko",
+      "startFrame": 285,
+      "endFrame": 305,
+      "highlight": false
+    },
+    {
+      "text": "ya Oren!",
+      "speaker": "riko",
+      "startFrame": 305,
+      "endFrame": 316,
+      "highlight": true
+    },
+    {
+      "text": "Kalau",
+      "speaker": "riko",
+      "startFrame": 316,
+      "endFrame": 333,
+      "highlight": false
+    },
+    {
+      "text": "ketahuan Bu",
+      "speaker": "riko",
+      "startFrame": 333,
+      "endFrame": 351,
+      "highlight": false
+    },
+    {
+      "text": "Tini,",
+      "speaker": "riko",
+      "startFrame": 351,
+      "endFrame": 359,
+      "highlight": false
+    },
+    {
+      "text": "kita berdua",
+      "speaker": "riko",
+      "startFrame": 359,
+      "endFrame": 381,
+      "highlight": false
+    },
+    {
+      "text": "langsung",
+      "speaker": "riko",
+      "startFrame": 381,
+      "endFrame": 392,
+      "highlight": false
+    },
+    {
+      "text": "angkat koper",
+      "speaker": "riko",
+      "startFrame": 392,
+      "endFrame": 409,
+      "highlight": true
+    },
+    {
+      "text": "sore ini!",
+      "speaker": "riko",
+      "startFrame": 409,
+      "endFrame": 421,
+      "highlight": false
+    },
+    {
+      "text": "Perhatian",
+      "speaker": "bu_tini",
+      "startFrame": 449,
+      "endFrame": 468,
+      "highlight": false
+    },
+    {
+      "text": "semua",
+      "speaker": "bu_tini",
+      "startFrame": 468,
+      "endFrame": 476,
+      "highlight": false
+    },
+    {
+      "text": "penghuni",
+      "speaker": "bu_tini",
+      "startFrame": 476,
+      "endFrame": 494,
+      "highlight": false
+    },
+    {
+      "text": "lantai dua!",
+      "speaker": "bu_tini",
+      "startFrame": 494,
+      "endFrame": 512,
+      "highlight": false
+    },
+    {
+      "text": "Sore ini",
+      "speaker": "bu_tini",
+      "startFrame": 512,
+      "endFrame": 540,
+      "highlight": false
+    },
+    {
+      "text": "ada razia",
+      "speaker": "bu_tini",
+      "startFrame": 540,
+      "endFrame": 556,
+      "highlight": true
+    },
+    {
+      "text": "kamar kos",
+      "speaker": "bu_tini",
+      "startFrame": 556,
+      "endFrame": 571,
+      "highlight": false
+    },
+    {
+      "text": "mendadak!",
+      "speaker": "bu_tini",
+      "startFrame": 571,
+      "endFrame": 593,
+      "highlight": true
+    },
+    {
+      "text": "Siapkan kunci",
+      "speaker": "bu_tini",
+      "startFrame": 593,
+      "endFrame": 628,
+      "highlight": false
+    },
+    {
+      "text": "pintu!",
+      "speaker": "bu_tini",
+      "startFrame": 628,
+      "endFrame": 642,
+      "highlight": false
+    },
+    {
+      "text": "Gawat Gas,",
+      "speaker": "riko",
+      "startFrame": 649,
+      "endFrame": 670,
+      "highlight": true
+    },
+    {
+      "text": "gawat!",
+      "speaker": "riko",
+      "startFrame": 670,
+      "endFrame": 683,
+      "highlight": true
+    },
+    {
+      "text": "Itu suara",
+      "speaker": "riko",
+      "startFrame": 683,
+      "endFrame": 696,
+      "highlight": false
+    },
+    {
+      "text": "Bu Tini",
+      "speaker": "riko",
+      "startFrame": 696,
+      "endFrame": 706,
+      "highlight": false
+    },
+    {
+      "text": "bawa sapu!",
+      "speaker": "riko",
+      "startFrame": 706,
+      "endFrame": 723,
+      "highlight": true
+    },
+    {
+      "text": "Sembunyiin",
+      "speaker": "riko",
+      "startFrame": 723,
+      "endFrame": 746,
+      "highlight": false
+    },
+    {
+      "text": "Oren sekarang",
+      "speaker": "riko",
+      "startFrame": 746,
+      "endFrame": 760,
+      "highlight": true
+    },
+    {
+      "text": "juga!",
+      "speaker": "riko",
+      "startFrame": 760,
+      "endFrame": 767,
+      "highlight": false
+    },
+    {
+      "text": "Masuk lemari",
+      "speaker": "riko",
+      "startFrame": 791,
+      "endFrame": 811,
+      "highlight": true
+    },
+    {
+      "text": "penuh baju!",
+      "speaker": "riko",
+      "startFrame": 811,
+      "endFrame": 834,
+      "highlight": false
+    },
+    {
+      "text": "Masuk ember",
+      "speaker": "riko",
+      "startFrame": 834,
+      "endFrame": 852,
+      "highlight": true
+    },
+    {
+      "text": "kekecilan!",
+      "speaker": "riko",
+      "startFrame": 852,
+      "endFrame": 871,
+      "highlight": false
+    },
+    {
+      "text": "Aduh Gas,",
+      "speaker": "riko",
+      "startFrame": 871,
+      "endFrame": 889,
+      "highlight": false
+    },
+    {
+      "text": "taruh mana",
+      "speaker": "riko",
+      "startFrame": 889,
+      "endFrame": 901,
+      "highlight": false
+    },
+    {
+      "text": "dong kucing",
+      "speaker": "riko",
+      "startFrame": 901,
+      "endFrame": 914,
+      "highlight": false
+    },
+    {
+      "text": "gembul ini?!",
+      "speaker": "riko",
+      "startFrame": 914,
+      "endFrame": 926,
+      "highlight": false
+    },
+    {
+      "text": "Tenang Rik,",
+      "speaker": "bagas",
+      "startFrame": 937,
+      "endFrame": 952,
+      "highlight": false
+    },
+    {
+      "text": "otak jeniusku",
+      "speaker": "bagas",
+      "startFrame": 952,
+      "endFrame": 975,
+      "highlight": true
+    },
+    {
+      "text": "kerja!",
+      "speaker": "bagas",
+      "startFrame": 975,
+      "endFrame": 986,
+      "highlight": false
+    },
+    {
+      "text": "Bungkus",
+      "speaker": "bagas",
+      "startFrame": 986,
+      "endFrame": 1008,
+      "highlight": false
+    },
+    {
+      "text": "sarung bantal",
+      "speaker": "bagas",
+      "startFrame": 1008,
+      "endFrame": 1023,
+      "highlight": true
+    },
+    {
+      "text": "kuning,",
+      "speaker": "bagas",
+      "startFrame": 1023,
+      "endFrame": 1032,
+      "highlight": false
+    },
+    {
+      "text": "jadi bantal",
+      "speaker": "bagas",
+      "startFrame": 1032,
+      "endFrame": 1047,
+      "highlight": true
+    },
+    {
+      "text": "bulu edisi",
+      "speaker": "bagas",
+      "startFrame": 1047,
+      "endFrame": 1060,
+      "highlight": true
+    },
+    {
+      "text": "terbatas!",
+      "speaker": "bagas",
+      "startFrame": 1060,
+      "endFrame": 1075,
+      "highlight": false
+    },
+    {
+      "text": "Riko!",
+      "speaker": "bu_tini",
+      "startFrame": 1104,
+      "endFrame": 1111,
+      "highlight": false
+    },
+    {
+      "text": "Kenapa kamar",
+      "speaker": "bu_tini",
+      "startFrame": 1111,
+      "endFrame": 1147,
+      "highlight": false
+    },
+    {
+      "text": "kamu bau",
+      "speaker": "bu_tini",
+      "startFrame": 1147,
+      "endFrame": 1161,
+      "highlight": false
+    },
+    {
+      "text": "ikan tongkol",
+      "speaker": "bu_tini",
+      "startFrame": 1161,
+      "endFrame": 1179,
+      "highlight": true
+    },
+    {
+      "text": "menyengat",
+      "speaker": "bu_tini",
+      "startFrame": 1179,
+      "endFrame": 1188,
+      "highlight": false
+    },
+    {
+      "text": "begini?!",
+      "speaker": "bu_tini",
+      "startFrame": 1188,
+      "endFrame": 1204,
+      "highlight": false
+    },
+    {
+      "text": "Kamu",
+      "speaker": "bu_tini",
+      "startFrame": 1204,
+      "endFrame": 1217,
+      "highlight": false
+    },
+    {
+      "text": "sembunyiin",
+      "speaker": "bu_tini",
+      "startFrame": 1217,
+      "endFrame": 1229,
+      "highlight": false
+    },
+    {
+      "text": "kucing ya?!",
+      "speaker": "bu_tini",
+      "startFrame": 1229,
+      "endFrame": 1244,
+      "highlight": false
+    },
+    {
+      "text": "Bukan ikan",
+      "speaker": "riko",
+      "startFrame": 1253,
+      "endFrame": 1272,
+      "highlight": false
+    },
+    {
+      "text": "tongkol Bu,",
+      "speaker": "riko",
+      "startFrame": 1272,
+      "endFrame": 1288,
+      "highlight": true
+    },
+    {
+      "text": "itu...",
+      "speaker": "riko",
+      "startFrame": 1288,
+      "endFrame": 1297,
+      "highlight": false
+    },
+    {
+      "text": "parfum baru",
+      "speaker": "riko",
+      "startFrame": 1297,
+      "endFrame": 1325,
+      "highlight": true
+    },
+    {
+      "text": "aroma pantai",
+      "speaker": "riko",
+      "startFrame": 1325,
+      "endFrame": 1344,
+      "highlight": false
+    },
+    {
+      "text": "Ancol!",
+      "speaker": "riko",
+      "startFrame": 1344,
+      "endFrame": 1356,
+      "highlight": true
+    },
+    {
+      "text": "Lagi tren",
+      "speaker": "riko",
+      "startFrame": 1356,
+      "endFrame": 1382,
+      "highlight": false
+    },
+    {
+      "text": "banget di",
+      "speaker": "riko",
+      "startFrame": 1382,
+      "endFrame": 1398,
+      "highlight": false
+    },
+    {
+      "text": "kalangan",
+      "speaker": "riko",
+      "startFrame": 1398,
+      "endFrame": 1407,
+      "highlight": false
+    },
+    {
+      "text": "mahasiswa!",
+      "speaker": "riko",
+      "startFrame": 1407,
+      "endFrame": 1426,
+      "highlight": false
+    },
+    {
+      "text": "Eh Riko,",
+      "speaker": "ara",
+      "startFrame": 1447,
+      "endFrame": 1462,
+      "highlight": false
+    },
+    {
+      "text": "bantal bulu",
+      "speaker": "ara",
+      "startFrame": 1462,
+      "endFrame": 1490,
+      "highlight": true
+    },
+    {
+      "text": "di kasur",
+      "speaker": "ara",
+      "startFrame": 1490,
+      "endFrame": 1501,
+      "highlight": false
+    },
+    {
+      "text": "kamu lucu",
+      "speaker": "ara",
+      "startFrame": 1501,
+      "endFrame": 1514,
+      "highlight": false
+    },
+    {
+      "text": "banget!",
+      "speaker": "ara",
+      "startFrame": 1514,
+      "endFrame": 1523,
+      "highlight": false
+    },
+    {
+      "text": "Tapi kok",
+      "speaker": "ara",
+      "startFrame": 1523,
+      "endFrame": 1546,
+      "highlight": false
+    },
+    {
+      "text": "kupingnya",
+      "speaker": "ara",
+      "startFrame": 1546,
+      "endFrame": 1558,
+      "highlight": true
+    },
+    {
+      "text": "gerak-gerak",
+      "speaker": "ara",
+      "startFrame": 1558,
+      "endFrame": 1572,
+      "highlight": false
+    },
+    {
+      "text": "terus barusan",
+      "speaker": "ara",
+      "startFrame": 1572,
+      "endFrame": 1588,
+      "highlight": false
+    },
+    {
+      "text": "ngeong?!",
+      "speaker": "ara",
+      "startFrame": 1588,
+      "endFrame": 1596,
+      "highlight": true
+    },
+    {
+      "text": "Aduh Mbak",
+      "speaker": "riko",
+      "startFrame": 1611,
+      "endFrame": 1628,
+      "highlight": false
+    },
+    {
+      "text": "Ara,",
+      "speaker": "riko",
+      "startFrame": 1628,
+      "endFrame": 1639,
+      "highlight": false
+    },
+    {
+      "text": "jangan",
+      "speaker": "riko",
+      "startFrame": 1639,
+      "endFrame": 1647,
+      "highlight": false
+    },
+    {
+      "text": "kencang-kencang!",
+      "speaker": "riko",
+      "startFrame": 1647,
+      "endFrame": 1668,
+      "highlight": false
+    },
+    {
+      "text": "Tamat sudah",
+      "speaker": "riko",
+      "startFrame": 1668,
+      "endFrame": 1679,
+      "highlight": true
+    },
+    {
+      "text": "riwayatku",
+      "speaker": "riko",
+      "startFrame": 1679,
+      "endFrame": 1692,
+      "highlight": false
+    },
+    {
+      "text": "hari ini!",
+      "speaker": "riko",
+      "startFrame": 1692,
+      "endFrame": 1704,
+      "highlight": false
+    },
+    {
+      "text": "Aha!",
+      "speaker": "bu_tini",
+      "startFrame": 1726,
+      "endFrame": 1728,
+      "highlight": false
+    },
+    {
+      "text": "Ketangkap",
+      "speaker": "bu_tini",
+      "startFrame": 1726,
+      "endFrame": 1750,
+      "highlight": true
+    },
+    {
+      "text": "basah kamu",
+      "speaker": "bu_tini",
+      "startFrame": 1750,
+      "endFrame": 1771,
+      "highlight": false
+    },
+    {
+      "text": "Riko!",
+      "speaker": "bu_tini",
+      "startFrame": 1771,
+      "endFrame": 1782,
+      "highlight": false
+    },
+    {
+      "text": "Sini saya",
+      "speaker": "bu_tini",
+      "startFrame": 1782,
+      "endFrame": 1807,
+      "highlight": false
+    },
+    {
+      "text": "tarik",
+      "speaker": "bu_tini",
+      "startFrame": 1807,
+      "endFrame": 1816,
+      "highlight": false
+    },
+    {
+      "text": "selimutnya",
+      "speaker": "bu_tini",
+      "startFrame": 1816,
+      "endFrame": 1831,
+      "highlight": true
+    },
+    {
+      "text": "sekarang!",
+      "speaker": "bu_tini",
+      "startFrame": 1831,
+      "endFrame": 1840,
+      "highlight": false
+    },
+    {
+      "text": "Ya ampun...",
+      "speaker": "bu_tini",
+      "startFrame": 1899,
+      "endFrame": 1914,
+      "highlight": false
+    },
+    {
+      "text": "Gusti...",
+      "speaker": "bu_tini",
+      "startFrame": 1914,
+      "endFrame": 1943,
+      "highlight": false
+    },
+    {
+      "text": "matanya",
+      "speaker": "bu_tini",
+      "startFrame": 1943,
+      "endFrame": 1962,
+      "highlight": false
+    },
+    {
+      "text": "berbinar",
+      "speaker": "bu_tini",
+      "startFrame": 1962,
+      "endFrame": 1977,
+      "highlight": true
+    },
+    {
+      "text": "banget!",
+      "speaker": "bu_tini",
+      "startFrame": 1977,
+      "endFrame": 1988,
+      "highlight": false
+    },
+    {
+      "text": "Gemoy banget",
+      "speaker": "bu_tini",
+      "startFrame": 1988,
+      "endFrame": 2016,
+      "highlight": true
+    },
+    {
+      "text": "sih kamu,",
+      "speaker": "bu_tini",
+      "startFrame": 2016,
+      "endFrame": 2030,
+      "highlight": false
+    },
+    {
+      "text": "pus!",
+      "speaker": "bu_tini",
+      "startFrame": 2030,
+      "endFrame": 2035,
+      "highlight": false
+    },
+    {
+      "text": "Sudah,",
+      "speaker": "bu_tini",
+      "startFrame": 2064,
+      "endFrame": 2075,
+      "highlight": false
+    },
+    {
+      "text": "mulai hari",
+      "speaker": "bu_tini",
+      "startFrame": 2075,
+      "endFrame": 2091,
+      "highlight": false
+    },
+    {
+      "text": "ini Oren",
+      "speaker": "bu_tini",
+      "startFrame": 2091,
+      "endFrame": 2100,
+      "highlight": true
+    },
+    {
+      "text": "ikut Ibu",
+      "speaker": "bu_tini",
+      "startFrame": 2100,
+      "endFrame": 2116,
+      "highlight": false
+    },
+    {
+      "text": "ke dapur",
+      "speaker": "bu_tini",
+      "startFrame": 2116,
+      "endFrame": 2127,
+      "highlight": false
+    },
+    {
+      "text": "makan ikan",
+      "speaker": "bu_tini",
+      "startFrame": 2127,
+      "endFrame": 2138,
+      "highlight": false
+    },
+    {
+      "text": "pindang!",
+      "speaker": "bu_tini",
+      "startFrame": 2138,
+      "endFrame": 2152,
+      "highlight": true
+    },
+    {
+      "text": "Kalian berdua",
+      "speaker": "bu_tini",
+      "startFrame": 2152,
+      "endFrame": 2178,
+      "highlight": false
+    },
+    {
+      "text": "keluar sana!",
+      "speaker": "bu_tini",
+      "startFrame": 2178,
+      "endFrame": 2193,
+      "highlight": true
+    },
+    {
+      "text": "Lho Bu,",
+      "speaker": "bagas",
+      "startFrame": 2206,
+      "endFrame": 2223,
+      "highlight": false
+    },
+    {
+      "text": "kok malah",
+      "speaker": "bagas",
+      "startFrame": 2223,
+      "endFrame": 2239,
+      "highlight": false
+    },
+    {
+      "text": "kita yang",
+      "speaker": "bagas",
+      "startFrame": 2239,
+      "endFrame": 2255,
+      "highlight": false
+    },
+    {
+      "text": "diusir dari",
+      "speaker": "bagas",
+      "startFrame": 2255,
+      "endFrame": 2273,
+      "highlight": true
+    },
+    {
+      "text": "kamar sendiri",
+      "speaker": "bagas",
+      "startFrame": 2273,
+      "endFrame": 2294,
+      "highlight": false
+    },
+    {
+      "text": "sih?!",
+      "speaker": "bagas",
+      "startFrame": 2294,
+      "endFrame": 2299,
+      "highlight": false
+    },
+    {
+      "text": "Wah asyik!",
+      "speaker": "ara",
+      "startFrame": 2308,
+      "endFrame": 2344,
+      "highlight": false
+    },
+    {
+      "text": "Berarti besok",
+      "speaker": "ara",
+      "startFrame": 2344,
+      "endFrame": 2370,
+      "highlight": false
+    },
+    {
+      "text": "aku boleh",
+      "speaker": "ara",
+      "startFrame": 2370,
+      "endFrame": 2381,
+      "highlight": true
+    },
+    {
+      "text": "pelihara",
+      "speaker": "ara",
+      "startFrame": 2381,
+      "endFrame": 2393,
+      "highlight": false
+    },
+    {
+      "text": "bebek di",
+      "speaker": "ara",
+      "startFrame": 2393,
+      "endFrame": 2405,
+      "highlight": true
+    },
+    {
+      "text": "kamar juga",
+      "speaker": "ara",
+      "startFrame": 2405,
+      "endFrame": 2419,
+      "highlight": false
+    },
+    {
+      "text": "ya Bu?!",
+      "speaker": "ara",
+      "startFrame": 2419,
+      "endFrame": 2429,
+      "highlight": false
+    },
+    {
+      "text": "Hahaha,",
+      "speaker": "nadia",
+      "startFrame": 2453,
+      "endFrame": 2470,
+      "highlight": false
+    },
+    {
+      "text": "aturan galak",
+      "speaker": "nadia",
+      "startFrame": 2470,
+      "endFrame": 2499,
+      "highlight": false
+    },
+    {
+      "text": "langsung",
+      "speaker": "nadia",
+      "startFrame": 2499,
+      "endFrame": 2509,
+      "highlight": false
+    },
+    {
+      "text": "kalah sama",
+      "speaker": "nadia",
+      "startFrame": 2509,
+      "endFrame": 2522,
+      "highlight": false
+    },
+    {
+      "text": "tatapan",
+      "speaker": "nadia",
+      "startFrame": 2522,
+      "endFrame": 2537,
+      "highlight": false
+    },
+    {
+      "text": "kucing oren!",
+      "speaker": "nadia",
+      "startFrame": 2537,
+      "endFrame": 2559,
+      "highlight": true
+    },
+    {
+      "text": "Menurut kamu",
+      "speaker": "nadia",
+      "startFrame": 2559,
+      "endFrame": 2589,
+      "highlight": false
+    },
+    {
+      "text": "wak,",
+      "speaker": "nadia",
+      "startFrame": 2589,
+      "endFrame": 2606,
+      "highlight": false
+    },
+    {
+      "text": "kosan boleh",
+      "speaker": "nadia",
+      "startFrame": 2606,
+      "endFrame": 2627,
+      "highlight": true
+    },
+    {
+      "text": "pelihara",
+      "speaker": "nadia",
+      "startFrame": 2627,
+      "endFrame": 2641,
+      "highlight": false
+    },
+    {
+      "text": "kucing atau",
+      "speaker": "nadia",
+      "startFrame": 2641,
+      "endFrame": 2659,
+      "highlight": false
+    },
+    {
+      "text": "dilarang",
+      "speaker": "nadia",
+      "startFrame": 2659,
+      "endFrame": 2673,
+      "highlight": true
+    },
+    {
+      "text": "keras?",
+      "speaker": "nadia",
+      "startFrame": 2673,
+      "endFrame": 2690,
+      "highlight": true
+    },
+    {
+      "text": "Vote di",
+      "speaker": "nadia",
+      "startFrame": 2690,
+      "endFrame": 2706,
+      "highlight": true
+    },
+    {
+      "text": "komen!",
+      "speaker": "nadia",
+      "startFrame": 2706,
+      "endFrame": 2713,
+      "highlight": true
+    }
+  ]
+}

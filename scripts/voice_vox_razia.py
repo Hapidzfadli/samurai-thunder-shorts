@@ -42,7 +42,7 @@ STYLE_MAP = {
     "narasi_tutup": "warm cheerful female storyteller, laughing warmly, playful, engaging",
     "bisik": "hushed urgent whisper, nervous young man sneaking around, quiet hurried tone",
     "tegas_galak": "strict, loud, bossy landlady shouting an announcement, dramatic authority",
-    "galak": "strict, loud, suspicious landlady scolding, comedic motherly anger",
+    "galak": "clear Indonesian, strict firm bossy landlady scolding, expressive motherly anger",
     "panik": "panicked, fast energetic young man, frantic, loud comedic urgency",
     "ngeles": "nervous fast-talking young man making up an absurd excuse, flustered comedic",
     "santai": "super chill, deadpan funny, warm friendly relaxed young man, unbothered",
@@ -247,7 +247,7 @@ def run_pass1(script_path: Path, name: str, only_keys: set[str] | None, take_ove
                 for chunk in tts.generate_streaming(
                     text=full,
                     reference_wav_path=str(ref),
-                    inference_timesteps=8,
+                    inference_timesteps=6,
                     cfg_value=2.0,
                 )
             ]
