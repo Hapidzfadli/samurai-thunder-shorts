@@ -394,10 +394,11 @@ const ColonialHauntedHouse3D: React.FC<{ pos?: V3; t?: number; cozy?: number }> 
 };
 
 /** Full Moonlit Haunted Colonial Mansion Yard Diorama (Shifts from Spooky Blue to Warm Hangout Glow!) */
-export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?: boolean }> = ({
+export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?: boolean; hideGate?: boolean }> = ({
   t = 0,
   cozy = 0,
   showCat = false,
+  hideGate = false,
 }) => {
   const grassTex = useMemo(() => makeYardGrassTex(), []);
   return (
@@ -478,28 +479,30 @@ export const HauntedMansionYard: React.FC<{ t?: number; cozy?: number; showCat?:
       </group>
 
       {/* Rusty Wrought-Iron Front Fence + Twin Mossy Stone Gate Pillars + Crooked Warning Sign */}
-      <group position={[0, 0, 3.65]}>
-        {[-4.2, -2.6, 2.6, 4.2].map((fx, i) => (
-          <group key={i} position={[fx, 0, 0]}>
-            <B pos={[0, 0.35, 0]} size={[1.6, 0.7, 0.28]} color="#57534e" ink={0.025} />
-            {[-0.55, -0.18, 0.18, 0.55].map((bx, k) => (
-              <B key={k} pos={[bx, 1.15, 0]} size={[0.05, 1.15, 0.05]} color="#1e293b" ink={0.01} />
-            ))}
+      {!hideGate && (
+        <group position={[0, 0, 3.65]}>
+          {[-4.2, -2.6, 2.6, 4.2].map((fx, i) => (
+            <group key={i} position={[fx, 0, 0]}>
+              <B pos={[0, 0.35, 0]} size={[1.6, 0.7, 0.28]} color="#57534e" ink={0.025} />
+              {[-0.55, -0.18, 0.18, 0.55].map((bx, k) => (
+                <B key={k} pos={[bx, 1.15, 0]} size={[0.05, 1.15, 0.05]} color="#1e293b" ink={0.01} />
+              ))}
+            </group>
+          ))}
+          {/* Twin Mossy Gate Pillars */}
+          {[-1.72, 1.72].map((px, i) => (
+            <group key={i} position={[px, 0, 0]}>
+              <B pos={[0, 1.12, 0]} size={[0.56, 2.24, 0.56]} color="#64748b" ink={0.035} />
+              <B pos={[0, 2.30, 0]} size={[0.66, 0.14, 0.66]} color="#475569" ink={0.02} />
+              <P geo={() => <sphereGeometry args={[0.20, 10, 8]} />} color="#cbd5e1" pos={[0, 2.52, 0]} hull={0.05} />
+            </group>
+          ))}
+          {/* Crooked wooden warning sign hung on right fence */}
+          <group position={[3.05, 1.52, 0.20]} rotation={[0, 0, -0.12]}>
+            <Sign pos={[0, 0, 0]} w={2.15} h={0.62} text="RUMAH KOSONG!" bg="#fef08a" fg="#991b1b" />
           </group>
-        ))}
-        {/* Twin Mossy Gate Pillars */}
-        {[-1.72, 1.72].map((px, i) => (
-          <group key={i} position={[px, 0, 0]}>
-            <B pos={[0, 1.12, 0]} size={[0.56, 2.24, 0.56]} color="#64748b" ink={0.035} />
-            <B pos={[0, 2.30, 0]} size={[0.66, 0.14, 0.66]} color="#475569" ink={0.02} />
-            <P geo={() => <sphereGeometry args={[0.20, 10, 8]} />} color="#cbd5e1" pos={[0, 2.52, 0]} hull={0.05} />
-          </group>
-        ))}
-        {/* Crooked wooden warning sign hung on right fence */}
-        <group position={[3.05, 1.52, 0.20]} rotation={[0, 0, -0.12]}>
-          <Sign pos={[0, 0, 0]} w={2.15} h={0.62} text="RUMAH KOSONG!" bg="#fef08a" fg="#991b1b" />
         </group>
-      </group>
+      )}
 
       {/* Lush Night Ferns & Wild Bushes on Right Yard */}
       {[

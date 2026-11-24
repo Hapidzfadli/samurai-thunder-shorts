@@ -1,0 +1,66 @@
+[
+  {
+    "scene": "hook",
+    "takes": 1,
+    "lines": [
+      ["narasi", "Malam Jumat tepat tengah malam, Riko nekad bikin konten uji nyali di rumah kosong angker biar viral."],
+      ["santai", "Padahal lututnya sudah gemetaran, sementara Bagas malah santai menenteng sekantong pisang goreng hangat!"]
+    ]
+  },
+  {
+    "scene": "masuk",
+    "takes": 1,
+    "lines": [
+      ["tegang", "Sambil berjalan mengendap-endap, Mas Dedi menyapu halaman gelap penuh kabut dengan senter terang."],
+      ["narasi", "Tiba-tiba lampu teras berkedip aneh dan angin dingin menggoyang akar pohon beringin keramat!"]
+    ]
+  },
+  {
+    "scene": "muncul",
+    "takes": 1,
+    "lines": [
+      ["tegang", "Seketika kabut biru menyala, Kang Pocong melompat dari balik beringin dan Mbak Kunti melayang turun dari balkon!"],
+      ["tegas", "Riko dan Mas Dedi langsung membeku kaku seperti patung dengan keringat dingin mengucur deras!"]
+    ]
+  },
+  {
+    "scene": "tawar",
+    "takes": 1,
+    "lines": [
+      ["santai", "Anehnya, Bagas bukannya kabur malah menyodorkan tampah gorengan hangat dan segelas kopi hitam!"],
+      ["narasi", "Seketika aura seram lenyap, mata Kang Pocong dan Mbak Kunti langsung berbinar mencium aroma gorengan!"]
+    ]
+  },
+  {
+    "scene": "curhat",
+    "takes": 1,
+    "lines": [
+      ["santai", "Sambil mengunyah tahu isi, Mbak Kunti curhat lelah tiap malam Jumat harus lembur menakuti pembuat konten."],
+      ["narasi", "Kang Pocong ikut mengeluh betisnya pegal melompat terus, padahal cuma ingin rebahan dan ngopi santai!"]
+    ]
+  },
+  {
+    "scene": "viral",
+    "takes": 1,
+    "lines": [
+      ["tegas", "Riko yang baru sadar langsung kaget melihat siaran langsung di ponselnya masih menyala!"],
+      ["santai", "Bukannya takut, ribuan penonton di komentar malah tertawa terbahak dan ikut menitip pertanyaan untuk para hantu!"]
+    ]
+  },
+  {
+    "scene": "foto",
+    "takes": 1,
+    "lines": [
+      ["santai", "Akhirnya uji nyali paling seram malam itu berubah total jadi sesi nongkrong dan foto bareng paling akrab!"],
+      ["narasi", "Kang Pocong bahkan berpesan agar besok malam Jumat mereka membawa bakwan ekstra dan cabai rawit!"]
+    ]
+  },
+  {
+    "scene": "ending",
+    "takes": 1,
+    "lines": [
+      ["santai", "Malam Jumat di rumah kosong pun berakhir hangat diterangi bulan purnama dan kunang-kunang."],
+      ["tegas", "Kalau kamu ketemu hantu yang bisa diajak ngobrol, pertanyaan pertama apa? Tulis di komentar dan pilih cerita besok!"]
+    ]
+  }
+]
