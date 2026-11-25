@@ -1,0 +1,1715 @@
+{
+ "fps": 30,
+ "totalFrames": 2303,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 148,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Tahun sembilan belas empat puluh tiga, Amerika membuat bom rahasia...",
+     "score": 0.966,
+     "file": "out/voice/kelelawar/hook_0.wav",
+     "wordsSec": [
+      [
+       "Bahun",
+       0.0,
+       0.28
+      ],
+      [
+       "1943,",
+       0.28,
+       1.08
+      ],
+      [
+       "Amerika",
+       1.72,
+       2.02
+      ],
+      [
+       "membuat",
+       2.02,
+       2.36
+      ],
+      [
+       "bom",
+       2.36,
+       2.56
+      ],
+      [
+       "rahasia.",
+       2.56,
+       2.92
+      ]
+     ],
+     "from": 8,
+     "to": 98,
+     "words": [
+      {
+       "w": "Bahun",
+       "from": 8,
+       "to": 16
+      },
+      {
+       "w": "1943,",
+       "from": 16,
+       "to": 40
+      },
+      {
+       "w": "Amerika",
+       "from": 59,
+       "to": 68
+      },
+      {
+       "w": "membuat",
+       "from": 68,
+       "to": 78
+      },
+      {
+       "w": "bom",
+       "from": 78,
+       "to": 84
+      },
+      {
+       "w": "rahasia.",
+       "from": 84,
+       "to": 95
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "dari kelelawar.",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/hook_1.wav",
+     "wordsSec": [
+      [
+       "dari",
+       0.0,
+       0.22
+      ],
+      [
+       "kelelawar.",
+       0.22,
+       0.88
+      ]
+     ],
+     "from": 102,
+     "to": 135,
+     "words": [
+      {
+       "w": "dari",
+       "from": 102,
+       "to": 108
+      },
+      {
+       "w": "kelelawar.",
+       "from": 108,
+       "to": 128
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "gua",
+   "from": 148,
+   "to": 299,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Idenya datang dari seorang dokter gigi, yang melihat jutaan kelelawar keluar dari gua.",
+     "score": 0.979,
+     "file": "out/voice/kelelawar/gua_0.wav",
+     "wordsSec": [
+      [
+       "ID",
+       0.0,
+       0.26
+      ],
+      [
+       "-nya",
+       0.26,
+       0.48
+      ],
+      [
+       "datang",
+       0.48,
+       0.84
+      ],
+      [
+       "dari",
+       0.84,
+       0.98
+      ],
+      [
+       "seorang",
+       0.98,
+       1.3
+      ],
+      [
+       "doktor",
+       1.3,
+       1.58
+      ],
+      [
+       "gigi",
+       1.58,
+       2.08
+      ],
+      [
+       "yang",
+       2.08,
+       2.32
+      ],
+      [
+       "melihat",
+       2.32,
+       2.66
+      ],
+      [
+       "jutaan",
+       2.66,
+       3.08
+      ],
+      [
+       "kelelawar",
+       3.08,
+       3.6
+      ],
+      [
+       "keluar",
+       3.6,
+       3.82
+      ],
+      [
+       "dari",
+       3.82,
+       4.1
+      ],
+      [
+       "gua.",
+       4.1,
+       4.32
+      ]
+     ],
+     "from": 148,
+     "to": 286,
+     "words": [
+      {
+       "w": "ID",
+       "from": 148,
+       "to": 156
+      },
+      {
+       "w": "-nya",
+       "from": 156,
+       "to": 163
+      },
+      {
+       "w": "datang",
+       "from": 163,
+       "to": 173
+      },
+      {
+       "w": "dari",
+       "from": 173,
+       "to": 178
+      },
+      {
+       "w": "seorang",
+       "from": 178,
+       "to": 187
+      },
+      {
+       "w": "doktor",
+       "from": 187,
+       "to": 196
+      },
+      {
+       "w": "gigi",
+       "from": 196,
+       "to": 211
+      },
+      {
+       "w": "yang",
+       "from": 211,
+       "to": 218
+      },
+      {
+       "w": "melihat",
+       "from": 218,
+       "to": 228
+      },
+      {
+       "w": "jutaan",
+       "from": 228,
+       "to": 241
+      },
+      {
+       "w": "kelelawar",
+       "from": 241,
+       "to": 256
+      },
+      {
+       "w": "keluar",
+       "from": 256,
+       "to": 263
+      },
+      {
+       "w": "dari",
+       "from": 263,
+       "to": 271
+      },
+      {
+       "w": "gua.",
+       "from": 271,
+       "to": 278
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "lab",
+   "from": 299,
+   "to": 708,
+   "lines": [
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Ara, lihat ini! Senjata rahasia kita, kelelawar pembawa bom api!",
+     "score": 0.97,
+     "file": "out/voice/kelelawar/lab_0.wav",
+     "wordsSec": [
+      [
+       "Ara",
+       0.0,
+       0.32
+      ],
+      [
+       "liat",
+       0.32,
+       0.78
+      ],
+      [
+       "ini,",
+       0.78,
+       1.0
+      ],
+      [
+       "senjata",
+       1.34,
+       1.8
+      ],
+      [
+       "rahasia",
+       1.8,
+       2.2
+      ],
+      [
+       "kita",
+       2.2,
+       2.5
+      ],
+      [
+       "kelelawar",
+       2.5,
+       3.34
+      ],
+      [
+       "pembawa",
+       3.34,
+       3.7
+      ],
+      [
+       "bum",
+       3.7,
+       3.9
+      ],
+      [
+       "api.",
+       3.9,
+       4.3
+      ]
+     ],
+     "from": 299,
+     "to": 433,
+     "words": [
+      {
+       "w": "Ara",
+       "from": 299,
+       "to": 309
+      },
+      {
+       "w": "liat",
+       "from": 309,
+       "to": 322
+      },
+      {
+       "w": "ini,",
+       "from": 322,
+       "to": 329
+      },
+      {
+       "w": "senjata",
+       "from": 339,
+       "to": 353
+      },
+      {
+       "w": "rahasia",
+       "from": 353,
+       "to": 365
+      },
+      {
+       "w": "kita",
+       "from": 365,
+       "to": 374
+      },
+      {
+       "w": "kelelawar",
+       "from": 374,
+       "to": 399
+      },
+      {
+       "w": "pembawa",
+       "from": 399,
+       "to": 410
+      },
+      {
+       "w": "bum",
+       "from": 410,
+       "to": 416
+      },
+      {
+       "w": "api.",
+       "from": 416,
+       "to": 428
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Kelelawar? Yang kecil begini, Sersan?",
+     "score": 0.933,
+     "file": "out/voice/kelelawar/lab_1.wav",
+     "wordsSec": [
+      [
+       "Kale",
+       0.0,
+       0.18
+      ],
+      [
+       "lawar",
+       0.18,
+       0.62
+      ],
+      [
+       "yang",
+       0.62,
+       1.22
+      ],
+      [
+       "kecil",
+       1.22,
+       1.52
+      ],
+      [
+       "begini,",
+       1.52,
+       2.06
+      ],
+      [
+       "sersen?",
+       2.16,
+       2.54
+      ]
+     ],
+     "from": 441,
+     "to": 521,
+     "words": [
+      {
+       "w": "Kale",
+       "from": 441,
+       "to": 447
+      },
+      {
+       "w": "lawar",
+       "from": 447,
+       "to": 460
+      },
+      {
+       "w": "yang",
+       "from": 460,
+       "to": 478
+      },
+      {
+       "w": "kecil",
+       "from": 478,
+       "to": 487
+      },
+      {
+       "w": "begini,",
+       "from": 487,
+       "to": 503
+      },
+      {
+       "w": "sersen?",
+       "from": 506,
+       "to": 517
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Justru itu. Satu kelelawar, satu bom kecil. Ribuan kelelawar, ribuan kebakaran!",
+     "score": 0.982,
+     "file": "out/voice/kelelawar/lab_2.wav",
+     "wordsSec": [
+      [
+       "Justru",
+       0.0,
+       0.5
+      ],
+      [
+       "itu,",
+       0.5,
+       0.8
+      ],
+      [
+       "satu",
+       1.06,
+       1.4
+      ],
+      [
+       "kelelawar",
+       1.4,
+       1.94
+      ],
+      [
+       "satu",
+       1.94,
+       2.3
+      ],
+      [
+       "bom",
+       2.3,
+       2.5
+      ],
+      [
+       "kecil,",
+       2.5,
+       2.92
+      ],
+      [
+       "ribuan",
+       3.26,
+       3.76
+      ],
+      [
+       "kelawar",
+       3.76,
+       4.28
+      ],
+      [
+       "ribuan",
+       4.28,
+       4.74
+      ],
+      [
+       "kebakaran.",
+       4.74,
+       5.3
+      ]
+     ],
+     "from": 529,
+     "to": 695,
+     "words": [
+      {
+       "w": "Justru",
+       "from": 529,
+       "to": 544
+      },
+      {
+       "w": "itu,",
+       "from": 544,
+       "to": 553
+      },
+      {
+       "w": "satu",
+       "from": 561,
+       "to": 571
+      },
+      {
+       "w": "kelelawar",
+       "from": 571,
+       "to": 587
+      },
+      {
+       "w": "satu",
+       "from": 587,
+       "to": 598
+      },
+      {
+       "w": "bom",
+       "from": 598,
+       "to": 604
+      },
+      {
+       "w": "kecil,",
+       "from": 604,
+       "to": 616
+      },
+      {
+       "w": "ribuan",
+       "from": 627,
+       "to": 642
+      },
+      {
+       "w": "kelawar",
+       "from": 642,
+       "to": 657
+      },
+      {
+       "w": "ribuan",
+       "from": 657,
+       "to": 671
+      },
+      {
+       "w": "kebakaran.",
+       "from": 671,
+       "to": 688
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kulkas",
+   "from": 708,
+   "to": 1059,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Terus, gimana caranya biar mereka nggak kabur?",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/kulkas_0.wav",
+     "wordsSec": [
+      [
+       "Terus",
+       0.0,
+       0.56
+      ],
+      [
+       "gimana",
+       0.56,
+       1.48
+      ],
+      [
+       "caranya",
+       1.48,
+       2.04
+      ],
+      [
+       "biar",
+       2.04,
+       2.34
+      ],
+      [
+       "mereka",
+       2.34,
+       2.6
+      ],
+      [
+       "nggak",
+       2.6,
+       2.78
+      ],
+      [
+       "kabur?",
+       2.78,
+       3.3
+      ]
+     ],
+     "from": 708,
+     "to": 811,
+     "words": [
+      {
+       "w": "Terus",
+       "from": 708,
+       "to": 725
+      },
+      {
+       "w": "gimana",
+       "from": 725,
+       "to": 753
+      },
+      {
+       "w": "caranya",
+       "from": 753,
+       "to": 770
+      },
+      {
+       "w": "biar",
+       "from": 770,
+       "to": 779
+      },
+      {
+       "w": "mereka",
+       "from": 779,
+       "to": 786
+      },
+      {
+       "w": "nggak",
+       "from": 786,
+       "to": 792
+      },
+      {
+       "w": "kabur?",
+       "from": 792,
+       "to": 807
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Gampang. Masukin kulkas. Kedinginan, mereka tidur nyenyak.",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/kulkas_1.wav",
+     "wordsSec": [
+      [
+       "Gampang,",
+       0.0,
+       0.76
+      ],
+      [
+       "masukin",
+       0.84,
+       1.26
+      ],
+      [
+       "kulkas.",
+       1.26,
+       1.76
+      ],
+      [
+       "Kedinginan,",
+       2.2,
+       2.96
+      ],
+      [
+       "mereka",
+       3.26,
+       3.46
+      ],
+      [
+       "tidur",
+       3.46,
+       3.86
+      ],
+      [
+       "nyenyak.",
+       3.86,
+       4.22
+      ]
+     ],
+     "from": 819,
+     "to": 946,
+     "words": [
+      {
+       "w": "Gampang,",
+       "from": 819,
+       "to": 842
+      },
+      {
+       "w": "masukin",
+       "from": 844,
+       "to": 857
+      },
+      {
+       "w": "kulkas.",
+       "from": 857,
+       "to": 872
+      },
+      {
+       "w": "Kedinginan,",
+       "from": 885,
+       "to": 908
+      },
+      {
+       "w": "mereka",
+       "from": 917,
+       "to": 923
+      },
+      {
+       "w": "tidur",
+       "from": 923,
+       "to": 935
+      },
+      {
+       "w": "nyenyak.",
+       "from": 935,
+       "to": 945
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Ih, lucu... kayak es loli.",
+     "score": 0.848,
+     "file": "out/voice/kelelawar/kulkas_2.wav",
+     "wordsSec": [
+      [
+       "lucu,",
+       0.82,
+       1.46
+      ],
+      [
+       "kayak",
+       1.78,
+       2.02
+      ],
+      [
+       "es",
+       2.02,
+       2.3
+      ],
+      [
+       "lolly",
+       2.3,
+       2.76
+      ]
+     ],
+     "from": 954,
+     "to": 1045,
+     "words": [
+      {
+       "w": "lucu,",
+       "from": 979,
+       "to": 998
+      },
+      {
+       "w": "kayak",
+       "from": 1007,
+       "to": 1015
+      },
+      {
+       "w": "es",
+       "from": 1015,
+       "to": 1023
+      },
+      {
+       "w": "lolly",
+       "from": 1023,
+       "to": 1037
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "cara",
+   "from": 1059,
+   "to": 1411,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Nanti dijatuhkan dari pesawat. Begitu hangat, mereka bangun, terbang, lalu sembunyi di atap.",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/cara_0.wav",
+     "wordsSec": [
+      [
+       "nanti",
+       0.0,
+       0.34
+      ],
+      [
+       "dijatuhkan",
+       0.34,
+       0.94
+      ],
+      [
+       "dari",
+       0.94,
+       1.1
+      ],
+      [
+       "pesawat.",
+       1.1,
+       1.54
+      ],
+      [
+       "Begitu",
+       1.8,
+       2.18
+      ],
+      [
+       "hangat,",
+       2.18,
+       2.58
+      ],
+      [
+       "mereka",
+       2.76,
+       2.9
+      ],
+      [
+       "bangun,",
+       2.9,
+       3.44
+      ],
+      [
+       "terbang,",
+       3.64,
+       3.96
+      ],
+      [
+       "lalu",
+       4.24,
+       4.44
+      ],
+      [
+       "sembunyi",
+       4.44,
+       4.9
+      ],
+      [
+       "di",
+       4.9,
+       5.04
+      ],
+      [
+       "atap.",
+       5.04,
+       5.32
+      ]
+     ],
+     "from": 1059,
+     "to": 1221,
+     "words": [
+      {
+       "w": "nanti",
+       "from": 1059,
+       "to": 1069
+      },
+      {
+       "w": "dijatuhkan",
+       "from": 1069,
+       "to": 1087
+      },
+      {
+       "w": "dari",
+       "from": 1087,
+       "to": 1092
+      },
+      {
+       "w": "pesawat.",
+       "from": 1092,
+       "to": 1105
+      },
+      {
+       "w": "Begitu",
+       "from": 1113,
+       "to": 1124
+      },
+      {
+       "w": "hangat,",
+       "from": 1124,
+       "to": 1136
+      },
+      {
+       "w": "mereka",
+       "from": 1142,
+       "to": 1146
+      },
+      {
+       "w": "bangun,",
+       "from": 1146,
+       "to": 1162
+      },
+      {
+       "w": "terbang,",
+       "from": 1168,
+       "to": 1178
+      },
+      {
+       "w": "lalu",
+       "from": 1186,
+       "to": 1192
+      },
+      {
+       "w": "sembunyi",
+       "from": 1192,
+       "to": 1206
+      },
+      {
+       "w": "di",
+       "from": 1206,
+       "to": 1210
+      },
+      {
+       "w": "atap.",
+       "from": 1210,
+       "to": 1218
+      }
+     ]
+    },
+    {
+     "style": "bisik",
+     "voice": "ara",
+     "text": "Sembunyi di tempat yang gelap... dan tinggi, ya, Sersan?",
+     "score": 0.976,
+     "file": "out/voice/kelelawar/cara_1.wav",
+     "wordsSec": [
+      [
+       "Sembunyi",
+       0.0,
+       0.6
+      ],
+      [
+       "di",
+       0.6,
+       0.74
+      ],
+      [
+       "tempat",
+       0.74,
+       1.12
+      ],
+      [
+       "yang",
+       1.12,
+       1.26
+      ],
+      [
+       "gelap",
+       1.26,
+       1.78
+      ],
+      [
+       "dan",
+       1.78,
+       2.24
+      ],
+      [
+       "tinggi,",
+       2.24,
+       2.92
+      ],
+      [
+       "ya,",
+       3.04,
+       3.2
+      ],
+      [
+       "sersen?",
+       3.5,
+       3.84
+      ]
+     ],
+     "from": 1229,
+     "to": 1348,
+     "words": [
+      {
+       "w": "Sembunyi",
+       "from": 1229,
+       "to": 1247
+      },
+      {
+       "w": "di",
+       "from": 1247,
+       "to": 1251
+      },
+      {
+       "w": "tempat",
+       "from": 1251,
+       "to": 1263
+      },
+      {
+       "w": "yang",
+       "from": 1263,
+       "to": 1267
+      },
+      {
+       "w": "gelap",
+       "from": 1267,
+       "to": 1283
+      },
+      {
+       "w": "dan",
+       "from": 1283,
+       "to": 1296
+      },
+      {
+       "w": "tinggi,",
+       "from": 1296,
+       "to": 1317
+      },
+      {
+       "w": "ya,",
+       "from": 1320,
+       "to": 1325
+      },
+      {
+       "w": "sersen?",
+       "from": 1334,
+       "to": 1344
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Persis!",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/cara_2.wav",
+     "wordsSec": [
+      [
+       "Persis",
+       0.0,
+       0.66
+      ]
+     ],
+     "from": 1356,
+     "to": 1397,
+     "words": [
+      {
+       "w": "Persis",
+       "from": 1356,
+       "to": 1376
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kandang",
+   "from": 1411,
+   "to": 1659,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Sersan... kelelawarnya sudah bangun.",
+     "score": 0.966,
+     "file": "out/voice/kelelawar/kandang_0.wav",
+     "wordsSec": [
+      [
+       "Sersan,",
+       0.0,
+       0.48
+      ],
+      [
+       "kelala",
+       0.9,
+       1.34
+      ],
+      [
+       "warnya",
+       1.34,
+       1.78
+      ],
+      [
+       "sudah",
+       1.78,
+       1.96
+      ],
+      [
+       "bangun.",
+       1.96,
+       2.46
+      ]
+     ],
+     "from": 1411,
+     "to": 1490,
+     "words": [
+      {
+       "w": "Sersan,",
+       "from": 1411,
+       "to": 1425
+      },
+      {
+       "w": "kelala",
+       "from": 1438,
+       "to": 1451
+      },
+      {
+       "w": "warnya",
+       "from": 1451,
+       "to": 1464
+      },
+      {
+       "w": "sudah",
+       "from": 1464,
+       "to": 1469
+      },
+      {
+       "w": "bangun.",
+       "from": 1469,
+       "to": 1484
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Hah? Siapa yang buka kandangnya?!",
+     "score": 0.98,
+     "file": "out/voice/kelelawar/kandang_1.wav",
+     "wordsSec": [
+      [
+       "Ha?",
+       0.0,
+       0.24
+      ],
+      [
+       "Siapa",
+       0.48,
+       0.88
+      ],
+      [
+       "yang",
+       0.88,
+       0.98
+      ],
+      [
+       "buka",
+       0.98,
+       1.2
+      ],
+      [
+       "kandangnya?",
+       1.2,
+       1.7
+      ]
+     ],
+     "from": 1497,
+     "to": 1555,
+     "words": [
+      {
+       "w": "Ha?",
+       "from": 1497,
+       "to": 1505
+      },
+      {
+       "w": "Siapa",
+       "from": 1512,
+       "to": 1524
+      },
+      {
+       "w": "yang",
+       "from": 1524,
+       "to": 1527
+      },
+      {
+       "w": "buka",
+       "from": 1527,
+       "to": 1533
+      },
+      {
+       "w": "kandangnya?",
+       "from": 1533,
+       "to": 1548
+      }
+     ]
+    },
+    {
+     "style": "bisik",
+     "voice": "ara",
+     "text": "Tadi kepanasan. Kasihan...",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/kandang_2.wav",
+     "wordsSec": [
+      [
+       "Tadi,",
+       0.0,
+       0.4
+      ],
+      [
+       "kepanasan.",
+       0.66,
+       1.42
+      ],
+      [
+       "Kasihan.",
+       1.92,
+       2.62
+      ]
+     ],
+     "from": 1563,
+     "to": 1646,
+     "words": [
+      {
+       "w": "Tadi,",
+       "from": 1563,
+       "to": 1575
+      },
+      {
+       "w": "kepanasan.",
+       "from": 1583,
+       "to": 1605
+      },
+      {
+       "w": "Kasihan.",
+       "from": 1620,
+       "to": 1641
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "tangki",
+   "from": 1659,
+   "to": 1900,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Sersan, tempat gelap dan tinggi... kayak itu?",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/tangki_0.wav",
+     "wordsSec": [
+      [
+       "Sersan.",
+       0.0,
+       0.58
+      ],
+      [
+       "Tempat",
+       1.4,
+       1.92
+      ],
+      [
+       "gelap",
+       1.92,
+       2.38
+      ],
+      [
+       "dan",
+       2.38,
+       2.64
+      ],
+      [
+       "tinggi.",
+       2.64,
+       3.24
+      ],
+      [
+       "Kayak",
+       3.76,
+       4.18
+      ],
+      [
+       "itu?",
+       4.18,
+       4.46
+      ]
+     ],
+     "from": 1659,
+     "to": 1799,
+     "words": [
+      {
+       "w": "Sersan.",
+       "from": 1659,
+       "to": 1677
+      },
+      {
+       "w": "Tempat",
+       "from": 1701,
+       "to": 1717
+      },
+      {
+       "w": "gelap",
+       "from": 1717,
+       "to": 1731
+      },
+      {
+       "w": "dan",
+       "from": 1731,
+       "to": 1739
+      },
+      {
+       "w": "tinggi.",
+       "from": 1739,
+       "to": 1757
+      },
+      {
+       "w": "Kayak",
+       "from": 1772,
+       "to": 1785
+      },
+      {
+       "w": "itu?",
+       "from": 1785,
+       "to": 1793
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Jangan ke sana... jangan ke sana!",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/tangki_1.wav",
+     "wordsSec": [
+      [
+       "Jangan",
+       0.0,
+       0.3
+      ],
+      [
+       "kesana,",
+       0.3,
+       0.72
+      ],
+      [
+       "Jangan",
+       1.1,
+       1.82
+      ],
+      [
+       "kesana",
+       1.82,
+       2.32
+      ]
+     ],
+     "from": 1806,
+     "to": 1887,
+     "words": [
+      {
+       "w": "Jangan",
+       "from": 1806,
+       "to": 1815
+      },
+      {
+       "w": "kesana,",
+       "from": 1815,
+       "to": 1828
+      },
+      {
+       "w": "Jangan",
+       "from": 1839,
+       "to": 1861
+      },
+      {
+       "w": "kesana",
+       "from": 1861,
+       "to": 1876
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "akhir",
+   "from": 1900,
+   "to": 2295,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Bomnya berhasil. Terbukti bisa membakar... pangkalan sendiri.",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/akhir_0.wav",
+     "wordsSec": [
+      [
+       "Bomnya",
+       0.0,
+       0.32
+      ],
+      [
+       "berhasil",
+       0.32,
+       0.88
+      ],
+      [
+       "terbukti",
+       0.88,
+       1.48
+      ],
+      [
+       "bisa",
+       1.48,
+       1.66
+      ],
+      [
+       "membakar",
+       1.66,
+       2.3
+      ],
+      [
+       "pangkalan",
+       2.3,
+       3.0
+      ],
+      [
+       "sendiri.",
+       3.0,
+       3.28
+      ]
+     ],
+     "from": 1900,
+     "to": 2006,
+     "words": [
+      {
+       "w": "Bomnya",
+       "from": 1900,
+       "to": 1910
+      },
+      {
+       "w": "berhasil",
+       "from": 1910,
+       "to": 1927
+      },
+      {
+       "w": "terbukti",
+       "from": 1927,
+       "to": 1945
+      },
+      {
+       "w": "bisa",
+       "from": 1945,
+       "to": 1950
+      },
+      {
+       "w": "membakar",
+       "from": 1950,
+       "to": 1969
+      },
+      {
+       "w": "pangkalan",
+       "from": 1969,
+       "to": 1990
+      },
+      {
+       "w": "sendiri.",
+       "from": 1990,
+       "to": 1999
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Setahun kemudian proyek ini dibatalkan, kalah cepat dari bom atom.",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/akhir_1.wav",
+     "wordsSec": [
+      [
+       "Setahun",
+       0.0,
+       0.42
+      ],
+      [
+       "kemudian,",
+       0.42,
+       0.98
+      ],
+      [
+       "proyek",
+       1.14,
+       1.44
+      ],
+      [
+       "ini",
+       1.44,
+       1.6
+      ],
+      [
+       "dibatalkan,",
+       1.6,
+       2.36
+      ],
+      [
+       "kalah",
+       2.52,
+       2.8
+      ],
+      [
+       "cepat",
+       2.8,
+       3.16
+      ],
+      [
+       "dari",
+       3.16,
+       3.32
+      ],
+      [
+       "bom",
+       3.32,
+       3.54
+      ],
+      [
+       "atom.",
+       3.54,
+       3.86
+      ]
+     ],
+     "from": 2014,
+     "to": 2138,
+     "words": [
+      {
+       "w": "Setahun",
+       "from": 2014,
+       "to": 2026
+      },
+      {
+       "w": "kemudian,",
+       "from": 2026,
+       "to": 2043
+      },
+      {
+       "w": "proyek",
+       "from": 2048,
+       "to": 2057
+      },
+      {
+       "w": "ini",
+       "from": 2057,
+       "to": 2062
+      },
+      {
+       "w": "dibatalkan,",
+       "from": 2062,
+       "to": 2084
+      },
+      {
+       "w": "kalah",
+       "from": 2089,
+       "to": 2098
+      },
+      {
+       "w": "cepat",
+       "from": 2098,
+       "to": 2108
+      },
+      {
+       "w": "dari",
+       "from": 2108,
+       "to": 2113
+      },
+      {
+       "w": "bom",
+       "from": 2113,
+       "to": 2120
+      },
+      {
+       "w": "atom.",
+       "from": 2120,
+       "to": 2129
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Jadi... kita menang, Sersan?",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/akhir_2.wav",
+     "wordsSec": [
+      [
+       "Jadi",
+       0.0,
+       0.34
+      ],
+      [
+       "kita",
+       0.34,
+       1.32
+      ],
+      [
+       "menang",
+       1.32,
+       1.72
+      ],
+      [
+       "sersan.",
+       1.72,
+       2.16
+      ]
+     ],
+     "from": 2146,
+     "to": 2216,
+     "words": [
+      {
+       "w": "Jadi",
+       "from": 2146,
+       "to": 2156
+      },
+      {
+       "w": "kita",
+       "from": 2156,
+       "to": 2186
+      },
+      {
+       "w": "menang",
+       "from": 2186,
+       "to": 2198
+      },
+      {
+       "w": "sersan.",
+       "from": 2198,
+       "to": 2211
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Yang menang... kelelawarnya.",
+     "score": 1.0,
+     "file": "out/voice/kelelawar/akhir_3.wav",
+     "wordsSec": [
+      [
+       "yang",
+       0.0,
+       0.2
+      ],
+      [
+       "menang",
+       0.2,
+       0.7
+      ],
+      [
+       "kelelawarnya",
+       0.7,
+       1.64
+      ]
+     ],
+     "from": 2224,
+     "to": 2282,
+     "words": [
+      {
+       "w": "yang",
+       "from": 2224,
+       "to": 2230
+      },
+      {
+       "w": "menang",
+       "from": 2230,
+       "to": 2245
+      },
+      {
+       "w": "kelelawarnya",
+       "from": 2245,
+       "to": 2273
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

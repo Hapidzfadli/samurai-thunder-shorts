@@ -359,7 +359,7 @@ const BigTitle: React.FC<{ from: number; to: number }> = ({ from, to }) => {
   const o = interpolate(f, [to - 8, to], [1, 0], clamp);
   const word = "BOM KELELAWAR";
   return (
-    <div style={{ position: "absolute", top: 250, left: 0, right: 0, textAlign: "center", opacity: o }}>
+    <div style={{ position: "absolute", top: 110, left: 0, right: 0, textAlign: "center", opacity: o }}>
       <div>
         {word.split("").map((ch, i) => {
           const s = spring({ frame: f - from - i * 1.5, fps: 30, config: { damping: 8, stiffness: 260 } });
@@ -916,7 +916,7 @@ export const SceneKlTangki: React.FC = () => {
   const L0 = lineAt("tangki", 0), L1 = lineAt("tangki", 1);
   const itu = EV["tan.itu"], jg = EV["tan.jangan"], fire = EV["tan.jangan2"] + 12;
   const cam = shotCam(f, [
-    { to: itu + 6, p0: [-0.2, 1.6, 4.4], p1: [-0.3, 1.65, 4.0], l0: [0.1, 1.45, -0.5], l1: [0.3, 1.6, -1.0], fov: 36, fov1: 35 },
+    { to: itu + 10, p0: [-0.7, 1.6, 4.4], p1: [-0.6, 1.65, 4.0], l0: [-0.35, 1.45, -0.3], l1: [-0.1, 1.6, -1.0], fov: 36, fov1: 35 },
     { to: L1.from + 4, p0: [-0.3, 1.65, 4.0], p1: [-0.4, 2.2, 6.4], l0: [0.3, 1.6, -1.0], l1: [2.6, 3.0, -6.5], fov: 35, fov1: 38 },
     { to: fire, p0: [-0.4, 2.2, 6.4], p1: [0.6, 2.4, 3.0], l0: [2.6, 3.0, -6.5], l1: [3.6, 3.2, -7.5], fov: 38, fov1: 34 },
     { to: dur, p0: [0.0, 2.4, 6.5], p1: [-0.8, 2.8, 9.0], l0: [2.4, 2.6, -5.5], l1: [1.6, 2.8, -5], fov: 40, fov1: 46, ease: "out" },
