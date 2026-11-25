@@ -33,13 +33,13 @@ SEED_SPECS = {
         "src_ref": VDIR / "nadia_omara_khw_clean.wav",
         "ref_6s": SEED_DIR / "nadia_ref_6s_24k.wav",
         "seed_wav": SEED_DIR / "nadia_pocket_seed.wav",
-        "seed_text": "Hai wak, pernah nggak sih kalian denger cerita operasi penyelamatan paling nekat yang bikin seluruh dunia terpukau?",
+        "seed_text": "Hai wak, dengerin cerita operasi penyelamatan paling nekat ini.",
     },
     "sintong": {
         "src_ref": VDIR / "dodi_riko_clean.wav",
         "ref_6s": SEED_DIR / "sintong_ref_6s_24k.wav",
         "seed_wav": SEED_DIR / "sintong_pocket_seed.wav",
-        "seed_text": "Perhatian seluruh pasukan, periksa senjata dan radio masing-masing, kita bergerak serentak sesuai aba-aba komando.",
+        "seed_text": "Seluruh pasukan siap di posisi, tunggu aba-aba serbuan.",
     },
 }
 
@@ -107,7 +107,7 @@ def run_seeds():
     for spk, spec in SEED_SPECS.items():
         if not spec["ref_6s"].exists():
             y, sr = load_wav_raw(spec["src_ref"])
-            dur = min(6.2, len(y) / sr)
+            dur = min(4.2, len(y) / sr)
             seg = signal.resample(y[: int(dur * sr)], int(dur * 24000)).astype(np.float32)
             fade = int(0.03 * 24000)
             seg[:fade] *= np.linspace(0, 1, fade)
@@ -147,60 +147,100 @@ def run_seeds():
         print(f"[SEED OK] {spk}: score={best_sc:.3f} ({len(best_y)/tts.sample_rate:.2f}s) | {best_heard}", flush=True)
 
 
-def load_voxcpm2_lowram(max_len: int = 512):
+def load_voxcpm2_lowram(max_len: int = 384):
     from huggingface_hub import snapshot_download
     from safetensors import safe_open
     from transformers import LlamaTokenizerFast
     from voxcpm.core import VoxCPM
     from voxcpm.model.voxcpm2 import VoxCPM2Model, VoxCPMConfig
     from voxcpm.modules.audiovae import AudioVAEV2
+    from voxcpm.modules.minicpm4.model import MiniCPMLongRoPE
 
     local_path = Path(snapshot_download(repo_id="openbmb/VoxCPM2"))
     config = VoxCPMConfig.model_validate_json((local_path / "config.json").read_text(encoding="utf-8"))
     config.max_length = max_len
     tokenizer = LlamaTokenizerFast.from_pretrained(str(local_path))
 
+    print(f"[load 1/4] tokenizer & config ready | RSS={rss_mb():.0f}MB", flush=True)
     audio_vae_config = getattr(config, "audio_vae_config", None)
     audio_vae = AudioVAEV2(config=audio_vae_config) if audio_vae_config else AudioVAEV2()
     vae_ckpt = torch.load(str(local_path / "audiovae.pth"), map_location="cpu", weights_only=True)
     audio_vae.load_state_dict(vae_ckpt.get("state_dict", vae_ckpt), strict=False)
     del vae_ckpt
     gc.collect()
+    print(f"[load 2/4] AudioVAE ready | RSS={rss_mb():.0f}MB", flush=True)
 
     prev_dtype = torch.get_default_dtype()
     try:
         torch.set_default_dtype(torch.bfloat16)
-        model = VoxCPM2Model(config, tokenizer, audio_vae, None, device="cpu")
+        with torch.device("meta"):
+            model = VoxCPM2Model(config, tokenizer, audio_vae, None, device="cpu")
     finally:
         torch.set_default_dtype(prev_dtype)
-    model.audio_vae = model.audio_vae.to(torch.float32)
+    model.audio_vae = audio_vae.to(torch.float32)
+    print(f"[load 3/4] VoxCPM2Model meta skeleton ready | RSS={rss_mb():.0f}MB", flush=True)
 
     st_path = str(local_path / "model.safetensors")
-    state_map = dict(model.named_parameters())
-    state_map.update(dict(model.named_buffers()))
     loaded = 0
-    with safe_open(st_path, framework="pt", device="cpu") as sf:
-        with torch.no_grad():
-            for k in sf.keys():
-                if k in state_map:
-                    t = sf.get_tensor(k)
-                    state_map[k].copy_(t)
-                    del t
-                    loaded += 1
-    del state_map
-    gc.collect()
+    fd_adv = os.open(st_path, os.O_RDONLY)
     try:
-        fd = os.open(st_path, os.O_RDONLY)
-        os.posix_fadvise(fd, 0, 0, os.POSIX_FADV_DONTNEED)
-        os.close(fd)
-    except Exception:
-        pass
+        with safe_open(st_path, framework="pt", device="cpu") as sf:
+            for k in sf.keys():
+                parts = k.split(".")
+                mod = model
+                ok = True
+                for p in parts[:-1]:
+                    if hasattr(mod, p):
+                        mod = getattr(mod, p)
+                    else:
+                        ok = False
+                        break
+                if not ok:
+                    continue
+                leaf = parts[-1]
+                t = sf.get_tensor(k)
+                if leaf in mod._parameters:
+                    mod._parameters[leaf] = torch.nn.Parameter(t.to(torch.bfloat16).clone(), requires_grad=False)
+                    loaded += 1
+                elif leaf in mod._buffers:
+                    mod._buffers[leaf] = t.to(torch.bfloat16).clone()
+                    loaded += 1
+                del t
+                if loaded % 25 == 0:
+                    try:
+                        os.posix_fadvise(fd_adv, 0, 0, os.POSIX_FADV_DONTNEED)
+                    except Exception:
+                        pass
+    finally:
+        try:
+            os.posix_fadvise(fd_adv, 0, 0, os.POSIX_FADV_DONTNEED)
+        except Exception:
+            pass
+        os.close(fd_adv)
+
+    for m in model.modules():
+        if isinstance(m, MiniCPMLongRoPE):
+            inv_freq = 1.0 / (m.base ** (torch.arange(0, m.dim, 2).float() / m.dim))
+            m.register_buffer("inv_freq", inv_freq, persistent=False)
+            m._set_cos_sin_cache(seq_len=m.max_position_embeddings, device="cpu", dtype=torch.float32)
+
+    # Ensure KV caches and any remaining non-persistent buffers are materialized on CPU
+    model.base_lm.setup_cache(1, config.max_length, "cpu", torch.bfloat16)
+    model.residual_lm.setup_cache(1, config.max_length, "cpu", torch.bfloat16)
+    meta_left = [
+        n for n, t in list(model.named_parameters()) + list(model.named_buffers())
+        if t is not None and t.device.type == "meta"
+    ]
+    if meta_left:
+        print(f"[load warn] meta tensors remaining: {meta_left}", flush=True)
+
+    gc.collect()
     try:
         ctypes.CDLL("libc.so.6").malloc_trim(0)
     except Exception:
         pass
     model.eval()
-    print(f"Loaded VoxCPM2 ({loaded} tensors) | VmRSS={rss_mb():.0f} MB", flush=True)
+    print(f"[load 4/4] Loaded VoxCPM2 ({loaded} tensors) | VmRSS={rss_mb():.0f} MB", flush=True)
     wrapper = VoxCPM.__new__(VoxCPM)
     wrapper.tts_model = model
     wrapper.text_normalizer = None

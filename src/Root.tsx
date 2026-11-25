@@ -65,10 +65,12 @@ import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
 import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
 import { SheetWoylaKarakter, SheetWoylaProperti } from "./SheetWoyla";
 import { ThumbWoylaShorts, ThumbWoylaYoutube } from "./ThumbWoyla";
+import { TOTAL_FRAMES_WOYLA, Woyla } from "./Woyla";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Woyla" component={Woyla} durationInFrames={TOTAL_FRAMES_WOYLA} fps={30} width={1080} height={1920} />
       <Composition id="SheetWoylaKarakter" component={SheetWoylaKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetWoylaProperti" component={SheetWoylaProperti} durationInFrames={1} fps={30} width={2000} height={1440} />
       <Composition id="ThumbWoylaShorts" component={ThumbWoylaShorts} durationInFrames={1} fps={30} width={1080} height={1920} />

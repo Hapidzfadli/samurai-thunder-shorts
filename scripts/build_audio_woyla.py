@@ -47,37 +47,37 @@ TIMING_JSON = ROOT / "src" / "woyla_timing.json"
 OUT_MP3 = ROOT / "public" / "audio" / "woyla_master.mp3"
 
 SCENE_CFG = {
-    "hook": dict(pre=0.35, post=0.38, gaps=[0.0]),
-    "krisis": dict(pre=0.30, post=0.38, gaps=[0.0, 0.16]),
-    "briefing": dict(pre=0.30, post=0.36, gaps=[0.0, 0.16]),
-    "susup": dict(pre=0.34, post=0.34, gaps=[0.0]),
+    "hook": dict(pre=0.35, post=0.35, gaps=[0.0, 0.14]),
+    "krisis": dict(pre=0.30, post=0.35, gaps=[0.0, 0.14, 0.16]),
+    "briefing": dict(pre=0.30, post=0.34, gaps=[0.0, 0.15]),
+    "susup": dict(pre=0.32, post=0.32, gaps=[0.0, 0.14]),
     "ababa": dict(pre=0.28, post=1.18, gaps=[0.0]),
-    "klimaks": dict(pre=1.42, post=0.52, gaps=[0.0, 0.34]),
-    "evakuasi": dict(pre=0.32, post=0.45, gaps=[0.0]),
-    "epilog": dict(pre=0.35, post=1.95, gaps=[0.0]),
+    "klimaks": dict(pre=1.42, post=0.48, gaps=[0.0, 0.28]),
+    "evakuasi": dict(pre=0.30, post=0.40, gaps=[0.0, 0.14]),
+    "epilog": dict(pre=0.32, post=1.85, gaps=[0.0, 0.18]),
 }
 
 LINE_IDS = {
-    "hook": ["h1"],
-    "krisis": ["k1", "k2"],
+    "hook": ["h1", "h2"],
+    "krisis": ["k1", "k2", "k3"],
     "briefing": ["b1", "b2"],
-    "susup": ["s1"],
+    "susup": ["s1", "s2"],
     "ababa": ["a1"],
     "klimaks": ["c1", "c2"],
-    "evakuasi": ["e1"],
-    "epilog": ["p1"],
+    "evakuasi": ["e1", "e2"],
+    "epilog": ["p1", "p2"],
 }
 
 EVENTS = {
     "hook.bang": ("hook", 0, "garuda", -2),
-    "hook.menit": ("hook", 0, "tiga", -2),
+    "hook.menit": ("hook", 1, "tiga", -2),
     "krisis.dibajak": ("krisis", 0, "dibajak", -2),
-    "krisis.kokpit": ("krisis", 1, "herman", -2),
+    "krisis.kokpit": ("krisis", 2, "herman", -2),
     "briefing.tiga": ("briefing", 0, "tiga", -2),
     "briefing.merah": ("briefing", 1, "merah", -2),
     "briefing.hijau": ("briefing", 1, "hijau", -2),
     "susup.hujan": ("susup", 0, "hujan", -2),
-    "susup.merayap": ("susup", 0, "merayap", -2),
+    "susup.merayap": ("susup", 1, "merayap", -2),
     "ababa.laksanakan": ("ababa", 0, "laksanakan", -2),
     "ababa.pin_pull": ("ababa", 0, "END", 2),
     "ababa.sub_drop": ("ababa", 0, "END", 12),
@@ -86,9 +86,9 @@ EVENTS = {
     "klimaks.bullettime": ("klimaks", 0, "START", -6),
     "klimaks.peluru": ("klimaks", 1, "peluru", -2),
     "evakuasi.timer": ("evakuasi", 0, "menit", -2),
-    "evakuasi.selamat": ("evakuasi", 0, "selamat", -2),
+    "evakuasi.selamat": ("evakuasi", 1, "selamat", -2),
     "epilog.gugur": ("epilog", 0, "kirang", -2),
-    "epilog.gultor": ("epilog", 0, "gultor", -2),
+    "epilog.gultor": ("epilog", 1, "gultor", -2),
 }
 
 HIGHLIGHTS = {
@@ -335,7 +335,7 @@ def build_woyla_score(total: float, t_susup: float, t_subdrop: float, t_breach: 
     put(mus, inst_cinema_string(midi_hz(62), 2.2), max(0.0, total - 2.4), 0.22, 0.3)
     put(mus, inst_french_horn(midi_hz(66), 2.0), max(0.0, total - 2.2), 0.28, 0.0)
 
-    return mus[: int(SR * total)]
+    return mus
 
 
 def build_captions(words_glob: list[dict]) -> list[dict]:

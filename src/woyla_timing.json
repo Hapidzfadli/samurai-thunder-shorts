@@ -1,0 +1,1221 @@
+{
+  "fps": 30,
+  "totalDurationSec": 87.633,
+  "totalFrames": 2629,
+  "order": [
+    "hook",
+    "krisis",
+    "briefing",
+    "susup",
+    "ababa",
+    "klimaks",
+    "evakuasi",
+    "epilog"
+  ],
+  "scenes": {
+    "hook": {
+      "startSec": 0.0,
+      "endSec": 8.2,
+      "startFrame": 0,
+      "durationInFrames": 246
+    },
+    "krisis": {
+      "startSec": 8.2,
+      "endSec": 24.2,
+      "startFrame": 246,
+      "durationInFrames": 480
+    },
+    "briefing": {
+      "startSec": 24.2,
+      "endSec": 37.067,
+      "startFrame": 726,
+      "durationInFrames": 386
+    },
+    "susup": {
+      "startSec": 37.067,
+      "endSec": 46.8,
+      "startFrame": 1112,
+      "durationInFrames": 292
+    },
+    "ababa": {
+      "startSec": 46.8,
+      "endSec": 52.1,
+      "startFrame": 1404,
+      "durationInFrames": 159
+    },
+    "klimaks": {
+      "startSec": 52.1,
+      "endSec": 66.933,
+      "startFrame": 1563,
+      "durationInFrames": 445
+    },
+    "evakuasi": {
+      "startSec": 66.933,
+      "endSec": 75.933,
+      "startFrame": 2008,
+      "durationInFrames": 270
+    },
+    "epilog": {
+      "startSec": 75.933,
+      "endSec": 87.633,
+      "startFrame": 2278,
+      "durationInFrames": 351
+    }
+  },
+  "lines": {
+    "h1": {
+      "scene": "hook",
+      "speaker": "nadia",
+      "emotion": "hook",
+      "text": "Hai wak! Empat puluh delapan penumpang Garuda disandera empat hari di Bangkok.",
+      "startSec": 0.35,
+      "endSec": 4.19,
+      "from": 10,
+      "to": 126,
+      "globalFrom": 10,
+      "globalTo": 126
+    },
+    "h2": {
+      "scene": "hook",
+      "speaker": "nadia",
+      "emotion": "hook",
+      "text": "Tapi pasukan khusus Indonesia menuntaskannya kurang dari tiga menit!",
+      "startSec": 4.33,
+      "endSec": 7.85,
+      "from": 130,
+      "to": 236,
+      "globalFrom": 130,
+      "globalTo": 236
+    },
+    "k1": {
+      "scene": "krisis",
+      "speaker": "nadia",
+      "emotion": "tegang",
+      "text": "Dua puluh delapan Maret seribu sembilan ratus delapan puluh satu, pesawat Garuda Woyla dibajak lima pria bersenjata.",
+      "startSec": 8.5,
+      "endSec": 14.02,
+      "from": 9,
+      "to": 175,
+      "globalFrom": 255,
+      "globalTo": 421
+    },
+    "k2": {
+      "scene": "krisis",
+      "speaker": "nadia",
+      "emotion": "tegang",
+      "text": "Pesawat dipaksa mendarat di Bandara Don Mueang, sementara para sandera hanya bisa menunduk ketakutan.",
+      "startSec": 14.16,
+      "endSec": 18.56,
+      "from": 179,
+      "to": 311,
+      "globalFrom": 425,
+      "globalTo": 557
+    },
+    "k3": {
+      "scene": "krisis",
+      "speaker": "nadia",
+      "emotion": "haru",
+      "text": "Di depan kokpit yang pengap, Kapten Herman Rante berdiri tegar melindungi awak dan seluruh penumpangnya.",
+      "startSec": 18.72,
+      "endSec": 23.84,
+      "from": 316,
+      "to": 469,
+      "globalFrom": 562,
+      "globalTo": 715
+    },
+    "b1": {
+      "scene": "briefing",
+      "speaker": "nadia",
+      "emotion": "taktis",
+      "text": "Dari Jakarta, tiga puluh lima prajurit Kopassandha pimpinan Letkol Sintong Panjaitan terbang rahasia menyusun serbuan tiga arah.",
+      "startSec": 24.5,
+      "endSec": 30.98,
+      "from": 9,
+      "to": 203,
+      "globalFrom": 735,
+      "globalTo": 929
+    },
+    "b2": {
+      "scene": "briefing",
+      "speaker": "nadia",
+      "emotion": "taktis",
+      "text": "Tim Merah dan Tim Biru memanjat sayap ke pintu darurat, sementara Tim Hijau menyusup lewat tangga ekor.",
+      "startSec": 31.13,
+      "endSec": 36.73,
+      "from": 208,
+      "to": 376,
+      "globalFrom": 934,
+      "globalTo": 1102
+    },
+    "s1": {
+      "scene": "susup",
+      "speaker": "nadia",
+      "emotion": "bisik",
+      "text": "Dini hari tiga puluh satu Maret pukul dua lewat empat puluh lima, hujan gelap mengguyur landasan.",
+      "startSec": 37.387,
+      "endSec": 42.587,
+      "from": 10,
+      "to": 166,
+      "globalFrom": 1122,
+      "globalTo": 1278
+    },
+    "s2": {
+      "scene": "susup",
+      "speaker": "nadia",
+      "emotion": "bisik",
+      "text": "Para prajurit merayap senyap menempel di badan pesawat tanpa satu pun suara.",
+      "startSec": 42.727,
+      "endSec": 46.487,
+      "from": 170,
+      "to": 283,
+      "globalFrom": 1282,
+      "globalTo": 1395
+    },
+    "a1": {
+      "scene": "ababa",
+      "speaker": "sintong",
+      "emotion": "radio",
+      "text": "Semua tim, posisi siap di pintu masing-masing! Tiga, dua, satu, laksanakan!",
+      "startSec": 47.08,
+      "endSec": 50.92,
+      "from": 8,
+      "to": 124,
+      "globalFrom": 1412,
+      "globalTo": 1528
+    },
+    "c1": {
+      "scene": "klimaks",
+      "speaker": "nadia",
+      "emotion": "klimaks",
+      "text": "Pin granat kejut dicabut, ketiga pintu didobrak serentak, dan ledakan cahaya putih menyilaukan melumpuhkan para pembajak!",
+      "startSec": 53.52,
+      "endSec": 59.44,
+      "from": 43,
+      "to": 220,
+      "globalFrom": 1606,
+      "globalTo": 1783
+    },
+    "c2": {
+      "scene": "klimaks",
+      "speaker": "nadia",
+      "emotion": "klimaks",
+      "text": "Di tengah hujan peluru yang seakan membeku di udara, prajurit Kopassandha menerjang mengamankan kokpit dan melindungi sandera!",
+      "startSec": 59.72,
+      "endSec": 66.44,
+      "from": 229,
+      "to": 430,
+      "globalFrom": 1792,
+      "globalTo": 1993
+    },
+    "e1": {
+      "scene": "evakuasi",
+      "speaker": "nadia",
+      "emotion": "heroik",
+      "text": "Hanya dalam dua menit lima puluh delapan detik, seluruh pembajak berhasil dilumpuhkan.",
+      "startSec": 67.233,
+      "endSec": 71.713,
+      "from": 9,
+      "to": 143,
+      "globalFrom": 2017,
+      "globalTo": 2151
+    },
+    "e2": {
+      "scene": "evakuasi",
+      "speaker": "nadia",
+      "emotion": "heroik",
+      "text": "Semua penumpang sipil berlari turun tangga darurat dalam keadaan selamat!",
+      "startSec": 71.853,
+      "endSec": 75.533,
+      "from": 148,
+      "to": 258,
+      "globalFrom": 2156,
+      "globalTo": 2266
+    },
+    "p1": {
+      "scene": "epilog",
+      "speaker": "nadia",
+      "emotion": "tribute",
+      "text": "Kemenangan ini dibayar mahal oleh gugurnya Peltu Achmad Kirang dan Kapten Herman Rante.",
+      "startSec": 76.253,
+      "endSec": 81.053,
+      "from": 10,
+      "to": 154,
+      "globalFrom": 2288,
+      "globalTo": 2432
+    },
+    "p2": {
+      "scene": "epilog",
+      "speaker": "nadia",
+      "emotion": "tribute",
+      "text": "Operasi Woyla mengguncang dunia dan melahirkan Satuan delapan puluh satu Gultor Kopassus!",
+      "startSec": 81.233,
+      "endSec": 85.793,
+      "from": 159,
+      "to": 296,
+      "globalFrom": 2437,
+      "globalTo": 2574
+    }
+  },
+  "events": {
+    "hook.bang": 74,
+    "hook.menit": 199,
+    "krisis.dibajak": 146,
+    "krisis.kokpit": 366,
+    "briefing.tiga": 29,
+    "briefing.merah": 216,
+    "briefing.hijau": 323,
+    "susup.hujan": 107,
+    "susup.merayap": 191,
+    "ababa.laksanakan": 100,
+    "ababa.pin_pull": 126,
+    "ababa.sub_drop": 136,
+    "klimaks.breach": 3,
+    "klimaks.flashbang": 13,
+    "klimaks.bullettime": 37,
+    "klimaks.peluru": 244,
+    "evakuasi.timer": 21,
+    "evakuasi.selamat": 244,
+    "epilog.gugur": 88,
+    "epilog.gultor": 272
+  },
+  "captions": [
+    {
+      "text": "Hai wak!",
+      "speaker": "nadia",
+      "from": 10,
+      "to": 22,
+      "emph": false
+    },
+    {
+      "text": "Empat puluh",
+      "speaker": "nadia",
+      "from": 22,
+      "to": 50,
+      "emph": false
+    },
+    {
+      "text": "delapan",
+      "speaker": "nadia",
+      "from": 50,
+      "to": 63,
+      "emph": false
+    },
+    {
+      "text": "penumpang",
+      "speaker": "nadia",
+      "from": 63,
+      "to": 76,
+      "emph": false
+    },
+    {
+      "text": "Garuda",
+      "speaker": "nadia",
+      "from": 76,
+      "to": 85,
+      "emph": true
+    },
+    {
+      "text": "disandera empat",
+      "speaker": "nadia",
+      "from": 85,
+      "to": 107,
+      "emph": false
+    },
+    {
+      "text": "hari di",
+      "speaker": "nadia",
+      "from": 107,
+      "to": 113,
+      "emph": false
+    },
+    {
+      "text": "Bangkok.",
+      "speaker": "nadia",
+      "from": 113,
+      "to": 118,
+      "emph": true
+    },
+    {
+      "text": "Tapi pasukan",
+      "speaker": "nadia",
+      "from": 130,
+      "to": 147,
+      "emph": false
+    },
+    {
+      "text": "khusus",
+      "speaker": "nadia",
+      "from": 147,
+      "to": 155,
+      "emph": false
+    },
+    {
+      "text": "Indonesia",
+      "speaker": "nadia",
+      "from": 155,
+      "to": 163,
+      "emph": false
+    },
+    {
+      "text": "menuntaskannya",
+      "speaker": "nadia",
+      "from": 163,
+      "to": 186,
+      "emph": false
+    },
+    {
+      "text": "kurang dari",
+      "speaker": "nadia",
+      "from": 186,
+      "to": 201,
+      "emph": false
+    },
+    {
+      "text": "tiga menit!",
+      "speaker": "nadia",
+      "from": 201,
+      "to": 223,
+      "emph": true
+    },
+    {
+      "text": "Dua puluh",
+      "speaker": "nadia",
+      "from": 255,
+      "to": 278,
+      "emph": false
+    },
+    {
+      "text": "delapan Maret",
+      "speaker": "nadia",
+      "from": 278,
+      "to": 313,
+      "emph": false
+    },
+    {
+      "text": "seribu sembilan",
+      "speaker": "nadia",
+      "from": 313,
+      "to": 349,
+      "emph": false
+    },
+    {
+      "text": "ratus delapan",
+      "speaker": "nadia",
+      "from": 349,
+      "to": 364,
+      "emph": false
+    },
+    {
+      "text": "puluh satu,",
+      "speaker": "nadia",
+      "from": 364,
+      "to": 373,
+      "emph": false
+    },
+    {
+      "text": "pesawat Garuda",
+      "speaker": "nadia",
+      "from": 373,
+      "to": 388,
+      "emph": true
+    },
+    {
+      "text": "Woyla dibajak",
+      "speaker": "nadia",
+      "from": 388,
+      "to": 401,
+      "emph": true
+    },
+    {
+      "text": "lima pria",
+      "speaker": "nadia",
+      "from": 401,
+      "to": 407,
+      "emph": false
+    },
+    {
+      "text": "bersenjata.",
+      "speaker": "nadia",
+      "from": 407,
+      "to": 415,
+      "emph": false
+    },
+    {
+      "text": "Pesawat dipaksa",
+      "speaker": "nadia",
+      "from": 425,
+      "to": 450,
+      "emph": false
+    },
+    {
+      "text": "mendarat di",
+      "speaker": "nadia",
+      "from": 450,
+      "to": 462,
+      "emph": false
+    },
+    {
+      "text": "Bandara Don",
+      "speaker": "nadia",
+      "from": 462,
+      "to": 476,
+      "emph": false
+    },
+    {
+      "text": "Mueang,",
+      "speaker": "nadia",
+      "from": 476,
+      "to": 488,
+      "emph": false
+    },
+    {
+      "text": "sementara para",
+      "speaker": "nadia",
+      "from": 488,
+      "to": 504,
+      "emph": false
+    },
+    {
+      "text": "sandera hanya",
+      "speaker": "nadia",
+      "from": 504,
+      "to": 522,
+      "emph": true
+    },
+    {
+      "text": "bisa menunduk",
+      "speaker": "nadia",
+      "from": 522,
+      "to": 539,
+      "emph": false
+    },
+    {
+      "text": "ketakutan.",
+      "speaker": "nadia",
+      "from": 539,
+      "to": 553,
+      "emph": false
+    },
+    {
+      "text": "Di depan",
+      "speaker": "nadia",
+      "from": 562,
+      "to": 579,
+      "emph": false
+    },
+    {
+      "text": "kokpit yang",
+      "speaker": "nadia",
+      "from": 579,
+      "to": 595,
+      "emph": true
+    },
+    {
+      "text": "pengap,",
+      "speaker": "nadia",
+      "from": 595,
+      "to": 605,
+      "emph": false
+    },
+    {
+      "text": "Kapten Herman",
+      "speaker": "nadia",
+      "from": 605,
+      "to": 623,
+      "emph": true
+    },
+    {
+      "text": "Rante berdiri",
+      "speaker": "nadia",
+      "from": 623,
+      "to": 650,
+      "emph": false
+    },
+    {
+      "text": "tegar",
+      "speaker": "nadia",
+      "from": 650,
+      "to": 658,
+      "emph": false
+    },
+    {
+      "text": "melindungi awak",
+      "speaker": "nadia",
+      "from": 658,
+      "to": 681,
+      "emph": false
+    },
+    {
+      "text": "dan seluruh",
+      "speaker": "nadia",
+      "from": 681,
+      "to": 696,
+      "emph": false
+    },
+    {
+      "text": "penumpangnya.",
+      "speaker": "nadia",
+      "from": 696,
+      "to": 712,
+      "emph": false
+    },
+    {
+      "text": "Dari Jakarta,",
+      "speaker": "nadia",
+      "from": 735,
+      "to": 757,
+      "emph": false
+    },
+    {
+      "text": "tiga puluh",
+      "speaker": "nadia",
+      "from": 757,
+      "to": 783,
+      "emph": true
+    },
+    {
+      "text": "lima prajurit",
+      "speaker": "nadia",
+      "from": 783,
+      "to": 805,
+      "emph": false
+    },
+    {
+      "text": "Kopassandha",
+      "speaker": "nadia",
+      "from": 805,
+      "to": 831,
+      "emph": true
+    },
+    {
+      "text": "pimpinan Letkol",
+      "speaker": "nadia",
+      "from": 831,
+      "to": 850,
+      "emph": false
+    },
+    {
+      "text": "Sintong",
+      "speaker": "nadia",
+      "from": 850,
+      "to": 861,
+      "emph": true
+    },
+    {
+      "text": "Panjaitan",
+      "speaker": "nadia",
+      "from": 861,
+      "to": 875,
+      "emph": false
+    },
+    {
+      "text": "terbang rahasia",
+      "speaker": "nadia",
+      "from": 875,
+      "to": 894,
+      "emph": false
+    },
+    {
+      "text": "menyusun",
+      "speaker": "nadia",
+      "from": 894,
+      "to": 903,
+      "emph": false
+    },
+    {
+      "text": "serbuan tiga",
+      "speaker": "nadia",
+      "from": 903,
+      "to": 920,
+      "emph": true
+    },
+    {
+      "text": "arah.",
+      "speaker": "nadia",
+      "from": 920,
+      "to": 929,
+      "emph": false
+    },
+    {
+      "text": "Tim Merah",
+      "speaker": "nadia",
+      "from": 934,
+      "to": 953,
+      "emph": true
+    },
+    {
+      "text": "dan Tim",
+      "speaker": "nadia",
+      "from": 953,
+      "to": 964,
+      "emph": false
+    },
+    {
+      "text": "Biru memanjat",
+      "speaker": "nadia",
+      "from": 964,
+      "to": 993,
+      "emph": true
+    },
+    {
+      "text": "sayap ke",
+      "speaker": "nadia",
+      "from": 993,
+      "to": 1008,
+      "emph": false
+    },
+    {
+      "text": "pintu darurat,",
+      "speaker": "nadia",
+      "from": 1008,
+      "to": 1030,
+      "emph": false
+    },
+    {
+      "text": "sementara Tim",
+      "speaker": "nadia",
+      "from": 1030,
+      "to": 1051,
+      "emph": false
+    },
+    {
+      "text": "Hijau menyusup",
+      "speaker": "nadia",
+      "from": 1051,
+      "to": 1072,
+      "emph": true
+    },
+    {
+      "text": "lewat tangga",
+      "speaker": "nadia",
+      "from": 1072,
+      "to": 1089,
+      "emph": false
+    },
+    {
+      "text": "ekor.",
+      "speaker": "nadia",
+      "from": 1089,
+      "to": 1099,
+      "emph": false
+    },
+    {
+      "text": "Dini hari",
+      "speaker": "nadia",
+      "from": 1122,
+      "to": 1127,
+      "emph": false
+    },
+    {
+      "text": "tiga puluh",
+      "speaker": "nadia",
+      "from": 1127,
+      "to": 1145,
+      "emph": true
+    },
+    {
+      "text": "satu Maret",
+      "speaker": "nadia",
+      "from": 1145,
+      "to": 1163,
+      "emph": false
+    },
+    {
+      "text": "pukul dua",
+      "speaker": "nadia",
+      "from": 1163,
+      "to": 1177,
+      "emph": false
+    },
+    {
+      "text": "lewat empat",
+      "speaker": "nadia",
+      "from": 1177,
+      "to": 1199,
+      "emph": false
+    },
+    {
+      "text": "puluh lima,",
+      "speaker": "nadia",
+      "from": 1199,
+      "to": 1221,
+      "emph": false
+    },
+    {
+      "text": "hujan gelap",
+      "speaker": "nadia",
+      "from": 1221,
+      "to": 1244,
+      "emph": true
+    },
+    {
+      "text": "mengguyur",
+      "speaker": "nadia",
+      "from": 1244,
+      "to": 1257,
+      "emph": false
+    },
+    {
+      "text": "landasan.",
+      "speaker": "nadia",
+      "from": 1257,
+      "to": 1273,
+      "emph": false
+    },
+    {
+      "text": "Para prajurit",
+      "speaker": "nadia",
+      "from": 1282,
+      "to": 1305,
+      "emph": false
+    },
+    {
+      "text": "merayap senyap",
+      "speaker": "nadia",
+      "from": 1305,
+      "to": 1325,
+      "emph": true
+    },
+    {
+      "text": "menempel di",
+      "speaker": "nadia",
+      "from": 1325,
+      "to": 1343,
+      "emph": false
+    },
+    {
+      "text": "badan pesawat",
+      "speaker": "nadia",
+      "from": 1343,
+      "to": 1361,
+      "emph": false
+    },
+    {
+      "text": "tanpa satu",
+      "speaker": "nadia",
+      "from": 1361,
+      "to": 1377,
+      "emph": false
+    },
+    {
+      "text": "pun suara.",
+      "speaker": "nadia",
+      "from": 1377,
+      "to": 1392,
+      "emph": false
+    },
+    {
+      "text": "Semua tim,",
+      "speaker": "sintong",
+      "from": 1412,
+      "to": 1430,
+      "emph": false
+    },
+    {
+      "text": "posisi siap",
+      "speaker": "sintong",
+      "from": 1430,
+      "to": 1454,
+      "emph": false
+    },
+    {
+      "text": "di pintu",
+      "speaker": "sintong",
+      "from": 1454,
+      "to": 1465,
+      "emph": false
+    },
+    {
+      "text": "masing-masing!",
+      "speaker": "sintong",
+      "from": 1465,
+      "to": 1478,
+      "emph": false
+    },
+    {
+      "text": "Tiga,",
+      "speaker": "sintong",
+      "from": 1478,
+      "to": 1492,
+      "emph": true
+    },
+    {
+      "text": "dua,",
+      "speaker": "sintong",
+      "from": 1492,
+      "to": 1499,
+      "emph": false
+    },
+    {
+      "text": "satu,",
+      "speaker": "sintong",
+      "from": 1499,
+      "to": 1506,
+      "emph": false
+    },
+    {
+      "text": "laksanakan!",
+      "speaker": "sintong",
+      "from": 1506,
+      "to": 1519,
+      "emph": true
+    },
+    {
+      "text": "Pin granat",
+      "speaker": "nadia",
+      "from": 1606,
+      "to": 1623,
+      "emph": true
+    },
+    {
+      "text": "kejut dicabut,",
+      "speaker": "nadia",
+      "from": 1623,
+      "to": 1656,
+      "emph": false
+    },
+    {
+      "text": "ketiga pintu",
+      "speaker": "nadia",
+      "from": 1656,
+      "to": 1680,
+      "emph": false
+    },
+    {
+      "text": "didobrak",
+      "speaker": "nadia",
+      "from": 1680,
+      "to": 1693,
+      "emph": true
+    },
+    {
+      "text": "serentak,",
+      "speaker": "nadia",
+      "from": 1693,
+      "to": 1705,
+      "emph": false
+    },
+    {
+      "text": "dan ledakan",
+      "speaker": "nadia",
+      "from": 1705,
+      "to": 1720,
+      "emph": true
+    },
+    {
+      "text": "cahaya putih",
+      "speaker": "nadia",
+      "from": 1720,
+      "to": 1736,
+      "emph": true
+    },
+    {
+      "text": "menyilaukan",
+      "speaker": "nadia",
+      "from": 1736,
+      "to": 1749,
+      "emph": false
+    },
+    {
+      "text": "melumpuhkan",
+      "speaker": "nadia",
+      "from": 1749,
+      "to": 1763,
+      "emph": false
+    },
+    {
+      "text": "para pembajak!",
+      "speaker": "nadia",
+      "from": 1763,
+      "to": 1782,
+      "emph": false
+    },
+    {
+      "text": "Di tengah",
+      "speaker": "nadia",
+      "from": 1792,
+      "to": 1803,
+      "emph": false
+    },
+    {
+      "text": "hujan peluru",
+      "speaker": "nadia",
+      "from": 1803,
+      "to": 1818,
+      "emph": true
+    },
+    {
+      "text": "yang seakan",
+      "speaker": "nadia",
+      "from": 1818,
+      "to": 1832,
+      "emph": false
+    },
+    {
+      "text": "membeku di",
+      "speaker": "nadia",
+      "from": 1832,
+      "to": 1852,
+      "emph": true
+    },
+    {
+      "text": "udara,",
+      "speaker": "nadia",
+      "from": 1852,
+      "to": 1864,
+      "emph": false
+    },
+    {
+      "text": "prajurit",
+      "speaker": "nadia",
+      "from": 1864,
+      "to": 1889,
+      "emph": false
+    },
+    {
+      "text": "Kopassandha",
+      "speaker": "nadia",
+      "from": 1889,
+      "to": 1911,
+      "emph": true
+    },
+    {
+      "text": "menerjang",
+      "speaker": "nadia",
+      "from": 1911,
+      "to": 1925,
+      "emph": false
+    },
+    {
+      "text": "mengamankan",
+      "speaker": "nadia",
+      "from": 1925,
+      "to": 1943,
+      "emph": false
+    },
+    {
+      "text": "kokpit dan",
+      "speaker": "nadia",
+      "from": 1943,
+      "to": 1965,
+      "emph": true
+    },
+    {
+      "text": "melindungi",
+      "speaker": "nadia",
+      "from": 1965,
+      "to": 1980,
+      "emph": false
+    },
+    {
+      "text": "sandera!",
+      "speaker": "nadia",
+      "from": 1980,
+      "to": 1991,
+      "emph": true
+    },
+    {
+      "text": "Hanya dalam",
+      "speaker": "nadia",
+      "from": 2017,
+      "to": 2027,
+      "emph": false
+    },
+    {
+      "text": "dua menit",
+      "speaker": "nadia",
+      "from": 2027,
+      "to": 2049,
+      "emph": true
+    },
+    {
+      "text": "lima puluh",
+      "speaker": "nadia",
+      "from": 2049,
+      "to": 2085,
+      "emph": false
+    },
+    {
+      "text": "delapan detik,",
+      "speaker": "nadia",
+      "from": 2085,
+      "to": 2106,
+      "emph": false
+    },
+    {
+      "text": "seluruh",
+      "speaker": "nadia",
+      "from": 2106,
+      "to": 2114,
+      "emph": false
+    },
+    {
+      "text": "pembajak",
+      "speaker": "nadia",
+      "from": 2114,
+      "to": 2124,
+      "emph": false
+    },
+    {
+      "text": "berhasil",
+      "speaker": "nadia",
+      "from": 2124,
+      "to": 2134,
+      "emph": false
+    },
+    {
+      "text": "dilumpuhkan.",
+      "speaker": "nadia",
+      "from": 2134,
+      "to": 2147,
+      "emph": false
+    },
+    {
+      "text": "Semua penumpang",
+      "speaker": "nadia",
+      "from": 2156,
+      "to": 2178,
+      "emph": false
+    },
+    {
+      "text": "sipil berlari",
+      "speaker": "nadia",
+      "from": 2178,
+      "to": 2211,
+      "emph": false
+    },
+    {
+      "text": "turun tangga",
+      "speaker": "nadia",
+      "from": 2211,
+      "to": 2228,
+      "emph": false
+    },
+    {
+      "text": "darurat dalam",
+      "speaker": "nadia",
+      "from": 2228,
+      "to": 2242,
+      "emph": false
+    },
+    {
+      "text": "keadaan",
+      "speaker": "nadia",
+      "from": 2242,
+      "to": 2254,
+      "emph": false
+    },
+    {
+      "text": "selamat!",
+      "speaker": "nadia",
+      "from": 2254,
+      "to": 2262,
+      "emph": true
+    },
+    {
+      "text": "Kemenangan ini",
+      "speaker": "nadia",
+      "from": 2288,
+      "to": 2300,
+      "emph": false
+    },
+    {
+      "text": "dibayar mahal",
+      "speaker": "nadia",
+      "from": 2300,
+      "to": 2319,
+      "emph": false
+    },
+    {
+      "text": "oleh gugurnya",
+      "speaker": "nadia",
+      "from": 2319,
+      "to": 2338,
+      "emph": false
+    },
+    {
+      "text": "Peltu Achmad",
+      "speaker": "nadia",
+      "from": 2338,
+      "to": 2368,
+      "emph": false
+    },
+    {
+      "text": "Kirang dan",
+      "speaker": "nadia",
+      "from": 2368,
+      "to": 2391,
+      "emph": true
+    },
+    {
+      "text": "Kapten Herman",
+      "speaker": "nadia",
+      "from": 2391,
+      "to": 2417,
+      "emph": true
+    },
+    {
+      "text": "Rante.",
+      "speaker": "nadia",
+      "from": 2417,
+      "to": 2428,
+      "emph": false
+    },
+    {
+      "text": "Operasi Woyla",
+      "speaker": "nadia",
+      "from": 2437,
+      "to": 2454,
+      "emph": true
+    },
+    {
+      "text": "mengguncang",
+      "speaker": "nadia",
+      "from": 2454,
+      "to": 2472,
+      "emph": false
+    },
+    {
+      "text": "dunia dan",
+      "speaker": "nadia",
+      "from": 2472,
+      "to": 2484,
+      "emph": false
+    },
+    {
+      "text": "melahirkan",
+      "speaker": "nadia",
+      "from": 2484,
+      "to": 2500,
+      "emph": false
+    },
+    {
+      "text": "Satuan delapan",
+      "speaker": "nadia",
+      "from": 2500,
+      "to": 2513,
+      "emph": false
+    },
+    {
+      "text": "puluh satu",
+      "speaker": "nadia",
+      "from": 2513,
+      "to": 2552,
+      "emph": false
+    },
+    {
+      "text": "Gultor",
+      "speaker": "nadia",
+      "from": 2552,
+      "to": 2560,
+      "emph": true
+    },
+    {
+      "text": "Kopassus!",
+      "speaker": "nadia",
+      "from": 2560,
+      "to": 2571,
+      "emph": true
+    }
+  ]
+}

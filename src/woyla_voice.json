@@ -1,0 +1,1233 @@
+{
+ "fps": 30,
+ "totalFrames": 2429,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 237,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "hook",
+     "text": "Hai wak! Empat puluh delapan penumpang Garuda disandera empat hari di Bangkok.",
+     "score": 0.759,
+     "heard": "Haiwao, 48 penumpang, Garuda, di Sandara, 4 hari di Bangkok.",
+     "file": "out/voice/woyla/hook_0.wav",
+     "durationSec": 3.84,
+     "wordsSec": [
+      [
+       "Haiwao,",
+       0.0,
+       0.54
+      ],
+      [
+       "48",
+       0.62,
+       1.04
+      ],
+      [
+       "penumpang,",
+       1.04,
+       1.8
+      ],
+      [
+       "Garuda,",
+       1.86,
+       2.2
+      ],
+      [
+       "di",
+       2.32,
+       2.4
+      ],
+      [
+       "Sandara,",
+       2.4,
+       2.7
+      ],
+      [
+       "4",
+       2.8,
+       3.0
+      ],
+      [
+       "hari",
+       3.0,
+       3.22
+      ],
+      [
+       "di",
+       3.22,
+       3.34
+      ],
+      [
+       "Bangkok.",
+       3.34,
+       3.58
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "hook",
+     "text": "Tapi pasukan khusus Indonesia menuntaskannya kurang dari tiga menit!",
+     "score": 0.965,
+     "heard": "tapi pasukan khusus Indonesia menuntaskannya kurang dari 3 menit.",
+     "file": "out/voice/woyla/hook_1.wav",
+     "durationSec": 3.52,
+     "wordsSec": [
+      [
+       "tapi",
+       0.0,
+       0.24
+      ],
+      [
+       "pasukan",
+       0.24,
+       0.6
+      ],
+      [
+       "khusus",
+       0.6,
+       0.88
+      ],
+      [
+       "Indonesia",
+       0.88,
+       1.16
+      ],
+      [
+       "menuntaskannya",
+       1.16,
+       1.98
+      ],
+      [
+       "kurang",
+       1.98,
+       2.3
+      ],
+      [
+       "dari",
+       2.3,
+       2.46
+      ],
+      [
+       "3",
+       2.46,
+       2.72
+      ],
+      [
+       "menit.",
+       2.72,
+       3.1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "krisis",
+   "from": 237,
+   "to": 701,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "tegang",
+     "text": "Dua puluh delapan Maret seribu sembilan ratus delapan puluh satu, pesawat Garuda Woyla dibajak lima pria bersenjata.",
+     "score": 0.597,
+     "heard": "28 Maret, 1981 pesawat Garuda, Wela dibajak di Mafia Bersenjata.",
+     "file": "out/voice/woyla/krisis_0.wav",
+     "durationSec": 5.52,
+     "wordsSec": [
+      [
+       "28",
+       0.0,
+       0.46
+      ],
+      [
+       "Maret,",
+       0.46,
+       1.12
+      ],
+      [
+       "1981",
+       1.22,
+       2.02
+      ],
+      [
+       "pesawat",
+       2.02,
+       3.14
+      ],
+      [
+       "Garuda,",
+       3.14,
+       3.5
+      ],
+      [
+       "Wela",
+       3.62,
+       3.86
+      ],
+      [
+       "dibajak",
+       3.86,
+       4.34
+      ],
+      [
+       "di",
+       4.34,
+       4.5
+      ],
+      [
+       "Mafia",
+       4.5,
+       4.84
+      ],
+      [
+       "Bersenjata.",
+       4.84,
+       5.34
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "tegang",
+     "text": "Pesawat dipaksa mendarat di Bandara Don Mueang, sementara para sandera hanya bisa menunduk ketakutan.",
+     "score": 0.911,
+     "heard": "Kusawat dipaksa, mendarat di Bandara Duniang, sementara para sandra hanya bisa menunggu ketakutan.",
+     "file": "out/voice/woyla/krisis_1.wav",
+     "durationSec": 4.4,
+     "wordsSec": [
+      [
+       "Kusawat",
+       0.0,
+       0.36
+      ],
+      [
+       "dipaksa,",
+       0.36,
+       0.86
+      ],
+      [
+       "mendarat",
+       0.88,
+       1.18
+      ],
+      [
+       "di",
+       1.18,
+       1.28
+      ],
+      [
+       "Bandara",
+       1.28,
+       1.58
+      ],
+      [
+       "Duniang,",
+       1.58,
+       2.02
+      ],
+      [
+       "sementara",
+       2.1,
+       2.44
+      ],
+      [
+       "para",
+       2.44,
+       2.62
+      ],
+      [
+       "sandra",
+       2.62,
+       3.02
+      ],
+      [
+       "hanya",
+       3.02,
+       3.22
+      ],
+      [
+       "bisa",
+       3.22,
+       3.4
+      ],
+      [
+       "menunggu",
+       3.4,
+       3.78
+      ],
+      [
+       "ketakutan.",
+       3.78,
+       4.26
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "haru",
+     "text": "Di depan kokpit yang pengap, Kapten Herman Rante berdiri tegar melindungi awak dan seluruh penumpangnya.",
+     "score": 0.96,
+     "heard": "di depan kokit yang mengapkapten Herman Rante berdiri tegar melindungi awak dan seluruh kelumpangnya",
+     "file": "out/voice/woyla/krisis_2.wav",
+     "durationSec": 5.12,
+     "wordsSec": [
+      [
+       "di",
+       0.0,
+       0.26
+      ],
+      [
+       "depan",
+       0.26,
+       0.6
+      ],
+      [
+       "kokit",
+       0.6,
+       0.96
+      ],
+      [
+       "yang",
+       0.96,
+       1.08
+      ],
+      [
+       "mengapkapten",
+       1.08,
+       1.72
+      ],
+      [
+       "Herman",
+       1.72,
+       1.98
+      ],
+      [
+       "Rante",
+       1.98,
+       2.4
+      ],
+      [
+       "berdiri",
+       2.4,
+       2.92
+      ],
+      [
+       "tegar",
+       2.92,
+       3.2
+      ],
+      [
+       "melindungi",
+       3.2,
+       3.68
+      ],
+      [
+       "awak",
+       3.68,
+       3.96
+      ],
+      [
+       "dan",
+       3.96,
+       4.1
+      ],
+      [
+       "seluruh",
+       4.1,
+       4.48
+      ],
+      [
+       "kelumpangnya",
+       4.48,
+       5.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "briefing",
+   "from": 701,
+   "to": 1072,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "taktis",
+     "text": "Dari Jakarta, tiga puluh lima prajurit Kopassandha pimpinan Letkol Sintong Panjaitan terbang rahasia menyusun serbuan tiga arah.",
+     "score": 0.873,
+     "heard": "Dari Jakarta, 35 prajurit Kopasanda, Pimpinang, Lekkong, Sintong, Panjaitan, Terbang Rasia menyusun sebuah tiga arah.",
+     "file": "out/voice/woyla/briefing_0.wav",
+     "durationSec": 6.48,
+     "wordsSec": [
+      [
+       "Dari",
+       0.0,
+       0.4
+      ],
+      [
+       "Jakarta,",
+       0.4,
+       0.82
+      ],
+      [
+       "35",
+       0.92,
+       1.28
+      ],
+      [
+       "prajurit",
+       1.28,
+       1.88
+      ],
+      [
+       "Kopasanda,",
+       1.88,
+       2.48
+      ],
+      [
+       "Pimpinang,",
+       2.62,
+       3.3
+      ],
+      [
+       "Lekkong,",
+       3.38,
+       3.6
+      ],
+      [
+       "Sintong,",
+       3.68,
+       3.94
+      ],
+      [
+       "Panjaitan,",
+       4.06,
+       4.52
+      ],
+      [
+       "Terbang",
+       4.6,
+       4.84
+      ],
+      [
+       "Rasia",
+       4.84,
+       5.2
+      ],
+      [
+       "menyusun",
+       5.2,
+       5.56
+      ],
+      [
+       "sebuah",
+       5.56,
+       5.9
+      ],
+      [
+       "tiga",
+       5.9,
+       6.14
+      ],
+      [
+       "arah.",
+       6.14,
+       6.46
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "taktis",
+     "text": "Tim Merah dan Tim Biru memanjat sayap ke pintu darurat, sementara Tim Hijau menyusup lewat tangga ekor.",
+     "score": 0.965,
+     "heard": "tim merah dan tim miruh memanjat saya ke pintu darurat sementara tim hijau mengusup lewat tangga ekor.",
+     "file": "out/voice/woyla/briefing_1.wav",
+     "durationSec": 5.6,
+     "wordsSec": [
+      [
+       "tim",
+       0.0,
+       0.32
+      ],
+      [
+       "merah",
+       0.32,
+       0.64
+      ],
+      [
+       "dan",
+       0.64,
+       0.76
+      ],
+      [
+       "tim",
+       0.76,
+       1.0
+      ],
+      [
+       "miruh",
+       1.0,
+       1.58
+      ],
+      [
+       "memanjat",
+       1.58,
+       2.02
+      ],
+      [
+       "saya",
+       2.02,
+       2.22
+      ],
+      [
+       "ke",
+       2.22,
+       2.48
+      ],
+      [
+       "pintu",
+       2.48,
+       2.92
+      ],
+      [
+       "darurat",
+       2.92,
+       3.22
+      ],
+      [
+       "sementara",
+       3.22,
+       3.7
+      ],
+      [
+       "tim",
+       3.7,
+       3.9
+      ],
+      [
+       "hijau",
+       3.9,
+       4.2
+      ],
+      [
+       "mengusup",
+       4.2,
+       4.62
+      ],
+      [
+       "lewat",
+       4.62,
+       4.88
+      ],
+      [
+       "tangga",
+       4.88,
+       5.18
+      ],
+      [
+       "ekor.",
+       5.18,
+       5.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "susup",
+   "from": 1072,
+   "to": 1349,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "bisik",
+     "text": "Dini hari tiga puluh satu Maret pukul dua lewat empat puluh lima, hujan gelap mengguyur landasan.",
+     "score": 0.662,
+     "heard": "Dan ini hari 31 Maret, kukul 2 lewat 45 hujan, dilap, menguil bandasan.",
+     "file": "out/voice/woyla/susup_0.wav",
+     "durationSec": 5.2,
+     "wordsSec": [
+      [
+       "Dan",
+       0.0,
+       0.08
+      ],
+      [
+       "ini",
+       0.08,
+       0.22
+      ],
+      [
+       "hari",
+       0.22,
+       0.42
+      ],
+      [
+       "31",
+       0.42,
+       0.84
+      ],
+      [
+       "Maret,",
+       0.84,
+       1.24
+      ],
+      [
+       "kukul",
+       1.34,
+       1.64
+      ],
+      [
+       "2",
+       1.64,
+       1.82
+      ],
+      [
+       "lewat",
+       1.82,
+       2.12
+      ],
+      [
+       "45",
+       2.12,
+       2.56
+      ],
+      [
+       "hujan,",
+       2.56,
+       3.1
+      ],
+      [
+       "dilap,",
+       3.14,
+       3.76
+      ],
+      [
+       "menguil",
+       3.88,
+       4.28
+      ],
+      [
+       "bandasan.",
+       4.28,
+       5.04
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "bisik",
+     "text": "Para prajurit merayap senyap menempel di badan pesawat tanpa satu pun suara.",
+     "score": 0.938,
+     "heard": "Parah wajulit merayap, senyak menempel di badan pesawat tanpa satu pun suara.",
+     "file": "out/voice/woyla/susup_1.wav",
+     "durationSec": 3.76,
+     "wordsSec": [
+      [
+       "Parah",
+       0.0,
+       0.34
+      ],
+      [
+       "wajulit",
+       0.34,
+       0.76
+      ],
+      [
+       "merayap,",
+       0.76,
+       1.1
+      ],
+      [
+       "senyak",
+       1.18,
+       1.44
+      ],
+      [
+       "menempel",
+       1.44,
+       1.9
+      ],
+      [
+       "di",
+       1.9,
+       2.04
+      ],
+      [
+       "badan",
+       2.04,
+       2.3
+      ],
+      [
+       "pesawat",
+       2.3,
+       2.64
+      ],
+      [
+       "tanpa",
+       2.64,
+       2.94
+      ],
+      [
+       "satu",
+       2.94,
+       3.18
+      ],
+      [
+       "pun",
+       3.18,
+       3.36
+      ],
+      [
+       "suara.",
+       3.36,
+       3.68
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ababa",
+   "from": 1349,
+   "to": 1468,
+   "lines": [
+    {
+     "speaker": "sintong",
+     "style": "radio",
+     "text": "Semua tim, posisi siap di pintu masing-masing! Tiga, dua, satu, laksanakan!",
+     "score": 0.983,
+     "heard": "Semua tim posisi siap dipinto masing-masing tiga, dua, satu, laksanakan.",
+     "file": "out/voice/woyla/ababa_0.wav",
+     "durationSec": 3.84,
+     "wordsSec": [
+      [
+       "Semua",
+       0.0,
+       0.44
+      ],
+      [
+       "tim",
+       0.44,
+       0.6
+      ],
+      [
+       "posisi",
+       0.6,
+       1.08
+      ],
+      [
+       "siap",
+       1.08,
+       1.4
+      ],
+      [
+       "dipinto",
+       1.4,
+       1.74
+      ],
+      [
+       "masing",
+       1.74,
+       2.02
+      ],
+      [
+       "-masing",
+       2.02,
+       2.2
+      ],
+      [
+       "tiga,",
+       2.2,
+       2.58
+      ],
+      [
+       "dua,",
+       2.66,
+       2.8
+      ],
+      [
+       "satu,",
+       2.88,
+       3.06
+      ],
+      [
+       "laksanakan.",
+       3.12,
+       3.54
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "klimaks",
+   "from": 1468,
+   "to": 1856,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "klimaks",
+     "text": "Pin granat kejut dicabut, ketiga pintu didobrak serentak, dan ledakan cahaya putih menyilaukan melumpuhkan para pembajak!",
+     "score": 0.898,
+     "heard": "Pink Granat 7 dicabuk, 3 pintu didobrak, serentak dan ledakan cahaya putih mengilaukan merumpukan para pembajang.",
+     "file": "out/voice/woyla/klimaks_0.wav",
+     "durationSec": 5.92,
+     "wordsSec": [
+      [
+       "Pink",
+       0.0,
+       0.3
+      ],
+      [
+       "Granat",
+       0.3,
+       0.7
+      ],
+      [
+       "7",
+       0.7,
+       0.88
+      ],
+      [
+       "dicabuk,",
+       0.88,
+       1.42
+      ],
+      [
+       "3",
+       1.5,
+       1.66
+      ],
+      [
+       "pintu",
+       1.66,
+       2.12
+      ],
+      [
+       "didobrak,",
+       2.12,
+       2.64
+      ],
+      [
+       "serentak",
+       2.68,
+       3.08
+      ],
+      [
+       "dan",
+       3.08,
+       3.24
+      ],
+      [
+       "ledakan",
+       3.24,
+       3.62
+      ],
+      [
+       "cahaya",
+       3.62,
+       3.94
+      ],
+      [
+       "putih",
+       3.94,
+       4.22
+      ],
+      [
+       "mengilaukan",
+       4.22,
+       4.68
+      ],
+      [
+       "merumpukan",
+       4.68,
+       5.16
+      ],
+      [
+       "para",
+       5.16,
+       5.36
+      ],
+      [
+       "pembajang.",
+       5.36,
+       5.88
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "klimaks",
+     "text": "Di tengah hujan peluru yang seakan membeku di udara, prajurit Kopassandha menerjang mengamankan kokpit dan melindungi sandera!",
+     "score": 0.963,
+     "heard": "di tengah hujan peluri yang seakan membekuh di udara Rajurit Popasandha menerjang mengamankan kopit dan melindungi sandera.",
+     "file": "out/voice/woyla/klimaks_1.wav",
+     "durationSec": 6.72,
+     "wordsSec": [
+      [
+       "di",
+       0.0,
+       0.14
+      ],
+      [
+       "tengah",
+       0.14,
+       0.38
+      ],
+      [
+       "hujan",
+       0.38,
+       0.6
+      ],
+      [
+       "peluri",
+       0.6,
+       0.9
+      ],
+      [
+       "yang",
+       0.9,
+       1.02
+      ],
+      [
+       "seakan",
+       1.02,
+       1.38
+      ],
+      [
+       "membekuh",
+       1.38,
+       2.0
+      ],
+      [
+       "di",
+       2.0,
+       2.16
+      ],
+      [
+       "udara",
+       2.16,
+       2.56
+      ],
+      [
+       "Rajurit",
+       2.56,
+       3.36
+      ],
+      [
+       "Popasandha",
+       3.36,
+       3.98
+      ],
+      [
+       "menerjang",
+       3.98,
+       4.46
+      ],
+      [
+       "mengamankan",
+       4.46,
+       5.08
+      ],
+      [
+       "kopit",
+       5.08,
+       5.58
+      ],
+      [
+       "dan",
+       5.58,
+       5.76
+      ],
+      [
+       "melindungi",
+       5.76,
+       6.26
+      ],
+      [
+       "sandera.",
+       6.26,
+       6.64
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "evakuasi",
+   "from": 1856,
+   "to": 2110,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "heroik",
+     "text": "Hanya dalam dua menit lima puluh delapan detik, seluruh pembajak berhasil dilumpuhkan.",
+     "score": 0.81,
+     "heard": "hanya dalam 2 menit 58 detik seluruh pembajak perhasil dirumpukan",
+     "file": "out/voice/woyla/evakuasi_0.wav",
+     "durationSec": 4.48,
+     "wordsSec": [
+      [
+       "hanya",
+       0.0,
+       0.22
+      ],
+      [
+       "dalam",
+       0.22,
+       0.46
+      ],
+      [
+       "2",
+       0.46,
+       0.68
+      ],
+      [
+       "menit",
+       0.68,
+       1.38
+      ],
+      [
+       "58",
+       1.38,
+       1.94
+      ],
+      [
+       "detik",
+       1.94,
+       2.56
+      ],
+      [
+       "seluruh",
+       2.56,
+       2.96
+      ],
+      [
+       "pembajak",
+       2.96,
+       3.38
+      ],
+      [
+       "perhasil",
+       3.38,
+       3.82
+      ],
+      [
+       "dirumpukan",
+       3.82,
+       4.34
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "heroik",
+     "text": "Semua penumpang sipil berlari turun tangga darurat dalam keadaan selamat!",
+     "score": 0.976,
+     "heard": "Semua penumpang sipil berlari turun tanda darurat dalam keadaan selamat.",
+     "file": "out/voice/woyla/evakuasi_1.wav",
+     "durationSec": 3.68,
+     "wordsSec": [
+      [
+       "Semua",
+       0.0,
+       0.38
+      ],
+      [
+       "penumpang",
+       0.38,
+       0.76
+      ],
+      [
+       "sipil",
+       0.76,
+       1.14
+      ],
+      [
+       "berlari",
+       1.14,
+       1.88
+      ],
+      [
+       "turun",
+       1.88,
+       2.16
+      ],
+      [
+       "tanda",
+       2.16,
+       2.38
+      ],
+      [
+       "darurat",
+       2.38,
+       2.68
+      ],
+      [
+       "dalam",
+       2.68,
+       2.88
+      ],
+      [
+       "keadaan",
+       2.88,
+       3.26
+      ],
+      [
+       "selamat.",
+       3.26,
+       3.56
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "epilog",
+   "from": 2110,
+   "to": 2399,
+   "lines": [
+    {
+     "speaker": "nadia",
+     "style": "tribute",
+     "text": "Kemenangan ini dibayar mahal oleh gugurnya Peltu Achmad Kirang dan Kapten Herman Rante.",
+     "score": 0.848,
+     "heard": "kemenangan ini dibayar mahal oleh buurnya P. A. Kiram dan K. Herman Rante.",
+     "file": "out/voice/woyla/epilog_0.wav",
+     "durationSec": 4.8,
+     "wordsSec": [
+      [
+       "kemenangan",
+       0.0,
+       0.4
+      ],
+      [
+       "ini",
+       0.4,
+       0.64
+      ],
+      [
+       "dibayar",
+       0.64,
+       1.08
+      ],
+      [
+       "mahal",
+       1.08,
+       1.44
+      ],
+      [
+       "oleh",
+       1.44,
+       1.68
+      ],
+      [
+       "buurnya",
+       1.68,
+       2.22
+      ],
+      [
+       "P.",
+       2.22,
+       2.42
+      ],
+      [
+       "A.",
+       2.54,
+       2.78
+      ],
+      [
+       "Kiram",
+       2.94,
+       3.36
+      ],
+      [
+       "dan",
+       3.36,
+       3.52
+      ],
+      [
+       "K.",
+       3.52,
+       3.72
+      ],
+      [
+       "Herman",
+       3.96,
+       4.22
+      ],
+      [
+       "Rante.",
+       4.22,
+       4.68
+      ]
+     ]
+    },
+    {
+     "speaker": "nadia",
+     "style": "tribute",
+     "text": "Operasi Woyla mengguncang dunia dan melahirkan Satuan delapan puluh satu Gultor Kopassus!",
+     "score": 0.779,
+     "heard": "operasi Weyla mengguncang dunia dan melahirkan 181 boltor kopasus.",
+     "file": "out/voice/woyla/epilog_1.wav",
+     "durationSec": 4.56,
+     "wordsSec": [
+      [
+       "operasi",
+       0.0,
+       0.42
+      ],
+      [
+       "Weyla",
+       0.42,
+       0.82
+      ],
+      [
+       "mengguncang",
+       0.82,
+       1.58
+      ],
+      [
+       "dunia",
+       1.58,
+       2.0
+      ],
+      [
+       "dan",
+       2.0,
+       2.14
+      ],
+      [
+       "melahirkan",
+       2.14,
+       2.58
+      ],
+      [
+       "181",
+       2.58,
+       3.68
+      ],
+      [
+       "boltor",
+       3.68,
+       4.02
+      ],
+      [
+       "kopasus.",
+       4.02,
+       4.46
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}
