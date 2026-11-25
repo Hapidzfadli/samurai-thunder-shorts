@@ -155,8 +155,14 @@ const Stage: React.FC<{
 }> = ({ cam, shake, bg = "#070d19", fog, children }) => {
   const { width, height } = useVideoConfig();
   return (
-    <AbsoluteFill style={{ background: bg }}>
-      <ThreeCanvas width={width} height={height} shadows camera={{ fov: cam.fov, near: 0.08, far: 180, position: cam.pos }}>
+    <AbsoluteFill style={{ background: bg, overflow: "hidden" }}>
+      <ThreeCanvas
+        width={width}
+        height={height}
+        dpr={1}
+        gl={{ antialias: false }}
+        camera={{ fov: cam.fov, near: 0.08, far: 180, position: cam.pos }}
+      >
         <Rig cam={cam} shake={shake} />
         <color attach="background" args={[bg]} />
         {fog && <fog attach="fog" args={fog} />}
@@ -166,7 +172,7 @@ const Stage: React.FC<{
   );
 };
 
-/* Clean Cinema Grade (ZERO SwANGLE-buggy backdropFilter blur!) */
+/* Clean Cinema Grade (ZERO SwANGLE-buggy backdropFilter blur or slow soft-light readback!) */
 const Grade: React.FC<{
   warm?: number;
   cool?: number;
@@ -178,13 +184,12 @@ const Grade: React.FC<{
     {(warm > 0 || cool > 0) && (
       <AbsoluteFill
         style={{
-          mixBlendMode: "soft-light",
-          background: warm > 0 ? `rgba(255,165,65,${0.38 * warm})` : `rgba(48,118,245,${0.34 * cool})`,
+          background: warm > 0 ? `rgba(255,165,65,${0.16 * warm})` : `rgba(48,118,245,${0.14 * cool})`,
         }}
       />
     )}
-    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 50%, rgba(4,8,18,0.58) 100%)" }} />
-    <AbsoluteFill style={{ background: "linear-gradient(rgba(6,10,20,0) 68%, rgba(6,10,20,0.55) 86%, rgba(4,8,16,0.82) 100%)" }} />
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 52%, rgba(4,8,18,0.55) 100%)" }} />
+    <AbsoluteFill style={{ background: "linear-gradient(rgba(6,10,20,0) 70%, rgba(6,10,20,0.52) 86%, rgba(4,8,16,0.80) 100%)" }} />
     {bars > 1 && (
       <>
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: bars, background: "#03050a" }} />
@@ -559,8 +564,8 @@ const BriefingScene: React.FC = () => {
   const fHijau = EV["briefing.hijau"] ?? Math.round(d * 0.78);
 
   const cam = evalCam(f, [
-    { kind: "orbit", to: Math.round(d * 0.48), target0: [0, 1.55, 0.1], target1: [0, 1.48, 0.2], ang0: -0.45, ang1: 0.25, rad0: 5.2, rad1: 4.2, y0: 2.45, y1: 2.15, fov0: 44, fov1: 42 },
-    { kind: "orbit", to: d, target0: [0, 1.48, 0.2], target1: [0, 1.38, 0.2], ang0: 0.25, ang1: 0.68, rad0: 4.2, rad1: 3.1, y0: 2.15, y1: 2.35, fov0: 42, fov1: 40 },
+    { kind: "orbit", to: Math.round(d * 0.48), target0: [0, 1.48, -0.3], target1: [0, 1.45, -0.15], ang0: -0.2, ang1: 0.18, rad0: 5.9, rad1: 4.8, y0: 2.35, y1: 2.15, fov0: 44, fov1: 42 },
+    { kind: "orbit", to: d, target0: [0, 1.45, -0.15], target1: [0, 1.38, -0.1], ang0: 0.18, ang1: 0.45, rad0: 4.8, rad1: 4.1, y0: 2.15, y1: 2.25, fov0: 42, fov1: 40 },
   ]);
 
   const pointWave = Math.sin(t * 3.2) * 0.14;
@@ -655,8 +660,8 @@ const SusupScene: React.FC = () => {
   const bars = interpolate(f, [0, 24], [0, 76], clamp);
 
   const cam = evalCam(f, [
-    { kind: "linear", to: Math.round(d * 0.56), p0: [-8.8, 3.1, 4.2], p1: [-4.6, 3.4, 1.3], l0: [-2.2, 2.5, -0.3], l1: [-1.4, 2.7, -0.1], fov0: 42, fov1: 38 },
-    { kind: "orbit", to: d, target0: [0, 1.4, -8.8], target1: [0, 1.35, -9.2], ang0: -0.85, ang1: -0.2, rad0: 5.4, rad1: 4.1, y0: 1.85, y1: 1.55, fov0: 40, fov1: 36 },
+    { kind: "linear", to: Math.round(d * 0.56), p0: [-9.2, 3.85, 5.4], p1: [-6.1, 3.6, 3.2], l0: [-2.8, 2.35, -0.45], l1: [-2.1, 2.5, -0.35], fov0: 44, fov1: 40 },
+    { kind: "orbit", to: d, target0: [0.1, 1.05, -9.8], target1: [0.1, 1.1, -9.5], ang0: -0.58, ang1: 0.16, rad0: 6.4, rad1: 4.9, y0: 1.75, y1: 1.5, fov0: 42, fov1: 38 },
   ]);
 
   const creep = Math.sin(t * 4.5) * 0.14;
@@ -745,7 +750,7 @@ const AbabaScene: React.FC = () => {
     { kind: "orbit", to: Math.max(1, fPin), target0: [0, 1.48, 0], target1: [0, 1.54, 0], ang0: 0.28, ang1: -0.14, rad0: 2.95, rad1: 2.05, y0: 1.58, y1: 1.62, fov0: 40, fov1: 34, roll0: 0, roll1: -3.2 },
   ]);
   const camPin = evalCam(Math.max(0, f - fPin), [
-    { kind: "linear", to: Math.max(1, d - fPin), p0: [0.35, 1.52, 1.38], p1: [0.18, 1.52, 0.96], l0: [-0.22, 1.46, 0.25], l1: [-0.22, 1.48, 0.25], fov0: 36, fov1: 30, roll0: -4, roll1: -6 },
+    { kind: "linear", to: Math.max(1, d - fPin), p0: [0.06, 1.48, 1.85], p1: [0.02, 1.46, 1.38], l0: [-0.05, 1.42, 0.22], l1: [-0.08, 1.44, 0.22], fov0: 38, fov1: 32, roll0: -3, roll1: -5 },
   ]);
 
   const radioSpeak = inLine(f, "a1", 2);
@@ -828,7 +833,7 @@ const AbabaScene: React.FC = () => {
       )}
 
       {/* Macro Close-Up Insert for Pin Pull */}
-      {isPinShot && !isSubDrop && <PinPullInsert pull={pinPull} opacity={cl((f - fPin + 4) / 6)} />}
+      {isPinShot && !isSubDrop && <PinPullInsert pull={pinPull} opacity={cl((f - fPin + 4) / 2)} />}
 
       {/* 0.75-Second Hollywood Sub-Drop Blackout Suspense Beat */}
       {isSubDrop && (
@@ -1173,8 +1178,8 @@ const EpilogScene: React.FC = () => {
         <WoylaActor p={merahSalute} role="merah" position={[-1.45, 0, 0.65]} rotation={[0, 0.14, 0]} />
         <WoylaActor p={biruSalute} role="biru" position={[1.45, 0, 0.65]} rotation={[0, -0.14, 0]} />
 
-        {/* Rotating Golden Bintang Sakti Medal floating above saluting squad */}
-        <BintangSakti3D position={[0, 3.25 + Math.sin(t * 2.2) * 0.08, 0.5]} rotation={[0, t * 1.15, 0]} scale={1.75} />
+        {/* Rotating Golden Bintang Sakti Medal floating cleanly between squad and header */}
+        <BintangSakti3D position={[0, 2.58 + Math.sin(t * 2.2) * 0.06, 1.45]} rotation={[0, t * 1.15, 0]} scale={1.55} />
       </Stage>
 
       <Grade warm={0.58} />
@@ -1186,7 +1191,7 @@ const EpilogScene: React.FC = () => {
           sub="PELTU ACHMAD KIRANG · KAPTEN HERMAN RANTE"
           from={Math.max(4, fGugur - 6)}
           to={Math.max(30, fGultor - 6)}
-          top={240}
+          top={225}
           accent="#fbbf24"
         />
       )}
@@ -1197,7 +1202,7 @@ const EpilogScene: React.FC = () => {
           sub="KOPASSUS · LAHIR DARI OPERASI WOYLA 1981"
           from={Math.max(10, fGultor - 6)}
           to={d}
-          top={240}
+          top={225}
           accent="#ef4444"
         />
       )}

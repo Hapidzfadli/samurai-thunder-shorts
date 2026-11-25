@@ -67,7 +67,9 @@ def mux_all(chunk_files: list[Path]):
             "-i", str(silent),
             "-i", str(AUDIO),
             "-map", "0:v:0", "-map", "1:a:0",
-            "-c:v", "copy",
+            "-vf", "scale=1080:1920:flags=lanczos",
+            "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-pix_fmt", "yuv420p",
+            "-r", "30",
             "-c:a", "aac", "-b:a", "192k",
             "-movflags", "+faststart",
             "-shortest",
@@ -81,7 +83,7 @@ def mux_all(chunk_files: list[Path]):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--chunk-size", type=int, default=240)
+    ap.add_argument("--chunk-size", type=int, default=60)
     ap.add_argument("--only", type=int, nargs="*", default=None, help="1-based chunk indices to render")
     ap.add_argument("--mux", action="store_true")
     ap.add_argument("--force", action="store_true")

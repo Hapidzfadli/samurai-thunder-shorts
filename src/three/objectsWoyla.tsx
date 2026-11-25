@@ -807,24 +807,25 @@ export const BulletTimeTracers: React.FC<{
   </group>
 );
 
+const RAIN_GEO = new THREE.CylinderGeometry(0.009, 0.009, 0.44, 4);
+const RAIN_MAT = new THREE.MeshBasicMaterial({ color: "#93c5fd", transparent: true, opacity: 0.34, depthWrite: false });
+
 export const NightRain3D: React.FC<{
   time: number;
   count?: number;
   spread?: number;
   height?: number;
-}> = ({ time, count = 48, spread = 16, height = 9 }) => (
-  <group>
-    {Array.from({ length: count }).map((_, i) => {
-      const seed = (i * 9301 + 49297) % 233280;
-      const rx = ((seed % 1000) / 1000 - 0.5) * spread;
-      const rz = (((seed * 7) % 1000) / 1000 - 0.5) * spread;
-      const ry = ((height - ((time * 9.5 + i * 0.73) % height)) + height) % height;
-      return (
-        <mesh key={i} position={[rx, ry, rz]} rotation={[0, 0, 0.14]}>
-          <cylinderGeometry args={[0.008, 0.008, 0.42, 4]} />
-          <meshBasicMaterial color="#93c5fd" transparent opacity={0.32} depthWrite={false} />
-        </mesh>
-      );
-    })}
-  </group>
-);
+}> = ({ time, count = 28, spread = 16, height = 9 }) => {
+  const n = Math.min(count, 28);
+  return (
+    <group>
+      {Array.from({ length: n }).map((_, i) => {
+        const seed = (i * 9301 + 49297) % 233280;
+        const rx = ((seed % 1000) / 1000 - 0.5) * spread;
+        const rz = (((seed * 7) % 1000) / 1000 - 0.5) * spread;
+        const ry = ((height - ((time * 9.5 + i * 0.73) % height)) + height) % height;
+        return <mesh key={i} geometry={RAIN_GEO} material={RAIN_MAT} position={[rx, ry, rz]} rotation={[0, 0, 0.14]} />;
+      })}
+    </group>
+  );
+};

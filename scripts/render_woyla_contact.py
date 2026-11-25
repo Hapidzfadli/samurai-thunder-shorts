@@ -79,15 +79,16 @@ def from_bundle(bundle_dir: Path, out_png: Path):
     items = []
     for idx, (fno, lbl) in enumerate(picks):
         p = tmp / f"f_{idx:02d}_{fno}.png"
-        subprocess.run(
-            [
-                "npx", "remotion", "still", str(bundle_dir), "Woyla", str(p),
-                f"--frame={fno}", "--scale=0.5", "--gl=swangle",
-                "--browser-executable=/usr/bin/google-chrome",
-            ],
-            cwd=str(ROOT),
-            check=True,
-        )
+        if not (p.exists() and p.stat().st_size > 10_000):
+            subprocess.run(
+                [
+                    "npx", "remotion", "still", str(bundle_dir), "Woyla", str(p),
+                    f"--frame={fno}", "--scale=0.5", "--gl=swangle",
+                    "--browser-executable=/usr/bin/google-chrome",
+                ],
+                cwd=str(ROOT),
+                check=True,
+            )
         items.append((p, fno, lbl))
     stitch_grid(items, out_png, "OPERASI WOYLA 1981 · 16-FRAME STILL-CHECK AUDIT")
 
