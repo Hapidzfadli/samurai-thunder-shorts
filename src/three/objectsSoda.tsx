@@ -34,7 +34,7 @@ export const useTex = (key: string, w: number, h: number, draw: (g: CanvasRender
   }, [key]);
 
 const STRATA = ["#7a2f3e", "#b8431f", "#d9622b", "#e8893f", "#f2ad5e", "#c2552d", "#8f3a35", "#e07a3a", "#f4c07a", "#a63f2a", "#6b2f4a"];
-const useStrata = (repeat: [number, number] = [2, 1]) =>
+export const useStrata = (repeat: [number, number] = [2, 1]) =>
   useTex("strata", 1024, 512, (g) => {
     g.fillStyle = "#c2552d";
     g.fillRect(0, 0, 1024, 512);
