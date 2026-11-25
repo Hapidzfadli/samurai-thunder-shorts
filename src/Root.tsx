@@ -63,10 +63,16 @@ import { ThumbBuburShorts, ThumbBuburYoutube } from "./ThumbBubur";
 import { SheetHororKarakter, SheetHororProperti } from "./SheetHoror";
 import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
 import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
+import { SheetWoylaKarakter, SheetWoylaProperti } from "./SheetWoyla";
+import { ThumbWoylaShorts, ThumbWoylaYoutube } from "./ThumbWoyla";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="SheetWoylaKarakter" component={SheetWoylaKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
+      <Composition id="SheetWoylaProperti" component={SheetWoylaProperti} durationInFrames={1} fps={30} width={2000} height={1440} />
+      <Composition id="ThumbWoylaShorts" component={ThumbWoylaShorts} durationInFrames={1} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbWoylaYoutube" component={ThumbWoylaYoutube} durationInFrames={1} fps={30} width={1280} height={720} />
       <Composition id="ApacheDetailed" component={ApacheDetailed} durationInFrames={TOTAL_FRAMES_APACHE} fps={30} width={1080} height={1920} />
       <Composition id="RailroadExpansion" component={RailroadExpansion} durationInFrames={TOTAL_FRAMES_RAILROAD} fps={30} width={1080} height={1920} />
       <Composition id="CharacterShowcase" component={CharacterShowcase} durationInFrames={CHARACTER_PRESETS.length} fps={30} width={1920} height={1080} />

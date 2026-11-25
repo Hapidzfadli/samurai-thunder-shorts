@@ -1,0 +1,53 @@
+[
+  {
+    "scene": "hook",
+    "lines": [
+      ["nadia", "hook", "Hai wak! Bayangkan empat puluh delapan penumpang disandera empat hari di dalam pesawat Garuda di Bangkok, tapi pasukan khusus Indonesia menuntaskannya kurang dari tiga menit!"]
+    ]
+  },
+  {
+    "scene": "krisis",
+    "lines": [
+      ["nadia", "tegang", "Dua puluh delapan Maret seribu sembilan ratus delapan puluh satu, pesawat Garuda DC sembilan Woyla dibajak lima pria bersenjata dan dipaksa mendarat di Bandara Don Mueang."],
+      ["nadia", "haru", "Di dalam kabin yang pengap, para sandera hanya bisa menunduk ketakutan, sementara Kapten Herman Rante berdiri tegar melindungi awak dan penumpangnya."]
+    ]
+  },
+  {
+    "scene": "briefing",
+    "lines": [
+      ["nadia", "taktis", "Dari Jakarta, tiga puluh lima prajurit Kopassandha pimpinan Letkol Sintong Panjaitan terbang rahasia dan menyusun taktik serbuan dari tiga arah sekaligus."],
+      ["nadia", "taktis", "Tim Merah dan Tim Biru memanjat sayap menuju pintu darurat samping, sedangkan Tim Hijau menyusup senyap lewat tangga ekor belakang."]
+    ]
+  },
+  {
+    "scene": "susup",
+    "lines": [
+      ["nadia", "bisik", "Dini hari tiga puluh satu Maret pukul dua lewat empat puluh lima, di bawah rintik hujan gelap, mereka merayap menempel di badan pesawat tanpa satu pun suara."]
+    ]
+  },
+  {
+    "scene": "ababa",
+    "lines": [
+      ["sintong", "radio", "Semua tim, posisi siap di pintu masing-masing! Tiga, dua, satu, laksanakan!"]
+    ]
+  },
+  {
+    "scene": "klimaks",
+    "lines": [
+      ["nadia", "klimaks", "Pin granat kejut dicabut, ketiga pintu didobrak serentak, dan ledakan cahaya putih menyilaukan langsung melumpuhkan para pembajak di dalam kabin!"],
+      ["nadia", "klimaks", "Di tengah hujan peluru yang seakan membeku di udara, prajurit Kopassandha menerjang masuk mengamankan kokpit dan melindungi setiap sandera!"]
+    ]
+  },
+  {
+    "scene": "evakuasi",
+    "lines": [
+      ["nadia", "heroik", "Hanya dalam dua menit lima puluh delapan detik, seluruh pembajak dilumpuhkan dan semua penumpang sipil berlari turun tangga darurat dalam keadaan selamat!"]
+    ]
+  },
+  {
+    "scene": "epilog",
+    "lines": [
+      ["nadia", "tribute", "Kemenangan ini dibayar mahal oleh gugurnya Peltu Achmad Kirang dan Kapten Herman Rante. Operasi Woyla mengguncang dunia dan melahirkan Satuan delapan puluh satu Gultor Kopassus!"]
+    ]
+  }
+]
