@@ -32,6 +32,8 @@ Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh*
 - **Pengisi suara standar (pilihan user, wajib dipakai lebih dulu di setiap video baru):** 5 suara bersih di `voices/pengisi_suara.json` →
   `dodi` (narator utama/bawaan, juga pria muda), `nadia` (narator wanita serius/sejarah), `nadia_ceria` (narator wanita komedi),
   `butini` (ibu-ibu/ibu kos), `ara` (cewek muda polos). Pilih per baris naskah (kolom ke-3) atau per adegan (`"voice"`).
+  **Favorit user: `dodi` + `ara`.** Utamakan dua ini: `dodi` = narator & tokoh pria, `ara` = tokoh wanita/cewek (juga narator wanita bila perlu).
+  `nadia`, `nadia_ceria`, `butini` hanya cadangan, mis. saat ada dua tokoh wanita yang suaranya harus beda.
   Suara lain (bank_karakter, dll.) hanya dipakai bila tokoh butuh suara yang tidak ada di lima ini, dan sebutkan alasannya ke user.
 - Narasi pakai suara klon dengan penekanan kata (emph), intonasi naik untuk pertanyaan, pelan/berbisik untuk momen licik.
 - **Mesin suara standar: VoxCPM2** (`scripts/voice_vox.py`, jalankan dengan `.venv/bin/python`). Patokan yang dipilih user: `exports/riset/suara/voxcpm2-pembuka-perang-emu.mp3`. Mode referensi (contoh suara dodi per emosi, dipotong di batas kalimat) + tag gaya per kalimat (narasi/santai/tegang/tegas/bisik). Jangan pakai mode lanjutan (prompt_text): tag gaya ikut terbaca.

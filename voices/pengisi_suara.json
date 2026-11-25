@@ -1,6 +1,8 @@
 {
   "_catatan": "Pengisi suara standar pilihan user (25 Nov 2026). Pakai ini lebih dulu untuk setiap video baru. Kunci = nama yang ditulis di naskah (kolom ke-3 tiap baris, atau 'voice' di tingkat adegan).",
   "default": "dodi",
+  "favorit": ["dodi", "ara"],
+  "_favorit": "Favorit user (25 Nov 2026): dodi = narator & semua tokoh pria, ara = semua tokoh wanita/cewek. nadia, nadia_ceria, butini hanya cadangan bila tokoh wanita kedua/ibu-ibu perlu suara berbeda dari ara.",
   "voices": {
     "dodi":        {"file": "voices/id_prompts/dodi_riko_clean.wav",         "gender": "pria",   "peran": "Narator utama (bawaan), juga tokoh pria muda/panikan seperti Riko"},
     "nadia":       {"file": "voices/id_prompts/nadia_omara_khw_clean.wav",   "gender": "wanita", "peran": "Narator wanita, bercerita serius/misteri/sejarah"},
