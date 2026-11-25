@@ -63,6 +63,8 @@ import { ThumbBuburShorts, ThumbBuburYoutube } from "./ThumbBubur";
 import { SheetHororKarakter, SheetHororProperti } from "./SheetHoror";
 import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
 import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
+import { Duel, TOTAL_FRAMES_DUEL } from "./Duel";
+import { ThumbDuelShorts, ThumbDuelYoutube } from "./ThumbDuel";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -242,6 +244,9 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
+      <Composition id="Duel" component={Duel} durationInFrames={TOTAL_FRAMES_DUEL} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbDuelShorts" component={ThumbDuelShorts} durationInFrames={1} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbDuelYoutube" component={ThumbDuelYoutube} durationInFrames={1} fps={30} width={1920} height={1080} />
     </>
   );
 };

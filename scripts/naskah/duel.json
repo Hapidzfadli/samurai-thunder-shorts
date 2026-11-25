@@ -1,0 +1,139 @@
+{
+  "title": "Kenapa Penembak Kedua Selalu Menang (Sains Reaksi Duel Wild West)",
+  "language": "id",
+  "target_duration_sec": 62,
+  "beats": [
+    {
+      "scene": "hook",
+      "beat": "1. Hook (0-3s)",
+      "lines": [
+        {
+          "id": "h1",
+          "speaker": "qinmu",
+          "style": "dramatic, punchy, intriguing storyteller",
+          "text": "Di duel koboi Wild West, orang yang menembak duluan justru hampir selalu kalah."
+        }
+      ]
+    },
+    {
+      "scene": "setup",
+      "beat": "2. Setup (3-12s)",
+      "lines": [
+        {
+          "id": "s1",
+          "speaker": "qinmu",
+          "style": "warm engaging storyteller, clear pace",
+          "text": "Di jalanan berdebu kota koboi, dua penembak berdiri saling tatap menanti satu peluru penentu."
+        },
+        {
+          "id": "s2",
+          "speaker": "qinmu",
+          "style": "warm engaging storyteller, emphasized numbers",
+          "text": "Si penantang muda sudah mengantongi dua belas kemenangan, sementara lawannya cuma koboi tua yang super tenang."
+        }
+      ]
+    },
+    {
+      "scene": "mocker",
+      "beat": "3. The Mocker (12-20s)",
+      "lines": [
+        {
+          "id": "m1",
+          "speaker": "sombong",
+          "style": "arrogant, mocking, boastful show-off",
+          "text": "Hah! Orang tua lambat! Aku cabut pistol duluan, kamu udah jadi debu!"
+        },
+        {
+          "id": "m2",
+          "speaker": "qinmu",
+          "style": "calm, deadpan, intriguing",
+          "text": "Tapi si koboi tua cuma diam, tangannya santai di atas sarung pistol."
+        }
+      ]
+    },
+    {
+      "scene": "eskalasi",
+      "beat": "4. Eskalasi 3x (20-35s)",
+      "lines": [
+        {
+          "id": "e1",
+          "speaker": "qinmu",
+          "style": "tense, suspenseful, building drama",
+          "text": "Angin gurun berhembus kencang, lonceng gereja berdentang, dan keringat dingin mulai menetes."
+        },
+        {
+          "id": "e2",
+          "speaker": "ara",
+          "style": "nervous, worried, hushed excitement",
+          "text": "Waduh, lihat tuh! Jari si penantang udah gemetar di atas pistolnya!"
+        },
+        {
+          "id": "e3",
+          "speaker": "sombong",
+          "style": "cocky, menacing, arrogant grin",
+          "text": "Lihat nih! Aku gerak duluan, selesai hidupmu!"
+        },
+        {
+          "id": "e4",
+          "speaker": "qinmu",
+          "style": "urgent, dramatic climax build",
+          "text": "Tepat saat itu, si penantang benar-benar mencabut pistolnya lebih dulu!"
+        }
+      ]
+    },
+    {
+      "scene": "analogi",
+      "beat": "5. Rahasia & Analogi Sehari-hari (35-46s)",
+      "lines": [
+        {
+          "id": "a1",
+          "speaker": "qinmu",
+          "style": "conversational, enlightening, friendly",
+          "text": "Begini rahasianya: bayangkan hape kamu tiba-tiba meluncur jatuh dari pinggir meja."
+        },
+        {
+          "id": "a2",
+          "speaker": "qinmu",
+          "style": "clear, explanatory, natural pace",
+          "text": "Kalau kamu niat mengambil hape dengan sadar, otakmu butuh waktu mikir dulu."
+        },
+        {
+          "id": "a3",
+          "speaker": "qinmu",
+          "style": "energetic, amazed, punchy",
+          "text": "Tapi saat melihat benda jatuh, jalur refleks langsung menyambar dua ratus milidetik lebih cepat!"
+        }
+      ]
+    },
+    {
+      "scene": "payoff",
+      "beat": "6. Payoff + Bullet-Cam Slow-Mo + Auto-Loop (46-64s)",
+      "lines": [
+        {
+          "id": "p1",
+          "speaker": "qinmu",
+          "style": "dramatic, fast, triumphant",
+          "text": "Gerakan si pengejek tadi justru jadi pemicu refleks tercepat lawannya!"
+        },
+        {
+          "id": "p2",
+          "speaker": "bang_udin",
+          "style": "deep, calm, cold badass",
+          "text": "Terlambat, anak muda."
+        },
+        {
+          "id": "p3",
+          "speaker": "sombong",
+          "style": "shocked, panicked, high pitch surprise",
+          "text": "Hah?! Kok pistolku yang terbang?!"
+        },
+        {
+          "id": "p4",
+          "speaker": "qinmu",
+          "style": "punchy, final reveal, seamless loop lead-in",
+          "text": "Karena gerakan bereaksi selalu menang telak dari niat, makanya..."
+        }
+      ]
+    }
+  ]
+}

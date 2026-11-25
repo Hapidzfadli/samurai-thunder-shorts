@@ -1,0 +1,3958 @@
+{
+ "fps": 30,
+ "totalFrames": 1931,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 6,
+   "to": 166,
+   "lines": [
+    {
+     "id": "h1",
+     "speaker": "qinmu",
+     "text": "Di duel koboi Wild West, orang yang menembak duluan justru hampir selalu kalah.",
+     "score": 0.947,
+     "durSec": 4.991,
+     "file": "out/voice/duel/h1.wav",
+     "wordsSec": [
+      [
+       "di",
+       0.0,
+       0.24
+      ],
+      [
+       "Dual",
+       0.24,
+       0.48
+      ],
+      [
+       "Cowboy",
+       0.48,
+       0.98
+      ],
+      [
+       "Wild",
+       0.98,
+       1.24
+      ],
+      [
+       "West.",
+       1.24,
+       1.66
+      ],
+      [
+       "Orang",
+       1.94,
+       2.48
+      ],
+      [
+       "yang",
+       2.48,
+       2.58
+      ],
+      [
+       "menembak",
+       2.58,
+       2.96
+      ],
+      [
+       "duluan",
+       2.96,
+       3.3
+      ],
+      [
+       "justru",
+       3.3,
+       3.68
+      ],
+      [
+       "hampir",
+       3.68,
+       4.24
+      ],
+      [
+       "selalu",
+       4.24,
+       4.56
+      ],
+      [
+       "kalah.",
+       4.56,
+       4.9
+      ]
+     ],
+     "from": 6,
+     "to": 156,
+     "words": [
+      {
+       "w": "di",
+       "from": 6,
+       "to": 13
+      },
+      {
+       "w": "Dual",
+       "from": 13,
+       "to": 20
+      },
+      {
+       "w": "Cowboy",
+       "from": 20,
+       "to": 35
+      },
+      {
+       "w": "Wild",
+       "from": 35,
+       "to": 43
+      },
+      {
+       "w": "West.",
+       "from": 43,
+       "to": 56
+      },
+      {
+       "w": "Orang",
+       "from": 64,
+       "to": 80
+      },
+      {
+       "w": "yang",
+       "from": 80,
+       "to": 83
+      },
+      {
+       "w": "menembak",
+       "from": 83,
+       "to": 95
+      },
+      {
+       "w": "duluan",
+       "from": 95,
+       "to": 105
+      },
+      {
+       "w": "justru",
+       "from": 105,
+       "to": 116
+      },
+      {
+       "w": "hampir",
+       "from": 116,
+       "to": 133
+      },
+      {
+       "w": "selalu",
+       "from": 133,
+       "to": 143
+      },
+      {
+       "w": "kalah.",
+       "from": 143,
+       "to": 153
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "setup",
+   "from": 166,
+   "to": 461,
+   "lines": [
+    {
+     "id": "s1",
+     "speaker": "qinmu",
+     "text": "Di jalanan berdebu kota koboi, dua penembak berdiri saling tatap menanti satu peluru penentu.",
+     "score": 0.986,
+     "durSec": 4.8,
+     "file": "out/voice/duel/s1.wav",
+     "wordsSec": [
+      [
+       "di",
+       0.0,
+       0.16
+      ],
+      [
+       "jalanan",
+       0.16,
+       0.64
+      ],
+      [
+       "berdebu",
+       0.64,
+       1.06
+      ],
+      [
+       "kota",
+       1.06,
+       1.32
+      ],
+      [
+       "Koboy.",
+       1.32,
+       1.72
+      ],
+      [
+       "2",
+       2.0,
+       2.22
+      ],
+      [
+       "penembak",
+       2.22,
+       2.6
+      ],
+      [
+       "berdiri",
+       2.6,
+       2.94
+      ],
+      [
+       "saling",
+       2.94,
+       3.16
+      ],
+      [
+       "tatap,",
+       3.16,
+       3.46
+      ],
+      [
+       "menanti",
+       3.56,
+       3.9
+      ],
+      [
+       "1",
+       3.9,
+       4.08
+      ],
+      [
+       "peluru",
+       4.08,
+       4.34
+      ],
+      [
+       "penentu.",
+       4.34,
+       4.68
+      ]
+     ],
+     "from": 166,
+     "to": 310,
+     "words": [
+      {
+       "w": "di",
+       "from": 166,
+       "to": 171
+      },
+      {
+       "w": "jalanan",
+       "from": 171,
+       "to": 185
+      },
+      {
+       "w": "berdebu",
+       "from": 185,
+       "to": 198
+      },
+      {
+       "w": "kota",
+       "from": 198,
+       "to": 206
+      },
+      {
+       "w": "Koboy.",
+       "from": 206,
+       "to": 218
+      },
+      {
+       "w": "2",
+       "from": 226,
+       "to": 233
+      },
+      {
+       "w": "penembak",
+       "from": 233,
+       "to": 244
+      },
+      {
+       "w": "berdiri",
+       "from": 244,
+       "to": 254
+      },
+      {
+       "w": "saling",
+       "from": 254,
+       "to": 261
+      },
+      {
+       "w": "tatap,",
+       "from": 261,
+       "to": 270
+      },
+      {
+       "w": "menanti",
+       "from": 273,
+       "to": 283
+      },
+      {
+       "w": "1",
+       "from": 283,
+       "to": 289
+      },
+      {
+       "w": "peluru",
+       "from": 289,
+       "to": 296
+      },
+      {
+       "w": "penentu.",
+       "from": 296,
+       "to": 307
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "speaker": "qinmu",
+     "text": "Si penantang muda sudah mengantongi dua belas kemenangan, sementara lawannya cuma koboi tua yang super tenang.",
+     "score": 1.0,
+     "durSec": 4.52,
+     "file": "out/voice/duel/s2.wav",
+     "wordsSec": [
+      [
+       "Si",
+       0.0,
+       0.14
+      ],
+      [
+       "penantang",
+       0.14,
+       0.66
+      ],
+      [
+       "muda",
+       0.66,
+       0.92
+      ],
+      [
+       "sudah",
+       0.92,
+       1.0
+      ],
+      [
+       "mengantongi",
+       1.0,
+       1.44
+      ],
+      [
+       "12",
+       1.44,
+       1.68
+      ],
+      [
+       "kemenangan,",
+       1.68,
+       2.08
+      ],
+      [
+       "sementara",
+       2.24,
+       2.6
+      ],
+      [
+       "lawannya,",
+       2.6,
+       2.9
+      ],
+      [
+       "cuma",
+       3.06,
+       3.2
+      ],
+      [
+       "Kobo",
+       3.2,
+       3.48
+      ],
+      [
+       "itu",
+       3.48,
+       3.58
+      ],
+      [
+       "ayang",
+       3.58,
+       3.78
+      ],
+      [
+       "super",
+       3.78,
+       3.96
+      ],
+      [
+       "tenang.",
+       3.96,
+       4.3
+      ]
+     ],
+     "from": 315,
+     "to": 451,
+     "words": [
+      {
+       "w": "Si",
+       "from": 315,
+       "to": 319
+      },
+      {
+       "w": "penantang",
+       "from": 319,
+       "to": 335
+      },
+      {
+       "w": "muda",
+       "from": 335,
+       "to": 343
+      },
+      {
+       "w": "sudah",
+       "from": 343,
+       "to": 345
+      },
+      {
+       "w": "mengantongi",
+       "from": 345,
+       "to": 358
+      },
+      {
+       "w": "12",
+       "from": 358,
+       "to": 365
+      },
+      {
+       "w": "kemenangan,",
+       "from": 365,
+       "to": 377
+      },
+      {
+       "w": "sementara",
+       "from": 382,
+       "to": 393
+      },
+      {
+       "w": "lawannya,",
+       "from": 393,
+       "to": 402
+      },
+      {
+       "w": "cuma",
+       "from": 407,
+       "to": 411
+      },
+      {
+       "w": "Kobo",
+       "from": 411,
+       "to": 419
+      },
+      {
+       "w": "itu",
+       "from": 419,
+       "to": 422
+      },
+      {
+       "w": "ayang",
+       "from": 422,
+       "to": 428
+      },
+      {
+       "w": "super",
+       "from": 428,
+       "to": 434
+      },
+      {
+       "w": "tenang.",
+       "from": 434,
+       "to": 444
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "mocker",
+   "from": 461,
+   "to": 713,
+   "lines": [
+    {
+     "id": "m1",
+     "speaker": "sombong",
+     "text": "Hah! Orang tua lambat! Aku cabut pistol duluan, kamu udah jadi debu!",
+     "score": 1.0,
+     "durSec": 4.66,
+     "file": "out/voice/duel/m1.wav",
+     "wordsSec": [
+      [
+       "Hah,",
+       0.0,
+       0.22
+      ],
+      [
+       "orang",
+       0.4,
+       0.62
+      ],
+      [
+       "tua",
+       0.62,
+       0.86
+      ],
+      [
+       "lambat!",
+       0.86,
+       1.36
+      ],
+      [
+       "Aku",
+       1.54,
+       1.92
+      ],
+      [
+       "cabut",
+       1.92,
+       2.3
+      ],
+      [
+       "pistol",
+       2.3,
+       2.68
+      ],
+      [
+       "duluan!",
+       2.68,
+       3.16
+      ],
+      [
+       "Kamu",
+       3.32,
+       3.6
+      ],
+      [
+       "udah",
+       3.6,
+       3.76
+      ],
+      [
+       "jadi",
+       3.76,
+       4.02
+      ],
+      [
+       "debu!",
+       4.02,
+       4.48
+      ]
+     ],
+     "from": 461,
+     "to": 601,
+     "words": [
+      {
+       "w": "Hah,",
+       "from": 461,
+       "to": 468
+      },
+      {
+       "w": "orang",
+       "from": 473,
+       "to": 480
+      },
+      {
+       "w": "tua",
+       "from": 480,
+       "to": 487
+      },
+      {
+       "w": "lambat!",
+       "from": 487,
+       "to": 502
+      },
+      {
+       "w": "Aku",
+       "from": 507,
+       "to": 519
+      },
+      {
+       "w": "cabut",
+       "from": 519,
+       "to": 530
+      },
+      {
+       "w": "pistol",
+       "from": 530,
+       "to": 542
+      },
+      {
+       "w": "duluan!",
+       "from": 542,
+       "to": 556
+      },
+      {
+       "w": "Kamu",
+       "from": 561,
+       "to": 569
+      },
+      {
+       "w": "udah",
+       "from": 569,
+       "to": 574
+      },
+      {
+       "w": "jadi",
+       "from": 574,
+       "to": 582
+      },
+      {
+       "w": "debu!",
+       "from": 582,
+       "to": 596
+      }
+     ]
+    },
+    {
+     "id": "m2",
+     "speaker": "qinmu",
+     "text": "Tapi si koboi tua cuma diam, tangannya santai di atas sarung pistol.",
+     "score": 0.938,
+     "durSec": 3.228,
+     "file": "out/voice/duel/m2.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.22
+      ],
+      [
+       "si",
+       0.22,
+       0.38
+      ],
+      [
+       "cowboy",
+       0.38,
+       0.62
+      ],
+      [
+       "itu",
+       0.62,
+       0.82
+      ],
+      [
+       "acuman",
+       0.82,
+       1.12
+      ],
+      [
+       "diam,",
+       1.12,
+       1.32
+      ],
+      [
+       "tangannya",
+       1.66,
+       1.94
+      ],
+      [
+       "santai",
+       1.94,
+       2.34
+      ],
+      [
+       "di",
+       2.34,
+       2.44
+      ],
+      [
+       "atas",
+       2.44,
+       2.62
+      ],
+      [
+       "harung",
+       2.62,
+       2.76
+      ],
+      [
+       "pistol.",
+       2.76,
+       2.98
+      ]
+     ],
+     "from": 606,
+     "to": 703,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 606,
+       "to": 612
+      },
+      {
+       "w": "si",
+       "from": 612,
+       "to": 617
+      },
+      {
+       "w": "cowboy",
+       "from": 617,
+       "to": 624
+      },
+      {
+       "w": "itu",
+       "from": 624,
+       "to": 630
+      },
+      {
+       "w": "acuman",
+       "from": 630,
+       "to": 639
+      },
+      {
+       "w": "diam,",
+       "from": 639,
+       "to": 645
+      },
+      {
+       "w": "tangannya",
+       "from": 656,
+       "to": 664
+      },
+      {
+       "w": "santai",
+       "from": 664,
+       "to": 676
+      },
+      {
+       "w": "di",
+       "from": 676,
+       "to": 679
+      },
+      {
+       "w": "atas",
+       "from": 679,
+       "to": 684
+      },
+      {
+       "w": "harung",
+       "from": 684,
+       "to": 689
+      },
+      {
+       "w": "pistol.",
+       "from": 689,
+       "to": 695
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "eskalasi",
+   "from": 713,
+   "to": 1165,
+   "lines": [
+    {
+     "id": "e1",
+     "speaker": "qinmu",
+     "text": "Angin gurun berhembus kencang, lonceng gereja berdentang, dan keringat dingin mulai menetes.",
+     "score": 0.987,
+     "durSec": 4.435,
+     "file": "out/voice/duel/e1.wav",
+     "wordsSec": [
+      [
+       "Angin",
+       0.0,
+       0.28
+      ],
+      [
+       "gurung",
+       0.28,
+       0.54
+      ],
+      [
+       "berhembus",
+       0.54,
+       0.86
+      ],
+      [
+       "kencang,",
+       0.86,
+       1.24
+      ],
+      [
+       "lonceng",
+       1.58,
+       2.1
+      ],
+      [
+       "gereja",
+       2.1,
+       2.34
+      ],
+      [
+       "berentang",
+       2.34,
+       2.8
+      ],
+      [
+       "dan",
+       2.8,
+       3.06
+      ],
+      [
+       "keringat",
+       3.06,
+       3.46
+      ],
+      [
+       "dingin",
+       3.46,
+       3.7
+      ],
+      [
+       "mulai",
+       3.7,
+       3.94
+      ],
+      [
+       "menetes.",
+       3.94,
+       4.16
+      ]
+     ],
+     "from": 713,
+     "to": 846,
+     "words": [
+      {
+       "w": "Angin",
+       "from": 713,
+       "to": 721
+      },
+      {
+       "w": "gurung",
+       "from": 721,
+       "to": 729
+      },
+      {
+       "w": "berhembus",
+       "from": 729,
+       "to": 739
+      },
+      {
+       "w": "kencang,",
+       "from": 739,
+       "to": 750
+      },
+      {
+       "w": "lonceng",
+       "from": 760,
+       "to": 776
+      },
+      {
+       "w": "gereja",
+       "from": 776,
+       "to": 783
+      },
+      {
+       "w": "berentang",
+       "from": 783,
+       "to": 797
+      },
+      {
+       "w": "dan",
+       "from": 797,
+       "to": 805
+      },
+      {
+       "w": "keringat",
+       "from": 805,
+       "to": 817
+      },
+      {
+       "w": "dingin",
+       "from": 817,
+       "to": 824
+      },
+      {
+       "w": "mulai",
+       "from": 824,
+       "to": 831
+      },
+      {
+       "w": "menetes.",
+       "from": 831,
+       "to": 838
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "speaker": "ara",
+     "text": "Waduh, lihat tuh! Jari si penantang udah gemetar di atas pistolnya!",
+     "score": 0.943,
+     "durSec": 3.383,
+     "file": "out/voice/duel/e2.wav",
+     "wordsSec": [
+      [
+       "Udah,",
+       0.0,
+       0.32
+      ],
+      [
+       "liat",
+       0.56,
+       0.88
+      ],
+      [
+       "tuh!",
+       0.88,
+       1.0
+      ],
+      [
+       "Jari",
+       1.36,
+       1.58
+      ],
+      [
+       "si",
+       1.58,
+       1.68
+      ],
+      [
+       "penantang",
+       1.68,
+       2.04
+      ],
+      [
+       "udah",
+       2.04,
+       2.16
+      ],
+      [
+       "gemetar",
+       2.16,
+       2.54
+      ],
+      [
+       "di",
+       2.54,
+       2.64
+      ],
+      [
+       "atas",
+       2.64,
+       2.8
+      ],
+      [
+       "pistolnya!",
+       2.8,
+       3.24
+      ]
+     ],
+     "from": 851,
+     "to": 952,
+     "words": [
+      {
+       "w": "Udah,",
+       "from": 851,
+       "to": 861
+      },
+      {
+       "w": "liat",
+       "from": 868,
+       "to": 877
+      },
+      {
+       "w": "tuh!",
+       "from": 877,
+       "to": 881
+      },
+      {
+       "w": "Jari",
+       "from": 892,
+       "to": 898
+      },
+      {
+       "w": "si",
+       "from": 898,
+       "to": 901
+      },
+      {
+       "w": "penantang",
+       "from": 901,
+       "to": 912
+      },
+      {
+       "w": "udah",
+       "from": 912,
+       "to": 916
+      },
+      {
+       "w": "gemetar",
+       "from": 916,
+       "to": 927
+      },
+      {
+       "w": "di",
+       "from": 927,
+       "to": 930
+      },
+      {
+       "w": "atas",
+       "from": 930,
+       "to": 935
+      },
+      {
+       "w": "pistolnya!",
+       "from": 935,
+       "to": 948
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "speaker": "sombong",
+     "text": "Lihat nih! Aku gerak duluan, selesai hidupmu!",
+     "score": 1.0,
+     "durSec": 3.094,
+     "file": "out/voice/duel/e3.wav",
+     "wordsSec": [
+      [
+       "lihat",
+       0.0,
+       0.32
+      ],
+      [
+       "nih",
+       0.32,
+       0.58
+      ],
+      [
+       "aku",
+       0.58,
+       1.2
+      ],
+      [
+       "gerak",
+       1.2,
+       1.58
+      ],
+      [
+       "duluan",
+       1.58,
+       1.98
+      ],
+      [
+       "selesai",
+       1.98,
+       2.52
+      ],
+      [
+       "hidupmu",
+       2.52,
+       2.94
+      ]
+     ],
+     "from": 957,
+     "to": 1050,
+     "words": [
+      {
+       "w": "lihat",
+       "from": 957,
+       "to": 967
+      },
+      {
+       "w": "nih",
+       "from": 967,
+       "to": 975
+      },
+      {
+       "w": "aku",
+       "from": 975,
+       "to": 993
+      },
+      {
+       "w": "gerak",
+       "from": 993,
+       "to": 1005
+      },
+      {
+       "w": "duluan",
+       "from": 1005,
+       "to": 1017
+      },
+      {
+       "w": "selesai",
+       "from": 1017,
+       "to": 1033
+      },
+      {
+       "w": "hidupmu",
+       "from": 1033,
+       "to": 1045
+      }
+     ]
+    },
+    {
+     "id": "e4",
+     "speaker": "qinmu",
+     "text": "Tepat saat itu, si penantang benar-benar mencabut pistolnya lebih dulu!",
+     "score": 0.992,
+     "durSec": 3.338,
+     "file": "out/voice/duel/e4.wav",
+     "wordsSec": [
+      [
+       "Tempat",
+       0.0,
+       0.24
+      ],
+      [
+       "saat",
+       0.24,
+       0.38
+      ],
+      [
+       "itu,",
+       0.38,
+       0.54
+      ],
+      [
+       "si",
+       0.78,
+       1.12
+      ],
+      [
+       "penantang",
+       1.12,
+       1.58
+      ],
+      [
+       "benar",
+       1.58,
+       1.78
+      ],
+      [
+       "-benar",
+       1.78,
+       2.0
+      ],
+      [
+       "mencabut",
+       2.0,
+       2.32
+      ],
+      [
+       "pistolnya",
+       2.32,
+       2.74
+      ],
+      [
+       "lebih",
+       2.74,
+       2.9
+      ],
+      [
+       "dulu!",
+       2.9,
+       3.12
+      ]
+     ],
+     "from": 1055,
+     "to": 1155,
+     "words": [
+      {
+       "w": "Tempat",
+       "from": 1055,
+       "to": 1062
+      },
+      {
+       "w": "saat",
+       "from": 1062,
+       "to": 1066
+      },
+      {
+       "w": "itu,",
+       "from": 1066,
+       "to": 1071
+      },
+      {
+       "w": "si",
+       "from": 1078,
+       "to": 1088
+      },
+      {
+       "w": "penantang",
+       "from": 1088,
+       "to": 1102
+      },
+      {
+       "w": "benar",
+       "from": 1102,
+       "to": 1108
+      },
+      {
+       "w": "-benar",
+       "from": 1108,
+       "to": 1115
+      },
+      {
+       "w": "mencabut",
+       "from": 1115,
+       "to": 1124
+      },
+      {
+       "w": "pistolnya",
+       "from": 1124,
+       "to": 1137
+      },
+      {
+       "w": "lebih",
+       "from": 1137,
+       "to": 1142
+      },
+      {
+       "w": "dulu!",
+       "from": 1142,
+       "to": 1148
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "analogi",
+   "from": 1165,
+   "to": 1558,
+   "lines": [
+    {
+     "id": "a1",
+     "speaker": "qinmu",
+     "text": "Begini rahasianya: bayangkan hape kamu tiba-tiba meluncur jatuh dari pinggir meja.",
+     "score": 0.978,
+     "durSec": 3.983,
+     "file": "out/voice/duel/a1.wav",
+     "wordsSec": [
+      [
+       "begini",
+       0.0,
+       0.28
+      ],
+      [
+       "rahasianya,",
+       0.28,
+       0.82
+      ],
+      [
+       "bayangkan",
+       0.94,
+       1.48
+      ],
+      [
+       "HPKmu",
+       1.48,
+       2.1
+      ],
+      [
+       "tiba",
+       2.1,
+       2.3
+      ],
+      [
+       "-tiba",
+       2.3,
+       2.52
+      ],
+      [
+       "meluncur",
+       2.52,
+       2.86
+      ],
+      [
+       "jatuh",
+       2.86,
+       3.16
+      ],
+      [
+       "dari",
+       3.16,
+       3.26
+      ],
+      [
+       "pinggir",
+       3.26,
+       3.62
+      ],
+      [
+       "meja.",
+       3.62,
+       3.86
+      ]
+     ],
+     "from": 1165,
+     "to": 1285,
+     "words": [
+      {
+       "w": "begini",
+       "from": 1165,
+       "to": 1174
+      },
+      {
+       "w": "rahasianya,",
+       "from": 1174,
+       "to": 1190
+      },
+      {
+       "w": "bayangkan",
+       "from": 1194,
+       "to": 1210
+      },
+      {
+       "w": "HPKmu",
+       "from": 1210,
+       "to": 1228
+      },
+      {
+       "w": "tiba",
+       "from": 1228,
+       "to": 1234
+      },
+      {
+       "w": "-tiba",
+       "from": 1234,
+       "to": 1241
+      },
+      {
+       "w": "meluncur",
+       "from": 1241,
+       "to": 1251
+      },
+      {
+       "w": "jatuh",
+       "from": 1251,
+       "to": 1260
+      },
+      {
+       "w": "dari",
+       "from": 1260,
+       "to": 1263
+      },
+      {
+       "w": "pinggir",
+       "from": 1263,
+       "to": 1274
+      },
+      {
+       "w": "meja.",
+       "from": 1274,
+       "to": 1281
+      }
+     ]
+    },
+    {
+     "id": "a2",
+     "speaker": "qinmu",
+     "text": "Kalau kamu niat mengambil hape dengan sadar, otakmu butuh waktu mikir dulu.",
+     "score": 1.0,
+     "durSec": 3.803,
+     "file": "out/voice/duel/a2.wav",
+     "wordsSec": [
+      [
+       "Kalau",
+       0.0,
+       0.16
+      ],
+      [
+       "kamu",
+       0.16,
+       0.44
+      ],
+      [
+       "niat",
+       0.44,
+       0.74
+      ],
+      [
+       "mengambil",
+       0.74,
+       1.08
+      ],
+      [
+       "hape",
+       1.08,
+       1.32
+      ],
+      [
+       "dengan",
+       1.32,
+       1.46
+      ],
+      [
+       "sadar,",
+       1.46,
+       2.02
+      ],
+      [
+       "otakmu",
+       2.22,
+       2.7
+      ],
+      [
+       "butuh",
+       2.7,
+       2.96
+      ],
+      [
+       "waktu",
+       2.96,
+       3.1
+      ],
+      [
+       "mikir",
+       3.1,
+       3.44
+      ],
+      [
+       "dulu.",
+       3.44,
+       3.62
+      ]
+     ],
+     "from": 1290,
+     "to": 1404,
+     "words": [
+      {
+       "w": "Kalau",
+       "from": 1290,
+       "to": 1295
+      },
+      {
+       "w": "kamu",
+       "from": 1295,
+       "to": 1303
+      },
+      {
+       "w": "niat",
+       "from": 1303,
+       "to": 1312
+      },
+      {
+       "w": "mengambil",
+       "from": 1312,
+       "to": 1322
+      },
+      {
+       "w": "hape",
+       "from": 1322,
+       "to": 1329
+      },
+      {
+       "w": "dengan",
+       "from": 1329,
+       "to": 1334
+      },
+      {
+       "w": "sadar,",
+       "from": 1334,
+       "to": 1350
+      },
+      {
+       "w": "otakmu",
+       "from": 1356,
+       "to": 1371
+      },
+      {
+       "w": "butuh",
+       "from": 1371,
+       "to": 1379
+      },
+      {
+       "w": "waktu",
+       "from": 1379,
+       "to": 1383
+      },
+      {
+       "w": "mikir",
+       "from": 1383,
+       "to": 1393
+      },
+      {
+       "w": "dulu.",
+       "from": 1393,
+       "to": 1398
+      }
+     ]
+    },
+    {
+     "id": "a3",
+     "speaker": "qinmu",
+     "text": "Tapi saat melihat benda jatuh, jalur refleks langsung menyambar dua ratus milidetik lebih cepat!",
+     "score": 0.932,
+     "durSec": 4.64,
+     "file": "out/voice/duel/a3.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.18
+      ],
+      [
+       "saat",
+       0.18,
+       0.38
+      ],
+      [
+       "melihat",
+       0.38,
+       0.74
+      ],
+      [
+       "benda",
+       0.74,
+       1.02
+      ],
+      [
+       "jatuh,",
+       1.02,
+       1.64
+      ],
+      [
+       "jalur",
+       1.64,
+       2.1
+      ],
+      [
+       "Reflex",
+       2.1,
+       2.42
+      ],
+      [
+       "langsung",
+       2.42,
+       2.76
+      ],
+      [
+       "menyamber",
+       2.76,
+       3.14
+      ],
+      [
+       "200",
+       3.14,
+       3.5
+      ],
+      [
+       "bilik",
+       3.5,
+       3.8
+      ],
+      [
+       "datik",
+       3.8,
+       4.08
+      ],
+      [
+       "lebih",
+       4.08,
+       4.2
+      ],
+      [
+       "cepat.",
+       4.2,
+       4.54
+      ]
+     ],
+     "from": 1409,
+     "to": 1548,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 1409,
+       "to": 1414
+      },
+      {
+       "w": "saat",
+       "from": 1414,
+       "to": 1420
+      },
+      {
+       "w": "melihat",
+       "from": 1420,
+       "to": 1431
+      },
+      {
+       "w": "benda",
+       "from": 1431,
+       "to": 1439
+      },
+      {
+       "w": "jatuh,",
+       "from": 1439,
+       "to": 1458
+      },
+      {
+       "w": "jalur",
+       "from": 1458,
+       "to": 1472
+      },
+      {
+       "w": "Reflex",
+       "from": 1472,
+       "to": 1481
+      },
+      {
+       "w": "langsung",
+       "from": 1481,
+       "to": 1491
+      },
+      {
+       "w": "menyamber",
+       "from": 1491,
+       "to": 1503
+      },
+      {
+       "w": "200",
+       "from": 1503,
+       "to": 1514
+      },
+      {
+       "w": "bilik",
+       "from": 1514,
+       "to": 1523
+      },
+      {
+       "w": "datik",
+       "from": 1523,
+       "to": 1531
+      },
+      {
+       "w": "lebih",
+       "from": 1531,
+       "to": 1535
+      },
+      {
+       "w": "cepat.",
+       "from": 1535,
+       "to": 1545
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "payoff",
+   "from": 1558,
+   "to": 1921,
+   "lines": [
+    {
+     "id": "p1",
+     "speaker": "qinmu",
+     "text": "Gerakan si pengejek tadi justru jadi pemicu refleks tercepat lawannya!",
+     "score": 0.958,
+     "durSec": 3.425,
+     "file": "out/voice/duel/p1.wav",
+     "wordsSec": [
+      [
+       "gerakan",
+       0.0,
+       0.36
+      ],
+      [
+       "si",
+       0.36,
+       0.48
+      ],
+      [
+       "pengecek",
+       0.48,
+       0.92
+      ],
+      [
+       "tadi",
+       0.92,
+       1.18
+      ],
+      [
+       "justru",
+       1.18,
+       1.7
+      ],
+      [
+       "jadi",
+       1.7,
+       1.86
+      ],
+      [
+       "pemicu",
+       1.86,
+       2.24
+      ],
+      [
+       "reflektor",
+       2.24,
+       2.56
+      ],
+      [
+       "cepat",
+       2.56,
+       2.9
+      ],
+      [
+       "lawannya",
+       2.9,
+       3.22
+      ]
+     ],
+     "from": 1558,
+     "to": 1661,
+     "words": [
+      {
+       "w": "gerakan",
+       "from": 1558,
+       "to": 1569
+      },
+      {
+       "w": "si",
+       "from": 1569,
+       "to": 1573
+      },
+      {
+       "w": "pengecek",
+       "from": 1573,
+       "to": 1586
+      },
+      {
+       "w": "tadi",
+       "from": 1586,
+       "to": 1594
+      },
+      {
+       "w": "justru",
+       "from": 1594,
+       "to": 1609
+      },
+      {
+       "w": "jadi",
+       "from": 1609,
+       "to": 1614
+      },
+      {
+       "w": "pemicu",
+       "from": 1614,
+       "to": 1626
+      },
+      {
+       "w": "reflektor",
+       "from": 1626,
+       "to": 1635
+      },
+      {
+       "w": "cepat",
+       "from": 1635,
+       "to": 1645
+      },
+      {
+       "w": "lawannya",
+       "from": 1645,
+       "to": 1655
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "speaker": "bang_udin",
+     "text": "Terlambat, anak muda.",
+     "score": 0.824,
+     "durSec": 1.208,
+     "file": "out/voice/duel/p2.wav",
+     "wordsSec": [
+      [
+       "tak",
+       0.0,
+       0.1
+      ],
+      [
+       "nambat",
+       0.1,
+       0.48
+      ],
+      [
+       "anak",
+       0.48,
+       0.72
+      ],
+      [
+       "muda.",
+       0.72,
+       1.08
+      ]
+     ],
+     "from": 1666,
+     "to": 1702,
+     "words": [
+      {
+       "w": "tak",
+       "from": 1666,
+       "to": 1669
+      },
+      {
+       "w": "nambat",
+       "from": 1669,
+       "to": 1680
+      },
+      {
+       "w": "anak",
+       "from": 1680,
+       "to": 1688
+      },
+      {
+       "w": "muda.",
+       "from": 1688,
+       "to": 1698
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "speaker": "sombong",
+     "text": "Hah?! Kok pistolku yang terbang?!",
+     "score": 0.92,
+     "durSec": 2.636,
+     "file": "out/voice/duel/p3.wav",
+     "wordsSec": [
+      [
+       "Hah!",
+       0.0,
+       0.36
+      ],
+      [
+       "Kopi",
+       0.72,
+       1.26
+      ],
+      [
+       "stall",
+       1.26,
+       1.48
+      ],
+      [
+       "ku",
+       1.48,
+       1.66
+      ],
+      [
+       "yang",
+       1.66,
+       1.8
+      ],
+      [
+       "terbang!",
+       1.8,
+       2.3
+      ]
+     ],
+     "from": 1707,
+     "to": 1786,
+     "words": [
+      {
+       "w": "Hah!",
+       "from": 1707,
+       "to": 1718
+      },
+      {
+       "w": "Kopi",
+       "from": 1729,
+       "to": 1745
+      },
+      {
+       "w": "stall",
+       "from": 1745,
+       "to": 1751
+      },
+      {
+       "w": "ku",
+       "from": 1751,
+       "to": 1757
+      },
+      {
+       "w": "yang",
+       "from": 1757,
+       "to": 1761
+      },
+      {
+       "w": "terbang!",
+       "from": 1761,
+       "to": 1776
+      }
+     ]
+    },
+    {
+     "id": "p4",
+     "speaker": "qinmu",
+     "text": "Karena gerakan bereaksi selalu menang telak dari niat, makanya...",
+     "score": 0.981,
+     "durSec": 4.003,
+     "file": "out/voice/duel/p4.wav",
+     "wordsSec": [
+      [
+       "karena",
+       0.0,
+       0.28
+      ],
+      [
+       "gerakan",
+       0.28,
+       0.78
+      ],
+      [
+       "reaksi",
+       0.78,
+       1.22
+      ],
+      [
+       "selalu",
+       1.22,
+       1.98
+      ],
+      [
+       "menang",
+       1.98,
+       2.32
+      ],
+      [
+       "telak",
+       2.32,
+       2.68
+      ],
+      [
+       "dari",
+       2.68,
+       2.82
+      ],
+      [
+       "niat.",
+       2.82,
+       3.16
+      ],
+      [
+       "Makanya.",
+       3.38,
+       3.78
+      ]
+     ],
+     "from": 1791,
+     "to": 1911,
+     "words": [
+      {
+       "w": "karena",
+       "from": 1791,
+       "to": 1799
+      },
+      {
+       "w": "gerakan",
+       "from": 1799,
+       "to": 1814
+      },
+      {
+       "w": "reaksi",
+       "from": 1814,
+       "to": 1827
+      },
+      {
+       "w": "selalu",
+       "from": 1827,
+       "to": 1850
+      },
+      {
+       "w": "menang",
+       "from": 1850,
+       "to": 1860
+      },
+      {
+       "w": "telak",
+       "from": 1860,
+       "to": 1871
+      },
+      {
+       "w": "dari",
+       "from": 1871,
+       "to": 1875
+      },
+      {
+       "w": "niat.",
+       "from": 1875,
+       "to": 1886
+      },
+      {
+       "w": "Makanya.",
+       "from": 1892,
+       "to": 1904
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "byId": {
+  "h1": {
+   "id": "h1",
+   "speaker": "qinmu",
+   "text": "Di duel koboi Wild West, orang yang menembak duluan justru hampir selalu kalah.",
+   "score": 0.947,
+   "durSec": 4.991,
+   "file": "out/voice/duel/h1.wav",
+   "wordsSec": [
+    [
+     "di",
+     0.0,
+     0.24
+    ],
+    [
+     "Dual",
+     0.24,
+     0.48
+    ],
+    [
+     "Cowboy",
+     0.48,
+     0.98
+    ],
+    [
+     "Wild",
+     0.98,
+     1.24
+    ],
+    [
+     "West.",
+     1.24,
+     1.66
+    ],
+    [
+     "Orang",
+     1.94,
+     2.48
+    ],
+    [
+     "yang",
+     2.48,
+     2.58
+    ],
+    [
+     "menembak",
+     2.58,
+     2.96
+    ],
+    [
+     "duluan",
+     2.96,
+     3.3
+    ],
+    [
+     "justru",
+     3.3,
+     3.68
+    ],
+    [
+     "hampir",
+     3.68,
+     4.24
+    ],
+    [
+     "selalu",
+     4.24,
+     4.56
+    ],
+    [
+     "kalah.",
+     4.56,
+     4.9
+    ]
+   ],
+   "from": 6,
+   "to": 156,
+   "words": [
+    {
+     "w": "di",
+     "from": 6,
+     "to": 13
+    },
+    {
+     "w": "Dual",
+     "from": 13,
+     "to": 20
+    },
+    {
+     "w": "Cowboy",
+     "from": 20,
+     "to": 35
+    },
+    {
+     "w": "Wild",
+     "from": 35,
+     "to": 43
+    },
+    {
+     "w": "West.",
+     "from": 43,
+     "to": 56
+    },
+    {
+     "w": "Orang",
+     "from": 64,
+     "to": 80
+    },
+    {
+     "w": "yang",
+     "from": 80,
+     "to": 83
+    },
+    {
+     "w": "menembak",
+     "from": 83,
+     "to": 95
+    },
+    {
+     "w": "duluan",
+     "from": 95,
+     "to": 105
+    },
+    {
+     "w": "justru",
+     "from": 105,
+     "to": 116
+    },
+    {
+     "w": "hampir",
+     "from": 116,
+     "to": 133
+    },
+    {
+     "w": "selalu",
+     "from": 133,
+     "to": 143
+    },
+    {
+     "w": "kalah.",
+     "from": 143,
+     "to": 153
+    }
+   ]
+  },
+  "s1": {
+   "id": "s1",
+   "speaker": "qinmu",
+   "text": "Di jalanan berdebu kota koboi, dua penembak berdiri saling tatap menanti satu peluru penentu.",
+   "score": 0.986,
+   "durSec": 4.8,
+   "file": "out/voice/duel/s1.wav",
+   "wordsSec": [
+    [
+     "di",
+     0.0,
+     0.16
+    ],
+    [
+     "jalanan",
+     0.16,
+     0.64
+    ],
+    [
+     "berdebu",
+     0.64,
+     1.06
+    ],
+    [
+     "kota",
+     1.06,
+     1.32
+    ],
+    [
+     "Koboy.",
+     1.32,
+     1.72
+    ],
+    [
+     "2",
+     2.0,
+     2.22
+    ],
+    [
+     "penembak",
+     2.22,
+     2.6
+    ],
+    [
+     "berdiri",
+     2.6,
+     2.94
+    ],
+    [
+     "saling",
+     2.94,
+     3.16
+    ],
+    [
+     "tatap,",
+     3.16,
+     3.46
+    ],
+    [
+     "menanti",
+     3.56,
+     3.9
+    ],
+    [
+     "1",
+     3.9,
+     4.08
+    ],
+    [
+     "peluru",
+     4.08,
+     4.34
+    ],
+    [
+     "penentu.",
+     4.34,
+     4.68
+    ]
+   ],
+   "from": 166,
+   "to": 310,
+   "words": [
+    {
+     "w": "di",
+     "from": 166,
+     "to": 171
+    },
+    {
+     "w": "jalanan",
+     "from": 171,
+     "to": 185
+    },
+    {
+     "w": "berdebu",
+     "from": 185,
+     "to": 198
+    },
+    {
+     "w": "kota",
+     "from": 198,
+     "to": 206
+    },
+    {
+     "w": "Koboy.",
+     "from": 206,
+     "to": 218
+    },
+    {
+     "w": "2",
+     "from": 226,
+     "to": 233
+    },
+    {
+     "w": "penembak",
+     "from": 233,
+     "to": 244
+    },
+    {
+     "w": "berdiri",
+     "from": 244,
+     "to": 254
+    },
+    {
+     "w": "saling",
+     "from": 254,
+     "to": 261
+    },
+    {
+     "w": "tatap,",
+     "from": 261,
+     "to": 270
+    },
+    {
+     "w": "menanti",
+     "from": 273,
+     "to": 283
+    },
+    {
+     "w": "1",
+     "from": 283,
+     "to": 289
+    },
+    {
+     "w": "peluru",
+     "from": 289,
+     "to": 296
+    },
+    {
+     "w": "penentu.",
+     "from": 296,
+     "to": 307
+    }
+   ]
+  },
+  "s2": {
+   "id": "s2",
+   "speaker": "qinmu",
+   "text": "Si penantang muda sudah mengantongi dua belas kemenangan, sementara lawannya cuma koboi tua yang super tenang.",
+   "score": 1.0,
+   "durSec": 4.52,
+   "file": "out/voice/duel/s2.wav",
+   "wordsSec": [
+    [
+     "Si",
+     0.0,
+     0.14
+    ],
+    [
+     "penantang",
+     0.14,
+     0.66
+    ],
+    [
+     "muda",
+     0.66,
+     0.92
+    ],
+    [
+     "sudah",
+     0.92,
+     1.0
+    ],
+    [
+     "mengantongi",
+     1.0,
+     1.44
+    ],
+    [
+     "12",
+     1.44,
+     1.68
+    ],
+    [
+     "kemenangan,",
+     1.68,
+     2.08
+    ],
+    [
+     "sementara",
+     2.24,
+     2.6
+    ],
+    [
+     "lawannya,",
+     2.6,
+     2.9
+    ],
+    [
+     "cuma",
+     3.06,
+     3.2
+    ],
+    [
+     "Kobo",
+     3.2,
+     3.48
+    ],
+    [
+     "itu",
+     3.48,
+     3.58
+    ],
+    [
+     "ayang",
+     3.58,
+     3.78
+    ],
+    [
+     "super",
+     3.78,
+     3.96
+    ],
+    [
+     "tenang.",
+     3.96,
+     4.3
+    ]
+   ],
+   "from": 315,
+   "to": 451,
+   "words": [
+    {
+     "w": "Si",
+     "from": 315,
+     "to": 319
+    },
+    {
+     "w": "penantang",
+     "from": 319,
+     "to": 335
+    },
+    {
+     "w": "muda",
+     "from": 335,
+     "to": 343
+    },
+    {
+     "w": "sudah",
+     "from": 343,
+     "to": 345
+    },
+    {
+     "w": "mengantongi",
+     "from": 345,
+     "to": 358
+    },
+    {
+     "w": "12",
+     "from": 358,
+     "to": 365
+    },
+    {
+     "w": "kemenangan,",
+     "from": 365,
+     "to": 377
+    },
+    {
+     "w": "sementara",
+     "from": 382,
+     "to": 393
+    },
+    {
+     "w": "lawannya,",
+     "from": 393,
+     "to": 402
+    },
+    {
+     "w": "cuma",
+     "from": 407,
+     "to": 411
+    },
+    {
+     "w": "Kobo",
+     "from": 411,
+     "to": 419
+    },
+    {
+     "w": "itu",
+     "from": 419,
+     "to": 422
+    },
+    {
+     "w": "ayang",
+     "from": 422,
+     "to": 428
+    },
+    {
+     "w": "super",
+     "from": 428,
+     "to": 434
+    },
+    {
+     "w": "tenang.",
+     "from": 434,
+     "to": 444
+    }
+   ]
+  },
+  "m1": {
+   "id": "m1",
+   "speaker": "sombong",
+   "text": "Hah! Orang tua lambat! Aku cabut pistol duluan, kamu udah jadi debu!",
+   "score": 1.0,
+   "durSec": 4.66,
+   "file": "out/voice/duel/m1.wav",
+   "wordsSec": [
+    [
+     "Hah,",
+     0.0,
+     0.22
+    ],
+    [
+     "orang",
+     0.4,
+     0.62
+    ],
+    [
+     "tua",
+     0.62,
+     0.86
+    ],
+    [
+     "lambat!",
+     0.86,
+     1.36
+    ],
+    [
+     "Aku",
+     1.54,
+     1.92
+    ],
+    [
+     "cabut",
+     1.92,
+     2.3
+    ],
+    [
+     "pistol",
+     2.3,
+     2.68
+    ],
+    [
+     "duluan!",
+     2.68,
+     3.16
+    ],
+    [
+     "Kamu",
+     3.32,
+     3.6
+    ],
+    [
+     "udah",
+     3.6,
+     3.76
+    ],
+    [
+     "jadi",
+     3.76,
+     4.02
+    ],
+    [
+     "debu!",
+     4.02,
+     4.48
+    ]
+   ],
+   "from": 461,
+   "to": 601,
+   "words": [
+    {
+     "w": "Hah,",
+     "from": 461,
+     "to": 468
+    },
+    {
+     "w": "orang",
+     "from": 473,
+     "to": 480
+    },
+    {
+     "w": "tua",
+     "from": 480,
+     "to": 487
+    },
+    {
+     "w": "lambat!",
+     "from": 487,
+     "to": 502
+    },
+    {
+     "w": "Aku",
+     "from": 507,
+     "to": 519
+    },
+    {
+     "w": "cabut",
+     "from": 519,
+     "to": 530
+    },
+    {
+     "w": "pistol",
+     "from": 530,
+     "to": 542
+    },
+    {
+     "w": "duluan!",
+     "from": 542,
+     "to": 556
+    },
+    {
+     "w": "Kamu",
+     "from": 561,
+     "to": 569
+    },
+    {
+     "w": "udah",
+     "from": 569,
+     "to": 574
+    },
+    {
+     "w": "jadi",
+     "from": 574,
+     "to": 582
+    },
+    {
+     "w": "debu!",
+     "from": 582,
+     "to": 596
+    }
+   ]
+  },
+  "m2": {
+   "id": "m2",
+   "speaker": "qinmu",
+   "text": "Tapi si koboi tua cuma diam, tangannya santai di atas sarung pistol.",
+   "score": 0.938,
+   "durSec": 3.228,
+   "file": "out/voice/duel/m2.wav",
+   "wordsSec": [
+    [
+     "Tapi",
+     0.0,
+     0.22
+    ],
+    [
+     "si",
+     0.22,
+     0.38
+    ],
+    [
+     "cowboy",
+     0.38,
+     0.62
+    ],
+    [
+     "itu",
+     0.62,
+     0.82
+    ],
+    [
+     "acuman",
+     0.82,
+     1.12
+    ],
+    [
+     "diam,",
+     1.12,
+     1.32
+    ],
+    [
+     "tangannya",
+     1.66,
+     1.94
+    ],
+    [
+     "santai",
+     1.94,
+     2.34
+    ],
+    [
+     "di",
+     2.34,
+     2.44
+    ],
+    [
+     "atas",
+     2.44,
+     2.62
+    ],
+    [
+     "harung",
+     2.62,
+     2.76
+    ],
+    [
+     "pistol.",
+     2.76,
+     2.98
+    ]
+   ],
+   "from": 606,
+   "to": 703,
+   "words": [
+    {
+     "w": "Tapi",
+     "from": 606,
+     "to": 612
+    },
+    {
+     "w": "si",
+     "from": 612,
+     "to": 617
+    },
+    {
+     "w": "cowboy",
+     "from": 617,
+     "to": 624
+    },
+    {
+     "w": "itu",
+     "from": 624,
+     "to": 630
+    },
+    {
+     "w": "acuman",
+     "from": 630,
+     "to": 639
+    },
+    {
+     "w": "diam,",
+     "from": 639,
+     "to": 645
+    },
+    {
+     "w": "tangannya",
+     "from": 656,
+     "to": 664
+    },
+    {
+     "w": "santai",
+     "from": 664,
+     "to": 676
+    },
+    {
+     "w": "di",
+     "from": 676,
+     "to": 679
+    },
+    {
+     "w": "atas",
+     "from": 679,
+     "to": 684
+    },
+    {
+     "w": "harung",
+     "from": 684,
+     "to": 689
+    },
+    {
+     "w": "pistol.",
+     "from": 689,
+     "to": 695
+    }
+   ]
+  },
+  "e1": {
+   "id": "e1",
+   "speaker": "qinmu",
+   "text": "Angin gurun berhembus kencang, lonceng gereja berdentang, dan keringat dingin mulai menetes.",
+   "score": 0.987,
+   "durSec": 4.435,
+   "file": "out/voice/duel/e1.wav",
+   "wordsSec": [
+    [
+     "Angin",
+     0.0,
+     0.28
+    ],
+    [
+     "gurung",
+     0.28,
+     0.54
+    ],
+    [
+     "berhembus",
+     0.54,
+     0.86
+    ],
+    [
+     "kencang,",
+     0.86,
+     1.24
+    ],
+    [
+     "lonceng",
+     1.58,
+     2.1
+    ],
+    [
+     "gereja",
+     2.1,
+     2.34
+    ],
+    [
+     "berentang",
+     2.34,
+     2.8
+    ],
+    [
+     "dan",
+     2.8,
+     3.06
+    ],
+    [
+     "keringat",
+     3.06,
+     3.46
+    ],
+    [
+     "dingin",
+     3.46,
+     3.7
+    ],
+    [
+     "mulai",
+     3.7,
+     3.94
+    ],
+    [
+     "menetes.",
+     3.94,
+     4.16
+    ]
+   ],
+   "from": 713,
+   "to": 846,
+   "words": [
+    {
+     "w": "Angin",
+     "from": 713,
+     "to": 721
+    },
+    {
+     "w": "gurung",
+     "from": 721,
+     "to": 729
+    },
+    {
+     "w": "berhembus",
+     "from": 729,
+     "to": 739
+    },
+    {
+     "w": "kencang,",
+     "from": 739,
+     "to": 750
+    },
+    {
+     "w": "lonceng",
+     "from": 760,
+     "to": 776
+    },
+    {
+     "w": "gereja",
+     "from": 776,
+     "to": 783
+    },
+    {
+     "w": "berentang",
+     "from": 783,
+     "to": 797
+    },
+    {
+     "w": "dan",
+     "from": 797,
+     "to": 805
+    },
+    {
+     "w": "keringat",
+     "from": 805,
+     "to": 817
+    },
+    {
+     "w": "dingin",
+     "from": 817,
+     "to": 824
+    },
+    {
+     "w": "mulai",
+     "from": 824,
+     "to": 831
+    },
+    {
+     "w": "menetes.",
+     "from": 831,
+     "to": 838
+    }
+   ]
+  },
+  "e2": {
+   "id": "e2",
+   "speaker": "ara",
+   "text": "Waduh, lihat tuh! Jari si penantang udah gemetar di atas pistolnya!",
+   "score": 0.943,
+   "durSec": 3.383,
+   "file": "out/voice/duel/e2.wav",
+   "wordsSec": [
+    [
+     "Udah,",
+     0.0,
+     0.32
+    ],
+    [
+     "liat",
+     0.56,
+     0.88
+    ],
+    [
+     "tuh!",
+     0.88,
+     1.0
+    ],
+    [
+     "Jari",
+     1.36,
+     1.58
+    ],
+    [
+     "si",
+     1.58,
+     1.68
+    ],
+    [
+     "penantang",
+     1.68,
+     2.04
+    ],
+    [
+     "udah",
+     2.04,
+     2.16
+    ],
+    [
+     "gemetar",
+     2.16,
+     2.54
+    ],
+    [
+     "di",
+     2.54,
+     2.64
+    ],
+    [
+     "atas",
+     2.64,
+     2.8
+    ],
+    [
+     "pistolnya!",
+     2.8,
+     3.24
+    ]
+   ],
+   "from": 851,
+   "to": 952,
+   "words": [
+    {
+     "w": "Udah,",
+     "from": 851,
+     "to": 861
+    },
+    {
+     "w": "liat",
+     "from": 868,
+     "to": 877
+    },
+    {
+     "w": "tuh!",
+     "from": 877,
+     "to": 881
+    },
+    {
+     "w": "Jari",
+     "from": 892,
+     "to": 898
+    },
+    {
+     "w": "si",
+     "from": 898,
+     "to": 901
+    },
+    {
+     "w": "penantang",
+     "from": 901,
+     "to": 912
+    },
+    {
+     "w": "udah",
+     "from": 912,
+     "to": 916
+    },
+    {
+     "w": "gemetar",
+     "from": 916,
+     "to": 927
+    },
+    {
+     "w": "di",
+     "from": 927,
+     "to": 930
+    },
+    {
+     "w": "atas",
+     "from": 930,
+     "to": 935
+    },
+    {
+     "w": "pistolnya!",
+     "from": 935,
+     "to": 948
+    }
+   ]
+  },
+  "e3": {
+   "id": "e3",
+   "speaker": "sombong",
+   "text": "Lihat nih! Aku gerak duluan, selesai hidupmu!",
+   "score": 1.0,
+   "durSec": 3.094,
+   "file": "out/voice/duel/e3.wav",
+   "wordsSec": [
+    [
+     "lihat",
+     0.0,
+     0.32
+    ],
+    [
+     "nih",
+     0.32,
+     0.58
+    ],
+    [
+     "aku",
+     0.58,
+     1.2
+    ],
+    [
+     "gerak",
+     1.2,
+     1.58
+    ],
+    [
+     "duluan",
+     1.58,
+     1.98
+    ],
+    [
+     "selesai",
+     1.98,
+     2.52
+    ],
+    [
+     "hidupmu",
+     2.52,
+     2.94
+    ]
+   ],
+   "from": 957,
+   "to": 1050,
+   "words": [
+    {
+     "w": "lihat",
+     "from": 957,
+     "to": 967
+    },
+    {
+     "w": "nih",
+     "from": 967,
+     "to": 975
+    },
+    {
+     "w": "aku",
+     "from": 975,
+     "to": 993
+    },
+    {
+     "w": "gerak",
+     "from": 993,
+     "to": 1005
+    },
+    {
+     "w": "duluan",
+     "from": 1005,
+     "to": 1017
+    },
+    {
+     "w": "selesai",
+     "from": 1017,
+     "to": 1033
+    },
+    {
+     "w": "hidupmu",
+     "from": 1033,
+     "to": 1045
+    }
+   ]
+  },
+  "e4": {
+   "id": "e4",
+   "speaker": "qinmu",
+   "text": "Tepat saat itu, si penantang benar-benar mencabut pistolnya lebih dulu!",
+   "score": 0.992,
+   "durSec": 3.338,
+   "file": "out/voice/duel/e4.wav",
+   "wordsSec": [
+    [
+     "Tempat",
+     0.0,
+     0.24
+    ],
+    [
+     "saat",
+     0.24,
+     0.38
+    ],
+    [
+     "itu,",
+     0.38,
+     0.54
+    ],
+    [
+     "si",
+     0.78,
+     1.12
+    ],
+    [
+     "penantang",
+     1.12,
+     1.58
+    ],
+    [
+     "benar",
+     1.58,
+     1.78
+    ],
+    [
+     "-benar",
+     1.78,
+     2.0
+    ],
+    [
+     "mencabut",
+     2.0,
+     2.32
+    ],
+    [
+     "pistolnya",
+     2.32,
+     2.74
+    ],
+    [
+     "lebih",
+     2.74,
+     2.9
+    ],
+    [
+     "dulu!",
+     2.9,
+     3.12
+    ]
+   ],
+   "from": 1055,
+   "to": 1155,
+   "words": [
+    {
+     "w": "Tempat",
+     "from": 1055,
+     "to": 1062
+    },
+    {
+     "w": "saat",
+     "from": 1062,
+     "to": 1066
+    },
+    {
+     "w": "itu,",
+     "from": 1066,
+     "to": 1071
+    },
+    {
+     "w": "si",
+     "from": 1078,
+     "to": 1088
+    },
+    {
+     "w": "penantang",
+     "from": 1088,
+     "to": 1102
+    },
+    {
+     "w": "benar",
+     "from": 1102,
+     "to": 1108
+    },
+    {
+     "w": "-benar",
+     "from": 1108,
+     "to": 1115
+    },
+    {
+     "w": "mencabut",
+     "from": 1115,
+     "to": 1124
+    },
+    {
+     "w": "pistolnya",
+     "from": 1124,
+     "to": 1137
+    },
+    {
+     "w": "lebih",
+     "from": 1137,
+     "to": 1142
+    },
+    {
+     "w": "dulu!",
+     "from": 1142,
+     "to": 1148
+    }
+   ]
+  },
+  "a1": {
+   "id": "a1",
+   "speaker": "qinmu",
+   "text": "Begini rahasianya: bayangkan hape kamu tiba-tiba meluncur jatuh dari pinggir meja.",
+   "score": 0.978,
+   "durSec": 3.983,
+   "file": "out/voice/duel/a1.wav",
+   "wordsSec": [
+    [
+     "begini",
+     0.0,
+     0.28
+    ],
+    [
+     "rahasianya,",
+     0.28,
+     0.82
+    ],
+    [
+     "bayangkan",
+     0.94,
+     1.48
+    ],
+    [
+     "HPKmu",
+     1.48,
+     2.1
+    ],
+    [
+     "tiba",
+     2.1,
+     2.3
+    ],
+    [
+     "-tiba",
+     2.3,
+     2.52
+    ],
+    [
+     "meluncur",
+     2.52,
+     2.86
+    ],
+    [
+     "jatuh",
+     2.86,
+     3.16
+    ],
+    [
+     "dari",
+     3.16,
+     3.26
+    ],
+    [
+     "pinggir",
+     3.26,
+     3.62
+    ],
+    [
+     "meja.",
+     3.62,
+     3.86
+    ]
+   ],
+   "from": 1165,
+   "to": 1285,
+   "words": [
+    {
+     "w": "begini",
+     "from": 1165,
+     "to": 1174
+    },
+    {
+     "w": "rahasianya,",
+     "from": 1174,
+     "to": 1190
+    },
+    {
+     "w": "bayangkan",
+     "from": 1194,
+     "to": 1210
+    },
+    {
+     "w": "HPKmu",
+     "from": 1210,
+     "to": 1228
+    },
+    {
+     "w": "tiba",
+     "from": 1228,
+     "to": 1234
+    },
+    {
+     "w": "-tiba",
+     "from": 1234,
+     "to": 1241
+    },
+    {
+     "w": "meluncur",
+     "from": 1241,
+     "to": 1251
+    },
+    {
+     "w": "jatuh",
+     "from": 1251,
+     "to": 1260
+    },
+    {
+     "w": "dari",
+     "from": 1260,
+     "to": 1263
+    },
+    {
+     "w": "pinggir",
+     "from": 1263,
+     "to": 1274
+    },
+    {
+     "w": "meja.",
+     "from": 1274,
+     "to": 1281
+    }
+   ]
+  },
+  "a2": {
+   "id": "a2",
+   "speaker": "qinmu",
+   "text": "Kalau kamu niat mengambil hape dengan sadar, otakmu butuh waktu mikir dulu.",
+   "score": 1.0,
+   "durSec": 3.803,
+   "file": "out/voice/duel/a2.wav",
+   "wordsSec": [
+    [
+     "Kalau",
+     0.0,
+     0.16
+    ],
+    [
+     "kamu",
+     0.16,
+     0.44
+    ],
+    [
+     "niat",
+     0.44,
+     0.74
+    ],
+    [
+     "mengambil",
+     0.74,
+     1.08
+    ],
+    [
+     "hape",
+     1.08,
+     1.32
+    ],
+    [
+     "dengan",
+     1.32,
+     1.46
+    ],
+    [
+     "sadar,",
+     1.46,
+     2.02
+    ],
+    [
+     "otakmu",
+     2.22,
+     2.7
+    ],
+    [
+     "butuh",
+     2.7,
+     2.96
+    ],
+    [
+     "waktu",
+     2.96,
+     3.1
+    ],
+    [
+     "mikir",
+     3.1,
+     3.44
+    ],
+    [
+     "dulu.",
+     3.44,
+     3.62
+    ]
+   ],
+   "from": 1290,
+   "to": 1404,
+   "words": [
+    {
+     "w": "Kalau",
+     "from": 1290,
+     "to": 1295
+    },
+    {
+     "w": "kamu",
+     "from": 1295,
+     "to": 1303
+    },
+    {
+     "w": "niat",
+     "from": 1303,
+     "to": 1312
+    },
+    {
+     "w": "mengambil",
+     "from": 1312,
+     "to": 1322
+    },
+    {
+     "w": "hape",
+     "from": 1322,
+     "to": 1329
+    },
+    {
+     "w": "dengan",
+     "from": 1329,
+     "to": 1334
+    },
+    {
+     "w": "sadar,",
+     "from": 1334,
+     "to": 1350
+    },
+    {
+     "w": "otakmu",
+     "from": 1356,
+     "to": 1371
+    },
+    {
+     "w": "butuh",
+     "from": 1371,
+     "to": 1379
+    },
+    {
+     "w": "waktu",
+     "from": 1379,
+     "to": 1383
+    },
+    {
+     "w": "mikir",
+     "from": 1383,
+     "to": 1393
+    },
+    {
+     "w": "dulu.",
+     "from": 1393,
+     "to": 1398
+    }
+   ]
+  },
+  "a3": {
+   "id": "a3",
+   "speaker": "qinmu",
+   "text": "Tapi saat melihat benda jatuh, jalur refleks langsung menyambar dua ratus milidetik lebih cepat!",
+   "score": 0.932,
+   "durSec": 4.64,
+   "file": "out/voice/duel/a3.wav",
+   "wordsSec": [
+    [
+     "Tapi",
+     0.0,
+     0.18
+    ],
+    [
+     "saat",
+     0.18,
+     0.38
+    ],
+    [
+     "melihat",
+     0.38,
+     0.74
+    ],
+    [
+     "benda",
+     0.74,
+     1.02
+    ],
+    [
+     "jatuh,",
+     1.02,
+     1.64
+    ],
+    [
+     "jalur",
+     1.64,
+     2.1
+    ],
+    [
+     "Reflex",
+     2.1,
+     2.42
+    ],
+    [
+     "langsung",
+     2.42,
+     2.76
+    ],
+    [
+     "menyamber",
+     2.76,
+     3.14
+    ],
+    [
+     "200",
+     3.14,
+     3.5
+    ],
+    [
+     "bilik",
+     3.5,
+     3.8
+    ],
+    [
+     "datik",
+     3.8,
+     4.08
+    ],
+    [
+     "lebih",
+     4.08,
+     4.2
+    ],
+    [
+     "cepat.",
+     4.2,
+     4.54
+    ]
+   ],
+   "from": 1409,
+   "to": 1548,
+   "words": [
+    {
+     "w": "Tapi",
+     "from": 1409,
+     "to": 1414
+    },
+    {
+     "w": "saat",
+     "from": 1414,
+     "to": 1420
+    },
+    {
+     "w": "melihat",
+     "from": 1420,
+     "to": 1431
+    },
+    {
+     "w": "benda",
+     "from": 1431,
+     "to": 1439
+    },
+    {
+     "w": "jatuh,",
+     "from": 1439,
+     "to": 1458
+    },
+    {
+     "w": "jalur",
+     "from": 1458,
+     "to": 1472
+    },
+    {
+     "w": "Reflex",
+     "from": 1472,
+     "to": 1481
+    },
+    {
+     "w": "langsung",
+     "from": 1481,
+     "to": 1491
+    },
+    {
+     "w": "menyamber",
+     "from": 1491,
+     "to": 1503
+    },
+    {
+     "w": "200",
+     "from": 1503,
+     "to": 1514
+    },
+    {
+     "w": "bilik",
+     "from": 1514,
+     "to": 1523
+    },
+    {
+     "w": "datik",
+     "from": 1523,
+     "to": 1531
+    },
+    {
+     "w": "lebih",
+     "from": 1531,
+     "to": 1535
+    },
+    {
+     "w": "cepat.",
+     "from": 1535,
+     "to": 1545
+    }
+   ]
+  },
+  "p1": {
+   "id": "p1",
+   "speaker": "qinmu",
+   "text": "Gerakan si pengejek tadi justru jadi pemicu refleks tercepat lawannya!",
+   "score": 0.958,
+   "durSec": 3.425,
+   "file": "out/voice/duel/p1.wav",
+   "wordsSec": [
+    [
+     "gerakan",
+     0.0,
+     0.36
+    ],
+    [
+     "si",
+     0.36,
+     0.48
+    ],
+    [
+     "pengecek",
+     0.48,
+     0.92
+    ],
+    [
+     "tadi",
+     0.92,
+     1.18
+    ],
+    [
+     "justru",
+     1.18,
+     1.7
+    ],
+    [
+     "jadi",
+     1.7,
+     1.86
+    ],
+    [
+     "pemicu",
+     1.86,
+     2.24
+    ],
+    [
+     "reflektor",
+     2.24,
+     2.56
+    ],
+    [
+     "cepat",
+     2.56,
+     2.9
+    ],
+    [
+     "lawannya",
+     2.9,
+     3.22
+    ]
+   ],
+   "from": 1558,
+   "to": 1661,
+   "words": [
+    {
+     "w": "gerakan",
+     "from": 1558,
+     "to": 1569
+    },
+    {
+     "w": "si",
+     "from": 1569,
+     "to": 1573
+    },
+    {
+     "w": "pengecek",
+     "from": 1573,
+     "to": 1586
+    },
+    {
+     "w": "tadi",
+     "from": 1586,
+     "to": 1594
+    },
+    {
+     "w": "justru",
+     "from": 1594,
+     "to": 1609
+    },
+    {
+     "w": "jadi",
+     "from": 1609,
+     "to": 1614
+    },
+    {
+     "w": "pemicu",
+     "from": 1614,
+     "to": 1626
+    },
+    {
+     "w": "reflektor",
+     "from": 1626,
+     "to": 1635
+    },
+    {
+     "w": "cepat",
+     "from": 1635,
+     "to": 1645
+    },
+    {
+     "w": "lawannya",
+     "from": 1645,
+     "to": 1655
+    }
+   ]
+  },
+  "p2": {
+   "id": "p2",
+   "speaker": "bang_udin",
+   "text": "Terlambat, anak muda.",
+   "score": 0.824,
+   "durSec": 1.208,
+   "file": "out/voice/duel/p2.wav",
+   "wordsSec": [
+    [
+     "tak",
+     0.0,
+     0.1
+    ],
+    [
+     "nambat",
+     0.1,
+     0.48
+    ],
+    [
+     "anak",
+     0.48,
+     0.72
+    ],
+    [
+     "muda.",
+     0.72,
+     1.08
+    ]
+   ],
+   "from": 1666,
+   "to": 1702,
+   "words": [
+    {
+     "w": "tak",
+     "from": 1666,
+     "to": 1669
+    },
+    {
+     "w": "nambat",
+     "from": 1669,
+     "to": 1680
+    },
+    {
+     "w": "anak",
+     "from": 1680,
+     "to": 1688
+    },
+    {
+     "w": "muda.",
+     "from": 1688,
+     "to": 1698
+    }
+   ]
+  },
+  "p3": {
+   "id": "p3",
+   "speaker": "sombong",
+   "text": "Hah?! Kok pistolku yang terbang?!",
+   "score": 0.92,
+   "durSec": 2.636,
+   "file": "out/voice/duel/p3.wav",
+   "wordsSec": [
+    [
+     "Hah!",
+     0.0,
+     0.36
+    ],
+    [
+     "Kopi",
+     0.72,
+     1.26
+    ],
+    [
+     "stall",
+     1.26,
+     1.48
+    ],
+    [
+     "ku",
+     1.48,
+     1.66
+    ],
+    [
+     "yang",
+     1.66,
+     1.8
+    ],
+    [
+     "terbang!",
+     1.8,
+     2.3
+    ]
+   ],
+   "from": 1707,
+   "to": 1786,
+   "words": [
+    {
+     "w": "Hah!",
+     "from": 1707,
+     "to": 1718
+    },
+    {
+     "w": "Kopi",
+     "from": 1729,
+     "to": 1745
+    },
+    {
+     "w": "stall",
+     "from": 1745,
+     "to": 1751
+    },
+    {
+     "w": "ku",
+     "from": 1751,
+     "to": 1757
+    },
+    {
+     "w": "yang",
+     "from": 1757,
+     "to": 1761
+    },
+    {
+     "w": "terbang!",
+     "from": 1761,
+     "to": 1776
+    }
+   ]
+  },
+  "p4": {
+   "id": "p4",
+   "speaker": "qinmu",
+   "text": "Karena gerakan bereaksi selalu menang telak dari niat, makanya...",
+   "score": 0.981,
+   "durSec": 4.003,
+   "file": "out/voice/duel/p4.wav",
+   "wordsSec": [
+    [
+     "karena",
+     0.0,
+     0.28
+    ],
+    [
+     "gerakan",
+     0.28,
+     0.78
+    ],
+    [
+     "reaksi",
+     0.78,
+     1.22
+    ],
+    [
+     "selalu",
+     1.22,
+     1.98
+    ],
+    [
+     "menang",
+     1.98,
+     2.32
+    ],
+    [
+     "telak",
+     2.32,
+     2.68
+    ],
+    [
+     "dari",
+     2.68,
+     2.82
+    ],
+    [
+     "niat.",
+     2.82,
+     3.16
+    ],
+    [
+     "Makanya.",
+     3.38,
+     3.78
+    ]
+   ],
+   "from": 1791,
+   "to": 1911,
+   "words": [
+    {
+     "w": "karena",
+     "from": 1791,
+     "to": 1799
+    },
+    {
+     "w": "gerakan",
+     "from": 1799,
+     "to": 1814
+    },
+    {
+     "w": "reaksi",
+     "from": 1814,
+     "to": 1827
+    },
+    {
+     "w": "selalu",
+     "from": 1827,
+     "to": 1850
+    },
+    {
+     "w": "menang",
+     "from": 1850,
+     "to": 1860
+    },
+    {
+     "w": "telak",
+     "from": 1860,
+     "to": 1871
+    },
+    {
+     "w": "dari",
+     "from": 1871,
+     "to": 1875
+    },
+    {
+     "w": "niat.",
+     "from": 1875,
+     "to": 1886
+    },
+    {
+     "w": "Makanya.",
+     "from": 1892,
+     "to": 1904
+    }
+   ]
+  }
+ }
+}
