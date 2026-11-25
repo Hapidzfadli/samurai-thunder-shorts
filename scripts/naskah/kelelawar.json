@@ -1,0 +1,39 @@
+[
+  {"scene": "hook", "takes": 3, "lines": [
+    ["narasi", "Tahun sembilan belas empat puluh tiga, Amerika membuat bom rahasia...", "dodi"],
+    ["santai", "dari kelelawar.", "dodi"]
+  ]},
+  {"scene": "gua", "takes": 3, "lines": [
+    ["narasi", "Idenya datang dari seorang dokter gigi, yang melihat jutaan kelelawar keluar dari gua.", "dodi"]
+  ]},
+  {"scene": "lab", "takes": 3, "lines": [
+    ["tegas", "Ara, lihat ini! Senjata rahasia kita, kelelawar pembawa bom api!", "dodi"],
+    ["santai", "Kelelawar? Yang kecil begini, Sersan?", "ara"],
+    ["tegas", "Justru itu. Satu kelelawar, satu bom kecil. Ribuan kelelawar, ribuan kebakaran!", "dodi"]
+  ]},
+  {"scene": "kulkas", "takes": 3, "lines": [
+    ["santai", "Terus, gimana caranya biar mereka nggak kabur?", "ara"],
+    ["santai", "Gampang. Masukin kulkas. Kedinginan, mereka tidur nyenyak.", "dodi"],
+    ["santai", "Ih, lucu... kayak es loli.", "ara"]
+  ]},
+  {"scene": "cara", "takes": 3, "lines": [
+    ["narasi", "Nanti dijatuhkan dari pesawat. Begitu hangat, mereka bangun, terbang, lalu sembunyi di atap.", "dodi"],
+    ["bisik", "Sembunyi di tempat yang gelap... dan tinggi, ya, Sersan?", "ara"],
+    ["tegas", "Persis!", "dodi"]
+  ]},
+  {"scene": "kandang", "takes": 3, "lines": [
+    ["santai", "Sersan... kelelawarnya sudah bangun.", "ara"],
+    ["tegang", "Hah? Siapa yang buka kandangnya?!", "dodi"],
+    ["bisik", "Tadi kepanasan. Kasihan...", "ara"]
+  ]},
+  {"scene": "tangki", "takes": 3, "lines": [
+    ["tegang", "Sersan, tempat gelap dan tinggi... kayak itu?", "ara"],
+    ["tegang", "Jangan ke sana... jangan ke sana!", "dodi"]
+  ]},
+  {"scene": "akhir", "takes": 3, "lines": [
+    ["narasi", "Bomnya berhasil. Terbukti bisa membakar... pangkalan sendiri.", "dodi"],
+    ["narasi", "Setahun kemudian proyek ini dibatalkan, kalah cepat dari bom atom.", "dodi"],
+    ["santai", "Jadi... kita menang, Sersan?", "ara"],
+    ["santai", "Yang menang... kelelawarnya.", "dodi"]
+  ]}
+]

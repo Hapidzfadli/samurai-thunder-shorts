@@ -373,9 +373,9 @@ export const Cactus: React.FC<{ pos: V3; s?: number }> = ({ pos, s = 1 }) => (
 export const CaveMouth: React.FC<{ pos?: V3; scale?: number }> = ({ pos = [0, 0, 0], scale = 1 }) => {
   const strata = useStrata([2.5, 1.2]);
   const rocks = useMemo(
-    () => new Array(9).fill(0).map((_, i) => {
-      const a = Math.PI * (i / 8);
-      return { x: Math.cos(a) * 2.9, y: Math.sin(a) * 2.6, r: 0.55 + (i % 3) * 0.15 };
+    () => new Array(15).fill(0).map((_, i) => {
+      const a = Math.PI * (i / 14);
+      return { x: Math.cos(a) * 2.75, y: Math.sin(a) * 2.5, r: 0.32 + (i % 3) * 0.1 };
     }),
     [],
   );
@@ -478,9 +478,15 @@ export const BatFridge: React.FC<{ pos?: V3; open?: number; frost?: number; t?: 
       <B pos={[1.15, 2.3, 0.2]} size={[0.16, 0.8, 0.06]} color="#ffffff" ink={0.02} />
       <B pos={[1.15, 2.1, 0.24]} size={[0.05, 0.36, 0.02]} color="#3a7ad6" ink={0.005} />
       {/* uap dingin */}
-      {open > 0.2 && [0, 1, 2].map((i) => (
-        <Ball key={i} pos={[-0.4 + i * 0.4, 0.3 + ((t * 0.5 + i * 0.33) % 1) * 0.4, 1.0 + ((t * 0.4 + i * 0.3) % 1) * 0.6]} r={0.22} color="#eef6ff" hull={0.02} />
-      ))}
+      {open > 0.2 && [0, 1, 2, 3].map((i) => {
+        const k = (t * 0.5 + i * 0.25) % 1;
+        return (
+          <mesh key={i} position={[-0.5 + i * 0.33, 0.25 + k * 0.6, 0.9 + k * 0.7]} scale={0.12 + k * 0.25}>
+            <sphereGeometry args={[1, 12, 8]} />
+            <meshBasicMaterial color="#eaf6ff" transparent opacity={0.45 * (1 - k) * open} depthWrite={false} />
+          </mesh>
+        );
+      })}
     </group>
   );
 };

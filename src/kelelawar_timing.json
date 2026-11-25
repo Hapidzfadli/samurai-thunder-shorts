@@ -1,0 +1,1993 @@
+{
+ "fps": 30,
+ "totalFrames": 3058,
+ "order": [
+  "hook",
+  "gua",
+  "lab",
+  "kulkas",
+  "cara",
+  "kandang",
+  "tangki",
+  "akhir"
+ ],
+ "scenes": {
+  "hook": {
+   "startFrame": 0,
+   "durationInFrames": 255
+  },
+  "gua": {
+   "startFrame": 255,
+   "durationInFrames": 253
+  },
+  "lab": {
+   "startFrame": 508,
+   "durationInFrames": 523
+  },
+  "kulkas": {
+   "startFrame": 1031,
+   "durationInFrames": 413
+  },
+  "cara": {
+   "startFrame": 1444,
+   "durationInFrames": 455
+  },
+  "kandang": {
+   "startFrame": 1899,
+   "durationInFrames": 305
+  },
+  "tangki": {
+   "startFrame": 2204,
+   "durationInFrames": 284
+  },
+  "akhir": {
+   "startFrame": 2488,
+   "durationInFrames": 570
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Tahun sembilan belas empat puluh tiga, Amerika membuat bom rahasia...",
+    "from": 16,
+    "to": 186,
+    "words": [
+     {
+      "w": "Tahun",
+      "from": 16,
+      "to": 30
+     },
+     {
+      "w": "sembilan",
+      "from": 31,
+      "to": 50
+     },
+     {
+      "w": "belas",
+      "from": 51,
+      "to": 65
+     },
+     {
+      "w": "empat",
+      "from": 66,
+      "to": 79
+     },
+     {
+      "w": "puluh",
+      "from": 81,
+      "to": 94
+     },
+     {
+      "w": "tiga,",
+      "from": 95,
+      "to": 106
+     },
+     {
+      "w": "Amerika",
+      "from": 114,
+      "to": 131
+     },
+     {
+      "w": "membuat",
+      "from": 132,
+      "to": 150
+     },
+     {
+      "w": "bom",
+      "from": 151,
+      "to": 160
+     },
+     {
+      "w": "rahasia...",
+      "from": 162,
+      "to": 179
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "dari kelelawar.",
+    "from": 200,
+    "to": 241,
+    "words": [
+     {
+      "w": "dari",
+      "from": 200,
+      "to": 211
+     },
+     {
+      "w": "kelelawar.",
+      "from": 212,
+      "to": 234
+     }
+    ]
+   }
+  ],
+  "gua": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Idenya datang dari seorang dokter gigi, yang melihat jutaan kelelawar keluar dari gua.",
+    "from": 16,
+    "to": 232,
+    "words": [
+     {
+      "w": "Idenya",
+      "from": 16,
+      "to": 32
+     },
+     {
+      "w": "datang",
+      "from": 33,
+      "to": 48
+     },
+     {
+      "w": "dari",
+      "from": 50,
+      "to": 61
+     },
+     {
+      "w": "seorang",
+      "from": 62,
+      "to": 79
+     },
+     {
+      "w": "dokter",
+      "from": 81,
+      "to": 96
+     },
+     {
+      "w": "gigi,",
+      "from": 97,
+      "to": 108
+     },
+     {
+      "w": "yang",
+      "from": 116,
+      "to": 127
+     },
+     {
+      "w": "melihat",
+      "from": 129,
+      "to": 146
+     },
+     {
+      "w": "jutaan",
+      "from": 147,
+      "to": 162
+     },
+     {
+      "w": "kelelawar",
+      "from": 164,
+      "to": 185
+     },
+     {
+      "w": "keluar",
+      "from": 186,
+      "to": 201
+     },
+     {
+      "w": "dari",
+      "from": 202,
+      "to": 214
+     },
+     {
+      "w": "gua.",
+      "from": 215,
+      "to": 224
+     }
+    ]
+   }
+  ],
+  "lab": [
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Ara, lihat ini! Senjata rahasia kita, kelelawar pembawa bom api!",
+    "from": 10,
+    "to": 183,
+    "words": [
+     {
+      "w": "Ara,",
+      "from": 10,
+      "to": 20
+     },
+     {
+      "w": "lihat",
+      "from": 27,
+      "to": 41
+     },
+     {
+      "w": "ini!",
+      "from": 42,
+      "to": 51
+     },
+     {
+      "w": "Senjata",
+      "from": 59,
+      "to": 76
+     },
+     {
+      "w": "rahasia",
+      "from": 77,
+      "to": 95
+     },
+     {
+      "w": "kita,",
+      "from": 96,
+      "to": 107
+     },
+     {
+      "w": "kelelawar",
+      "from": 115,
+      "to": 136
+     },
+     {
+      "w": "pembawa",
+      "from": 137,
+      "to": 154
+     },
+     {
+      "w": "bom",
+      "from": 156,
+      "to": 165
+     },
+     {
+      "w": "api!",
+      "from": 166,
+      "to": 176
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Kelelawar? Yang kecil begini, Sersan?",
+    "from": 190,
+    "to": 291,
+    "words": [
+     {
+      "w": "Kelelawar?",
+      "from": 190,
+      "to": 211
+     },
+     {
+      "w": "Yang",
+      "from": 218,
+      "to": 230
+     },
+     {
+      "w": "kecil",
+      "from": 231,
+      "to": 244
+     },
+     {
+      "w": "begini,",
+      "from": 246,
+      "to": 261
+     },
+     {
+      "w": "Sersan?",
+      "from": 268,
+      "to": 284
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Justru itu. Satu kelelawar, satu bom kecil. Ribuan kelelawar, ribuan kebakaran!",
+    "from": 298,
+    "to": 507,
+    "words": [
+     {
+      "w": "Justru",
+      "from": 298,
+      "to": 313
+     },
+     {
+      "w": "itu.",
+      "from": 314,
+      "to": 324
+     },
+     {
+      "w": "Satu",
+      "from": 331,
+      "to": 343
+     },
+     {
+      "w": "kelelawar,",
+      "from": 344,
+      "to": 365
+     },
+     {
+      "w": "satu",
+      "from": 372,
+      "to": 384
+     },
+     {
+      "w": "bom",
+      "from": 385,
+      "to": 394
+     },
+     {
+      "w": "kecil.",
+      "from": 396,
+      "to": 409
+     },
+     {
+      "w": "Ribuan",
+      "from": 417,
+      "to": 432
+     },
+     {
+      "w": "kelelawar,",
+      "from": 433,
+      "to": 454
+     },
+     {
+      "w": "ribuan",
+      "from": 462,
+      "to": 477
+     },
+     {
+      "w": "kebakaran!",
+      "from": 478,
+      "to": 499
+     }
+    ]
+   }
+  ],
+  "kulkas": [
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Terus, gimana caranya biar mereka nggak kabur?",
+    "from": 10,
+    "to": 131,
+    "words": [
+     {
+      "w": "Terus,",
+      "from": 10,
+      "to": 24
+     },
+     {
+      "w": "gimana",
+      "from": 31,
+      "to": 47
+     },
+     {
+      "w": "caranya",
+      "from": 48,
+      "to": 65
+     },
+     {
+      "w": "biar",
+      "from": 66,
+      "to": 78
+     },
+     {
+      "w": "mereka",
+      "from": 79,
+      "to": 94
+     },
+     {
+      "w": "nggak",
+      "from": 95,
+      "to": 109
+     },
+     {
+      "w": "kabur?",
+      "from": 110,
+      "to": 123
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Gampang. Masukin kulkas. Kedinginan, mereka tidur nyenyak.",
+    "from": 137,
+    "to": 289,
+    "words": [
+     {
+      "w": "Gampang.",
+      "from": 137,
+      "to": 154
+     },
+     {
+      "w": "Masukin",
+      "from": 162,
+      "to": 179
+     },
+     {
+      "w": "kulkas.",
+      "from": 180,
+      "to": 195
+     },
+     {
+      "w": "Kedinginan,",
+      "from": 203,
+      "to": 226
+     },
+     {
+      "w": "mereka",
+      "from": 233,
+      "to": 249
+     },
+     {
+      "w": "tidur",
+      "from": 250,
+      "to": 263
+     },
+     {
+      "w": "nyenyak.",
+      "from": 264,
+      "to": 282
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Ih, lucu... kayak es loli.",
+    "from": 321,
+    "to": 397,
+    "words": [
+     {
+      "w": "Ih,",
+      "from": 321,
+      "to": 328
+     },
+     {
+      "w": "lucu...",
+      "from": 336,
+      "to": 347
+     },
+     {
+      "w": "kayak",
+      "from": 355,
+      "to": 368
+     },
+     {
+      "w": "es",
+      "from": 369,
+      "to": 377
+     },
+     {
+      "w": "loli.",
+      "from": 378,
+      "to": 389
+     }
+    ]
+   }
+  ],
+  "cara": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Nanti dijatuhkan dari pesawat. Begitu hangat, mereka bangun, terbang, lalu sembunyi di atap.",
+    "from": 10,
+    "to": 251,
+    "words": [
+     {
+      "w": "Nanti",
+      "from": 10,
+      "to": 24
+     },
+     {
+      "w": "dijatuhkan",
+      "from": 25,
+      "to": 48
+     },
+     {
+      "w": "dari",
+      "from": 49,
+      "to": 61
+     },
+     {
+      "w": "pesawat.",
+      "from": 62,
+      "to": 79
+     },
+     {
+      "w": "Begitu",
+      "from": 87,
+      "to": 102
+     },
+     {
+      "w": "hangat,",
+      "from": 103,
+      "to": 118
+     },
+     {
+      "w": "mereka",
+      "from": 126,
+      "to": 141
+     },
+     {
+      "w": "bangun,",
+      "from": 142,
+      "to": 158
+     },
+     {
+      "w": "terbang,",
+      "from": 165,
+      "to": 183
+     },
+     {
+      "w": "lalu",
+      "from": 190,
+      "to": 201
+     },
+     {
+      "w": "sembunyi",
+      "from": 203,
+      "to": 222
+     },
+     {
+      "w": "di",
+      "from": 223,
+      "to": 231
+     },
+     {
+      "w": "atap.",
+      "from": 232,
+      "to": 243
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "bisik",
+    "text": "Sembunyi di tempat yang gelap... dan tinggi, ya, Sersan?",
+    "from": 261,
+    "to": 411,
+    "words": [
+     {
+      "w": "Sembunyi",
+      "from": 261,
+      "to": 280
+     },
+     {
+      "w": "di",
+      "from": 282,
+      "to": 289
+     },
+     {
+      "w": "tempat",
+      "from": 290,
+      "to": 306
+     },
+     {
+      "w": "yang",
+      "from": 307,
+      "to": 318
+     },
+     {
+      "w": "gelap...",
+      "from": 319,
+      "to": 333
+     },
+     {
+      "w": "dan",
+      "from": 340,
+      "to": 350
+     },
+     {
+      "w": "tinggi,",
+      "from": 351,
+      "to": 366
+     },
+     {
+      "w": "ya,",
+      "from": 374,
+      "to": 381
+     },
+     {
+      "w": "Sersan?",
+      "from": 389,
+      "to": 404
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Persis!",
+    "from": 417,
+    "to": 440,
+    "words": [
+     {
+      "w": "Persis!",
+      "from": 417,
+      "to": 432
+     }
+    ]
+   }
+  ],
+  "kandang": [
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Sersan... kelelawarnya sudah bangun.",
+    "from": 26,
+    "to": 114,
+    "words": [
+     {
+      "w": "Sersan...",
+      "from": 26,
+      "to": 41
+     },
+     {
+      "w": "kelelawarnya",
+      "from": 48,
+      "to": 75
+     },
+     {
+      "w": "sudah",
+      "from": 76,
+      "to": 90
+     },
+     {
+      "w": "bangun.",
+      "from": 91,
+      "to": 106
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Hah? Siapa yang buka kandangnya?!",
+    "from": 121,
+    "to": 209,
+    "words": [
+     {
+      "w": "Hah?",
+      "from": 121,
+      "to": 131
+     },
+     {
+      "w": "Siapa",
+      "from": 138,
+      "to": 152
+     },
+     {
+      "w": "yang",
+      "from": 153,
+      "to": 164
+     },
+     {
+      "w": "buka",
+      "from": 165,
+      "to": 177
+     },
+     {
+      "w": "kandangnya?!",
+      "from": 178,
+      "to": 201
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "bisik",
+    "text": "Tadi kepanasan. Kasihan...",
+    "from": 225,
+    "to": 291,
+    "words": [
+     {
+      "w": "Tadi",
+      "from": 225,
+      "to": 237
+     },
+     {
+      "w": "kepanasan.",
+      "from": 238,
+      "to": 259
+     },
+     {
+      "w": "Kasihan...",
+      "from": 266,
+      "to": 284
+     }
+    ]
+   }
+  ],
+  "tangki": [
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Sersan, tempat gelap dan tinggi... kayak itu?",
+    "from": 10,
+    "to": 129,
+    "words": [
+     {
+      "w": "Sersan,",
+      "from": 10,
+      "to": 26
+     },
+     {
+      "w": "tempat",
+      "from": 33,
+      "to": 49
+     },
+     {
+      "w": "gelap",
+      "from": 50,
+      "to": 63
+     },
+     {
+      "w": "dan",
+      "from": 64,
+      "to": 74
+     },
+     {
+      "w": "tinggi...",
+      "from": 75,
+      "to": 90
+     },
+     {
+      "w": "kayak",
+      "from": 98,
+      "to": 111
+     },
+     {
+      "w": "itu?",
+      "from": 112,
+      "to": 122
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Jangan ke sana... jangan ke sana!",
+    "from": 138,
+    "to": 226,
+    "words": [
+     {
+      "w": "Jangan",
+      "from": 138,
+      "to": 154
+     },
+     {
+      "w": "ke",
+      "from": 155,
+      "to": 162
+     },
+     {
+      "w": "sana...",
+      "from": 163,
+      "to": 175
+     },
+     {
+      "w": "jangan",
+      "from": 182,
+      "to": 198
+     },
+     {
+      "w": "ke",
+      "from": 199,
+      "to": 206
+     },
+     {
+      "w": "sana!",
+      "from": 208,
+      "to": 219
+     }
+    ]
+   }
+  ],
+  "akhir": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Bomnya berhasil. Terbukti bisa membakar... pangkalan sendiri.",
+    "from": 16,
+    "to": 167,
+    "words": [
+     {
+      "w": "Bomnya",
+      "from": 16,
+      "to": 32
+     },
+     {
+      "w": "berhasil.",
+      "from": 33,
+      "to": 52
+     },
+     {
+      "w": "Terbukti",
+      "from": 60,
+      "to": 79
+     },
+     {
+      "w": "bisa",
+      "from": 80,
+      "to": 92
+     },
+     {
+      "w": "membakar...",
+      "from": 93,
+      "to": 112
+     },
+     {
+      "w": "pangkalan",
+      "from": 119,
+      "to": 141
+     },
+     {
+      "w": "sendiri.",
+      "from": 142,
+      "to": 159
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Setahun kemudian proyek ini dibatalkan, kalah cepat dari bom atom.",
+    "from": 176,
+    "to": 343,
+    "words": [
+     {
+      "w": "Setahun",
+      "from": 176,
+      "to": 193
+     },
+     {
+      "w": "kemudian",
+      "from": 194,
+      "to": 213
+     },
+     {
+      "w": "proyek",
+      "from": 214,
+      "to": 230
+     },
+     {
+      "w": "ini",
+      "from": 231,
+      "to": 240
+     },
+     {
+      "w": "dibatalkan,",
+      "from": 242,
+      "to": 265
+     },
+     {
+      "w": "kalah",
+      "from": 272,
+      "to": 285
+     },
+     {
+      "w": "cepat",
+      "from": 287,
+      "to": 300
+     },
+     {
+      "w": "dari",
+      "from": 301,
+      "to": 313
+     },
+     {
+      "w": "bom",
+      "from": 314,
+      "to": 323
+     },
+     {
+      "w": "atom.",
+      "from": 324,
+      "to": 336
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Jadi... kita menang, Sersan?",
+    "from": 355,
+    "to": 432,
+    "words": [
+     {
+      "w": "Jadi...",
+      "from": 355,
+      "to": 367
+     },
+     {
+      "w": "kita",
+      "from": 374,
+      "to": 386
+     },
+     {
+      "w": "menang,",
+      "from": 387,
+      "to": 402
+     },
+     {
+      "w": "Sersan?",
+      "from": 410,
+      "to": 425
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Yang menang... kelelawarnya.",
+    "from": 452,
+    "to": 522,
+    "words": [
+     {
+      "w": "Yang",
+      "from": 452,
+      "to": 463
+     },
+     {
+      "w": "menang...",
+      "from": 465,
+      "to": 480
+     },
+     {
+      "w": "kelelawarnya.",
+      "from": 487,
+      "to": 514
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.kelelawar": 210,
+  "gua.jutaan": 145,
+  "gua.gua": 213,
+  "lab.lihat": 25,
+  "lab.bom": 154,
+  "lab.kecil": 229,
+  "lab.ribuan2": 415,
+  "lab.kebakaran": 476,
+  "kul.kulkas": 177,
+  "kul.tidur": 248,
+  "kul.lucu": 334,
+  "kul.loli": 376,
+  "cara.pesawat": 59,
+  "cara.hangat": 101,
+  "cara.atap": 230,
+  "cara.gelap": 317,
+  "cara.tinggi": 349,
+  "cara.persis": 415,
+  "kan.bangun": 89,
+  "kan.hah": 118,
+  "kan.buka": 163,
+  "kan.kasihan": 264,
+  "tan.itu": 110,
+  "tan.jangan": 138,
+  "tan.jangan2": 212,
+  "akh.berhasil": 31,
+  "akh.sendiri": 140,
+  "akh.atom": 322,
+  "akh.menang": 385,
+  "akh.kelelawarnya": 485
+ },
+ "captions": [
+  {
+   "text": "Tahun",
+   "startFrame": 16,
+   "endFrame": 30,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sembilan",
+   "startFrame": 31,
+   "endFrame": 50,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "belas",
+   "startFrame": 51,
+   "endFrame": 65,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "empat",
+   "startFrame": 66,
+   "endFrame": 79,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 81,
+   "endFrame": 94,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tiga,",
+   "startFrame": 95,
+   "endFrame": 106,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Amerika",
+   "startFrame": 114,
+   "endFrame": 131,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "membuat",
+   "startFrame": 132,
+   "endFrame": 150,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bom",
+   "startFrame": 151,
+   "endFrame": 160,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "rahasia...",
+   "startFrame": 162,
+   "endFrame": 179,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dari",
+   "startFrame": 200,
+   "endFrame": 211,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelelawar.",
+   "startFrame": 212,
+   "endFrame": 234,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Idenya",
+   "startFrame": 272,
+   "endFrame": 287,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "datang",
+   "startFrame": 288,
+   "endFrame": 303,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dari",
+   "startFrame": 304,
+   "endFrame": 316,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "seorang",
+   "startFrame": 317,
+   "endFrame": 334,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dokter",
+   "startFrame": 336,
+   "endFrame": 351,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "gigi,",
+   "startFrame": 352,
+   "endFrame": 363,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang",
+   "startFrame": 371,
+   "endFrame": 382,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "melihat",
+   "startFrame": 384,
+   "endFrame": 401,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jutaan",
+   "startFrame": 402,
+   "endFrame": 417,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelelawar",
+   "startFrame": 418,
+   "endFrame": 440,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "keluar",
+   "startFrame": 441,
+   "endFrame": 456,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dari",
+   "startFrame": 457,
+   "endFrame": 469,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "gua.",
+   "startFrame": 470,
+   "endFrame": 479,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ara,",
+   "startFrame": 518,
+   "endFrame": 528,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lihat",
+   "startFrame": 535,
+   "endFrame": 549,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ini!",
+   "startFrame": 550,
+   "endFrame": 559,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Senjata",
+   "startFrame": 567,
+   "endFrame": 584,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "rahasia",
+   "startFrame": 585,
+   "endFrame": 603,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kita,",
+   "startFrame": 604,
+   "endFrame": 615,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelelawar",
+   "startFrame": 623,
+   "endFrame": 644,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pembawa",
+   "startFrame": 645,
+   "endFrame": 662,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bom",
+   "startFrame": 664,
+   "endFrame": 673,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "api!",
+   "startFrame": 674,
+   "endFrame": 684,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kelelawar?",
+   "startFrame": 698,
+   "endFrame": 719,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang",
+   "startFrame": 726,
+   "endFrame": 738,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kecil",
+   "startFrame": 739,
+   "endFrame": 752,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "begini,",
+   "startFrame": 754,
+   "endFrame": 769,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sersan?",
+   "startFrame": 776,
+   "endFrame": 792,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Justru",
+   "startFrame": 806,
+   "endFrame": 821,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "itu.",
+   "startFrame": 822,
+   "endFrame": 832,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Satu",
+   "startFrame": 839,
+   "endFrame": 851,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelelawar,",
+   "startFrame": 852,
+   "endFrame": 873,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "satu",
+   "startFrame": 880,
+   "endFrame": 892,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bom",
+   "startFrame": 893,
+   "endFrame": 903,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kecil.",
+   "startFrame": 904,
+   "endFrame": 917,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ribuan",
+   "startFrame": 925,
+   "endFrame": 940,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelelawar,",
+   "startFrame": 941,
+   "endFrame": 962,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ribuan",
+   "startFrame": 970,
+   "endFrame": 985,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kebakaran!",
+   "startFrame": 986,
+   "endFrame": 1007,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Terus,",
+   "startFrame": 1042,
+   "endFrame": 1055,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "gimana",
+   "startFrame": 1062,
+   "endFrame": 1078,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "caranya",
+   "startFrame": 1079,
+   "endFrame": 1096,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "biar",
+   "startFrame": 1097,
+   "endFrame": 1109,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 1110,
+   "endFrame": 1125,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "nggak",
+   "startFrame": 1126,
+   "endFrame": 1140,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kabur?",
+   "startFrame": 1141,
+   "endFrame": 1154,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Gampang.",
+   "startFrame": 1168,
+   "endFrame": 1185,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Masukin",
+   "startFrame": 1193,
+   "endFrame": 1210,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kulkas.",
+   "startFrame": 1211,
+   "endFrame": 1226,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kedinginan,",
+   "startFrame": 1234,
+   "endFrame": 1257,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 1264,
+   "endFrame": 1280,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tidur",
+   "startFrame": 1281,
+   "endFrame": 1294,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "nyenyak.",
+   "startFrame": 1295,
+   "endFrame": 1313,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ih,",
+   "startFrame": 1352,
+   "endFrame": 1359,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "lucu...",
+   "startFrame": 1367,
+   "endFrame": 1378,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kayak",
+   "startFrame": 1386,
+   "endFrame": 1399,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "es",
+   "startFrame": 1400,
+   "endFrame": 1408,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "loli.",
+   "startFrame": 1409,
+   "endFrame": 1420,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Nanti",
+   "startFrame": 1454,
+   "endFrame": 1468,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dijatuhkan",
+   "startFrame": 1469,
+   "endFrame": 1492,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dari",
+   "startFrame": 1493,
+   "endFrame": 1505,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pesawat.",
+   "startFrame": 1506,
+   "endFrame": 1523,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Begitu",
+   "startFrame": 1531,
+   "endFrame": 1546,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "hangat,",
+   "startFrame": 1547,
+   "endFrame": 1562,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 1570,
+   "endFrame": 1585,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bangun,",
+   "startFrame": 1586,
+   "endFrame": 1602,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terbang,",
+   "startFrame": 1609,
+   "endFrame": 1627,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lalu",
+   "startFrame": 1634,
+   "endFrame": 1645,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sembunyi",
+   "startFrame": 1647,
+   "endFrame": 1666,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "di",
+   "startFrame": 1667,
+   "endFrame": 1675,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "atap.",
+   "startFrame": 1676,
+   "endFrame": 1687,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sembunyi",
+   "startFrame": 1705,
+   "endFrame": 1724,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "di",
+   "startFrame": 1726,
+   "endFrame": 1733,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tempat",
+   "startFrame": 1734,
+   "endFrame": 1750,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "yang",
+   "startFrame": 1751,
+   "endFrame": 1762,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "gelap...",
+   "startFrame": 1763,
+   "endFrame": 1777,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "dan",
+   "startFrame": 1784,
+   "endFrame": 1794,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tinggi,",
+   "startFrame": 1795,
+   "endFrame": 1810,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "ya,",
+   "startFrame": 1818,
+   "endFrame": 1825,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sersan?",
+   "startFrame": 1833,
+   "endFrame": 1848,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Persis!",
+   "startFrame": 1861,
+   "endFrame": 1876,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sersan...",
+   "startFrame": 1924,
+   "endFrame": 1940,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kelelawarnya",
+   "startFrame": 1947,
+   "endFrame": 1974,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 1975,
+   "endFrame": 1989,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "bangun.",
+   "startFrame": 1990,
+   "endFrame": 2005,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Hah?",
+   "startFrame": 2020,
+   "endFrame": 2030,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Siapa",
+   "startFrame": 2037,
+   "endFrame": 2051,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang",
+   "startFrame": 2052,
+   "endFrame": 2063,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "buka",
+   "startFrame": 2064,
+   "endFrame": 2076,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kandangnya?!",
+   "startFrame": 2077,
+   "endFrame": 2100,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tadi",
+   "startFrame": 2124,
+   "endFrame": 2136,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kepanasan.",
+   "startFrame": 2137,
+   "endFrame": 2158,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Kasihan...",
+   "startFrame": 2165,
+   "endFrame": 2183,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sersan,",
+   "startFrame": 2214,
+   "endFrame": 2230,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tempat",
+   "startFrame": 2237,
+   "endFrame": 2253,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "gelap",
+   "startFrame": 2254,
+   "endFrame": 2267,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "dan",
+   "startFrame": 2268,
+   "endFrame": 2278,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tinggi...",
+   "startFrame": 2279,
+   "endFrame": 2294,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kayak",
+   "startFrame": 2302,
+   "endFrame": 2315,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "itu?",
+   "startFrame": 2316,
+   "endFrame": 2326,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Jangan",
+   "startFrame": 2342,
+   "endFrame": 2358,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ke",
+   "startFrame": 2359,
+   "endFrame": 2366,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sana...",
+   "startFrame": 2368,
+   "endFrame": 2379,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jangan",
+   "startFrame": 2386,
+   "endFrame": 2402,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ke",
+   "startFrame": 2403,
+   "endFrame": 2410,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sana!",
+   "startFrame": 2412,
+   "endFrame": 2423,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Bomnya",
+   "startFrame": 2504,
+   "endFrame": 2520,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "berhasil.",
+   "startFrame": 2521,
+   "endFrame": 2540,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Terbukti",
+   "startFrame": 2548,
+   "endFrame": 2567,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bisa",
+   "startFrame": 2568,
+   "endFrame": 2580,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "membakar...",
+   "startFrame": 2581,
+   "endFrame": 2600,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pangkalan",
+   "startFrame": 2607,
+   "endFrame": 2629,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sendiri.",
+   "startFrame": 2630,
+   "endFrame": 2647,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Setahun",
+   "startFrame": 2664,
+   "endFrame": 2681,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kemudian",
+   "startFrame": 2682,
+   "endFrame": 2701,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "proyek",
+   "startFrame": 2702,
+   "endFrame": 2718,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ini",
+   "startFrame": 2719,
+   "endFrame": 2728,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dibatalkan,",
+   "startFrame": 2730,
+   "endFrame": 2753,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kalah",
+   "startFrame": 2760,
+   "endFrame": 2773,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "cepat",
+   "startFrame": 2775,
+   "endFrame": 2788,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dari",
+   "startFrame": 2789,
+   "endFrame": 2801,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bom",
+   "startFrame": 2802,
+   "endFrame": 2811,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "atom.",
+   "startFrame": 2812,
+   "endFrame": 2824,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Jadi...",
+   "startFrame": 2843,
+   "endFrame": 2855,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kita",
+   "startFrame": 2862,
+   "endFrame": 2874,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "menang,",
+   "startFrame": 2875,
+   "endFrame": 2890,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sersan?",
+   "startFrame": 2898,
+   "endFrame": 2913,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang",
+   "startFrame": 2940,
+   "endFrame": 2951,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menang...",
+   "startFrame": 2953,
+   "endFrame": 2968,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelelawarnya.",
+   "startFrame": 2975,
+   "endFrame": 3002,
+   "highlight": false,
+   "voice": "dodi"
+  }
+ ]
+}
