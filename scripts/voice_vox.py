@@ -9,8 +9,11 @@ Aturan (lihat CLAUDE.md bagian Suara):
 
 Pakai (dengan .venv/bin/python):
     python3 scripts/voice_vox.py naskah.json <nama>
-naskah.json: [{"scene": "hook", "lines": [["narasi", "Kalimat utuh."], ["tegang", "Kalimat utuh!"]]}, ...]
+naskah.json: [{"scene": "hook", "lines": [["narasi", "Kalimat utuh."], ["tegang", "Kalimat utuh!", "nadia"]]}, ...]
 emosi: narasi | santai | tegang | tegas | bisik
+suara (opsional, kolom ke-3 tiap baris atau "voice" per adegan): kunci di voices/pengisi_suara.json
+    (dodi | nadia | nadia_ceria | butini | ara). Tanpa itu dipakai "default" (dodi bersih).
+    "dodi_lama" = potongan emosi dodi lama dari analysis/mp3 (perilaku sebelum 25 Nov 2026).
 Hasil: public/audio/<nama>_voice.wav (+ .mp3) dan src/<nama>_voice.json.
 """
 import difflib, json, re, subprocess, sys, time, wave
@@ -24,6 +27,9 @@ WORK = ROOT / "out" / "voice"; WORK.mkdir(parents=True, exist_ok=True)
 # Contoh suara dodi per emosi, dipotong di batas kalimat utuh (detik mulai, detik akhir)
 REFS = {"santai": (0.00, 10.40), "narasi": (18.00, 28.30), "tegang": (38.60, 48.85)}
 REF_OF = {"narasi": "narasi", "santai": "santai", "tegang": "tegang", "tegas": "tegang", "bisik": "santai"}
+# Pengisi suara standar pilihan user (suara bersih); lihat voices/pengisi_suara.json
+CAST = json.loads((ROOT / "voices" / "pengisi_suara.json").read_text())
+DEFAULT_VOICE = CAST["default"]
 STYLE = {
     "narasi": "lively storyteller, warm, flowing",
     "santai": "casual, amused, relaxed",
@@ -48,6 +54,10 @@ class Voice:
             self.refs[k] = WORK / f"ref_{k}.wav"
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(a), "-t", str(b - a), "-i", str(DODI), "-af",
                             f"afade=t=in:d=0.05,afade=t=out:st={b - a - 0.12}:d=0.12", "-ar", "24000", "-ac", "1", str(self.refs[k])], check=True)
+        self.cast = {}
+        for k, v in CAST["voices"].items():  # suara bersih: satu referensi utuh per tokoh, gaya lewat tag
+            self.cast[k] = WORK / f"cast_{k}.wav"
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(ROOT / v["file"]), "-ar", "24000", "-ac", "1", str(self.cast[k])], check=True)
         self.tts = VoxCPM.from_pretrained("openbmb/VoxCPM2", load_denoiser=False, optimize=False, device="cpu")
         self.sr = self.tts.tts_model.sample_rate
         self.asr = WhisperModel("small", device="cpu", compute_type="int8")
@@ -60,10 +70,15 @@ class Voice:
         words = [(w.word.strip(), float(w.start), float(w.end)) for s in segs for w in s.words]
         return " ".join(w[0] for w in words), words
 
-    def line(self, text: str, style: str = "narasi", n: int = 3, steps: int = 10):
+    def line(self, text: str, style: str = "narasi", n: int = 3, steps: int = 10, voice: str = DEFAULT_VOICE):
         tag = STYLE.get(style, style)
         full = (f"({tag})" if (tag and self.use_style_tags) else "") + text
-        ref = self.refs[REF_OF.get(style, "narasi")]
+        if voice == "dodi_lama":
+            ref = self.refs[REF_OF.get(style, "narasi")]
+        elif voice in self.cast:
+            ref = self.cast[voice]
+        else:
+            raise SystemExit(f"Suara '{voice}' tidak ada di voices/pengisi_suara.json (pilihan: {', '.join(self.cast)}, dodi_lama)")
         best = None
         for i in range(n):
             y = np.asarray(self.tts.generate(text=full, reference_wav_path=str(ref), inference_timesteps=steps, cfg_value=2.0), np.float32)
@@ -85,8 +100,10 @@ def build(script_path: Path, name: str):
     chunks = [np.zeros(int(0.25 * sr), np.float32)]; cur = 0.25; scenes = []
     for sc in script:
         sc_from = cur; lines = []
-        for li, (style, text) in enumerate(sc["lines"]):
-            t0 = time.time(); print(f"[{sc['scene']} | {style}] {text}", flush=True)
+        for li, ln in enumerate(sc["lines"]):
+            style, text = ln[0], ln[1]
+            voice = ln[2] if len(ln) > 2 else sc.get("voice", DEFAULT_VOICE)
+            t0 = time.time(); print(f"[{sc['scene']} | {style} | {voice}] {text}", flush=True)
             cached = WORK / name / f"{sc['scene']}_{li}.wav"
             if cached.exists():  # lanjutkan proses yang terhenti: pakai potongan yang sudah jadi
                 with wave.open(str(cached)) as wf:
@@ -95,14 +112,14 @@ def build(script_path: Path, name: str):
                 score = difflib.SequenceMatcher(None, letters(text), letters(heard)).ratio()
                 print(f"    (cache) {score:.2f} <- {heard}", flush=True)
             else:
-                score, y, words = v.line(text, style, n=sc.get("takes", 3))
+                score, y, words = v.line(text, style, n=sc.get("takes", 3), voice=voice)
             y = y.copy(); y[:fade] *= np.linspace(0, 1, fade); y[-fade:] *= np.linspace(1, 0, fade)
             # simpan juga potongan per kalimat (untuk ditata ulang oleh skrip mix per video)
             clip_dir = WORK / name; clip_dir.mkdir(parents=True, exist_ok=True)
             clip_path = clip_dir / f"{sc['scene']}_{li}.wav"
             with wave.open(str(clip_path), "wb") as wf:
                 wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(sr); wf.writeframes((np.clip(y, -1, 1) * 32767).astype(np.int16).tobytes())
-            lines.append({"style": style, "text": text, "score": round(score, 3), "file": str(clip_path.relative_to(ROOT)),
+            lines.append({"style": style, "voice": voice, "text": text, "score": round(score, 3), "file": str(clip_path.relative_to(ROOT)),
                           "wordsSec": [[w, round(a, 3), round(b, 3)] for w, a, b in words], "from": int(round(cur * FPS)),
                           "to": int(round((cur + len(y) / sr) * FPS)),
                           "words": [{"w": w, "from": int(round((cur + a) * FPS)), "to": int(round((cur + b) * FPS))} for w, a, b in words]})
