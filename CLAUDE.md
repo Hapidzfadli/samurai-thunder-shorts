@@ -52,6 +52,10 @@ Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh*
 - Gaya video standar = **3D explainer** (referensi Apache, contoh: `exports/perang-emu-1932.mp4`, `exports/kerja-kelompok.mp4`):
   - toon + garis tepi, tokoh kepala bulat 3D, efek X-ray, hologram grid biru, layar terbelah, subtitle 1 kata;
   - judul pancingan rasa penasaran di 2–3 detik pertama.
+- **Referensi gaya latar 3D arsitektur & transisi luar-ke-dalam (pilihan user untuk video cerita berikutnya)**: **Blender Headless → `.glb` → Remotion (`@remotion/three`)** (panduan lengkap: `analysis/text/referensi_blender_25d_flythrough.md`, video contoh: `exports/riset/referensi-blender-sekolah.mp4`):
+  - bangun gedung eksterior + interior menyatu (dengan lubang jendela/pintu Boolean nyata & tekstur prosedural *packed*) lewat skrip Python Blender headless (pola: `scripts/build_school_glb.py` → `public/models/school.glb`);
+  - di Remotion, load `.glb` sekali (`GLTFLoader` + `delayRender`), pakai kamera `CatmullRomCurve3` untuk *fly-through* mulus dari luar gedung masuk ke dalam ruangan tempat cerita berlangsung (pola: `src/SchoolFlythrough.tsx`);
+  - gabungkan dengan karakter cerita (`Bean3` 3D atau cutout 2D di ruang 3D), gerakan fisik masuk akal (bagian 3), dan dialog VoxCPM2 `dodi` + `ara` (bagian 4).
 - Perkakas:
   - `src/three/toon.tsx`: `Bean3` (tokoh; tangan → `bean3HandWorld`), `Hat`, `T`/`Limb`/`G` (bentuk toon), `XR` + `BlueGrid` (X-ray/hologram), `CanvasPlane` (teks/layar/kertas), `WordSub`;
   - `src/sceneKit.tsx`: `shotCam`, `pullBack`, `Stage`, `SubWord`, `Chip`, `BigTitle`, `walkLerp`, `talkAt`;
