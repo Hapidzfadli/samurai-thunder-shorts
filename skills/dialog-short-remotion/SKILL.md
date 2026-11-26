@@ -58,6 +58,18 @@ Salin `src/scenesKelelawar.tsx` dan `src/Kelelawar.tsx`. Mesin yang sudah ada di
 - Daftarkan komposisi di `src/Root.tsx` dengan `defaultProps={{ withAudio: false }}`. Jangan import `*_timing.json` yang belum ada (bundle gagal).
 - Cek tipe: `npx tsc --noEmit -p . | grep -i <x>`.
 
+
+## 5b. Latar arsitektur 3D (gedung/kelas) + kamera terbang masuk: Blender headless → GLB → Remotion
+Dipilih pengguna untuk cerita bersetting gedung (sekolah, kantor, lab). Contoh jadi: `exports/riset/referensi-blender-sekolah.mp4`; panduan: `analysis/text/referensi_blender_25d_flythrough.md`; aturan di `CLAUDE.md` bagian 6.
+- **Blender hanya membuat model; Remotion yang merender** (cahaya, bayangan, kamera, tokoh ada di Three.js). Jangan merender gambar akhir dari Blender.
+- Model: `scripts/build_school_glb.py` (pola) → `blender --background --python scripts/build_<x>_glb.py -- public/models/<x>.glb`. Pasang Blender bila belum ada: `apt-get install -y blender python3-numpy` (butuh numpy, dan `libegl1` untuk render EEVEE; tidak perlu untuk ekspor GLB).
+- **Tekstur harus lewat UV asli + material Principled** supaya ikut ke GLB (pakai `set_box_uv`, tekstur numpy di-`pack()`). Proyeksi kotak/shader kustom di dalam material TIDAK terekspor (jadi warna polos).
+- **Lubang nyata** (modifier Boolean) untuk jendela/pintu yang dilewati kamera; sediakan lorong tengah bersih untuk jalur kamera; beri objek kosong `WP_Cam_*` / `WP_Char_*` sebagai patokan koordinat.
+- Koordinat Blender → Three.js (`export_yup=True`): X=X, Y=Z (tinggi), Z=-Y.
+- Remotion: muat GLB sekali (cache tingkat modul + `delayRender`/`continueRender`, lepaskan penantian SETELAH state terpasang), kamera `THREE.CatmullRomCurve3` untuk posisi DAN titik pandang (ease in-out), sun + `shadow-mapSize` 1024 (cukup, 2-3x lebih cepat), langit senja dari shader kubah.
+- **Karakter = kartu 2D (`BeanCard`) atau cutout 2D di ruang 3D**, bukan model 3D berrig/Mixamo. Uji model berrig di Remotion pernah gagal tampil; pengguna juga lebih suka gaya kartu 2D.
+- Latar buatan sendiri di Blender sudah dicoba (`blender/sekolah*.py`, gaya low-poly lembut); untuk proyek nyata pakai pola `build_school_glb.py` agar teksturnya terbawa.
+
 ## 6. Still-check hemat (satu lembar kontak)
 Skrip render still memakai `@remotion/renderer` dan harus berada di root repo agar modul ditemukan (jangan di-commit; masukkan ke `.git/info/exclude`):
 ```js
@@ -84,7 +96,7 @@ Pilih ±23 frame: tiap momen penting (hook, judul, insert tangan, reaksi, ledaka
 - Insert tangan: gambar jari kapsul + telapak oval, bukan jari lurus kaku.
 - Wajah Ara terpotong saat menunjuk → kamera adegan itu harus lebih lebar/bergeser.
 - `remotion still` butuh `--overwrite` bila file sudah ada.
-- Blender sudah dicoba (model 3D toon + latar gurun) dan pengguna memilih tetap Remotion; jangan menawarkannya lagi kecuali diminta.
+- Karakter 3D Blender/Mixamo sudah dicoba dan ditolak (pengguna memilih kartu 2D). Blender dipakai HANYA untuk latar arsitektur (lihat 5b).
 
 ## Peta file template (Bom Kelelawar)
-`scripts/naskah/kelelawar.json` · `scripts/build_audio_kelelawar.py` · `src/scenesKelelawar.tsx` · `src/Kelelawar.tsx` · `src/SheetKelelawar.tsx` · `src/three/objectsKelelawar.tsx` · `exports/riset/kelelawar-*.png|md` · `voices/pengisi_suara.json` · `scripts/voice_vox.py` · `colab/render_remotion.ipynb`
+`scripts/naskah/kelelawar.json` · `scripts/build_audio_kelelawar.py` · `src/scenesKelelawar.tsx` · `src/Kelelawar.tsx` · `src/SheetKelelawar.tsx` · `src/three/objectsKelelawar.tsx` · `exports/riset/kelelawar-*.png|md` · `voices/pengisi_suara.json` · `scripts/voice_vox.py` · `colab/render_remotion.ipynb` · latar Blender: `scripts/build_school_glb.py`, `src/SchoolFlythrough.tsx`
