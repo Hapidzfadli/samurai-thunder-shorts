@@ -631,45 +631,50 @@ export const PelicanRig: React.FC<{
   pitch?: number;
   peckPhase?: number;
   cornMode?: boolean;
-}> = ({ pos = [0, 0, 0], yaw = 0, pitch = 0, peckPhase = 0, cornMode = false }) => (
-  <group position={pos}>
-    {/* Rangka baja menara gantungan */}
-    <B pos={[-1.45, 2.1, 0]} size={[0.16, 4.2, 0.16]} color="#475569" ink={0.04} />
-    <B pos={[1.45, 2.1, 0]} size={[0.16, 4.2, 0.16]} color="#475569" ink={0.04} />
-    <B pos={[0, 4.15, 0]} size={[3.2, 0.18, 0.22]} color="#334155" ink={0.04} />
-    <B pos={[-1.45, 0.08, 0]} size={[0.55, 0.16, 1.4]} color="#334155" ink={0.03} />
-    <B pos={[1.45, 0.08, 0]} size={[0.55, 0.16, 1.4]} color="#334155" ink={0.03} />
+  distracted?: boolean;
+  voteText?: string;
+}> = ({ pos = [0, 0, 0], yaw = 0, pitch = 0, peckPhase = 0, cornMode = false, distracted = false, voteText }) => {
+  const isCorn = cornMode || distracted;
+  return (
+    <group position={pos}>
+      {/* Rangka baja menara gantungan */}
+      <B pos={[-1.45, 2.1, 0]} size={[0.16, 4.2, 0.16]} color="#475569" ink={0.04} />
+      <B pos={[1.45, 2.1, 0]} size={[0.16, 4.2, 0.16]} color="#475569" ink={0.04} />
+      <B pos={[0, 4.15, 0]} size={[3.2, 0.18, 0.22]} color="#334155" ink={0.04} />
+      <B pos={[-1.45, 0.08, 0]} size={[0.55, 0.16, 1.4]} color="#334155" ink={0.03} />
+      <B pos={[1.45, 0.08, 0]} size={[0.55, 0.16, 1.4]} color="#334155" ink={0.03} />
 
-    {/* Batang ayun + Bom Luncur Pelican */}
-    <group position={[0, 4.05, 0]} rotation={[pitch, yaw, -yaw * 0.35]}>
-      <Cyl pos={[0, -0.65, 0]} r={0.05} h={1.3} color="#64748b" hull={0.12} />
-      <group position={[0, -1.45, 0]}>
-        {/* Badan bom luncur */}
-        <Cyl pos={[0, 0, 0]} r={0.48} h={2.5} color="#66704b" rot={[Math.PI / 2, 0, 0]} hull={0.04} seg={20} />
-        <P geo={() => <sphereGeometry args={[0.48, 18, 14, 0, Math.PI * 2, 0, Math.PI / 2]} />} color="#555e3d" pos={[0, 0, 1.25]} rot={[Math.PI / 2, 0, 0]} hull={0.05} />
-        {/* 3 jendela lensa merpati di hidung */}
-        {[-0.18, 0, 0.18].map((x, i) => (
-          <Ball key={i} pos={[x, i === 1 ? 0.16 : -0.06, 1.66]} r={0.09} color={cornMode ? "#facc15" : "#bae6fd"} hull={0.1} />
-        ))}
-        {/* Sayap luncur lebar Pelican + sirip ekor kembar */}
-        <B pos={[0, 0.12, 0.1]} size={[3.4, 0.09, 0.62]} color="#78825a" ink={0.04} />
-        <B pos={[-0.75, 0.35, -1.15]} size={[0.08, 0.68, 0.48]} color="#555e3d" ink={0.03} />
-        <B pos={[0.75, 0.35, -1.15]} size={[0.08, 0.68, 0.48]} color="#555e3d" ink={0.03} />
-        <B pos={[0, 0.35, -1.15]} size={[1.6, 0.08, 0.42]} color="#66704b" ink={0.03} />
-        <Sign pos={[0, 0.05, 0.5]} w={1.2} h={0.24} text="PELICAN" bg="#fef08a" fg="#1e293b" rot={[0, Math.PI / 2, 0]} />
+      {/* Batang ayun + Bom Luncur Pelican */}
+      <group position={[0, 4.05, 0]} rotation={[pitch, yaw, -yaw * 0.35]}>
+        <Cyl pos={[0, -0.65, 0]} r={0.05} h={1.3} color="#64748b" hull={0.12} />
+        <group position={[0, -1.45, 0]}>
+          {/* Badan bom luncur */}
+          <Cyl pos={[0, 0, 0]} r={0.48} h={2.5} color="#66704b" rot={[Math.PI / 2, 0, 0]} hull={0.04} seg={20} />
+          <P geo={() => <sphereGeometry args={[0.48, 18, 14, 0, Math.PI * 2, 0, Math.PI / 2]} />} color="#555e3d" pos={[0, 0, 1.25]} rot={[Math.PI / 2, 0, 0]} hull={0.05} />
+          {/* 3 jendela lensa merpati di hidung */}
+          {[-0.18, 0, 0.18].map((x, i) => (
+            <Ball key={i} pos={[x, i === 1 ? 0.16 : -0.06, 1.66]} r={0.09} color={isCorn ? "#facc15" : "#bae6fd"} hull={0.1} />
+          ))}
+          {/* Sayap luncur lebar Pelican + sirip ekor kembar */}
+          <B pos={[0, 0.12, 0.1]} size={[3.4, 0.09, 0.62]} color="#78825a" ink={0.04} />
+          <B pos={[-0.75, 0.35, -1.15]} size={[0.08, 0.68, 0.48]} color="#555e3d" ink={0.03} />
+          <B pos={[0.75, 0.35, -1.15]} size={[0.08, 0.68, 0.48]} color="#555e3d" ink={0.03} />
+          <B pos={[0, 0.35, -1.15]} size={[1.6, 0.08, 0.42]} color="#66704b" ink={0.03} />
+          <Sign pos={[0, 0.05, 0.5]} w={1.2} h={0.24} text="PELICAN" bg="#fef08a" fg="#1e293b" rot={[0, Math.PI / 2, 0]} />
+        </group>
       </group>
+      {/* Panel indikator suara mayoritas 3 merpati di atas palang */}
+      <Sign
+        pos={[0, 4.55, 0.14]}
+        w={2.6}
+        h={0.44}
+        text={voteText ?? (isCorn ? "SUARA 3-0: JAGUNG!!" : peckPhase > 0 ? "SUARA 3-0: KAPAL TARGET" : "UJI KENDALI MERPATI")}
+        bg={isCorn ? "#fee2e2" : "#dcfce7"}
+        fg={isCorn ? "#991b1b" : "#166534"}
+      />
     </group>
-    {/* Panel indikator suara mayoritas 3 merpati di atas palang */}
-    <Sign
-      pos={[0, 4.55, 0.14]}
-      w={2.5}
-      h={0.44}
-      text={cornMode ? "SUARA 3-0: JAGUNG!!" : peckPhase > 0 ? "SUARA 3-0: KAPAL TARGET" : "UJI KENDALI MERPATI"}
-      bg={cornMode ? "#fee2e2" : "#dcfce7"}
-      fg={cornMode ? "#991b1b" : "#166534"}
-    />
-  </group>
-);
+  );
+};
 
 /** Papan siluet kapal perang target di atas rel uji */
 export const ShipTargetBoard: React.FC<{ pos?: V3; rot?: V3 }> = ({ pos = [0, 0, 0], rot = [0, 0, 0] }) => (

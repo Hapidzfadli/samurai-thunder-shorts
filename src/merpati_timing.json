@@ -1,0 +1,2413 @@
+{
+ "fps": 30,
+ "totalDurationSec": 101.367,
+ "totalFrames": 3041,
+ "order": [
+  "hook",
+  "kereta",
+  "lab",
+  "voting",
+  "uji",
+  "tumpah",
+  "serbu",
+  "akhir"
+ ],
+ "scenes": {
+  "hook": {
+   "startFrame": 0,
+   "durationInFrames": 242
+  },
+  "kereta": {
+   "startFrame": 242,
+   "durationInFrames": 273
+  },
+  "lab": {
+   "startFrame": 515,
+   "durationInFrames": 412
+  },
+  "voting": {
+   "startFrame": 927,
+   "durationInFrames": 489
+  },
+  "uji": {
+   "startFrame": 1416,
+   "durationInFrames": 457
+  },
+  "tumpah": {
+   "startFrame": 1873,
+   "durationInFrames": 314
+  },
+  "serbu": {
+   "startFrame": 2187,
+   "durationInFrames": 281
+  },
+  "akhir": {
+   "startFrame": 2468,
+   "durationInFrames": 573
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Sebelum ada komputer dan radar modern, Amerika pernah memasang pilot hidup di dalam moncong peluru kendali...",
+    "from": 14,
+    "to": 177,
+    "words": [
+     {
+      "w": "Sebelum",
+      "from": 14,
+      "to": 25
+     },
+     {
+      "w": "ada",
+      "from": 25,
+      "to": 28
+     },
+     {
+      "w": "komputer",
+      "from": 28,
+      "to": 43
+     },
+     {
+      "w": "dan",
+      "from": 43,
+      "to": 50
+     },
+     {
+      "w": "radar",
+      "from": 50,
+      "to": 57
+     },
+     {
+      "w": "modern,",
+      "from": 57,
+      "to": 79
+     },
+     {
+      "w": "Amerika",
+      "from": 79,
+      "to": 88
+     },
+     {
+      "w": "pernah",
+      "from": 88,
+      "to": 97
+     },
+     {
+      "w": "memasang",
+      "from": 97,
+      "to": 112
+     },
+     {
+      "w": "pilot",
+      "from": 112,
+      "to": 119
+     },
+     {
+      "w": "hidup",
+      "from": 119,
+      "to": 130
+     },
+     {
+      "w": "di",
+      "from": 130,
+      "to": 134
+     },
+     {
+      "w": "dalam",
+      "from": 134,
+      "to": 139
+     },
+     {
+      "w": "moncong",
+      "from": 139,
+      "to": 155
+     },
+     {
+      "w": "peluru",
+      "from": 155,
+      "to": 164
+     },
+     {
+      "w": "kendali...",
+      "from": 164,
+      "to": 176
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "seekor burung merpati.",
+    "from": 188,
+    "to": 226,
+    "words": [
+     {
+      "w": "seekor",
+      "from": 188,
+      "to": 200
+     },
+     {
+      "w": "burung",
+      "from": 200,
+      "to": 208
+     },
+     {
+      "w": "merpati.",
+      "from": 208,
+      "to": 218
+     }
+    ]
+   }
+  ],
+  "kereta": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Idenya muncul saat seorang psikolog melihat kawanan merpati bermanuver rapi di samping kereta, lalu melatih mereka di loteng pabrik tepung.",
+    "from": 12,
+    "to": 255,
+    "words": [
+     {
+      "w": "Idenya",
+      "from": 12,
+      "to": 38
+     },
+     {
+      "w": "muncul",
+      "from": 38,
+      "to": 53
+     },
+     {
+      "w": "saat",
+      "from": 53,
+      "to": 61
+     },
+     {
+      "w": "seorang",
+      "from": 61,
+      "to": 73
+     },
+     {
+      "w": "psikolog",
+      "from": 73,
+      "to": 87
+     },
+     {
+      "w": "melihat",
+      "from": 87,
+      "to": 103
+     },
+     {
+      "w": "kawanan",
+      "from": 103,
+      "to": 115
+     },
+     {
+      "w": "merpati",
+      "from": 115,
+      "to": 129
+     },
+     {
+      "w": "bermanuver",
+      "from": 129,
+      "to": 149
+     },
+     {
+      "w": "rapi",
+      "from": 149,
+      "to": 160
+     },
+     {
+      "w": "di",
+      "from": 160,
+      "to": 163
+     },
+     {
+      "w": "samping",
+      "from": 163,
+      "to": 173
+     },
+     {
+      "w": "kereta,",
+      "from": 173,
+      "to": 194
+     },
+     {
+      "w": "lalu",
+      "from": 194,
+      "to": 200
+     },
+     {
+      "w": "melatih",
+      "from": 200,
+      "to": 211
+     },
+     {
+      "w": "mereka",
+      "from": 211,
+      "to": 217
+     },
+     {
+      "w": "di",
+      "from": 217,
+      "to": 223
+     },
+     {
+      "w": "loteng",
+      "from": 223,
+      "to": 231
+     },
+     {
+      "w": "pabrik",
+      "from": 231,
+      "to": 240
+     },
+     {
+      "w": "tepung.",
+      "from": 240,
+      "to": 250
+     }
+    ]
+   }
+  ],
+  "lab": [
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Ara, kenalkan pilot terbaik kita! Sekali lihat gambar kapal, dia patuk sepuluh ribu kali tanpa capek!",
+    "from": 10,
+    "to": 211,
+    "words": [
+     {
+      "w": "Ara,",
+      "from": 10,
+      "to": 21
+     },
+     {
+      "w": "kenalkan",
+      "from": 21,
+      "to": 40
+     },
+     {
+      "w": "pilot",
+      "from": 40,
+      "to": 48
+     },
+     {
+      "w": "terbaik",
+      "from": 48,
+      "to": 61
+     },
+     {
+      "w": "kita!",
+      "from": 61,
+      "to": 69
+     },
+     {
+      "w": "Sekali",
+      "from": 69,
+      "to": 97
+     },
+     {
+      "w": "lihat",
+      "from": 97,
+      "to": 111
+     },
+     {
+      "w": "gambar",
+      "from": 111,
+      "to": 121
+     },
+     {
+      "w": "kapal,",
+      "from": 121,
+      "to": 130
+     },
+     {
+      "w": "dia",
+      "from": 130,
+      "to": 137
+     },
+     {
+      "w": "patuk",
+      "from": 137,
+      "to": 151
+     },
+     {
+      "w": "sepuluh",
+      "from": 151,
+      "to": 170
+     },
+     {
+      "w": "ribu",
+      "from": 170,
+      "to": 181
+     },
+     {
+      "w": "kali",
+      "from": 181,
+      "to": 185
+     },
+     {
+      "w": "tanpa",
+      "from": 185,
+      "to": 195
+     },
+     {
+      "w": "capek!",
+      "from": 195,
+      "to": 208
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Lah, bayar gajinya pakai apa, Sersan?",
+    "from": 217,
+    "to": 284,
+    "words": [
+     {
+      "w": "Lah,",
+      "from": 217,
+      "to": 223
+     },
+     {
+      "w": "bayar",
+      "from": 223,
+      "to": 230
+     },
+     {
+      "w": "gajinya",
+      "from": 230,
+      "to": 240
+     },
+     {
+      "w": "pakai",
+      "from": 240,
+      "to": 252
+     },
+     {
+      "w": "apa,",
+      "from": 252,
+      "to": 260
+     },
+     {
+      "w": "Sersan?",
+      "from": 260,
+      "to": 278
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Cukup satu biji jagung! Murah, rajin, dan nggak pernah minta cuti!",
+    "from": 291,
+    "to": 397,
+    "words": [
+     {
+      "w": "Cukup",
+      "from": 291,
+      "to": 298
+     },
+     {
+      "w": "satu",
+      "from": 298,
+      "to": 305
+     },
+     {
+      "w": "biji",
+      "from": 305,
+      "to": 314
+     },
+     {
+      "w": "jagung!",
+      "from": 314,
+      "to": 331
+     },
+     {
+      "w": "Murah,",
+      "from": 331,
+      "to": 341
+     },
+     {
+      "w": "rajin,",
+      "from": 341,
+      "to": 352
+     },
+     {
+      "w": "dan",
+      "from": 352,
+      "to": 356
+     },
+     {
+      "w": "nggak",
+      "from": 356,
+      "to": 364
+     },
+     {
+      "w": "pernah",
+      "from": 364,
+      "to": 369
+     },
+     {
+      "w": "minta",
+      "from": 369,
+      "to": 377
+     },
+     {
+      "w": "cuti!",
+      "from": 377,
+      "to": 391
+     }
+    ]
+   }
+  ],
+  "voting": [
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Tapi Sersan, kalau di jalan satu merpatinya ngantuk atau meleng gimana?",
+    "from": 10,
+    "to": 125,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 10,
+      "to": 19
+     },
+     {
+      "w": "Sersan,",
+      "from": 19,
+      "to": 30
+     },
+     {
+      "w": "kalau",
+      "from": 30,
+      "to": 42
+     },
+     {
+      "w": "di",
+      "from": 42,
+      "to": 44
+     },
+     {
+      "w": "jalan",
+      "from": 44,
+      "to": 52
+     },
+     {
+      "w": "satu",
+      "from": 52,
+      "to": 59
+     },
+     {
+      "w": "merpatinya",
+      "from": 59,
+      "to": 76
+     },
+     {
+      "w": "ngantuk",
+      "from": 76,
+      "to": 88
+     },
+     {
+      "w": "atau",
+      "from": 88,
+      "to": 94
+     },
+     {
+      "w": "meleng",
+      "from": 94,
+      "to": 108
+     },
+     {
+      "w": "gimana?",
+      "from": 108,
+      "to": 119
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Tenang! Di dalam moncong rudal kita pasang tiga merpati sekaligus pakai sistem pemungutan suara!",
+    "from": 131,
+    "to": 304,
+    "words": [
+     {
+      "w": "Tenang!",
+      "from": 131,
+      "to": 157
+     },
+     {
+      "w": "Di",
+      "from": 157,
+      "to": 159
+     },
+     {
+      "w": "dalam",
+      "from": 159,
+      "to": 169
+     },
+     {
+      "w": "moncong",
+      "from": 169,
+      "to": 186
+     },
+     {
+      "w": "rudal",
+      "from": 186,
+      "to": 194
+     },
+     {
+      "w": "kita",
+      "from": 194,
+      "to": 202
+     },
+     {
+      "w": "pasang",
+      "from": 202,
+      "to": 213
+     },
+     {
+      "w": "tiga",
+      "from": 213,
+      "to": 220
+     },
+     {
+      "w": "merpati",
+      "from": 220,
+      "to": 233
+     },
+     {
+      "w": "sekaligus",
+      "from": 233,
+      "to": 251
+     },
+     {
+      "w": "pakai",
+      "from": 251,
+      "to": 259
+     },
+     {
+      "w": "sistem",
+      "from": 259,
+      "to": 267
+     },
+     {
+      "w": "pemungutan",
+      "from": 267,
+      "to": 285
+     },
+     {
+      "w": "suara!",
+      "from": 285,
+      "to": 296
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Kalau dua patuk ke kiri dan satu meleng ke kanan, rudalnya tetap ikut suara terbanyak!",
+    "from": 310,
+    "to": 473,
+    "words": [
+     {
+      "w": "Kalau",
+      "from": 310,
+      "to": 315
+     },
+     {
+      "w": "dua",
+      "from": 315,
+      "to": 323
+     },
+     {
+      "w": "patuk",
+      "from": 323,
+      "to": 333
+     },
+     {
+      "w": "ke",
+      "from": 333,
+      "to": 336
+     },
+     {
+      "w": "kiri",
+      "from": 336,
+      "to": 345
+     },
+     {
+      "w": "dan",
+      "from": 345,
+      "to": 350
+     },
+     {
+      "w": "satu",
+      "from": 350,
+      "to": 359
+     },
+     {
+      "w": "meleng",
+      "from": 359,
+      "to": 369
+     },
+     {
+      "w": "ke",
+      "from": 369,
+      "to": 372
+     },
+     {
+      "w": "kanan,",
+      "from": 372,
+      "to": 383
+     },
+     {
+      "w": "rudalnya",
+      "from": 383,
+      "to": 418
+     },
+     {
+      "w": "tetap",
+      "from": 418,
+      "to": 436
+     },
+     {
+      "w": "ikut",
+      "from": 436,
+      "to": 445
+     },
+     {
+      "w": "suara",
+      "from": 445,
+      "to": 454
+     },
+     {
+      "w": "terbanyak!",
+      "from": 454,
+      "to": 469
+     }
+    ]
+   }
+  ],
+  "uji": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Oktober sembilan belas empat puluh empat, sistem ini diuji di depan komite jenderal.",
+    "from": 11,
+    "to": 145,
+    "words": [
+     {
+      "w": "Oktober",
+      "from": 11,
+      "to": 19
+     },
+     {
+      "w": "sembilan",
+      "from": 19,
+      "to": 40
+     },
+     {
+      "w": "belas",
+      "from": 40,
+      "to": 71
+     },
+     {
+      "w": "empat",
+      "from": 71,
+      "to": 77
+     },
+     {
+      "w": "puluh",
+      "from": 77,
+      "to": 86
+     },
+     {
+      "w": "empat,",
+      "from": 86,
+      "to": 96
+     },
+     {
+      "w": "sistem",
+      "from": 96,
+      "to": 106
+     },
+     {
+      "w": "ini",
+      "from": 106,
+      "to": 110
+     },
+     {
+      "w": "diuji",
+      "from": 110,
+      "to": 115
+     },
+     {
+      "w": "di",
+      "from": 115,
+      "to": 118
+     },
+     {
+      "w": "depan",
+      "from": 118,
+      "to": 122
+     },
+     {
+      "w": "komite",
+      "from": 122,
+      "to": 128
+     },
+     {
+      "w": "jenderal.",
+      "from": 128,
+      "to": 135
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "bisik",
+    "text": "Sersan... merpatinya belum sarapan, ini aku bawain jagung hangat.",
+    "from": 154,
+    "to": 368,
+    "words": [
+     {
+      "w": "Sersan...",
+      "from": 154,
+      "to": 207
+     },
+     {
+      "w": "merpatinya",
+      "from": 207,
+      "to": 225
+     },
+     {
+      "w": "belum",
+      "from": 225,
+      "to": 232
+     },
+     {
+      "w": "sarapan,",
+      "from": 232,
+      "to": 283
+     },
+     {
+      "w": "ini",
+      "from": 283,
+      "to": 303
+     },
+     {
+      "w": "aku",
+      "from": 303,
+      "to": 322
+     },
+     {
+      "w": "bawain",
+      "from": 322,
+      "to": 337
+     },
+     {
+      "w": "jagung",
+      "from": 337,
+      "to": 350
+     },
+     {
+      "w": "hangat.",
+      "from": 350,
+      "to": 368
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Hus! Simpan dulu kantong jagungnya, Ara!",
+    "from": 373,
+    "to": 444,
+    "words": [
+     {
+      "w": "Hus!",
+      "from": 373,
+      "to": 391
+     },
+     {
+      "w": "Simpan",
+      "from": 391,
+      "to": 408
+     },
+     {
+      "w": "dulu",
+      "from": 408,
+      "to": 412
+     },
+     {
+      "w": "kantong",
+      "from": 412,
+      "to": 422
+     },
+     {
+      "w": "jagungnya,",
+      "from": 422,
+      "to": 437
+     },
+     {
+      "w": "Ara!",
+      "from": 437,
+      "to": 443
+     }
+    ]
+   }
+  ],
+  "tumpah": [
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Eh, licin, Sersan... tumpah ke truk kantin!",
+    "from": 16,
+    "to": 207,
+    "words": [
+     {
+      "w": "Eh,",
+      "from": 16,
+      "to": 31
+     },
+     {
+      "w": "licin,",
+      "from": 31,
+      "to": 70
+     },
+     {
+      "w": "Sersan...",
+      "from": 70,
+      "to": 142
+     },
+     {
+      "w": "tumpah",
+      "from": 142,
+      "to": 167
+     },
+     {
+      "w": "ke",
+      "from": 167,
+      "to": 172
+     },
+     {
+      "w": "truk",
+      "from": 172,
+      "to": 182
+     },
+     {
+      "w": "kantin!",
+      "from": 182,
+      "to": 201
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Waduh! Ketiga lensanya langsung nyorot jagung!",
+    "from": 213,
+    "to": 299,
+    "words": [
+     {
+      "w": "Waduh!",
+      "from": 213,
+      "to": 239
+     },
+     {
+      "w": "Ketiga",
+      "from": 239,
+      "to": 249
+     },
+     {
+      "w": "lensanya",
+      "from": 249,
+      "to": 263
+     },
+     {
+      "w": "langsung",
+      "from": 263,
+      "to": 275
+     },
+     {
+      "w": "nyorot",
+      "from": 275,
+      "to": 286
+     },
+     {
+      "w": "jagung!",
+      "from": 286,
+      "to": 296
+     }
+    ]
+   }
+  ],
+  "serbu": [
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Sersan! Ketiganya kompak memilih tiga kosong ke arah panci jenderal!",
+    "from": 10,
+    "to": 143,
+    "words": [
+     {
+      "w": "Sersan!",
+      "from": 10,
+      "to": 27
+     },
+     {
+      "w": "Ketiganya",
+      "from": 27,
+      "to": 58
+     },
+     {
+      "w": "kompak",
+      "from": 58,
+      "to": 73
+     },
+     {
+      "w": "memilih",
+      "from": 73,
+      "to": 87
+     },
+     {
+      "w": "tiga",
+      "from": 87,
+      "to": 93
+     },
+     {
+      "w": "kosong",
+      "from": 93,
+      "to": 105
+     },
+     {
+      "w": "ke",
+      "from": 105,
+      "to": 110
+     },
+     {
+      "w": "arah",
+      "from": 110,
+      "to": 117
+     },
+     {
+      "w": "panci",
+      "from": 117,
+      "to": 124
+     },
+     {
+      "w": "jenderal!",
+      "from": 124,
+      "to": 134
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Jangan matuk situ! Itu makan siang Pak Jenderal!",
+    "from": 150,
+    "to": 241,
+    "words": [
+     {
+      "w": "Jangan",
+      "from": 150,
+      "to": 156
+     },
+     {
+      "w": "matuk",
+      "from": 156,
+      "to": 167
+     },
+     {
+      "w": "situ!",
+      "from": 167,
+      "to": 176
+     },
+     {
+      "w": "Itu",
+      "from": 176,
+      "to": 203
+     },
+     {
+      "w": "makan",
+      "from": 203,
+      "to": 210
+     },
+     {
+      "w": "siang",
+      "from": 210,
+      "to": 218
+     },
+     {
+      "w": "Pak",
+      "from": 218,
+      "to": 222
+     },
+     {
+      "w": "Jenderal!",
+      "from": 222,
+      "to": 231
+     }
+    ]
+   }
+  ],
+  "akhir": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Proyek Merpati akhirnya dibatalkan tahun itu juga, karena militer lebih memilih radar elektronik yang tidak doyan jagung.",
+    "from": 14,
+    "to": 225,
+    "words": [
+     {
+      "w": "Proyek",
+      "from": 14,
+      "to": 24
+     },
+     {
+      "w": "Merpati",
+      "from": 24,
+      "to": 36
+     },
+     {
+      "w": "akhirnya",
+      "from": 36,
+      "to": 50
+     },
+     {
+      "w": "dibatalkan",
+      "from": 50,
+      "to": 66
+     },
+     {
+      "w": "tahun",
+      "from": 66,
+      "to": 72
+     },
+     {
+      "w": "itu",
+      "from": 72,
+      "to": 78
+     },
+     {
+      "w": "juga,",
+      "from": 78,
+      "to": 87
+     },
+     {
+      "w": "karena",
+      "from": 87,
+      "to": 109
+     },
+     {
+      "w": "militer",
+      "from": 109,
+      "to": 128
+     },
+     {
+      "w": "lebih",
+      "from": 128,
+      "to": 140
+     },
+     {
+      "w": "memilih",
+      "from": 140,
+      "to": 154
+     },
+     {
+      "w": "radar",
+      "from": 154,
+      "to": 162
+     },
+     {
+      "w": "elektronik",
+      "from": 162,
+      "to": 183
+     },
+     {
+      "w": "yang",
+      "from": 183,
+      "to": 190
+     },
+     {
+      "w": "tidak",
+      "from": 190,
+      "to": 197
+     },
+     {
+      "w": "doyan",
+      "from": 197,
+      "to": 208
+     },
+     {
+      "w": "jagung.",
+      "from": 208,
+      "to": 221
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Tapi delapan puluh tahun kemudian, penemunya malah dapat penghargaan Ig Nobel lho, Sersan!",
+    "from": 233,
+    "to": 401,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 233,
+      "to": 240
+     },
+     {
+      "w": "delapan",
+      "from": 240,
+      "to": 250
+     },
+     {
+      "w": "puluh",
+      "from": 250,
+      "to": 257
+     },
+     {
+      "w": "tahun",
+      "from": 257,
+      "to": 263
+     },
+     {
+      "w": "kemudian,",
+      "from": 263,
+      "to": 296
+     },
+     {
+      "w": "penemunya",
+      "from": 296,
+      "to": 312
+     },
+     {
+      "w": "malah",
+      "from": 312,
+      "to": 324
+     },
+     {
+      "w": "dapat",
+      "from": 324,
+      "to": 328
+     },
+     {
+      "w": "penghargaan",
+      "from": 328,
+      "to": 345
+     },
+     {
+      "w": "Ig",
+      "from": 345,
+      "to": 348
+     },
+     {
+      "w": "Nobel",
+      "from": 348,
+      "to": 359
+     },
+     {
+      "w": "lho,",
+      "from": 359,
+      "to": 366
+     },
+     {
+      "w": "Sersan!",
+      "from": 366,
+      "to": 398
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Iya... pialanya buat profesor, jagungnya habis buat mereka.",
+    "from": 413,
+    "to": 531,
+    "words": [
+     {
+      "w": "Iya...",
+      "from": 413,
+      "to": 442
+     },
+     {
+      "w": "pialanya",
+      "from": 442,
+      "to": 458
+     },
+     {
+      "w": "buat",
+      "from": 458,
+      "to": 464
+     },
+     {
+      "w": "profesor,",
+      "from": 464,
+      "to": 489
+     },
+     {
+      "w": "jagungnya",
+      "from": 489,
+      "to": 504
+     },
+     {
+      "w": "habis",
+      "from": 504,
+      "to": 513
+     },
+     {
+      "w": "buat",
+      "from": 513,
+      "to": 518
+     },
+     {
+      "w": "mereka.",
+      "from": 518,
+      "to": 525
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.moncong": 137,
+  "hook.merpati": 205,
+  "ker.kawanan": 101,
+  "ker.kereta": 171,
+  "ker.loteng": 221,
+  "lab.kapal": 119,
+  "lab.sepuluh": 149,
+  "lab.gajinya": 228,
+  "lab.jagung": 311,
+  "lab.cuti": 375,
+  "vot.ngantuk": 74,
+  "vot.tiga": 211,
+  "vot.suara": 283,
+  "vot.dua": 313,
+  "vot.meleng": 357,
+  "vot.terbanyak": 452,
+  "uji.jenderal": 126,
+  "uji.sarapan": 230,
+  "uji.jagung": 335,
+  "uji.hus": 372,
+  "uji.simpan": 389,
+  "tum.tumpah": 140,
+  "tum.truk": 170,
+  "tum.lensanya": 247,
+  "tum.jagung": 284,
+  "ser.tiga": 85,
+  "ser.panci": 115,
+  "ser.jangan": 150,
+  "ser.jenderal": 219,
+  "akh.dibatalkan": 48,
+  "akh.radar": 152,
+  "akh.nobel": 346,
+  "akh.iya": 413,
+  "akh.mereka": 515
+ },
+ "captions": [
+  {
+   "text": "Sebelum ada",
+   "startFrame": 14,
+   "endFrame": 28,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "komputer dan",
+   "startFrame": 28,
+   "endFrame": 50,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "radar",
+   "startFrame": 50,
+   "endFrame": 57,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "modern,",
+   "startFrame": 57,
+   "endFrame": 79,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Amerika",
+   "startFrame": 79,
+   "endFrame": 88,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pernah",
+   "startFrame": 88,
+   "endFrame": 97,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "memasang",
+   "startFrame": 97,
+   "endFrame": 112,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pilot hidup",
+   "startFrame": 112,
+   "endFrame": 130,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "di dalam",
+   "startFrame": 130,
+   "endFrame": 139,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "moncong",
+   "startFrame": 139,
+   "endFrame": 155,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "peluru",
+   "startFrame": 155,
+   "endFrame": 164,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kendali...",
+   "startFrame": 164,
+   "endFrame": 176,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "seekor",
+   "startFrame": 188,
+   "endFrame": 200,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "burung",
+   "startFrame": 200,
+   "endFrame": 208,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "merpati.",
+   "startFrame": 208,
+   "endFrame": 218,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Idenya",
+   "startFrame": 254,
+   "endFrame": 280,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "muncul saat",
+   "startFrame": 280,
+   "endFrame": 303,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "seorang",
+   "startFrame": 303,
+   "endFrame": 315,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "psikolog",
+   "startFrame": 315,
+   "endFrame": 329,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "melihat",
+   "startFrame": 329,
+   "endFrame": 345,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kawanan",
+   "startFrame": 345,
+   "endFrame": 357,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "merpati",
+   "startFrame": 357,
+   "endFrame": 371,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "bermanuver",
+   "startFrame": 371,
+   "endFrame": 391,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "rapi di",
+   "startFrame": 391,
+   "endFrame": 405,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "samping",
+   "startFrame": 405,
+   "endFrame": 415,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kereta,",
+   "startFrame": 415,
+   "endFrame": 436,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lalu melatih",
+   "startFrame": 436,
+   "endFrame": 453,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mereka di",
+   "startFrame": 453,
+   "endFrame": 465,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "loteng",
+   "startFrame": 465,
+   "endFrame": 473,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pabrik",
+   "startFrame": 473,
+   "endFrame": 482,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tepung.",
+   "startFrame": 482,
+   "endFrame": 492,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ara,",
+   "startFrame": 525,
+   "endFrame": 536,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kenalkan",
+   "startFrame": 536,
+   "endFrame": 555,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pilot",
+   "startFrame": 555,
+   "endFrame": 563,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terbaik",
+   "startFrame": 563,
+   "endFrame": 576,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kita!",
+   "startFrame": 576,
+   "endFrame": 584,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sekali lihat",
+   "startFrame": 584,
+   "endFrame": 626,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "gambar",
+   "startFrame": 626,
+   "endFrame": 636,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kapal,",
+   "startFrame": 636,
+   "endFrame": 645,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dia patuk",
+   "startFrame": 645,
+   "endFrame": 666,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sepuluh ribu",
+   "startFrame": 666,
+   "endFrame": 696,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kali tanpa",
+   "startFrame": 696,
+   "endFrame": 710,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "capek!",
+   "startFrame": 710,
+   "endFrame": 723,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Lah,",
+   "startFrame": 732,
+   "endFrame": 738,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "bayar",
+   "startFrame": 738,
+   "endFrame": 745,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "gajinya",
+   "startFrame": 745,
+   "endFrame": 755,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "pakai apa,",
+   "startFrame": 755,
+   "endFrame": 775,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sersan?",
+   "startFrame": 775,
+   "endFrame": 793,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Cukup satu",
+   "startFrame": 806,
+   "endFrame": 820,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "biji jagung!",
+   "startFrame": 820,
+   "endFrame": 846,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Murah,",
+   "startFrame": 846,
+   "endFrame": 856,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "rajin,",
+   "startFrame": 856,
+   "endFrame": 867,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dan nggak",
+   "startFrame": 867,
+   "endFrame": 879,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pernah minta",
+   "startFrame": 879,
+   "endFrame": 892,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "cuti!",
+   "startFrame": 892,
+   "endFrame": 906,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tapi Sersan,",
+   "startFrame": 937,
+   "endFrame": 957,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kalau di",
+   "startFrame": 957,
+   "endFrame": 971,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "jalan satu",
+   "startFrame": 971,
+   "endFrame": 986,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "merpatinya",
+   "startFrame": 986,
+   "endFrame": 1003,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "ngantuk atau",
+   "startFrame": 1003,
+   "endFrame": 1021,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "meleng",
+   "startFrame": 1021,
+   "endFrame": 1035,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "gimana?",
+   "startFrame": 1035,
+   "endFrame": 1046,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Tenang!",
+   "startFrame": 1058,
+   "endFrame": 1084,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Di dalam",
+   "startFrame": 1084,
+   "endFrame": 1096,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "moncong",
+   "startFrame": 1096,
+   "endFrame": 1113,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "rudal kita",
+   "startFrame": 1113,
+   "endFrame": 1129,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pasang tiga",
+   "startFrame": 1129,
+   "endFrame": 1147,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "merpati",
+   "startFrame": 1147,
+   "endFrame": 1160,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "sekaligus",
+   "startFrame": 1160,
+   "endFrame": 1178,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pakai sistem",
+   "startFrame": 1178,
+   "endFrame": 1194,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pemungutan",
+   "startFrame": 1194,
+   "endFrame": 1212,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "suara!",
+   "startFrame": 1212,
+   "endFrame": 1223,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kalau dua",
+   "startFrame": 1237,
+   "endFrame": 1250,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "patuk ke",
+   "startFrame": 1250,
+   "endFrame": 1263,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kiri dan",
+   "startFrame": 1263,
+   "endFrame": 1277,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "satu meleng",
+   "startFrame": 1277,
+   "endFrame": 1296,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ke kanan,",
+   "startFrame": 1296,
+   "endFrame": 1310,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "rudalnya",
+   "startFrame": 1310,
+   "endFrame": 1345,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tetap ikut",
+   "startFrame": 1345,
+   "endFrame": 1372,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "suara",
+   "startFrame": 1372,
+   "endFrame": 1381,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "terbanyak!",
+   "startFrame": 1381,
+   "endFrame": 1396,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Oktober",
+   "startFrame": 1427,
+   "endFrame": 1435,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sembilan",
+   "startFrame": 1435,
+   "endFrame": 1456,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "belas empat",
+   "startFrame": 1456,
+   "endFrame": 1493,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "puluh empat,",
+   "startFrame": 1493,
+   "endFrame": 1512,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sistem ini",
+   "startFrame": 1512,
+   "endFrame": 1526,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "diuji di",
+   "startFrame": 1526,
+   "endFrame": 1534,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "depan komite",
+   "startFrame": 1534,
+   "endFrame": 1544,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jenderal.",
+   "startFrame": 1544,
+   "endFrame": 1551,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sersan...",
+   "startFrame": 1570,
+   "endFrame": 1623,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "merpatinya",
+   "startFrame": 1623,
+   "endFrame": 1641,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "belum",
+   "startFrame": 1641,
+   "endFrame": 1648,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sarapan,",
+   "startFrame": 1648,
+   "endFrame": 1699,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "ini aku",
+   "startFrame": 1699,
+   "endFrame": 1738,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "bawain",
+   "startFrame": 1738,
+   "endFrame": 1753,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "jagung",
+   "startFrame": 1753,
+   "endFrame": 1766,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "hangat.",
+   "startFrame": 1766,
+   "endFrame": 1789,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Hus!",
+   "startFrame": 1789,
+   "endFrame": 1807,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Simpan dulu",
+   "startFrame": 1807,
+   "endFrame": 1828,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kantong",
+   "startFrame": 1828,
+   "endFrame": 1838,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jagungnya,",
+   "startFrame": 1838,
+   "endFrame": 1853,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ara!",
+   "startFrame": 1853,
+   "endFrame": 1859,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Eh,",
+   "startFrame": 1890,
+   "endFrame": 1904,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "licin,",
+   "startFrame": 1904,
+   "endFrame": 1943,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sersan...",
+   "startFrame": 1943,
+   "endFrame": 2015,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tumpah ke",
+   "startFrame": 2015,
+   "endFrame": 2045,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "truk kantin!",
+   "startFrame": 2045,
+   "endFrame": 2074,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Waduh!",
+   "startFrame": 2086,
+   "endFrame": 2112,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ketiga",
+   "startFrame": 2112,
+   "endFrame": 2122,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lensanya",
+   "startFrame": 2122,
+   "endFrame": 2136,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "langsung",
+   "startFrame": 2136,
+   "endFrame": 2148,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "nyorot",
+   "startFrame": 2148,
+   "endFrame": 2159,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jagung!",
+   "startFrame": 2159,
+   "endFrame": 2169,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sersan!",
+   "startFrame": 2197,
+   "endFrame": 2214,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ketiganya",
+   "startFrame": 2214,
+   "endFrame": 2245,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kompak",
+   "startFrame": 2245,
+   "endFrame": 2260,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "memilih tiga",
+   "startFrame": 2260,
+   "endFrame": 2280,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "kosong ke",
+   "startFrame": 2280,
+   "endFrame": 2297,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "arah panci",
+   "startFrame": 2297,
+   "endFrame": 2311,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "jenderal!",
+   "startFrame": 2311,
+   "endFrame": 2321,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Jangan matuk",
+   "startFrame": 2337,
+   "endFrame": 2354,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "situ!",
+   "startFrame": 2354,
+   "endFrame": 2363,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Itu makan",
+   "startFrame": 2363,
+   "endFrame": 2397,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "siang Pak",
+   "startFrame": 2397,
+   "endFrame": 2409,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Jenderal!",
+   "startFrame": 2409,
+   "endFrame": 2418,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Proyek",
+   "startFrame": 2482,
+   "endFrame": 2492,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Merpati",
+   "startFrame": 2492,
+   "endFrame": 2504,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "akhirnya",
+   "startFrame": 2504,
+   "endFrame": 2518,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dibatalkan",
+   "startFrame": 2518,
+   "endFrame": 2534,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "tahun itu",
+   "startFrame": 2534,
+   "endFrame": 2546,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "juga,",
+   "startFrame": 2546,
+   "endFrame": 2555,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "karena",
+   "startFrame": 2555,
+   "endFrame": 2577,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "militer",
+   "startFrame": 2577,
+   "endFrame": 2596,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lebih",
+   "startFrame": 2596,
+   "endFrame": 2608,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "memilih",
+   "startFrame": 2608,
+   "endFrame": 2622,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "radar",
+   "startFrame": 2622,
+   "endFrame": 2630,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "elektronik",
+   "startFrame": 2630,
+   "endFrame": 2651,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang tidak",
+   "startFrame": 2651,
+   "endFrame": 2665,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "doyan",
+   "startFrame": 2665,
+   "endFrame": 2676,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jagung.",
+   "startFrame": 2676,
+   "endFrame": 2689,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tapi delapan",
+   "startFrame": 2701,
+   "endFrame": 2718,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "puluh tahun",
+   "startFrame": 2718,
+   "endFrame": 2731,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kemudian,",
+   "startFrame": 2731,
+   "endFrame": 2764,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "penemunya",
+   "startFrame": 2764,
+   "endFrame": 2780,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "malah dapat",
+   "startFrame": 2780,
+   "endFrame": 2796,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "penghargaan",
+   "startFrame": 2796,
+   "endFrame": 2813,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ig Nobel",
+   "startFrame": 2813,
+   "endFrame": 2827,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "lho,",
+   "startFrame": 2827,
+   "endFrame": 2834,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sersan!",
+   "startFrame": 2834,
+   "endFrame": 2866,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Iya...",
+   "startFrame": 2881,
+   "endFrame": 2910,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pialanya",
+   "startFrame": 2910,
+   "endFrame": 2926,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "buat",
+   "startFrame": 2926,
+   "endFrame": 2932,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "profesor,",
+   "startFrame": 2932,
+   "endFrame": 2957,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jagungnya",
+   "startFrame": 2957,
+   "endFrame": 2972,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "habis buat",
+   "startFrame": 2972,
+   "endFrame": 2986,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mereka.",
+   "startFrame": 2986,
+   "endFrame": 2993,
+   "highlight": true,
+   "voice": "dodi"
+  }
+ ]
+}

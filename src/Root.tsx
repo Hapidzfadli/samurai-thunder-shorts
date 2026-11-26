@@ -57,6 +57,8 @@ import { SheetBandungKarakter, SheetBandungProperti } from "./SheetBandung";
 import { Kelelawar, TOTAL_FRAMES_KELELAWAR } from "./Kelelawar";
 import { SheetKelelawarKarakter, SheetKelelawarEkspresi, SheetKelelawarProperti } from "./SheetKelelawar";
 import { SheetMerpatiEkspresi, SheetMerpatiKarakter, SheetMerpatiProperti } from "./SheetMerpati";
+import { Merpati, TOTAL_FRAMES_MERPATI } from "./Merpati";
+import { ThumbMerpatiShorts, ThumbMerpatiYoutube } from "./ThumbMerpati";
 import { Mie, TOTAL_FRAMES_MIE } from "./Mie";
 import { SheetMieKarakter, SheetMieProperti } from "./SheetMie";
 import { ThumbMieShorts, ThumbMieYoutube } from "./ThumbMie";
@@ -70,6 +72,9 @@ import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Merpati" component={Merpati} durationInFrames={TOTAL_FRAMES_MERPATI} fps={30} width={1080} height={1920} defaultProps={{ withAudio: false }} />
+      <Composition id="ThumbMerpatiShorts" component={ThumbMerpatiShorts} durationInFrames={1} fps={30} width={1080} height={1920} />
+      <Composition id="ThumbMerpatiYoutube" component={ThumbMerpatiYoutube} durationInFrames={1} fps={30} width={1920} height={1080} />
       <Composition id="SheetMerpatiKarakter" component={SheetMerpatiKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetMerpatiEkspresi" component={SheetMerpatiEkspresi} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetMerpatiProperti" component={SheetMerpatiProperti} durationInFrames={1} fps={30} width={2000} height={1440} />

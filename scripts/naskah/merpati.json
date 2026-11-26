@@ -1,0 +1,37 @@
+[
+  {"scene": "hook", "takes": 2, "lines": [
+    ["narasi", "Sebelum ada komputer dan radar modern, Amerika pernah memasang pilot hidup di dalam moncong peluru kendali...", "dodi"],
+    ["santai", "seekor burung merpati.", "dodi"]
+  ]},
+  {"scene": "kereta", "takes": 2, "lines": [
+    ["narasi", "Idenya muncul saat seorang psikolog melihat kawanan merpati bermanuver rapi di samping kereta, lalu melatih mereka di loteng pabrik tepung.", "dodi"]
+  ]},
+  {"scene": "lab", "takes": 2, "lines": [
+    ["tegas", "Ara, kenalkan pilot terbaik kita! Sekali lihat gambar kapal, dia patuk sepuluh ribu kali tanpa capek!", "dodi"],
+    ["santai", "Lah, bayar gajinya pakai apa, Sersan?", "ara"],
+    ["santai", "Cukup satu biji jagung! Murah, rajin, dan nggak pernah minta cuti!", "dodi"]
+  ]},
+  {"scene": "voting", "takes": 2, "lines": [
+    ["santai", "Tapi Sersan, kalau di jalan satu merpatinya ngantuk atau meleng gimana?", "ara"],
+    ["narasi", "Tenang! Di dalam moncong rudal kita pasang tiga merpati sekaligus pakai sistem pemungutan suara!", "dodi"],
+    ["tegas", "Kalau dua patuk ke kiri dan satu meleng ke kanan, rudalnya tetap ikut suara terbanyak!", "dodi"]
+  ]},
+  {"scene": "uji", "takes": 2, "lines": [
+    ["narasi", "Oktober sembilan belas empat puluh empat, sistem ini diuji di depan komite jenderal.", "dodi"],
+    ["bisik", "Sersan... merpatinya belum sarapan, ini aku bawain jagung hangat.", "ara"],
+    ["tegang", "Hus! Simpan dulu kantong jagungnya, Ara!", "dodi"]
+  ]},
+  {"scene": "tumpah", "takes": 2, "lines": [
+    ["tegang", "Eh, licin, Sersan... tumpah ke truk kantin!", "ara"],
+    ["tegang", "Waduh! Ketiga lensanya langsung nyorot jagung!", "dodi"]
+  ]},
+  {"scene": "serbu", "takes": 2, "lines": [
+    ["tegang", "Sersan! Ketiganya kompak memilih tiga kosong ke arah panci jenderal!", "ara"],
+    ["tegang", "Jangan matuk situ! Itu makan siang Pak Jenderal!", "dodi"]
+  ]},
+  {"scene": "akhir", "takes": 2, "lines": [
+    ["narasi", "Proyek Merpati akhirnya dibatalkan tahun itu juga, karena militer lebih memilih radar elektronik yang tidak doyan jagung.", "dodi"],
+    ["santai", "Tapi delapan puluh tahun kemudian, penemunya malah dapat penghargaan Ig Nobel lho, Sersan!", "ara"],
+    ["santai", "Iya... pialanya buat profesor, jagungnya habis buat mereka.", "dodi"]
+  ]}
+]
