@@ -1,0 +1,2546 @@
+{
+ "fps": 30,
+ "totalDurationSec": 109.7,
+ "totalFrames": 3291,
+ "order": [
+  "hook",
+  "tilsit",
+  "ide",
+  "ternak",
+  "hari",
+  "serbu",
+  "kereta",
+  "akhir"
+ ],
+ "scenes": {
+  "hook": {
+   "startFrame": 0,
+   "durationInFrames": 228
+  },
+  "tilsit": {
+   "startFrame": 228,
+   "durationInFrames": 628
+  },
+  "ide": {
+   "startFrame": 856,
+   "durationInFrames": 425
+  },
+  "ternak": {
+   "startFrame": 1281,
+   "durationInFrames": 492
+  },
+  "hari": {
+   "startFrame": 1773,
+   "durationInFrames": 427
+  },
+  "serbu": {
+   "startFrame": 2200,
+   "durationInFrames": 373
+  },
+  "kereta": {
+   "startFrame": 2573,
+   "durationInFrames": 257
+  },
+  "akhir": {
+   "startFrame": 2830,
+   "durationInFrames": 461
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Napoleon hampir tidak pernah kalah perang.",
+    "from": 16,
+    "to": 73,
+    "words": [
+     {
+      "w": "Napoleon",
+      "from": 16,
+      "to": 24
+     },
+     {
+      "w": "hampir",
+      "from": 24,
+      "to": 35
+     },
+     {
+      "w": "tidak",
+      "from": 35,
+      "to": 40
+     },
+     {
+      "w": "pernah",
+      "from": 40,
+      "to": 48
+     },
+     {
+      "w": "kalah",
+      "from": 48,
+      "to": 58
+     },
+     {
+      "w": "perang.",
+      "from": 58,
+      "to": 67
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Tapi suatu hari, dia lari terbirit-birit... dari kelinci.",
+    "from": 88,
+    "to": 213,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 88,
+      "to": 102
+     },
+     {
+      "w": "suatu",
+      "from": 102,
+      "to": 118
+     },
+     {
+      "w": "hari,",
+      "from": 118,
+      "to": 139
+     },
+     {
+      "w": "dia",
+      "from": 139,
+      "to": 149
+     },
+     {
+      "w": "lari",
+      "from": 149,
+      "to": 162
+     },
+     {
+      "w": "terbirit-birit...",
+      "from": 162,
+      "to": 186
+     },
+     {
+      "w": "dari",
+      "from": 186,
+      "to": 192
+     },
+     {
+      "w": "kelinci.",
+      "from": 192,
+      "to": 206
+     }
+    ]
+   }
+  ],
+  "tilsit": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Juli seribu delapan ratus tujuh. Napoleon baru menang, dan menandatangani perjanjian damai dengan Rusia.",
+    "from": 15,
+    "to": 206,
+    "words": [
+     {
+      "w": "Juli",
+      "from": 15,
+      "to": 24
+     },
+     {
+      "w": "seribu",
+      "from": 24,
+      "to": 66
+     },
+     {
+      "w": "delapan",
+      "from": 66,
+      "to": 83
+     },
+     {
+      "w": "ratus",
+      "from": 83,
+      "to": 90
+     },
+     {
+      "w": "tujuh.",
+      "from": 90,
+      "to": 100
+     },
+     {
+      "w": "Napoleon",
+      "from": 100,
+      "to": 115
+     },
+     {
+      "w": "baru",
+      "from": 115,
+      "to": 123
+     },
+     {
+      "w": "menang,",
+      "from": 123,
+      "to": 131
+     },
+     {
+      "w": "dan",
+      "from": 131,
+      "to": 135
+     },
+     {
+      "w": "menandatangani",
+      "from": 135,
+      "to": 157
+     },
+     {
+      "w": "perjanjian",
+      "from": 157,
+      "to": 174
+     },
+     {
+      "w": "damai",
+      "from": 174,
+      "to": 181
+     },
+     {
+      "w": "dengan",
+      "from": 181,
+      "to": 187
+     },
+     {
+      "w": "Rusia.",
+      "from": 187,
+      "to": 196
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Selamat, Yang Mulia! Perang akhirnya selesai.",
+    "from": 213,
+    "to": 293,
+    "words": [
+     {
+      "w": "Selamat,",
+      "from": 213,
+      "to": 227
+     },
+     {
+      "w": "Yang",
+      "from": 227,
+      "to": 236
+     },
+     {
+      "w": "Mulia!",
+      "from": 236,
+      "to": 256
+     },
+     {
+      "w": "Perang",
+      "from": 256,
+      "to": 264
+     },
+     {
+      "w": "akhirnya",
+      "from": 264,
+      "to": 276
+     },
+     {
+      "w": "selesai.",
+      "from": 276,
+      "to": 290
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Akhirnya. Tapi... aku jadi bosan.",
+    "from": 302,
+    "to": 387,
+    "words": [
+     {
+      "w": "Akhirnya.",
+      "from": 302,
+      "to": 332
+     },
+     {
+      "w": "Tapi...",
+      "from": 332,
+      "to": 344
+     },
+     {
+      "w": "aku",
+      "from": 344,
+      "to": 362
+     },
+     {
+      "w": "jadi",
+      "from": 362,
+      "to": 368
+     },
+     {
+      "w": "bosan.",
+      "from": 368,
+      "to": 382
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Bosan? Setelah menang?",
+    "from": 393,
+    "to": 440,
+    "words": [
+     {
+      "w": "Bosan?",
+      "from": 393,
+      "to": 406
+     },
+     {
+      "w": "Setelah",
+      "from": 406,
+      "to": 427
+     },
+     {
+      "w": "menang?",
+      "from": 427,
+      "to": 435
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Iya. Bertahun-tahun perang terus. Sekarang aku butuh hiburan. Ada ide?",
+    "from": 449,
+    "to": 610,
+    "words": [
+     {
+      "w": "Iya.",
+      "from": 449,
+      "to": 475
+     },
+     {
+      "w": "Bertahun-tahun",
+      "from": 475,
+      "to": 498
+     },
+     {
+      "w": "perang",
+      "from": 498,
+      "to": 508
+     },
+     {
+      "w": "terus.",
+      "from": 508,
+      "to": 531
+     },
+     {
+      "w": "Sekarang",
+      "from": 531,
+      "to": 547
+     },
+     {
+      "w": "aku",
+      "from": 547,
+      "to": 552
+     },
+     {
+      "w": "butuh",
+      "from": 552,
+      "to": 564
+     },
+     {
+      "w": "hiburan.",
+      "from": 564,
+      "to": 591
+     },
+     {
+      "w": "Ada",
+      "from": 591,
+      "to": 596
+     },
+     {
+      "w": "ide?",
+      "from": 596,
+      "to": 603
+     }
+    ]
+   }
+  ],
+  "ide": [
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Bagaimana kalau berburu kelinci? Seru, ramai, dan tidak berbahaya.",
+    "from": 12,
+    "to": 155,
+    "words": [
+     {
+      "w": "Bagaimana",
+      "from": 12,
+      "to": 25
+     },
+     {
+      "w": "kalau",
+      "from": 25,
+      "to": 30
+     },
+     {
+      "w": "berburu",
+      "from": 30,
+      "to": 43
+     },
+     {
+      "w": "kelinci?",
+      "from": 43,
+      "to": 71
+     },
+     {
+      "w": "Seru,",
+      "from": 71,
+      "to": 100
+     },
+     {
+      "w": "ramai,",
+      "from": 100,
+      "to": 125
+     },
+     {
+      "w": "dan",
+      "from": 125,
+      "to": 127
+     },
+     {
+      "w": "tidak",
+      "from": 127,
+      "to": 133
+     },
+     {
+      "w": "berbahaya.",
+      "from": 133,
+      "to": 150
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Bagus! Besok pagi. Aku mau kelinci yang banyak!",
+    "from": 163,
+    "to": 243,
+    "words": [
+     {
+      "w": "Bagus!",
+      "from": 163,
+      "to": 184
+     },
+     {
+      "w": "Besok",
+      "from": 184,
+      "to": 190
+     },
+     {
+      "w": "pagi.",
+      "from": 190,
+      "to": 207
+     },
+     {
+      "w": "Aku",
+      "from": 207,
+      "to": 210
+     },
+     {
+      "w": "mau",
+      "from": 210,
+      "to": 215
+     },
+     {
+      "w": "kelinci",
+      "from": 215,
+      "to": 224
+     },
+     {
+      "w": "yang",
+      "from": 224,
+      "to": 228
+     },
+     {
+      "w": "banyak!",
+      "from": 228,
+      "to": 234
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Siap! Berapa banyak, Yang Mulia?",
+    "from": 251,
+    "to": 331,
+    "words": [
+     {
+      "w": "Siap!",
+      "from": 251,
+      "to": 281
+     },
+     {
+      "w": "Berapa",
+      "from": 281,
+      "to": 287
+     },
+     {
+      "w": "banyak,",
+      "from": 287,
+      "to": 297
+     },
+     {
+      "w": "Yang",
+      "from": 297,
+      "to": 315
+     },
+     {
+      "w": "Mulia?",
+      "from": 315,
+      "to": 327
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Ratusan! Semuanya harus siap.",
+    "from": 338,
+    "to": 410,
+    "words": [
+     {
+      "w": "Ratusan!",
+      "from": 338,
+      "to": 358
+     },
+     {
+      "w": "Semuanya",
+      "from": 358,
+      "to": 387
+     },
+     {
+      "w": "harus",
+      "from": 387,
+      "to": 394
+     },
+     {
+      "w": "siap.",
+      "from": 394,
+      "to": 406
+     }
+    ]
+   }
+  ],
+  "ternak": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Masalahnya, menangkap ratusan kelinci liar itu sangat sulit.",
+    "from": 12,
+    "to": 103,
+    "words": [
+     {
+      "w": "Masalahnya,",
+      "from": 12,
+      "to": 31
+     },
+     {
+      "w": "menangkap",
+      "from": 31,
+      "to": 46
+     },
+     {
+      "w": "ratusan",
+      "from": 46,
+      "to": 58
+     },
+     {
+      "w": "kelinci",
+      "from": 58,
+      "to": 67
+     },
+     {
+      "w": "liar",
+      "from": 67,
+      "to": 76
+     },
+     {
+      "w": "itu",
+      "from": 76,
+      "to": 81
+     },
+     {
+      "w": "sangat",
+      "from": 81,
+      "to": 88
+     },
+     {
+      "w": "sulit.",
+      "from": 88,
+      "to": 98
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "bisik",
+    "text": "Kelinci liar susah ditangkap... Ah! Beli saja yang dari peternakan!",
+    "from": 112,
+    "to": 233,
+    "words": [
+     {
+      "w": "Kelinci",
+      "from": 112,
+      "to": 121
+     },
+     {
+      "w": "liar",
+      "from": 121,
+      "to": 130
+     },
+     {
+      "w": "susah",
+      "from": 130,
+      "to": 144
+     },
+     {
+      "w": "ditangkap...",
+      "from": 144,
+      "to": 163
+     },
+     {
+      "w": "Ah!",
+      "from": 163,
+      "to": 175
+     },
+     {
+      "w": "Beli",
+      "from": 175,
+      "to": 194
+     },
+     {
+      "w": "saja",
+      "from": 194,
+      "to": 199
+     },
+     {
+      "w": "yang",
+      "from": 199,
+      "to": 205
+     },
+     {
+      "w": "dari",
+      "from": 205,
+      "to": 211
+     },
+     {
+      "w": "peternakan!",
+      "from": 211,
+      "to": 226
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Pak, kelinci ini jinak, kan?",
+    "from": 241,
+    "to": 298,
+    "words": [
+     {
+      "w": "Pak,",
+      "from": 241,
+      "to": 246
+     },
+     {
+      "w": "kelinci",
+      "from": 246,
+      "to": 270
+     },
+     {
+      "w": "ini",
+      "from": 270,
+      "to": 276
+     },
+     {
+      "w": "jinak,",
+      "from": 276,
+      "to": 286
+     },
+     {
+      "w": "kan?",
+      "from": 286,
+      "to": 291
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Jinak sekali. Terlalu jinak. Karena tiap hari mereka diberi makan oleh manusia.",
+    "from": 307,
+    "to": 474,
+    "words": [
+     {
+      "w": "Jinak",
+      "from": 307,
+      "to": 317
+     },
+     {
+      "w": "sekali.",
+      "from": 317,
+      "to": 341
+     },
+     {
+      "w": "Terlalu",
+      "from": 341,
+      "to": 352
+     },
+     {
+      "w": "jinak.",
+      "from": 352,
+      "to": 367
+     },
+     {
+      "w": "Karena",
+      "from": 367,
+      "to": 382
+     },
+     {
+      "w": "tiap",
+      "from": 382,
+      "to": 395
+     },
+     {
+      "w": "hari",
+      "from": 395,
+      "to": 401
+     },
+     {
+      "w": "mereka",
+      "from": 401,
+      "to": 413
+     },
+     {
+      "w": "diberi",
+      "from": 413,
+      "to": 429
+     },
+     {
+      "w": "makan",
+      "from": 429,
+      "to": 443
+     },
+     {
+      "w": "oleh",
+      "from": 443,
+      "to": 451
+     },
+     {
+      "w": "manusia.",
+      "from": 451,
+      "to": 469
+     }
+    ]
+   }
+  ],
+  "hari": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Besok paginya, para jenderal sudah siap dengan senapan.",
+    "from": 15,
+    "to": 106,
+    "words": [
+     {
+      "w": "Besok",
+      "from": 15,
+      "to": 26
+     },
+     {
+      "w": "paginya,",
+      "from": 26,
+      "to": 40
+     },
+     {
+      "w": "para",
+      "from": 40,
+      "to": 49
+     },
+     {
+      "w": "jenderal",
+      "from": 49,
+      "to": 64
+     },
+     {
+      "w": "sudah",
+      "from": 64,
+      "to": 71
+     },
+     {
+      "w": "siap",
+      "from": 71,
+      "to": 81
+     },
+     {
+      "w": "dengan",
+      "from": 81,
+      "to": 86
+     },
+     {
+      "w": "senapan.",
+      "from": 86,
+      "to": 98
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Bukalah kandangnya!",
+    "from": 115,
+    "to": 148,
+    "words": [
+     {
+      "w": "Bukalah",
+      "from": 115,
+      "to": 124
+     },
+     {
+      "w": "kandangnya!",
+      "from": 124,
+      "to": 137
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Siap, Yang Mulia!",
+    "from": 155,
+    "to": 203,
+    "words": [
+     {
+      "w": "Siap,",
+      "from": 155,
+      "to": 173
+     },
+     {
+      "w": "Yang",
+      "from": 173,
+      "to": 184
+     },
+     {
+      "w": "Mulia!",
+      "from": 184,
+      "to": 197
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Hm? Kenapa mereka tidak lari?",
+    "from": 212,
+    "to": 265,
+    "words": [
+     {
+      "w": "Hm?",
+      "from": 212,
+      "to": 217
+     },
+     {
+      "w": "Kenapa",
+      "from": 217,
+      "to": 237
+     },
+     {
+      "w": "mereka",
+      "from": 237,
+      "to": 243
+     },
+     {
+      "w": "tidak",
+      "from": 243,
+      "to": 249
+     },
+     {
+      "w": "lari?",
+      "from": 249,
+      "to": 261
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "bisik",
+    "text": "Eh... mereka justru... menuju ke sini.",
+    "from": 275,
+    "to": 371,
+    "words": [
+     {
+      "w": "Eh...",
+      "from": 275,
+      "to": 295
+     },
+     {
+      "w": "mereka",
+      "from": 295,
+      "to": 313
+     },
+     {
+      "w": "justru...",
+      "from": 313,
+      "to": 331
+     },
+     {
+      "w": "menuju",
+      "from": 331,
+      "to": 352
+     },
+     {
+      "w": "ke",
+      "from": 352,
+      "to": 356
+     },
+     {
+      "w": "sini.",
+      "from": 356,
+      "to": 365
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Ke arahku?!",
+    "from": 380,
+    "to": 412,
+    "words": [
+     {
+      "w": "Ke",
+      "from": 380,
+      "to": 386
+     },
+     {
+      "w": "arahku?!",
+      "from": 386,
+      "to": 407
+     }
+    ]
+   }
+  ],
+  "serbu": [
+   {
+    "voice": "ara",
+    "style": "bisik",
+    "text": "Yang Mulia, mereka mengira Anda membawa makanan.",
+    "from": 12,
+    "to": 126,
+    "words": [
+     {
+      "w": "Yang",
+      "from": 12,
+      "to": 19
+     },
+     {
+      "w": "Mulia,",
+      "from": 19,
+      "to": 35
+     },
+     {
+      "w": "mereka",
+      "from": 35,
+      "to": 70
+     },
+     {
+      "w": "mengira",
+      "from": 70,
+      "to": 83
+     },
+     {
+      "w": "Anda",
+      "from": 83,
+      "to": 95
+     },
+     {
+      "w": "membawa",
+      "from": 95,
+      "to": 106
+     },
+     {
+      "w": "makanan.",
+      "from": 106,
+      "to": 119
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Makanan?! Aku bawa senapan!",
+    "from": 132,
+    "to": 208,
+    "words": [
+     {
+      "w": "Makanan?!",
+      "from": 132,
+      "to": 163
+     },
+     {
+      "w": "Aku",
+      "from": 163,
+      "to": 175
+     },
+     {
+      "w": "bawa",
+      "from": 175,
+      "to": 183
+     },
+     {
+      "w": "senapan!",
+      "from": 183,
+      "to": 197
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Tadi pagi mereka belum diberi makan, Yang Mulia!",
+    "from": 214,
+    "to": 289,
+    "words": [
+     {
+      "w": "Tadi",
+      "from": 214,
+      "to": 222
+     },
+     {
+      "w": "pagi",
+      "from": 222,
+      "to": 230
+     },
+     {
+      "w": "mereka",
+      "from": 230,
+      "to": 236
+     },
+     {
+      "w": "belum",
+      "from": 236,
+      "to": 244
+     },
+     {
+      "w": "diberi",
+      "from": 244,
+      "to": 254
+     },
+     {
+      "w": "makan,",
+      "from": 254,
+      "to": 262
+     },
+     {
+      "w": "Yang",
+      "from": 262,
+      "to": 271
+     },
+     {
+      "w": "Mulia!",
+      "from": 271,
+      "to": 283
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Pengawal! Usir mereka!",
+    "from": 296,
+    "to": 358,
+    "words": [
+     {
+      "w": "Pengawal!",
+      "from": 296,
+      "to": 318
+     },
+     {
+      "w": "Usir",
+      "from": 318,
+      "to": 335
+     },
+     {
+      "w": "mereka!",
+      "from": 335,
+      "to": 350
+     }
+    ]
+   }
+  ],
+  "kereta": [
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Cepat! Siapkan keretaku!",
+    "from": 12,
+    "to": 58,
+    "words": [
+     {
+      "w": "Cepat!",
+      "from": 12,
+      "to": 23
+     },
+     {
+      "w": "Siapkan",
+      "from": 23,
+      "to": 39
+     },
+     {
+      "w": "keretaku!",
+      "from": 39,
+      "to": 52
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Anda sudah di dalam kereta, Yang Mulia!",
+    "from": 64,
+    "to": 138,
+    "words": [
+     {
+      "w": "Anda",
+      "from": 64,
+      "to": 71
+     },
+     {
+      "w": "sudah",
+      "from": 71,
+      "to": 77
+     },
+     {
+      "w": "di",
+      "from": 77,
+      "to": 82
+     },
+     {
+      "w": "dalam",
+      "from": 82,
+      "to": 88
+     },
+     {
+      "w": "kereta,",
+      "from": 88,
+      "to": 103
+     },
+     {
+      "w": "Yang",
+      "from": 103,
+      "to": 119
+     },
+     {
+      "w": "Mulia!",
+      "from": 119,
+      "to": 133
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Lalu kenapa kelincinya ikut masuk?!",
+    "from": 145,
+    "to": 193,
+    "words": [
+     {
+      "w": "Lalu",
+      "from": 145,
+      "to": 153
+     },
+     {
+      "w": "kenapa",
+      "from": 153,
+      "to": 161
+     },
+     {
+      "w": "kelincinya",
+      "from": 161,
+      "to": 172
+     },
+     {
+      "w": "ikut",
+      "from": 172,
+      "to": 180
+     },
+     {
+      "w": "masuk?!",
+      "from": 180,
+      "to": 187
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Mereka sangat menyukai Anda!",
+    "from": 199,
+    "to": 242,
+    "words": [
+     {
+      "w": "Mereka",
+      "from": 199,
+      "to": 209
+     },
+     {
+      "w": "sangat",
+      "from": 209,
+      "to": 215
+     },
+     {
+      "w": "menyukai",
+      "from": 215,
+      "to": 228
+     },
+     {
+      "w": "Anda!",
+      "from": 228,
+      "to": 235
+     }
+    ]
+   }
+  ],
+  "akhir": [
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Ara... jangan bilang siapa-siapa soal ini.",
+    "from": 15,
+    "to": 92,
+    "words": [
+     {
+      "w": "Ara...",
+      "from": 15,
+      "to": 29
+     },
+     {
+      "w": "jangan",
+      "from": 29,
+      "to": 44
+     },
+     {
+      "w": "bilang",
+      "from": 44,
+      "to": 53
+     },
+     {
+      "w": "siapa-siapa",
+      "from": 53,
+      "to": 71
+     },
+     {
+      "w": "soal",
+      "from": 71,
+      "to": 81
+     },
+     {
+      "w": "ini.",
+      "from": 81,
+      "to": 86
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Rahasia aman, Yang Mulia!",
+    "from": 101,
+    "to": 161,
+    "words": [
+     {
+      "w": "Rahasia",
+      "from": 101,
+      "to": 116
+     },
+     {
+      "w": "aman,",
+      "from": 116,
+      "to": 136
+     },
+     {
+      "w": "Yang",
+      "from": 136,
+      "to": 140
+     },
+     {
+      "w": "Mulia!",
+      "from": 140,
+      "to": 154
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Tapi para saksi menuliskannya. Hampir sembilan puluh tahun kemudian, kisahnya terbit.",
+    "from": 175,
+    "to": 305,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 175,
+      "to": 181
+     },
+     {
+      "w": "para",
+      "from": 181,
+      "to": 186
+     },
+     {
+      "w": "saksi",
+      "from": 186,
+      "to": 193
+     },
+     {
+      "w": "menuliskannya.",
+      "from": 193,
+      "to": 210
+     },
+     {
+      "w": "Hampir",
+      "from": 210,
+      "to": 228
+     },
+     {
+      "w": "sembilan",
+      "from": 228,
+      "to": 246
+     },
+     {
+      "w": "puluh",
+      "from": 246,
+      "to": 256
+     },
+     {
+      "w": "tahun",
+      "from": 256,
+      "to": 266
+     },
+     {
+      "w": "kemudian,",
+      "from": 266,
+      "to": 283
+     },
+     {
+      "w": "kisahnya",
+      "from": 283,
+      "to": 293
+     },
+     {
+      "w": "terbit.",
+      "from": 293,
+      "to": 300
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Sekuat apa pun kamu, jangan remehkan kelinci yang lapar.",
+    "from": 323,
+    "to": 413,
+    "words": [
+     {
+      "w": "Sekuat",
+      "from": 323,
+      "to": 335
+     },
+     {
+      "w": "apa",
+      "from": 335,
+      "to": 340
+     },
+     {
+      "w": "pun",
+      "from": 340,
+      "to": 345
+     },
+     {
+      "w": "kamu,",
+      "from": 345,
+      "to": 362
+     },
+     {
+      "w": "jangan",
+      "from": 362,
+      "to": 368
+     },
+     {
+      "w": "remehkan",
+      "from": 368,
+      "to": 383
+     },
+     {
+      "w": "kelinci",
+      "from": 383,
+      "to": 393
+     },
+     {
+      "w": "yang",
+      "from": 393,
+      "to": 398
+     },
+     {
+      "w": "lapar.",
+      "from": 398,
+      "to": 408
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.kelinci": 190,
+  "til.tanda": 133,
+  "til.bosan": 366,
+  "ide.ratusan": 336,
+  "ter.beli": 172,
+  "ter.jinak": 305,
+  "hari.buka": 113,
+  "hari.hm": 210,
+  "hari.sini": 354,
+  "hari.arahku": 384,
+  "ser.makanan": 104,
+  "ser.usir": 316,
+  "ker.cepat": 10,
+  "ker.masuk": 178,
+  "akh.lapar": 396
+ },
+ "captions": [
+  {
+   "text": "Napoleon",
+   "startFrame": 16,
+   "endFrame": 24,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "hampir tidak",
+   "startFrame": 24,
+   "endFrame": 40,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pernah kalah",
+   "startFrame": 40,
+   "endFrame": 58,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perang.",
+   "startFrame": 58,
+   "endFrame": 67,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tapi suatu",
+   "startFrame": 88,
+   "endFrame": 118,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "hari,",
+   "startFrame": 118,
+   "endFrame": 139,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dia lari",
+   "startFrame": 139,
+   "endFrame": 162,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terbirit-birit...",
+   "startFrame": 162,
+   "endFrame": 186,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dari",
+   "startFrame": 186,
+   "endFrame": 192,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelinci.",
+   "startFrame": 192,
+   "endFrame": 206,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Juli seribu",
+   "startFrame": 243,
+   "endFrame": 294,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "delapan",
+   "startFrame": 294,
+   "endFrame": 311,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ratus tujuh.",
+   "startFrame": 311,
+   "endFrame": 328,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Napoleon",
+   "startFrame": 328,
+   "endFrame": 343,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "baru menang,",
+   "startFrame": 343,
+   "endFrame": 359,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "dan",
+   "startFrame": 359,
+   "endFrame": 363,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menandatangani",
+   "startFrame": 363,
+   "endFrame": 385,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perjanjian",
+   "startFrame": 385,
+   "endFrame": 402,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "damai dengan",
+   "startFrame": 402,
+   "endFrame": 415,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Rusia.",
+   "startFrame": 415,
+   "endFrame": 424,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Selamat,",
+   "startFrame": 441,
+   "endFrame": 455,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang Mulia!",
+   "startFrame": 455,
+   "endFrame": 484,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Perang",
+   "startFrame": 484,
+   "endFrame": 492,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "akhirnya",
+   "startFrame": 492,
+   "endFrame": 504,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "selesai.",
+   "startFrame": 504,
+   "endFrame": 518,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Akhirnya.",
+   "startFrame": 530,
+   "endFrame": 560,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tapi...",
+   "startFrame": 560,
+   "endFrame": 572,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "aku jadi",
+   "startFrame": 572,
+   "endFrame": 596,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bosan.",
+   "startFrame": 596,
+   "endFrame": 610,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Bosan?",
+   "startFrame": 621,
+   "endFrame": 634,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Setelah",
+   "startFrame": 634,
+   "endFrame": 655,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "menang?",
+   "startFrame": 655,
+   "endFrame": 663,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Iya.",
+   "startFrame": 677,
+   "endFrame": 703,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Bertahun-tahun",
+   "startFrame": 703,
+   "endFrame": 726,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perang",
+   "startFrame": 726,
+   "endFrame": 736,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terus.",
+   "startFrame": 736,
+   "endFrame": 759,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sekarang aku",
+   "startFrame": 759,
+   "endFrame": 780,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "butuh",
+   "startFrame": 780,
+   "endFrame": 792,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "hiburan.",
+   "startFrame": 792,
+   "endFrame": 819,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ada ide?",
+   "startFrame": 819,
+   "endFrame": 831,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Bagaimana",
+   "startFrame": 868,
+   "endFrame": 881,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kalau",
+   "startFrame": 881,
+   "endFrame": 886,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "berburu",
+   "startFrame": 886,
+   "endFrame": 899,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kelinci?",
+   "startFrame": 899,
+   "endFrame": 927,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Seru,",
+   "startFrame": 927,
+   "endFrame": 956,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "ramai,",
+   "startFrame": 956,
+   "endFrame": 981,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "dan tidak",
+   "startFrame": 981,
+   "endFrame": 989,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "berbahaya.",
+   "startFrame": 989,
+   "endFrame": 1006,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Bagus!",
+   "startFrame": 1019,
+   "endFrame": 1040,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Besok pagi.",
+   "startFrame": 1040,
+   "endFrame": 1063,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Aku mau",
+   "startFrame": 1063,
+   "endFrame": 1071,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelinci yang",
+   "startFrame": 1071,
+   "endFrame": 1084,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "banyak!",
+   "startFrame": 1084,
+   "endFrame": 1090,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Siap!",
+   "startFrame": 1107,
+   "endFrame": 1137,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Berapa",
+   "startFrame": 1137,
+   "endFrame": 1143,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "banyak,",
+   "startFrame": 1143,
+   "endFrame": 1153,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang Mulia?",
+   "startFrame": 1153,
+   "endFrame": 1183,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ratusan!",
+   "startFrame": 1194,
+   "endFrame": 1214,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Semuanya",
+   "startFrame": 1214,
+   "endFrame": 1243,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "harus siap.",
+   "startFrame": 1243,
+   "endFrame": 1262,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Masalahnya,",
+   "startFrame": 1293,
+   "endFrame": 1312,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menangkap",
+   "startFrame": 1312,
+   "endFrame": 1327,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "ratusan",
+   "startFrame": 1327,
+   "endFrame": 1339,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelinci liar",
+   "startFrame": 1339,
+   "endFrame": 1357,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "itu sangat",
+   "startFrame": 1357,
+   "endFrame": 1369,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sulit.",
+   "startFrame": 1369,
+   "endFrame": 1379,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kelinci liar",
+   "startFrame": 1393,
+   "endFrame": 1411,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "susah",
+   "startFrame": 1411,
+   "endFrame": 1425,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "ditangkap...",
+   "startFrame": 1425,
+   "endFrame": 1444,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ah!",
+   "startFrame": 1444,
+   "endFrame": 1456,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Beli saja",
+   "startFrame": 1456,
+   "endFrame": 1480,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "yang dari",
+   "startFrame": 1480,
+   "endFrame": 1492,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "peternakan!",
+   "startFrame": 1492,
+   "endFrame": 1507,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Pak,",
+   "startFrame": 1522,
+   "endFrame": 1527,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kelinci ini",
+   "startFrame": 1527,
+   "endFrame": 1557,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "jinak,",
+   "startFrame": 1557,
+   "endFrame": 1567,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "kan?",
+   "startFrame": 1567,
+   "endFrame": 1572,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Jinak",
+   "startFrame": 1588,
+   "endFrame": 1598,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "sekali.",
+   "startFrame": 1598,
+   "endFrame": 1622,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Terlalu",
+   "startFrame": 1622,
+   "endFrame": 1633,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "jinak.",
+   "startFrame": 1633,
+   "endFrame": 1648,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Karena tiap",
+   "startFrame": 1648,
+   "endFrame": 1676,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "hari mereka",
+   "startFrame": 1676,
+   "endFrame": 1694,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "diberi makan",
+   "startFrame": 1694,
+   "endFrame": 1724,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "oleh",
+   "startFrame": 1724,
+   "endFrame": 1732,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "manusia.",
+   "startFrame": 1732,
+   "endFrame": 1750,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Besok",
+   "startFrame": 1788,
+   "endFrame": 1799,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "paginya,",
+   "startFrame": 1799,
+   "endFrame": 1813,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "para",
+   "startFrame": 1813,
+   "endFrame": 1822,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jenderal",
+   "startFrame": 1822,
+   "endFrame": 1837,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sudah siap",
+   "startFrame": 1837,
+   "endFrame": 1854,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dengan",
+   "startFrame": 1854,
+   "endFrame": 1859,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "senapan.",
+   "startFrame": 1859,
+   "endFrame": 1871,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Bukalah",
+   "startFrame": 1888,
+   "endFrame": 1897,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kandangnya!",
+   "startFrame": 1897,
+   "endFrame": 1910,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Siap,",
+   "startFrame": 1928,
+   "endFrame": 1946,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang Mulia!",
+   "startFrame": 1946,
+   "endFrame": 1970,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Hm?",
+   "startFrame": 1985,
+   "endFrame": 1990,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kenapa",
+   "startFrame": 1990,
+   "endFrame": 2010,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mereka tidak",
+   "startFrame": 2010,
+   "endFrame": 2022,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lari?",
+   "startFrame": 2022,
+   "endFrame": 2034,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Eh...",
+   "startFrame": 2048,
+   "endFrame": 2068,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 2068,
+   "endFrame": 2086,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "justru...",
+   "startFrame": 2086,
+   "endFrame": 2104,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "menuju ke",
+   "startFrame": 2104,
+   "endFrame": 2129,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sini.",
+   "startFrame": 2129,
+   "endFrame": 2138,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ke arahku?!",
+   "startFrame": 2153,
+   "endFrame": 2180,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Yang Mulia,",
+   "startFrame": 2212,
+   "endFrame": 2235,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 2235,
+   "endFrame": 2270,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mengira Anda",
+   "startFrame": 2270,
+   "endFrame": 2295,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "membawa",
+   "startFrame": 2295,
+   "endFrame": 2306,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "makanan.",
+   "startFrame": 2306,
+   "endFrame": 2319,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Makanan?!",
+   "startFrame": 2332,
+   "endFrame": 2363,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Aku bawa",
+   "startFrame": 2363,
+   "endFrame": 2383,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "senapan!",
+   "startFrame": 2383,
+   "endFrame": 2397,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tadi pagi",
+   "startFrame": 2414,
+   "endFrame": 2430,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mereka belum",
+   "startFrame": 2430,
+   "endFrame": 2444,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "diberi",
+   "startFrame": 2444,
+   "endFrame": 2454,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "makan,",
+   "startFrame": 2454,
+   "endFrame": 2462,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang Mulia!",
+   "startFrame": 2462,
+   "endFrame": 2483,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Pengawal!",
+   "startFrame": 2496,
+   "endFrame": 2518,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Usir mereka!",
+   "startFrame": 2518,
+   "endFrame": 2550,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Cepat!",
+   "startFrame": 2585,
+   "endFrame": 2596,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Siapkan",
+   "startFrame": 2596,
+   "endFrame": 2612,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "keretaku!",
+   "startFrame": 2612,
+   "endFrame": 2625,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Anda sudah",
+   "startFrame": 2637,
+   "endFrame": 2650,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "di dalam",
+   "startFrame": 2650,
+   "endFrame": 2661,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kereta,",
+   "startFrame": 2661,
+   "endFrame": 2676,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang Mulia!",
+   "startFrame": 2676,
+   "endFrame": 2706,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Lalu kenapa",
+   "startFrame": 2718,
+   "endFrame": 2734,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelincinya",
+   "startFrame": 2734,
+   "endFrame": 2745,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "ikut masuk?!",
+   "startFrame": 2745,
+   "endFrame": 2760,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Mereka",
+   "startFrame": 2772,
+   "endFrame": 2782,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sangat",
+   "startFrame": 2782,
+   "endFrame": 2788,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "menyukai",
+   "startFrame": 2788,
+   "endFrame": 2801,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Anda!",
+   "startFrame": 2801,
+   "endFrame": 2808,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ara...",
+   "startFrame": 2845,
+   "endFrame": 2859,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jangan",
+   "startFrame": 2859,
+   "endFrame": 2874,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bilang",
+   "startFrame": 2874,
+   "endFrame": 2883,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "siapa-siapa",
+   "startFrame": 2883,
+   "endFrame": 2901,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "soal ini.",
+   "startFrame": 2901,
+   "endFrame": 2916,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Rahasia",
+   "startFrame": 2931,
+   "endFrame": 2946,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "aman,",
+   "startFrame": 2946,
+   "endFrame": 2966,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yang Mulia!",
+   "startFrame": 2966,
+   "endFrame": 2984,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Tapi para",
+   "startFrame": 3005,
+   "endFrame": 3016,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "saksi",
+   "startFrame": 3016,
+   "endFrame": 3023,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menuliskannya.",
+   "startFrame": 3023,
+   "endFrame": 3040,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Hampir",
+   "startFrame": 3040,
+   "endFrame": 3058,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sembilan",
+   "startFrame": 3058,
+   "endFrame": 3076,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "puluh tahun",
+   "startFrame": 3076,
+   "endFrame": 3096,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kemudian,",
+   "startFrame": 3096,
+   "endFrame": 3113,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kisahnya",
+   "startFrame": 3113,
+   "endFrame": 3123,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terbit.",
+   "startFrame": 3123,
+   "endFrame": 3130,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sekuat apa",
+   "startFrame": 3153,
+   "endFrame": 3170,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pun kamu,",
+   "startFrame": 3170,
+   "endFrame": 3192,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jangan",
+   "startFrame": 3192,
+   "endFrame": 3198,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "remehkan",
+   "startFrame": 3198,
+   "endFrame": 3213,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelinci yang",
+   "startFrame": 3213,
+   "endFrame": 3228,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "lapar.",
+   "startFrame": 3228,
+   "endFrame": 3238,
+   "highlight": true,
+   "voice": "dodi"
+  }
+ ]
+}

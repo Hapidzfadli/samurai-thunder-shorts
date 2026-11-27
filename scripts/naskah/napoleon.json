@@ -1,0 +1,51 @@
+[
+  {"scene": "hook", "takes": 2, "lines": [
+    ["narasi", "Napoleon hampir tidak pernah kalah perang.", "dodi"],
+    ["santai", "Tapi suatu hari, dia lari terbirit-birit... dari kelinci.", "dodi"]
+  ]},
+  {"scene": "tilsit", "takes": 2, "lines": [
+    ["narasi", "Juli seribu delapan ratus tujuh. Napoleon baru menang, dan menandatangani perjanjian damai dengan Rusia.", "dodi"],
+    ["santai", "Selamat, Yang Mulia! Perang akhirnya selesai.", "ara"],
+    ["santai", "Akhirnya. Tapi... aku jadi bosan.", "dodi"],
+    ["santai", "Bosan? Setelah menang?", "ara"],
+    ["santai", "Iya. Bertahun-tahun perang terus. Sekarang aku butuh hiburan. Ada ide?", "dodi"]
+  ]},
+  {"scene": "ide", "takes": 2, "lines": [
+    ["santai", "Bagaimana kalau berburu kelinci? Seru, ramai, dan tidak berbahaya.", "ara"],
+    ["tegas", "Bagus! Besok pagi. Aku mau kelinci yang banyak!", "dodi"],
+    ["santai", "Siap! Berapa banyak, Yang Mulia?", "ara"],
+    ["tegas", "Ratusan! Semuanya harus siap.", "dodi"]
+  ]},
+  {"scene": "ternak", "takes": 2, "lines": [
+    ["narasi", "Masalahnya, menangkap ratusan kelinci liar itu sangat sulit.", "dodi"],
+    ["bisik", "Kelinci liar susah ditangkap... Ah! Beli saja yang dari peternakan!", "ara"],
+    ["santai", "Pak, kelinci ini jinak, kan?", "ara"],
+    ["narasi", "Jinak sekali. Terlalu jinak. Karena tiap hari mereka diberi makan oleh manusia.", "dodi"]
+  ]},
+  {"scene": "hari", "takes": 2, "lines": [
+    ["narasi", "Besok paginya, para jenderal sudah siap dengan senapan.", "dodi"],
+    ["tegas", "Bukalah kandangnya!", "dodi"],
+    ["santai", "Siap, Yang Mulia!", "ara"],
+    ["tegang", "Hm? Kenapa mereka tidak lari?", "dodi"],
+    ["bisik", "Eh... mereka justru... menuju ke sini.", "ara"],
+    ["tegang", "Ke arahku?!", "dodi"]
+  ]},
+  {"scene": "serbu", "takes": 2, "lines": [
+    ["bisik", "Yang Mulia, mereka mengira Anda membawa makanan.", "ara"],
+    ["tegang", "Makanan?! Aku bawa senapan!", "dodi"],
+    ["tegang", "Tadi pagi mereka belum diberi makan, Yang Mulia!", "ara"],
+    ["tegas", "Pengawal! Usir mereka!", "dodi"]
+  ]},
+  {"scene": "kereta", "takes": 2, "lines": [
+    ["tegang", "Cepat! Siapkan keretaku!", "dodi"],
+    ["santai", "Anda sudah di dalam kereta, Yang Mulia!", "ara"],
+    ["tegang", "Lalu kenapa kelincinya ikut masuk?!", "dodi"],
+    ["santai", "Mereka sangat menyukai Anda!", "ara"]
+  ]},
+  {"scene": "akhir", "takes": 2, "lines": [
+    ["santai", "Ara... jangan bilang siapa-siapa soal ini.", "dodi"],
+    ["santai", "Rahasia aman, Yang Mulia!", "ara"],
+    ["narasi", "Tapi para saksi menuliskannya. Hampir sembilan puluh tahun kemudian, kisahnya terbit.", "dodi"],
+    ["narasi", "Sekuat apa pun kamu, jangan remehkan kelinci yang lapar.", "dodi"]
+  ]}
+]

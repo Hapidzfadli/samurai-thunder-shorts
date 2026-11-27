@@ -1,0 +1,2561 @@
+{
+ "fps": 30,
+ "totalFrames": 3122,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 210,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Napoleon hampir tidak pernah kalah perang.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/hook_0.wav",
+     "wordsSec": [
+      [
+       "Napoleon",
+       0.0,
+       0.26
+      ],
+      [
+       "Hampir",
+       0.26,
+       0.62
+      ],
+      [
+       "tidak",
+       0.62,
+       0.8
+      ],
+      [
+       "pernah",
+       0.8,
+       1.06
+      ],
+      [
+       "kalah",
+       1.06,
+       1.4
+      ],
+      [
+       "perang.",
+       1.4,
+       1.68
+      ]
+     ],
+     "from": 8,
+     "to": 64,
+     "words": [
+      {
+       "w": "Napoleon",
+       "from": 8,
+       "to": 15
+      },
+      {
+       "w": "Hampir",
+       "from": 15,
+       "to": 26
+      },
+      {
+       "w": "tidak",
+       "from": 26,
+       "to": 32
+      },
+      {
+       "w": "pernah",
+       "from": 32,
+       "to": 39
+      },
+      {
+       "w": "kalah",
+       "from": 39,
+       "to": 50
+      },
+      {
+       "w": "perang.",
+       "from": 50,
+       "to": 58
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Tapi suatu hari, dia lari terbirit-birit... dari kelinci.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/hook_1.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.48
+      ],
+      [
+       "suatu",
+       0.48,
+       1.0
+      ],
+      [
+       "hari,",
+       1.0,
+       1.38
+      ],
+      [
+       "dia",
+       1.72,
+       2.04
+      ],
+      [
+       "lari",
+       2.04,
+       2.48
+      ],
+      [
+       "terbirit",
+       2.48,
+       2.92
+      ],
+      [
+       "-birit",
+       2.92,
+       3.28
+      ],
+      [
+       "dari",
+       3.28,
+       3.46
+      ],
+      [
+       "kelinci.",
+       3.46,
+       3.94
+      ]
+     ],
+     "from": 72,
+     "to": 196,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 72,
+       "to": 86
+      },
+      {
+       "w": "suatu",
+       "from": 86,
+       "to": 102
+      },
+      {
+       "w": "hari,",
+       "from": 102,
+       "to": 113
+      },
+      {
+       "w": "dia",
+       "from": 123,
+       "to": 133
+      },
+      {
+       "w": "lari",
+       "from": 133,
+       "to": 146
+      },
+      {
+       "w": "terbirit",
+       "from": 146,
+       "to": 159
+      },
+      {
+       "w": "-birit",
+       "from": 159,
+       "to": 170
+      },
+      {
+       "w": "dari",
+       "from": 170,
+       "to": 175
+      },
+      {
+       "w": "kelinci.",
+       "from": 175,
+       "to": 190
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "tilsit",
+   "from": 210,
+   "to": 818,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Juli seribu delapan ratus tujuh. Napoleon baru menang, dan menandatangani perjanjian damai dengan Rusia.",
+     "score": 0.956,
+     "file": "out/voice/napoleon/tilsit_0.wav",
+     "wordsSec": [
+      [
+       "Juli",
+       0.0,
+       0.4
+      ],
+      [
+       "1807,",
+       0.4,
+       1.74
+      ],
+      [
+       "Napoleon",
+       2.02,
+       2.4
+      ],
+      [
+       "baru",
+       2.4,
+       2.76
+      ],
+      [
+       "menang",
+       2.76,
+       3.16
+      ],
+      [
+       "dan",
+       3.16,
+       3.5
+      ],
+      [
+       "menandatangani",
+       3.5,
+       4.32
+      ],
+      [
+       "perjanjian",
+       4.32,
+       5.04
+      ],
+      [
+       "damai",
+       5.04,
+       5.44
+      ],
+      [
+       "dengan",
+       5.44,
+       5.66
+      ],
+      [
+       "Rusia.",
+       5.66,
+       6.02
+      ]
+     ],
+     "from": 210,
+     "to": 401,
+     "words": [
+      {
+       "w": "Juli",
+       "from": 210,
+       "to": 222
+      },
+      {
+       "w": "1807,",
+       "from": 222,
+       "to": 262
+      },
+      {
+       "w": "Napoleon",
+       "from": 271,
+       "to": 282
+      },
+      {
+       "w": "baru",
+       "from": 282,
+       "to": 293
+      },
+      {
+       "w": "menang",
+       "from": 293,
+       "to": 305
+      },
+      {
+       "w": "dan",
+       "from": 305,
+       "to": 315
+      },
+      {
+       "w": "menandatangani",
+       "from": 315,
+       "to": 340
+      },
+      {
+       "w": "perjanjian",
+       "from": 340,
+       "to": 361
+      },
+      {
+       "w": "damai",
+       "from": 361,
+       "to": 373
+      },
+      {
+       "w": "dengan",
+       "from": 373,
+       "to": 380
+      },
+      {
+       "w": "Rusia.",
+       "from": 380,
+       "to": 391
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Selamat, Yang Mulia! Perang akhirnya selesai.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/tilsit_1.wav",
+     "wordsSec": [
+      [
+       "Selamat",
+       0.0,
+       0.44
+      ],
+      [
+       "yang",
+       0.44,
+       0.74
+      ],
+      [
+       "mulia,",
+       0.74,
+       1.2
+      ],
+      [
+       "perang",
+       1.42,
+       1.7
+      ],
+      [
+       "akhirnya",
+       1.7,
+       2.08
+      ],
+      [
+       "selesai.",
+       2.08,
+       2.54
+      ]
+     ],
+     "from": 409,
+     "to": 488,
+     "words": [
+      {
+       "w": "Selamat",
+       "from": 409,
+       "to": 422
+      },
+      {
+       "w": "yang",
+       "from": 422,
+       "to": 431
+      },
+      {
+       "w": "mulia,",
+       "from": 431,
+       "to": 445
+      },
+      {
+       "w": "perang",
+       "from": 451,
+       "to": 460
+      },
+      {
+       "w": "akhirnya",
+       "from": 460,
+       "to": 471
+      },
+      {
+       "w": "selesai.",
+       "from": 471,
+       "to": 485
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Akhirnya. Tapi... aku jadi bosan.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/tilsit_2.wav",
+     "wordsSec": [
+      [
+       "Akhirnya,",
+       0.0,
+       0.6
+      ],
+      [
+       "tapi",
+       1.0,
+       1.4
+      ],
+      [
+       "aku",
+       1.4,
+       2.0
+      ],
+      [
+       "jadi",
+       2.0,
+       2.2
+      ],
+      [
+       "bosan.",
+       2.2,
+       2.66
+      ]
+     ],
+     "from": 496,
+     "to": 581,
+     "words": [
+      {
+       "w": "Akhirnya,",
+       "from": 496,
+       "to": 514
+      },
+      {
+       "w": "tapi",
+       "from": 526,
+       "to": 538
+      },
+      {
+       "w": "aku",
+       "from": 538,
+       "to": 556
+      },
+      {
+       "w": "jadi",
+       "from": 556,
+       "to": 562
+      },
+      {
+       "w": "bosan.",
+       "from": 562,
+       "to": 576
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Bosan? Setelah menang?",
+     "score": 1.0,
+     "file": "out/voice/napoleon/tilsit_3.wav",
+     "wordsSec": [
+      [
+       "Bosan",
+       0.0,
+       0.44
+      ],
+      [
+       "setelah",
+       0.44,
+       1.12
+      ],
+      [
+       "menang",
+       1.12,
+       1.4
+      ]
+     ],
+     "from": 589,
+     "to": 636,
+     "words": [
+      {
+       "w": "Bosan",
+       "from": 589,
+       "to": 602
+      },
+      {
+       "w": "setelah",
+       "from": 602,
+       "to": 623
+      },
+      {
+       "w": "menang",
+       "from": 623,
+       "to": 631
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Iya. Bertahun-tahun perang terus. Sekarang aku butuh hiburan. Ada ide?",
+     "score": 1.0,
+     "file": "out/voice/napoleon/tilsit_4.wav",
+     "wordsSec": [
+      [
+       "Iya,",
+       0.0,
+       0.3
+      ],
+      [
+       "bertahun",
+       0.86,
+       1.4
+      ],
+      [
+       "-tahun",
+       1.4,
+       1.64
+      ],
+      [
+       "perang",
+       1.64,
+       1.96
+      ],
+      [
+       "terus.",
+       1.96,
+       2.2
+      ],
+      [
+       "Sekarang",
+       2.74,
+       3.26
+      ],
+      [
+       "aku",
+       3.26,
+       3.44
+      ],
+      [
+       "butuh",
+       3.44,
+       3.82
+      ],
+      [
+       "hiburan.",
+       3.82,
+       4.3
+      ],
+      [
+       "Ada",
+       4.74,
+       4.9
+      ],
+      [
+       "ide?",
+       4.9,
+       5.12
+      ]
+     ],
+     "from": 644,
+     "to": 804,
+     "words": [
+      {
+       "w": "Iya,",
+       "from": 644,
+       "to": 653
+      },
+      {
+       "w": "bertahun",
+       "from": 670,
+       "to": 686
+      },
+      {
+       "w": "-tahun",
+       "from": 686,
+       "to": 693
+      },
+      {
+       "w": "perang",
+       "from": 693,
+       "to": 703
+      },
+      {
+       "w": "terus.",
+       "from": 703,
+       "to": 710
+      },
+      {
+       "w": "Sekarang",
+       "from": 726,
+       "to": 742
+      },
+      {
+       "w": "aku",
+       "from": 742,
+       "to": 747
+      },
+      {
+       "w": "butuh",
+       "from": 747,
+       "to": 759
+      },
+      {
+       "w": "hiburan.",
+       "from": 759,
+       "to": 773
+      },
+      {
+       "w": "Ada",
+       "from": 786,
+       "to": 791
+      },
+      {
+       "w": "ide?",
+       "from": 791,
+       "to": 798
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ide",
+   "from": 818,
+   "to": 1231,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Bagaimana kalau berburu kelinci? Seru, ramai, dan tidak berbahaya.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/ide_0.wav",
+     "wordsSec": [
+      [
+       "bagaimana",
+       0.0,
+       0.42
+      ],
+      [
+       "kalau",
+       0.42,
+       0.6
+      ],
+      [
+       "berburu",
+       0.6,
+       1.02
+      ],
+      [
+       "ke",
+       1.02,
+       1.14
+      ],
+      [
+       "linci?",
+       1.14,
+       1.56
+      ],
+      [
+       "seru,",
+       1.98,
+       2.64
+      ],
+      [
+       "ramai,",
+       2.92,
+       3.42
+      ],
+      [
+       "dan",
+       3.78,
+       3.82
+      ],
+      [
+       "tidak",
+       3.82,
+       4.02
+      ],
+      [
+       "berbahaya.",
+       4.02,
+       4.6
+      ]
+     ],
+     "from": 818,
+     "to": 961,
+     "words": [
+      {
+       "w": "bagaimana",
+       "from": 818,
+       "to": 830
+      },
+      {
+       "w": "kalau",
+       "from": 830,
+       "to": 836
+      },
+      {
+       "w": "berburu",
+       "from": 836,
+       "to": 848
+      },
+      {
+       "w": "ke",
+       "from": 848,
+       "to": 852
+      },
+      {
+       "w": "linci?",
+       "from": 852,
+       "to": 865
+      },
+      {
+       "w": "seru,",
+       "from": 877,
+       "to": 897
+      },
+      {
+       "w": "ramai,",
+       "from": 905,
+       "to": 920
+      },
+      {
+       "w": "dan",
+       "from": 931,
+       "to": 932
+      },
+      {
+       "w": "tidak",
+       "from": 932,
+       "to": 938
+      },
+      {
+       "w": "berbahaya.",
+       "from": 938,
+       "to": 956
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Bagus! Besok pagi. Aku mau kelinci yang banyak!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/ide_1.wav",
+     "wordsSec": [
+      [
+       "Bagus!",
+       0.0,
+       0.52
+      ],
+      [
+       "Besok",
+       0.7,
+       0.9
+      ],
+      [
+       "pagi!",
+       0.9,
+       1.3
+      ],
+      [
+       "Aku",
+       1.46,
+       1.58
+      ],
+      [
+       "mau",
+       1.58,
+       1.72
+      ],
+      [
+       "kelinci",
+       1.72,
+       2.04
+      ],
+      [
+       "yang",
+       2.04,
+       2.16
+      ],
+      [
+       "banyak!",
+       2.16,
+       2.36
+      ]
+     ],
+     "from": 969,
+     "to": 1049,
+     "words": [
+      {
+       "w": "Bagus!",
+       "from": 969,
+       "to": 985
+      },
+      {
+       "w": "Besok",
+       "from": 990,
+       "to": 996
+      },
+      {
+       "w": "pagi!",
+       "from": 996,
+       "to": 1008
+      },
+      {
+       "w": "Aku",
+       "from": 1013,
+       "to": 1016
+      },
+      {
+       "w": "mau",
+       "from": 1016,
+       "to": 1021
+      },
+      {
+       "w": "kelinci",
+       "from": 1021,
+       "to": 1030
+      },
+      {
+       "w": "yang",
+       "from": 1030,
+       "to": 1034
+      },
+      {
+       "w": "banyak!",
+       "from": 1034,
+       "to": 1040
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Siap! Berapa banyak, Yang Mulia?",
+     "score": 1.0,
+     "file": "out/voice/napoleon/ide_2.wav",
+     "wordsSec": [
+      [
+       "Siap,",
+       0.0,
+       0.36
+      ],
+      [
+       "berapa",
+       1.0,
+       1.2
+      ],
+      [
+       "banyak",
+       1.2,
+       1.54
+      ],
+      [
+       "yang",
+       1.54,
+       2.14
+      ],
+      [
+       "mulia?",
+       2.14,
+       2.54
+      ]
+     ],
+     "from": 1057,
+     "to": 1137,
+     "words": [
+      {
+       "w": "Siap,",
+       "from": 1057,
+       "to": 1068
+      },
+      {
+       "w": "berapa",
+       "from": 1087,
+       "to": 1093
+      },
+      {
+       "w": "banyak",
+       "from": 1093,
+       "to": 1103
+      },
+      {
+       "w": "yang",
+       "from": 1103,
+       "to": 1121
+      },
+      {
+       "w": "mulia?",
+       "from": 1121,
+       "to": 1133
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Ratusan! Semuanya harus siap.",
+     "score": 0.98,
+     "file": "out/voice/napoleon/ide_3.wav",
+     "wordsSec": [
+      [
+       "Pratusan",
+       0.0,
+       0.72
+      ],
+      [
+       "semuanya",
+       0.72,
+       1.66
+      ],
+      [
+       "harus",
+       1.66,
+       1.86
+      ],
+      [
+       "siap.",
+       1.86,
+       2.26
+      ]
+     ],
+     "from": 1145,
+     "to": 1217,
+     "words": [
+      {
+       "w": "Pratusan",
+       "from": 1145,
+       "to": 1167
+      },
+      {
+       "w": "semuanya",
+       "from": 1167,
+       "to": 1195
+      },
+      {
+       "w": "harus",
+       "from": 1195,
+       "to": 1201
+      },
+      {
+       "w": "siap.",
+       "from": 1201,
+       "to": 1213
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ternak",
+   "from": 1231,
+   "to": 1704,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Masalahnya, menangkap ratusan kelinci liar itu sangat sulit.",
+     "score": 0.98,
+     "file": "out/voice/napoleon/ternak_0.wav",
+     "wordsSec": [
+      [
+       "masalahnya",
+       0.0,
+       0.62
+      ],
+      [
+       "menangkap",
+       0.62,
+       1.14
+      ],
+      [
+       "ratusan",
+       1.14,
+       1.54
+      ],
+      [
+       "kelince",
+       1.54,
+       1.82
+      ],
+      [
+       "liar",
+       1.82,
+       2.14
+      ],
+      [
+       "itu",
+       2.14,
+       2.3
+      ],
+      [
+       "sangat",
+       2.3,
+       2.52
+      ],
+      [
+       "sulit.",
+       2.52,
+       2.86
+      ]
+     ],
+     "from": 1231,
+     "to": 1322,
+     "words": [
+      {
+       "w": "masalahnya",
+       "from": 1231,
+       "to": 1249
+      },
+      {
+       "w": "menangkap",
+       "from": 1249,
+       "to": 1265
+      },
+      {
+       "w": "ratusan",
+       "from": 1265,
+       "to": 1277
+      },
+      {
+       "w": "kelince",
+       "from": 1277,
+       "to": 1285
+      },
+      {
+       "w": "liar",
+       "from": 1285,
+       "to": 1295
+      },
+      {
+       "w": "itu",
+       "from": 1295,
+       "to": 1300
+      },
+      {
+       "w": "sangat",
+       "from": 1300,
+       "to": 1306
+      },
+      {
+       "w": "sulit.",
+       "from": 1306,
+       "to": 1316
+      }
+     ]
+    },
+    {
+     "style": "bisik",
+     "voice": "ara",
+     "text": "Kelinci liar susah ditangkap... Ah! Beli saja yang dari peternakan!",
+     "score": 0.952,
+     "file": "out/voice/napoleon/ternak_1.wav",
+     "wordsSec": [
+      [
+       "Kaling",
+       0.0,
+       0.24
+      ],
+      [
+       "ciliar",
+       0.24,
+       0.7
+      ],
+      [
+       "susah",
+       0.7,
+       1.18
+      ],
+      [
+       "ditangkap,",
+       1.18,
+       1.78
+      ],
+      [
+       "beli",
+       2.02,
+       2.7
+      ],
+      [
+       "saja",
+       2.7,
+       2.88
+      ],
+      [
+       "yang",
+       2.88,
+       3.08
+      ],
+      [
+       "dari",
+       3.08,
+       3.28
+      ],
+      [
+       "peternakan.",
+       3.28,
+       3.78
+      ]
+     ],
+     "from": 1330,
+     "to": 1451,
+     "words": [
+      {
+       "w": "Kaling",
+       "from": 1330,
+       "to": 1337
+      },
+      {
+       "w": "ciliar",
+       "from": 1337,
+       "to": 1351
+      },
+      {
+       "w": "susah",
+       "from": 1351,
+       "to": 1365
+      },
+      {
+       "w": "ditangkap,",
+       "from": 1365,
+       "to": 1383
+      },
+      {
+       "w": "beli",
+       "from": 1390,
+       "to": 1411
+      },
+      {
+       "w": "saja",
+       "from": 1411,
+       "to": 1416
+      },
+      {
+       "w": "yang",
+       "from": 1416,
+       "to": 1422
+      },
+      {
+       "w": "dari",
+       "from": 1422,
+       "to": 1428
+      },
+      {
+       "w": "peternakan.",
+       "from": 1428,
+       "to": 1443
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Pak, kelinci ini jinak, kan?",
+     "score": 0.976,
+     "file": "out/voice/napoleon/ternak_2.wav",
+     "wordsSec": [
+      [
+       "Pak,",
+       0.0,
+       0.18
+      ],
+      [
+       "kelinci",
+       0.64,
+       1.02
+      ],
+      [
+       "ini",
+       1.02,
+       1.2
+      ],
+      [
+       "jina",
+       1.2,
+       1.5
+      ],
+      [
+       "kan?",
+       1.5,
+       1.68
+      ]
+     ],
+     "from": 1458,
+     "to": 1515,
+     "words": [
+      {
+       "w": "Pak,",
+       "from": 1458,
+       "to": 1464
+      },
+      {
+       "w": "kelinci",
+       "from": 1478,
+       "to": 1489
+      },
+      {
+       "w": "ini",
+       "from": 1489,
+       "to": 1494
+      },
+      {
+       "w": "jina",
+       "from": 1494,
+       "to": 1503
+      },
+      {
+       "w": "kan?",
+       "from": 1503,
+       "to": 1509
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Jinak sekali. Terlalu jinak. Karena tiap hari mereka diberi makan oleh manusia.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/ternak_3.wav",
+     "wordsSec": [
+      [
+       "Jinak",
+       0.0,
+       0.34
+      ],
+      [
+       "sekali,",
+       0.34,
+       0.68
+      ],
+      [
+       "terlalu",
+       1.14,
+       1.5
+      ],
+      [
+       "jinak",
+       1.5,
+       2.02
+      ],
+      [
+       "karena",
+       2.02,
+       2.5
+      ],
+      [
+       "tiap",
+       2.5,
+       2.94
+      ],
+      [
+       "hari",
+       2.94,
+       3.16
+      ],
+      [
+       "mereka",
+       3.16,
+       3.54
+      ],
+      [
+       "diberimakan",
+       3.54,
+       4.54
+      ],
+      [
+       "oleh",
+       4.54,
+       4.82
+      ],
+      [
+       "manusia.",
+       4.82,
+       5.4
+      ]
+     ],
+     "from": 1523,
+     "to": 1690,
+     "words": [
+      {
+       "w": "Jinak",
+       "from": 1523,
+       "to": 1533
+      },
+      {
+       "w": "sekali,",
+       "from": 1533,
+       "to": 1543
+      },
+      {
+       "w": "terlalu",
+       "from": 1557,
+       "to": 1568
+      },
+      {
+       "w": "jinak",
+       "from": 1568,
+       "to": 1584
+      },
+      {
+       "w": "karena",
+       "from": 1584,
+       "to": 1598
+      },
+      {
+       "w": "tiap",
+       "from": 1598,
+       "to": 1611
+      },
+      {
+       "w": "hari",
+       "from": 1611,
+       "to": 1618
+      },
+      {
+       "w": "mereka",
+       "from": 1618,
+       "to": 1629
+      },
+      {
+       "w": "diberimakan",
+       "from": 1629,
+       "to": 1659
+      },
+      {
+       "w": "oleh",
+       "from": 1659,
+       "to": 1668
+      },
+      {
+       "w": "manusia.",
+       "from": 1668,
+       "to": 1685
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "hari",
+   "from": 1704,
+   "to": 2109,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Besok paginya, para jenderal sudah siap dengan senapan.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/hari_0.wav",
+     "wordsSec": [
+      [
+       "Besok",
+       0.0,
+       0.36
+      ],
+      [
+       "paginya",
+       0.36,
+       0.82
+      ],
+      [
+       "para",
+       0.82,
+       1.14
+      ],
+      [
+       "jenderal",
+       1.14,
+       1.64
+      ],
+      [
+       "sudah",
+       1.64,
+       1.88
+      ],
+      [
+       "siap",
+       1.88,
+       2.2
+      ],
+      [
+       "dengan",
+       2.2,
+       2.36
+      ],
+      [
+       "senapan.",
+       2.36,
+       2.76
+      ]
+     ],
+     "from": 1704,
+     "to": 1795,
+     "words": [
+      {
+       "w": "Besok",
+       "from": 1704,
+       "to": 1715
+      },
+      {
+       "w": "paginya",
+       "from": 1715,
+       "to": 1729
+      },
+      {
+       "w": "para",
+       "from": 1729,
+       "to": 1738
+      },
+      {
+       "w": "jenderal",
+       "from": 1738,
+       "to": 1753
+      },
+      {
+       "w": "sudah",
+       "from": 1753,
+       "to": 1760
+      },
+      {
+       "w": "siap",
+       "from": 1760,
+       "to": 1770
+      },
+      {
+       "w": "dengan",
+       "from": 1770,
+       "to": 1775
+      },
+      {
+       "w": "senapan.",
+       "from": 1775,
+       "to": 1787
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Bukalah kandangnya!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/hari_1.wav",
+     "wordsSec": [
+      [
+       "Bukalah",
+       0.0,
+       0.3
+      ],
+      [
+       "kandangnya!",
+       0.3,
+       0.74
+      ]
+     ],
+     "from": 1802,
+     "to": 1836,
+     "words": [
+      {
+       "w": "Bukalah",
+       "from": 1802,
+       "to": 1811
+      },
+      {
+       "w": "kandangnya!",
+       "from": 1811,
+       "to": 1825
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Siap, Yang Mulia!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/hari_2.wav",
+     "wordsSec": [
+      [
+       "Siap?",
+       0.0,
+       0.42
+      ],
+      [
+       "Yang",
+       0.6,
+       0.96
+      ],
+      [
+       "mulia!",
+       0.96,
+       1.38
+      ]
+     ],
+     "from": 1843,
+     "to": 1891,
+     "words": [
+      {
+       "w": "Siap?",
+       "from": 1843,
+       "to": 1856
+      },
+      {
+       "w": "Yang",
+       "from": 1861,
+       "to": 1872
+      },
+      {
+       "w": "mulia!",
+       "from": 1872,
+       "to": 1885
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Hm? Kenapa mereka tidak lari?",
+     "score": 0.979,
+     "file": "out/voice/napoleon/hari_3.wav",
+     "wordsSec": [
+      [
+       "Hmm,",
+       0.0,
+       0.24
+      ],
+      [
+       "kenapa",
+       0.64,
+       0.86
+      ],
+      [
+       "mereka",
+       0.86,
+       1.04
+      ],
+      [
+       "tidak",
+       1.04,
+       1.24
+      ],
+      [
+       "lari?",
+       1.24,
+       1.62
+      ]
+     ],
+     "from": 1899,
+     "to": 1952,
+     "words": [
+      {
+       "w": "Hmm,",
+       "from": 1899,
+       "to": 1906
+      },
+      {
+       "w": "kenapa",
+       "from": 1918,
+       "to": 1925
+      },
+      {
+       "w": "mereka",
+       "from": 1925,
+       "to": 1930
+      },
+      {
+       "w": "tidak",
+       "from": 1930,
+       "to": 1936
+      },
+      {
+       "w": "lari?",
+       "from": 1936,
+       "to": 1948
+      }
+     ]
+    },
+    {
+     "style": "bisik",
+     "voice": "ara",
+     "text": "Eh... mereka justru... menuju ke sini.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/hari_4.wav",
+     "wordsSec": [
+      [
+       "Eh?",
+       0.0,
+       0.28
+      ],
+      [
+       "Mereka",
+       0.64,
+       1.24
+      ],
+      [
+       "justru",
+       1.24,
+       1.86
+      ],
+      [
+       "menuju",
+       1.86,
+       2.56
+      ],
+      [
+       "kesini.",
+       2.56,
+       2.98
+      ]
+     ],
+     "from": 1960,
+     "to": 2055,
+     "words": [
+      {
+       "w": "Eh?",
+       "from": 1960,
+       "to": 1968
+      },
+      {
+       "w": "Mereka",
+       "from": 1979,
+       "to": 1997
+      },
+      {
+       "w": "justru",
+       "from": 1997,
+       "to": 2015
+      },
+      {
+       "w": "menuju",
+       "from": 2015,
+       "to": 2036
+      },
+      {
+       "w": "kesini.",
+       "from": 2036,
+       "to": 2049
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Ke arahku?!",
+     "score": 0.8,
+     "file": "out/voice/napoleon/hari_5.wav",
+     "wordsSec": [
+      [
+       "KAA",
+       0.0,
+       0.36
+      ],
+      [
+       "RAKU!",
+       0.36,
+       0.92
+      ]
+     ],
+     "from": 2063,
+     "to": 2095,
+     "words": [
+      {
+       "w": "KAA",
+       "from": 2063,
+       "to": 2074
+      },
+      {
+       "w": "RAKU!",
+       "from": 2074,
+       "to": 2090
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "serbu",
+   "from": 2109,
+   "to": 2472,
+   "lines": [
+    {
+     "style": "bisik",
+     "voice": "ara",
+     "text": "Yang Mulia, mereka mengira Anda membawa makanan.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/serbu_0.wav",
+     "wordsSec": [
+      [
+       "Yang",
+       0.0,
+       0.22
+      ],
+      [
+       "mulia",
+       0.22,
+       0.76
+      ],
+      [
+       "Mereka",
+       0.76,
+       1.92
+      ],
+      [
+       "mengira",
+       1.92,
+       2.38
+      ],
+      [
+       "Anda",
+       2.38,
+       2.76
+      ],
+      [
+       "membawa",
+       2.76,
+       3.12
+      ],
+      [
+       "makanan",
+       3.12,
+       3.56
+      ]
+     ],
+     "from": 2109,
+     "to": 2223,
+     "words": [
+      {
+       "w": "Yang",
+       "from": 2109,
+       "to": 2116
+      },
+      {
+       "w": "mulia",
+       "from": 2116,
+       "to": 2132
+      },
+      {
+       "w": "Mereka",
+       "from": 2132,
+       "to": 2167
+      },
+      {
+       "w": "mengira",
+       "from": 2167,
+       "to": 2180
+      },
+      {
+       "w": "Anda",
+       "from": 2180,
+       "to": 2192
+      },
+      {
+       "w": "membawa",
+       "from": 2192,
+       "to": 2203
+      },
+      {
+       "w": "makanan",
+       "from": 2203,
+       "to": 2216
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Makanan?! Aku bawa senapan!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/serbu_1.wav",
+     "wordsSec": [
+      [
+       "Makanan!",
+       0.0,
+       0.82
+      ],
+      [
+       "Aku",
+       1.04,
+       1.42
+      ],
+      [
+       "bawa",
+       1.42,
+       1.7
+      ],
+      [
+       "senapan!",
+       1.7,
+       2.16
+      ]
+     ],
+     "from": 2231,
+     "to": 2306,
+     "words": [
+      {
+       "w": "Makanan!",
+       "from": 2231,
+       "to": 2255
+      },
+      {
+       "w": "Aku",
+       "from": 2262,
+       "to": 2273
+      },
+      {
+       "w": "bawa",
+       "from": 2273,
+       "to": 2282
+      },
+      {
+       "w": "senapan!",
+       "from": 2282,
+       "to": 2296
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Tadi pagi mereka belum diberi makan, Yang Mulia!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/serbu_2.wav",
+     "wordsSec": [
+      [
+       "Tadi",
+       0.0,
+       0.28
+      ],
+      [
+       "pagi",
+       0.28,
+       0.56
+      ],
+      [
+       "mereka",
+       0.56,
+       0.74
+      ],
+      [
+       "belum",
+       0.74,
+       1.0
+      ],
+      [
+       "di",
+       1.0,
+       1.14
+      ],
+      [
+       "beri",
+       1.14,
+       1.36
+      ],
+      [
+       "makan",
+       1.36,
+       1.62
+      ],
+      [
+       "yang",
+       1.62,
+       1.92
+      ],
+      [
+       "mulia",
+       1.92,
+       2.3
+      ]
+     ],
+     "from": 2314,
+     "to": 2389,
+     "words": [
+      {
+       "w": "Tadi",
+       "from": 2314,
+       "to": 2323
+      },
+      {
+       "w": "pagi",
+       "from": 2323,
+       "to": 2331
+      },
+      {
+       "w": "mereka",
+       "from": 2331,
+       "to": 2336
+      },
+      {
+       "w": "belum",
+       "from": 2336,
+       "to": 2344
+      },
+      {
+       "w": "di",
+       "from": 2344,
+       "to": 2348
+      },
+      {
+       "w": "beri",
+       "from": 2348,
+       "to": 2355
+      },
+      {
+       "w": "makan",
+       "from": 2355,
+       "to": 2363
+      },
+      {
+       "w": "yang",
+       "from": 2363,
+       "to": 2372
+      },
+      {
+       "w": "mulia",
+       "from": 2372,
+       "to": 2383
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Pengawal! Usir mereka!",
+     "score": 0.971,
+     "file": "out/voice/napoleon/serbu_3.wav",
+     "wordsSec": [
+      [
+       "Pengawal",
+       0.0,
+       0.76
+      ],
+      [
+       "Usir",
+       0.76,
+       1.38
+      ],
+      [
+       "Mreka",
+       1.38,
+       1.8
+      ]
+     ],
+     "from": 2397,
+     "to": 2458,
+     "words": [
+      {
+       "w": "Pengawal",
+       "from": 2397,
+       "to": 2420
+      },
+      {
+       "w": "Usir",
+       "from": 2420,
+       "to": 2439
+      },
+      {
+       "w": "Mreka",
+       "from": 2439,
+       "to": 2451
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kereta",
+   "from": 2472,
+   "to": 2720,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Cepat! Siapkan keretaku!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/kereta_0.wav",
+     "wordsSec": [
+      [
+       "cepat",
+       0.0,
+       0.38
+      ],
+      [
+       "siapkan",
+       0.38,
+       0.9
+      ],
+      [
+       "keretaku",
+       0.9,
+       1.32
+      ]
+     ],
+     "from": 2472,
+     "to": 2518,
+     "words": [
+      {
+       "w": "cepat",
+       "from": 2472,
+       "to": 2483
+      },
+      {
+       "w": "siapkan",
+       "from": 2483,
+       "to": 2499
+      },
+      {
+       "w": "keretaku",
+       "from": 2499,
+       "to": 2511
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Anda sudah di dalam kereta, Yang Mulia!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/kereta_1.wav",
+     "wordsSec": [
+      [
+       "Anda",
+       0.0,
+       0.22
+      ],
+      [
+       "sudah",
+       0.22,
+       0.42
+      ],
+      [
+       "di",
+       0.42,
+       0.6
+      ],
+      [
+       "dalam",
+       0.6,
+       0.78
+      ],
+      [
+       "kereta",
+       0.78,
+       1.3
+      ],
+      [
+       "yang",
+       1.3,
+       1.84
+      ],
+      [
+       "mulia.",
+       1.84,
+       2.28
+      ]
+     ],
+     "from": 2526,
+     "to": 2599,
+     "words": [
+      {
+       "w": "Anda",
+       "from": 2526,
+       "to": 2532
+      },
+      {
+       "w": "sudah",
+       "from": 2532,
+       "to": 2538
+      },
+      {
+       "w": "di",
+       "from": 2538,
+       "to": 2544
+      },
+      {
+       "w": "dalam",
+       "from": 2544,
+       "to": 2549
+      },
+      {
+       "w": "kereta",
+       "from": 2549,
+       "to": 2565
+      },
+      {
+       "w": "yang",
+       "from": 2565,
+       "to": 2581
+      },
+      {
+       "w": "mulia.",
+       "from": 2581,
+       "to": 2594
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Lalu kenapa kelincinya ikut masuk?!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/kereta_2.wav",
+     "wordsSec": [
+      [
+       "lalu",
+       0.0,
+       0.26
+      ],
+      [
+       "kenapa",
+       0.26,
+       0.52
+      ],
+      [
+       "kelincinya",
+       0.52,
+       0.9
+      ],
+      [
+       "ikut",
+       0.9,
+       1.16
+      ],
+      [
+       "masuk",
+       1.16,
+       1.4
+      ]
+     ],
+     "from": 2607,
+     "to": 2655,
+     "words": [
+      {
+       "w": "lalu",
+       "from": 2607,
+       "to": 2615
+      },
+      {
+       "w": "kenapa",
+       "from": 2615,
+       "to": 2623
+      },
+      {
+       "w": "kelincinya",
+       "from": 2623,
+       "to": 2634
+      },
+      {
+       "w": "ikut",
+       "from": 2634,
+       "to": 2642
+      },
+      {
+       "w": "masuk",
+       "from": 2642,
+       "to": 2649
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Mereka sangat menyukai Anda!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/kereta_3.wav",
+     "wordsSec": [
+      [
+       "Mereka",
+       0.0,
+       0.32
+      ],
+      [
+       "sangat",
+       0.32,
+       0.52
+      ],
+      [
+       "menyukai",
+       0.52,
+       0.96
+      ],
+      [
+       "Anda.",
+       0.96,
+       1.2
+      ]
+     ],
+     "from": 2663,
+     "to": 2706,
+     "words": [
+      {
+       "w": "Mereka",
+       "from": 2663,
+       "to": 2673
+      },
+      {
+       "w": "sangat",
+       "from": 2673,
+       "to": 2679
+      },
+      {
+       "w": "menyukai",
+       "from": 2679,
+       "to": 2692
+      },
+      {
+       "w": "Anda.",
+       "from": 2692,
+       "to": 2699
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "akhir",
+   "from": 2720,
+   "to": 3114,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Ara... jangan bilang siapa-siapa soal ini.",
+     "score": 0.985,
+     "file": "out/voice/napoleon/akhir_0.wav",
+     "wordsSec": [
+      [
+       "Arah",
+       0.0,
+       0.6
+      ],
+      [
+       "jangan",
+       0.6,
+       1.02
+      ],
+      [
+       "bilang",
+       1.02,
+       1.3
+      ],
+      [
+       "siapa",
+       1.3,
+       1.58
+      ],
+      [
+       "-siapa",
+       1.58,
+       1.88
+      ],
+      [
+       "soal",
+       1.88,
+       2.22
+      ],
+      [
+       "ini.",
+       2.22,
+       2.38
+      ]
+     ],
+     "from": 2720,
+     "to": 2796,
+     "words": [
+      {
+       "w": "Arah",
+       "from": 2720,
+       "to": 2738
+      },
+      {
+       "w": "jangan",
+       "from": 2738,
+       "to": 2750
+      },
+      {
+       "w": "bilang",
+       "from": 2750,
+       "to": 2759
+      },
+      {
+       "w": "siapa",
+       "from": 2759,
+       "to": 2767
+      },
+      {
+       "w": "-siapa",
+       "from": 2767,
+       "to": 2776
+      },
+      {
+       "w": "soal",
+       "from": 2776,
+       "to": 2786
+      },
+      {
+       "w": "ini.",
+       "from": 2786,
+       "to": 2791
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Rahasia aman, Yang Mulia!",
+     "score": 1.0,
+     "file": "out/voice/napoleon/akhir_1.wav",
+     "wordsSec": [
+      [
+       "Rahasia",
+       0.0,
+       0.5
+      ],
+      [
+       "Aman,",
+       0.5,
+       0.84
+      ],
+      [
+       "Yang",
+       1.18,
+       1.3
+      ],
+      [
+       "Mulia.",
+       1.3,
+       1.78
+      ]
+     ],
+     "from": 2804,
+     "to": 2865,
+     "words": [
+      {
+       "w": "Rahasia",
+       "from": 2804,
+       "to": 2819
+      },
+      {
+       "w": "Aman,",
+       "from": 2819,
+       "to": 2829
+      },
+      {
+       "w": "Yang",
+       "from": 2840,
+       "to": 2843
+      },
+      {
+       "w": "Mulia.",
+       "from": 2843,
+       "to": 2858
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Tapi para saksi menuliskannya. Hampir sembilan puluh tahun kemudian, kisahnya terbit.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/akhir_2.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.22
+      ],
+      [
+       "para",
+       0.22,
+       0.42
+      ],
+      [
+       "saksi",
+       0.42,
+       0.74
+      ],
+      [
+       "menuliskannya,",
+       0.74,
+       1.38
+      ],
+      [
+       "hampir",
+       1.72,
+       2.06
+      ],
+      [
+       "90",
+       2.06,
+       2.38
+      ],
+      [
+       "tahun",
+       2.38,
+       2.78
+      ],
+      [
+       "kemudian,",
+       2.78,
+       3.36
+      ],
+      [
+       "kisahnya",
+       3.5,
+       3.88
+      ],
+      [
+       "terbit.",
+       3.88,
+       4.18
+      ]
+     ],
+     "from": 2873,
+     "to": 3002,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 2873,
+       "to": 2879
+      },
+      {
+       "w": "para",
+       "from": 2879,
+       "to": 2885
+      },
+      {
+       "w": "saksi",
+       "from": 2885,
+       "to": 2895
+      },
+      {
+       "w": "menuliskannya,",
+       "from": 2895,
+       "to": 2914
+      },
+      {
+       "w": "hampir",
+       "from": 2924,
+       "to": 2934
+      },
+      {
+       "w": "90",
+       "from": 2934,
+       "to": 2944
+      },
+      {
+       "w": "tahun",
+       "from": 2944,
+       "to": 2956
+      },
+      {
+       "w": "kemudian,",
+       "from": 2956,
+       "to": 2973
+      },
+      {
+       "w": "kisahnya",
+       "from": 2978,
+       "to": 2989
+      },
+      {
+       "w": "terbit.",
+       "from": 2989,
+       "to": 2998
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Sekuat apa pun kamu, jangan remehkan kelinci yang lapar.",
+     "score": 1.0,
+     "file": "out/voice/napoleon/akhir_3.wav",
+     "wordsSec": [
+      [
+       "Sekuat",
+       0.0,
+       0.4
+      ],
+      [
+       "apapun",
+       0.4,
+       0.74
+      ],
+      [
+       "kamu,",
+       0.74,
+       1.0
+      ],
+      [
+       "jangan",
+       1.3,
+       1.52
+      ],
+      [
+       "remehkan",
+       1.52,
+       2.0
+      ],
+      [
+       "kelinci",
+       2.0,
+       2.36
+      ],
+      [
+       "yang",
+       2.36,
+       2.5
+      ],
+      [
+       "lapar.",
+       2.5,
+       2.84
+      ]
+     ],
+     "from": 3010,
+     "to": 3101,
+     "words": [
+      {
+       "w": "Sekuat",
+       "from": 3010,
+       "to": 3022
+      },
+      {
+       "w": "apapun",
+       "from": 3022,
+       "to": 3032
+      },
+      {
+       "w": "kamu,",
+       "from": 3032,
+       "to": 3040
+      },
+      {
+       "w": "jangan",
+       "from": 3049,
+       "to": 3056
+      },
+      {
+       "w": "remehkan",
+       "from": 3056,
+       "to": 3070
+      },
+      {
+       "w": "kelinci",
+       "from": 3070,
+       "to": 3081
+      },
+      {
+       "w": "yang",
+       "from": 3081,
+       "to": 3085
+      },
+      {
+       "w": "lapar.",
+       "from": 3085,
+       "to": 3095
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
