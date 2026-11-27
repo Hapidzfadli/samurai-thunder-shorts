@@ -15,7 +15,7 @@ export type BeanParams = {
   skin?: string;
   torso?: string;
   pants?: string;
-  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping" | "brodie" | "steel90" | "headband" | "officer" | "bicorne" | "pocong" | "kunti";
+  hat?: "wuTopknot" | "wuCourt" | "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping" | "brodie" | "steel90" | "headband" | "officer" | "bicorne" | "pocong" | "kunti";
   pocong?: boolean; // comedic Indonesian wrapped kain kafan shroud with top knot & ties
   kunti?: boolean; // comedic floating long-haired ghost with flowing scalloped white gown
   tired?: boolean; // subtle tired dark under-eye bags (overworked Friday-night ghosts!)
@@ -40,6 +40,7 @@ export type BeanParams = {
   beard?: string;
   robe?: string; // long robe to the ankles
   robeTrim?: string;
+  crossCollar?: boolean; // stylized crossed robe collar for Wu-era preview; not a reconstruction
   sash?: string;
   wide?: number; // torso width factor (stocky build)
   safari?: boolean; // safari shirt pockets + buttons
@@ -595,6 +596,12 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     }
     poly(c, [[300 - 34 + tx, shY - 4], [300 + 34 + tx, shY - 4], [300 + tx, shY + 46]], hemCol, INKC, 5);
   }
+  if (p.crossCollar && p.robe) {
+    const trim = p.robeTrim ?? "#e2c698";
+    poly(c, [[250 + tx, shY], [278 + tx, shY - 3], [354, shY + 135], [334, shY + 154]], trim, INKC, 4);
+    poly(c, [[322 + tx, shY - 3], [350 + tx, shY], [264, shY + 177], [246, shY + 162]], trim, INKC, 4);
+    seg(c, 253, shY + 166, 248, hipY - 25, 4, trim);
+  }
   // head
   const hx = 300 + tx * 1.3;
   c.save();
@@ -791,7 +798,18 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   }
   // hats
   const hat = p.hat ?? "none";
-  if (hat === "cap") {
+  if (hat === "wuTopknot" || hat === "wuCourt") {
+    const hc = p.hair ?? "#241c1b";
+    poly(c, [[188, 174], [198, 118], [250, 88], [350, 88], [402, 118], [412, 174], [375, 141], [300, 124], [225, 141]], hc, INKC, 6);
+    poly(c, [[270, 103], [268, 51], [284, 35], [322, 35], [338, 53], [334, 104]], hc, INKC, 6);
+    seg(c, 270, 83, 336, 83, 7, hatCol);
+    seg(c, 255, 59, 352, 59, 5, "#c7a46a");
+    if (hat === "wuCourt") {
+      poly(c, [[258, 101], [254, 44], [346, 44], [342, 101]], "#28262c", INKC, 5);
+      poly(c, [[228, 36], [368, 36], [380, 55], [222, 55]], "#332b2e", INKC, 5);
+      seg(c, 236, 52, 364, 52, 5, "#b68a47");
+    }
+  } else if (hat === "cap") {
     poly(c, [[196, 150], [200, 112], [300, 84], [400, 112], [404, 150], [330, 138], [250, 138]], hatCol, INKC, 8);
     poly(c, [[196, 150], [330, 146], [340, 166], [200, 170]], hatCol, INKC, 8);
   } else if (hat === "bowler") {
