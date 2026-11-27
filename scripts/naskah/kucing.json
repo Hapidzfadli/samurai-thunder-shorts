@@ -1,0 +1,38 @@
+[
+  {"scene": "hook", "takes": 2, "lines": [
+    ["narasi", "Pada tahun seribu sembilan ratus enam puluhan, dinas rahasia Amerika menghabiskan dua puluh juta dolar... untuk melatih agen mata-mata paling rahasia di dunia.", "dodi"],
+    ["sindir", "Bukan manusia, bukan robot... tapi seekor kucing oren.", "dodi"]
+  ]},
+  {"scene": "lab", "takes": 2, "lines": [
+    ["sombong", "Ara! Sambut proyek rahasia lima tahun kita! Agen Meong, mata-mata tercanggih sepanjang sejarah!", "dodi"],
+    ["tanya", "Hah?! Dua puluh juta dolar cuma buat seekor kucing, Bos? Emangnya dia bisa ngetik laporan?", "ara"],
+    ["tegas", "Bukan ngetik! Dia bakal nyelinap ke bangku taman dan nyadap rahasia diplomat musuh tanpa dicurigai!", "dodi"]
+  ]},
+  {"scene": "xray", "takes": 2, "lines": [
+    ["narasi", "Di ruang operasi rahasia, ilmuwan memasang mikrofon super mini di kupingnya, pemancar radio di dadanya, dan kabel antena panjang di sepanjang ekornya!", "dodi"],
+    ["sindir", "Canggih banget sih, Bos... tapi yakin tuh kucing mau dengerin perintah manusia?", "ara"],
+    ["sombong", "Tenang! Sudah dilatih lima tahun! Sekali dikasih kode, langsung jalan kayak agen profesional!", "dodi"]
+  ]},
+  {"scene": "van", "takes": 2, "lines": [
+    ["narasi", "Hari misi perdana pun tiba. Di dalam mobil van penyadap penuh pita magnetik, semua agen menahan napas.", "dodi"],
+    ["bisik", "Target diplomat duduk di bangku taman seberang jalan... pintu van dibuka, Agen Meong meluncur!", "dodi"],
+    ["bisik", "Eh Bos... tadi aku lupa bilang, di pojok taman sana ada abang gerobak ikan bakar baru buka.", "ara"]
+  ]},
+  {"scene": "lepas", "takes": 2, "lines": [
+    ["kaget", "APA?! Gerobak ikan bakar?! Hei Meong! Fokus ke diplomat, jangan belok!", "dodi"],
+    ["panik", "Bos! Kucingnya malah lari nyebrang jalan! Awas ada taksi kuning!", "ara"]
+  ]},
+  {"scene": "kacau", "takes": 2, "lines": [
+    ["panik", "Waduh! Taksinya ngerem mendadak! Eh... syukur kucingnya lolos, tapi kok malah lompat ke gerobak ikan?!", "dodi"],
+    ["sindir", "Lihat layar radarnya, Bos! Target diplomat ditinggal, sekarang sinyal dua puluh juta dolarnya ngunci ikan tongkol!", "ara"]
+  ]},
+  {"scene": "direktur", "takes": 2, "lines": [
+    ["kaget", "Tunggu! Pak Direktur lagi dengerin rekaman langsung lewat headset! Jangan sampai...", "dodi"],
+    ["marah", "SIAPA YANG BIKIN PROYEK DUA PULUH JUTA DOLAR CUMA BUAT DENGER SUARA KUCING NGUNYAH IKAN?!", "direktur"]
+  ]},
+  {"scene": "akhir", "takes": 2, "lines": [
+    ["narasi", "Tahun seribu sembilan ratus enam puluh tujuh, Operasi Acoustic Kitty resmi dibatalkan dengan satu kesimpulan jujur dari dinas rahasia...", "dodi"],
+    ["santai", "Teknologinya jenius, Bos... cuma lupa satu fakta alam semesta: kucing nggak pernah bisa disuruh!", "ara"],
+    ["pasrah", "Iya deh... dua puluh juta dolar melayang, yang kenyang cuma si Meong.", "dodi"]
+  ]}
+]

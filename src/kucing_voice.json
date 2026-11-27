@@ -1,0 +1,3384 @@
+{
+  "slug": "kucing",
+  "sr": 44100,
+  "scenes": {
+    "hook": [
+      {
+        "scene": "hook",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "narasi",
+        "text": "Pada tahun seribu sembilan ratus enam puluhan, dinas rahasia Amerika menghabiskan dua puluh juta dolar... untuk melatih agen mata-mata paling rahasia di dunia.",
+        "wav": "out/voice/kucing/hook_0.wav",
+        "duration": 7.41,
+        "words": [
+          {
+            "word": "Pada",
+            "start": 0.0,
+            "end": 0.18
+          },
+          {
+            "word": "tahun",
+            "start": 0.18,
+            "end": 0.38
+          },
+          {
+            "word": "seribu",
+            "start": 0.38,
+            "end": 0.64
+          },
+          {
+            "word": "sembilan",
+            "start": 0.64,
+            "end": 0.9
+          },
+          {
+            "word": "ratus",
+            "start": 0.9,
+            "end": 1.16
+          },
+          {
+            "word": "enam",
+            "start": 1.16,
+            "end": 1.42
+          },
+          {
+            "word": "puluhan,",
+            "start": 1.42,
+            "end": 1.68
+          },
+          {
+            "word": "dinas",
+            "start": 1.86,
+            "end": 2.08
+          },
+          {
+            "word": "rahasia",
+            "start": 2.08,
+            "end": 2.48
+          },
+          {
+            "word": "Amerika",
+            "start": 2.48,
+            "end": 2.82
+          },
+          {
+            "word": "menghabiskan",
+            "start": 2.82,
+            "end": 3.48
+          },
+          {
+            "word": "dua",
+            "start": 3.48,
+            "end": 3.8
+          },
+          {
+            "word": "puluh",
+            "start": 3.8,
+            "end": 4.18
+          },
+          {
+            "word": "juta",
+            "start": 4.18,
+            "end": 4.26
+          },
+          {
+            "word": "dolar...",
+            "start": 4.18,
+            "end": 4.6
+          },
+          {
+            "word": "untuk",
+            "start": 4.6,
+            "end": 4.9
+          },
+          {
+            "word": "melatih",
+            "start": 4.9,
+            "end": 5.26
+          },
+          {
+            "word": "agen",
+            "start": 5.26,
+            "end": 5.56
+          },
+          {
+            "word": "mata-mata",
+            "start": 5.56,
+            "end": 5.96
+          },
+          {
+            "word": "paling",
+            "start": 5.96,
+            "end": 6.16
+          },
+          {
+            "word": "rahasia",
+            "start": 6.16,
+            "end": 6.66
+          },
+          {
+            "word": "di",
+            "start": 6.66,
+            "end": 6.94
+          },
+          {
+            "word": "dunia.",
+            "start": 6.94,
+            "end": 7.3
+          }
+        ]
+      },
+      {
+        "scene": "hook",
+        "idx": 1,
+        "voice": "dodi",
+        "style": "sindir",
+        "text": "Bukan manusia, bukan robot... tapi seekor kucing oren.",
+        "wav": "out/voice/kucing/hook_1.wav",
+        "duration": 3.59,
+        "words": [
+          {
+            "word": "Bukan",
+            "start": 0.0,
+            "end": 0.26
+          },
+          {
+            "word": "manusia,",
+            "start": 0.26,
+            "end": 0.8
+          },
+          {
+            "word": "bukan",
+            "start": 1.0,
+            "end": 1.2
+          },
+          {
+            "word": "robot...",
+            "start": 1.2,
+            "end": 1.58
+          },
+          {
+            "word": "tapi",
+            "start": 1.86,
+            "end": 2.26
+          },
+          {
+            "word": "seekor",
+            "start": 2.26,
+            "end": 2.82
+          },
+          {
+            "word": "kucing",
+            "start": 2.82,
+            "end": 3.1
+          },
+          {
+            "word": "oren.",
+            "start": 3.1,
+            "end": 3.4
+          }
+        ]
+      }
+    ],
+    "lab": [
+      {
+        "scene": "lab",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "sombong",
+        "text": "Ara! Sambut proyek rahasia lima tahun kita! Agen Meong, mata-mata tercanggih sepanjang sejarah!",
+        "wav": "out/voice/kucing/lab_0.wav",
+        "duration": 6.72,
+        "words": [
+          {
+            "word": "Ara!",
+            "start": 0.0,
+            "end": 0.5
+          },
+          {
+            "word": "Sambut",
+            "start": 0.5,
+            "end": 1.08
+          },
+          {
+            "word": "proyek",
+            "start": 1.08,
+            "end": 1.54
+          },
+          {
+            "word": "rahasia",
+            "start": 1.54,
+            "end": 2.28
+          },
+          {
+            "word": "lima",
+            "start": 2.28,
+            "end": 2.54
+          },
+          {
+            "word": "tahun",
+            "start": 2.54,
+            "end": 2.84
+          },
+          {
+            "word": "kita!",
+            "start": 2.84,
+            "end": 3.2
+          },
+          {
+            "word": "Agen",
+            "start": 3.52,
+            "end": 3.86
+          },
+          {
+            "word": "Meong,",
+            "start": 3.86,
+            "end": 4.26
+          },
+          {
+            "word": "mata-mata",
+            "start": 4.26,
+            "end": 4.98
+          },
+          {
+            "word": "tercanggih",
+            "start": 4.98,
+            "end": 5.7
+          },
+          {
+            "word": "sepanjang",
+            "start": 5.7,
+            "end": 6.2
+          },
+          {
+            "word": "sejarah!",
+            "start": 6.2,
+            "end": 6.7
+          }
+        ]
+      },
+      {
+        "scene": "lab",
+        "idx": 1,
+        "voice": "ara",
+        "style": "tanya",
+        "text": "Hah?! Dua puluh juta dolar cuma buat seekor kucing, Bos? Emangnya dia bisa ngetik laporan?",
+        "wav": "out/voice/kucing/lab_1.wav",
+        "duration": 5.106,
+        "words": [
+          {
+            "word": "Hah?!",
+            "start": 0.0,
+            "end": 0.18
+          },
+          {
+            "word": "Dua",
+            "start": 0.18,
+            "end": 0.58
+          },
+          {
+            "word": "puluh",
+            "start": 0.58,
+            "end": 0.88
+          },
+          {
+            "word": "juta",
+            "start": 0.88,
+            "end": 1.24
+          },
+          {
+            "word": "dolar",
+            "start": 1.24,
+            "end": 1.56
+          },
+          {
+            "word": "cuma",
+            "start": 1.56,
+            "end": 1.76
+          },
+          {
+            "word": "buat",
+            "start": 1.76,
+            "end": 2.0
+          },
+          {
+            "word": "seekor",
+            "start": 2.0,
+            "end": 2.28
+          },
+          {
+            "word": "kucing,",
+            "start": 2.28,
+            "end": 2.62
+          },
+          {
+            "word": "Bos?",
+            "start": 2.7,
+            "end": 2.82
+          },
+          {
+            "word": "Emangnya",
+            "start": 3.52,
+            "end": 3.9
+          },
+          {
+            "word": "dia",
+            "start": 3.9,
+            "end": 4.02
+          },
+          {
+            "word": "bisa",
+            "start": 4.02,
+            "end": 4.2
+          },
+          {
+            "word": "ngetik",
+            "start": 4.2,
+            "end": 4.6
+          },
+          {
+            "word": "laporan?",
+            "start": 4.6,
+            "end": 5.0
+          }
+        ]
+      },
+      {
+        "scene": "lab",
+        "idx": 2,
+        "voice": "dodi",
+        "style": "tegas",
+        "text": "Bukan ngetik! Dia bakal nyelinap ke bangku taman dan nyadap rahasia diplomat musuh tanpa dicurigai!",
+        "wav": "out/voice/kucing/lab_2.wav",
+        "duration": 5.253,
+        "words": [
+          {
+            "word": "Bukan",
+            "start": 0.0,
+            "end": 0.28
+          },
+          {
+            "word": "ngetik!",
+            "start": 0.28,
+            "end": 0.68
+          },
+          {
+            "word": "Dia",
+            "start": 0.88,
+            "end": 1.0
+          },
+          {
+            "word": "bakal",
+            "start": 1.0,
+            "end": 1.38
+          },
+          {
+            "word": "nyelinap",
+            "start": 1.38,
+            "end": 1.647
+          },
+          {
+            "word": "ke",
+            "start": 1.647,
+            "end": 1.913
+          },
+          {
+            "word": "bangku",
+            "start": 1.913,
+            "end": 2.18
+          },
+          {
+            "word": "taman",
+            "start": 2.18,
+            "end": 2.4
+          },
+          {
+            "word": "dan",
+            "start": 2.4,
+            "end": 2.66
+          },
+          {
+            "word": "nyadap",
+            "start": 2.66,
+            "end": 2.98
+          },
+          {
+            "word": "rahasia",
+            "start": 2.98,
+            "end": 3.32
+          },
+          {
+            "word": "diplomat",
+            "start": 3.32,
+            "end": 3.84
+          },
+          {
+            "word": "musuh",
+            "start": 3.84,
+            "end": 4.26
+          },
+          {
+            "word": "tanpa",
+            "start": 4.26,
+            "end": 4.6
+          },
+          {
+            "word": "dicurigai!",
+            "start": 4.6,
+            "end": 5.14
+          }
+        ]
+      }
+    ],
+    "xray": [
+      {
+        "scene": "xray",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "narasi",
+        "text": "Di ruang operasi rahasia, ilmuwan memasang mikrofon super mini di kupingnya, pemancar radio di dadanya, dan kabel antena panjang di sepanjang ekornya!",
+        "wav": "out/voice/kucing/xray_0.wav",
+        "duration": 8.64,
+        "words": [
+          {
+            "word": "Di",
+            "start": 0.0,
+            "end": 0.1
+          },
+          {
+            "word": "ruang",
+            "start": 0.1,
+            "end": 0.36
+          },
+          {
+            "word": "operasi",
+            "start": 0.36,
+            "end": 0.82
+          },
+          {
+            "word": "rahasia,",
+            "start": 0.82,
+            "end": 1.38
+          },
+          {
+            "word": "ilmuwan",
+            "start": 1.74,
+            "end": 2.16
+          },
+          {
+            "word": "memasang",
+            "start": 2.16,
+            "end": 2.56
+          },
+          {
+            "word": "mikrofon",
+            "start": 2.56,
+            "end": 3.0
+          },
+          {
+            "word": "super",
+            "start": 3.0,
+            "end": 3.22
+          },
+          {
+            "word": "mini",
+            "start": 3.22,
+            "end": 3.52
+          },
+          {
+            "word": "di",
+            "start": 3.52,
+            "end": 3.7
+          },
+          {
+            "word": "kupingnya,",
+            "start": 3.7,
+            "end": 4.18
+          },
+          {
+            "word": "pemancar",
+            "start": 4.42,
+            "end": 4.86
+          },
+          {
+            "word": "radio",
+            "start": 4.86,
+            "end": 5.18
+          },
+          {
+            "word": "di",
+            "start": 5.18,
+            "end": 5.32
+          },
+          {
+            "word": "dadanya,",
+            "start": 5.32,
+            "end": 5.72
+          },
+          {
+            "word": "dan",
+            "start": 6.12,
+            "end": 6.2
+          },
+          {
+            "word": "kabel",
+            "start": 6.2,
+            "end": 6.54
+          },
+          {
+            "word": "antena",
+            "start": 6.54,
+            "end": 6.98
+          },
+          {
+            "word": "panjang",
+            "start": 6.98,
+            "end": 7.38
+          },
+          {
+            "word": "di",
+            "start": 7.38,
+            "end": 7.54
+          },
+          {
+            "word": "sepanjang",
+            "start": 7.54,
+            "end": 8.02
+          },
+          {
+            "word": "ekornya!",
+            "start": 8.02,
+            "end": 8.52
+          }
+        ]
+      },
+      {
+        "scene": "xray",
+        "idx": 1,
+        "voice": "ara",
+        "style": "sindir",
+        "text": "Canggih banget sih, Bos... tapi yakin tuh kucing mau dengerin perintah manusia?",
+        "wav": "out/voice/kucing/xray_1.wav",
+        "duration": 4.253,
+        "words": [
+          {
+            "word": "Canggih",
+            "start": 0.0,
+            "end": 0.28
+          },
+          {
+            "word": "banget",
+            "start": 0.28,
+            "end": 0.48
+          },
+          {
+            "word": "sih,",
+            "start": 0.48,
+            "end": 0.66
+          },
+          {
+            "word": "Bos...",
+            "start": 0.66,
+            "end": 0.88
+          },
+          {
+            "word": "tapi",
+            "start": 1.42,
+            "end": 1.8
+          },
+          {
+            "word": "yakin",
+            "start": 1.8,
+            "end": 2.18
+          },
+          {
+            "word": "tuh",
+            "start": 2.18,
+            "end": 2.32
+          },
+          {
+            "word": "kucing",
+            "start": 2.32,
+            "end": 2.72
+          },
+          {
+            "word": "mau",
+            "start": 2.72,
+            "end": 2.88
+          },
+          {
+            "word": "dengerin",
+            "start": 2.88,
+            "end": 3.22
+          },
+          {
+            "word": "perintah",
+            "start": 3.22,
+            "end": 3.62
+          },
+          {
+            "word": "manusia?",
+            "start": 3.62,
+            "end": 4.06
+          }
+        ]
+      },
+      {
+        "scene": "xray",
+        "idx": 2,
+        "voice": "dodi",
+        "style": "sombong",
+        "text": "Tenang! Sudah dilatih lima tahun! Sekali dikasih kode, langsung jalan kayak agen profesional!",
+        "wav": "out/voice/kucing/xray_2.wav",
+        "duration": 5.176,
+        "words": [
+          {
+            "word": "Tenang!",
+            "start": 0.0,
+            "end": 0.4
+          },
+          {
+            "word": "Sudah",
+            "start": 0.56,
+            "end": 0.82
+          },
+          {
+            "word": "dilatih",
+            "start": 0.82,
+            "end": 1.24
+          },
+          {
+            "word": "lima",
+            "start": 1.24,
+            "end": 1.4
+          },
+          {
+            "word": "tahun!",
+            "start": 1.4,
+            "end": 1.7
+          },
+          {
+            "word": "Sekali",
+            "start": 2.04,
+            "end": 2.34
+          },
+          {
+            "word": "dikasih",
+            "start": 2.34,
+            "end": 2.8
+          },
+          {
+            "word": "kode,",
+            "start": 2.8,
+            "end": 3.06
+          },
+          {
+            "word": "langsung",
+            "start": 3.3,
+            "end": 3.6
+          },
+          {
+            "word": "jalan",
+            "start": 3.6,
+            "end": 3.9
+          },
+          {
+            "word": "kayak",
+            "start": 3.9,
+            "end": 4.06
+          },
+          {
+            "word": "agen",
+            "start": 4.06,
+            "end": 4.4
+          },
+          {
+            "word": "profesional!",
+            "start": 4.4,
+            "end": 4.72
+          }
+        ]
+      }
+    ],
+    "van": [
+      {
+        "scene": "van",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "narasi",
+        "text": "Hari misi perdana pun tiba. Di dalam mobil van penyadap penuh pita magnetik, semua agen menahan napas.",
+        "wav": "out/voice/kucing/van_0.wav",
+        "duration": 5.569,
+        "words": [
+          {
+            "word": "Hari",
+            "start": 0.0,
+            "end": 0.18
+          },
+          {
+            "word": "misi",
+            "start": 0.18,
+            "end": 0.46
+          },
+          {
+            "word": "perdana",
+            "start": 0.46,
+            "end": 0.78
+          },
+          {
+            "word": "pun",
+            "start": 0.78,
+            "end": 0.92
+          },
+          {
+            "word": "tiba.",
+            "start": 0.92,
+            "end": 1.26
+          },
+          {
+            "word": "Di",
+            "start": 1.6,
+            "end": 1.75
+          },
+          {
+            "word": "dalam",
+            "start": 1.75,
+            "end": 1.9
+          },
+          {
+            "word": "mobil",
+            "start": 1.9,
+            "end": 2.2
+          },
+          {
+            "word": "van",
+            "start": 2.2,
+            "end": 2.49
+          },
+          {
+            "word": "penyadap",
+            "start": 2.49,
+            "end": 2.78
+          },
+          {
+            "word": "penuh",
+            "start": 2.78,
+            "end": 3.07
+          },
+          {
+            "word": "pita",
+            "start": 3.07,
+            "end": 3.36
+          },
+          {
+            "word": "magnetik,",
+            "start": 3.36,
+            "end": 3.88
+          },
+          {
+            "word": "semua",
+            "start": 4.12,
+            "end": 4.28
+          },
+          {
+            "word": "agen",
+            "start": 4.28,
+            "end": 4.68
+          },
+          {
+            "word": "menahan",
+            "start": 4.68,
+            "end": 4.96
+          },
+          {
+            "word": "napas.",
+            "start": 4.96,
+            "end": 5.38
+          }
+        ]
+      },
+      {
+        "scene": "van",
+        "idx": 1,
+        "voice": "dodi",
+        "style": "bisik",
+        "text": "Target diplomat duduk di bangku taman seberang jalan... pintu van dibuka, Agen Meong meluncur!",
+        "wav": "out/voice/kucing/van_1.wav",
+        "duration": 5.39,
+        "words": [
+          {
+            "word": "Target",
+            "start": 0.0,
+            "end": 0.32
+          },
+          {
+            "word": "diplomat",
+            "start": 0.32,
+            "end": 0.94
+          },
+          {
+            "word": "duduk",
+            "start": 0.94,
+            "end": 1.22
+          },
+          {
+            "word": "di",
+            "start": 1.22,
+            "end": 1.32
+          },
+          {
+            "word": "bangku",
+            "start": 1.32,
+            "end": 1.66
+          },
+          {
+            "word": "taman",
+            "start": 1.66,
+            "end": 1.92
+          },
+          {
+            "word": "seberang",
+            "start": 1.92,
+            "end": 2.38
+          },
+          {
+            "word": "jalan...",
+            "start": 2.38,
+            "end": 2.76
+          },
+          {
+            "word": "pintu",
+            "start": 3.04,
+            "end": 3.34
+          },
+          {
+            "word": "van",
+            "start": 3.34,
+            "end": 3.52
+          },
+          {
+            "word": "dibuka,",
+            "start": 3.52,
+            "end": 3.94
+          },
+          {
+            "word": "Agen",
+            "start": 4.2,
+            "end": 4.52
+          },
+          {
+            "word": "Meong",
+            "start": 4.52,
+            "end": 4.74
+          },
+          {
+            "word": "meluncur!",
+            "start": 4.74,
+            "end": 5.2
+          }
+        ]
+      },
+      {
+        "scene": "van",
+        "idx": 2,
+        "voice": "ara",
+        "style": "bisik",
+        "text": "Eh Bos... tadi aku lupa bilang, di pojok taman sana ada abang gerobak ikan bakar baru buka.",
+        "wav": "out/voice/kucing/van_2.wav",
+        "duration": 5.327,
+        "words": [
+          {
+            "word": "Eh",
+            "start": 0.0,
+            "end": 0.23
+          },
+          {
+            "word": "Bos...",
+            "start": 0.23,
+            "end": 0.46
+          },
+          {
+            "word": "tadi",
+            "start": 0.88,
+            "end": 1.12
+          },
+          {
+            "word": "aku",
+            "start": 1.12,
+            "end": 1.24
+          },
+          {
+            "word": "lupa",
+            "start": 1.24,
+            "end": 1.46
+          },
+          {
+            "word": "bilang,",
+            "start": 1.46,
+            "end": 1.8
+          },
+          {
+            "word": "di",
+            "start": 2.22,
+            "end": 2.38
+          },
+          {
+            "word": "pojok",
+            "start": 2.38,
+            "end": 2.7
+          },
+          {
+            "word": "taman",
+            "start": 2.7,
+            "end": 2.88
+          },
+          {
+            "word": "sana",
+            "start": 2.88,
+            "end": 3.26
+          },
+          {
+            "word": "ada",
+            "start": 3.26,
+            "end": 3.56
+          },
+          {
+            "word": "abang",
+            "start": 3.56,
+            "end": 3.86
+          },
+          {
+            "word": "gerobak",
+            "start": 3.86,
+            "end": 4.2
+          },
+          {
+            "word": "ikan",
+            "start": 4.2,
+            "end": 4.4
+          },
+          {
+            "word": "bakar",
+            "start": 4.4,
+            "end": 4.72
+          },
+          {
+            "word": "baru",
+            "start": 4.72,
+            "end": 4.88
+          },
+          {
+            "word": "buka.",
+            "start": 4.88,
+            "end": 5.24
+          }
+        ]
+      }
+    ],
+    "lepas": [
+      {
+        "scene": "lepas",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "kaget",
+        "text": "APA?! Gerobak ikan bakar?! Hei Meong! Fokus ke diplomat, jangan belok!",
+        "wav": "out/voice/kucing/lepas_0.wav",
+        "duration": 5.457,
+        "words": [
+          {
+            "word": "APA?!",
+            "start": 0.0,
+            "end": 0.98
+          },
+          {
+            "word": "Gerobak",
+            "start": 0.98,
+            "end": 1.96
+          },
+          {
+            "word": "ikan",
+            "start": 1.96,
+            "end": 2.18
+          },
+          {
+            "word": "bakar?!",
+            "start": 2.18,
+            "end": 2.68
+          },
+          {
+            "word": "Hei",
+            "start": 2.84,
+            "end": 3.16
+          },
+          {
+            "word": "Meong!",
+            "start": 3.22,
+            "end": 3.54
+          },
+          {
+            "word": "Fokus",
+            "start": 3.76,
+            "end": 4.12
+          },
+          {
+            "word": "ke",
+            "start": 4.12,
+            "end": 4.26
+          },
+          {
+            "word": "diplomat,",
+            "start": 4.26,
+            "end": 4.74
+          },
+          {
+            "word": "jangan",
+            "start": 4.82,
+            "end": 5.02
+          },
+          {
+            "word": "belok!",
+            "start": 5.02,
+            "end": 5.42
+          }
+        ]
+      },
+      {
+        "scene": "lepas",
+        "idx": 1,
+        "voice": "ara",
+        "style": "panik",
+        "text": "Bos! Kucingnya malah lari nyebrang jalan! Awas ada taksi kuning!",
+        "wav": "out/voice/kucing/lepas_1.wav",
+        "duration": 4.45,
+        "words": [
+          {
+            "word": "Bos!",
+            "start": 0.0,
+            "end": 0.6
+          },
+          {
+            "word": "Kucingnya",
+            "start": 1.12,
+            "end": 1.72
+          },
+          {
+            "word": "malah",
+            "start": 1.72,
+            "end": 2.02
+          },
+          {
+            "word": "lari",
+            "start": 2.02,
+            "end": 2.3
+          },
+          {
+            "word": "nyebrang",
+            "start": 2.3,
+            "end": 2.58
+          },
+          {
+            "word": "jalan!",
+            "start": 2.58,
+            "end": 3.02
+          },
+          {
+            "word": "Awas",
+            "start": 3.32,
+            "end": 3.54
+          },
+          {
+            "word": "ada",
+            "start": 3.54,
+            "end": 3.7
+          },
+          {
+            "word": "taksi",
+            "start": 3.7,
+            "end": 4.0
+          },
+          {
+            "word": "kuning!",
+            "start": 4.0,
+            "end": 4.34
+          }
+        ]
+      }
+    ],
+    "kacau": [
+      {
+        "scene": "kacau",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "panik",
+        "text": "Waduh! Taksinya ngerem mendadak! Eh... syukur kucingnya lolos, tapi kok malah lompat ke gerobak ikan?!",
+        "wav": "out/voice/kucing/kacau_0.wav",
+        "duration": 6.393,
+        "words": [
+          {
+            "word": "Waduh!",
+            "start": 0.0,
+            "end": 0.48
+          },
+          {
+            "word": "Taksinya",
+            "start": 0.82,
+            "end": 1.5
+          },
+          {
+            "word": "ngerem",
+            "start": 1.5,
+            "end": 1.84
+          },
+          {
+            "word": "mendadak!",
+            "start": 1.84,
+            "end": 2.18
+          },
+          {
+            "word": "Eh...",
+            "start": 2.58,
+            "end": 2.84
+          },
+          {
+            "word": "syukur",
+            "start": 3.26,
+            "end": 3.56
+          },
+          {
+            "word": "kucingnya",
+            "start": 3.56,
+            "end": 3.94
+          },
+          {
+            "word": "lolos,",
+            "start": 3.94,
+            "end": 4.32
+          },
+          {
+            "word": "tapi",
+            "start": 4.5,
+            "end": 4.72
+          },
+          {
+            "word": "kok",
+            "start": 4.72,
+            "end": 4.88
+          },
+          {
+            "word": "malah",
+            "start": 4.88,
+            "end": 5.18
+          },
+          {
+            "word": "lompat",
+            "start": 5.18,
+            "end": 5.48
+          },
+          {
+            "word": "ke",
+            "start": 5.48,
+            "end": 5.6
+          },
+          {
+            "word": "gerobak",
+            "start": 5.6,
+            "end": 5.92
+          },
+          {
+            "word": "ikan?!",
+            "start": 5.92,
+            "end": 6.26
+          }
+        ]
+      },
+      {
+        "scene": "kacau",
+        "idx": 1,
+        "voice": "ara",
+        "style": "sindir",
+        "text": "Lihat layar radarnya, Bos! Target diplomat ditinggal, sekarang sinyal dua puluh juta dolarnya ngunci ikan tongkol!",
+        "wav": "out/voice/kucing/kacau_1.wav",
+        "duration": 6.079,
+        "words": [
+          {
+            "word": "Lihat",
+            "start": 0.0,
+            "end": 0.24
+          },
+          {
+            "word": "layar",
+            "start": 0.24,
+            "end": 0.58
+          },
+          {
+            "word": "radarnya,",
+            "start": 0.58,
+            "end": 0.92
+          },
+          {
+            "word": "Bos!",
+            "start": 1.1,
+            "end": 1.24
+          },
+          {
+            "word": "Target",
+            "start": 1.78,
+            "end": 2.1
+          },
+          {
+            "word": "diplomat",
+            "start": 2.1,
+            "end": 2.62
+          },
+          {
+            "word": "ditinggal,",
+            "start": 2.62,
+            "end": 3.06
+          },
+          {
+            "word": "sekarang",
+            "start": 3.26,
+            "end": 3.56
+          },
+          {
+            "word": "sinyal",
+            "start": 3.56,
+            "end": 4.0
+          },
+          {
+            "word": "dua",
+            "start": 4.0,
+            "end": 4.32
+          },
+          {
+            "word": "puluh",
+            "start": 4.32,
+            "end": 4.66
+          },
+          {
+            "word": "juta",
+            "start": 4.66,
+            "end": 4.74
+          },
+          {
+            "word": "dolarnya",
+            "start": 4.66,
+            "end": 5.04
+          },
+          {
+            "word": "ngunci",
+            "start": 5.04,
+            "end": 5.34
+          },
+          {
+            "word": "ikan",
+            "start": 5.34,
+            "end": 5.64
+          },
+          {
+            "word": "tongkol!",
+            "start": 5.64,
+            "end": 6.0
+          }
+        ]
+      }
+    ],
+    "direktur": [
+      {
+        "scene": "direktur",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "kaget",
+        "text": "Tunggu! Pak Direktur lagi dengerin rekaman langsung lewat headset! Jangan sampai...",
+        "wav": "out/voice/kucing/direktur_0.wav",
+        "duration": 3.826,
+        "words": [
+          {
+            "word": "Tunggu!",
+            "start": 0.0,
+            "end": 0.36
+          },
+          {
+            "word": "Pak",
+            "start": 0.64,
+            "end": 0.82
+          },
+          {
+            "word": "Direktur",
+            "start": 0.82,
+            "end": 1.28
+          },
+          {
+            "word": "lagi",
+            "start": 1.28,
+            "end": 1.44
+          },
+          {
+            "word": "dengerin",
+            "start": 1.44,
+            "end": 1.84
+          },
+          {
+            "word": "rekaman",
+            "start": 1.84,
+            "end": 2.18
+          },
+          {
+            "word": "langsung",
+            "start": 2.18,
+            "end": 2.44
+          },
+          {
+            "word": "lewat",
+            "start": 2.44,
+            "end": 2.68
+          },
+          {
+            "word": "headset!",
+            "start": 2.68,
+            "end": 3.0
+          },
+          {
+            "word": "Jangan",
+            "start": 3.24,
+            "end": 3.48
+          },
+          {
+            "word": "sampai...",
+            "start": 3.48,
+            "end": 3.8
+          }
+        ]
+      },
+      {
+        "scene": "direktur",
+        "idx": 1,
+        "voice": "direktur",
+        "style": "marah",
+        "text": "SIAPA YANG BIKIN PROYEK DUA PULUH JUTA DOLAR CUMA BUAT DENGER SUARA KUCING NGUNYAH IKAN?!",
+        "wav": "out/voice/kucing/direktur_1.wav",
+        "duration": 4.999,
+        "words": [
+          {
+            "word": "SIAPA",
+            "start": 0.0,
+            "end": 0.4
+          },
+          {
+            "word": "YANG",
+            "start": 0.4,
+            "end": 0.62
+          },
+          {
+            "word": "BIKIN",
+            "start": 0.62,
+            "end": 0.96
+          },
+          {
+            "word": "PROYEK",
+            "start": 0.96,
+            "end": 1.28
+          },
+          {
+            "word": "DUA",
+            "start": 1.28,
+            "end": 1.7
+          },
+          {
+            "word": "PULUH",
+            "start": 1.7,
+            "end": 2.16
+          },
+          {
+            "word": "JUTA",
+            "start": 2.16,
+            "end": 2.24
+          },
+          {
+            "word": "DOLAR",
+            "start": 2.16,
+            "end": 2.42
+          },
+          {
+            "word": "CUMA",
+            "start": 2.42,
+            "end": 2.72
+          },
+          {
+            "word": "BUAT",
+            "start": 2.72,
+            "end": 2.96
+          },
+          {
+            "word": "DENGER",
+            "start": 2.96,
+            "end": 3.46
+          },
+          {
+            "word": "SUARA",
+            "start": 3.46,
+            "end": 3.76
+          },
+          {
+            "word": "KUCING",
+            "start": 3.76,
+            "end": 4.16
+          },
+          {
+            "word": "NGUNYAH",
+            "start": 4.16,
+            "end": 4.45
+          },
+          {
+            "word": "IKAN?!",
+            "start": 4.45,
+            "end": 4.74
+          }
+        ]
+      }
+    ],
+    "akhir": [
+      {
+        "scene": "akhir",
+        "idx": 0,
+        "voice": "dodi",
+        "style": "narasi",
+        "text": "Tahun seribu sembilan ratus enam puluh tujuh, Operasi Acoustic Kitty resmi dibatalkan dengan satu kesimpulan jujur dari dinas rahasia...",
+        "wav": "out/voice/kucing/akhir_0.wav",
+        "duration": 6.836,
+        "words": [
+          {
+            "word": "Tahun",
+            "start": 0.0,
+            "end": 0.36
+          },
+          {
+            "word": "seribu",
+            "start": 0.36,
+            "end": 0.72
+          },
+          {
+            "word": "sembilan",
+            "start": 0.72,
+            "end": 1.079
+          },
+          {
+            "word": "ratus",
+            "start": 1.079,
+            "end": 1.439
+          },
+          {
+            "word": "enam",
+            "start": 1.439,
+            "end": 1.799
+          },
+          {
+            "word": "puluh",
+            "start": 1.799,
+            "end": 1.879
+          },
+          {
+            "word": "tujuh,",
+            "start": 0.36,
+            "end": 1.52
+          },
+          {
+            "word": "Operasi",
+            "start": 2.36,
+            "end": 2.96
+          },
+          {
+            "word": "Acoustic",
+            "start": 2.96,
+            "end": 3.33
+          },
+          {
+            "word": "Kitty",
+            "start": 3.33,
+            "end": 3.7
+          },
+          {
+            "word": "resmi",
+            "start": 3.7,
+            "end": 3.94
+          },
+          {
+            "word": "dibatalkan",
+            "start": 3.94,
+            "end": 4.52
+          },
+          {
+            "word": "dengan",
+            "start": 4.52,
+            "end": 4.66
+          },
+          {
+            "word": "satu",
+            "start": 4.66,
+            "end": 4.96
+          },
+          {
+            "word": "kesimpulan",
+            "start": 4.96,
+            "end": 5.44
+          },
+          {
+            "word": "jujur",
+            "start": 5.44,
+            "end": 5.88
+          },
+          {
+            "word": "dari",
+            "start": 5.88,
+            "end": 6.16
+          },
+          {
+            "word": "dinas",
+            "start": 6.16,
+            "end": 6.5
+          },
+          {
+            "word": "rahasia...",
+            "start": 6.5,
+            "end": 6.8
+          }
+        ]
+      },
+      {
+        "scene": "akhir",
+        "idx": 1,
+        "voice": "ara",
+        "style": "santai",
+        "text": "Teknologinya jenius, Bos... cuma lupa satu fakta alam semesta: kucing nggak pernah bisa disuruh!",
+        "wav": "out/voice/kucing/akhir_1.wav",
+        "duration": 7.347,
+        "words": [
+          {
+            "word": "Teknologinya",
+            "start": 0.0,
+            "end": 0.66
+          },
+          {
+            "word": "jenius,",
+            "start": 0.66,
+            "end": 1.43
+          },
+          {
+            "word": "Bos...",
+            "start": 1.43,
+            "end": 2.2
+          },
+          {
+            "word": "cuma",
+            "start": 2.7,
+            "end": 3.04
+          },
+          {
+            "word": "lupa",
+            "start": 3.04,
+            "end": 3.48
+          },
+          {
+            "word": "satu",
+            "start": 3.48,
+            "end": 3.72
+          },
+          {
+            "word": "fakta",
+            "start": 3.72,
+            "end": 4.12
+          },
+          {
+            "word": "alam",
+            "start": 4.12,
+            "end": 4.44
+          },
+          {
+            "word": "semesta:",
+            "start": 4.44,
+            "end": 4.9
+          },
+          {
+            "word": "kucing",
+            "start": 5.5,
+            "end": 6.06
+          },
+          {
+            "word": "nggak",
+            "start": 6.06,
+            "end": 6.2
+          },
+          {
+            "word": "pernah",
+            "start": 6.2,
+            "end": 6.4
+          },
+          {
+            "word": "bisa",
+            "start": 6.4,
+            "end": 6.68
+          },
+          {
+            "word": "disuruh!",
+            "start": 6.68,
+            "end": 7.24
+          }
+        ]
+      },
+      {
+        "scene": "akhir",
+        "idx": 2,
+        "voice": "dodi",
+        "style": "pasrah",
+        "text": "Iya deh... dua puluh juta dolar melayang, yang kenyang cuma si Meong.",
+        "wav": "out/voice/kucing/akhir_2.wav",
+        "duration": 4.64,
+        "words": [
+          {
+            "word": "Iya",
+            "start": 0.0,
+            "end": 0.5
+          },
+          {
+            "word": "deh...",
+            "start": 0.5,
+            "end": 0.58
+          },
+          {
+            "word": "dua",
+            "start": 0.58,
+            "end": 1.1
+          },
+          {
+            "word": "puluh",
+            "start": 1.1,
+            "end": 1.58
+          },
+          {
+            "word": "juta",
+            "start": 1.58,
+            "end": 1.92
+          },
+          {
+            "word": "dolar",
+            "start": 1.92,
+            "end": 2.16
+          },
+          {
+            "word": "melayang,",
+            "start": 2.16,
+            "end": 2.74
+          },
+          {
+            "word": "yang",
+            "start": 2.94,
+            "end": 3.28
+          },
+          {
+            "word": "kenyang",
+            "start": 3.28,
+            "end": 3.68
+          },
+          {
+            "word": "cuma",
+            "start": 3.68,
+            "end": 4.04
+          },
+          {
+            "word": "si",
+            "start": 4.04,
+            "end": 4.2
+          },
+          {
+            "word": "Meong.",
+            "start": 4.2,
+            "end": 4.5
+          }
+        ]
+      }
+    ]
+  },
+  "lines": [
+    {
+      "scene": "hook",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "narasi",
+      "text": "Pada tahun seribu sembilan ratus enam puluhan, dinas rahasia Amerika menghabiskan dua puluh juta dolar... untuk melatih agen mata-mata paling rahasia di dunia.",
+      "wav": "out/voice/kucing/hook_0.wav",
+      "duration": 7.41,
+      "words": [
+        {
+          "word": "Pada",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "word": "tahun",
+          "start": 0.18,
+          "end": 0.38
+        },
+        {
+          "word": "seribu",
+          "start": 0.38,
+          "end": 0.64
+        },
+        {
+          "word": "sembilan",
+          "start": 0.64,
+          "end": 0.9
+        },
+        {
+          "word": "ratus",
+          "start": 0.9,
+          "end": 1.16
+        },
+        {
+          "word": "enam",
+          "start": 1.16,
+          "end": 1.42
+        },
+        {
+          "word": "puluhan,",
+          "start": 1.42,
+          "end": 1.68
+        },
+        {
+          "word": "dinas",
+          "start": 1.86,
+          "end": 2.08
+        },
+        {
+          "word": "rahasia",
+          "start": 2.08,
+          "end": 2.48
+        },
+        {
+          "word": "Amerika",
+          "start": 2.48,
+          "end": 2.82
+        },
+        {
+          "word": "menghabiskan",
+          "start": 2.82,
+          "end": 3.48
+        },
+        {
+          "word": "dua",
+          "start": 3.48,
+          "end": 3.8
+        },
+        {
+          "word": "puluh",
+          "start": 3.8,
+          "end": 4.18
+        },
+        {
+          "word": "juta",
+          "start": 4.18,
+          "end": 4.26
+        },
+        {
+          "word": "dolar...",
+          "start": 4.18,
+          "end": 4.6
+        },
+        {
+          "word": "untuk",
+          "start": 4.6,
+          "end": 4.9
+        },
+        {
+          "word": "melatih",
+          "start": 4.9,
+          "end": 5.26
+        },
+        {
+          "word": "agen",
+          "start": 5.26,
+          "end": 5.56
+        },
+        {
+          "word": "mata-mata",
+          "start": 5.56,
+          "end": 5.96
+        },
+        {
+          "word": "paling",
+          "start": 5.96,
+          "end": 6.16
+        },
+        {
+          "word": "rahasia",
+          "start": 6.16,
+          "end": 6.66
+        },
+        {
+          "word": "di",
+          "start": 6.66,
+          "end": 6.94
+        },
+        {
+          "word": "dunia.",
+          "start": 6.94,
+          "end": 7.3
+        }
+      ]
+    },
+    {
+      "scene": "hook",
+      "idx": 1,
+      "voice": "dodi",
+      "style": "sindir",
+      "text": "Bukan manusia, bukan robot... tapi seekor kucing oren.",
+      "wav": "out/voice/kucing/hook_1.wav",
+      "duration": 3.59,
+      "words": [
+        {
+          "word": "Bukan",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "manusia,",
+          "start": 0.26,
+          "end": 0.8
+        },
+        {
+          "word": "bukan",
+          "start": 1.0,
+          "end": 1.2
+        },
+        {
+          "word": "robot...",
+          "start": 1.2,
+          "end": 1.58
+        },
+        {
+          "word": "tapi",
+          "start": 1.86,
+          "end": 2.26
+        },
+        {
+          "word": "seekor",
+          "start": 2.26,
+          "end": 2.82
+        },
+        {
+          "word": "kucing",
+          "start": 2.82,
+          "end": 3.1
+        },
+        {
+          "word": "oren.",
+          "start": 3.1,
+          "end": 3.4
+        }
+      ]
+    },
+    {
+      "scene": "lab",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "sombong",
+      "text": "Ara! Sambut proyek rahasia lima tahun kita! Agen Meong, mata-mata tercanggih sepanjang sejarah!",
+      "wav": "out/voice/kucing/lab_0.wav",
+      "duration": 6.72,
+      "words": [
+        {
+          "word": "Ara!",
+          "start": 0.0,
+          "end": 0.5
+        },
+        {
+          "word": "Sambut",
+          "start": 0.5,
+          "end": 1.08
+        },
+        {
+          "word": "proyek",
+          "start": 1.08,
+          "end": 1.54
+        },
+        {
+          "word": "rahasia",
+          "start": 1.54,
+          "end": 2.28
+        },
+        {
+          "word": "lima",
+          "start": 2.28,
+          "end": 2.54
+        },
+        {
+          "word": "tahun",
+          "start": 2.54,
+          "end": 2.84
+        },
+        {
+          "word": "kita!",
+          "start": 2.84,
+          "end": 3.2
+        },
+        {
+          "word": "Agen",
+          "start": 3.52,
+          "end": 3.86
+        },
+        {
+          "word": "Meong,",
+          "start": 3.86,
+          "end": 4.26
+        },
+        {
+          "word": "mata-mata",
+          "start": 4.26,
+          "end": 4.98
+        },
+        {
+          "word": "tercanggih",
+          "start": 4.98,
+          "end": 5.7
+        },
+        {
+          "word": "sepanjang",
+          "start": 5.7,
+          "end": 6.2
+        },
+        {
+          "word": "sejarah!",
+          "start": 6.2,
+          "end": 6.7
+        }
+      ]
+    },
+    {
+      "scene": "lab",
+      "idx": 1,
+      "voice": "ara",
+      "style": "tanya",
+      "text": "Hah?! Dua puluh juta dolar cuma buat seekor kucing, Bos? Emangnya dia bisa ngetik laporan?",
+      "wav": "out/voice/kucing/lab_1.wav",
+      "duration": 5.106,
+      "words": [
+        {
+          "word": "Hah?!",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "word": "Dua",
+          "start": 0.18,
+          "end": 0.58
+        },
+        {
+          "word": "puluh",
+          "start": 0.58,
+          "end": 0.88
+        },
+        {
+          "word": "juta",
+          "start": 0.88,
+          "end": 1.24
+        },
+        {
+          "word": "dolar",
+          "start": 1.24,
+          "end": 1.56
+        },
+        {
+          "word": "cuma",
+          "start": 1.56,
+          "end": 1.76
+        },
+        {
+          "word": "buat",
+          "start": 1.76,
+          "end": 2.0
+        },
+        {
+          "word": "seekor",
+          "start": 2.0,
+          "end": 2.28
+        },
+        {
+          "word": "kucing,",
+          "start": 2.28,
+          "end": 2.62
+        },
+        {
+          "word": "Bos?",
+          "start": 2.7,
+          "end": 2.82
+        },
+        {
+          "word": "Emangnya",
+          "start": 3.52,
+          "end": 3.9
+        },
+        {
+          "word": "dia",
+          "start": 3.9,
+          "end": 4.02
+        },
+        {
+          "word": "bisa",
+          "start": 4.02,
+          "end": 4.2
+        },
+        {
+          "word": "ngetik",
+          "start": 4.2,
+          "end": 4.6
+        },
+        {
+          "word": "laporan?",
+          "start": 4.6,
+          "end": 5.0
+        }
+      ]
+    },
+    {
+      "scene": "lab",
+      "idx": 2,
+      "voice": "dodi",
+      "style": "tegas",
+      "text": "Bukan ngetik! Dia bakal nyelinap ke bangku taman dan nyadap rahasia diplomat musuh tanpa dicurigai!",
+      "wav": "out/voice/kucing/lab_2.wav",
+      "duration": 5.253,
+      "words": [
+        {
+          "word": "Bukan",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "ngetik!",
+          "start": 0.28,
+          "end": 0.68
+        },
+        {
+          "word": "Dia",
+          "start": 0.88,
+          "end": 1.0
+        },
+        {
+          "word": "bakal",
+          "start": 1.0,
+          "end": 1.38
+        },
+        {
+          "word": "nyelinap",
+          "start": 1.38,
+          "end": 1.647
+        },
+        {
+          "word": "ke",
+          "start": 1.647,
+          "end": 1.913
+        },
+        {
+          "word": "bangku",
+          "start": 1.913,
+          "end": 2.18
+        },
+        {
+          "word": "taman",
+          "start": 2.18,
+          "end": 2.4
+        },
+        {
+          "word": "dan",
+          "start": 2.4,
+          "end": 2.66
+        },
+        {
+          "word": "nyadap",
+          "start": 2.66,
+          "end": 2.98
+        },
+        {
+          "word": "rahasia",
+          "start": 2.98,
+          "end": 3.32
+        },
+        {
+          "word": "diplomat",
+          "start": 3.32,
+          "end": 3.84
+        },
+        {
+          "word": "musuh",
+          "start": 3.84,
+          "end": 4.26
+        },
+        {
+          "word": "tanpa",
+          "start": 4.26,
+          "end": 4.6
+        },
+        {
+          "word": "dicurigai!",
+          "start": 4.6,
+          "end": 5.14
+        }
+      ]
+    },
+    {
+      "scene": "xray",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "narasi",
+      "text": "Di ruang operasi rahasia, ilmuwan memasang mikrofon super mini di kupingnya, pemancar radio di dadanya, dan kabel antena panjang di sepanjang ekornya!",
+      "wav": "out/voice/kucing/xray_0.wav",
+      "duration": 8.64,
+      "words": [
+        {
+          "word": "Di",
+          "start": 0.0,
+          "end": 0.1
+        },
+        {
+          "word": "ruang",
+          "start": 0.1,
+          "end": 0.36
+        },
+        {
+          "word": "operasi",
+          "start": 0.36,
+          "end": 0.82
+        },
+        {
+          "word": "rahasia,",
+          "start": 0.82,
+          "end": 1.38
+        },
+        {
+          "word": "ilmuwan",
+          "start": 1.74,
+          "end": 2.16
+        },
+        {
+          "word": "memasang",
+          "start": 2.16,
+          "end": 2.56
+        },
+        {
+          "word": "mikrofon",
+          "start": 2.56,
+          "end": 3.0
+        },
+        {
+          "word": "super",
+          "start": 3.0,
+          "end": 3.22
+        },
+        {
+          "word": "mini",
+          "start": 3.22,
+          "end": 3.52
+        },
+        {
+          "word": "di",
+          "start": 3.52,
+          "end": 3.7
+        },
+        {
+          "word": "kupingnya,",
+          "start": 3.7,
+          "end": 4.18
+        },
+        {
+          "word": "pemancar",
+          "start": 4.42,
+          "end": 4.86
+        },
+        {
+          "word": "radio",
+          "start": 4.86,
+          "end": 5.18
+        },
+        {
+          "word": "di",
+          "start": 5.18,
+          "end": 5.32
+        },
+        {
+          "word": "dadanya,",
+          "start": 5.32,
+          "end": 5.72
+        },
+        {
+          "word": "dan",
+          "start": 6.12,
+          "end": 6.2
+        },
+        {
+          "word": "kabel",
+          "start": 6.2,
+          "end": 6.54
+        },
+        {
+          "word": "antena",
+          "start": 6.54,
+          "end": 6.98
+        },
+        {
+          "word": "panjang",
+          "start": 6.98,
+          "end": 7.38
+        },
+        {
+          "word": "di",
+          "start": 7.38,
+          "end": 7.54
+        },
+        {
+          "word": "sepanjang",
+          "start": 7.54,
+          "end": 8.02
+        },
+        {
+          "word": "ekornya!",
+          "start": 8.02,
+          "end": 8.52
+        }
+      ]
+    },
+    {
+      "scene": "xray",
+      "idx": 1,
+      "voice": "ara",
+      "style": "sindir",
+      "text": "Canggih banget sih, Bos... tapi yakin tuh kucing mau dengerin perintah manusia?",
+      "wav": "out/voice/kucing/xray_1.wav",
+      "duration": 4.253,
+      "words": [
+        {
+          "word": "Canggih",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "banget",
+          "start": 0.28,
+          "end": 0.48
+        },
+        {
+          "word": "sih,",
+          "start": 0.48,
+          "end": 0.66
+        },
+        {
+          "word": "Bos...",
+          "start": 0.66,
+          "end": 0.88
+        },
+        {
+          "word": "tapi",
+          "start": 1.42,
+          "end": 1.8
+        },
+        {
+          "word": "yakin",
+          "start": 1.8,
+          "end": 2.18
+        },
+        {
+          "word": "tuh",
+          "start": 2.18,
+          "end": 2.32
+        },
+        {
+          "word": "kucing",
+          "start": 2.32,
+          "end": 2.72
+        },
+        {
+          "word": "mau",
+          "start": 2.72,
+          "end": 2.88
+        },
+        {
+          "word": "dengerin",
+          "start": 2.88,
+          "end": 3.22
+        },
+        {
+          "word": "perintah",
+          "start": 3.22,
+          "end": 3.62
+        },
+        {
+          "word": "manusia?",
+          "start": 3.62,
+          "end": 4.06
+        }
+      ]
+    },
+    {
+      "scene": "xray",
+      "idx": 2,
+      "voice": "dodi",
+      "style": "sombong",
+      "text": "Tenang! Sudah dilatih lima tahun! Sekali dikasih kode, langsung jalan kayak agen profesional!",
+      "wav": "out/voice/kucing/xray_2.wav",
+      "duration": 5.176,
+      "words": [
+        {
+          "word": "Tenang!",
+          "start": 0.0,
+          "end": 0.4
+        },
+        {
+          "word": "Sudah",
+          "start": 0.56,
+          "end": 0.82
+        },
+        {
+          "word": "dilatih",
+          "start": 0.82,
+          "end": 1.24
+        },
+        {
+          "word": "lima",
+          "start": 1.24,
+          "end": 1.4
+        },
+        {
+          "word": "tahun!",
+          "start": 1.4,
+          "end": 1.7
+        },
+        {
+          "word": "Sekali",
+          "start": 2.04,
+          "end": 2.34
+        },
+        {
+          "word": "dikasih",
+          "start": 2.34,
+          "end": 2.8
+        },
+        {
+          "word": "kode,",
+          "start": 2.8,
+          "end": 3.06
+        },
+        {
+          "word": "langsung",
+          "start": 3.3,
+          "end": 3.6
+        },
+        {
+          "word": "jalan",
+          "start": 3.6,
+          "end": 3.9
+        },
+        {
+          "word": "kayak",
+          "start": 3.9,
+          "end": 4.06
+        },
+        {
+          "word": "agen",
+          "start": 4.06,
+          "end": 4.4
+        },
+        {
+          "word": "profesional!",
+          "start": 4.4,
+          "end": 4.72
+        }
+      ]
+    },
+    {
+      "scene": "van",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "narasi",
+      "text": "Hari misi perdana pun tiba. Di dalam mobil van penyadap penuh pita magnetik, semua agen menahan napas.",
+      "wav": "out/voice/kucing/van_0.wav",
+      "duration": 5.569,
+      "words": [
+        {
+          "word": "Hari",
+          "start": 0.0,
+          "end": 0.18
+        },
+        {
+          "word": "misi",
+          "start": 0.18,
+          "end": 0.46
+        },
+        {
+          "word": "perdana",
+          "start": 0.46,
+          "end": 0.78
+        },
+        {
+          "word": "pun",
+          "start": 0.78,
+          "end": 0.92
+        },
+        {
+          "word": "tiba.",
+          "start": 0.92,
+          "end": 1.26
+        },
+        {
+          "word": "Di",
+          "start": 1.6,
+          "end": 1.75
+        },
+        {
+          "word": "dalam",
+          "start": 1.75,
+          "end": 1.9
+        },
+        {
+          "word": "mobil",
+          "start": 1.9,
+          "end": 2.2
+        },
+        {
+          "word": "van",
+          "start": 2.2,
+          "end": 2.49
+        },
+        {
+          "word": "penyadap",
+          "start": 2.49,
+          "end": 2.78
+        },
+        {
+          "word": "penuh",
+          "start": 2.78,
+          "end": 3.07
+        },
+        {
+          "word": "pita",
+          "start": 3.07,
+          "end": 3.36
+        },
+        {
+          "word": "magnetik,",
+          "start": 3.36,
+          "end": 3.88
+        },
+        {
+          "word": "semua",
+          "start": 4.12,
+          "end": 4.28
+        },
+        {
+          "word": "agen",
+          "start": 4.28,
+          "end": 4.68
+        },
+        {
+          "word": "menahan",
+          "start": 4.68,
+          "end": 4.96
+        },
+        {
+          "word": "napas.",
+          "start": 4.96,
+          "end": 5.38
+        }
+      ]
+    },
+    {
+      "scene": "van",
+      "idx": 1,
+      "voice": "dodi",
+      "style": "bisik",
+      "text": "Target diplomat duduk di bangku taman seberang jalan... pintu van dibuka, Agen Meong meluncur!",
+      "wav": "out/voice/kucing/van_1.wav",
+      "duration": 5.39,
+      "words": [
+        {
+          "word": "Target",
+          "start": 0.0,
+          "end": 0.32
+        },
+        {
+          "word": "diplomat",
+          "start": 0.32,
+          "end": 0.94
+        },
+        {
+          "word": "duduk",
+          "start": 0.94,
+          "end": 1.22
+        },
+        {
+          "word": "di",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "bangku",
+          "start": 1.32,
+          "end": 1.66
+        },
+        {
+          "word": "taman",
+          "start": 1.66,
+          "end": 1.92
+        },
+        {
+          "word": "seberang",
+          "start": 1.92,
+          "end": 2.38
+        },
+        {
+          "word": "jalan...",
+          "start": 2.38,
+          "end": 2.76
+        },
+        {
+          "word": "pintu",
+          "start": 3.04,
+          "end": 3.34
+        },
+        {
+          "word": "van",
+          "start": 3.34,
+          "end": 3.52
+        },
+        {
+          "word": "dibuka,",
+          "start": 3.52,
+          "end": 3.94
+        },
+        {
+          "word": "Agen",
+          "start": 4.2,
+          "end": 4.52
+        },
+        {
+          "word": "Meong",
+          "start": 4.52,
+          "end": 4.74
+        },
+        {
+          "word": "meluncur!",
+          "start": 4.74,
+          "end": 5.2
+        }
+      ]
+    },
+    {
+      "scene": "van",
+      "idx": 2,
+      "voice": "ara",
+      "style": "bisik",
+      "text": "Eh Bos... tadi aku lupa bilang, di pojok taman sana ada abang gerobak ikan bakar baru buka.",
+      "wav": "out/voice/kucing/van_2.wav",
+      "duration": 5.327,
+      "words": [
+        {
+          "word": "Eh",
+          "start": 0.0,
+          "end": 0.23
+        },
+        {
+          "word": "Bos...",
+          "start": 0.23,
+          "end": 0.46
+        },
+        {
+          "word": "tadi",
+          "start": 0.88,
+          "end": 1.12
+        },
+        {
+          "word": "aku",
+          "start": 1.12,
+          "end": 1.24
+        },
+        {
+          "word": "lupa",
+          "start": 1.24,
+          "end": 1.46
+        },
+        {
+          "word": "bilang,",
+          "start": 1.46,
+          "end": 1.8
+        },
+        {
+          "word": "di",
+          "start": 2.22,
+          "end": 2.38
+        },
+        {
+          "word": "pojok",
+          "start": 2.38,
+          "end": 2.7
+        },
+        {
+          "word": "taman",
+          "start": 2.7,
+          "end": 2.88
+        },
+        {
+          "word": "sana",
+          "start": 2.88,
+          "end": 3.26
+        },
+        {
+          "word": "ada",
+          "start": 3.26,
+          "end": 3.56
+        },
+        {
+          "word": "abang",
+          "start": 3.56,
+          "end": 3.86
+        },
+        {
+          "word": "gerobak",
+          "start": 3.86,
+          "end": 4.2
+        },
+        {
+          "word": "ikan",
+          "start": 4.2,
+          "end": 4.4
+        },
+        {
+          "word": "bakar",
+          "start": 4.4,
+          "end": 4.72
+        },
+        {
+          "word": "baru",
+          "start": 4.72,
+          "end": 4.88
+        },
+        {
+          "word": "buka.",
+          "start": 4.88,
+          "end": 5.24
+        }
+      ]
+    },
+    {
+      "scene": "lepas",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "kaget",
+      "text": "APA?! Gerobak ikan bakar?! Hei Meong! Fokus ke diplomat, jangan belok!",
+      "wav": "out/voice/kucing/lepas_0.wav",
+      "duration": 5.457,
+      "words": [
+        {
+          "word": "APA?!",
+          "start": 0.0,
+          "end": 0.98
+        },
+        {
+          "word": "Gerobak",
+          "start": 0.98,
+          "end": 1.96
+        },
+        {
+          "word": "ikan",
+          "start": 1.96,
+          "end": 2.18
+        },
+        {
+          "word": "bakar?!",
+          "start": 2.18,
+          "end": 2.68
+        },
+        {
+          "word": "Hei",
+          "start": 2.84,
+          "end": 3.16
+        },
+        {
+          "word": "Meong!",
+          "start": 3.22,
+          "end": 3.54
+        },
+        {
+          "word": "Fokus",
+          "start": 3.76,
+          "end": 4.12
+        },
+        {
+          "word": "ke",
+          "start": 4.12,
+          "end": 4.26
+        },
+        {
+          "word": "diplomat,",
+          "start": 4.26,
+          "end": 4.74
+        },
+        {
+          "word": "jangan",
+          "start": 4.82,
+          "end": 5.02
+        },
+        {
+          "word": "belok!",
+          "start": 5.02,
+          "end": 5.42
+        }
+      ]
+    },
+    {
+      "scene": "lepas",
+      "idx": 1,
+      "voice": "ara",
+      "style": "panik",
+      "text": "Bos! Kucingnya malah lari nyebrang jalan! Awas ada taksi kuning!",
+      "wav": "out/voice/kucing/lepas_1.wav",
+      "duration": 4.45,
+      "words": [
+        {
+          "word": "Bos!",
+          "start": 0.0,
+          "end": 0.6
+        },
+        {
+          "word": "Kucingnya",
+          "start": 1.12,
+          "end": 1.72
+        },
+        {
+          "word": "malah",
+          "start": 1.72,
+          "end": 2.02
+        },
+        {
+          "word": "lari",
+          "start": 2.02,
+          "end": 2.3
+        },
+        {
+          "word": "nyebrang",
+          "start": 2.3,
+          "end": 2.58
+        },
+        {
+          "word": "jalan!",
+          "start": 2.58,
+          "end": 3.02
+        },
+        {
+          "word": "Awas",
+          "start": 3.32,
+          "end": 3.54
+        },
+        {
+          "word": "ada",
+          "start": 3.54,
+          "end": 3.7
+        },
+        {
+          "word": "taksi",
+          "start": 3.7,
+          "end": 4.0
+        },
+        {
+          "word": "kuning!",
+          "start": 4.0,
+          "end": 4.34
+        }
+      ]
+    },
+    {
+      "scene": "kacau",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "panik",
+      "text": "Waduh! Taksinya ngerem mendadak! Eh... syukur kucingnya lolos, tapi kok malah lompat ke gerobak ikan?!",
+      "wav": "out/voice/kucing/kacau_0.wav",
+      "duration": 6.393,
+      "words": [
+        {
+          "word": "Waduh!",
+          "start": 0.0,
+          "end": 0.48
+        },
+        {
+          "word": "Taksinya",
+          "start": 0.82,
+          "end": 1.5
+        },
+        {
+          "word": "ngerem",
+          "start": 1.5,
+          "end": 1.84
+        },
+        {
+          "word": "mendadak!",
+          "start": 1.84,
+          "end": 2.18
+        },
+        {
+          "word": "Eh...",
+          "start": 2.58,
+          "end": 2.84
+        },
+        {
+          "word": "syukur",
+          "start": 3.26,
+          "end": 3.56
+        },
+        {
+          "word": "kucingnya",
+          "start": 3.56,
+          "end": 3.94
+        },
+        {
+          "word": "lolos,",
+          "start": 3.94,
+          "end": 4.32
+        },
+        {
+          "word": "tapi",
+          "start": 4.5,
+          "end": 4.72
+        },
+        {
+          "word": "kok",
+          "start": 4.72,
+          "end": 4.88
+        },
+        {
+          "word": "malah",
+          "start": 4.88,
+          "end": 5.18
+        },
+        {
+          "word": "lompat",
+          "start": 5.18,
+          "end": 5.48
+        },
+        {
+          "word": "ke",
+          "start": 5.48,
+          "end": 5.6
+        },
+        {
+          "word": "gerobak",
+          "start": 5.6,
+          "end": 5.92
+        },
+        {
+          "word": "ikan?!",
+          "start": 5.92,
+          "end": 6.26
+        }
+      ]
+    },
+    {
+      "scene": "kacau",
+      "idx": 1,
+      "voice": "ara",
+      "style": "sindir",
+      "text": "Lihat layar radarnya, Bos! Target diplomat ditinggal, sekarang sinyal dua puluh juta dolarnya ngunci ikan tongkol!",
+      "wav": "out/voice/kucing/kacau_1.wav",
+      "duration": 6.079,
+      "words": [
+        {
+          "word": "Lihat",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "layar",
+          "start": 0.24,
+          "end": 0.58
+        },
+        {
+          "word": "radarnya,",
+          "start": 0.58,
+          "end": 0.92
+        },
+        {
+          "word": "Bos!",
+          "start": 1.1,
+          "end": 1.24
+        },
+        {
+          "word": "Target",
+          "start": 1.78,
+          "end": 2.1
+        },
+        {
+          "word": "diplomat",
+          "start": 2.1,
+          "end": 2.62
+        },
+        {
+          "word": "ditinggal,",
+          "start": 2.62,
+          "end": 3.06
+        },
+        {
+          "word": "sekarang",
+          "start": 3.26,
+          "end": 3.56
+        },
+        {
+          "word": "sinyal",
+          "start": 3.56,
+          "end": 4.0
+        },
+        {
+          "word": "dua",
+          "start": 4.0,
+          "end": 4.32
+        },
+        {
+          "word": "puluh",
+          "start": 4.32,
+          "end": 4.66
+        },
+        {
+          "word": "juta",
+          "start": 4.66,
+          "end": 4.74
+        },
+        {
+          "word": "dolarnya",
+          "start": 4.66,
+          "end": 5.04
+        },
+        {
+          "word": "ngunci",
+          "start": 5.04,
+          "end": 5.34
+        },
+        {
+          "word": "ikan",
+          "start": 5.34,
+          "end": 5.64
+        },
+        {
+          "word": "tongkol!",
+          "start": 5.64,
+          "end": 6.0
+        }
+      ]
+    },
+    {
+      "scene": "direktur",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "kaget",
+      "text": "Tunggu! Pak Direktur lagi dengerin rekaman langsung lewat headset! Jangan sampai...",
+      "wav": "out/voice/kucing/direktur_0.wav",
+      "duration": 3.826,
+      "words": [
+        {
+          "word": "Tunggu!",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "Pak",
+          "start": 0.64,
+          "end": 0.82
+        },
+        {
+          "word": "Direktur",
+          "start": 0.82,
+          "end": 1.28
+        },
+        {
+          "word": "lagi",
+          "start": 1.28,
+          "end": 1.44
+        },
+        {
+          "word": "dengerin",
+          "start": 1.44,
+          "end": 1.84
+        },
+        {
+          "word": "rekaman",
+          "start": 1.84,
+          "end": 2.18
+        },
+        {
+          "word": "langsung",
+          "start": 2.18,
+          "end": 2.44
+        },
+        {
+          "word": "lewat",
+          "start": 2.44,
+          "end": 2.68
+        },
+        {
+          "word": "headset!",
+          "start": 2.68,
+          "end": 3.0
+        },
+        {
+          "word": "Jangan",
+          "start": 3.24,
+          "end": 3.48
+        },
+        {
+          "word": "sampai...",
+          "start": 3.48,
+          "end": 3.8
+        }
+      ]
+    },
+    {
+      "scene": "direktur",
+      "idx": 1,
+      "voice": "direktur",
+      "style": "marah",
+      "text": "SIAPA YANG BIKIN PROYEK DUA PULUH JUTA DOLAR CUMA BUAT DENGER SUARA KUCING NGUNYAH IKAN?!",
+      "wav": "out/voice/kucing/direktur_1.wav",
+      "duration": 4.999,
+      "words": [
+        {
+          "word": "SIAPA",
+          "start": 0.0,
+          "end": 0.4
+        },
+        {
+          "word": "YANG",
+          "start": 0.4,
+          "end": 0.62
+        },
+        {
+          "word": "BIKIN",
+          "start": 0.62,
+          "end": 0.96
+        },
+        {
+          "word": "PROYEK",
+          "start": 0.96,
+          "end": 1.28
+        },
+        {
+          "word": "DUA",
+          "start": 1.28,
+          "end": 1.7
+        },
+        {
+          "word": "PULUH",
+          "start": 1.7,
+          "end": 2.16
+        },
+        {
+          "word": "JUTA",
+          "start": 2.16,
+          "end": 2.24
+        },
+        {
+          "word": "DOLAR",
+          "start": 2.16,
+          "end": 2.42
+        },
+        {
+          "word": "CUMA",
+          "start": 2.42,
+          "end": 2.72
+        },
+        {
+          "word": "BUAT",
+          "start": 2.72,
+          "end": 2.96
+        },
+        {
+          "word": "DENGER",
+          "start": 2.96,
+          "end": 3.46
+        },
+        {
+          "word": "SUARA",
+          "start": 3.46,
+          "end": 3.76
+        },
+        {
+          "word": "KUCING",
+          "start": 3.76,
+          "end": 4.16
+        },
+        {
+          "word": "NGUNYAH",
+          "start": 4.16,
+          "end": 4.45
+        },
+        {
+          "word": "IKAN?!",
+          "start": 4.45,
+          "end": 4.74
+        }
+      ]
+    },
+    {
+      "scene": "akhir",
+      "idx": 0,
+      "voice": "dodi",
+      "style": "narasi",
+      "text": "Tahun seribu sembilan ratus enam puluh tujuh, Operasi Acoustic Kitty resmi dibatalkan dengan satu kesimpulan jujur dari dinas rahasia...",
+      "wav": "out/voice/kucing/akhir_0.wav",
+      "duration": 6.836,
+      "words": [
+        {
+          "word": "Tahun",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "seribu",
+          "start": 0.36,
+          "end": 0.72
+        },
+        {
+          "word": "sembilan",
+          "start": 0.72,
+          "end": 1.079
+        },
+        {
+          "word": "ratus",
+          "start": 1.079,
+          "end": 1.439
+        },
+        {
+          "word": "enam",
+          "start": 1.439,
+          "end": 1.799
+        },
+        {
+          "word": "puluh",
+          "start": 1.799,
+          "end": 1.879
+        },
+        {
+          "word": "tujuh,",
+          "start": 0.36,
+          "end": 1.52
+        },
+        {
+          "word": "Operasi",
+          "start": 2.36,
+          "end": 2.96
+        },
+        {
+          "word": "Acoustic",
+          "start": 2.96,
+          "end": 3.33
+        },
+        {
+          "word": "Kitty",
+          "start": 3.33,
+          "end": 3.7
+        },
+        {
+          "word": "resmi",
+          "start": 3.7,
+          "end": 3.94
+        },
+        {
+          "word": "dibatalkan",
+          "start": 3.94,
+          "end": 4.52
+        },
+        {
+          "word": "dengan",
+          "start": 4.52,
+          "end": 4.66
+        },
+        {
+          "word": "satu",
+          "start": 4.66,
+          "end": 4.96
+        },
+        {
+          "word": "kesimpulan",
+          "start": 4.96,
+          "end": 5.44
+        },
+        {
+          "word": "jujur",
+          "start": 5.44,
+          "end": 5.88
+        },
+        {
+          "word": "dari",
+          "start": 5.88,
+          "end": 6.16
+        },
+        {
+          "word": "dinas",
+          "start": 6.16,
+          "end": 6.5
+        },
+        {
+          "word": "rahasia...",
+          "start": 6.5,
+          "end": 6.8
+        }
+      ]
+    },
+    {
+      "scene": "akhir",
+      "idx": 1,
+      "voice": "ara",
+      "style": "santai",
+      "text": "Teknologinya jenius, Bos... cuma lupa satu fakta alam semesta: kucing nggak pernah bisa disuruh!",
+      "wav": "out/voice/kucing/akhir_1.wav",
+      "duration": 7.347,
+      "words": [
+        {
+          "word": "Teknologinya",
+          "start": 0.0,
+          "end": 0.66
+        },
+        {
+          "word": "jenius,",
+          "start": 0.66,
+          "end": 1.43
+        },
+        {
+          "word": "Bos...",
+          "start": 1.43,
+          "end": 2.2
+        },
+        {
+          "word": "cuma",
+          "start": 2.7,
+          "end": 3.04
+        },
+        {
+          "word": "lupa",
+          "start": 3.04,
+          "end": 3.48
+        },
+        {
+          "word": "satu",
+          "start": 3.48,
+          "end": 3.72
+        },
+        {
+          "word": "fakta",
+          "start": 3.72,
+          "end": 4.12
+        },
+        {
+          "word": "alam",
+          "start": 4.12,
+          "end": 4.44
+        },
+        {
+          "word": "semesta:",
+          "start": 4.44,
+          "end": 4.9
+        },
+        {
+          "word": "kucing",
+          "start": 5.5,
+          "end": 6.06
+        },
+        {
+          "word": "nggak",
+          "start": 6.06,
+          "end": 6.2
+        },
+        {
+          "word": "pernah",
+          "start": 6.2,
+          "end": 6.4
+        },
+        {
+          "word": "bisa",
+          "start": 6.4,
+          "end": 6.68
+        },
+        {
+          "word": "disuruh!",
+          "start": 6.68,
+          "end": 7.24
+        }
+      ]
+    },
+    {
+      "scene": "akhir",
+      "idx": 2,
+      "voice": "dodi",
+      "style": "pasrah",
+      "text": "Iya deh... dua puluh juta dolar melayang, yang kenyang cuma si Meong.",
+      "wav": "out/voice/kucing/akhir_2.wav",
+      "duration": 4.64,
+      "words": [
+        {
+          "word": "Iya",
+          "start": 0.0,
+          "end": 0.5
+        },
+        {
+          "word": "deh...",
+          "start": 0.5,
+          "end": 0.58
+        },
+        {
+          "word": "dua",
+          "start": 0.58,
+          "end": 1.1
+        },
+        {
+          "word": "puluh",
+          "start": 1.1,
+          "end": 1.58
+        },
+        {
+          "word": "juta",
+          "start": 1.58,
+          "end": 1.92
+        },
+        {
+          "word": "dolar",
+          "start": 1.92,
+          "end": 2.16
+        },
+        {
+          "word": "melayang,",
+          "start": 2.16,
+          "end": 2.74
+        },
+        {
+          "word": "yang",
+          "start": 2.94,
+          "end": 3.28
+        },
+        {
+          "word": "kenyang",
+          "start": 3.28,
+          "end": 3.68
+        },
+        {
+          "word": "cuma",
+          "start": 3.68,
+          "end": 4.04
+        },
+        {
+          "word": "si",
+          "start": 4.04,
+          "end": 4.2
+        },
+        {
+          "word": "Meong.",
+          "start": 4.2,
+          "end": 4.5
+        }
+      ]
+    }
+  ]
+}
