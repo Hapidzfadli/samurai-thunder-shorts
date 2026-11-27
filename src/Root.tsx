@@ -70,10 +70,16 @@ import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
 import { SchoolFlythrough, TOTAL_FRAMES_SCHOOL } from "./SchoolFlythrough";
 import { Dantzig, TOTAL_FRAMES_DANTZIG } from "./Dantzig";
 import { Whatsapp, TOTAL_FRAMES_WHATSAPP } from "./Whatsapp";
+import { SheetEmberKarakter, SheetEmberEkspresi, SheetEmberAdegan } from "./SheetEmber";
+import { Ember, TOTAL_FRAMES_EMBER } from "./Ember";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Ember" component={Ember} durationInFrames={TOTAL_FRAMES_EMBER} fps={30} width={1080} height={1920} defaultProps={{ withAudio: false }} />
+      <Composition id="SheetEmberKarakter" component={SheetEmberKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
+      <Composition id="SheetEmberEkspresi" component={SheetEmberEkspresi} durationInFrames={1} fps={30} width={2000} height={1150} />
+      <Composition id="SheetEmberAdegan" component={SheetEmberAdegan} durationInFrames={1} fps={30} width={2160} height={1920} />
       <Composition id="Whatsapp" component={Whatsapp} durationInFrames={TOTAL_FRAMES_WHATSAPP} fps={30} width={1080} height={1920} defaultProps={{ withAudio: true }} />
       <Composition id="Dantzig" component={Dantzig} durationInFrames={TOTAL_FRAMES_DANTZIG} fps={30} width={1080} height={1920} defaultProps={{ withAudio: true }} />
       <Composition id="SchoolFlythrough" component={SchoolFlythrough} durationInFrames={TOTAL_FRAMES_SCHOOL} fps={30} width={1080} height={1920} />

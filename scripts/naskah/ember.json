@@ -1,0 +1,30 @@
+[
+  {"scene": "hook", "takes": 2, "lines": [
+    ["tanya", "Dua ribu prajurit gugur di Italia... cuma demi satu benda ini?", "dodi"],
+    ["kaget", "Hah?! Ini kan cuma ember kayu?!", "ara"]
+  ]},
+  {"scene": "rival", "takes": 2, "lines": [
+    ["narasi", "Tahun seribu tiga ratus dua puluh lima, Modena diam-diam merebut kastil milik Bologna.", "dodi"],
+    ["kaget", "Apa?! Kastil kita direbut?! Serang mereka sekarang!", "ara"]
+  ]},
+  {"scene": "jumlah", "takes": 2, "lines": [
+    ["santai", "Tiga puluh dua ribu pasukan Bologna lawan tujuh ribu Modena? Jelas kita menang telak!", "ara"],
+    ["sindir", "Yakin nih? Pasukanmu kan warga biasa, sedangkan Modena prajurit terlatih.", "dodi"]
+  ]},
+  {"scene": "zappolino", "takes": 2, "lines": [
+    ["tegas", "Pasukan berkuda, serang dari samping!", "dodi"],
+    ["panik", "Lho?! Baru sebentar, kok malah kita yang mundur?!", "ara"]
+  ]},
+  {"scene": "gerbang", "takes": 2, "lines": [
+    ["sindir", "Gerbang Bologna dikunci rapat? Ya sudah, ambil ember sumurnya buat oleh-oleh!", "dodi"],
+    ["kaget", "Hei!! Ember sumur kami mau dibawa ke mana?! Balikin!", "ara"]
+  ]},
+  {"scene": "mitos", "takes": 2, "lines": [
+    ["narasi", "Tiga ratus tahun kemudian, puisi komedi membuat orang mengira perang ini dimulai karena ember.", "dodi"],
+    ["tanya", "Jadi... embernya baru diambil setelah kita kalah?!", "ara"]
+  ]},
+  {"scene": "akhir", "takes": 2, "lines": [
+    ["sindir", "Kastilnya sudah kembali, tapi tujuh ratus tahun kemudian, embernya masih dipajang di Modena!", "dodi"],
+    ["kaget", "Serius belum dibalikin?! Pinjamnya tujuh abad!", "ara"]
+  ]}
+]

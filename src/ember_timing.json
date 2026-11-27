@@ -1,0 +1,1558 @@
+{
+ "fps": 30,
+ "totalDurationSec": 63.767,
+ "totalFrames": 1913,
+ "order": [
+  "hook",
+  "rival",
+  "jumlah",
+  "zappolino",
+  "gerbang",
+  "mitos",
+  "akhir"
+ ],
+ "scenes": {
+  "hook": {
+   "startFrame": 0,
+   "durationInFrames": 195
+  },
+  "rival": {
+   "startFrame": 195,
+   "durationInFrames": 269
+  },
+  "jumlah": {
+   "startFrame": 464,
+   "durationInFrames": 314
+  },
+  "zappolino": {
+   "startFrame": 778,
+   "durationInFrames": 226
+  },
+  "gerbang": {
+   "startFrame": 1004,
+   "durationInFrames": 323
+  },
+  "mitos": {
+   "startFrame": 1327,
+   "durationInFrames": 271
+  },
+  "akhir": {
+   "startFrame": 1598,
+   "durationInFrames": 315
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "voice": "dodi",
+    "style": "tanya",
+    "text": "Dua ribu prajurit gugur di Italia... cuma demi satu benda ini?",
+    "from": 14,
+    "to": 110,
+    "words": [
+     {
+      "w": "Dua",
+      "from": 14,
+      "to": 20
+     },
+     {
+      "w": "ribu",
+      "from": 20,
+      "to": 26
+     },
+     {
+      "w": "prajurit",
+      "from": 26,
+      "to": 39
+     },
+     {
+      "w": "gugur",
+      "from": 39,
+      "to": 45
+     },
+     {
+      "w": "di",
+      "from": 45,
+      "to": 53
+     },
+     {
+      "w": "Italia...",
+      "from": 53,
+      "to": 73
+     },
+     {
+      "w": "cuma",
+      "from": 73,
+      "to": 77
+     },
+     {
+      "w": "demi",
+      "from": 77,
+      "to": 84
+     },
+     {
+      "w": "satu",
+      "from": 84,
+      "to": 89
+     },
+     {
+      "w": "benda",
+      "from": 89,
+      "to": 97
+     },
+     {
+      "w": "ini?",
+      "from": 97,
+      "to": 105
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "kaget",
+    "text": "Hah?! Ini kan cuma ember kayu?!",
+    "from": 120,
+    "to": 181,
+    "words": [
+     {
+      "w": "Hah?!",
+      "from": 120,
+      "to": 137
+     },
+     {
+      "w": "Ini",
+      "from": 137,
+      "to": 142
+     },
+     {
+      "w": "kan",
+      "from": 142,
+      "to": 146
+     },
+     {
+      "w": "cuma",
+      "from": 146,
+      "to": 153
+     },
+     {
+      "w": "ember",
+      "from": 153,
+      "to": 163
+     },
+     {
+      "w": "kayu?!",
+      "from": 163,
+      "to": 175
+     }
+    ]
+   }
+  ],
+  "rival": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Tahun seribu tiga ratus dua puluh lima, Modena diam-diam merebut kastil milik Bologna.",
+    "from": 12,
+    "to": 155,
+    "words": [
+     {
+      "w": "Tahun",
+      "from": 12,
+      "to": 17
+     },
+     {
+      "w": "seribu",
+      "from": 17,
+      "to": 52
+     },
+     {
+      "w": "tiga",
+      "from": 52,
+      "to": 80
+     },
+     {
+      "w": "ratus",
+      "from": 80,
+      "to": 87
+     },
+     {
+      "w": "dua",
+      "from": 87,
+      "to": 92
+     },
+     {
+      "w": "puluh",
+      "from": 92,
+      "to": 100
+     },
+     {
+      "w": "lima,",
+      "from": 100,
+      "to": 107
+     },
+     {
+      "w": "Modena",
+      "from": 107,
+      "to": 112
+     },
+     {
+      "w": "diam-diam",
+      "from": 112,
+      "to": 121
+     },
+     {
+      "w": "merebut",
+      "from": 121,
+      "to": 132
+     },
+     {
+      "w": "kastil",
+      "from": 132,
+      "to": 138
+     },
+     {
+      "w": "milik",
+      "from": 138,
+      "to": 143
+     },
+     {
+      "w": "Bologna.",
+      "from": 143,
+      "to": 150
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "kaget",
+    "text": "Apa?! Kastil kita direbut?! Serang mereka sekarang!",
+    "from": 163,
+    "to": 254,
+    "words": [
+     {
+      "w": "Apa?!",
+      "from": 163,
+      "to": 186
+     },
+     {
+      "w": "Kastil",
+      "from": 186,
+      "to": 200
+     },
+     {
+      "w": "kita",
+      "from": 200,
+      "to": 206
+     },
+     {
+      "w": "direbut?!",
+      "from": 206,
+      "to": 224
+     },
+     {
+      "w": "Serang",
+      "from": 224,
+      "to": 231
+     },
+     {
+      "w": "mereka",
+      "from": 231,
+      "to": 237
+     },
+     {
+      "w": "sekarang!",
+      "from": 237,
+      "to": 246
+     }
+    ]
+   }
+  ],
+  "jumlah": [
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Tiga puluh dua ribu pasukan Bologna lawan tujuh ribu Modena? Jelas kita menang telak!",
+    "from": 12,
+    "to": 141,
+    "words": [
+     {
+      "w": "Tiga",
+      "from": 12,
+      "to": 29
+     },
+     {
+      "w": "puluh",
+      "from": 29,
+      "to": 41
+     },
+     {
+      "w": "dua",
+      "from": 41,
+      "to": 44
+     },
+     {
+      "w": "ribu",
+      "from": 44,
+      "to": 49
+     },
+     {
+      "w": "pasukan",
+      "from": 49,
+      "to": 58
+     },
+     {
+      "w": "Bologna",
+      "from": 58,
+      "to": 67
+     },
+     {
+      "w": "lawan",
+      "from": 67,
+      "to": 78
+     },
+     {
+      "w": "tujuh",
+      "from": 78,
+      "to": 87
+     },
+     {
+      "w": "ribu",
+      "from": 87,
+      "to": 93
+     },
+     {
+      "w": "Modena?",
+      "from": 93,
+      "to": 109
+     },
+     {
+      "w": "Jelas",
+      "from": 109,
+      "to": 117
+     },
+     {
+      "w": "kita",
+      "from": 117,
+      "to": 122
+     },
+     {
+      "w": "menang",
+      "from": 122,
+      "to": 131
+     },
+     {
+      "w": "telak!",
+      "from": 131,
+      "to": 138
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "sindir",
+    "text": "Yakin nih? Pasukanmu kan warga biasa, sedangkan Modena prajurit terlatih.",
+    "from": 150,
+    "to": 299,
+    "words": [
+     {
+      "w": "Yakin",
+      "from": 150,
+      "to": 164
+     },
+     {
+      "w": "nih?",
+      "from": 164,
+      "to": 172
+     },
+     {
+      "w": "Pasukanmu",
+      "from": 172,
+      "to": 197
+     },
+     {
+      "w": "kan",
+      "from": 197,
+      "to": 202
+     },
+     {
+      "w": "warga",
+      "from": 202,
+      "to": 215
+     },
+     {
+      "w": "biasa,",
+      "from": 215,
+      "to": 228
+     },
+     {
+      "w": "sedangkan",
+      "from": 228,
+      "to": 250
+     },
+     {
+      "w": "Modena",
+      "from": 250,
+      "to": 263
+     },
+     {
+      "w": "prajurit",
+      "from": 263,
+      "to": 277
+     },
+     {
+      "w": "terlatih.",
+      "from": 277,
+      "to": 291
+     }
+    ]
+   }
+  ],
+  "zappolino": [
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Pasukan berkuda, serang dari samping!",
+    "from": 12,
+    "to": 98,
+    "words": [
+     {
+      "w": "Pasukan",
+      "from": 12,
+      "to": 23
+     },
+     {
+      "w": "berkuda,",
+      "from": 23,
+      "to": 40
+     },
+     {
+      "w": "serang",
+      "from": 40,
+      "to": 64
+     },
+     {
+      "w": "dari",
+      "from": 64,
+      "to": 71
+     },
+     {
+      "w": "samping!",
+      "from": 71,
+      "to": 94
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "panik",
+    "text": "Lho?! Baru sebentar, kok malah kita yang mundur?!",
+    "from": 106,
+    "to": 212,
+    "words": [
+     {
+      "w": "Lho?!",
+      "from": 106,
+      "to": 130
+     },
+     {
+      "w": "Baru",
+      "from": 130,
+      "to": 147
+     },
+     {
+      "w": "sebentar,",
+      "from": 147,
+      "to": 163
+     },
+     {
+      "w": "kok",
+      "from": 163,
+      "to": 181
+     },
+     {
+      "w": "malah",
+      "from": 181,
+      "to": 189
+     },
+     {
+      "w": "kita",
+      "from": 189,
+      "to": 194
+     },
+     {
+      "w": "yang",
+      "from": 194,
+      "to": 198
+     },
+     {
+      "w": "mundur?!",
+      "from": 198,
+      "to": 209
+     }
+    ]
+   }
+  ],
+  "gerbang": [
+   {
+    "voice": "dodi",
+    "style": "sindir",
+    "text": "Gerbang Bologna dikunci rapat? Ya sudah, ambil ember sumurnya buat oleh-oleh!",
+    "from": 12,
+    "to": 180,
+    "words": [
+     {
+      "w": "Gerbang",
+      "from": 12,
+      "to": 24
+     },
+     {
+      "w": "Bologna",
+      "from": 24,
+      "to": 36
+     },
+     {
+      "w": "dikunci",
+      "from": 36,
+      "to": 51
+     },
+     {
+      "w": "rapat?",
+      "from": 51,
+      "to": 61
+     },
+     {
+      "w": "Ya",
+      "from": 61,
+      "to": 74
+     },
+     {
+      "w": "sudah,",
+      "from": 74,
+      "to": 98
+     },
+     {
+      "w": "ambil",
+      "from": 98,
+      "to": 121
+     },
+     {
+      "w": "ember",
+      "from": 121,
+      "to": 130
+     },
+     {
+      "w": "sumurnya",
+      "from": 130,
+      "to": 146
+     },
+     {
+      "w": "buat",
+      "from": 146,
+      "to": 153
+     },
+     {
+      "w": "oleh-oleh!",
+      "from": 153,
+      "to": 170
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "kaget",
+    "text": "Hei!! Ember sumur kami mau dibawa ke mana?! Balikin!",
+    "from": 188,
+    "to": 308,
+    "words": [
+     {
+      "w": "Hei!!",
+      "from": 188,
+      "to": 215
+     },
+     {
+      "w": "Ember",
+      "from": 215,
+      "to": 226
+     },
+     {
+      "w": "sumur",
+      "from": 226,
+      "to": 235
+     },
+     {
+      "w": "kami",
+      "from": 235,
+      "to": 241
+     },
+     {
+      "w": "mau",
+      "from": 241,
+      "to": 248
+     },
+     {
+      "w": "dibawa",
+      "from": 248,
+      "to": 255
+     },
+     {
+      "w": "ke",
+      "from": 255,
+      "to": 259
+     },
+     {
+      "w": "mana?!",
+      "from": 259,
+      "to": 288
+     },
+     {
+      "w": "Balikin!",
+      "from": 288,
+      "to": 303
+     }
+    ]
+   }
+  ],
+  "mitos": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Tiga ratus tahun kemudian, puisi komedi membuat orang mengira perang ini dimulai karena ember.",
+    "from": 12,
+    "to": 155,
+    "words": [
+     {
+      "w": "Tiga",
+      "from": 12,
+      "to": 16
+     },
+     {
+      "w": "ratus",
+      "from": 16,
+      "to": 25
+     },
+     {
+      "w": "tahun",
+      "from": 25,
+      "to": 33
+     },
+     {
+      "w": "kemudian,",
+      "from": 33,
+      "to": 57
+     },
+     {
+      "w": "puisi",
+      "from": 57,
+      "to": 66
+     },
+     {
+      "w": "komedi",
+      "from": 66,
+      "to": 75
+     },
+     {
+      "w": "membuat",
+      "from": 75,
+      "to": 84
+     },
+     {
+      "w": "orang",
+      "from": 84,
+      "to": 92
+     },
+     {
+      "w": "mengira",
+      "from": 92,
+      "to": 102
+     },
+     {
+      "w": "perang",
+      "from": 102,
+      "to": 110
+     },
+     {
+      "w": "ini",
+      "from": 110,
+      "to": 117
+     },
+     {
+      "w": "dimulai",
+      "from": 117,
+      "to": 132
+     },
+     {
+      "w": "karena",
+      "from": 132,
+      "to": 140
+     },
+     {
+      "w": "ember.",
+      "from": 140,
+      "to": 148
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "tanya",
+    "text": "Jadi... embernya baru diambil setelah kita kalah?!",
+    "from": 163,
+    "to": 258,
+    "words": [
+     {
+      "w": "Jadi...",
+      "from": 163,
+      "to": 191
+     },
+     {
+      "w": "embernya",
+      "from": 191,
+      "to": 205
+     },
+     {
+      "w": "baru",
+      "from": 205,
+      "to": 210
+     },
+     {
+      "w": "diambil",
+      "from": 210,
+      "to": 226
+     },
+     {
+      "w": "setelah",
+      "from": 226,
+      "to": 234
+     },
+     {
+      "w": "kita",
+      "from": 234,
+      "to": 239
+     },
+     {
+      "w": "kalah?!",
+      "from": 239,
+      "to": 254
+     }
+    ]
+   }
+  ],
+  "akhir": [
+   {
+    "voice": "dodi",
+    "style": "sindir",
+    "text": "Kastilnya sudah kembali, tapi tujuh ratus tahun kemudian, embernya masih dipajang di Modena!",
+    "from": 14,
+    "to": 172,
+    "words": [
+     {
+      "w": "Kastilnya",
+      "from": 14,
+      "to": 26
+     },
+     {
+      "w": "sudah",
+      "from": 26,
+      "to": 31
+     },
+     {
+      "w": "kembali,",
+      "from": 31,
+      "to": 43
+     },
+     {
+      "w": "tapi",
+      "from": 43,
+      "to": 57
+     },
+     {
+      "w": "tujuh",
+      "from": 57,
+      "to": 72
+     },
+     {
+      "w": "ratus",
+      "from": 72,
+      "to": 86
+     },
+     {
+      "w": "tahun",
+      "from": 86,
+      "to": 96
+     },
+     {
+      "w": "kemudian,",
+      "from": 96,
+      "to": 110
+     },
+     {
+      "w": "embernya",
+      "from": 110,
+      "to": 123
+     },
+     {
+      "w": "masih",
+      "from": 123,
+      "to": 133
+     },
+     {
+      "w": "dipajang",
+      "from": 133,
+      "to": 147
+     },
+     {
+      "w": "di",
+      "from": 147,
+      "to": 151
+     },
+     {
+      "w": "Modena!",
+      "from": 151,
+      "to": 162
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "kaget",
+    "text": "Serius belum dibalikin?! Pinjamnya tujuh abad!",
+    "from": 181,
+    "to": 276,
+    "words": [
+     {
+      "w": "Serius",
+      "from": 181,
+      "to": 197
+     },
+     {
+      "w": "belum",
+      "from": 197,
+      "to": 203
+     },
+     {
+      "w": "dibalikin?!",
+      "from": 203,
+      "to": 241
+     },
+     {
+      "w": "Pinjamnya",
+      "from": 241,
+      "to": 254
+     },
+     {
+      "w": "tujuh",
+      "from": 254,
+      "to": 264
+     },
+     {
+      "w": "abad!",
+      "from": 264,
+      "to": 276
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.ember": 151,
+  "riv.kastil": 130,
+  "riv.serang": 222,
+  "jum.menang": 120,
+  "jum.cek": 148,
+  "zap.serang": 38,
+  "zap.mundur": 196,
+  "ger.ambil": 119,
+  "ger.balikin": 286,
+  "mit.kalah": 237,
+  "akh.modena": 149,
+  "akh.abad": 262
+ },
+ "captions": [
+  {
+   "text": "Dua ribu",
+   "startFrame": 14,
+   "endFrame": 26,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "prajurit",
+   "startFrame": 26,
+   "endFrame": 39,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "gugur di",
+   "startFrame": 39,
+   "endFrame": 53,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Italia...",
+   "startFrame": 53,
+   "endFrame": 73,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "cuma demi",
+   "startFrame": 73,
+   "endFrame": 84,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "satu benda",
+   "startFrame": 84,
+   "endFrame": 97,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ini?",
+   "startFrame": 97,
+   "endFrame": 105,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Hah?!",
+   "startFrame": 120,
+   "endFrame": 137,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ini kan",
+   "startFrame": 137,
+   "endFrame": 146,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "cuma ember",
+   "startFrame": 146,
+   "endFrame": 163,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "kayu?!",
+   "startFrame": 163,
+   "endFrame": 175,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Tahun seribu",
+   "startFrame": 207,
+   "endFrame": 247,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tiga ratus",
+   "startFrame": 247,
+   "endFrame": 282,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "dua puluh",
+   "startFrame": 282,
+   "endFrame": 295,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lima,",
+   "startFrame": 295,
+   "endFrame": 302,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Modena",
+   "startFrame": 302,
+   "endFrame": 307,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "diam-diam",
+   "startFrame": 307,
+   "endFrame": 316,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "merebut",
+   "startFrame": 316,
+   "endFrame": 327,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kastil milik",
+   "startFrame": 327,
+   "endFrame": 338,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Bologna.",
+   "startFrame": 338,
+   "endFrame": 345,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Apa?!",
+   "startFrame": 358,
+   "endFrame": 381,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Kastil kita",
+   "startFrame": 381,
+   "endFrame": 401,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "direbut?!",
+   "startFrame": 401,
+   "endFrame": 419,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Serang",
+   "startFrame": 419,
+   "endFrame": 426,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 426,
+   "endFrame": 432,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sekarang!",
+   "startFrame": 432,
+   "endFrame": 441,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Tiga puluh",
+   "startFrame": 476,
+   "endFrame": 505,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "dua ribu",
+   "startFrame": 505,
+   "endFrame": 513,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "pasukan",
+   "startFrame": 513,
+   "endFrame": 522,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Bologna",
+   "startFrame": 522,
+   "endFrame": 531,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "lawan tujuh",
+   "startFrame": 531,
+   "endFrame": 551,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "ribu Modena?",
+   "startFrame": 551,
+   "endFrame": 573,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Jelas kita",
+   "startFrame": 573,
+   "endFrame": 586,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "menang",
+   "startFrame": 586,
+   "endFrame": 595,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "telak!",
+   "startFrame": 595,
+   "endFrame": 602,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Yakin nih?",
+   "startFrame": 614,
+   "endFrame": 636,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Pasukanmu",
+   "startFrame": 636,
+   "endFrame": 661,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kan warga",
+   "startFrame": 661,
+   "endFrame": 679,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "biasa,",
+   "startFrame": 679,
+   "endFrame": 692,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sedangkan",
+   "startFrame": 692,
+   "endFrame": 714,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Modena",
+   "startFrame": 714,
+   "endFrame": 727,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "prajurit",
+   "startFrame": 727,
+   "endFrame": 741,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terlatih.",
+   "startFrame": 741,
+   "endFrame": 755,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Pasukan",
+   "startFrame": 790,
+   "endFrame": 801,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "berkuda,",
+   "startFrame": 801,
+   "endFrame": 818,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "serang dari",
+   "startFrame": 818,
+   "endFrame": 849,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "samping!",
+   "startFrame": 849,
+   "endFrame": 872,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Lho?!",
+   "startFrame": 884,
+   "endFrame": 908,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Baru",
+   "startFrame": 908,
+   "endFrame": 925,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sebentar,",
+   "startFrame": 925,
+   "endFrame": 942,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kok malah",
+   "startFrame": 942,
+   "endFrame": 967,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kita yang",
+   "startFrame": 967,
+   "endFrame": 976,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mundur?!",
+   "startFrame": 976,
+   "endFrame": 987,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Gerbang",
+   "startFrame": 1016,
+   "endFrame": 1028,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Bologna",
+   "startFrame": 1028,
+   "endFrame": 1040,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "dikunci",
+   "startFrame": 1040,
+   "endFrame": 1055,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "rapat?",
+   "startFrame": 1055,
+   "endFrame": 1065,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Ya sudah,",
+   "startFrame": 1065,
+   "endFrame": 1102,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ambil ember",
+   "startFrame": 1102,
+   "endFrame": 1134,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "sumurnya",
+   "startFrame": 1134,
+   "endFrame": 1150,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "buat",
+   "startFrame": 1150,
+   "endFrame": 1157,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "oleh-oleh!",
+   "startFrame": 1157,
+   "endFrame": 1174,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Hei!!",
+   "startFrame": 1192,
+   "endFrame": 1219,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ember sumur",
+   "startFrame": 1219,
+   "endFrame": 1239,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "kami mau",
+   "startFrame": 1239,
+   "endFrame": 1252,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "dibawa ke",
+   "startFrame": 1252,
+   "endFrame": 1263,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mana?!",
+   "startFrame": 1263,
+   "endFrame": 1292,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Balikin!",
+   "startFrame": 1292,
+   "endFrame": 1307,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Tiga ratus",
+   "startFrame": 1339,
+   "endFrame": 1352,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "tahun",
+   "startFrame": 1352,
+   "endFrame": 1360,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kemudian,",
+   "startFrame": 1360,
+   "endFrame": 1384,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "puisi komedi",
+   "startFrame": 1384,
+   "endFrame": 1402,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "membuat",
+   "startFrame": 1402,
+   "endFrame": 1411,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "orang",
+   "startFrame": 1411,
+   "endFrame": 1419,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mengira",
+   "startFrame": 1419,
+   "endFrame": 1429,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perang ini",
+   "startFrame": 1429,
+   "endFrame": 1444,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dimulai",
+   "startFrame": 1444,
+   "endFrame": 1459,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "karena",
+   "startFrame": 1459,
+   "endFrame": 1467,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ember.",
+   "startFrame": 1467,
+   "endFrame": 1475,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Jadi...",
+   "startFrame": 1490,
+   "endFrame": 1518,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "embernya",
+   "startFrame": 1518,
+   "endFrame": 1532,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "baru diambil",
+   "startFrame": 1532,
+   "endFrame": 1553,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "setelah kita",
+   "startFrame": 1553,
+   "endFrame": 1566,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kalah?!",
+   "startFrame": 1566,
+   "endFrame": 1581,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Kastilnya",
+   "startFrame": 1612,
+   "endFrame": 1624,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 1624,
+   "endFrame": 1629,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kembali,",
+   "startFrame": 1629,
+   "endFrame": 1641,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tapi tujuh",
+   "startFrame": 1641,
+   "endFrame": 1670,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "ratus tahun",
+   "startFrame": 1670,
+   "endFrame": 1694,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kemudian,",
+   "startFrame": 1694,
+   "endFrame": 1708,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "embernya",
+   "startFrame": 1708,
+   "endFrame": 1721,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "masih",
+   "startFrame": 1721,
+   "endFrame": 1731,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dipajang di",
+   "startFrame": 1731,
+   "endFrame": 1749,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Modena!",
+   "startFrame": 1749,
+   "endFrame": 1760,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Serius belum",
+   "startFrame": 1779,
+   "endFrame": 1801,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "dibalikin?!",
+   "startFrame": 1801,
+   "endFrame": 1839,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Pinjamnya",
+   "startFrame": 1839,
+   "endFrame": 1852,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tujuh abad!",
+   "startFrame": 1852,
+   "endFrame": 1874,
+   "highlight": true,
+   "voice": "ara"
+  }
+ ]
+}
