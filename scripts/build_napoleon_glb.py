@@ -1035,6 +1035,8 @@ VIEWS = [
     ("l5_dalam", "L5", (1.3, 0.1, 2.4), (-1.3, 0.2, 2.05), 20, False, [(0, 0, 3.0, 150)]),
     ("l6_malam", "L2", (3.8, -4.2, 2.3), (-0.3, 2.0, 1.3), 26, True, [(0, 0, 4.0, 500), (1.4, 1.0, 2.1, 220), (-5.2, -2.6, 1.3, 220), (4.8, 3.0, 1.6, 90)]),
 ]
+if os.environ.get("NP_EXTRA"):
+    exec(open(os.environ["NP_EXTRA"]).read(), globals())
 need = {v[1] for v in VIEWS if WANT == "all" or v[0] in WANT.split(",")}
 for k in ("L1", "L2", "L3", "L4", "L5"):
     if k in need or GLB:
