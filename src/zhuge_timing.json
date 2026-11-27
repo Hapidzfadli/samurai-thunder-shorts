@@ -1,0 +1,4774 @@
+{
+ "fps": 30,
+ "tempo": 1.12,
+ "totalDurationSec": 150.667,
+ "totalFrames": 4520,
+ "order": [
+  "s01_kabar",
+  "s02_panik",
+  "s03_perintah",
+  "s04_gerbang",
+  "s05_simayi",
+  "s06_guqin",
+  "s07_debat",
+  "s08_mundur",
+  "s09_lega",
+  "s10_penutup"
+ ],
+ "scenes": {
+  "s01_kabar": {
+   "startFrame": 0,
+   "durationInFrames": 392
+  },
+  "s02_panik": {
+   "startFrame": 392,
+   "durationInFrames": 361
+  },
+  "s03_perintah": {
+   "startFrame": 753,
+   "durationInFrames": 716
+  },
+  "s04_gerbang": {
+   "startFrame": 1469,
+   "durationInFrames": 442
+  },
+  "s05_simayi": {
+   "startFrame": 1911,
+   "durationInFrames": 452
+  },
+  "s06_guqin": {
+   "startFrame": 2363,
+   "durationInFrames": 363
+  },
+  "s07_debat": {
+   "startFrame": 2726,
+   "durationInFrames": 502
+  },
+  "s08_mundur": {
+   "startFrame": 3228,
+   "durationInFrames": 395
+  },
+  "s09_lega": {
+   "startFrame": 3623,
+   "durationInFrames": 490
+  },
+  "s10_penutup": {
+   "startFrame": 4113,
+   "durationInFrames": 407
+  }
+ },
+ "lines": {
+  "s01_kabar": [
+   {
+    "voice": "narator",
+    "speaker": "",
+    "style": "narasi dramatis mencekam",
+    "text": "Kota kecil tanpa prajurit... dikepung seratus lima puluh ribu tentara!",
+    "from": 21,
+    "to": 136,
+    "words": [
+     {
+      "w": "Kota",
+      "from": 21,
+      "to": 27
+     },
+     {
+      "w": "kecil",
+      "from": 27,
+      "to": 35
+     },
+     {
+      "w": "tanpa",
+      "from": 35,
+      "to": 42
+     },
+     {
+      "w": "prajurit...",
+      "from": 42,
+      "to": 54
+     },
+     {
+      "w": "dikepung",
+      "from": 54,
+      "to": 67
+     },
+     {
+      "w": "seratus",
+      "from": 67,
+      "to": 80
+     },
+     {
+      "w": "lima",
+      "from": 80,
+      "to": 91
+     },
+     {
+      "w": "puluh",
+      "from": 91,
+      "to": 112
+     },
+     {
+      "w": "ribu",
+      "from": 112,
+      "to": 124
+     },
+     {
+      "w": "tentara!",
+      "from": 124,
+      "to": 131
+     }
+    ]
+   },
+   {
+    "voice": "pengintai",
+    "speaker": "PENGINTAI SHU",
+    "style": "panik terengah-engah ketakutan",
+    "text": "Lapor, Tuan Zhuge Liang! Pasukan kita kalah! Jenderal Sima Yi datang membawa seratus lima puluh ribu tentara! Mereka tinggal beberapa kilometer lagi!",
+    "from": 142,
+    "to": 378,
+    "words": [
+     {
+      "w": "Lapor,",
+      "from": 142,
+      "to": 153
+     },
+     {
+      "w": "Tuan",
+      "from": 153,
+      "to": 160
+     },
+     {
+      "w": "Zhuge",
+      "from": 160,
+      "to": 167
+     },
+     {
+      "w": "Liang!",
+      "from": 167,
+      "to": 174
+     },
+     {
+      "w": "Pasukan",
+      "from": 174,
+      "to": 194
+     },
+     {
+      "w": "kita",
+      "from": 194,
+      "to": 200
+     },
+     {
+      "w": "kalah!",
+      "from": 200,
+      "to": 209
+     },
+     {
+      "w": "Jenderal",
+      "from": 209,
+      "to": 233
+     },
+     {
+      "w": "Sima",
+      "from": 233,
+      "to": 241
+     },
+     {
+      "w": "Yi",
+      "from": 241,
+      "to": 245
+     },
+     {
+      "w": "datang",
+      "from": 245,
+      "to": 258
+     },
+     {
+      "w": "membawa",
+      "from": 258,
+      "to": 269
+     },
+     {
+      "w": "seratus",
+      "from": 269,
+      "to": 279
+     },
+     {
+      "w": "lima",
+      "from": 279,
+      "to": 294
+     },
+     {
+      "w": "puluh",
+      "from": 294,
+      "to": 311
+     },
+     {
+      "w": "ribu",
+      "from": 311,
+      "to": 316
+     },
+     {
+      "w": "tentara!",
+      "from": 316,
+      "to": 334
+     },
+     {
+      "w": "Mereka",
+      "from": 334,
+      "to": 339
+     },
+     {
+      "w": "tinggal",
+      "from": 339,
+      "to": 346
+     },
+     {
+      "w": "beberapa",
+      "from": 346,
+      "to": 354
+     },
+     {
+      "w": "kilometer",
+      "from": 354,
+      "to": 361
+     },
+     {
+      "w": "lagi!",
+      "from": 361,
+      "to": 371
+     }
+    ]
+   }
+  ],
+  "s02_panik": [
+   {
+    "voice": "crowd_panic",
+    "speaker": "WARGA & PRAJURIT",
+    "style": "berteriak panik ketakutan massal",
+    "text": "AAAHHH!! Seratus lima puluh ribu?! Kita cuma punya dua ribu prajurit! Kita akan mati semua! Kabur!!",
+    "from": 10,
+    "to": 199,
+    "words": [
+     {
+      "w": "AAAHHH!!",
+      "from": 10,
+      "to": 43
+     },
+     {
+      "w": "Seratus",
+      "from": 43,
+      "to": 79
+     },
+     {
+      "w": "lima",
+      "from": 79,
+      "to": 86
+     },
+     {
+      "w": "puluh",
+      "from": 86,
+      "to": 91
+     },
+     {
+      "w": "ribu?!",
+      "from": 91,
+      "to": 95
+     },
+     {
+      "w": "Kita",
+      "from": 95,
+      "to": 101
+     },
+     {
+      "w": "cuma",
+      "from": 101,
+      "to": 109
+     },
+     {
+      "w": "punya",
+      "from": 109,
+      "to": 116
+     },
+     {
+      "w": "dua",
+      "from": 116,
+      "to": 120
+     },
+     {
+      "w": "ribu",
+      "from": 120,
+      "to": 126
+     },
+     {
+      "w": "prajurit!",
+      "from": 126,
+      "to": 140
+     },
+     {
+      "w": "Kita",
+      "from": 140,
+      "to": 144
+     },
+     {
+      "w": "akan",
+      "from": 144,
+      "to": 149
+     },
+     {
+      "w": "mati",
+      "from": 149,
+      "to": 153
+     },
+     {
+      "w": "semua!",
+      "from": 153,
+      "to": 173
+     },
+     {
+      "w": "Kabur!!",
+      "from": 173,
+      "to": 184
+     }
+    ]
+   },
+   {
+    "voice": "perwira",
+    "speaker": "PERWIRA SHU",
+    "style": "gemetar cemas ketakutan",
+    "text": "Tuan! Kita tak mungkin menang! Sebaiknya kita tinggalkan kota ini sekarang juga!",
+    "from": 205,
+    "to": 349,
+    "words": [
+     {
+      "w": "Tuan!",
+      "from": 205,
+      "to": 239
+     },
+     {
+      "w": "Kita",
+      "from": 239,
+      "to": 244
+     },
+     {
+      "w": "tak",
+      "from": 244,
+      "to": 248
+     },
+     {
+      "w": "mungkin",
+      "from": 248,
+      "to": 256
+     },
+     {
+      "w": "menang!",
+      "from": 256,
+      "to": 284
+     },
+     {
+      "w": "Sebaiknya",
+      "from": 284,
+      "to": 299
+     },
+     {
+      "w": "kita",
+      "from": 299,
+      "to": 304
+     },
+     {
+      "w": "tinggalkan",
+      "from": 304,
+      "to": 316
+     },
+     {
+      "w": "kota",
+      "from": 316,
+      "to": 323
+     },
+     {
+      "w": "ini",
+      "from": 323,
+      "to": 327
+     },
+     {
+      "w": "sekarang",
+      "from": 327,
+      "to": 334
+     },
+     {
+      "w": "juga!",
+      "from": 334,
+      "to": 342
+     }
+    ]
+   }
+  ],
+  "s03_perintah": [
+   {
+    "voice": "zhuge",
+    "speaker": "ZHUGE LIANG",
+    "style": "sangat tenang dingin berwibawa",
+    "text": "Kalau kita kabur sekarang, kavaleri mereka akan menyapu kita habis di jalan. Tidak... kita tetap di sini.",
+    "from": 10,
+    "to": 255,
+    "words": [
+     {
+      "w": "Kalau",
+      "from": 10,
+      "to": 21
+     },
+     {
+      "w": "kita",
+      "from": 21,
+      "to": 32
+     },
+     {
+      "w": "kabur",
+      "from": 32,
+      "to": 46
+     },
+     {
+      "w": "sekarang,",
+      "from": 46,
+      "to": 81
+     },
+     {
+      "w": "kavaleri",
+      "from": 81,
+      "to": 97
+     },
+     {
+      "w": "mereka",
+      "from": 97,
+      "to": 103
+     },
+     {
+      "w": "akan",
+      "from": 103,
+      "to": 114
+     },
+     {
+      "w": "menyapu",
+      "from": 114,
+      "to": 132
+     },
+     {
+      "w": "kita",
+      "from": 132,
+      "to": 139
+     },
+     {
+      "w": "habis",
+      "from": 139,
+      "to": 154
+     },
+     {
+      "w": "di",
+      "from": 154,
+      "to": 159
+     },
+     {
+      "w": "jalan.",
+      "from": 159,
+      "to": 185
+     },
+     {
+      "w": "Tidak...",
+      "from": 185,
+      "to": 216
+     },
+     {
+      "w": "kita",
+      "from": 216,
+      "to": 225
+     },
+     {
+      "w": "tetap",
+      "from": 225,
+      "to": 238
+     },
+     {
+      "w": "di",
+      "from": 238,
+      "to": 242
+     },
+     {
+      "w": "sini.",
+      "from": 242,
+      "to": 250
+     }
+    ]
+   },
+   {
+    "voice": "perwira",
+    "speaker": "PERWIRA SHU",
+    "style": "syok kaget tidak percaya",
+    "text": "Tetap di sini?! Dengan apa kita melawan?!",
+    "from": 261,
+    "to": 333,
+    "words": [
+     {
+      "w": "Tetap",
+      "from": 261,
+      "to": 273
+     },
+     {
+      "w": "di",
+      "from": 273,
+      "to": 276
+     },
+     {
+      "w": "sini?!",
+      "from": 276,
+      "to": 283
+     },
+     {
+      "w": "Dengan",
+      "from": 283,
+      "to": 300
+     },
+     {
+      "w": "apa",
+      "from": 300,
+      "to": 308
+     },
+     {
+      "w": "kita",
+      "from": 308,
+      "to": 315
+     },
+     {
+      "w": "melawan?!",
+      "from": 315,
+      "to": 326
+     }
+    ]
+   },
+   {
+    "voice": "zhuge",
+    "speaker": "ZHUGE LIANG",
+    "style": "tenang tegas penuh rahasia",
+    "text": "Turunkan semua panji perang! Semua orang bersembunyi dan dilarang bersuara! Buka lebar keempat gerbang kota! Suruh beberapa prajurit menyamar jadi warga tua... dan sapulah jalan di depan gerbang!",
+    "from": 339,
+    "to": 703,
+    "words": [
+     {
+      "w": "Turunkan",
+      "from": 339,
+      "to": 356
+     },
+     {
+      "w": "semua",
+      "from": 356,
+      "to": 363
+     },
+     {
+      "w": "panji",
+      "from": 363,
+      "to": 375
+     },
+     {
+      "w": "perang!",
+      "from": 375,
+      "to": 392
+     },
+     {
+      "w": "Semua",
+      "from": 392,
+      "to": 408
+     },
+     {
+      "w": "orang",
+      "from": 408,
+      "to": 415
+     },
+     {
+      "w": "bersembunyi",
+      "from": 415,
+      "to": 435
+     },
+     {
+      "w": "dan",
+      "from": 435,
+      "to": 447
+     },
+     {
+      "w": "dilarang",
+      "from": 447,
+      "to": 461
+     },
+     {
+      "w": "bersuara!",
+      "from": 461,
+      "to": 485
+     },
+     {
+      "w": "Buka",
+      "from": 485,
+      "to": 504
+     },
+     {
+      "w": "lebar",
+      "from": 504,
+      "to": 515
+     },
+     {
+      "w": "keempat",
+      "from": 515,
+      "to": 527
+     },
+     {
+      "w": "gerbang",
+      "from": 527,
+      "to": 537
+     },
+     {
+      "w": "kota!",
+      "from": 537,
+      "to": 557
+     },
+     {
+      "w": "Suruh",
+      "from": 557,
+      "to": 570
+     },
+     {
+      "w": "beberapa",
+      "from": 570,
+      "to": 581
+     },
+     {
+      "w": "prajurit",
+      "from": 581,
+      "to": 597
+     },
+     {
+      "w": "menyamar",
+      "from": 597,
+      "to": 609
+     },
+     {
+      "w": "jadi",
+      "from": 609,
+      "to": 617
+     },
+     {
+      "w": "warga",
+      "from": 617,
+      "to": 627
+     },
+     {
+      "w": "tua...",
+      "from": 627,
+      "to": 634
+     },
+     {
+      "w": "dan",
+      "from": 634,
+      "to": 651
+     },
+     {
+      "w": "sapulah",
+      "from": 651,
+      "to": 668
+     },
+     {
+      "w": "jalan",
+      "from": 668,
+      "to": 677
+     },
+     {
+      "w": "di",
+      "from": 677,
+      "to": 680
+     },
+     {
+      "w": "depan",
+      "from": 680,
+      "to": 688
+     },
+     {
+      "w": "gerbang!",
+      "from": 688,
+      "to": 698
+     }
+    ]
+   }
+  ],
+  "s04_gerbang": [
+   {
+    "voice": "penyapu",
+    "speaker": "PENYAPU TUA",
+    "style": "berbisik cemas gemetar",
+    "text": "Sst... tangan saya gemetar! Pasukan musuh sudah kelihatan di ujung bukit!",
+    "from": 40,
+    "to": 198,
+    "words": [
+     {
+      "w": "Sst...",
+      "from": 40,
+      "to": 62
+     },
+     {
+      "w": "tangan",
+      "from": 62,
+      "to": 74
+     },
+     {
+      "w": "saya",
+      "from": 74,
+      "to": 82
+     },
+     {
+      "w": "gemetar!",
+      "from": 82,
+      "to": 99
+     },
+     {
+      "w": "Pasukan",
+      "from": 99,
+      "to": 140
+     },
+     {
+      "w": "musuh",
+      "from": 140,
+      "to": 150
+     },
+     {
+      "w": "sudah",
+      "from": 150,
+      "to": 157
+     },
+     {
+      "w": "kelihatan",
+      "from": 157,
+      "to": 171
+     },
+     {
+      "w": "di",
+      "from": 171,
+      "to": 175
+     },
+     {
+      "w": "ujung",
+      "from": 175,
+      "to": 183
+     },
+     {
+      "w": "bukit!",
+      "from": 183,
+      "to": 195
+     }
+    ]
+   },
+   {
+    "voice": "zhuge",
+    "speaker": "ZHUGE LIANG",
+    "style": "tenang lembut meyakinkan",
+    "text": "Tenang saja. Sapu terus seolah tak terjadi apa-apa. Aku akan menunggu di atas menara.",
+    "from": 205,
+    "to": 429,
+    "words": [
+     {
+      "w": "Tenang",
+      "from": 205,
+      "to": 213
+     },
+     {
+      "w": "saja.",
+      "from": 213,
+      "to": 219
+     },
+     {
+      "w": "Sapu",
+      "from": 219,
+      "to": 228
+     },
+     {
+      "w": "terus",
+      "from": 228,
+      "to": 282
+     },
+     {
+      "w": "seolah",
+      "from": 282,
+      "to": 291
+     },
+     {
+      "w": "tak",
+      "from": 291,
+      "to": 298
+     },
+     {
+      "w": "terjadi",
+      "from": 298,
+      "to": 312
+     },
+     {
+      "w": "apa-apa.",
+      "from": 312,
+      "to": 326
+     },
+     {
+      "w": "Aku",
+      "from": 326,
+      "to": 368
+     },
+     {
+      "w": "akan",
+      "from": 368,
+      "to": 387
+     },
+     {
+      "w": "menunggu",
+      "from": 387,
+      "to": 402
+     },
+     {
+      "w": "di",
+      "from": 402,
+      "to": 406
+     },
+     {
+      "w": "atas",
+      "from": 406,
+      "to": 413
+     },
+     {
+      "w": "menara.",
+      "from": 413,
+      "to": 423
+     }
+    ]
+   }
+  ],
+  "s05_simayi": [
+   {
+    "voice": "crowd_wei",
+    "speaker": "150.000 PASUKAN WEI",
+    "style": "teriakan perang garang bergemuruh",
+    "text": "SERBUUU!! HANCURKAN KOTA XICHENG!!",
+    "from": 21,
+    "to": 137,
+    "words": [
+     {
+      "w": "SERBUUU!!",
+      "from": 21,
+      "to": 48
+     },
+     {
+      "w": "HANCURKAN",
+      "from": 48,
+      "to": 67
+     },
+     {
+      "w": "KOTA",
+      "from": 67,
+      "to": 78
+     },
+     {
+      "w": "XICHENG!!",
+      "from": 78,
+      "to": 88
+     }
+    ]
+   },
+   {
+    "voice": "simazhao",
+    "speaker": "SIMA ZHAO",
+    "style": "bersemangat agresif mendesak",
+    "text": "Ayah! Lihat itu! Gerbang kota terbuka lebar tanpa satu pun penjaga! Kota ini kosong! Ayo serbu sekarang!",
+    "from": 145,
+    "to": 348,
+    "words": [
+     {
+      "w": "Ayah!",
+      "from": 178,
+      "to": 187
+     },
+     {
+      "w": "Lihat",
+      "from": 187,
+      "to": 201
+     },
+     {
+      "w": "itu!",
+      "from": 201,
+      "to": 209
+     },
+     {
+      "w": "Gerbang",
+      "from": 209,
+      "to": 228
+     },
+     {
+      "w": "kota",
+      "from": 228,
+      "to": 234
+     },
+     {
+      "w": "terbuka",
+      "from": 234,
+      "to": 243
+     },
+     {
+      "w": "lebar",
+      "from": 243,
+      "to": 252
+     },
+     {
+      "w": "tanpa",
+      "from": 252,
+      "to": 260
+     },
+     {
+      "w": "satu",
+      "from": 260,
+      "to": 265
+     },
+     {
+      "w": "pun",
+      "from": 265,
+      "to": 269
+     },
+     {
+      "w": "penjaga!",
+      "from": 269,
+      "to": 282
+     },
+     {
+      "w": "Kota",
+      "from": 282,
+      "to": 294
+     },
+     {
+      "w": "ini",
+      "from": 294,
+      "to": 299
+     },
+     {
+      "w": "kosong!",
+      "from": 299,
+      "to": 312
+     },
+     {
+      "w": "Ayo",
+      "from": 312,
+      "to": 324
+     },
+     {
+      "w": "serbu",
+      "from": 324,
+      "to": 333
+     },
+     {
+      "w": "sekarang!",
+      "from": 333,
+      "to": 342
+     }
+    ]
+   },
+   {
+    "voice": "simayi",
+    "speaker": "JEND. SIMA YI",
+    "style": "membentak menggelegar curiga",
+    "text": "BERHENTI!! Tahan seluruh pasukan!",
+    "from": 364,
+    "to": 435,
+    "words": [
+     {
+      "w": "BERHENTI!!",
+      "from": 364,
+      "to": 391
+     },
+     {
+      "w": "Tahan",
+      "from": 391,
+      "to": 401
+     },
+     {
+      "w": "seluruh",
+      "from": 401,
+      "to": 415
+     },
+     {
+      "w": "pasukan!",
+      "from": 415,
+      "to": 425
+     }
+    ]
+   }
+  ],
+  "s06_guqin": [
+   {
+    "voice": "simayi",
+    "speaker": "JEND. SIMA YI",
+    "style": "bergumam pelan curiga tegang",
+    "text": "Mustahil... Zhuge Liang duduk santai bermain kecapi di atas gerbang yang terbuka lebar... bahkan nada petikannya tidak bergetar sedikit pun.",
+    "from": 78,
+    "to": 346,
+    "words": [
+     {
+      "w": "Mustahil...",
+      "from": 78,
+      "to": 103
+     },
+     {
+      "w": "Zhuge",
+      "from": 103,
+      "to": 131
+     },
+     {
+      "w": "Liang",
+      "from": 131,
+      "to": 137
+     },
+     {
+      "w": "duduk",
+      "from": 137,
+      "to": 146
+     },
+     {
+      "w": "santai",
+      "from": 146,
+      "to": 158
+     },
+     {
+      "w": "bermain",
+      "from": 158,
+      "to": 171
+     },
+     {
+      "w": "kecapi",
+      "from": 171,
+      "to": 191
+     },
+     {
+      "w": "di",
+      "from": 191,
+      "to": 202
+     },
+     {
+      "w": "atas",
+      "from": 202,
+      "to": 209
+     },
+     {
+      "w": "gerbang",
+      "from": 209,
+      "to": 220
+     },
+     {
+      "w": "yang",
+      "from": 220,
+      "to": 225
+     },
+     {
+      "w": "terbuka",
+      "from": 225,
+      "to": 238
+     },
+     {
+      "w": "lebar...",
+      "from": 238,
+      "to": 251
+     },
+     {
+      "w": "bahkan",
+      "from": 251,
+      "to": 278
+     },
+     {
+      "w": "nada",
+      "from": 278,
+      "to": 285
+     },
+     {
+      "w": "petikannya",
+      "from": 285,
+      "to": 301
+     },
+     {
+      "w": "tidak",
+      "from": 301,
+      "to": 308
+     },
+     {
+      "w": "bergetar",
+      "from": 308,
+      "to": 324
+     },
+     {
+      "w": "sedikit",
+      "from": 324,
+      "to": 336
+     },
+     {
+      "w": "pun.",
+      "from": 336,
+      "to": 342
+     }
+    ]
+   }
+  ],
+  "s07_debat": [
+   {
+    "voice": "simazhao",
+    "speaker": "SIMA ZHAO",
+    "style": "mendesak kesal tidak sabar",
+    "text": "Ayah! Jangan tertipu! Bagaimana kalau kota ini memang benar-benar kosong dan dia cuma menggertak?! Biar aku pimpin pasukan masuk!",
+    "from": 9,
+    "to": 191,
+    "words": [
+     {
+      "w": "Ayah!",
+      "from": 9,
+      "to": 29
+     },
+     {
+      "w": "Jangan",
+      "from": 29,
+      "to": 36
+     },
+     {
+      "w": "tertipu!",
+      "from": 36,
+      "to": 49
+     },
+     {
+      "w": "Bagaimana",
+      "from": 49,
+      "to": 68
+     },
+     {
+      "w": "kalau",
+      "from": 68,
+      "to": 73
+     },
+     {
+      "w": "kota",
+      "from": 73,
+      "to": 80
+     },
+     {
+      "w": "ini",
+      "from": 80,
+      "to": 84
+     },
+     {
+      "w": "memang",
+      "from": 84,
+      "to": 89
+     },
+     {
+      "w": "benar-benar",
+      "from": 89,
+      "to": 106
+     },
+     {
+      "w": "kosong",
+      "from": 106,
+      "to": 115
+     },
+     {
+      "w": "dan",
+      "from": 115,
+      "to": 119
+     },
+     {
+      "w": "dia",
+      "from": 119,
+      "to": 122
+     },
+     {
+      "w": "cuma",
+      "from": 122,
+      "to": 127
+     },
+     {
+      "w": "menggertak?!",
+      "from": 127,
+      "to": 142
+     },
+     {
+      "w": "Biar",
+      "from": 142,
+      "to": 153
+     },
+     {
+      "w": "aku",
+      "from": 153,
+      "to": 161
+     },
+     {
+      "w": "pimpin",
+      "from": 161,
+      "to": 170
+     },
+     {
+      "w": "pasukan",
+      "from": 170,
+      "to": 180
+     },
+     {
+      "w": "masuk!",
+      "from": 180,
+      "to": 186
+     }
+    ]
+   },
+   {
+    "voice": "simayi",
+    "speaker": "JEND. SIMA YI",
+    "style": "marah tegas penuh perhitungan",
+    "text": "Bodoh! Kau tidak mengenal Zhuge Liang! Seumur hidupnya dia orang paling hati-hati di dunia! Jika gerbang dibuka selebar ini, pasti ada puluhan ribu pasukan penyergap bersembunyi di dalam kota!",
+    "from": 197,
+    "to": 490,
+    "words": [
+     {
+      "w": "Bodoh!",
+      "from": 197,
+      "to": 211
+     },
+     {
+      "w": "Kau",
+      "from": 211,
+      "to": 223
+     },
+     {
+      "w": "tidak",
+      "from": 223,
+      "to": 227
+     },
+     {
+      "w": "mengenal",
+      "from": 227,
+      "to": 238
+     },
+     {
+      "w": "Zhuge",
+      "from": 238,
+      "to": 246
+     },
+     {
+      "w": "Liang!",
+      "from": 246,
+      "to": 264
+     },
+     {
+      "w": "Seumur",
+      "from": 264,
+      "to": 274
+     },
+     {
+      "w": "hidupnya",
+      "from": 274,
+      "to": 283
+     },
+     {
+      "w": "dia",
+      "from": 283,
+      "to": 287
+     },
+     {
+      "w": "orang",
+      "from": 287,
+      "to": 293
+     },
+     {
+      "w": "paling",
+      "from": 293,
+      "to": 302
+     },
+     {
+      "w": "hati-hati",
+      "from": 302,
+      "to": 315
+     },
+     {
+      "w": "di",
+      "from": 315,
+      "to": 320
+     },
+     {
+      "w": "dunia!",
+      "from": 320,
+      "to": 343
+     },
+     {
+      "w": "Jika",
+      "from": 343,
+      "to": 350
+     },
+     {
+      "w": "gerbang",
+      "from": 350,
+      "to": 359
+     },
+     {
+      "w": "dibuka",
+      "from": 359,
+      "to": 368
+     },
+     {
+      "w": "selebar",
+      "from": 368,
+      "to": 378
+     },
+     {
+      "w": "ini,",
+      "from": 378,
+      "to": 393
+     },
+     {
+      "w": "pasti",
+      "from": 393,
+      "to": 400
+     },
+     {
+      "w": "ada",
+      "from": 400,
+      "to": 407
+     },
+     {
+      "w": "puluhan",
+      "from": 407,
+      "to": 418
+     },
+     {
+      "w": "ribu",
+      "from": 418,
+      "to": 426
+     },
+     {
+      "w": "pasukan",
+      "from": 426,
+      "to": 437
+     },
+     {
+      "w": "penyergap",
+      "from": 437,
+      "to": 450
+     },
+     {
+      "w": "bersembunyi",
+      "from": 450,
+      "to": 465
+     },
+     {
+      "w": "di",
+      "from": 465,
+      "to": 468
+     },
+     {
+      "w": "dalam",
+      "from": 468,
+      "to": 474
+     },
+     {
+      "w": "kota!",
+      "from": 474,
+      "to": 483
+     }
+    ]
+   }
+  ],
+  "s08_mundur": [
+   {
+    "voice": "simayi",
+    "speaker": "JEND. SIMA YI",
+    "style": "berteriak komando keras panik",
+    "text": "INI JEBAKAN!! Seluruh pasukan... MUNDUR SEKARANG JUGA!!",
+    "from": 9,
+    "to": 135,
+    "words": [
+     {
+      "w": "INI",
+      "from": 9,
+      "to": 18
+     },
+     {
+      "w": "JEBAKAN!!",
+      "from": 18,
+      "to": 33
+     },
+     {
+      "w": "Seluruh",
+      "from": 33,
+      "to": 66
+     },
+     {
+      "w": "pasukan...",
+      "from": 66,
+      "to": 94
+     },
+     {
+      "w": "MUNDUR",
+      "from": 94,
+      "to": 108
+     },
+     {
+      "w": "SEKARANG",
+      "from": 108,
+      "to": 117
+     },
+     {
+      "w": "JUGA!!",
+      "from": 117,
+      "to": 125
+     }
+    ]
+   },
+   {
+    "voice": "crowd_retreat",
+    "speaker": "PASUKAN WEI",
+    "style": "seruan pasukan mundur serentak",
+    "text": "MUNDUR!! TARIK PASUKAN!! MUNDUR!!",
+    "from": 149,
+    "to": 281,
+    "words": [
+     {
+      "w": "MUNDUR!!",
+      "from": 149,
+      "to": 173
+     },
+     {
+      "w": "TARIK",
+      "from": 173,
+      "to": 190
+     },
+     {
+      "w": "PASUKAN!!",
+      "from": 190,
+      "to": 225
+     },
+     {
+      "w": "MUNDUR!!",
+      "from": 225,
+      "to": 246
+     }
+    ]
+   },
+   {
+    "voice": "simazhao",
+    "speaker": "SIMA ZHAO",
+    "style": "bingung syok tak percaya",
+    "text": "Ayah! Kita benar-benar mundur tanpa bertarung?!",
+    "from": 289,
+    "to": 379,
+    "words": [
+     {
+      "w": "Ayah!",
+      "from": 289,
+      "to": 320
+     },
+     {
+      "w": "Kita",
+      "from": 320,
+      "to": 326
+     },
+     {
+      "w": "benar-benar",
+      "from": 326,
+      "to": 339
+     },
+     {
+      "w": "mundur",
+      "from": 339,
+      "to": 349
+     },
+     {
+      "w": "tanpa",
+      "from": 349,
+      "to": 358
+     },
+     {
+      "w": "bertarung?!",
+      "from": 358,
+      "to": 374
+     }
+    ]
+   }
+  ],
+  "s09_lega": [
+   {
+    "voice": "perwira",
+    "speaker": "PERWIRA SHU",
+    "style": "terperangah kagum lega",
+    "text": "Tuan! Seratus lima puluh ribu tentara mundur semua! Bagaimana Tuan bisa seyakin itu Sima Yi tidak menyerang?!",
+    "from": 16,
+    "to": 190,
+    "words": [
+     {
+      "w": "Tuan!",
+      "from": 16,
+      "to": 25
+     },
+     {
+      "w": "Seratus",
+      "from": 25,
+      "to": 62
+     },
+     {
+      "w": "lima",
+      "from": 62,
+      "to": 75
+     },
+     {
+      "w": "puluh",
+      "from": 75,
+      "to": 80
+     },
+     {
+      "w": "ribu",
+      "from": 80,
+      "to": 85
+     },
+     {
+      "w": "tentara",
+      "from": 85,
+      "to": 95
+     },
+     {
+      "w": "mundur",
+      "from": 95,
+      "to": 111
+     },
+     {
+      "w": "semua!",
+      "from": 111,
+      "to": 116
+     },
+     {
+      "w": "Bagaimana",
+      "from": 116,
+      "to": 128
+     },
+     {
+      "w": "Tuan",
+      "from": 128,
+      "to": 132
+     },
+     {
+      "w": "bisa",
+      "from": 132,
+      "to": 138
+     },
+     {
+      "w": "seyakin",
+      "from": 138,
+      "to": 157
+     },
+     {
+      "w": "itu",
+      "from": 157,
+      "to": 162
+     },
+     {
+      "w": "Sima",
+      "from": 162,
+      "to": 169
+     },
+     {
+      "w": "Yi",
+      "from": 169,
+      "to": 170
+     },
+     {
+      "w": "tidak",
+      "from": 170,
+      "to": 174
+     },
+     {
+      "w": "menyerang?!",
+      "from": 174,
+      "to": 186
+     }
+    ]
+   },
+   {
+    "voice": "zhuge",
+    "speaker": "ZHUGE LIANG",
+    "style": "tertawa kecil lega bijaksana",
+    "text": "Hahaha... Sima Yi tahu aku selalu berhati-hati. Justru karena dia terlalu pintar, dia mengira ini jebakan. Andai dia bukan Sima Yi... hari ini kita semua sudah habis.",
+    "from": 197,
+    "to": 475,
+    "words": [
+     {
+      "w": "Hahaha...",
+      "from": 197,
+      "to": 220
+     },
+     {
+      "w": "Sima",
+      "from": 220,
+      "to": 241
+     },
+     {
+      "w": "Yi",
+      "from": 241,
+      "to": 245
+     },
+     {
+      "w": "tahu",
+      "from": 245,
+      "to": 251
+     },
+     {
+      "w": "aku",
+      "from": 251,
+      "to": 258
+     },
+     {
+      "w": "selalu",
+      "from": 258,
+      "to": 267
+     },
+     {
+      "w": "berhati-hati.",
+      "from": 267,
+      "to": 303
+     },
+     {
+      "w": "Justru",
+      "from": 303,
+      "to": 314
+     },
+     {
+      "w": "karena",
+      "from": 314,
+      "to": 319
+     },
+     {
+      "w": "dia",
+      "from": 319,
+      "to": 324
+     },
+     {
+      "w": "terlalu",
+      "from": 324,
+      "to": 335
+     },
+     {
+      "w": "pintar,",
+      "from": 335,
+      "to": 352
+     },
+     {
+      "w": "dia",
+      "from": 352,
+      "to": 355
+     },
+     {
+      "w": "mengira",
+      "from": 355,
+      "to": 365
+     },
+     {
+      "w": "ini",
+      "from": 365,
+      "to": 370
+     },
+     {
+      "w": "jebakan.",
+      "from": 370,
+      "to": 383
+     },
+     {
+      "w": "Andai",
+      "from": 383,
+      "to": 395
+     },
+     {
+      "w": "dia",
+      "from": 395,
+      "to": 399
+     },
+     {
+      "w": "bukan",
+      "from": 399,
+      "to": 405
+     },
+     {
+      "w": "Sima",
+      "from": 405,
+      "to": 415
+     },
+     {
+      "w": "Yi...",
+      "from": 415,
+      "to": 430
+     },
+     {
+      "w": "hari",
+      "from": 430,
+      "to": 435
+     },
+     {
+      "w": "ini",
+      "from": 435,
+      "to": 439
+     },
+     {
+      "w": "kita",
+      "from": 439,
+      "to": 444
+     },
+     {
+      "w": "semua",
+      "from": 444,
+      "to": 452
+     },
+     {
+      "w": "sudah",
+      "from": 452,
+      "to": 457
+     },
+     {
+      "w": "habis.",
+      "from": 457,
+      "to": 468
+     }
+    ]
+   }
+  ],
+  "s10_penutup": [
+   {
+    "voice": "narator",
+    "speaker": "",
+    "style": "narasi penutup epik mendalam",
+    "text": "Tanpa melepaskan satu anak panah pun, satu alunan kecapi memukul mundur seratus lima puluh ribu tentara. Inilah Strategi Kota Kosong—bukti bahwa perang terbesar sering dimenangkan di dalam pikiran lawan.",
+    "from": 14,
+    "to": 358,
+    "words": [
+     {
+      "w": "Tanpa",
+      "from": 14,
+      "to": 24
+     },
+     {
+      "w": "melepaskan",
+      "from": 24,
+      "to": 40
+     },
+     {
+      "w": "satu",
+      "from": 40,
+      "to": 46
+     },
+     {
+      "w": "anak",
+      "from": 46,
+      "to": 52
+     },
+     {
+      "w": "panah",
+      "from": 52,
+      "to": 63
+     },
+     {
+      "w": "pun,",
+      "from": 63,
+      "to": 70
+     },
+     {
+      "w": "satu",
+      "from": 70,
+      "to": 89
+     },
+     {
+      "w": "alunan",
+      "from": 89,
+      "to": 100
+     },
+     {
+      "w": "kecapi",
+      "from": 100,
+      "to": 113
+     },
+     {
+      "w": "memukul",
+      "from": 113,
+      "to": 126
+     },
+     {
+      "w": "mundur",
+      "from": 126,
+      "to": 136
+     },
+     {
+      "w": "seratus",
+      "from": 136,
+      "to": 153
+     },
+     {
+      "w": "lima",
+      "from": 153,
+      "to": 171
+     },
+     {
+      "w": "puluh",
+      "from": 171,
+      "to": 182
+     },
+     {
+      "w": "ribu",
+      "from": 182,
+      "to": 205
+     },
+     {
+      "w": "tentara.",
+      "from": 205,
+      "to": 215
+     },
+     {
+      "w": "Inilah",
+      "from": 215,
+      "to": 227
+     },
+     {
+      "w": "Strategi",
+      "from": 227,
+      "to": 240
+     },
+     {
+      "w": "Kota",
+      "from": 240,
+      "to": 247
+     },
+     {
+      "w": "Kosong—bukti",
+      "from": 247,
+      "to": 276
+     },
+     {
+      "w": "bahwa",
+      "from": 276,
+      "to": 283
+     },
+     {
+      "w": "perang",
+      "from": 283,
+      "to": 292
+     },
+     {
+      "w": "terbesar",
+      "from": 292,
+      "to": 302
+     },
+     {
+      "w": "sering",
+      "from": 302,
+      "to": 310
+     },
+     {
+      "w": "dimenangkan",
+      "from": 310,
+      "to": 324
+     },
+     {
+      "w": "di",
+      "from": 324,
+      "to": 326
+     },
+     {
+      "w": "dalam",
+      "from": 326,
+      "to": 331
+     },
+     {
+      "w": "pikiran",
+      "from": 331,
+      "to": 344
+     },
+     {
+      "w": "lawan.",
+      "from": 344,
+      "to": 355
+     }
+    ]
+   }
+  ]
+ },
+ "captions": [
+  {
+   "text": "Kota",
+   "startFrame": 21,
+   "endFrame": 27,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "kecil",
+   "startFrame": 27,
+   "endFrame": 35,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "tanpa",
+   "startFrame": 35,
+   "endFrame": 42,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "prajurit...",
+   "startFrame": 42,
+   "endFrame": 54,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "dikepung",
+   "startFrame": 54,
+   "endFrame": 67,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "seratus",
+   "startFrame": 67,
+   "endFrame": 80,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "lima",
+   "startFrame": 80,
+   "endFrame": 91,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 91,
+   "endFrame": 112,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "ribu",
+   "startFrame": 112,
+   "endFrame": 124,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "tentara!",
+   "startFrame": 124,
+   "endFrame": 131,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Lapor,",
+   "startFrame": 142,
+   "endFrame": 153,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Tuan",
+   "startFrame": 153,
+   "endFrame": 160,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Zhuge",
+   "startFrame": 160,
+   "endFrame": 167,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Liang!",
+   "startFrame": 167,
+   "endFrame": 174,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Pasukan",
+   "startFrame": 174,
+   "endFrame": 194,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "kita",
+   "startFrame": 194,
+   "endFrame": 200,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "kalah!",
+   "startFrame": 200,
+   "endFrame": 209,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Jenderal",
+   "startFrame": 209,
+   "endFrame": 233,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Sima",
+   "startFrame": 233,
+   "endFrame": 241,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Yi",
+   "startFrame": 241,
+   "endFrame": 245,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "datang",
+   "startFrame": 245,
+   "endFrame": 258,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "membawa",
+   "startFrame": 258,
+   "endFrame": 269,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "seratus",
+   "startFrame": 269,
+   "endFrame": 279,
+   "highlight": true,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "lima",
+   "startFrame": 279,
+   "endFrame": 294,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 294,
+   "endFrame": 311,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "ribu",
+   "startFrame": 311,
+   "endFrame": 316,
+   "highlight": true,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "tentara!",
+   "startFrame": 316,
+   "endFrame": 334,
+   "highlight": true,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "Mereka",
+   "startFrame": 334,
+   "endFrame": 339,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "tinggal",
+   "startFrame": 339,
+   "endFrame": 346,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "beberapa",
+   "startFrame": 346,
+   "endFrame": 354,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "kilometer",
+   "startFrame": 354,
+   "endFrame": 361,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "lagi!",
+   "startFrame": 361,
+   "endFrame": 371,
+   "highlight": false,
+   "voice": "pengintai",
+   "speaker": "PENGINTAI SHU",
+   "scene": "s01_kabar"
+  },
+  {
+   "text": "AAAHHH!!",
+   "startFrame": 402,
+   "endFrame": 435,
+   "highlight": true,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Seratus",
+   "startFrame": 435,
+   "endFrame": 471,
+   "highlight": true,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "lima",
+   "startFrame": 471,
+   "endFrame": 478,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 478,
+   "endFrame": 483,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "ribu?!",
+   "startFrame": 483,
+   "endFrame": 487,
+   "highlight": true,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Kita",
+   "startFrame": 487,
+   "endFrame": 493,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "cuma",
+   "startFrame": 493,
+   "endFrame": 501,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "punya",
+   "startFrame": 501,
+   "endFrame": 508,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "dua",
+   "startFrame": 508,
+   "endFrame": 512,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "ribu",
+   "startFrame": 512,
+   "endFrame": 518,
+   "highlight": true,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "prajurit!",
+   "startFrame": 518,
+   "endFrame": 532,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Kita",
+   "startFrame": 532,
+   "endFrame": 536,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "akan",
+   "startFrame": 536,
+   "endFrame": 541,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "mati",
+   "startFrame": 541,
+   "endFrame": 545,
+   "highlight": true,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "semua!",
+   "startFrame": 545,
+   "endFrame": 565,
+   "highlight": false,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Kabur!!",
+   "startFrame": 565,
+   "endFrame": 576,
+   "highlight": true,
+   "voice": "crowd_panic",
+   "speaker": "WARGA & PRAJURIT",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Tuan!",
+   "startFrame": 597,
+   "endFrame": 631,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Kita",
+   "startFrame": 631,
+   "endFrame": 636,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "tak",
+   "startFrame": 636,
+   "endFrame": 640,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "mungkin",
+   "startFrame": 640,
+   "endFrame": 648,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "menang!",
+   "startFrame": 648,
+   "endFrame": 676,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Sebaiknya",
+   "startFrame": 676,
+   "endFrame": 691,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "kita",
+   "startFrame": 691,
+   "endFrame": 696,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "tinggalkan",
+   "startFrame": 696,
+   "endFrame": 708,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "kota",
+   "startFrame": 708,
+   "endFrame": 715,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "ini",
+   "startFrame": 715,
+   "endFrame": 719,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "sekarang",
+   "startFrame": 719,
+   "endFrame": 726,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "juga!",
+   "startFrame": 726,
+   "endFrame": 734,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s02_panik"
+  },
+  {
+   "text": "Kalau",
+   "startFrame": 763,
+   "endFrame": 774,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "kita",
+   "startFrame": 774,
+   "endFrame": 785,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "kabur",
+   "startFrame": 785,
+   "endFrame": 799,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "sekarang,",
+   "startFrame": 799,
+   "endFrame": 834,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "kavaleri",
+   "startFrame": 834,
+   "endFrame": 850,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 850,
+   "endFrame": 856,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "akan",
+   "startFrame": 856,
+   "endFrame": 867,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "menyapu",
+   "startFrame": 867,
+   "endFrame": 885,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "kita",
+   "startFrame": 885,
+   "endFrame": 892,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "habis",
+   "startFrame": 892,
+   "endFrame": 907,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "di",
+   "startFrame": 907,
+   "endFrame": 912,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "jalan.",
+   "startFrame": 912,
+   "endFrame": 938,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Tidak...",
+   "startFrame": 938,
+   "endFrame": 969,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "kita",
+   "startFrame": 969,
+   "endFrame": 978,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "tetap",
+   "startFrame": 978,
+   "endFrame": 991,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "di",
+   "startFrame": 991,
+   "endFrame": 995,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "sini.",
+   "startFrame": 995,
+   "endFrame": 1003,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Tetap",
+   "startFrame": 1014,
+   "endFrame": 1026,
+   "highlight": true,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "di",
+   "startFrame": 1026,
+   "endFrame": 1029,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "sini?!",
+   "startFrame": 1029,
+   "endFrame": 1036,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Dengan",
+   "startFrame": 1036,
+   "endFrame": 1053,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "apa",
+   "startFrame": 1053,
+   "endFrame": 1061,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "kita",
+   "startFrame": 1061,
+   "endFrame": 1068,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "melawan?!",
+   "startFrame": 1068,
+   "endFrame": 1079,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Turunkan",
+   "startFrame": 1092,
+   "endFrame": 1109,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "semua",
+   "startFrame": 1109,
+   "endFrame": 1116,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "panji",
+   "startFrame": 1116,
+   "endFrame": 1128,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "perang!",
+   "startFrame": 1128,
+   "endFrame": 1145,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Semua",
+   "startFrame": 1145,
+   "endFrame": 1161,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "orang",
+   "startFrame": 1161,
+   "endFrame": 1168,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "bersembunyi",
+   "startFrame": 1168,
+   "endFrame": 1188,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "dan",
+   "startFrame": 1188,
+   "endFrame": 1200,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "dilarang",
+   "startFrame": 1200,
+   "endFrame": 1214,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "bersuara!",
+   "startFrame": 1214,
+   "endFrame": 1238,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Buka",
+   "startFrame": 1238,
+   "endFrame": 1257,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "lebar",
+   "startFrame": 1257,
+   "endFrame": 1268,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "keempat",
+   "startFrame": 1268,
+   "endFrame": 1280,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "gerbang",
+   "startFrame": 1280,
+   "endFrame": 1290,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "kota!",
+   "startFrame": 1290,
+   "endFrame": 1310,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Suruh",
+   "startFrame": 1310,
+   "endFrame": 1323,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "beberapa",
+   "startFrame": 1323,
+   "endFrame": 1334,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "prajurit",
+   "startFrame": 1334,
+   "endFrame": 1350,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "menyamar",
+   "startFrame": 1350,
+   "endFrame": 1362,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "jadi",
+   "startFrame": 1362,
+   "endFrame": 1370,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "warga",
+   "startFrame": 1370,
+   "endFrame": 1380,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "tua...",
+   "startFrame": 1380,
+   "endFrame": 1387,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "dan",
+   "startFrame": 1387,
+   "endFrame": 1404,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "sapulah",
+   "startFrame": 1404,
+   "endFrame": 1421,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "jalan",
+   "startFrame": 1421,
+   "endFrame": 1430,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "di",
+   "startFrame": 1430,
+   "endFrame": 1433,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "depan",
+   "startFrame": 1433,
+   "endFrame": 1441,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "gerbang!",
+   "startFrame": 1441,
+   "endFrame": 1451,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s03_perintah"
+  },
+  {
+   "text": "Sst...",
+   "startFrame": 1509,
+   "endFrame": 1531,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "tangan",
+   "startFrame": 1531,
+   "endFrame": 1543,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "saya",
+   "startFrame": 1543,
+   "endFrame": 1551,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "gemetar!",
+   "startFrame": 1551,
+   "endFrame": 1568,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "Pasukan",
+   "startFrame": 1568,
+   "endFrame": 1609,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "musuh",
+   "startFrame": 1609,
+   "endFrame": 1619,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 1619,
+   "endFrame": 1626,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "kelihatan",
+   "startFrame": 1626,
+   "endFrame": 1640,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "di",
+   "startFrame": 1640,
+   "endFrame": 1644,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "ujung",
+   "startFrame": 1644,
+   "endFrame": 1652,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "bukit!",
+   "startFrame": 1652,
+   "endFrame": 1664,
+   "highlight": false,
+   "voice": "penyapu",
+   "speaker": "PENYAPU TUA",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "Tenang",
+   "startFrame": 1674,
+   "endFrame": 1682,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "saja.",
+   "startFrame": 1682,
+   "endFrame": 1688,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "Sapu",
+   "startFrame": 1688,
+   "endFrame": 1697,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "terus",
+   "startFrame": 1697,
+   "endFrame": 1751,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "seolah",
+   "startFrame": 1751,
+   "endFrame": 1760,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "tak",
+   "startFrame": 1760,
+   "endFrame": 1767,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "terjadi",
+   "startFrame": 1767,
+   "endFrame": 1781,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "apa-apa.",
+   "startFrame": 1781,
+   "endFrame": 1795,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "Aku",
+   "startFrame": 1795,
+   "endFrame": 1837,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "akan",
+   "startFrame": 1837,
+   "endFrame": 1856,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "menunggu",
+   "startFrame": 1856,
+   "endFrame": 1871,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "di",
+   "startFrame": 1871,
+   "endFrame": 1875,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "atas",
+   "startFrame": 1875,
+   "endFrame": 1882,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "menara.",
+   "startFrame": 1882,
+   "endFrame": 1892,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s04_gerbang"
+  },
+  {
+   "text": "SERBUUU!!",
+   "startFrame": 1932,
+   "endFrame": 1959,
+   "highlight": true,
+   "voice": "crowd_wei",
+   "speaker": "150.000 PASUKAN WEI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "HANCURKAN",
+   "startFrame": 1959,
+   "endFrame": 1978,
+   "highlight": false,
+   "voice": "crowd_wei",
+   "speaker": "150.000 PASUKAN WEI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "KOTA",
+   "startFrame": 1978,
+   "endFrame": 1989,
+   "highlight": false,
+   "voice": "crowd_wei",
+   "speaker": "150.000 PASUKAN WEI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "XICHENG!!",
+   "startFrame": 1989,
+   "endFrame": 1999,
+   "highlight": false,
+   "voice": "crowd_wei",
+   "speaker": "150.000 PASUKAN WEI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "Ayah!",
+   "startFrame": 2089,
+   "endFrame": 2098,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "Lihat",
+   "startFrame": 2098,
+   "endFrame": 2112,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "itu!",
+   "startFrame": 2112,
+   "endFrame": 2120,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "Gerbang",
+   "startFrame": 2120,
+   "endFrame": 2139,
+   "highlight": true,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "kota",
+   "startFrame": 2139,
+   "endFrame": 2145,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "terbuka",
+   "startFrame": 2145,
+   "endFrame": 2154,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "lebar",
+   "startFrame": 2154,
+   "endFrame": 2163,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "tanpa",
+   "startFrame": 2163,
+   "endFrame": 2171,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "satu",
+   "startFrame": 2171,
+   "endFrame": 2176,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "pun",
+   "startFrame": 2176,
+   "endFrame": 2180,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "penjaga!",
+   "startFrame": 2180,
+   "endFrame": 2193,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "Kota",
+   "startFrame": 2193,
+   "endFrame": 2205,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "ini",
+   "startFrame": 2205,
+   "endFrame": 2210,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "kosong!",
+   "startFrame": 2210,
+   "endFrame": 2223,
+   "highlight": true,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "Ayo",
+   "startFrame": 2223,
+   "endFrame": 2235,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "serbu",
+   "startFrame": 2235,
+   "endFrame": 2244,
+   "highlight": true,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "sekarang!",
+   "startFrame": 2244,
+   "endFrame": 2253,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "BERHENTI!!",
+   "startFrame": 2275,
+   "endFrame": 2302,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "Tahan",
+   "startFrame": 2302,
+   "endFrame": 2312,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "seluruh",
+   "startFrame": 2312,
+   "endFrame": 2326,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "pasukan!",
+   "startFrame": 2326,
+   "endFrame": 2336,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s05_simayi"
+  },
+  {
+   "text": "Mustahil...",
+   "startFrame": 2441,
+   "endFrame": 2466,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "Zhuge",
+   "startFrame": 2466,
+   "endFrame": 2494,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "Liang",
+   "startFrame": 2494,
+   "endFrame": 2500,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "duduk",
+   "startFrame": 2500,
+   "endFrame": 2509,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "santai",
+   "startFrame": 2509,
+   "endFrame": 2521,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "bermain",
+   "startFrame": 2521,
+   "endFrame": 2534,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "kecapi",
+   "startFrame": 2534,
+   "endFrame": 2554,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "di",
+   "startFrame": 2554,
+   "endFrame": 2565,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "atas",
+   "startFrame": 2565,
+   "endFrame": 2572,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "gerbang",
+   "startFrame": 2572,
+   "endFrame": 2583,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "yang",
+   "startFrame": 2583,
+   "endFrame": 2588,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "terbuka",
+   "startFrame": 2588,
+   "endFrame": 2601,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "lebar...",
+   "startFrame": 2601,
+   "endFrame": 2614,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "bahkan",
+   "startFrame": 2614,
+   "endFrame": 2641,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "nada",
+   "startFrame": 2641,
+   "endFrame": 2648,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "petikannya",
+   "startFrame": 2648,
+   "endFrame": 2664,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 2664,
+   "endFrame": 2671,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "bergetar",
+   "startFrame": 2671,
+   "endFrame": 2687,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "sedikit",
+   "startFrame": 2687,
+   "endFrame": 2699,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "pun.",
+   "startFrame": 2699,
+   "endFrame": 2705,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s06_guqin"
+  },
+  {
+   "text": "Ayah!",
+   "startFrame": 2735,
+   "endFrame": 2755,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Jangan",
+   "startFrame": 2755,
+   "endFrame": 2762,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "tertipu!",
+   "startFrame": 2762,
+   "endFrame": 2775,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Bagaimana",
+   "startFrame": 2775,
+   "endFrame": 2794,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "kalau",
+   "startFrame": 2794,
+   "endFrame": 2799,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "kota",
+   "startFrame": 2799,
+   "endFrame": 2806,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "ini",
+   "startFrame": 2806,
+   "endFrame": 2810,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "memang",
+   "startFrame": 2810,
+   "endFrame": 2815,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "benar-benar",
+   "startFrame": 2815,
+   "endFrame": 2832,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "kosong",
+   "startFrame": 2832,
+   "endFrame": 2841,
+   "highlight": true,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "dan",
+   "startFrame": 2841,
+   "endFrame": 2845,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "dia",
+   "startFrame": 2845,
+   "endFrame": 2848,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "cuma",
+   "startFrame": 2848,
+   "endFrame": 2853,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "menggertak?!",
+   "startFrame": 2853,
+   "endFrame": 2868,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Biar",
+   "startFrame": 2868,
+   "endFrame": 2879,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "aku",
+   "startFrame": 2879,
+   "endFrame": 2887,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "pimpin",
+   "startFrame": 2887,
+   "endFrame": 2896,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "pasukan",
+   "startFrame": 2896,
+   "endFrame": 2906,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "masuk!",
+   "startFrame": 2906,
+   "endFrame": 2912,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Bodoh!",
+   "startFrame": 2923,
+   "endFrame": 2937,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Kau",
+   "startFrame": 2937,
+   "endFrame": 2949,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 2949,
+   "endFrame": 2953,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "mengenal",
+   "startFrame": 2953,
+   "endFrame": 2964,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Zhuge",
+   "startFrame": 2964,
+   "endFrame": 2972,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Liang!",
+   "startFrame": 2972,
+   "endFrame": 2990,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Seumur",
+   "startFrame": 2990,
+   "endFrame": 3000,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "hidupnya",
+   "startFrame": 3000,
+   "endFrame": 3009,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "dia",
+   "startFrame": 3009,
+   "endFrame": 3013,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "orang",
+   "startFrame": 3013,
+   "endFrame": 3019,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "paling",
+   "startFrame": 3019,
+   "endFrame": 3028,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "hati-hati",
+   "startFrame": 3028,
+   "endFrame": 3041,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "di",
+   "startFrame": 3041,
+   "endFrame": 3046,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "dunia!",
+   "startFrame": 3046,
+   "endFrame": 3069,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "Jika",
+   "startFrame": 3069,
+   "endFrame": 3076,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "gerbang",
+   "startFrame": 3076,
+   "endFrame": 3085,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "dibuka",
+   "startFrame": 3085,
+   "endFrame": 3094,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "selebar",
+   "startFrame": 3094,
+   "endFrame": 3104,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "ini,",
+   "startFrame": 3104,
+   "endFrame": 3119,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "pasti",
+   "startFrame": 3119,
+   "endFrame": 3126,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "ada",
+   "startFrame": 3126,
+   "endFrame": 3133,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "puluhan",
+   "startFrame": 3133,
+   "endFrame": 3144,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "ribu",
+   "startFrame": 3144,
+   "endFrame": 3152,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "pasukan",
+   "startFrame": 3152,
+   "endFrame": 3163,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "penyergap",
+   "startFrame": 3163,
+   "endFrame": 3176,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "bersembunyi",
+   "startFrame": 3176,
+   "endFrame": 3191,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "di",
+   "startFrame": 3191,
+   "endFrame": 3194,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "dalam",
+   "startFrame": 3194,
+   "endFrame": 3200,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "kota!",
+   "startFrame": 3200,
+   "endFrame": 3209,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s07_debat"
+  },
+  {
+   "text": "INI",
+   "startFrame": 3237,
+   "endFrame": 3246,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "JEBAKAN!!",
+   "startFrame": 3246,
+   "endFrame": 3261,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "Seluruh",
+   "startFrame": 3261,
+   "endFrame": 3294,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "pasukan...",
+   "startFrame": 3294,
+   "endFrame": 3322,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "MUNDUR",
+   "startFrame": 3322,
+   "endFrame": 3336,
+   "highlight": true,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "SEKARANG",
+   "startFrame": 3336,
+   "endFrame": 3345,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "JUGA!!",
+   "startFrame": 3345,
+   "endFrame": 3353,
+   "highlight": false,
+   "voice": "simayi",
+   "speaker": "JEND. SIMA YI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "MUNDUR!!",
+   "startFrame": 3377,
+   "endFrame": 3401,
+   "highlight": true,
+   "voice": "crowd_retreat",
+   "speaker": "PASUKAN WEI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "TARIK",
+   "startFrame": 3401,
+   "endFrame": 3418,
+   "highlight": false,
+   "voice": "crowd_retreat",
+   "speaker": "PASUKAN WEI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "PASUKAN!!",
+   "startFrame": 3418,
+   "endFrame": 3453,
+   "highlight": false,
+   "voice": "crowd_retreat",
+   "speaker": "PASUKAN WEI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "MUNDUR!!",
+   "startFrame": 3453,
+   "endFrame": 3474,
+   "highlight": true,
+   "voice": "crowd_retreat",
+   "speaker": "PASUKAN WEI",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "Ayah!",
+   "startFrame": 3517,
+   "endFrame": 3548,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "Kita",
+   "startFrame": 3548,
+   "endFrame": 3554,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "benar-benar",
+   "startFrame": 3554,
+   "endFrame": 3567,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "mundur",
+   "startFrame": 3567,
+   "endFrame": 3577,
+   "highlight": true,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "tanpa",
+   "startFrame": 3577,
+   "endFrame": 3586,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "bertarung?!",
+   "startFrame": 3586,
+   "endFrame": 3602,
+   "highlight": false,
+   "voice": "simazhao",
+   "speaker": "SIMA ZHAO",
+   "scene": "s08_mundur"
+  },
+  {
+   "text": "Tuan!",
+   "startFrame": 3639,
+   "endFrame": 3648,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Seratus",
+   "startFrame": 3648,
+   "endFrame": 3685,
+   "highlight": true,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "lima",
+   "startFrame": 3685,
+   "endFrame": 3698,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 3698,
+   "endFrame": 3703,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "ribu",
+   "startFrame": 3703,
+   "endFrame": 3708,
+   "highlight": true,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "tentara",
+   "startFrame": 3708,
+   "endFrame": 3718,
+   "highlight": true,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "mundur",
+   "startFrame": 3718,
+   "endFrame": 3734,
+   "highlight": true,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "semua!",
+   "startFrame": 3734,
+   "endFrame": 3739,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Bagaimana",
+   "startFrame": 3739,
+   "endFrame": 3751,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Tuan",
+   "startFrame": 3751,
+   "endFrame": 3755,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "bisa",
+   "startFrame": 3755,
+   "endFrame": 3761,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "seyakin",
+   "startFrame": 3761,
+   "endFrame": 3780,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "itu",
+   "startFrame": 3780,
+   "endFrame": 3785,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Sima",
+   "startFrame": 3785,
+   "endFrame": 3792,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Yi",
+   "startFrame": 3792,
+   "endFrame": 3794,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 3793,
+   "endFrame": 3797,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "menyerang?!",
+   "startFrame": 3797,
+   "endFrame": 3809,
+   "highlight": false,
+   "voice": "perwira",
+   "speaker": "PERWIRA SHU",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Hahaha...",
+   "startFrame": 3820,
+   "endFrame": 3843,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Sima",
+   "startFrame": 3843,
+   "endFrame": 3864,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Yi",
+   "startFrame": 3864,
+   "endFrame": 3868,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "tahu",
+   "startFrame": 3868,
+   "endFrame": 3874,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "aku",
+   "startFrame": 3874,
+   "endFrame": 3881,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "selalu",
+   "startFrame": 3881,
+   "endFrame": 3890,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "berhati-hati.",
+   "startFrame": 3890,
+   "endFrame": 3926,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Justru",
+   "startFrame": 3926,
+   "endFrame": 3937,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "karena",
+   "startFrame": 3937,
+   "endFrame": 3942,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "dia",
+   "startFrame": 3942,
+   "endFrame": 3947,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "terlalu",
+   "startFrame": 3947,
+   "endFrame": 3958,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "pintar,",
+   "startFrame": 3958,
+   "endFrame": 3975,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "dia",
+   "startFrame": 3975,
+   "endFrame": 3978,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "mengira",
+   "startFrame": 3978,
+   "endFrame": 3988,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "ini",
+   "startFrame": 3988,
+   "endFrame": 3993,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "jebakan.",
+   "startFrame": 3993,
+   "endFrame": 4006,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Andai",
+   "startFrame": 4006,
+   "endFrame": 4018,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "dia",
+   "startFrame": 4018,
+   "endFrame": 4022,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "bukan",
+   "startFrame": 4022,
+   "endFrame": 4028,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Sima",
+   "startFrame": 4028,
+   "endFrame": 4038,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Yi...",
+   "startFrame": 4038,
+   "endFrame": 4053,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "hari",
+   "startFrame": 4053,
+   "endFrame": 4058,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "ini",
+   "startFrame": 4058,
+   "endFrame": 4062,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "kita",
+   "startFrame": 4062,
+   "endFrame": 4067,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "semua",
+   "startFrame": 4067,
+   "endFrame": 4075,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 4075,
+   "endFrame": 4080,
+   "highlight": false,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "habis.",
+   "startFrame": 4080,
+   "endFrame": 4091,
+   "highlight": true,
+   "voice": "zhuge",
+   "speaker": "ZHUGE LIANG",
+   "scene": "s09_lega"
+  },
+  {
+   "text": "Tanpa",
+   "startFrame": 4127,
+   "endFrame": 4137,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "melepaskan",
+   "startFrame": 4137,
+   "endFrame": 4153,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "satu",
+   "startFrame": 4153,
+   "endFrame": 4159,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "anak",
+   "startFrame": 4159,
+   "endFrame": 4165,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "panah",
+   "startFrame": 4165,
+   "endFrame": 4176,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "pun,",
+   "startFrame": 4176,
+   "endFrame": 4183,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "satu",
+   "startFrame": 4183,
+   "endFrame": 4202,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "alunan",
+   "startFrame": 4202,
+   "endFrame": 4213,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "kecapi",
+   "startFrame": 4213,
+   "endFrame": 4226,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "memukul",
+   "startFrame": 4226,
+   "endFrame": 4239,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "mundur",
+   "startFrame": 4239,
+   "endFrame": 4249,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "seratus",
+   "startFrame": 4249,
+   "endFrame": 4266,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "lima",
+   "startFrame": 4266,
+   "endFrame": 4284,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 4284,
+   "endFrame": 4295,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "ribu",
+   "startFrame": 4295,
+   "endFrame": 4318,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "tentara.",
+   "startFrame": 4318,
+   "endFrame": 4328,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "Inilah",
+   "startFrame": 4328,
+   "endFrame": 4340,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "Strategi",
+   "startFrame": 4340,
+   "endFrame": 4353,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "Kota",
+   "startFrame": 4353,
+   "endFrame": 4360,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "Kosong—bukti",
+   "startFrame": 4360,
+   "endFrame": 4389,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "bahwa",
+   "startFrame": 4389,
+   "endFrame": 4396,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "perang",
+   "startFrame": 4396,
+   "endFrame": 4405,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "terbesar",
+   "startFrame": 4405,
+   "endFrame": 4415,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "sering",
+   "startFrame": 4415,
+   "endFrame": 4423,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "dimenangkan",
+   "startFrame": 4423,
+   "endFrame": 4437,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "di",
+   "startFrame": 4437,
+   "endFrame": 4439,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "dalam",
+   "startFrame": 4439,
+   "endFrame": 4444,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "pikiran",
+   "startFrame": 4444,
+   "endFrame": 4457,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  },
+  {
+   "text": "lawan.",
+   "startFrame": 4457,
+   "endFrame": 4468,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": "",
+   "scene": "s10_penutup"
+  }
+ ]
+}

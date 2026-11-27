@@ -1,0 +1,73 @@
+[
+  {
+    "scene": "s01_kabar",
+    "lines": [
+      ["narasi dramatis mencekam", "Kota kecil tanpa prajurit... dikepung seratus lima puluh ribu tentara!", "narator"],
+      ["panik terengah-engah ketakutan", "Lapor, Tuan Zhuge Liang! Pasukan kita kalah! Jenderal Sima Yi datang membawa seratus lima puluh ribu tentara! Mereka tinggal beberapa kilometer lagi!", "pengintai"]
+    ]
+  },
+  {
+    "scene": "s02_panik",
+    "lines": [
+      ["berteriak panik ketakutan massal", "AAAHHH!! Seratus lima puluh ribu?! Kita cuma punya dua ribu prajurit! Kita akan mati semua! Kabur!!", "crowd_panic"],
+      ["gemetar cemas ketakutan", "Tuan! Kita tak mungkin menang! Sebaiknya kita tinggalkan kota ini sekarang juga!", "perwira"]
+    ]
+  },
+  {
+    "scene": "s03_perintah",
+    "lines": [
+      ["sangat tenang dingin berwibawa", "Kalau kita kabur sekarang, kavaleri mereka akan menyapu kita habis di jalan. Tidak... kita tetap di sini.", "zhuge"],
+      ["syok kaget tidak percaya", "Tetap di sini?! Dengan apa kita melawan?!", "perwira"],
+      ["tenang tegas penuh rahasia", "Turunkan semua panji perang! Semua orang bersembunyi dan dilarang bersuara! Buka lebar keempat gerbang kota! Suruh beberapa prajurit menyamar jadi warga tua... dan sapulah jalan di depan gerbang!", "zhuge"]
+    ]
+  },
+  {
+    "scene": "s04_gerbang",
+    "lines": [
+      ["berbisik cemas gemetar", "Sst... tangan saya gemetar! Pasukan musuh sudah kelihatan di ujung bukit!", "penyapu"],
+      ["tenang lembut meyakinkan", "Tenang saja. Sapu terus seolah tak terjadi apa-apa. Aku akan menunggu di atas menara.", "zhuge"]
+    ]
+  },
+  {
+    "scene": "s05_simayi",
+    "lines": [
+      ["teriakan perang garang bergemuruh", "SERBUUU!! HANCURKAN KOTA XICHENG!!", "crowd_wei"],
+      ["bersemangat agresif mendesak", "Ayah! Lihat itu! Gerbang kota terbuka lebar tanpa satu pun penjaga! Kota ini kosong! Ayo serbu sekarang!", "simazhao"],
+      ["membentak menggelegar curiga", "BERHENTI!! Tahan seluruh pasukan!", "simayi"]
+    ]
+  },
+  {
+    "scene": "s06_guqin",
+    "lines": [
+      ["bergumam pelan curiga tegang", "Mustahil... Zhuge Liang duduk santai bermain kecapi di atas gerbang yang terbuka lebar... bahkan nada petikannya tidak bergetar sedikit pun.", "simayi"]
+    ]
+  },
+  {
+    "scene": "s07_debat",
+    "lines": [
+      ["mendesak kesal tidak sabar", "Ayah! Jangan tertipu! Bagaimana kalau kota ini memang benar-benar kosong dan dia cuma menggertak?! Biar aku pimpin pasukan masuk!", "simazhao"],
+      ["marah tegas penuh perhitungan", "Bodoh! Kau tidak mengenal Zhuge Liang! Seumur hidupnya dia orang paling hati-hati di dunia! Jika gerbang dibuka selebar ini, pasti ada puluhan ribu pasukan penyergap bersembunyi di dalam kota!", "simayi"]
+    ]
+  },
+  {
+    "scene": "s08_mundur",
+    "lines": [
+      ["berteriak komando keras panik", "INI JEBAKAN!! Seluruh pasukan... MUNDUR SEKARANG JUGA!!", "simayi"],
+      ["seruan pasukan mundur serentak", "MUNDUR!! TARIK PASUKAN!! MUNDUR!!", "crowd_retreat"],
+      ["bingung syok tak percaya", "Ayah! Kita benar-benar mundur tanpa bertarung?!", "simazhao"]
+    ]
+  },
+  {
+    "scene": "s09_lega",
+    "lines": [
+      ["terperangah kagum lega", "Tuan! Seratus lima puluh ribu tentara mundur semua! Bagaimana Tuan bisa seyakin itu Sima Yi tidak menyerang?!", "perwira"],
+      ["tertawa kecil lega bijaksana", "Hahaha... Sima Yi tahu aku selalu berhati-hati. Justru karena dia terlalu pintar, dia mengira ini jebakan. Andai dia bukan Sima Yi... hari ini kita semua sudah habis.", "zhuge"]
+    ]
+  },
+  {
+    "scene": "s10_penutup",
+    "lines": [
+      ["narasi penutup epik mendalam", "Tanpa melepaskan satu anak panah pun, satu alunan kecapi memukul mundur seratus lima puluh ribu tentara. Inilah Strategi Kota Kosong—bukti bahwa perang terbesar sering dimenangkan di dalam pikiran lawan.", "narator"]
+    ]
+  }
+]
