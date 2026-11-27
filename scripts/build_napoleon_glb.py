@@ -1115,6 +1115,27 @@ for name, lat, cp, tg, lens, night, pts in VIEWS:
     bpy.ops.render.render(write_still=True)
     print(f"WAKTU {name}: {time.time() - t0:.1f} dtk")
 
+def merge_for_export():
+    """gabungkan objek per (latar, material) agar jumlah draw call kecil di Remotion"""
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for o in list(bpy.data.objects):
+        if o.type != "MESH" or not o.data.materials or not o.users_collection:
+            continue
+        groups[(o.users_collection[0].name, o.data.materials[0].name)].append(o)
+    for (colname, mn), objs in groups.items():
+        if len(objs) < 2:
+            objs[0].name = f"{colname}__{mn}"
+            continue
+        bpy.ops.object.select_all(action="DESELECT")
+        for o in objs:
+            o.select_set(True)
+        bpy.context.view_layer.objects.active = objs[0]
+        bpy.ops.object.join()
+        bpy.context.object.name = f"{colname}__{mn}"
+
+
 if GLB:
+    merge_for_export()
     bpy.ops.export_scene.gltf(filepath=GLB, export_format="GLB", export_yup=True, export_materials="EXPORT", export_texcoords=True, export_normals=True, export_apply=True)
     print("GLB", GLB, os.path.getsize(GLB) // 1024, "KB")

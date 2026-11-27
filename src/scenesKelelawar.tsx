@@ -156,7 +156,7 @@ const Grade: React.FC<{ warm?: number; cool?: number; flash?: number; heat?: num
 );
 
 /* ---------------------------------------------------- overlay 2D */
-const Chip: React.FC<{ from: number; to: number; top: number; children: React.ReactNode; color?: string; size?: number }> = ({ from, to, top, children, color = "#991b1b", size = 64 }) => {
+export const Chip: React.FC<{ from: number; to: number; top: number; children: React.ReactNode; color?: string; size?: number }> = ({ from, to, top, children, color = "#991b1b", size = 64 }) => {
   const f = useCurrentFrame();
   if (f < from || f > to) return null;
   const s = spring({ frame: f - from, fps: 30, config: { damping: 11, stiffness: 200 } });
@@ -169,7 +169,7 @@ const Chip: React.FC<{ from: number; to: number; top: number; children: React.Re
     </div>
   );
 };
-const Stamp: React.FC<{ text: string; from: number; to: number; color?: string; top?: number; rot?: number }> = ({ text, from, to, color = "#dc2626", top = 470, rot = -6 }) => {
+export const Stamp: React.FC<{ text: string; from: number; to: number; color?: string; top?: number; rot?: number }> = ({ text, from, to, color = "#dc2626", top = 470, rot = -6 }) => {
   const f = useCurrentFrame();
   if (f < from || f > to) return null;
   const s = spring({ frame: f - from, fps: 30, config: { damping: 9, stiffness: 260 } });
@@ -183,7 +183,7 @@ const Stamp: React.FC<{ text: string; from: number; to: number; color?: string; 
   );
 };
 /** gelembung kecil pikiran/emote di dekat kepala (koordinat layar) */
-const Emote: React.FC<{ x: number; y: number; from: number; to: number; text: string; size?: number; color?: string }> = ({ x, y, from, to, text, size = 84, color = "#241726" }) => {
+export const Emote: React.FC<{ x: number; y: number; from: number; to: number; text: string; size?: number; color?: string }> = ({ x, y, from, to, text, size = 84, color = "#241726" }) => {
   const f = useCurrentFrame();
   if (f < from || f > to) return null;
   const s = spring({ frame: f - from, fps: 30, config: { damping: 8, stiffness: 240 } });
@@ -197,7 +197,7 @@ const Emote: React.FC<{ x: number; y: number; from: number; to: number; text: st
 };
 
 /* insert close-up tangan (ilustrasi SVG besar bergaya sama) */
-const HandSvg: React.FC<{ x: number; y: number; rot?: number; s?: number; grip?: number; flip?: boolean; sleeve?: string; skin?: string }> = ({ x, y, rot = 0, s = 1, grip = 0, flip = false, sleeve = "#7d7451", skin = "#f0d2ad" }) => {
+export const HandSvg: React.FC<{ x: number; y: number; rot?: number; s?: number; grip?: number; flip?: boolean; sleeve?: string; skin?: string }> = ({ x, y, rot = 0, s = 1, grip = 0, flip = false, sleeve = "#7d7451", skin = "#f0d2ad" }) => {
   const ink = "#241726";
   // telapak menghadap kanan; jari-jari kapsul yang menekuk sesuai grip
   const fingers = [-54, -18, 18, 50].map((fy, i) => {
@@ -224,8 +224,8 @@ const HandSvg: React.FC<{ x: number; y: number; rot?: number; s?: number; grip?:
     </g>
   );
 };
-type InsertKind = "tie" | "handle" | "latch";
-const Insert: React.FC<{ kind: InsertKind; from: number; len?: number }> = ({ kind, from, len = 38 }) => {
+export type InsertKind = "tie" | "handle" | "latch" | "write";
+export const Insert: React.FC<{ kind: InsertKind; from: number; len?: number }> = ({ kind, from, len = 38 }) => {
   const f = useCurrentFrame();
   const d = f - from;
   if (d < 0 || d > len) return null;
@@ -234,7 +234,7 @@ const Insert: React.FC<{ kind: InsertKind; from: number; len?: number }> = ({ ki
   const outK = smoother(cl((len - d) / 5));
   const op = Math.min(inK, outK);
   const a = smoother(cl((d - 6) / (len - 14)));
-  const bg = kind === "handle" ? "#cfe2f2" : kind === "latch" ? "#f4c27a" : "#e8d2ae";
+  const bg = kind === "handle" ? "#cfe2f2" : kind === "latch" ? "#f4c27a" : kind === "write" ? "#efe2c0" : "#e8d2ae";
   return (
     <AbsoluteFill style={{ opacity: op }}>
       <svg width="1080" height="1920" viewBox="0 0 1080 1920">
@@ -289,6 +289,20 @@ const Insert: React.FC<{ kind: InsertKind; from: number; len?: number }> = ({ ki
             {[0, 1, 2, 3, 4].map((i) => (
               <text key={i} x={240 + i * 150} y={1450 + (i % 2) * 60} fontSize="70" fill="#9fd0ff" fontFamily="Anton">*</text>
             ))}
+          </g>
+        )}
+        {kind === "write" && (
+          <g>
+            <rect x="160" y="620" width="760" height="760" rx="14" fill="#f6efdc" stroke="#241726" strokeWidth="14" transform="rotate(-3 540 1000)" />
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <line key={i} x1="240" y1={760 + i * 80} x2={240 + Math.min(1, Math.max(0, a * 1.4 - i * 0.18)) * 560} y2={760 + i * 80 + 2} stroke="#2a3f7a" strokeWidth="9" strokeLinecap="round" />
+            ))}
+            <rect x="620" y="1140" width="200" height="110" rx="12" fill="#c4262c" stroke="#241726" strokeWidth="9" opacity={a > 0.85 ? 1 : 0} />
+            <g transform={`translate(${lerpN(300, 760, a)} ${lerpN(780, 1180, a)}) rotate(28)`}>
+              <path d="M 0 0 L 40 -420 Q 120 -520 150 -640 Q 60 -560 30 -430 Z" fill="#fffaf0" stroke="#241726" strokeWidth="9" strokeLinejoin="round" />
+              <path d="M 0 0 L 18 -60" stroke="#241726" strokeWidth="12" strokeLinecap="round" />
+            </g>
+            <HandSvg x={lerpN(180, 640, a)} y={lerpN(1500, 1420, a)} rot={-70} s={1.6} grip={0.8} flip sleeve="#223c78" skin="#f2d2b0" />
           </g>
         )}
         {kind === "latch" && (

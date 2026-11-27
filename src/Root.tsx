@@ -55,6 +55,7 @@ import { Karaoke, TOTAL_FRAMES_KARAOKE } from "./Karaoke";
 import { Bandung, TOTAL_FRAMES_BANDUNG } from "./Bandung";
 import { SheetBandungKarakter, SheetBandungProperti } from "./SheetBandung";
 import { Kelelawar, TOTAL_FRAMES_KELELAWAR } from "./Kelelawar";
+import { Napoleon, TOTAL_FRAMES_NAPOLEON } from "./Napoleon";
 import { SheetNapoleonKarakter, SheetNapoleonEkspresi } from "./SheetNapoleon";
 import { SheetKelelawarKarakter, SheetKelelawarEkspresi, SheetKelelawarProperti } from "./SheetKelelawar";
 import { Mie, TOTAL_FRAMES_MIE } from "./Mie";
@@ -76,6 +77,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="RailroadExpansion" component={RailroadExpansion} durationInFrames={TOTAL_FRAMES_RAILROAD} fps={30} width={1080} height={1920} />
       <Composition id="CharacterShowcase" component={CharacterShowcase} durationInFrames={CHARACTER_PRESETS.length} fps={30} width={1920} height={1080} />
       <Composition id="Kelelawar" component={Kelelawar} durationInFrames={TOTAL_FRAMES_KELELAWAR} fps={30} width={1080} height={1920} defaultProps={{ withAudio: false }} />
+      <Composition id="Napoleon" component={Napoleon} durationInFrames={TOTAL_FRAMES_NAPOLEON} fps={30} width={1080} height={1920} defaultProps={{ withAudio: false }} />
       <Composition id="SheetNapoleonKarakter" component={SheetNapoleonKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetNapoleonEkspresi" component={SheetNapoleonEkspresi} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetKelelawarKarakter" component={SheetKelelawarKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
