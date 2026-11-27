@@ -1,0 +1,71 @@
+[
+  {
+    "scene": "hook",
+    "lines": [
+      ["tegang", "Tahun dua ribu empat belas, seorang pria menandatangani penjualan perusahaannya senilai sembilan belas miliar dolar, atau sekitar dua ratus delapan puluh triliun rupiah.", "dodi"],
+      ["narasi", "Anehnya, ia menolak tanda tangan di hotel bintang lima, dan justru memilih depan pintu gedung dinas sosial yang sederhana ini.", "dodi"],
+      ["santai", "Siapa sangka, dua puluh dua tahun sebelumnya, ia berdiri tepat di tempat yang sama untuk mengantre kupon makanan gratis.", "dodi"]
+    ]
+  },
+  {
+    "scene": "antrean",
+    "lines": [
+      ["narasi", "Namanya Jan Koum, remaja enam belas tahun yang baru pindah dari Ukraina ke California bersama ibunya tanpa membawa harta.", "dodi"],
+      ["narasi", "Di ruang tunggu ini, Jan dan sang ibu rutin mengantre bantuan sosial demi menyambung hidup setiap bulan.", "dodi"],
+      ["santai", "Yang sabar ya nak, suatu hari kerja kerasmu pasti mengubah hidup kita.", "butini"],
+      ["narasi", "Siang hari Jan menyapu lantai toko kelontong, lalu malamnya belajar pemrograman komputer dari buku bekas pinjaman.", "dodi"]
+    ]
+  },
+  {
+    "scene": "ditolak",
+    "lines": [
+      ["narasi", "Berbekal ilmu otodidak, Jan sempat bekerja sebagai insinyur teknologi, hingga pada tahun dua ribu sembilan ia melamar kerja ke Facebook dan Twitter bersama sahabatnya, Brian Acton.", "dodi"],
+      ["tegas", "Maaf sekali, profil kalian belum cocok dengan kebutuhan tim kami saat ini.", "ara"],
+      ["tegang", "Dua perusahaan teknologi raksasa itu sama-sama menolak mereka mentah-mentah!", "dodi"],
+      ["santai", "Santai saja Jan, mungkin ini tanda buat kita memulai petualangan baru sendiri.", "dodi"]
+    ]
+  },
+  {
+    "scene": "ide",
+    "lines": [
+      ["narasi", "Daripada larut dalam kecewa, Jan membeli ponsel pintar pertamanya dan langsung melihat masa depan besar di toko aplikasi yang baru lahir.", "dodi"],
+      ["narasi", "Ia teringat betapa mahal dan sulitnya dulu menelepon keluarga di luar negeri ketika hidup serba pas-pasan.", "dodi"],
+      ["tegas", "Gimana kalau ada aplikasi pesan yang super ringan, cepat, dan langsung terhubung ke nomor telepon?", "dodi"],
+      ["narasi", "Hingga jam dua pagi di apartemen kecilnya, Jan terus menulis baris demi baris kode aplikasi bernama WhatsApp.", "dodi"]
+    ]
+  },
+  {
+    "scene": "prinsip",
+    "lines": [
+      ["narasi", "Awalnya jalan mereka tidak mulus, aplikasi sering eror, penggunanya sepi, sampai Jan sempat hampir menyerah dan ingin mencari kerja lagi.", "dodi"],
+      ["santai", "Jangan nyerah sekarang Jan, kita sudah terlalu dekat, minum kopimu dulu.", "dodi"],
+      ["narasi", "Brian bukan cuma menyemangati, tapi juga menempelkan catatan kuning legendaris di meja kerja Jan.", "dodi"],
+      ["tegas", "Tanpa iklan, tanpa game, tanpa tipu-tipu! Kita bikin produk yang benar-benar bersih untuk semua orang.", "dodi"]
+    ]
+  },
+  {
+    "scene": "meledak",
+    "lines": [
+      ["narasi", "Prinsip sederhana itulah yang justru membuat orang di seluruh dunia jatuh cinta pada WhatsApp.", "dodi"],
+      ["tegang", "Tanpa mengeluarkan uang iklan sepeser pun, jumlah penggunanya meledak dari mulut ke mulut, dari sepuluh juta, melonjak ke dua ratus juta, hingga menembus empat ratus lima puluh juta pengguna aktif!", "dodi"],
+      ["narasi", "Yang paling gila, seluruh layanan raksasa dunia itu hanya dijalankan oleh sekitar lima puluh lima karyawan saja.", "dodi"]
+    ]
+  },
+  {
+    "scene": "tawaran",
+    "lines": [
+      ["tegang", "Lima tahun setelah penolakan pahit itu, perusahaan yang dulu menutup pintu untuk Jan akhirnya datang mengetuk lagi.", "dodi"],
+      ["narasi", "Kali ini bukan wawancara kerja, melainkan Mark Zuckerberg sendiri yang duduk di depan Jan membawa tawaran bersejarah.", "dodi"],
+      ["tegas", "Jan, apa yang kalian bangun luar biasa, Facebook ingin mengakuisisi WhatsApp senilai sembilan belas miliar dolar.", "dodi"],
+      ["narasi", "Karyawan yang dulu mereka tolak, kini harus mereka beli dengan salah satu nilai akuisisi terbesar dalam sejarah teknologi.", "dodi"]
+    ]
+  },
+  {
+    "scene": "penutup",
+    "lines": [
+      ["narasi", "Jan menyetujui kesepakatan itu dengan satu syarat menyentuh, yaitu menandatangani berkasnya tepat di depan pintu gedung dinas sosial Mountain View.", "dodi"],
+      ["santai", "Aku cuma ingin selalu ingat dari mana aku berasal, dan tidak pernah melupakan perjuangan ibuku.", "dodi"],
+      ["narasi", "Kisah Jan Koum mengingatkan kita satu hal penting, penolakan hari ini bukanlah akhir ceritamu, terkadang itu cara hidup mengarahkanmu membangun sesuatu yang jauh lebih besar.", "dodi"]
+    ]
+  }
+]

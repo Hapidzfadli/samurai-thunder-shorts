@@ -1,0 +1,5349 @@
+{
+ "fps": 30,
+ "totalFrames": 5620,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 662,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Tahun dua ribu empat belas, seorang pria menandatangani penjualan perusahaannya senilai sembilan belas miliar dolar, atau sekitar dua ratus delapan puluh triliun rupiah.",
+     "score": 0.984,
+     "file": "out/voice/whatsapp/hook_0.wav",
+     "wordsSec": [
+      [
+       "Tahun",
+       0.0,
+       0.3
+      ],
+      [
+       "2014,",
+       0.3,
+       0.9
+      ],
+      [
+       "orang",
+       1.26,
+       1.42
+      ],
+      [
+       "Priya",
+       1.42,
+       1.76
+      ],
+      [
+       "menandatangani",
+       1.76,
+       2.36
+      ],
+      [
+       "penjualan",
+       2.36,
+       2.82
+      ],
+      [
+       "perusahaannya",
+       2.82,
+       3.32
+      ],
+      [
+       "senilai",
+       3.32,
+       3.7
+      ],
+      [
+       "19",
+       3.7,
+       4.02
+      ],
+      [
+       "miliar",
+       4.02,
+       4.56
+      ],
+      [
+       "dolar",
+       4.56,
+       4.92
+      ],
+      [
+       "atau",
+       4.92,
+       5.16
+      ],
+      [
+       "sekitar",
+       5.16,
+       5.52
+      ],
+      [
+       "280",
+       5.52,
+       6.16
+      ],
+      [
+       "triliun",
+       6.16,
+       7.02
+      ],
+      [
+       "rupiah.",
+       7.02,
+       7.42
+      ]
+     ],
+     "from": 8,
+     "to": 240,
+     "words": [
+      {
+       "w": "Tahun",
+       "from": 8,
+       "to": 16
+      },
+      {
+       "w": "2014,",
+       "from": 16,
+       "to": 34
+      },
+      {
+       "w": "orang",
+       "from": 45,
+       "to": 50
+      },
+      {
+       "w": "Priya",
+       "from": 50,
+       "to": 60
+      },
+      {
+       "w": "menandatangani",
+       "from": 60,
+       "to": 78
+      },
+      {
+       "w": "penjualan",
+       "from": 78,
+       "to": 92
+      },
+      {
+       "w": "perusahaannya",
+       "from": 92,
+       "to": 107
+      },
+      {
+       "w": "senilai",
+       "from": 107,
+       "to": 118
+      },
+      {
+       "w": "19",
+       "from": 118,
+       "to": 128
+      },
+      {
+       "w": "miliar",
+       "from": 128,
+       "to": 144
+      },
+      {
+       "w": "dolar",
+       "from": 144,
+       "to": 155
+      },
+      {
+       "w": "atau",
+       "from": 155,
+       "to": 162
+      },
+      {
+       "w": "sekitar",
+       "from": 162,
+       "to": 173
+      },
+      {
+       "w": "280",
+       "from": 173,
+       "to": 192
+      },
+      {
+       "w": "triliun",
+       "from": 192,
+       "to": 218
+      },
+      {
+       "w": "rupiah.",
+       "from": 218,
+       "to": 230
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Anehnya, ia menolak tanda tangan di hotel bintang lima, dan justru memilih depan pintu gedung dinas sosial yang sederhana ini.",
+     "score": 0.99,
+     "file": "out/voice/whatsapp/hook_1.wav",
+     "wordsSec": [
+      [
+       "Tanehnya,",
+       0.0,
+       0.52
+      ],
+      [
+       "ia",
+       0.7,
+       1.1
+      ],
+      [
+       "menolak",
+       1.1,
+       1.52
+      ],
+      [
+       "tanda",
+       1.52,
+       1.76
+      ],
+      [
+       "tangan",
+       1.76,
+       2.08
+      ],
+      [
+       "di",
+       2.08,
+       2.18
+      ],
+      [
+       "hotel",
+       2.18,
+       2.42
+      ],
+      [
+       "bintang",
+       2.42,
+       2.8
+      ],
+      [
+       "5",
+       2.8,
+       3.04
+      ],
+      [
+       "dan",
+       3.04,
+       3.58
+      ],
+      [
+       "justru",
+       3.58,
+       3.94
+      ],
+      [
+       "memilih",
+       3.94,
+       4.32
+      ],
+      [
+       "depan",
+       4.32,
+       4.56
+      ],
+      [
+       "pintu",
+       4.56,
+       4.92
+      ],
+      [
+       "gedung",
+       4.92,
+       5.12
+      ],
+      [
+       "dina",
+       5.12,
+       5.32
+      ],
+      [
+       "sosial",
+       5.32,
+       5.72
+      ],
+      [
+       "yang",
+       5.72,
+       5.84
+      ],
+      [
+       "sederhana",
+       5.84,
+       6.28
+      ],
+      [
+       "ini.",
+       6.28,
+       6.52
+      ]
+     ],
+     "from": 248,
+     "to": 454,
+     "words": [
+      {
+       "w": "Tanehnya,",
+       "from": 248,
+       "to": 264
+      },
+      {
+       "w": "ia",
+       "from": 269,
+       "to": 281
+      },
+      {
+       "w": "menolak",
+       "from": 281,
+       "to": 294
+      },
+      {
+       "w": "tanda",
+       "from": 294,
+       "to": 301
+      },
+      {
+       "w": "tangan",
+       "from": 301,
+       "to": 310
+      },
+      {
+       "w": "di",
+       "from": 310,
+       "to": 314
+      },
+      {
+       "w": "hotel",
+       "from": 314,
+       "to": 321
+      },
+      {
+       "w": "bintang",
+       "from": 321,
+       "to": 332
+      },
+      {
+       "w": "5",
+       "from": 332,
+       "to": 339
+      },
+      {
+       "w": "dan",
+       "from": 339,
+       "to": 356
+      },
+      {
+       "w": "justru",
+       "from": 356,
+       "to": 366
+      },
+      {
+       "w": "memilih",
+       "from": 366,
+       "to": 378
+      },
+      {
+       "w": "depan",
+       "from": 378,
+       "to": 385
+      },
+      {
+       "w": "pintu",
+       "from": 385,
+       "to": 396
+      },
+      {
+       "w": "gedung",
+       "from": 396,
+       "to": 402
+      },
+      {
+       "w": "dina",
+       "from": 402,
+       "to": 408
+      },
+      {
+       "w": "sosial",
+       "from": 408,
+       "to": 420
+      },
+      {
+       "w": "yang",
+       "from": 420,
+       "to": 423
+      },
+      {
+       "w": "sederhana",
+       "from": 423,
+       "to": 436
+      },
+      {
+       "w": "ini.",
+       "from": 436,
+       "to": 444
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Siapa sangka, dua puluh dua tahun sebelumnya, ia berdiri tepat di tempat yang sama untuk mengantre kupon makanan gratis.",
+     "score": 0.994,
+     "file": "out/voice/whatsapp/hook_2.wav",
+     "wordsSec": [
+      [
+       "Siapa",
+       0.0,
+       0.44
+      ],
+      [
+       "sangka",
+       0.44,
+       0.84
+      ],
+      [
+       "22",
+       0.84,
+       1.22
+      ],
+      [
+       "tahun",
+       1.22,
+       1.6
+      ],
+      [
+       "sebelumnya,",
+       1.6,
+       2.14
+      ],
+      [
+       "ia",
+       2.42,
+       2.7
+      ],
+      [
+       "berdiri",
+       2.7,
+       3.06
+      ],
+      [
+       "tempat",
+       3.06,
+       3.36
+      ],
+      [
+       "di",
+       3.36,
+       3.46
+      ],
+      [
+       "tempat",
+       3.46,
+       3.72
+      ],
+      [
+       "yang",
+       3.72,
+       3.82
+      ],
+      [
+       "sama",
+       3.82,
+       4.1
+      ],
+      [
+       "untuk",
+       4.1,
+       4.48
+      ],
+      [
+       "mengantre",
+       4.48,
+       4.92
+      ],
+      [
+       "kupon",
+       4.92,
+       5.22
+      ],
+      [
+       "makanan",
+       5.22,
+       5.54
+      ],
+      [
+       "gratis.",
+       5.54,
+       6.08
+      ]
+     ],
+     "from": 462,
+     "to": 649,
+     "words": [
+      {
+       "w": "Siapa",
+       "from": 462,
+       "to": 476
+      },
+      {
+       "w": "sangka",
+       "from": 476,
+       "to": 488
+      },
+      {
+       "w": "22",
+       "from": 488,
+       "to": 499
+      },
+      {
+       "w": "tahun",
+       "from": 499,
+       "to": 510
+      },
+      {
+       "w": "sebelumnya,",
+       "from": 510,
+       "to": 526
+      },
+      {
+       "w": "ia",
+       "from": 535,
+       "to": 543
+      },
+      {
+       "w": "berdiri",
+       "from": 543,
+       "to": 554
+      },
+      {
+       "w": "tempat",
+       "from": 554,
+       "to": 563
+      },
+      {
+       "w": "di",
+       "from": 563,
+       "to": 566
+      },
+      {
+       "w": "tempat",
+       "from": 566,
+       "to": 574
+      },
+      {
+       "w": "yang",
+       "from": 574,
+       "to": 577
+      },
+      {
+       "w": "sama",
+       "from": 577,
+       "to": 585
+      },
+      {
+       "w": "untuk",
+       "from": 585,
+       "to": 597
+      },
+      {
+       "w": "mengantre",
+       "from": 597,
+       "to": 610
+      },
+      {
+       "w": "kupon",
+       "from": 610,
+       "to": 619
+      },
+      {
+       "w": "makanan",
+       "from": 619,
+       "to": 628
+      },
+      {
+       "w": "gratis.",
+       "from": 628,
+       "to": 645
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "antrean",
+   "from": 662,
+   "to": 1395,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Namanya Jan Koum, remaja enam belas tahun yang baru pindah dari Ukraina ke California bersama ibunya tanpa membawa harta.",
+     "score": 0.967,
+     "file": "out/voice/whatsapp/antrean_0.wav",
+     "wordsSec": [
+      [
+       "Namanya",
+       0.0,
+       0.36
+      ],
+      [
+       "Jan",
+       0.36,
+       0.6
+      ],
+      [
+       "Com,",
+       0.6,
+       0.8
+      ],
+      [
+       "remaja",
+       1.12,
+       1.54
+      ],
+      [
+       "16",
+       1.54,
+       1.86
+      ],
+      [
+       "tahun",
+       1.86,
+       2.2
+      ],
+      [
+       "yang",
+       2.2,
+       2.36
+      ],
+      [
+       "baru",
+       2.36,
+       2.58
+      ],
+      [
+       "pindah",
+       2.58,
+       2.98
+      ],
+      [
+       "dari",
+       2.98,
+       3.12
+      ],
+      [
+       "Ukaina",
+       3.12,
+       3.56
+      ],
+      [
+       "ke",
+       3.56,
+       3.74
+      ],
+      [
+       "Kalifornia",
+       3.74,
+       4.4
+      ],
+      [
+       "bersama",
+       4.4,
+       4.98
+      ],
+      [
+       "ibunya",
+       4.98,
+       5.38
+      ],
+      [
+       "tanpa",
+       5.38,
+       5.74
+      ],
+      [
+       "membawa",
+       5.74,
+       6.06
+      ],
+      [
+       "harta.",
+       6.06,
+       6.36
+      ]
+     ],
+     "from": 662,
+     "to": 859,
+     "words": [
+      {
+       "w": "Namanya",
+       "from": 662,
+       "to": 673
+      },
+      {
+       "w": "Jan",
+       "from": 673,
+       "to": 680
+      },
+      {
+       "w": "Com,",
+       "from": 680,
+       "to": 686
+      },
+      {
+       "w": "remaja",
+       "from": 696,
+       "to": 708
+      },
+      {
+       "w": "16",
+       "from": 708,
+       "to": 718
+      },
+      {
+       "w": "tahun",
+       "from": 718,
+       "to": 728
+      },
+      {
+       "w": "yang",
+       "from": 728,
+       "to": 733
+      },
+      {
+       "w": "baru",
+       "from": 733,
+       "to": 740
+      },
+      {
+       "w": "pindah",
+       "from": 740,
+       "to": 752
+      },
+      {
+       "w": "dari",
+       "from": 752,
+       "to": 756
+      },
+      {
+       "w": "Ukaina",
+       "from": 756,
+       "to": 769
+      },
+      {
+       "w": "ke",
+       "from": 769,
+       "to": 774
+      },
+      {
+       "w": "Kalifornia",
+       "from": 774,
+       "to": 794
+      },
+      {
+       "w": "bersama",
+       "from": 794,
+       "to": 812
+      },
+      {
+       "w": "ibunya",
+       "from": 812,
+       "to": 824
+      },
+      {
+       "w": "tanpa",
+       "from": 824,
+       "to": 834
+      },
+      {
+       "w": "membawa",
+       "from": 834,
+       "to": 844
+      },
+      {
+       "w": "harta.",
+       "from": 844,
+       "to": 853
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Di ruang tunggu ini, Jan dan sang ibu rutin mengantre bantuan sosial demi menyambung hidup setiap bulan.",
+     "score": 0.965,
+     "file": "out/voice/whatsapp/antrean_1.wav",
+     "wordsSec": [
+      [
+       "Di",
+       0.0,
+       0.16
+      ],
+      [
+       "ruang",
+       0.16,
+       0.38
+      ],
+      [
+       "tumbuh",
+       0.38,
+       0.7
+      ],
+      [
+       "ini,",
+       0.7,
+       0.9
+      ],
+      [
+       "Jan",
+       1.34,
+       1.6
+      ],
+      [
+       "dan",
+       1.6,
+       1.78
+      ],
+      [
+       "Sang",
+       1.78,
+       1.98
+      ],
+      [
+       "Ibu",
+       1.98,
+       2.26
+      ],
+      [
+       "rutin",
+       2.26,
+       2.54
+      ],
+      [
+       "mengantre",
+       2.54,
+       2.94
+      ],
+      [
+       "bantuan",
+       2.94,
+       3.26
+      ],
+      [
+       "sosial",
+       3.26,
+       3.82
+      ],
+      [
+       "demi",
+       3.82,
+       4.22
+      ],
+      [
+       "menyambung",
+       4.22,
+       4.68
+      ],
+      [
+       "hidup",
+       4.68,
+       4.98
+      ],
+      [
+       "setiap",
+       4.98,
+       5.36
+      ],
+      [
+       "bulan.",
+       5.36,
+       5.66
+      ]
+     ],
+     "from": 867,
+     "to": 1040,
+     "words": [
+      {
+       "w": "Di",
+       "from": 867,
+       "to": 872
+      },
+      {
+       "w": "ruang",
+       "from": 872,
+       "to": 878
+      },
+      {
+       "w": "tumbuh",
+       "from": 878,
+       "to": 888
+      },
+      {
+       "w": "ini,",
+       "from": 888,
+       "to": 894
+      },
+      {
+       "w": "Jan",
+       "from": 907,
+       "to": 915
+      },
+      {
+       "w": "dan",
+       "from": 915,
+       "to": 920
+      },
+      {
+       "w": "Sang",
+       "from": 920,
+       "to": 926
+      },
+      {
+       "w": "Ibu",
+       "from": 926,
+       "to": 935
+      },
+      {
+       "w": "rutin",
+       "from": 935,
+       "to": 943
+      },
+      {
+       "w": "mengantre",
+       "from": 943,
+       "to": 955
+      },
+      {
+       "w": "bantuan",
+       "from": 955,
+       "to": 965
+      },
+      {
+       "w": "sosial",
+       "from": 965,
+       "to": 981
+      },
+      {
+       "w": "demi",
+       "from": 981,
+       "to": 993
+      },
+      {
+       "w": "menyambung",
+       "from": 993,
+       "to": 1007
+      },
+      {
+       "w": "hidup",
+       "from": 1007,
+       "to": 1016
+      },
+      {
+       "w": "setiap",
+       "from": 1016,
+       "to": 1028
+      },
+      {
+       "w": "bulan.",
+       "from": 1028,
+       "to": 1037
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "butini",
+     "text": "Yang sabar ya nak, suatu hari kerja kerasmu pasti mengubah hidup kita.",
+     "score": 0.964,
+     "file": "out/voice/whatsapp/antrean_2.wav",
+     "wordsSec": [
+      [
+       "Yang",
+       0.0,
+       0.34
+      ],
+      [
+       "sabar",
+       0.34,
+       0.8
+      ],
+      [
+       "ya,",
+       0.8,
+       0.94
+      ],
+      [
+       "na,",
+       1.7,
+       1.84
+      ],
+      [
+       "suatu",
+       2.06,
+       2.48
+      ],
+      [
+       "hari",
+       2.48,
+       2.7
+      ],
+      [
+       "kerja",
+       2.7,
+       3.06
+      ],
+      [
+       "kerasmu",
+       3.06,
+       3.46
+      ],
+      [
+       "pasti",
+       3.46,
+       3.72
+      ],
+      [
+       "memubah",
+       3.72,
+       4.14
+      ],
+      [
+       "hidup",
+       4.14,
+       4.36
+      ],
+      [
+       "kita.",
+       4.36,
+       4.58
+      ]
+     ],
+     "from": 1047,
+     "to": 1191,
+     "words": [
+      {
+       "w": "Yang",
+       "from": 1047,
+       "to": 1058
+      },
+      {
+       "w": "sabar",
+       "from": 1058,
+       "to": 1071
+      },
+      {
+       "w": "ya,",
+       "from": 1071,
+       "to": 1076
+      },
+      {
+       "w": "na,",
+       "from": 1098,
+       "to": 1103
+      },
+      {
+       "w": "suatu",
+       "from": 1109,
+       "to": 1122
+      },
+      {
+       "w": "hari",
+       "from": 1122,
+       "to": 1128
+      },
+      {
+       "w": "kerja",
+       "from": 1128,
+       "to": 1139
+      },
+      {
+       "w": "kerasmu",
+       "from": 1139,
+       "to": 1151
+      },
+      {
+       "w": "pasti",
+       "from": 1151,
+       "to": 1159
+      },
+      {
+       "w": "memubah",
+       "from": 1159,
+       "to": 1172
+      },
+      {
+       "w": "hidup",
+       "from": 1172,
+       "to": 1178
+      },
+      {
+       "w": "kita.",
+       "from": 1178,
+       "to": 1185
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Siang hari Jan menyapu lantai toko kelontong, lalu malamnya belajar pemrograman komputer dari buku bekas pinjaman.",
+     "score": 0.979,
+     "file": "out/voice/whatsapp/antrean_3.wav",
+     "wordsSec": [
+      [
+       "siang",
+       0.0,
+       0.32
+      ],
+      [
+       "hari",
+       0.32,
+       0.52
+      ],
+      [
+       "dan",
+       0.52,
+       0.72
+      ],
+      [
+       "menyapul",
+       0.72,
+       1.26
+      ],
+      [
+       "lantai",
+       1.26,
+       1.58
+      ],
+      [
+       "tokok",
+       1.58,
+       1.9
+      ],
+      [
+       "lontong",
+       1.9,
+       2.3
+      ],
+      [
+       "lalu",
+       2.3,
+       2.56
+      ],
+      [
+       "malamnya",
+       2.56,
+       2.96
+      ],
+      [
+       "belajar",
+       2.96,
+       3.34
+      ],
+      [
+       "pemrograman",
+       3.34,
+       3.98
+      ],
+      [
+       "komputer",
+       3.98,
+       4.46
+      ],
+      [
+       "dari",
+       4.46,
+       4.68
+      ],
+      [
+       "buku",
+       4.68,
+       4.98
+      ],
+      [
+       "bekas",
+       4.98,
+       5.28
+      ],
+      [
+       "pinjaman.",
+       5.28,
+       5.72
+      ]
+     ],
+     "from": 1199,
+     "to": 1381,
+     "words": [
+      {
+       "w": "siang",
+       "from": 1199,
+       "to": 1209
+      },
+      {
+       "w": "hari",
+       "from": 1209,
+       "to": 1215
+      },
+      {
+       "w": "dan",
+       "from": 1215,
+       "to": 1221
+      },
+      {
+       "w": "menyapul",
+       "from": 1221,
+       "to": 1237
+      },
+      {
+       "w": "lantai",
+       "from": 1237,
+       "to": 1246
+      },
+      {
+       "w": "tokok",
+       "from": 1246,
+       "to": 1256
+      },
+      {
+       "w": "lontong",
+       "from": 1256,
+       "to": 1268
+      },
+      {
+       "w": "lalu",
+       "from": 1268,
+       "to": 1276
+      },
+      {
+       "w": "malamnya",
+       "from": 1276,
+       "to": 1288
+      },
+      {
+       "w": "belajar",
+       "from": 1288,
+       "to": 1299
+      },
+      {
+       "w": "pemrograman",
+       "from": 1299,
+       "to": 1318
+      },
+      {
+       "w": "komputer",
+       "from": 1318,
+       "to": 1333
+      },
+      {
+       "w": "dari",
+       "from": 1333,
+       "to": 1339
+      },
+      {
+       "w": "buku",
+       "from": 1339,
+       "to": 1348
+      },
+      {
+       "w": "bekas",
+       "from": 1348,
+       "to": 1357
+      },
+      {
+       "w": "pinjaman.",
+       "from": 1357,
+       "to": 1371
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ditolak",
+   "from": 1395,
+   "to": 2143,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Berbekal ilmu otodidak, Jan sempat bekerja sebagai insinyur teknologi, hingga pada tahun dua ribu sembilan ia melamar kerja ke Facebook dan Twitter bersama sahabatnya, Brian Acton.",
+     "score": 0.993,
+     "file": "out/voice/whatsapp/ditolak_0.wav",
+     "wordsSec": [
+      [
+       "Berbekal",
+       0.0,
+       0.48
+      ],
+      [
+       "ilmu",
+       0.48,
+       0.68
+      ],
+      [
+       "otodidak,",
+       0.68,
+       1.48
+      ],
+      [
+       "dan",
+       1.6,
+       1.72
+      ],
+      [
+       "sempat",
+       1.72,
+       2.14
+      ],
+      [
+       "bekerja",
+       2.14,
+       2.54
+      ],
+      [
+       "sebagai",
+       2.54,
+       2.78
+      ],
+      [
+       "insinyur",
+       2.78,
+       3.3
+      ],
+      [
+       "teknologi,",
+       3.3,
+       4.12
+      ],
+      [
+       "hingga",
+       4.14,
+       4.48
+      ],
+      [
+       "pada",
+       4.48,
+       4.64
+      ],
+      [
+       "tahun",
+       4.64,
+       4.92
+      ],
+      [
+       "2009,",
+       4.92,
+       5.56
+      ],
+      [
+       "ia",
+       5.92,
+       6.12
+      ],
+      [
+       "melamar",
+       6.12,
+       6.42
+      ],
+      [
+       "kerja",
+       6.42,
+       6.84
+      ],
+      [
+       "ke",
+       6.84,
+       6.98
+      ],
+      [
+       "Facebook",
+       6.98,
+       7.3
+      ],
+      [
+       "dan",
+       7.3,
+       7.58
+      ],
+      [
+       "Twitter",
+       7.58,
+       7.88
+      ],
+      [
+       "bersama",
+       7.88,
+       8.36
+      ],
+      [
+       "sahabatnya,",
+       8.36,
+       8.94
+      ],
+      [
+       "Brian",
+       9.16,
+       9.42
+      ],
+      [
+       "Acton.",
+       9.42,
+       9.92
+      ]
+     ],
+     "from": 1395,
+     "to": 1698,
+     "words": [
+      {
+       "w": "Berbekal",
+       "from": 1395,
+       "to": 1409
+      },
+      {
+       "w": "ilmu",
+       "from": 1409,
+       "to": 1415
+      },
+      {
+       "w": "otodidak,",
+       "from": 1415,
+       "to": 1439
+      },
+      {
+       "w": "dan",
+       "from": 1443,
+       "to": 1446
+      },
+      {
+       "w": "sempat",
+       "from": 1446,
+       "to": 1459
+      },
+      {
+       "w": "bekerja",
+       "from": 1459,
+       "to": 1471
+      },
+      {
+       "w": "sebagai",
+       "from": 1471,
+       "to": 1478
+      },
+      {
+       "w": "insinyur",
+       "from": 1478,
+       "to": 1494
+      },
+      {
+       "w": "teknologi,",
+       "from": 1494,
+       "to": 1518
+      },
+      {
+       "w": "hingga",
+       "from": 1519,
+       "to": 1529
+      },
+      {
+       "w": "pada",
+       "from": 1529,
+       "to": 1534
+      },
+      {
+       "w": "tahun",
+       "from": 1534,
+       "to": 1542
+      },
+      {
+       "w": "2009,",
+       "from": 1542,
+       "to": 1562
+      },
+      {
+       "w": "ia",
+       "from": 1572,
+       "to": 1578
+      },
+      {
+       "w": "melamar",
+       "from": 1578,
+       "to": 1587
+      },
+      {
+       "w": "kerja",
+       "from": 1587,
+       "to": 1600
+      },
+      {
+       "w": "ke",
+       "from": 1600,
+       "to": 1604
+      },
+      {
+       "w": "Facebook",
+       "from": 1604,
+       "to": 1614
+      },
+      {
+       "w": "dan",
+       "from": 1614,
+       "to": 1622
+      },
+      {
+       "w": "Twitter",
+       "from": 1622,
+       "to": 1631
+      },
+      {
+       "w": "bersama",
+       "from": 1631,
+       "to": 1646
+      },
+      {
+       "w": "sahabatnya,",
+       "from": 1646,
+       "to": 1663
+      },
+      {
+       "w": "Brian",
+       "from": 1670,
+       "to": 1677
+      },
+      {
+       "w": "Acton.",
+       "from": 1677,
+       "to": 1692
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "ara",
+     "text": "Maaf sekali, profil kalian belum cocok dengan kebutuhan tim kami saat ini.",
+     "score": 1.0,
+     "file": "out/voice/whatsapp/ditolak_1.wav",
+     "wordsSec": [
+      [
+       "Maaf",
+       0.0,
+       0.36
+      ],
+      [
+       "sekali,",
+       0.36,
+       0.74
+      ],
+      [
+       "profil",
+       1.4,
+       1.78
+      ],
+      [
+       "kalian",
+       1.78,
+       2.12
+      ],
+      [
+       "belum",
+       2.12,
+       2.44
+      ],
+      [
+       "cocok",
+       2.44,
+       2.98
+      ],
+      [
+       "dengan",
+       2.98,
+       3.18
+      ],
+      [
+       "kebutuhan",
+       3.18,
+       3.72
+      ],
+      [
+       "tim",
+       3.72,
+       3.96
+      ],
+      [
+       "kami",
+       3.96,
+       4.3
+      ],
+      [
+       "saat",
+       4.3,
+       4.54
+      ],
+      [
+       "ini.",
+       4.54,
+       4.86
+      ]
+     ],
+     "from": 1706,
+     "to": 1857,
+     "words": [
+      {
+       "w": "Maaf",
+       "from": 1706,
+       "to": 1717
+      },
+      {
+       "w": "sekali,",
+       "from": 1717,
+       "to": 1728
+      },
+      {
+       "w": "profil",
+       "from": 1748,
+       "to": 1760
+      },
+      {
+       "w": "kalian",
+       "from": 1760,
+       "to": 1770
+      },
+      {
+       "w": "belum",
+       "from": 1770,
+       "to": 1779
+      },
+      {
+       "w": "cocok",
+       "from": 1779,
+       "to": 1796
+      },
+      {
+       "w": "dengan",
+       "from": 1796,
+       "to": 1802
+      },
+      {
+       "w": "kebutuhan",
+       "from": 1802,
+       "to": 1818
+      },
+      {
+       "w": "tim",
+       "from": 1818,
+       "to": 1825
+      },
+      {
+       "w": "kami",
+       "from": 1825,
+       "to": 1835
+      },
+      {
+       "w": "saat",
+       "from": 1835,
+       "to": 1842
+      },
+      {
+       "w": "ini.",
+       "from": 1842,
+       "to": 1852
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Dua perusahaan teknologi raksasa itu sama-sama menolak mereka mentah-mentah!",
+     "score": 1.0,
+     "file": "out/voice/whatsapp/ditolak_2.wav",
+     "wordsSec": [
+      [
+       "dua",
+       0.0,
+       0.28
+      ],
+      [
+       "perusahaan",
+       0.28,
+       0.82
+      ],
+      [
+       "teknologi",
+       0.82,
+       1.28
+      ],
+      [
+       "raksasa",
+       1.28,
+       1.66
+      ],
+      [
+       "itu",
+       1.66,
+       1.92
+      ],
+      [
+       "sama",
+       1.92,
+       2.48
+      ],
+      [
+       "-sama",
+       2.48,
+       2.8
+      ],
+      [
+       "menolak",
+       2.8,
+       3.22
+      ],
+      [
+       "mereka",
+       3.22,
+       3.42
+      ],
+      [
+       "mentah",
+       3.42,
+       3.9
+      ],
+      [
+       "-mentah.",
+       3.9,
+       4.24
+      ]
+     ],
+     "from": 1865,
+     "to": 1995,
+     "words": [
+      {
+       "w": "dua",
+       "from": 1865,
+       "to": 1873
+      },
+      {
+       "w": "perusahaan",
+       "from": 1873,
+       "to": 1890
+      },
+      {
+       "w": "teknologi",
+       "from": 1890,
+       "to": 1903
+      },
+      {
+       "w": "raksasa",
+       "from": 1903,
+       "to": 1915
+      },
+      {
+       "w": "itu",
+       "from": 1915,
+       "to": 1923
+      },
+      {
+       "w": "sama",
+       "from": 1923,
+       "to": 1939
+      },
+      {
+       "w": "-sama",
+       "from": 1939,
+       "to": 1949
+      },
+      {
+       "w": "menolak",
+       "from": 1949,
+       "to": 1962
+      },
+      {
+       "w": "mereka",
+       "from": 1962,
+       "to": 1968
+      },
+      {
+       "w": "mentah",
+       "from": 1968,
+       "to": 1982
+      },
+      {
+       "w": "-mentah.",
+       "from": 1982,
+       "to": 1992
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Santai saja Jan, mungkin ini tanda buat kita memulai petualangan baru sendiri.",
+     "score": 0.962,
+     "file": "out/voice/whatsapp/ditolak_3.wav",
+     "wordsSec": [
+      [
+       "dan",
+       0.0,
+       0.08
+      ],
+      [
+       "santai",
+       0.08,
+       0.38
+      ],
+      [
+       "saja,",
+       0.38,
+       0.64
+      ],
+      [
+       "dan",
+       1.06,
+       1.28
+      ],
+      [
+       "mungkin",
+       1.28,
+       1.68
+      ],
+      [
+       "ini",
+       1.68,
+       1.92
+      ],
+      [
+       "tanda",
+       1.92,
+       2.22
+      ],
+      [
+       "buat",
+       2.22,
+       2.4
+      ],
+      [
+       "kita",
+       2.4,
+       2.68
+      ],
+      [
+       "memulai",
+       2.68,
+       3.08
+      ],
+      [
+       "petualangan",
+       3.08,
+       3.54
+      ],
+      [
+       "baru",
+       3.54,
+       3.76
+      ],
+      [
+       "sendiri.",
+       3.76,
+       4.02
+      ]
+     ],
+     "from": 2002,
+     "to": 2130,
+     "words": [
+      {
+       "w": "dan",
+       "from": 2002,
+       "to": 2005
+      },
+      {
+       "w": "santai",
+       "from": 2005,
+       "to": 2014
+      },
+      {
+       "w": "saja,",
+       "from": 2014,
+       "to": 2022
+      },
+      {
+       "w": "dan",
+       "from": 2034,
+       "to": 2041
+      },
+      {
+       "w": "mungkin",
+       "from": 2041,
+       "to": 2053
+      },
+      {
+       "w": "ini",
+       "from": 2053,
+       "to": 2060
+      },
+      {
+       "w": "tanda",
+       "from": 2060,
+       "to": 2069
+      },
+      {
+       "w": "buat",
+       "from": 2069,
+       "to": 2074
+      },
+      {
+       "w": "kita",
+       "from": 2074,
+       "to": 2083
+      },
+      {
+       "w": "memulai",
+       "from": 2083,
+       "to": 2095
+      },
+      {
+       "w": "petualangan",
+       "from": 2095,
+       "to": 2109
+      },
+      {
+       "w": "baru",
+       "from": 2109,
+       "to": 2115
+      },
+      {
+       "w": "sendiri.",
+       "from": 2115,
+       "to": 2123
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ide",
+   "from": 2143,
+   "to": 2902,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Daripada larut dalam kecewa, Jan membeli ponsel pintar pertamanya dan langsung melihat masa depan besar di toko aplikasi yang baru lahir.",
+     "score": 1.0,
+     "file": "out/voice/whatsapp/ide_0.wav",
+     "wordsSec": [
+      [
+       "Daripada",
+       0.0,
+       0.44
+      ],
+      [
+       "larut",
+       0.44,
+       0.82
+      ],
+      [
+       "dalam",
+       0.82,
+       1.04
+      ],
+      [
+       "kecewa,",
+       1.04,
+       1.62
+      ],
+      [
+       "Jan",
+       1.86,
+       2.02
+      ],
+      [
+       "membeli",
+       2.02,
+       2.46
+      ],
+      [
+       "ponsel",
+       2.46,
+       2.76
+      ],
+      [
+       "pintar",
+       2.76,
+       3.2
+      ],
+      [
+       "pertamanya",
+       3.2,
+       3.7
+      ],
+      [
+       "dan",
+       3.7,
+       3.94
+      ],
+      [
+       "langsung",
+       3.94,
+       4.34
+      ],
+      [
+       "melihat",
+       4.34,
+       4.68
+      ],
+      [
+       "masa",
+       4.68,
+       4.9
+      ],
+      [
+       "depan",
+       4.9,
+       5.2
+      ],
+      [
+       "besar",
+       5.2,
+       5.44
+      ],
+      [
+       "di",
+       5.44,
+       5.7
+      ],
+      [
+       "toko",
+       5.7,
+       6.02
+      ],
+      [
+       "aplikasi",
+       6.02,
+       6.56
+      ],
+      [
+       "yang",
+       6.56,
+       6.7
+      ],
+      [
+       "baru",
+       6.7,
+       6.98
+      ],
+      [
+       "lahir.",
+       6.98,
+       7.38
+      ]
+     ],
+     "from": 2143,
+     "to": 2366,
+     "words": [
+      {
+       "w": "Daripada",
+       "from": 2143,
+       "to": 2156
+      },
+      {
+       "w": "larut",
+       "from": 2156,
+       "to": 2168
+      },
+      {
+       "w": "dalam",
+       "from": 2168,
+       "to": 2174
+      },
+      {
+       "w": "kecewa,",
+       "from": 2174,
+       "to": 2192
+      },
+      {
+       "w": "Jan",
+       "from": 2199,
+       "to": 2204
+      },
+      {
+       "w": "membeli",
+       "from": 2204,
+       "to": 2217
+      },
+      {
+       "w": "ponsel",
+       "from": 2217,
+       "to": 2226
+      },
+      {
+       "w": "pintar",
+       "from": 2226,
+       "to": 2239
+      },
+      {
+       "w": "pertamanya",
+       "from": 2239,
+       "to": 2254
+      },
+      {
+       "w": "dan",
+       "from": 2254,
+       "to": 2261
+      },
+      {
+       "w": "langsung",
+       "from": 2261,
+       "to": 2273
+      },
+      {
+       "w": "melihat",
+       "from": 2273,
+       "to": 2284
+      },
+      {
+       "w": "masa",
+       "from": 2284,
+       "to": 2290
+      },
+      {
+       "w": "depan",
+       "from": 2290,
+       "to": 2299
+      },
+      {
+       "w": "besar",
+       "from": 2299,
+       "to": 2306
+      },
+      {
+       "w": "di",
+       "from": 2306,
+       "to": 2314
+      },
+      {
+       "w": "toko",
+       "from": 2314,
+       "to": 2324
+      },
+      {
+       "w": "aplikasi",
+       "from": 2324,
+       "to": 2340
+      },
+      {
+       "w": "yang",
+       "from": 2340,
+       "to": 2344
+      },
+      {
+       "w": "baru",
+       "from": 2344,
+       "to": 2353
+      },
+      {
+       "w": "lahir.",
+       "from": 2353,
+       "to": 2365
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Ia teringat betapa mahal dan sulitnya dulu menelepon keluarga di luar negeri ketika hidup serba pas-pasan.",
+     "score": 0.994,
+     "file": "out/voice/whatsapp/ide_1.wav",
+     "wordsSec": [
+      [
+       "Ia",
+       0.0,
+       0.3
+      ],
+      [
+       "teringat",
+       0.3,
+       0.64
+      ],
+      [
+       "betapa",
+       0.64,
+       0.96
+      ],
+      [
+       "mahal",
+       0.96,
+       1.4
+      ],
+      [
+       "dan",
+       1.4,
+       1.84
+      ],
+      [
+       "sulitnya",
+       1.84,
+       2.36
+      ],
+      [
+       "dulu",
+       2.36,
+       2.56
+      ],
+      [
+       "menelpon",
+       2.56,
+       3.08
+      ],
+      [
+       "keluarga",
+       3.08,
+       3.52
+      ],
+      [
+       "di",
+       3.52,
+       3.66
+      ],
+      [
+       "luar",
+       3.66,
+       3.86
+      ],
+      [
+       "negeri",
+       3.86,
+       4.2
+      ],
+      [
+       "ketika",
+       4.2,
+       4.56
+      ],
+      [
+       "hidup",
+       4.56,
+       4.84
+      ],
+      [
+       "serbapas",
+       4.84,
+       5.36
+      ],
+      [
+       "pasan.",
+       5.36,
+       5.72
+      ]
+     ],
+     "from": 2374,
+     "to": 2554,
+     "words": [
+      {
+       "w": "Ia",
+       "from": 2374,
+       "to": 2383
+      },
+      {
+       "w": "teringat",
+       "from": 2383,
+       "to": 2393
+      },
+      {
+       "w": "betapa",
+       "from": 2393,
+       "to": 2403
+      },
+      {
+       "w": "mahal",
+       "from": 2403,
+       "to": 2416
+      },
+      {
+       "w": "dan",
+       "from": 2416,
+       "to": 2429
+      },
+      {
+       "w": "sulitnya",
+       "from": 2429,
+       "to": 2445
+      },
+      {
+       "w": "dulu",
+       "from": 2445,
+       "to": 2451
+      },
+      {
+       "w": "menelpon",
+       "from": 2451,
+       "to": 2467
+      },
+      {
+       "w": "keluarga",
+       "from": 2467,
+       "to": 2480
+      },
+      {
+       "w": "di",
+       "from": 2480,
+       "to": 2484
+      },
+      {
+       "w": "luar",
+       "from": 2484,
+       "to": 2490
+      },
+      {
+       "w": "negeri",
+       "from": 2490,
+       "to": 2500
+      },
+      {
+       "w": "ketika",
+       "from": 2500,
+       "to": 2511
+      },
+      {
+       "w": "hidup",
+       "from": 2511,
+       "to": 2519
+      },
+      {
+       "w": "serbapas",
+       "from": 2519,
+       "to": 2535
+      },
+      {
+       "w": "pasan.",
+       "from": 2535,
+       "to": 2546
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Gimana kalau ada aplikasi pesan yang super ringan, cepat, dan langsung terhubung ke nomor telepon?",
+     "score": 0.982,
+     "file": "out/voice/whatsapp/ide_2.wav",
+     "wordsSec": [
+      [
+       "Gimana",
+       0.0,
+       0.42
+      ],
+      [
+       "kalau",
+       0.42,
+       0.7
+      ],
+      [
+       "ada",
+       0.7,
+       0.9
+      ],
+      [
+       "aplikasi",
+       0.9,
+       1.34
+      ],
+      [
+       "pesan",
+       1.34,
+       1.68
+      ],
+      [
+       "yang",
+       1.68,
+       1.76
+      ],
+      [
+       "super",
+       1.76,
+       1.98
+      ],
+      [
+       "ringan,",
+       1.98,
+       2.34
+      ],
+      [
+       "cepat,",
+       2.44,
+       2.84
+      ],
+      [
+       "dan",
+       2.94,
+       3.0
+      ],
+      [
+       "langsung",
+       3.0,
+       3.34
+      ],
+      [
+       "terhubung",
+       3.34,
+       3.76
+      ],
+      [
+       "ke",
+       3.76,
+       3.9
+      ],
+      [
+       "nombor",
+       3.9,
+       4.16
+      ],
+      [
+       "telefon?",
+       4.16,
+       4.38
+      ]
+     ],
+     "from": 2562,
+     "to": 2701,
+     "words": [
+      {
+       "w": "Gimana",
+       "from": 2562,
+       "to": 2575
+      },
+      {
+       "w": "kalau",
+       "from": 2575,
+       "to": 2583
+      },
+      {
+       "w": "ada",
+       "from": 2583,
+       "to": 2589
+      },
+      {
+       "w": "aplikasi",
+       "from": 2589,
+       "to": 2602
+      },
+      {
+       "w": "pesan",
+       "from": 2602,
+       "to": 2612
+      },
+      {
+       "w": "yang",
+       "from": 2612,
+       "to": 2615
+      },
+      {
+       "w": "super",
+       "from": 2615,
+       "to": 2621
+      },
+      {
+       "w": "ringan,",
+       "from": 2621,
+       "to": 2632
+      },
+      {
+       "w": "cepat,",
+       "from": 2635,
+       "to": 2647
+      },
+      {
+       "w": "dan",
+       "from": 2650,
+       "to": 2652
+      },
+      {
+       "w": "langsung",
+       "from": 2652,
+       "to": 2662
+      },
+      {
+       "w": "terhubung",
+       "from": 2662,
+       "to": 2675
+      },
+      {
+       "w": "ke",
+       "from": 2675,
+       "to": 2679
+      },
+      {
+       "w": "nombor",
+       "from": 2679,
+       "to": 2687
+      },
+      {
+       "w": "telefon?",
+       "from": 2687,
+       "to": 2693
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Hingga jam dua pagi di apartemen kecilnya, Jan terus menulis baris demi baris kode aplikasi bernama WhatsApp.",
+     "score": 0.96,
+     "file": "out/voice/whatsapp/ide_3.wav",
+     "wordsSec": [
+      [
+       "hingga",
+       0.0,
+       0.42
+      ],
+      [
+       "jam",
+       0.42,
+       0.6
+      ],
+      [
+       "2",
+       0.6,
+       0.76
+      ],
+      [
+       "pagi",
+       0.76,
+       1.12
+      ],
+      [
+       "di",
+       1.12,
+       1.2
+      ],
+      [
+       "apartemen",
+       1.2,
+       1.62
+      ],
+      [
+       "kecilnya,",
+       1.62,
+       2.16
+      ],
+      [
+       "dan",
+       2.34,
+       2.66
+      ],
+      [
+       "terus",
+       2.66,
+       2.92
+      ],
+      [
+       "menulis",
+       2.92,
+       3.36
+      ],
+      [
+       "baris",
+       3.36,
+       3.68
+      ],
+      [
+       "demi",
+       3.68,
+       3.88
+      ],
+      [
+       "baris",
+       3.88,
+       4.26
+      ],
+      [
+       "kode",
+       4.26,
+       4.44
+      ],
+      [
+       "aplikasi",
+       4.44,
+       4.98
+      ],
+      [
+       "bernama",
+       4.98,
+       5.38
+      ],
+      [
+       "WESAP.",
+       5.38,
+       5.78
+      ]
+     ],
+     "from": 2709,
+     "to": 2889,
+     "words": [
+      {
+       "w": "hingga",
+       "from": 2709,
+       "to": 2722
+      },
+      {
+       "w": "jam",
+       "from": 2722,
+       "to": 2727
+      },
+      {
+       "w": "2",
+       "from": 2727,
+       "to": 2732
+      },
+      {
+       "w": "pagi",
+       "from": 2732,
+       "to": 2743
+      },
+      {
+       "w": "di",
+       "from": 2743,
+       "to": 2745
+      },
+      {
+       "w": "apartemen",
+       "from": 2745,
+       "to": 2758
+      },
+      {
+       "w": "kecilnya,",
+       "from": 2758,
+       "to": 2774
+      },
+      {
+       "w": "dan",
+       "from": 2779,
+       "to": 2789
+      },
+      {
+       "w": "terus",
+       "from": 2789,
+       "to": 2797
+      },
+      {
+       "w": "menulis",
+       "from": 2797,
+       "to": 2810
+      },
+      {
+       "w": "baris",
+       "from": 2810,
+       "to": 2819
+      },
+      {
+       "w": "demi",
+       "from": 2819,
+       "to": 2825
+      },
+      {
+       "w": "baris",
+       "from": 2825,
+       "to": 2837
+      },
+      {
+       "w": "kode",
+       "from": 2837,
+       "to": 2842
+      },
+      {
+       "w": "aplikasi",
+       "from": 2842,
+       "to": 2858
+      },
+      {
+       "w": "bernama",
+       "from": 2858,
+       "to": 2870
+      },
+      {
+       "w": "WESAP.",
+       "from": 2870,
+       "to": 2882
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "prinsip",
+   "from": 2902,
+   "to": 3571,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Awalnya jalan mereka tidak mulus, aplikasi sering eror, penggunanya sepi, sampai Jan sempat hampir menyerah dan ingin mencari kerja lagi.",
+     "score": 0.987,
+     "file": "out/voice/whatsapp/prinsip_0.wav",
+     "wordsSec": [
+      [
+       "ke",
+       0.0,
+       0.06
+      ],
+      [
+       "awalnya",
+       0.06,
+       0.38
+      ],
+      [
+       "jalan",
+       0.38,
+       0.66
+      ],
+      [
+       "mereka",
+       0.66,
+       0.86
+      ],
+      [
+       "tidak",
+       0.86,
+       1.14
+      ],
+      [
+       "mulus,",
+       1.14,
+       1.62
+      ],
+      [
+       "aplikasi",
+       1.82,
+       2.38
+      ],
+      [
+       "sering",
+       2.38,
+       2.66
+      ],
+      [
+       "error",
+       2.66,
+       2.9
+      ],
+      [
+       "penggunanya",
+       2.9,
+       3.48
+      ],
+      [
+       "sepi,",
+       3.48,
+       3.9
+      ],
+      [
+       "sampai",
+       4.06,
+       4.42
+      ],
+      [
+       "jan",
+       4.42,
+       4.72
+      ],
+      [
+       "sempat",
+       4.72,
+       5.04
+      ],
+      [
+       "hampir",
+       5.04,
+       5.38
+      ],
+      [
+       "menyerah",
+       5.38,
+       5.76
+      ],
+      [
+       "dan",
+       5.76,
+       5.86
+      ],
+      [
+       "ingin",
+       5.86,
+       6.12
+      ],
+      [
+       "mencari",
+       6.12,
+       6.42
+      ],
+      [
+       "kerja",
+       6.42,
+       6.7
+      ],
+      [
+       "lagi.",
+       6.7,
+       6.92
+      ]
+     ],
+     "from": 2902,
+     "to": 3116,
+     "words": [
+      {
+       "w": "ke",
+       "from": 2902,
+       "to": 2904
+      },
+      {
+       "w": "awalnya",
+       "from": 2904,
+       "to": 2914
+      },
+      {
+       "w": "jalan",
+       "from": 2914,
+       "to": 2922
+      },
+      {
+       "w": "mereka",
+       "from": 2922,
+       "to": 2928
+      },
+      {
+       "w": "tidak",
+       "from": 2928,
+       "to": 2937
+      },
+      {
+       "w": "mulus,",
+       "from": 2937,
+       "to": 2951
+      },
+      {
+       "w": "aplikasi",
+       "from": 2957,
+       "to": 2974
+      },
+      {
+       "w": "sering",
+       "from": 2974,
+       "to": 2982
+      },
+      {
+       "w": "error",
+       "from": 2982,
+       "to": 2989
+      },
+      {
+       "w": "penggunanya",
+       "from": 2989,
+       "to": 3007
+      },
+      {
+       "w": "sepi,",
+       "from": 3007,
+       "to": 3019
+      },
+      {
+       "w": "sampai",
+       "from": 3024,
+       "to": 3035
+      },
+      {
+       "w": "jan",
+       "from": 3035,
+       "to": 3044
+      },
+      {
+       "w": "sempat",
+       "from": 3044,
+       "to": 3054
+      },
+      {
+       "w": "hampir",
+       "from": 3054,
+       "to": 3064
+      },
+      {
+       "w": "menyerah",
+       "from": 3064,
+       "to": 3075
+      },
+      {
+       "w": "dan",
+       "from": 3075,
+       "to": 3078
+      },
+      {
+       "w": "ingin",
+       "from": 3078,
+       "to": 3086
+      },
+      {
+       "w": "mencari",
+       "from": 3086,
+       "to": 3095
+      },
+      {
+       "w": "kerja",
+       "from": 3095,
+       "to": 3103
+      },
+      {
+       "w": "lagi.",
+       "from": 3103,
+       "to": 3110
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Jangan nyerah sekarang Jan, kita sudah terlalu dekat, minum kopimu dulu.",
+     "score": 0.974,
+     "file": "out/voice/whatsapp/prinsip_1.wav",
+     "wordsSec": [
+      [
+       "Jaman",
+       0.0,
+       0.28
+      ],
+      [
+       "nyerah",
+       0.28,
+       0.56
+      ],
+      [
+       "sekarang",
+       0.56,
+       0.88
+      ],
+      [
+       "Jan,",
+       0.88,
+       1.18
+      ],
+      [
+       "kita",
+       1.56,
+       1.7
+      ],
+      [
+       "sudah",
+       1.7,
+       1.92
+      ],
+      [
+       "terlalu",
+       1.92,
+       2.26
+      ],
+      [
+       "dekat",
+       2.26,
+       2.46
+      ],
+      [
+       "minum",
+       2.46,
+       2.7
+      ],
+      [
+       "kopi",
+       2.7,
+       2.96
+      ],
+      [
+       "mu",
+       2.96,
+       3.04
+      ],
+      [
+       "dulu.",
+       3.04,
+       3.24
+      ]
+     ],
+     "from": 3124,
+     "to": 3225,
+     "words": [
+      {
+       "w": "Jaman",
+       "from": 3124,
+       "to": 3132
+      },
+      {
+       "w": "nyerah",
+       "from": 3132,
+       "to": 3141
+      },
+      {
+       "w": "sekarang",
+       "from": 3141,
+       "to": 3150
+      },
+      {
+       "w": "Jan,",
+       "from": 3150,
+       "to": 3159
+      },
+      {
+       "w": "kita",
+       "from": 3171,
+       "to": 3175
+      },
+      {
+       "w": "sudah",
+       "from": 3175,
+       "to": 3181
+      },
+      {
+       "w": "terlalu",
+       "from": 3181,
+       "to": 3192
+      },
+      {
+       "w": "dekat",
+       "from": 3192,
+       "to": 3198
+      },
+      {
+       "w": "minum",
+       "from": 3198,
+       "to": 3205
+      },
+      {
+       "w": "kopi",
+       "from": 3205,
+       "to": 3213
+      },
+      {
+       "w": "mu",
+       "from": 3213,
+       "to": 3215
+      },
+      {
+       "w": "dulu.",
+       "from": 3215,
+       "to": 3221
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Brian bukan cuma menyemangati, tapi juga menempelkan catatan kuning legendaris di meja kerja Jan.",
+     "score": 0.982,
+     "file": "out/voice/whatsapp/prinsip_2.wav",
+     "wordsSec": [
+      [
+       "Brian,",
+       0.0,
+       0.4
+      ],
+      [
+       "bukan",
+       0.74,
+       0.96
+      ],
+      [
+       "cuma",
+       0.96,
+       1.2
+      ],
+      [
+       "menyimang",
+       1.2,
+       1.56
+      ],
+      [
+       "hati,",
+       1.56,
+       1.84
+      ],
+      [
+       "tapi",
+       1.88,
+       2.06
+      ],
+      [
+       "juga",
+       2.06,
+       2.28
+      ],
+      [
+       "menempelkan",
+       2.28,
+       2.84
+      ],
+      [
+       "catatan",
+       2.84,
+       3.24
+      ],
+      [
+       "kuning",
+       3.24,
+       3.58
+      ],
+      [
+       "legendaris",
+       3.58,
+       4.08
+      ],
+      [
+       "di",
+       4.08,
+       4.26
+      ],
+      [
+       "meja",
+       4.26,
+       4.56
+      ],
+      [
+       "kerjajan.",
+       4.56,
+       5.1
+      ]
+     ],
+     "from": 3232,
+     "to": 3388,
+     "words": [
+      {
+       "w": "Brian,",
+       "from": 3232,
+       "to": 3244
+      },
+      {
+       "w": "bukan",
+       "from": 3255,
+       "to": 3261
+      },
+      {
+       "w": "cuma",
+       "from": 3261,
+       "to": 3268
+      },
+      {
+       "w": "menyimang",
+       "from": 3268,
+       "to": 3279
+      },
+      {
+       "w": "hati,",
+       "from": 3279,
+       "to": 3288
+      },
+      {
+       "w": "tapi",
+       "from": 3289,
+       "to": 3294
+      },
+      {
+       "w": "juga",
+       "from": 3294,
+       "to": 3301
+      },
+      {
+       "w": "menempelkan",
+       "from": 3301,
+       "to": 3318
+      },
+      {
+       "w": "catatan",
+       "from": 3318,
+       "to": 3330
+      },
+      {
+       "w": "kuning",
+       "from": 3330,
+       "to": 3340
+      },
+      {
+       "w": "legendaris",
+       "from": 3340,
+       "to": 3355
+      },
+      {
+       "w": "di",
+       "from": 3355,
+       "to": 3360
+      },
+      {
+       "w": "meja",
+       "from": 3360,
+       "to": 3369
+      },
+      {
+       "w": "kerjajan.",
+       "from": 3369,
+       "to": 3385
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Tanpa iklan, tanpa game, tanpa tipu-tipu! Kita bikin produk yang benar-benar bersih untuk semua orang.",
+     "score": 0.969,
+     "file": "out/voice/whatsapp/prinsip_3.wav",
+     "wordsSec": [
+      [
+       "tanpa",
+       0.0,
+       0.38
+      ],
+      [
+       "iklan,",
+       0.38,
+       0.76
+      ],
+      [
+       "tanpa",
+       1.14,
+       1.46
+      ],
+      [
+       "game,",
+       1.46,
+       1.72
+      ],
+      [
+       "tanpa",
+       1.9,
+       2.34
+      ],
+      [
+       "tipu",
+       2.34,
+       2.58
+      ],
+      [
+       "-tipu",
+       2.58,
+       2.82
+      ],
+      [
+       "kita",
+       2.82,
+       3.0
+      ],
+      [
+       "bikin",
+       3.0,
+       3.34
+      ],
+      [
+       "produk",
+       3.34,
+       3.56
+      ],
+      [
+       "yang",
+       3.56,
+       3.78
+      ],
+      [
+       "benar",
+       3.78,
+       4.04
+      ],
+      [
+       "bersih",
+       4.04,
+       4.42
+      ],
+      [
+       "untuk",
+       4.42,
+       4.7
+      ],
+      [
+       "semua",
+       4.7,
+       4.96
+      ],
+      [
+       "orang.",
+       4.96,
+       5.22
+      ]
+     ],
+     "from": 3396,
+     "to": 3557,
+     "words": [
+      {
+       "w": "tanpa",
+       "from": 3396,
+       "to": 3408
+      },
+      {
+       "w": "iklan,",
+       "from": 3408,
+       "to": 3419
+      },
+      {
+       "w": "tanpa",
+       "from": 3430,
+       "to": 3440
+      },
+      {
+       "w": "game,",
+       "from": 3440,
+       "to": 3448
+      },
+      {
+       "w": "tanpa",
+       "from": 3453,
+       "to": 3466
+      },
+      {
+       "w": "tipu",
+       "from": 3466,
+       "to": 3474
+      },
+      {
+       "w": "-tipu",
+       "from": 3474,
+       "to": 3481
+      },
+      {
+       "w": "kita",
+       "from": 3481,
+       "to": 3486
+      },
+      {
+       "w": "bikin",
+       "from": 3486,
+       "to": 3496
+      },
+      {
+       "w": "produk",
+       "from": 3496,
+       "to": 3503
+      },
+      {
+       "w": "yang",
+       "from": 3503,
+       "to": 3510
+      },
+      {
+       "w": "benar",
+       "from": 3510,
+       "to": 3517
+      },
+      {
+       "w": "bersih",
+       "from": 3517,
+       "to": 3529
+      },
+      {
+       "w": "untuk",
+       "from": 3529,
+       "to": 3537
+      },
+      {
+       "w": "semua",
+       "from": 3537,
+       "to": 3545
+      },
+      {
+       "w": "orang.",
+       "from": 3545,
+       "to": 3553
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "meledak",
+   "from": 3571,
+   "to": 4204,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Prinsip sederhana itulah yang justru membuat orang di seluruh dunia jatuh cinta pada WhatsApp.",
+     "score": 1.0,
+     "file": "out/voice/whatsapp/meledak_0.wav",
+     "wordsSec": [
+      [
+       "Prinsip",
+       0.0,
+       0.5
+      ],
+      [
+       "sederhana",
+       0.5,
+       0.92
+      ],
+      [
+       "itulah",
+       0.92,
+       1.34
+      ],
+      [
+       "yang",
+       1.34,
+       1.5
+      ],
+      [
+       "justru",
+       1.5,
+       1.88
+      ],
+      [
+       "membuat",
+       1.88,
+       2.18
+      ],
+      [
+       "orang",
+       2.18,
+       2.42
+      ],
+      [
+       "di",
+       2.42,
+       2.64
+      ],
+      [
+       "seluruh",
+       2.64,
+       2.96
+      ],
+      [
+       "dunia",
+       2.96,
+       3.26
+      ],
+      [
+       "jatuh",
+       3.26,
+       3.56
+      ],
+      [
+       "cinta",
+       3.56,
+       3.94
+      ],
+      [
+       "pada",
+       3.94,
+       4.14
+      ],
+      [
+       "whatsapp.",
+       4.14,
+       4.58
+      ]
+     ],
+     "from": 3571,
+     "to": 3712,
+     "words": [
+      {
+       "w": "Prinsip",
+       "from": 3571,
+       "to": 3586
+      },
+      {
+       "w": "sederhana",
+       "from": 3586,
+       "to": 3598
+      },
+      {
+       "w": "itulah",
+       "from": 3598,
+       "to": 3611
+      },
+      {
+       "w": "yang",
+       "from": 3611,
+       "to": 3616
+      },
+      {
+       "w": "justru",
+       "from": 3616,
+       "to": 3627
+      },
+      {
+       "w": "membuat",
+       "from": 3627,
+       "to": 3636
+      },
+      {
+       "w": "orang",
+       "from": 3636,
+       "to": 3643
+      },
+      {
+       "w": "di",
+       "from": 3643,
+       "to": 3650
+      },
+      {
+       "w": "seluruh",
+       "from": 3650,
+       "to": 3659
+      },
+      {
+       "w": "dunia",
+       "from": 3659,
+       "to": 3668
+      },
+      {
+       "w": "jatuh",
+       "from": 3668,
+       "to": 3677
+      },
+      {
+       "w": "cinta",
+       "from": 3677,
+       "to": 3689
+      },
+      {
+       "w": "pada",
+       "from": 3689,
+       "to": 3695
+      },
+      {
+       "w": "whatsapp.",
+       "from": 3695,
+       "to": 3708
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Tanpa mengeluarkan uang iklan sepeser pun, jumlah penggunanya meledak dari mulut ke mulut, dari sepuluh juta, melonjak ke dua ratus juta, hingga menembus empat ratus lima puluh juta pengguna aktif!",
+     "score": 0.944,
+     "file": "out/voice/whatsapp/meledak_1.wav",
+     "wordsSec": [
+      [
+       "Tanpa",
+       0.0,
+       0.46
+      ],
+      [
+       "mengeluarkan",
+       0.46,
+       0.82
+      ],
+      [
+       "uang",
+       0.82,
+       1.12
+      ],
+      [
+       "iklan",
+       1.12,
+       1.42
+      ],
+      [
+       "sepesar",
+       1.42,
+       1.88
+      ],
+      [
+       "pun,",
+       1.88,
+       2.06
+      ],
+      [
+       "jumlah",
+       2.22,
+       2.46
+      ],
+      [
+       "penggunanya",
+       2.46,
+       2.88
+      ],
+      [
+       "meledak",
+       2.88,
+       3.3
+      ],
+      [
+       "dari",
+       3.3,
+       3.46
+      ],
+      [
+       "mulut",
+       3.46,
+       3.78
+      ],
+      [
+       "ke",
+       3.78,
+       3.88
+      ],
+      [
+       "mulut",
+       3.88,
+       4.2
+      ],
+      [
+       "dari",
+       4.2,
+       4.38
+      ],
+      [
+       "10",
+       4.38,
+       4.68
+      ],
+      [
+       "juta",
+       4.68,
+       5.42
+      ],
+      [
+       "meluncap",
+       5.42,
+       5.86
+      ],
+      [
+       "200",
+       5.86,
+       6.2
+      ],
+      [
+       "juta",
+       6.2,
+       7.1
+      ],
+      [
+       "tinggal",
+       7.1,
+       7.44
+      ],
+      [
+       "menembus",
+       7.44,
+       7.86
+      ],
+      [
+       "450",
+       7.86,
+       8.4
+      ],
+      [
+       "juta",
+       8.4,
+       9.14
+      ],
+      [
+       "pengguna",
+       9.14,
+       9.5
+      ],
+      [
+       "aktif.",
+       9.5,
+       9.92
+      ]
+     ],
+     "from": 3720,
+     "to": 4020,
+     "words": [
+      {
+       "w": "Tanpa",
+       "from": 3720,
+       "to": 3734
+      },
+      {
+       "w": "mengeluarkan",
+       "from": 3734,
+       "to": 3745
+      },
+      {
+       "w": "uang",
+       "from": 3745,
+       "to": 3754
+      },
+      {
+       "w": "iklan",
+       "from": 3754,
+       "to": 3763
+      },
+      {
+       "w": "sepesar",
+       "from": 3763,
+       "to": 3776
+      },
+      {
+       "w": "pun,",
+       "from": 3776,
+       "to": 3782
+      },
+      {
+       "w": "jumlah",
+       "from": 3787,
+       "to": 3794
+      },
+      {
+       "w": "penggunanya",
+       "from": 3794,
+       "to": 3806
+      },
+      {
+       "w": "meledak",
+       "from": 3806,
+       "to": 3819
+      },
+      {
+       "w": "dari",
+       "from": 3819,
+       "to": 3824
+      },
+      {
+       "w": "mulut",
+       "from": 3824,
+       "to": 3833
+      },
+      {
+       "w": "ke",
+       "from": 3833,
+       "to": 3836
+      },
+      {
+       "w": "mulut",
+       "from": 3836,
+       "to": 3846
+      },
+      {
+       "w": "dari",
+       "from": 3846,
+       "to": 3851
+      },
+      {
+       "w": "10",
+       "from": 3851,
+       "to": 3860
+      },
+      {
+       "w": "juta",
+       "from": 3860,
+       "to": 3883
+      },
+      {
+       "w": "meluncap",
+       "from": 3883,
+       "to": 3896
+      },
+      {
+       "w": "200",
+       "from": 3896,
+       "to": 3906
+      },
+      {
+       "w": "juta",
+       "from": 3906,
+       "to": 3933
+      },
+      {
+       "w": "tinggal",
+       "from": 3933,
+       "to": 3943
+      },
+      {
+       "w": "menembus",
+       "from": 3943,
+       "to": 3956
+      },
+      {
+       "w": "450",
+       "from": 3956,
+       "to": 3972
+      },
+      {
+       "w": "juta",
+       "from": 3972,
+       "to": 3994
+      },
+      {
+       "w": "pengguna",
+       "from": 3994,
+       "to": 4005
+      },
+      {
+       "w": "aktif.",
+       "from": 4005,
+       "to": 4018
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Yang paling gila, seluruh layanan raksasa dunia itu hanya dijalankan oleh sekitar lima puluh lima karyawan saja.",
+     "score": 1.0,
+     "file": "out/voice/whatsapp/meledak_2.wav",
+     "wordsSec": [
+      [
+       "Yang",
+       0.0,
+       0.16
+      ],
+      [
+       "paling",
+       0.16,
+       0.42
+      ],
+      [
+       "gila,",
+       0.42,
+       0.8
+      ],
+      [
+       "seluruh",
+       0.94,
+       1.26
+      ],
+      [
+       "layanan",
+       1.26,
+       1.54
+      ],
+      [
+       "raksasa",
+       1.54,
+       1.94
+      ],
+      [
+       "dunia",
+       1.94,
+       2.28
+      ],
+      [
+       "itu",
+       2.28,
+       2.48
+      ],
+      [
+       "hanya",
+       2.48,
+       2.8
+      ],
+      [
+       "dijalankan",
+       2.8,
+       3.38
+      ],
+      [
+       "oleh",
+       3.38,
+       3.52
+      ],
+      [
+       "sekitar",
+       3.52,
+       3.9
+      ],
+      [
+       "55",
+       3.9,
+       4.36
+      ],
+      [
+       "karyawan",
+       4.36,
+       4.92
+      ],
+      [
+       "saja.",
+       4.92,
+       5.22
+      ]
+     ],
+     "from": 4028,
+     "to": 4191,
+     "words": [
+      {
+       "w": "Yang",
+       "from": 4028,
+       "to": 4033
+      },
+      {
+       "w": "paling",
+       "from": 4033,
+       "to": 4040
+      },
+      {
+       "w": "gila,",
+       "from": 4040,
+       "to": 4052
+      },
+      {
+       "w": "seluruh",
+       "from": 4056,
+       "to": 4066
+      },
+      {
+       "w": "layanan",
+       "from": 4066,
+       "to": 4074
+      },
+      {
+       "w": "raksasa",
+       "from": 4074,
+       "to": 4086
+      },
+      {
+       "w": "dunia",
+       "from": 4086,
+       "to": 4096
+      },
+      {
+       "w": "itu",
+       "from": 4096,
+       "to": 4102
+      },
+      {
+       "w": "hanya",
+       "from": 4102,
+       "to": 4112
+      },
+      {
+       "w": "dijalankan",
+       "from": 4112,
+       "to": 4129
+      },
+      {
+       "w": "oleh",
+       "from": 4129,
+       "to": 4133
+      },
+      {
+       "w": "sekitar",
+       "from": 4133,
+       "to": 4145
+      },
+      {
+       "w": "55",
+       "from": 4145,
+       "to": 4159
+      },
+      {
+       "w": "karyawan",
+       "from": 4159,
+       "to": 4175
+      },
+      {
+       "w": "saja.",
+       "from": 4175,
+       "to": 4184
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "tawaran",
+   "from": 4204,
+   "to": 4957,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Lima tahun setelah penolakan pahit itu, perusahaan yang dulu menutup pintu untuk Jan akhirnya datang mengetuk lagi.",
+     "score": 0.984,
+     "file": "out/voice/whatsapp/tawaran_0.wav",
+     "wordsSec": [
+      [
+       "5",
+       0.0,
+       0.2
+      ],
+      [
+       "tahun,",
+       0.2,
+       0.56
+      ],
+      [
+       "setelah",
+       0.86,
+       1.24
+      ],
+      [
+       "penolakan",
+       1.24,
+       1.6
+      ],
+      [
+       "pahit",
+       1.6,
+       1.92
+      ],
+      [
+       "itu,",
+       1.92,
+       2.18
+      ],
+      [
+       "perusahaan",
+       2.54,
+       2.96
+      ],
+      [
+       "yang",
+       2.96,
+       3.04
+      ],
+      [
+       "dulu",
+       3.04,
+       3.28
+      ],
+      [
+       "menutup",
+       3.28,
+       3.7
+      ],
+      [
+       "pintu",
+       3.7,
+       4.04
+      ],
+      [
+       "untuk",
+       4.04,
+       4.28
+      ],
+      [
+       "Jan",
+       4.28,
+       4.56
+      ],
+      [
+       "akhirnya",
+       4.56,
+       4.96
+      ],
+      [
+       "datang",
+       4.96,
+       5.3
+      ],
+      [
+       "menetup",
+       5.3,
+       5.64
+      ],
+      [
+       "lagi.",
+       5.64,
+       5.9
+      ]
+     ],
+     "from": 4204,
+     "to": 4387,
+     "words": [
+      {
+       "w": "5",
+       "from": 4204,
+       "to": 4210
+      },
+      {
+       "w": "tahun,",
+       "from": 4210,
+       "to": 4221
+      },
+      {
+       "w": "setelah",
+       "from": 4230,
+       "to": 4242
+      },
+      {
+       "w": "penolakan",
+       "from": 4242,
+       "to": 4252
+      },
+      {
+       "w": "pahit",
+       "from": 4252,
+       "to": 4262
+      },
+      {
+       "w": "itu,",
+       "from": 4262,
+       "to": 4270
+      },
+      {
+       "w": "perusahaan",
+       "from": 4281,
+       "to": 4293
+      },
+      {
+       "w": "yang",
+       "from": 4293,
+       "to": 4296
+      },
+      {
+       "w": "dulu",
+       "from": 4296,
+       "to": 4303
+      },
+      {
+       "w": "menutup",
+       "from": 4303,
+       "to": 4315
+      },
+      {
+       "w": "pintu",
+       "from": 4315,
+       "to": 4326
+      },
+      {
+       "w": "untuk",
+       "from": 4326,
+       "to": 4333
+      },
+      {
+       "w": "Jan",
+       "from": 4333,
+       "to": 4341
+      },
+      {
+       "w": "akhirnya",
+       "from": 4341,
+       "to": 4353
+      },
+      {
+       "w": "datang",
+       "from": 4353,
+       "to": 4363
+      },
+      {
+       "w": "menetup",
+       "from": 4363,
+       "to": 4374
+      },
+      {
+       "w": "lagi.",
+       "from": 4374,
+       "to": 4381
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Kali ini bukan wawancara kerja, melainkan Mark Zuckerberg sendiri yang duduk di depan Jan membawa tawaran bersejarah.",
+     "score": 0.96,
+     "file": "out/voice/whatsapp/tawaran_1.wav",
+     "wordsSec": [
+      [
+       "Sekali",
+       0.0,
+       0.24
+      ],
+      [
+       "ini,",
+       0.24,
+       0.42
+      ],
+      [
+       "bukan",
+       0.6,
+       0.74
+      ],
+      [
+       "wawancara",
+       0.74,
+       1.22
+      ],
+      [
+       "kerja",
+       1.22,
+       1.6
+      ],
+      [
+       "melayangkan",
+       1.6,
+       2.12
+      ],
+      [
+       "Mark",
+       2.12,
+       2.32
+      ],
+      [
+       "Zuckerberg",
+       2.32,
+       2.86
+      ],
+      [
+       "sendiri",
+       2.86,
+       3.14
+      ],
+      [
+       "yang",
+       3.14,
+       3.44
+      ],
+      [
+       "duduk",
+       3.44,
+       3.78
+      ],
+      [
+       "di",
+       3.78,
+       3.88
+      ],
+      [
+       "depan",
+       3.88,
+       4.18
+      ],
+      [
+       "jen",
+       4.18,
+       4.34
+      ],
+      [
+       "membawa",
+       4.34,
+       4.62
+      ],
+      [
+       "tawaran",
+       4.62,
+       5.04
+      ],
+      [
+       "bersejarah.",
+       5.04,
+       5.7
+      ]
+     ],
+     "from": 4395,
+     "to": 4567,
+     "words": [
+      {
+       "w": "Sekali",
+       "from": 4395,
+       "to": 4402
+      },
+      {
+       "w": "ini,",
+       "from": 4402,
+       "to": 4407
+      },
+      {
+       "w": "bukan",
+       "from": 4413,
+       "to": 4417
+      },
+      {
+       "w": "wawancara",
+       "from": 4417,
+       "to": 4431
+      },
+      {
+       "w": "kerja",
+       "from": 4431,
+       "to": 4443
+      },
+      {
+       "w": "melayangkan",
+       "from": 4443,
+       "to": 4458
+      },
+      {
+       "w": "Mark",
+       "from": 4458,
+       "to": 4464
+      },
+      {
+       "w": "Zuckerberg",
+       "from": 4464,
+       "to": 4480
+      },
+      {
+       "w": "sendiri",
+       "from": 4480,
+       "to": 4489
+      },
+      {
+       "w": "yang",
+       "from": 4489,
+       "to": 4498
+      },
+      {
+       "w": "duduk",
+       "from": 4498,
+       "to": 4508
+      },
+      {
+       "w": "di",
+       "from": 4508,
+       "to": 4511
+      },
+      {
+       "w": "depan",
+       "from": 4511,
+       "to": 4520
+      },
+      {
+       "w": "jen",
+       "from": 4520,
+       "to": 4525
+      },
+      {
+       "w": "membawa",
+       "from": 4525,
+       "to": 4533
+      },
+      {
+       "w": "tawaran",
+       "from": 4533,
+       "to": 4546
+      },
+      {
+       "w": "bersejarah.",
+       "from": 4546,
+       "to": 4566
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Jan, apa yang kalian bangun luar biasa, Facebook ingin mengakuisisi WhatsApp senilai sembilan belas miliar dolar.",
+     "score": 0.988,
+     "file": "out/voice/whatsapp/tawaran_2.wav",
+     "wordsSec": [
+      [
+       "Dan,",
+       0.0,
+       0.18
+      ],
+      [
+       "apa",
+       0.46,
+       0.8
+      ],
+      [
+       "yang",
+       0.8,
+       0.94
+      ],
+      [
+       "kalian",
+       0.94,
+       1.12
+      ],
+      [
+       "bangun",
+       1.12,
+       1.46
+      ],
+      [
+       "luar",
+       1.46,
+       1.66
+      ],
+      [
+       "biasa,",
+       1.66,
+       2.08
+      ],
+      [
+       "Facebook",
+       2.38,
+       2.64
+      ],
+      [
+       "ingin",
+       2.64,
+       3.06
+      ],
+      [
+       "mengakui",
+       3.06,
+       3.46
+      ],
+      [
+       "sisi",
+       3.46,
+       3.7
+      ],
+      [
+       "WhatsApp",
+       3.7,
+       4.02
+      ],
+      [
+       "senilai",
+       4.02,
+       4.54
+      ],
+      [
+       "19",
+       4.54,
+       4.86
+      ],
+      [
+       "miliar",
+       4.86,
+       5.46
+      ],
+      [
+       "dolar.",
+       5.46,
+       5.76
+      ]
+     ],
+     "from": 4575,
+     "to": 4753,
+     "words": [
+      {
+       "w": "Dan,",
+       "from": 4575,
+       "to": 4581
+      },
+      {
+       "w": "apa",
+       "from": 4589,
+       "to": 4599
+      },
+      {
+       "w": "yang",
+       "from": 4599,
+       "to": 4603
+      },
+      {
+       "w": "kalian",
+       "from": 4603,
+       "to": 4609
+      },
+      {
+       "w": "bangun",
+       "from": 4609,
+       "to": 4619
+      },
+      {
+       "w": "luar",
+       "from": 4619,
+       "to": 4625
+      },
+      {
+       "w": "biasa,",
+       "from": 4625,
+       "to": 4638
+      },
+      {
+       "w": "Facebook",
+       "from": 4647,
+       "to": 4654
+      },
+      {
+       "w": "ingin",
+       "from": 4654,
+       "to": 4667
+      },
+      {
+       "w": "mengakui",
+       "from": 4667,
+       "to": 4679
+      },
+      {
+       "w": "sisi",
+       "from": 4679,
+       "to": 4686
+      },
+      {
+       "w": "WhatsApp",
+       "from": 4686,
+       "to": 4696
+      },
+      {
+       "w": "senilai",
+       "from": 4696,
+       "to": 4711
+      },
+      {
+       "w": "19",
+       "from": 4711,
+       "to": 4721
+      },
+      {
+       "w": "miliar",
+       "from": 4721,
+       "to": 4739
+      },
+      {
+       "w": "dolar.",
+       "from": 4739,
+       "to": 4748
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Karyawan yang dulu mereka tolak, kini harus mereka beli dengan salah satu nilai akuisisi terbesar dalam sejarah teknologi.",
+     "score": 0.97,
+     "file": "out/voice/whatsapp/tawaran_3.wav",
+     "wordsSec": [
+      [
+       "Kehariawan",
+       0.0,
+       0.38
+      ],
+      [
+       "yang",
+       0.38,
+       0.54
+      ],
+      [
+       "dulu",
+       0.54,
+       0.74
+      ],
+      [
+       "mereka",
+       0.74,
+       0.98
+      ],
+      [
+       "tolat,",
+       0.98,
+       1.66
+      ],
+      [
+       "kini",
+       1.78,
+       1.96
+      ],
+      [
+       "harus",
+       1.96,
+       2.12
+      ],
+      [
+       "mereka",
+       2.12,
+       2.38
+      ],
+      [
+       "beli",
+       2.38,
+       2.74
+      ],
+      [
+       "dengan",
+       2.74,
+       2.86
+      ],
+      [
+       "salah",
+       2.86,
+       3.1
+      ],
+      [
+       "satu",
+       3.1,
+       3.4
+      ],
+      [
+       "nilai",
+       3.4,
+       3.7
+      ],
+      [
+       "akuisisi",
+       3.7,
+       4.24
+      ],
+      [
+       "terbesar",
+       4.24,
+       4.7
+      ],
+      [
+       "dalam",
+       4.7,
+       4.9
+      ],
+      [
+       "sejarah",
+       4.9,
+       5.4
+      ],
+      [
+       "teknologi.",
+       5.4,
+       6.0
+      ]
+     ],
+     "from": 4761,
+     "to": 4943,
+     "words": [
+      {
+       "w": "Kehariawan",
+       "from": 4761,
+       "to": 4772
+      },
+      {
+       "w": "yang",
+       "from": 4772,
+       "to": 4777
+      },
+      {
+       "w": "dulu",
+       "from": 4777,
+       "to": 4783
+      },
+      {
+       "w": "mereka",
+       "from": 4783,
+       "to": 4790
+      },
+      {
+       "w": "tolat,",
+       "from": 4790,
+       "to": 4810
+      },
+      {
+       "w": "kini",
+       "from": 4814,
+       "to": 4819
+      },
+      {
+       "w": "harus",
+       "from": 4819,
+       "to": 4824
+      },
+      {
+       "w": "mereka",
+       "from": 4824,
+       "to": 4832
+      },
+      {
+       "w": "beli",
+       "from": 4832,
+       "to": 4843
+      },
+      {
+       "w": "dengan",
+       "from": 4843,
+       "to": 4846
+      },
+      {
+       "w": "salah",
+       "from": 4846,
+       "to": 4854
+      },
+      {
+       "w": "satu",
+       "from": 4854,
+       "to": 4863
+      },
+      {
+       "w": "nilai",
+       "from": 4863,
+       "to": 4872
+      },
+      {
+       "w": "akuisisi",
+       "from": 4872,
+       "to": 4888
+      },
+      {
+       "w": "terbesar",
+       "from": 4888,
+       "to": 4902
+      },
+      {
+       "w": "dalam",
+       "from": 4902,
+       "to": 4908
+      },
+      {
+       "w": "sejarah",
+       "from": 4908,
+       "to": 4923
+      },
+      {
+       "w": "teknologi.",
+       "from": 4923,
+       "to": 4941
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "penutup",
+   "from": 4957,
+   "to": 5612,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Jan menyetujui kesepakatan itu dengan satu syarat menyentuh, yaitu menandatangani berkasnya tepat di depan pintu gedung dinas sosial Mountain View.",
+     "score": 0.988,
+     "file": "out/voice/whatsapp/penutup_0.wav",
+     "wordsSec": [
+      [
+       "Bejan",
+       0.0,
+       0.26
+      ],
+      [
+       "menyetujui",
+       0.26,
+       0.86
+      ],
+      [
+       "kesepakatan",
+       0.86,
+       1.32
+      ],
+      [
+       "itu,",
+       1.32,
+       1.6
+      ],
+      [
+       "dengan",
+       1.78,
+       2.14
+      ],
+      [
+       "satu",
+       2.14,
+       2.52
+      ],
+      [
+       "syarat",
+       2.52,
+       2.88
+      ],
+      [
+       "menyentuh",
+       2.88,
+       3.36
+      ],
+      [
+       "yaitu",
+       3.36,
+       3.7
+      ],
+      [
+       "menandatangani",
+       3.7,
+       4.34
+      ],
+      [
+       "berkasnya",
+       4.34,
+       4.82
+      ],
+      [
+       "tepat",
+       4.82,
+       5.2
+      ],
+      [
+       "di",
+       5.2,
+       5.32
+      ],
+      [
+       "depan",
+       5.32,
+       5.62
+      ],
+      [
+       "pintu",
+       5.62,
+       6.0
+      ],
+      [
+       "gedung",
+       6.0,
+       6.24
+      ],
+      [
+       "dina",
+       6.24,
+       6.46
+      ],
+      [
+       "sosial",
+       6.46,
+       6.86
+      ],
+      [
+       "Mountain",
+       6.86,
+       7.12
+      ],
+      [
+       "View.",
+       7.12,
+       7.46
+      ]
+     ],
+     "from": 4957,
+     "to": 5192,
+     "words": [
+      {
+       "w": "Bejan",
+       "from": 4957,
+       "to": 4964
+      },
+      {
+       "w": "menyetujui",
+       "from": 4964,
+       "to": 4982
+      },
+      {
+       "w": "kesepakatan",
+       "from": 4982,
+       "to": 4996
+      },
+      {
+       "w": "itu,",
+       "from": 4996,
+       "to": 5005
+      },
+      {
+       "w": "dengan",
+       "from": 5010,
+       "to": 5021
+      },
+      {
+       "w": "satu",
+       "from": 5021,
+       "to": 5032
+      },
+      {
+       "w": "syarat",
+       "from": 5032,
+       "to": 5043
+      },
+      {
+       "w": "menyentuh",
+       "from": 5043,
+       "to": 5057
+      },
+      {
+       "w": "yaitu",
+       "from": 5057,
+       "to": 5068
+      },
+      {
+       "w": "menandatangani",
+       "from": 5068,
+       "to": 5087
+      },
+      {
+       "w": "berkasnya",
+       "from": 5087,
+       "to": 5101
+      },
+      {
+       "w": "tepat",
+       "from": 5101,
+       "to": 5113
+      },
+      {
+       "w": "di",
+       "from": 5113,
+       "to": 5116
+      },
+      {
+       "w": "depan",
+       "from": 5116,
+       "to": 5125
+      },
+      {
+       "w": "pintu",
+       "from": 5125,
+       "to": 5137
+      },
+      {
+       "w": "gedung",
+       "from": 5137,
+       "to": 5144
+      },
+      {
+       "w": "dina",
+       "from": 5144,
+       "to": 5150
+      },
+      {
+       "w": "sosial",
+       "from": 5150,
+       "to": 5162
+      },
+      {
+       "w": "Mountain",
+       "from": 5162,
+       "to": 5170
+      },
+      {
+       "w": "View.",
+       "from": 5170,
+       "to": 5180
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Aku cuma ingin selalu ingat dari mana aku berasal, dan tidak pernah melupakan perjuangan ibuku.",
+     "score": 0.981,
+     "file": "out/voice/whatsapp/penutup_1.wav",
+     "wordsSec": [
+      [
+       "dan",
+       0.0,
+       0.06
+      ],
+      [
+       "aku",
+       0.06,
+       0.24
+      ],
+      [
+       "cuma",
+       0.24,
+       0.46
+      ],
+      [
+       "ingin",
+       0.46,
+       0.72
+      ],
+      [
+       "selalu",
+       0.72,
+       1.02
+      ],
+      [
+       "ingat",
+       1.02,
+       1.28
+      ],
+      [
+       "dari",
+       1.28,
+       1.42
+      ],
+      [
+       "mana",
+       1.42,
+       1.64
+      ],
+      [
+       "aku",
+       1.64,
+       1.96
+      ],
+      [
+       "berasal",
+       1.96,
+       2.64
+      ],
+      [
+       "dan",
+       2.64,
+       2.8
+      ],
+      [
+       "tidak",
+       2.8,
+       3.04
+      ],
+      [
+       "pernah",
+       3.04,
+       3.38
+      ],
+      [
+       "melupakan",
+       3.38,
+       3.88
+      ],
+      [
+       "perjuangan",
+       3.88,
+       4.32
+      ],
+      [
+       "ibuku.",
+       4.32,
+       4.7
+      ]
+     ],
+     "from": 5200,
+     "to": 5344,
+     "words": [
+      {
+       "w": "dan",
+       "from": 5200,
+       "to": 5201
+      },
+      {
+       "w": "aku",
+       "from": 5201,
+       "to": 5207
+      },
+      {
+       "w": "cuma",
+       "from": 5207,
+       "to": 5213
+      },
+      {
+       "w": "ingin",
+       "from": 5213,
+       "to": 5221
+      },
+      {
+       "w": "selalu",
+       "from": 5221,
+       "to": 5230
+      },
+      {
+       "w": "ingat",
+       "from": 5230,
+       "to": 5238
+      },
+      {
+       "w": "dari",
+       "from": 5238,
+       "to": 5242
+      },
+      {
+       "w": "mana",
+       "from": 5242,
+       "to": 5249
+      },
+      {
+       "w": "aku",
+       "from": 5249,
+       "to": 5258
+      },
+      {
+       "w": "berasal",
+       "from": 5258,
+       "to": 5279
+      },
+      {
+       "w": "dan",
+       "from": 5279,
+       "to": 5284
+      },
+      {
+       "w": "tidak",
+       "from": 5284,
+       "to": 5291
+      },
+      {
+       "w": "pernah",
+       "from": 5291,
+       "to": 5301
+      },
+      {
+       "w": "melupakan",
+       "from": 5301,
+       "to": 5316
+      },
+      {
+       "w": "perjuangan",
+       "from": 5316,
+       "to": 5329
+      },
+      {
+       "w": "ibuku.",
+       "from": 5329,
+       "to": 5341
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Kisah Jan Koum mengingatkan kita satu hal penting, penolakan hari ini bukanlah akhir ceritamu, terkadang itu cara hidup mengarahkanmu membangun sesuatu yang jauh lebih besar.",
+     "score": 0.972,
+     "file": "out/voice/whatsapp/penutup_2.wav",
+     "wordsSec": [
+      [
+       "Bekisah",
+       0.0,
+       0.4
+      ],
+      [
+       "jangan",
+       0.4,
+       0.56
+      ],
+      [
+       "kau",
+       0.56,
+       0.7
+      ],
+      [
+       "mengingatkan",
+       0.7,
+       1.26
+      ],
+      [
+       "kita",
+       1.26,
+       1.5
+      ],
+      [
+       "satu",
+       1.5,
+       1.8
+      ],
+      [
+       "hal",
+       1.8,
+       1.96
+      ],
+      [
+       "penting",
+       1.96,
+       2.32
+      ],
+      [
+       "penolakan",
+       2.32,
+       2.76
+      ],
+      [
+       "hari",
+       2.76,
+       3.0
+      ],
+      [
+       "ini",
+       3.0,
+       3.26
+      ],
+      [
+       "bukanlah",
+       3.26,
+       3.78
+      ],
+      [
+       "akhir",
+       3.78,
+       4.04
+      ],
+      [
+       "ceritamu",
+       4.04,
+       4.58
+      ],
+      [
+       "terkadang",
+       4.58,
+       5.04
+      ],
+      [
+       "itu",
+       5.04,
+       5.16
+      ],
+      [
+       "cara",
+       5.16,
+       5.42
+      ],
+      [
+       "hidup",
+       5.42,
+       5.72
+      ],
+      [
+       "mengarahkanmu",
+       5.72,
+       6.32
+      ],
+      [
+       "membangun",
+       6.32,
+       6.76
+      ],
+      [
+       "sesuatu",
+       6.76,
+       7.14
+      ],
+      [
+       "yang",
+       7.14,
+       7.28
+      ],
+      [
+       "jauh",
+       7.28,
+       7.6
+      ],
+      [
+       "lebih",
+       7.6,
+       7.74
+      ],
+      [
+       "besar.",
+       7.74,
+       8.04
+      ]
+     ],
+     "from": 5351,
+     "to": 5599,
+     "words": [
+      {
+       "w": "Bekisah",
+       "from": 5351,
+       "to": 5363
+      },
+      {
+       "w": "jangan",
+       "from": 5363,
+       "to": 5368
+      },
+      {
+       "w": "kau",
+       "from": 5368,
+       "to": 5372
+      },
+      {
+       "w": "mengingatkan",
+       "from": 5372,
+       "to": 5389
+      },
+      {
+       "w": "kita",
+       "from": 5389,
+       "to": 5396
+      },
+      {
+       "w": "satu",
+       "from": 5396,
+       "to": 5405
+      },
+      {
+       "w": "hal",
+       "from": 5405,
+       "to": 5410
+      },
+      {
+       "w": "penting",
+       "from": 5410,
+       "to": 5421
+      },
+      {
+       "w": "penolakan",
+       "from": 5421,
+       "to": 5434
+      },
+      {
+       "w": "hari",
+       "from": 5434,
+       "to": 5441
+      },
+      {
+       "w": "ini",
+       "from": 5441,
+       "to": 5449
+      },
+      {
+       "w": "bukanlah",
+       "from": 5449,
+       "to": 5465
+      },
+      {
+       "w": "akhir",
+       "from": 5465,
+       "to": 5473
+      },
+      {
+       "w": "ceritamu",
+       "from": 5473,
+       "to": 5489
+      },
+      {
+       "w": "terkadang",
+       "from": 5489,
+       "to": 5503
+      },
+      {
+       "w": "itu",
+       "from": 5503,
+       "to": 5506
+      },
+      {
+       "w": "cara",
+       "from": 5506,
+       "to": 5514
+      },
+      {
+       "w": "hidup",
+       "from": 5514,
+       "to": 5523
+      },
+      {
+       "w": "mengarahkanmu",
+       "from": 5523,
+       "to": 5541
+      },
+      {
+       "w": "membangun",
+       "from": 5541,
+       "to": 5554
+      },
+      {
+       "w": "sesuatu",
+       "from": 5554,
+       "to": 5566
+      },
+      {
+       "w": "yang",
+       "from": 5566,
+       "to": 5570
+      },
+      {
+       "w": "jauh",
+       "from": 5570,
+       "to": 5579
+      },
+      {
+       "w": "lebih",
+       "from": 5579,
+       "to": 5584
+      },
+      {
+       "w": "besar.",
+       "from": 5584,
+       "to": 5593
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

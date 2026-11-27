@@ -84,7 +84,15 @@ def main():
     states = {}
     for st_k, rp in dodi_refs.items():
         states[("dodi", st_k)] = tts.get_state_for_audio_prompt(str(rp))
-    ara_state = tts.get_state_for_audio_prompt(str(ROOT / CAST["voices"]["ara"]["file"]))
+    extra_states = {}
+
+    def get_voice_state(voice: str, style: str):
+        if voice == "dodi":
+            return states.get(("dodi", style), states[("dodi", "narasi")])
+        if voice not in extra_states:
+            vf = ROOT / CAST["voices"][voice]["file"]
+            extra_states[voice] = tts.get_state_for_audio_prompt(str(vf))
+        return extra_states[voice]
 
     def hear(y: np.ndarray):
         a16 = signal.resample(y, int(len(y) * 16000 / sr)).astype(np.float32)
@@ -105,15 +113,14 @@ def main():
         for li, ln in enumerate(sc["lines"]):
             style, text = ln[0], ln[1]
             voice = ln[2] if len(ln) > 2 else sc.get("voice", DEFAULT_VOICE)
-            st = ara_state if voice == "ara" else states.get(("dodi", style), states[("dodi", "narasi")])
+            st = get_voice_state(voice, style)
             # pocket-tts-indonesian reads '!' as 'Indah/Inder', so normalize punctuation for TTS only!
             tts_text = text.replace("?!", "?").replace("!", ".").replace("...", ",")
             clip_path = clip_dir / f"{sc['scene']}_{li}.wav"
             t1 = time.time()
             print(f"[{sc['scene']} | {style} | {voice}] {text}", flush=True)
 
-            # Reuse already-clean cached clips that had no '!'
-            if clip_path.exists() and "!" not in text and sc["scene"] not in ("twist", "akhir"):
+            if clip_path.exists():
                 with wave.open(str(clip_path)) as wf:
                     y = np.frombuffer(wf.readframes(wf.getnframes()), np.int16).astype(np.float32) / 32767.0
                 heard, words = hear(y)

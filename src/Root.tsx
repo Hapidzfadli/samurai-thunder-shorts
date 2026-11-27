@@ -69,10 +69,12 @@ import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
 import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
 import { SchoolFlythrough, TOTAL_FRAMES_SCHOOL } from "./SchoolFlythrough";
 import { Dantzig, TOTAL_FRAMES_DANTZIG } from "./Dantzig";
+import { Whatsapp, TOTAL_FRAMES_WHATSAPP } from "./Whatsapp";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Whatsapp" component={Whatsapp} durationInFrames={TOTAL_FRAMES_WHATSAPP} fps={30} width={1080} height={1920} defaultProps={{ withAudio: true }} />
       <Composition id="Dantzig" component={Dantzig} durationInFrames={TOTAL_FRAMES_DANTZIG} fps={30} width={1080} height={1920} defaultProps={{ withAudio: true }} />
       <Composition id="SchoolFlythrough" component={SchoolFlythrough} durationInFrames={TOTAL_FRAMES_SCHOOL} fps={30} width={1080} height={1920} />
       <Composition id="ApacheDetailed" component={ApacheDetailed} durationInFrames={TOTAL_FRAMES_APACHE} fps={30} width={1080} height={1920} />
