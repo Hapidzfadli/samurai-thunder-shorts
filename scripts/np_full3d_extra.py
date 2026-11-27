@@ -40,7 +40,7 @@ class Rig:
         return f"Kar{id(self) % 9973}_{tag}{self.n}"
 
     def ball(self, c, r, mat, sc=(1, 1, 1), ol=True):
-        o = S.add_icosphere(self.nm("b"), tuple(self.w(c)), r, 2, mat, C, scale=sc)
+        o = S.add_icosphere(self.nm("b"), tuple(self.w(c)), r, 5, mat, C, scale=sc)
         o.rotation_euler = Euler((0, 0, self.R.to_euler().z))
         S_smooth(o)
         if ol:
@@ -50,16 +50,19 @@ class Rig:
     def limb(self, a, b, r, mat, r2=None, ol=True):
         pa, pb = self.w(a), self.w(b)
         d = pb - pa
-        o = S.add_cylinder(self.nm("l"), tuple((pa + pb) / 2), r, r if r2 is None else r2, d.length, 12, mat, C)
+        o = S.add_cylinder(self.nm("l"), tuple((pa + pb) / 2), r, r if r2 is None else r2, d.length, 32, mat, C)
         o.rotation_euler = Vector((0, 0, 1)).rotation_difference(d).to_euler()
         S_smooth(o)
+        sm = o.modifiers.new('ss', 'SUBSURF'); sm.levels = 2; sm.render_levels = 2
         if ol:
             outline(o)
         return o
 
     def box(self, c, size, mat, rot=(0, 0, 0), ol=True):
-        o = S.add_box(self.nm("x"), tuple(self.w(c)), size, mat, C, bevel=0.015)
+        o = S.add_box(self.nm("x"), tuple(self.w(c)), size, mat, C, bevel=min(size) * 0.3)
         o.rotation_euler = Euler((rot[0], rot[1], rot[2] + self.R.to_euler().z))
+        S_smooth(o)
+        sm = o.modifiers.new('ss', 'SUBSURF'); sm.levels = 1; sm.render_levels = 1
         if ol:
             outline(o, 0.02)
         return o
