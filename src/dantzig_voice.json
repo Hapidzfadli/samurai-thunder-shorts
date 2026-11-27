@@ -1,0 +1,2193 @@
+{
+ "fps": 30,
+ "totalFrames": 2221,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 278,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Tahun sembilan belas tiga puluh sembilan, seorang mahasiswa datang terlambat ke kelas statistika.",
+     "score": 1.0,
+     "file": "out/voice/dantzig/hook_0.wav",
+     "wordsSec": [
+      [
+       "Tahun",
+       0.0,
+       0.32
+      ],
+      [
+       "1939",
+       0.32,
+       1.04
+      ],
+      [
+       "seorang",
+       1.04,
+       1.88
+      ],
+      [
+       "mahasiswa",
+       1.88,
+       2.44
+      ],
+      [
+       "datang",
+       2.44,
+       2.84
+      ],
+      [
+       "terlambat",
+       2.84,
+       3.3
+      ],
+      [
+       "ke",
+       3.3,
+       3.42
+      ],
+      [
+       "kelas",
+       3.42,
+       3.68
+      ],
+      [
+       "statistika.",
+       3.68,
+       4.28
+      ]
+     ],
+     "from": 8,
+     "to": 140,
+     "words": [
+      {
+       "w": "Tahun",
+       "from": 8,
+       "to": 17
+      },
+      {
+       "w": "1939",
+       "from": 17,
+       "to": 39
+      },
+      {
+       "w": "seorang",
+       "from": 39,
+       "to": 64
+      },
+      {
+       "w": "mahasiswa",
+       "from": 64,
+       "to": 81
+      },
+      {
+       "w": "datang",
+       "from": 81,
+       "to": 93
+      },
+      {
+       "w": "terlambat",
+       "from": 93,
+       "to": 106
+      },
+      {
+       "w": "ke",
+       "from": 106,
+       "to": 110
+      },
+      {
+       "w": "kelas",
+       "from": 110,
+       "to": 118
+      },
+      {
+       "w": "statistika.",
+       "from": 118,
+       "to": 136
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Gara-gara telat, dia malah memecahkan dua soal paling mustahil di dunia!",
+     "score": 1.0,
+     "file": "out/voice/dantzig/hook_1.wav",
+     "wordsSec": [
+      [
+       "Gara",
+       0.0,
+       0.24
+      ],
+      [
+       "-gara",
+       0.24,
+       0.5
+      ],
+      [
+       "telat,",
+       0.5,
+       0.86
+      ],
+      [
+       "dia",
+       1.16,
+       1.32
+      ],
+      [
+       "malah",
+       1.32,
+       1.58
+      ],
+      [
+       "memecahkan",
+       1.58,
+       2.08
+      ],
+      [
+       "dua",
+       2.08,
+       2.3
+      ],
+      [
+       "soal",
+       2.3,
+       2.62
+      ],
+      [
+       "paling",
+       2.62,
+       2.94
+      ],
+      [
+       "mustahil",
+       2.94,
+       3.4
+      ],
+      [
+       "di",
+       3.4,
+       3.5
+      ],
+      [
+       "dunia.",
+       3.5,
+       3.84
+      ]
+     ],
+     "from": 147,
+     "to": 265,
+     "words": [
+      {
+       "w": "Gara",
+       "from": 147,
+       "to": 154
+      },
+      {
+       "w": "-gara",
+       "from": 154,
+       "to": 162
+      },
+      {
+       "w": "telat,",
+       "from": 162,
+       "to": 173
+      },
+      {
+       "w": "dia",
+       "from": 182,
+       "to": 187
+      },
+      {
+       "w": "malah",
+       "from": 187,
+       "to": 195
+      },
+      {
+       "w": "memecahkan",
+       "from": 195,
+       "to": 210
+      },
+      {
+       "w": "dua",
+       "from": 210,
+       "to": 216
+      },
+      {
+       "w": "soal",
+       "from": 216,
+       "to": 226
+      },
+      {
+       "w": "paling",
+       "from": 226,
+       "to": 236
+      },
+      {
+       "w": "mustahil",
+       "from": 236,
+       "to": 249
+      },
+      {
+       "w": "di",
+       "from": 249,
+       "to": 252
+      },
+      {
+       "w": "dunia.",
+       "from": 252,
+       "to": 262
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kelas",
+   "from": 278,
+   "to": 621,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Di papan tulis, Profesor Neyman menulis dua contoh teorema yang belum pernah terpecahkan siapa pun.",
+     "score": 0.955,
+     "file": "out/voice/dantzig/kelas_0.wav",
+     "wordsSec": [
+      [
+       "Di",
+       0.0,
+       0.12
+      ],
+      [
+       "Papan",
+       0.12,
+       0.38
+      ],
+      [
+       "Tuis,",
+       0.38,
+       0.82
+      ],
+      [
+       "Prof.",
+       1.12,
+       1.32
+      ],
+      [
+       "Neiman",
+       1.56,
+       1.94
+      ],
+      [
+       "menulis",
+       1.94,
+       2.56
+      ],
+      [
+       "dua",
+       2.56,
+       2.76
+      ],
+      [
+       "contoh",
+       2.76,
+       3.12
+      ],
+      [
+       "teorema",
+       3.12,
+       3.5
+      ],
+      [
+       "yang",
+       3.5,
+       3.68
+      ],
+      [
+       "belum",
+       3.68,
+       3.84
+      ],
+      [
+       "pernah",
+       3.84,
+       4.16
+      ],
+      [
+       "terpecahkan",
+       4.16,
+       4.78
+      ],
+      [
+       "siapapun.",
+       4.78,
+       5.36
+      ]
+     ],
+     "from": 278,
+     "to": 442,
+     "words": [
+      {
+       "w": "Di",
+       "from": 278,
+       "to": 282
+      },
+      {
+       "w": "Papan",
+       "from": 282,
+       "to": 290
+      },
+      {
+       "w": "Tuis,",
+       "from": 290,
+       "to": 303
+      },
+      {
+       "w": "Prof.",
+       "from": 312,
+       "to": 318
+      },
+      {
+       "w": "Neiman",
+       "from": 325,
+       "to": 337
+      },
+      {
+       "w": "menulis",
+       "from": 337,
+       "to": 355
+      },
+      {
+       "w": "dua",
+       "from": 355,
+       "to": 361
+      },
+      {
+       "w": "contoh",
+       "from": 361,
+       "to": 372
+      },
+      {
+       "w": "teorema",
+       "from": 372,
+       "to": 383
+      },
+      {
+       "w": "yang",
+       "from": 383,
+       "to": 389
+      },
+      {
+       "w": "belum",
+       "from": 389,
+       "to": 394
+      },
+      {
+       "w": "pernah",
+       "from": 394,
+       "to": 403
+      },
+      {
+       "w": "terpecahkan",
+       "from": 403,
+       "to": 422
+      },
+      {
+       "w": "siapapun.",
+       "from": 422,
+       "to": 439
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Tapi George yang baru masuk mengira itu cuma tugas pekerjaan rumah biasa, lalu langsung menyalinnya.",
+     "score": 0.988,
+     "file": "out/voice/dantzig/kelas_1.wav",
+     "wordsSec": [
+      [
+       "Tapi",
+       0.0,
+       0.26
+      ],
+      [
+       "George",
+       0.26,
+       0.62
+      ],
+      [
+       "yang",
+       0.62,
+       0.82
+      ],
+      [
+       "baru",
+       0.82,
+       1.02
+      ],
+      [
+       "masuk",
+       1.02,
+       1.32
+      ],
+      [
+       "mengira",
+       1.32,
+       1.68
+      ],
+      [
+       "itu",
+       1.68,
+       1.92
+      ],
+      [
+       "cuman",
+       1.92,
+       2.26
+      ],
+      [
+       "tugas",
+       2.26,
+       2.6
+      ],
+      [
+       "pekerjaan",
+       2.6,
+       3.06
+      ],
+      [
+       "rumah",
+       3.06,
+       3.2
+      ],
+      [
+       "biasa,",
+       3.2,
+       3.68
+      ],
+      [
+       "lalu",
+       4.02,
+       4.26
+      ],
+      [
+       "langsung",
+       4.26,
+       4.58
+      ],
+      [
+       "menyalinya.",
+       4.58,
+       5.16
+      ]
+     ],
+     "from": 449,
+     "to": 608,
+     "words": [
+      {
+       "w": "Tapi",
+       "from": 449,
+       "to": 457
+      },
+      {
+       "w": "George",
+       "from": 457,
+       "to": 468
+      },
+      {
+       "w": "yang",
+       "from": 468,
+       "to": 474
+      },
+      {
+       "w": "baru",
+       "from": 474,
+       "to": 480
+      },
+      {
+       "w": "masuk",
+       "from": 480,
+       "to": 489
+      },
+      {
+       "w": "mengira",
+       "from": 489,
+       "to": 500
+      },
+      {
+       "w": "itu",
+       "from": 500,
+       "to": 507
+      },
+      {
+       "w": "cuman",
+       "from": 507,
+       "to": 517
+      },
+      {
+       "w": "tugas",
+       "from": 517,
+       "to": 527
+      },
+      {
+       "w": "pekerjaan",
+       "from": 527,
+       "to": 541
+      },
+      {
+       "w": "rumah",
+       "from": 541,
+       "to": 545
+      },
+      {
+       "w": "biasa,",
+       "from": 545,
+       "to": 560
+      },
+      {
+       "w": "lalu",
+       "from": 570,
+       "to": 577
+      },
+      {
+       "w": "langsung",
+       "from": 577,
+       "to": 587
+      },
+      {
+       "w": "menyalinya.",
+       "from": 587,
+       "to": 604
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kamar",
+   "from": 621,
+   "to": 853,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "George, sudah jam dua malam. Tugasnya susah banget ya?",
+     "score": 0.975,
+     "file": "out/voice/dantzig/kamar_0.wav",
+     "wordsSec": [
+      [
+       "George",
+       0.0,
+       0.28
+      ],
+      [
+       "sudah",
+       0.28,
+       0.54
+      ],
+      [
+       "jam",
+       0.54,
+       0.72
+      ],
+      [
+       "2",
+       0.72,
+       0.92
+      ],
+      [
+       "malam,",
+       0.92,
+       1.44
+      ],
+      [
+       "tubasnya",
+       2.0,
+       2.42
+      ],
+      [
+       "susah",
+       2.42,
+       2.74
+      ],
+      [
+       "banget",
+       2.74,
+       2.98
+      ],
+      [
+       "ya.",
+       2.98,
+       3.18
+      ]
+     ],
+     "from": 621,
+     "to": 721,
+     "words": [
+      {
+       "w": "George",
+       "from": 621,
+       "to": 630
+      },
+      {
+       "w": "sudah",
+       "from": 630,
+       "to": 638
+      },
+      {
+       "w": "jam",
+       "from": 638,
+       "to": 643
+      },
+      {
+       "w": "2",
+       "from": 643,
+       "to": 649
+      },
+      {
+       "w": "malam,",
+       "from": 649,
+       "to": 665
+      },
+      {
+       "w": "tubasnya",
+       "from": 681,
+       "to": 694
+      },
+      {
+       "w": "susah",
+       "from": 694,
+       "to": 704
+      },
+      {
+       "w": "banget",
+       "from": 704,
+       "to": 711
+      },
+      {
+       "w": "ya.",
+       "from": 711,
+       "to": 717
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Iya nih, agak lebih susah dari biasanya... tapi kayaknya aku baru ketemu caranya!",
+     "score": 1.0,
+     "file": "out/voice/dantzig/kamar_1.wav",
+     "wordsSec": [
+      [
+       "Iya",
+       0.0,
+       0.24
+      ],
+      [
+       "nih,",
+       0.24,
+       0.44
+      ],
+      [
+       "agak",
+       0.8,
+       1.1
+      ],
+      [
+       "lebih",
+       1.1,
+       1.24
+      ],
+      [
+       "susah",
+       1.24,
+       1.5
+      ],
+      [
+       "dari",
+       1.5,
+       1.64
+      ],
+      [
+       "biasanya",
+       1.64,
+       2.02
+      ],
+      [
+       "tapi",
+       2.02,
+       2.28
+      ],
+      [
+       "kayaknya",
+       2.28,
+       2.6
+      ],
+      [
+       "aku",
+       2.6,
+       2.76
+      ],
+      [
+       "baru",
+       2.76,
+       2.92
+      ],
+      [
+       "ketemu",
+       2.92,
+       3.22
+      ],
+      [
+       "caranya.",
+       3.22,
+       3.58
+      ]
+     ],
+     "from": 729,
+     "to": 839,
+     "words": [
+      {
+       "w": "Iya",
+       "from": 729,
+       "to": 736
+      },
+      {
+       "w": "nih,",
+       "from": 736,
+       "to": 742
+      },
+      {
+       "w": "agak",
+       "from": 753,
+       "to": 762
+      },
+      {
+       "w": "lebih",
+       "from": 762,
+       "to": 766
+      },
+      {
+       "w": "susah",
+       "from": 766,
+       "to": 774
+      },
+      {
+       "w": "dari",
+       "from": 774,
+       "to": 778
+      },
+      {
+       "w": "biasanya",
+       "from": 778,
+       "to": 789
+      },
+      {
+       "w": "tapi",
+       "from": 789,
+       "to": 797
+      },
+      {
+       "w": "kayaknya",
+       "from": 797,
+       "to": 807
+      },
+      {
+       "w": "aku",
+       "from": 807,
+       "to": 812
+      },
+      {
+       "w": "baru",
+       "from": 812,
+       "to": 816
+      },
+      {
+       "w": "ketemu",
+       "from": 816,
+       "to": 825
+      },
+      {
+       "w": "caranya.",
+       "from": 825,
+       "to": 836
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kantor",
+   "from": 853,
+   "to": 1066,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Maaf Profesor, saya agak telat mengumpulkan tugas yang kemarin.",
+     "score": 0.971,
+     "file": "out/voice/dantzig/kantor_0.wav",
+     "wordsSec": [
+      [
+       "Maaf,",
+       0.0,
+       0.36
+      ],
+      [
+       "profesor",
+       0.7,
+       1.16
+      ],
+      [
+       "saya",
+       1.16,
+       1.4
+      ],
+      [
+       "agak",
+       1.4,
+       1.66
+      ],
+      [
+       "telat",
+       1.66,
+       1.9
+      ],
+      [
+       "memumpulkan",
+       1.9,
+       2.38
+      ],
+      [
+       "tugas",
+       2.38,
+       2.72
+      ],
+      [
+       "yang",
+       2.72,
+       2.82
+      ],
+      [
+       "kemarin.",
+       2.82,
+       3.26
+      ]
+     ],
+     "from": 853,
+     "to": 951,
+     "words": [
+      {
+       "w": "Maaf,",
+       "from": 853,
+       "to": 863
+      },
+      {
+       "w": "profesor",
+       "from": 874,
+       "to": 887
+      },
+      {
+       "w": "saya",
+       "from": 887,
+       "to": 895
+      },
+      {
+       "w": "agak",
+       "from": 895,
+       "to": 902
+      },
+      {
+       "w": "telat",
+       "from": 902,
+       "to": 910
+      },
+      {
+       "w": "memumpulkan",
+       "from": 910,
+       "to": 924
+      },
+      {
+       "w": "tugas",
+       "from": 924,
+       "to": 934
+      },
+      {
+       "w": "yang",
+       "from": 934,
+       "to": 937
+      },
+      {
+       "w": "kemarin.",
+       "from": 937,
+       "to": 950
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Oh, taruh saja di atas tumpukan kertas di meja saya, George.",
+     "score": 1.0,
+     "file": "out/voice/dantzig/kantor_1.wav",
+     "wordsSec": [
+      [
+       "Oh,",
+       0.0,
+       0.2
+      ],
+      [
+       "taruh",
+       0.3,
+       0.48
+      ],
+      [
+       "saja",
+       0.48,
+       0.68
+      ],
+      [
+       "di",
+       0.68,
+       0.86
+      ],
+      [
+       "atas",
+       0.86,
+       1.1
+      ],
+      [
+       "tumpukan",
+       1.1,
+       1.48
+      ],
+      [
+       "kertas",
+       1.48,
+       1.84
+      ],
+      [
+       "di",
+       1.84,
+       2.02
+      ],
+      [
+       "meja",
+       2.02,
+       2.32
+      ],
+      [
+       "saya,",
+       2.32,
+       2.52
+      ],
+      [
+       "George.",
+       2.66,
+       2.8
+      ]
+     ],
+     "from": 959,
+     "to": 1052,
+     "words": [
+      {
+       "w": "Oh,",
+       "from": 959,
+       "to": 965
+      },
+      {
+       "w": "taruh",
+       "from": 968,
+       "to": 973
+      },
+      {
+       "w": "saja",
+       "from": 973,
+       "to": 979
+      },
+      {
+       "w": "di",
+       "from": 979,
+       "to": 985
+      },
+      {
+       "w": "atas",
+       "from": 985,
+       "to": 992
+      },
+      {
+       "w": "tumpukan",
+       "from": 992,
+       "to": 1003
+      },
+      {
+       "w": "kertas",
+       "from": 1003,
+       "to": 1014
+      },
+      {
+       "w": "di",
+       "from": 1014,
+       "to": 1019
+      },
+      {
+       "w": "meja",
+       "from": 1019,
+       "to": 1028
+      },
+      {
+       "w": "saya,",
+       "from": 1028,
+       "to": 1034
+      },
+      {
+       "w": "George.",
+       "from": 1039,
+       "to": 1043
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "minggu",
+   "from": 1066,
+   "to": 1418,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Enam minggu kemudian, tepat hari Minggu jam delapan pagi, pintu rumah mereka digedor keras.",
+     "score": 0.977,
+     "file": "out/voice/dantzig/minggu_0.wav",
+     "wordsSec": [
+      [
+       "6",
+       0.0,
+       0.34
+      ],
+      [
+       "minggu",
+       0.34,
+       0.74
+      ],
+      [
+       "kemudian",
+       0.74,
+       1.2
+      ],
+      [
+       "tepat",
+       1.2,
+       1.54
+      ],
+      [
+       "hari",
+       1.54,
+       1.72
+      ],
+      [
+       "minggu",
+       1.72,
+       2.04
+      ],
+      [
+       "jam",
+       2.04,
+       2.22
+      ],
+      [
+       "8",
+       2.22,
+       2.48
+      ],
+      [
+       "pagi,",
+       2.48,
+       3.06
+      ],
+      [
+       "tintur",
+       3.18,
+       3.5
+      ],
+      [
+       "rumah",
+       3.5,
+       3.62
+      ],
+      [
+       "mereka",
+       3.62,
+       3.9
+      ],
+      [
+       "di",
+       3.9,
+       4.06
+      ],
+      [
+       "gedor",
+       4.06,
+       4.3
+      ],
+      [
+       "keras.",
+       4.3,
+       4.6
+      ]
+     ],
+     "from": 1066,
+     "to": 1212,
+     "words": [
+      {
+       "w": "6",
+       "from": 1066,
+       "to": 1076
+      },
+      {
+       "w": "minggu",
+       "from": 1076,
+       "to": 1088
+      },
+      {
+       "w": "kemudian",
+       "from": 1088,
+       "to": 1102
+      },
+      {
+       "w": "tepat",
+       "from": 1102,
+       "to": 1112
+      },
+      {
+       "w": "hari",
+       "from": 1112,
+       "to": 1118
+      },
+      {
+       "w": "minggu",
+       "from": 1118,
+       "to": 1127
+      },
+      {
+       "w": "jam",
+       "from": 1127,
+       "to": 1133
+      },
+      {
+       "w": "8",
+       "from": 1133,
+       "to": 1140
+      },
+      {
+       "w": "pagi,",
+       "from": 1140,
+       "to": 1158
+      },
+      {
+       "w": "tintur",
+       "from": 1161,
+       "to": 1171
+      },
+      {
+       "w": "rumah",
+       "from": 1171,
+       "to": 1175
+      },
+      {
+       "w": "mereka",
+       "from": 1175,
+       "to": 1183
+      },
+      {
+       "w": "di",
+       "from": 1183,
+       "to": 1188
+      },
+      {
+       "w": "gedor",
+       "from": 1188,
+       "to": 1195
+      },
+      {
+       "w": "keras.",
+       "from": 1195,
+       "to": 1204
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Siapa sih yang gedor pintu jam delapan pagi begini?!",
+     "score": 0.943,
+     "file": "out/voice/dantzig/minggu_1.wav",
+     "wordsSec": [
+      [
+       "Siapa",
+       0.0,
+       0.34
+      ],
+      [
+       "sih",
+       0.34,
+       0.54
+      ],
+      [
+       "yang",
+       0.54,
+       0.68
+      ],
+      [
+       "bedur",
+       0.68,
+       0.96
+      ],
+      [
+       "pintu",
+       0.96,
+       1.28
+      ],
+      [
+       "jam",
+       1.28,
+       1.44
+      ],
+      [
+       "8",
+       1.44,
+       1.68
+      ],
+      [
+       "pagi",
+       1.68,
+       2.04
+      ],
+      [
+       "begini?",
+       2.04,
+       2.42
+      ]
+     ],
+     "from": 1220,
+     "to": 1296,
+     "words": [
+      {
+       "w": "Siapa",
+       "from": 1220,
+       "to": 1230
+      },
+      {
+       "w": "sih",
+       "from": 1230,
+       "to": 1236
+      },
+      {
+       "w": "yang",
+       "from": 1236,
+       "to": 1241
+      },
+      {
+       "w": "bedur",
+       "from": 1241,
+       "to": 1249
+      },
+      {
+       "w": "pintu",
+       "from": 1249,
+       "to": 1259
+      },
+      {
+       "w": "jam",
+       "from": 1259,
+       "to": 1263
+      },
+      {
+       "w": "8",
+       "from": 1263,
+       "to": 1271
+      },
+      {
+       "w": "pagi",
+       "from": 1271,
+       "to": 1281
+      },
+      {
+       "w": "begini?",
+       "from": 1281,
+       "to": 1293
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "George! Aku baru menulis kata pengantar jurnalmu! Baca sekarang juga!",
+     "score": 0.991,
+     "file": "out/voice/dantzig/minggu_2.wav",
+     "wordsSec": [
+      [
+       "George,",
+       0.0,
+       0.3
+      ],
+      [
+       "aku",
+       0.58,
+       0.76
+      ],
+      [
+       "baru",
+       0.76,
+       0.94
+      ],
+      [
+       "menulis",
+       0.94,
+       1.32
+      ],
+      [
+       "kata",
+       1.32,
+       1.52
+      ],
+      [
+       "penantar",
+       1.52,
+       1.92
+      ],
+      [
+       "jurnalmu",
+       1.92,
+       2.34
+      ],
+      [
+       "baca",
+       2.34,
+       2.7
+      ],
+      [
+       "sekarang",
+       2.7,
+       2.96
+      ],
+      [
+       "juga.",
+       2.96,
+       3.26
+      ]
+     ],
+     "from": 1304,
+     "to": 1405,
+     "words": [
+      {
+       "w": "George,",
+       "from": 1304,
+       "to": 1313
+      },
+      {
+       "w": "aku",
+       "from": 1321,
+       "to": 1327
+      },
+      {
+       "w": "baru",
+       "from": 1327,
+       "to": 1332
+      },
+      {
+       "w": "menulis",
+       "from": 1332,
+       "to": 1343
+      },
+      {
+       "w": "kata",
+       "from": 1343,
+       "to": 1349
+      },
+      {
+       "w": "penantar",
+       "from": 1349,
+       "to": 1361
+      },
+      {
+       "w": "jurnalmu",
+       "from": 1361,
+       "to": 1374
+      },
+      {
+       "w": "baca",
+       "from": 1374,
+       "to": 1385
+      },
+      {
+       "w": "sekarang",
+       "from": 1385,
+       "to": 1393
+      },
+      {
+       "w": "juga.",
+       "from": 1393,
+       "to": 1402
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "twist",
+   "from": 1418,
+   "to": 1903,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Dua soal di papan tulis itu bukan tugas, George! Itu dua soal statistika yang belum pernah terpecahkan!",
+     "score": 0.949,
+     "file": "out/voice/dantzig/twist_0.wav",
+     "wordsSec": [
+      [
+       "2.",
+       0.0,
+       0.24
+      ],
+      [
+       "Soal",
+       0.46,
+       0.68
+      ],
+      [
+       "dipapang",
+       0.68,
+       1.0
+      ],
+      [
+       "tulis",
+       1.0,
+       1.32
+      ],
+      [
+       "itu",
+       1.32,
+       1.52
+      ],
+      [
+       "bukan",
+       1.52,
+       1.8
+      ],
+      [
+       "2",
+       1.8,
+       2.0
+      ],
+      [
+       "desk",
+       2.0,
+       2.16
+      ],
+      [
+       "george",
+       2.16,
+       2.46
+      ],
+      [
+       "itu",
+       2.46,
+       2.72
+      ],
+      [
+       "2",
+       2.72,
+       2.94
+      ],
+      [
+       "soal",
+       2.94,
+       3.24
+      ],
+      [
+       "statistika",
+       3.24,
+       3.88
+      ],
+      [
+       "yang",
+       3.88,
+       4.04
+      ],
+      [
+       "belum",
+       4.04,
+       4.24
+      ],
+      [
+       "pernah",
+       4.24,
+       4.52
+      ],
+      [
+       "terpecahkan.",
+       4.52,
+       5.12
+      ]
+     ],
+     "from": 1418,
+     "to": 1577,
+     "words": [
+      {
+       "w": "2.",
+       "from": 1418,
+       "to": 1425
+      },
+      {
+       "w": "Soal",
+       "from": 1432,
+       "to": 1439
+      },
+      {
+       "w": "dipapang",
+       "from": 1439,
+       "to": 1448
+      },
+      {
+       "w": "tulis",
+       "from": 1448,
+       "to": 1458
+      },
+      {
+       "w": "itu",
+       "from": 1458,
+       "to": 1464
+      },
+      {
+       "w": "bukan",
+       "from": 1464,
+       "to": 1472
+      },
+      {
+       "w": "2",
+       "from": 1472,
+       "to": 1478
+      },
+      {
+       "w": "desk",
+       "from": 1478,
+       "to": 1483
+      },
+      {
+       "w": "george",
+       "from": 1483,
+       "to": 1492
+      },
+      {
+       "w": "itu",
+       "from": 1492,
+       "to": 1500
+      },
+      {
+       "w": "2",
+       "from": 1500,
+       "to": 1506
+      },
+      {
+       "w": "soal",
+       "from": 1506,
+       "to": 1515
+      },
+      {
+       "w": "statistika",
+       "from": 1515,
+       "to": 1535
+      },
+      {
+       "w": "yang",
+       "from": 1535,
+       "to": 1539
+      },
+      {
+       "w": "belum",
+       "from": 1539,
+       "to": 1545
+      },
+      {
+       "w": "pernah",
+       "from": 1545,
+       "to": 1554
+      },
+      {
+       "w": "terpecahkan.",
+       "from": 1554,
+       "to": 1572
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Hah? Serius, Profesor? Berarti George baru saja memecahkan soal mustahil?",
+     "score": 0.974,
+     "file": "out/voice/dantzig/twist_1.wav",
+     "wordsSec": [
+      [
+       "Serius,",
+       0.0,
+       0.78
+      ],
+      [
+       "Profesor?",
+       0.94,
+       1.46
+      ],
+      [
+       "Berarti",
+       1.98,
+       2.3
+      ],
+      [
+       "George",
+       2.3,
+       2.6
+      ],
+      [
+       "baru",
+       2.6,
+       2.86
+      ],
+      [
+       "saja",
+       2.86,
+       3.2
+      ],
+      [
+       "memecahkan",
+       3.2,
+       3.9
+      ],
+      [
+       "soal",
+       3.9,
+       4.18
+      ],
+      [
+       "mustahil?",
+       4.18,
+       4.72
+      ]
+     ],
+     "from": 1584,
+     "to": 1728,
+     "words": [
+      {
+       "w": "Serius,",
+       "from": 1584,
+       "to": 1608
+      },
+      {
+       "w": "Profesor?",
+       "from": 1613,
+       "to": 1628
+      },
+      {
+       "w": "Berarti",
+       "from": 1644,
+       "to": 1653
+      },
+      {
+       "w": "George",
+       "from": 1653,
+       "to": 1662
+      },
+      {
+       "w": "baru",
+       "from": 1662,
+       "to": 1670
+      },
+      {
+       "w": "saja",
+       "from": 1670,
+       "to": 1680
+      },
+      {
+       "w": "memecahkan",
+       "from": 1680,
+       "to": 1701
+      },
+      {
+       "w": "soal",
+       "from": 1701,
+       "to": 1710
+      },
+      {
+       "w": "mustahil?",
+       "from": 1710,
+       "to": 1726
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Setahun kemudian, kedua jawaban tugas itu langsung diterima menjadi disertasi doktor George Dantzig.",
+     "score": 0.952,
+     "file": "out/voice/dantzig/twist_2.wav",
+     "wordsSec": [
+      [
+       "Setahun,",
+       0.0,
+       0.52
+      ],
+      [
+       "kemudian",
+       0.64,
+       0.96
+      ],
+      [
+       "kedua",
+       0.96,
+       1.24
+      ],
+      [
+       "jawaban",
+       1.24,
+       1.6
+      ],
+      [
+       "tugas",
+       1.6,
+       1.96
+      ],
+      [
+       "itu",
+       1.96,
+       2.12
+      ],
+      [
+       "langsung",
+       2.12,
+       2.54
+      ],
+      [
+       "diterima",
+       2.54,
+       2.96
+      ],
+      [
+       "menjadi",
+       2.96,
+       3.16
+      ],
+      [
+       "disertasi",
+       3.16,
+       3.86
+      ],
+      [
+       "Dr.",
+       3.86,
+       4.08
+      ],
+      [
+       "George",
+       4.36,
+       4.54
+      ],
+      [
+       "dan",
+       4.54,
+       4.8
+      ],
+      [
+       "Sigi.",
+       4.8,
+       5.1
+      ]
+     ],
+     "from": 1736,
+     "to": 1890,
+     "words": [
+      {
+       "w": "Setahun,",
+       "from": 1736,
+       "to": 1752
+      },
+      {
+       "w": "kemudian",
+       "from": 1755,
+       "to": 1765
+      },
+      {
+       "w": "kedua",
+       "from": 1765,
+       "to": 1773
+      },
+      {
+       "w": "jawaban",
+       "from": 1773,
+       "to": 1784
+      },
+      {
+       "w": "tugas",
+       "from": 1784,
+       "to": 1795
+      },
+      {
+       "w": "itu",
+       "from": 1795,
+       "to": 1800
+      },
+      {
+       "w": "langsung",
+       "from": 1800,
+       "to": 1812
+      },
+      {
+       "w": "diterima",
+       "from": 1812,
+       "to": 1825
+      },
+      {
+       "w": "menjadi",
+       "from": 1825,
+       "to": 1831
+      },
+      {
+       "w": "disertasi",
+       "from": 1831,
+       "to": 1852
+      },
+      {
+       "w": "Dr.",
+       "from": 1852,
+       "to": 1859
+      },
+      {
+       "w": "George",
+       "from": 1867,
+       "to": 1872
+      },
+      {
+       "w": "dan",
+       "from": 1872,
+       "to": 1880
+      },
+      {
+       "w": "Sigi.",
+       "from": 1880,
+       "to": 1889
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "akhir",
+   "from": 1903,
+   "to": 2213,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "George berhasil bukan karena soalnya mudah, tapi karena tidak ada yang sempat bilang padanya bahwa soal itu mustahil.",
+     "score": 1.0,
+     "file": "out/voice/dantzig/akhir_0.wav",
+     "wordsSec": [
+      [
+       "George",
+       0.0,
+       0.28
+      ],
+      [
+       "berhasil",
+       0.28,
+       0.84
+      ],
+      [
+       "bukan",
+       0.84,
+       1.06
+      ],
+      [
+       "karena",
+       1.06,
+       1.34
+      ],
+      [
+       "soalnya",
+       1.34,
+       1.74
+      ],
+      [
+       "mudah,",
+       1.74,
+       2.38
+      ],
+      [
+       "tapi",
+       2.38,
+       2.68
+      ],
+      [
+       "karena",
+       2.68,
+       2.92
+      ],
+      [
+       "tidak",
+       2.92,
+       3.16
+      ],
+      [
+       "ada",
+       3.16,
+       3.36
+      ],
+      [
+       "yang",
+       3.36,
+       3.44
+      ],
+      [
+       "sempat",
+       3.44,
+       3.76
+      ],
+      [
+       "bilang",
+       3.76,
+       3.94
+      ],
+      [
+       "padanya",
+       3.94,
+       4.46
+      ],
+      [
+       "bahwa",
+       4.46,
+       4.9
+      ],
+      [
+       "soal",
+       4.9,
+       5.16
+      ],
+      [
+       "itu",
+       5.16,
+       5.32
+      ],
+      [
+       "mustahil.",
+       5.32,
+       5.86
+      ]
+     ],
+     "from": 1903,
+     "to": 2083,
+     "words": [
+      {
+       "w": "George",
+       "from": 1903,
+       "to": 1912
+      },
+      {
+       "w": "berhasil",
+       "from": 1912,
+       "to": 1928
+      },
+      {
+       "w": "bukan",
+       "from": 1928,
+       "to": 1935
+      },
+      {
+       "w": "karena",
+       "from": 1935,
+       "to": 1943
+      },
+      {
+       "w": "soalnya",
+       "from": 1943,
+       "to": 1955
+      },
+      {
+       "w": "mudah,",
+       "from": 1955,
+       "to": 1975
+      },
+      {
+       "w": "tapi",
+       "from": 1975,
+       "to": 1984
+      },
+      {
+       "w": "karena",
+       "from": 1984,
+       "to": 1991
+      },
+      {
+       "w": "tidak",
+       "from": 1991,
+       "to": 1998
+      },
+      {
+       "w": "ada",
+       "from": 1998,
+       "to": 2004
+      },
+      {
+       "w": "yang",
+       "from": 2004,
+       "to": 2006
+      },
+      {
+       "w": "sempat",
+       "from": 2006,
+       "to": 2016
+      },
+      {
+       "w": "bilang",
+       "from": 2016,
+       "to": 2021
+      },
+      {
+       "w": "padanya",
+       "from": 2021,
+       "to": 2037
+      },
+      {
+       "w": "bahwa",
+       "from": 2037,
+       "to": 2050
+      },
+      {
+       "w": "soal",
+       "from": 2050,
+       "to": 2058
+      },
+      {
+       "w": "itu",
+       "from": 2058,
+       "to": 2063
+      },
+      {
+       "w": "mustahil.",
+       "from": 2063,
+       "to": 2079
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Kadang, batas terbesar kita cuma rasa takut sebelum mencoba.",
+     "score": 1.0,
+     "file": "out/voice/dantzig/akhir_1.wav",
+     "wordsSec": [
+      [
+       "kadang,",
+       0.0,
+       0.52
+      ],
+      [
+       "batas",
+       0.7,
+       1.18
+      ],
+      [
+       "terbesar",
+       1.18,
+       1.52
+      ],
+      [
+       "kita",
+       1.52,
+       1.82
+      ],
+      [
+       "cuma",
+       1.82,
+       2.2
+      ],
+      [
+       "rasa",
+       2.2,
+       2.44
+      ],
+      [
+       "takut",
+       2.44,
+       2.88
+      ],
+      [
+       "sebelum",
+       2.88,
+       3.22
+      ],
+      [
+       "mencoba",
+       3.22,
+       3.52
+      ]
+     ],
+     "from": 2091,
+     "to": 2199,
+     "words": [
+      {
+       "w": "kadang,",
+       "from": 2091,
+       "to": 2107
+      },
+      {
+       "w": "batas",
+       "from": 2112,
+       "to": 2126
+      },
+      {
+       "w": "terbesar",
+       "from": 2126,
+       "to": 2137
+      },
+      {
+       "w": "kita",
+       "from": 2137,
+       "to": 2146
+      },
+      {
+       "w": "cuma",
+       "from": 2146,
+       "to": 2157
+      },
+      {
+       "w": "rasa",
+       "from": 2157,
+       "to": 2164
+      },
+      {
+       "w": "takut",
+       "from": 2164,
+       "to": 2177
+      },
+      {
+       "w": "sebelum",
+       "from": 2177,
+       "to": 2188
+      },
+      {
+       "w": "mencoba",
+       "from": 2188,
+       "to": 2197
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

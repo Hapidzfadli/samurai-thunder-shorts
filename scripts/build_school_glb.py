@@ -960,6 +960,10 @@ def main():
     build_classroom_interior()
     add_waypoints()
 
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from blender_opt import join_static_by_material
+    join_static_by_material()
+
     # Stats summary
     total_objs = len([o for o in bpy.data.objects if o.type == "MESH"])
     total_tris = 0

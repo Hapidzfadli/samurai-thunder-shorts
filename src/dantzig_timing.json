@@ -1,0 +1,2149 @@
+{
+ "fps": 30,
+ "totalDurationSec": 79.4,
+ "totalFrames": 2382,
+ "order": [
+  "hook",
+  "kelas",
+  "kamar",
+  "kantor",
+  "minggu",
+  "twist",
+  "akhir"
+ ],
+ "scenes": {
+  "hook": {
+   "startFrame": 0,
+   "durationInFrames": 299
+  },
+  "kelas": {
+   "startFrame": 299,
+   "durationInFrames": 361
+  },
+  "kamar": {
+   "startFrame": 660,
+   "durationInFrames": 251
+  },
+  "kantor": {
+   "startFrame": 911,
+   "durationInFrames": 229
+  },
+  "minggu": {
+   "startFrame": 1140,
+   "durationInFrames": 373
+  },
+  "twist": {
+   "startFrame": 1513,
+   "durationInFrames": 500
+  },
+  "akhir": {
+   "startFrame": 2013,
+   "durationInFrames": 369
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Tahun sembilan belas tiga puluh sembilan, seorang mahasiswa datang terlambat ke kelas statistika.",
+    "from": 22,
+    "to": 154,
+    "words": [
+     {
+      "w": "Tahun",
+      "from": 22,
+      "to": 29
+     },
+     {
+      "w": "sembilan",
+      "from": 29,
+      "to": 53
+     },
+     {
+      "w": "belas",
+      "from": 53,
+      "to": 66
+     },
+     {
+      "w": "tiga",
+      "from": 66,
+      "to": 76
+     },
+     {
+      "w": "puluh",
+      "from": 76,
+      "to": 84
+     },
+     {
+      "w": "sembilan,",
+      "from": 84,
+      "to": 94
+     },
+     {
+      "w": "seorang",
+      "from": 94,
+      "to": 103
+     },
+     {
+      "w": "mahasiswa",
+      "from": 103,
+      "to": 114
+     },
+     {
+      "w": "datang",
+      "from": 114,
+      "to": 120
+     },
+     {
+      "w": "terlambat",
+      "from": 120,
+      "to": 130
+     },
+     {
+      "w": "ke",
+      "from": 130,
+      "to": 132
+     },
+     {
+      "w": "kelas",
+      "from": 132,
+      "to": 139
+     },
+     {
+      "w": "statistika.",
+      "from": 139,
+      "to": 151
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Gara-gara telat, dia malah memecahkan dua soal paling mustahil di dunia!",
+    "from": 165,
+    "to": 283,
+    "words": [
+     {
+      "w": "Gara-gara",
+      "from": 165,
+      "to": 180
+     },
+     {
+      "w": "telat,",
+      "from": 180,
+      "to": 200
+     },
+     {
+      "w": "dia",
+      "from": 200,
+      "to": 205
+     },
+     {
+      "w": "malah",
+      "from": 205,
+      "to": 212
+     },
+     {
+      "w": "memecahkan",
+      "from": 212,
+      "to": 227
+     },
+     {
+      "w": "dua",
+      "from": 227,
+      "to": 234
+     },
+     {
+      "w": "soal",
+      "from": 234,
+      "to": 244
+     },
+     {
+      "w": "paling",
+      "from": 244,
+      "to": 253
+     },
+     {
+      "w": "mustahil",
+      "from": 253,
+      "to": 267
+     },
+     {
+      "w": "di",
+      "from": 267,
+      "to": 270
+     },
+     {
+      "w": "dunia!",
+      "from": 270,
+      "to": 280
+     }
+    ]
+   }
+  ],
+  "kelas": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Di papan tulis, Profesor Neyman menulis dua contoh teorema yang belum pernah terpecahkan siapa pun.",
+    "from": 14,
+    "to": 177,
+    "words": [
+     {
+      "w": "Di",
+      "from": 14,
+      "to": 17
+     },
+     {
+      "w": "papan",
+      "from": 17,
+      "to": 24
+     },
+     {
+      "w": "tulis,",
+      "from": 24,
+      "to": 48
+     },
+     {
+      "w": "Profesor",
+      "from": 48,
+      "to": 68
+     },
+     {
+      "w": "Neyman",
+      "from": 68,
+      "to": 81
+     },
+     {
+      "w": "menulis",
+      "from": 81,
+      "to": 96
+     },
+     {
+      "w": "dua",
+      "from": 96,
+      "to": 101
+     },
+     {
+      "w": "contoh",
+      "from": 101,
+      "to": 111
+     },
+     {
+      "w": "teorema",
+      "from": 111,
+      "to": 121
+     },
+     {
+      "w": "yang",
+      "from": 121,
+      "to": 126
+     },
+     {
+      "w": "belum",
+      "from": 126,
+      "to": 131
+     },
+     {
+      "w": "pernah",
+      "from": 131,
+      "to": 140
+     },
+     {
+      "w": "terpecahkan",
+      "from": 140,
+      "to": 158
+     },
+     {
+      "w": "siapa",
+      "from": 158,
+      "to": 168
+     },
+     {
+      "w": "pun.",
+      "from": 168,
+      "to": 174
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Tapi George yang baru masuk mengira itu cuma tugas pekerjaan rumah biasa, lalu langsung menyalinnya.",
+    "from": 186,
+    "to": 344,
+    "words": [
+     {
+      "w": "Tapi",
+      "from": 186,
+      "to": 194
+     },
+     {
+      "w": "George",
+      "from": 194,
+      "to": 204
+     },
+     {
+      "w": "yang",
+      "from": 204,
+      "to": 210
+     },
+     {
+      "w": "baru",
+      "from": 210,
+      "to": 216
+     },
+     {
+      "w": "masuk",
+      "from": 216,
+      "to": 225
+     },
+     {
+      "w": "mengira",
+      "from": 225,
+      "to": 236
+     },
+     {
+      "w": "itu",
+      "from": 236,
+      "to": 243
+     },
+     {
+      "w": "cuma",
+      "from": 243,
+      "to": 251
+     },
+     {
+      "w": "tugas",
+      "from": 251,
+      "to": 262
+     },
+     {
+      "w": "pekerjaan",
+      "from": 262,
+      "to": 276
+     },
+     {
+      "w": "rumah",
+      "from": 276,
+      "to": 281
+     },
+     {
+      "w": "biasa,",
+      "from": 281,
+      "to": 293
+     },
+     {
+      "w": "lalu",
+      "from": 293,
+      "to": 312
+     },
+     {
+      "w": "langsung",
+      "from": 312,
+      "to": 322
+     },
+     {
+      "w": "menyalinnya.",
+      "from": 322,
+      "to": 341
+     }
+    ]
+   }
+  ],
+  "kamar": [
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "George, sudah jam dua malam. Tugasnya susah banget ya?",
+    "from": 16,
+    "to": 116,
+    "words": [
+     {
+      "w": "George,",
+      "from": 16,
+      "to": 25
+     },
+     {
+      "w": "sudah",
+      "from": 25,
+      "to": 32
+     },
+     {
+      "w": "jam",
+      "from": 32,
+      "to": 37
+     },
+     {
+      "w": "dua",
+      "from": 37,
+      "to": 48
+     },
+     {
+      "w": "malam.",
+      "from": 48,
+      "to": 78
+     },
+     {
+      "w": "Tugasnya",
+      "from": 78,
+      "to": 90
+     },
+     {
+      "w": "susah",
+      "from": 90,
+      "to": 99
+     },
+     {
+      "w": "banget",
+      "from": 99,
+      "to": 106
+     },
+     {
+      "w": "ya?",
+      "from": 106,
+      "to": 112
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Iya nih, agak lebih susah dari biasanya... tapi kayaknya aku baru ketemu caranya!",
+    "from": 124,
+    "to": 234,
+    "words": [
+     {
+      "w": "Iya",
+      "from": 124,
+      "to": 131
+     },
+     {
+      "w": "nih,",
+      "from": 131,
+      "to": 148
+     },
+     {
+      "w": "agak",
+      "from": 148,
+      "to": 157
+     },
+     {
+      "w": "lebih",
+      "from": 157,
+      "to": 161
+     },
+     {
+      "w": "susah",
+      "from": 161,
+      "to": 169
+     },
+     {
+      "w": "dari",
+      "from": 169,
+      "to": 173
+     },
+     {
+      "w": "biasanya...",
+      "from": 173,
+      "to": 184
+     },
+     {
+      "w": "tapi",
+      "from": 184,
+      "to": 192
+     },
+     {
+      "w": "kayaknya",
+      "from": 192,
+      "to": 202
+     },
+     {
+      "w": "aku",
+      "from": 202,
+      "to": 206
+     },
+     {
+      "w": "baru",
+      "from": 206,
+      "to": 211
+     },
+     {
+      "w": "ketemu",
+      "from": 211,
+      "to": 220
+     },
+     {
+      "w": "caranya!",
+      "from": 220,
+      "to": 231
+     }
+    ]
+   }
+  ],
+  "kantor": [
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Maaf Profesor, saya agak telat mengumpulkan tugas yang kemarin.",
+    "from": 14,
+    "to": 112,
+    "words": [
+     {
+      "w": "Maaf",
+      "from": 14,
+      "to": 24
+     },
+     {
+      "w": "Profesor,",
+      "from": 24,
+      "to": 48
+     },
+     {
+      "w": "saya",
+      "from": 48,
+      "to": 55
+     },
+     {
+      "w": "agak",
+      "from": 55,
+      "to": 63
+     },
+     {
+      "w": "telat",
+      "from": 63,
+      "to": 70
+     },
+     {
+      "w": "mengumpulkan",
+      "from": 70,
+      "to": 86
+     },
+     {
+      "w": "tugas",
+      "from": 86,
+      "to": 95
+     },
+     {
+      "w": "yang",
+      "from": 95,
+      "to": 98
+     },
+     {
+      "w": "kemarin.",
+      "from": 98,
+      "to": 111
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "Oh, taruh saja di atas tumpukan kertas di meja saya, George.",
+    "from": 119,
+    "to": 213,
+    "words": [
+     {
+      "w": "Oh,",
+      "from": 119,
+      "to": 128
+     },
+     {
+      "w": "taruh",
+      "from": 128,
+      "to": 134
+     },
+     {
+      "w": "saja",
+      "from": 134,
+      "to": 140
+     },
+     {
+      "w": "di",
+      "from": 140,
+      "to": 145
+     },
+     {
+      "w": "atas",
+      "from": 145,
+      "to": 152
+     },
+     {
+      "w": "tumpukan",
+      "from": 152,
+      "to": 164
+     },
+     {
+      "w": "kertas",
+      "from": 164,
+      "to": 175
+     },
+     {
+      "w": "di",
+      "from": 175,
+      "to": 180
+     },
+     {
+      "w": "meja",
+      "from": 180,
+      "to": 189
+     },
+     {
+      "w": "saya,",
+      "from": 189,
+      "to": 199
+     },
+     {
+      "w": "George.",
+      "from": 199,
+      "to": 203
+     }
+    ]
+   }
+  ],
+  "minggu": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Enam minggu kemudian, tepat hari Minggu jam delapan pagi, pintu rumah mereka digedor keras.",
+    "from": 18,
+    "to": 164,
+    "words": [
+     {
+      "w": "Enam",
+      "from": 18,
+      "to": 33
+     },
+     {
+      "w": "minggu",
+      "from": 33,
+      "to": 44
+     },
+     {
+      "w": "kemudian,",
+      "from": 44,
+      "to": 56
+     },
+     {
+      "w": "tepat",
+      "from": 56,
+      "to": 65
+     },
+     {
+      "w": "hari",
+      "from": 65,
+      "to": 70
+     },
+     {
+      "w": "Minggu",
+      "from": 70,
+      "to": 78
+     },
+     {
+      "w": "jam",
+      "from": 78,
+      "to": 83
+     },
+     {
+      "w": "delapan",
+      "from": 83,
+      "to": 114
+     },
+     {
+      "w": "pagi,",
+      "from": 114,
+      "to": 120
+     },
+     {
+      "w": "pintu",
+      "from": 120,
+      "to": 125
+     },
+     {
+      "w": "rumah",
+      "from": 125,
+      "to": 129
+     },
+     {
+      "w": "mereka",
+      "from": 129,
+      "to": 138
+     },
+     {
+      "w": "digedor",
+      "from": 138,
+      "to": 148
+     },
+     {
+      "w": "keras.",
+      "from": 148,
+      "to": 156
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Siapa sih yang gedor pintu jam delapan pagi begini?!",
+    "from": 175,
+    "to": 251,
+    "words": [
+     {
+      "w": "Siapa",
+      "from": 175,
+      "to": 184
+     },
+     {
+      "w": "sih",
+      "from": 184,
+      "to": 189
+     },
+     {
+      "w": "yang",
+      "from": 189,
+      "to": 193
+     },
+     {
+      "w": "gedor",
+      "from": 193,
+      "to": 200
+     },
+     {
+      "w": "pintu",
+      "from": 200,
+      "to": 207
+     },
+     {
+      "w": "jam",
+      "from": 207,
+      "to": 212
+     },
+     {
+      "w": "delapan",
+      "from": 212,
+      "to": 229
+     },
+     {
+      "w": "pagi",
+      "from": 229,
+      "to": 238
+     },
+     {
+      "w": "begini?!",
+      "from": 238,
+      "to": 248
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegas",
+    "text": "George! Aku baru menulis kata pengantar jurnalmu! Baca sekarang juga!",
+    "from": 258,
+    "to": 359,
+    "words": [
+     {
+      "w": "George!",
+      "from": 258,
+      "to": 267
+     },
+     {
+      "w": "Aku",
+      "from": 267,
+      "to": 281
+     },
+     {
+      "w": "baru",
+      "from": 281,
+      "to": 286
+     },
+     {
+      "w": "menulis",
+      "from": 286,
+      "to": 297
+     },
+     {
+      "w": "kata",
+      "from": 297,
+      "to": 303
+     },
+     {
+      "w": "pengantar",
+      "from": 303,
+      "to": 317
+     },
+     {
+      "w": "jurnalmu!",
+      "from": 317,
+      "to": 329
+     },
+     {
+      "w": "Baca",
+      "from": 329,
+      "to": 339
+     },
+     {
+      "w": "sekarang",
+      "from": 339,
+      "to": 347
+     },
+     {
+      "w": "juga!",
+      "from": 347,
+      "to": 356
+     }
+    ]
+   }
+  ],
+  "twist": [
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Dua soal di papan tulis itu bukan tugas, George! Itu dua soal statistika yang belum pernah terpecahkan!",
+    "from": 10,
+    "to": 169,
+    "words": [
+     {
+      "w": "Dua",
+      "from": 10,
+      "to": 27
+     },
+     {
+      "w": "soal",
+      "from": 27,
+      "to": 33
+     },
+     {
+      "w": "di",
+      "from": 33,
+      "to": 35
+     },
+     {
+      "w": "papan",
+      "from": 35,
+      "to": 41
+     },
+     {
+      "w": "tulis",
+      "from": 41,
+      "to": 51
+     },
+     {
+      "w": "itu",
+      "from": 51,
+      "to": 56
+     },
+     {
+      "w": "bukan",
+      "from": 56,
+      "to": 65
+     },
+     {
+      "w": "tugas,",
+      "from": 65,
+      "to": 75
+     },
+     {
+      "w": "George!",
+      "from": 75,
+      "to": 84
+     },
+     {
+      "w": "Itu",
+      "from": 84,
+      "to": 91
+     },
+     {
+      "w": "dua",
+      "from": 91,
+      "to": 102
+     },
+     {
+      "w": "soal",
+      "from": 102,
+      "to": 110
+     },
+     {
+      "w": "statistika",
+      "from": 110,
+      "to": 128
+     },
+     {
+      "w": "yang",
+      "from": 128,
+      "to": 133
+     },
+     {
+      "w": "belum",
+      "from": 133,
+      "to": 139
+     },
+     {
+      "w": "pernah",
+      "from": 139,
+      "to": 147
+     },
+     {
+      "w": "terpecahkan!",
+      "from": 147,
+      "to": 164
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Hah? Serius, Profesor? Berarti George baru saja memecahkan soal mustahil?",
+    "from": 176,
+    "to": 320,
+    "words": [
+     {
+      "w": "Hah?",
+      "from": 176,
+      "to": 188
+     },
+     {
+      "w": "Serius,",
+      "from": 188,
+      "to": 210
+     },
+     {
+      "w": "Profesor?",
+      "from": 210,
+      "to": 239
+     },
+     {
+      "w": "Berarti",
+      "from": 239,
+      "to": 248
+     },
+     {
+      "w": "George",
+      "from": 248,
+      "to": 257
+     },
+     {
+      "w": "baru",
+      "from": 257,
+      "to": 266
+     },
+     {
+      "w": "saja",
+      "from": 266,
+      "to": 275
+     },
+     {
+      "w": "memecahkan",
+      "from": 275,
+      "to": 295
+     },
+     {
+      "w": "soal",
+      "from": 295,
+      "to": 303
+     },
+     {
+      "w": "mustahil?",
+      "from": 303,
+      "to": 318
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Setahun kemudian, kedua jawaban tugas itu langsung diterima menjadi disertasi doktor George Dantzig.",
+    "from": 329,
+    "to": 483,
+    "words": [
+     {
+      "w": "Setahun",
+      "from": 329,
+      "to": 344
+     },
+     {
+      "w": "kemudian,",
+      "from": 344,
+      "to": 357
+     },
+     {
+      "w": "kedua",
+      "from": 357,
+      "to": 365
+     },
+     {
+      "w": "jawaban",
+      "from": 365,
+      "to": 375
+     },
+     {
+      "w": "tugas",
+      "from": 375,
+      "to": 385
+     },
+     {
+      "w": "itu",
+      "from": 385,
+      "to": 390
+     },
+     {
+      "w": "langsung",
+      "from": 390,
+      "to": 402
+     },
+     {
+      "w": "diterima",
+      "from": 402,
+      "to": 414
+     },
+     {
+      "w": "menjadi",
+      "from": 414,
+      "to": 422
+     },
+     {
+      "w": "disertasi",
+      "from": 422,
+      "to": 438
+     },
+     {
+      "w": "doktor",
+      "from": 438,
+      "to": 461
+     },
+     {
+      "w": "George",
+      "from": 461,
+      "to": 466
+     },
+     {
+      "w": "Dantzig.",
+      "from": 466,
+      "to": 482
+     }
+    ]
+   }
+  ],
+  "akhir": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "George berhasil bukan karena soalnya mudah, tapi karena tidak ada yang sempat bilang padanya bahwa soal itu mustahil.",
+    "from": 14,
+    "to": 194,
+    "words": [
+     {
+      "w": "George",
+      "from": 14,
+      "to": 22
+     },
+     {
+      "w": "berhasil",
+      "from": 22,
+      "to": 39
+     },
+     {
+      "w": "bukan",
+      "from": 39,
+      "to": 45
+     },
+     {
+      "w": "karena",
+      "from": 45,
+      "to": 54
+     },
+     {
+      "w": "soalnya",
+      "from": 54,
+      "to": 66
+     },
+     {
+      "w": "mudah,",
+      "from": 66,
+      "to": 85
+     },
+     {
+      "w": "tapi",
+      "from": 85,
+      "to": 94
+     },
+     {
+      "w": "karena",
+      "from": 94,
+      "to": 101
+     },
+     {
+      "w": "tidak",
+      "from": 101,
+      "to": 108
+     },
+     {
+      "w": "ada",
+      "from": 108,
+      "to": 114
+     },
+     {
+      "w": "yang",
+      "from": 114,
+      "to": 117
+     },
+     {
+      "w": "sempat",
+      "from": 117,
+      "to": 126
+     },
+     {
+      "w": "bilang",
+      "from": 126,
+      "to": 132
+     },
+     {
+      "w": "padanya",
+      "from": 132,
+      "to": 147
+     },
+     {
+      "w": "bahwa",
+      "from": 147,
+      "to": 161
+     },
+     {
+      "w": "soal",
+      "from": 161,
+      "to": 168
+     },
+     {
+      "w": "itu",
+      "from": 168,
+      "to": 173
+     },
+     {
+      "w": "mustahil.",
+      "from": 173,
+      "to": 189
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "santai",
+    "text": "Kadang, batas terbesar kita cuma rasa takut sebelum mencoba.",
+    "from": 207,
+    "to": 315,
+    "words": [
+     {
+      "w": "Kadang,",
+      "from": 207,
+      "to": 228
+     },
+     {
+      "w": "batas",
+      "from": 228,
+      "to": 242
+     },
+     {
+      "w": "terbesar",
+      "from": 242,
+      "to": 253
+     },
+     {
+      "w": "kita",
+      "from": 253,
+      "to": 262
+     },
+     {
+      "w": "cuma",
+      "from": 262,
+      "to": 273
+     },
+     {
+      "w": "rasa",
+      "from": 273,
+      "to": 280
+     },
+     {
+      "w": "takut",
+      "from": 280,
+      "to": 293
+     },
+     {
+      "w": "sebelum",
+      "from": 293,
+      "to": 304
+     },
+     {
+      "w": "mencoba.",
+      "from": 304,
+      "to": 313
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "hook.telat": 118,
+  "hook.mustahil": 251,
+  "kelas.papan": 15,
+  "kelas.menyalinnya": 304,
+  "kamar.dua": 35,
+  "kamar.ketemu": 209,
+  "kantor.maaf": 12,
+  "kantor.taruh": 126,
+  "minggu.gedor": 128,
+  "minggu.siapa": 173,
+  "minggu.george": 256,
+  "twist.bukan": 54,
+  "twist.serius": 186,
+  "twist.disertasi": 420,
+  "akhir.berhasil": 20,
+  "akhir.takut": 278
+ },
+ "captions": [
+  {
+   "text": "Tahun",
+   "startFrame": 22,
+   "endFrame": 29,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sembilan",
+   "startFrame": 29,
+   "endFrame": 53,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "belas tiga",
+   "startFrame": 53,
+   "endFrame": 76,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 76,
+   "endFrame": 84,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sembilan,",
+   "startFrame": 84,
+   "endFrame": 94,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "seorang",
+   "startFrame": 94,
+   "endFrame": 103,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mahasiswa",
+   "startFrame": 103,
+   "endFrame": 114,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "datang",
+   "startFrame": 114,
+   "endFrame": 120,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terlambat ke",
+   "startFrame": 120,
+   "endFrame": 132,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelas",
+   "startFrame": 132,
+   "endFrame": 139,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "statistika.",
+   "startFrame": 139,
+   "endFrame": 151,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Gara-gara",
+   "startFrame": 165,
+   "endFrame": 180,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "telat,",
+   "startFrame": 180,
+   "endFrame": 200,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "dia malah",
+   "startFrame": 200,
+   "endFrame": 212,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "memecahkan",
+   "startFrame": 212,
+   "endFrame": 227,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dua soal",
+   "startFrame": 227,
+   "endFrame": 244,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "paling",
+   "startFrame": 244,
+   "endFrame": 253,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mustahil di",
+   "startFrame": 253,
+   "endFrame": 270,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "dunia!",
+   "startFrame": 270,
+   "endFrame": 280,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Di papan",
+   "startFrame": 312,
+   "endFrame": 323,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tulis,",
+   "startFrame": 323,
+   "endFrame": 347,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Profesor",
+   "startFrame": 347,
+   "endFrame": 367,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Neyman",
+   "startFrame": 367,
+   "endFrame": 380,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "menulis dua",
+   "startFrame": 380,
+   "endFrame": 400,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "contoh",
+   "startFrame": 400,
+   "endFrame": 410,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "teorema yang",
+   "startFrame": 410,
+   "endFrame": 425,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "belum pernah",
+   "startFrame": 425,
+   "endFrame": 439,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terpecahkan",
+   "startFrame": 439,
+   "endFrame": 457,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "siapa pun.",
+   "startFrame": 457,
+   "endFrame": 473,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tapi George",
+   "startFrame": 485,
+   "endFrame": 503,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang baru",
+   "startFrame": 503,
+   "endFrame": 515,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "masuk mengira",
+   "startFrame": 515,
+   "endFrame": 535,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "itu cuma",
+   "startFrame": 535,
+   "endFrame": 550,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tugas",
+   "startFrame": 550,
+   "endFrame": 561,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "pekerjaan",
+   "startFrame": 561,
+   "endFrame": 575,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "rumah biasa,",
+   "startFrame": 575,
+   "endFrame": 592,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lalu langsung",
+   "startFrame": 592,
+   "endFrame": 621,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menyalinnya.",
+   "startFrame": 621,
+   "endFrame": 640,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "George,",
+   "startFrame": 676,
+   "endFrame": 685,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sudah jam",
+   "startFrame": 685,
+   "endFrame": 697,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "dua malam.",
+   "startFrame": 697,
+   "endFrame": 738,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Tugasnya",
+   "startFrame": 738,
+   "endFrame": 750,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "susah banget",
+   "startFrame": 750,
+   "endFrame": 766,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "ya?",
+   "startFrame": 766,
+   "endFrame": 772,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Iya nih,",
+   "startFrame": 784,
+   "endFrame": 808,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "agak lebih",
+   "startFrame": 808,
+   "endFrame": 821,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "susah dari",
+   "startFrame": 821,
+   "endFrame": 833,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "biasanya...",
+   "startFrame": 833,
+   "endFrame": 844,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tapi kayaknya",
+   "startFrame": 844,
+   "endFrame": 862,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "aku baru",
+   "startFrame": 862,
+   "endFrame": 871,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ketemu",
+   "startFrame": 871,
+   "endFrame": 880,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "caranya!",
+   "startFrame": 880,
+   "endFrame": 891,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Maaf",
+   "startFrame": 924,
+   "endFrame": 935,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Profesor,",
+   "startFrame": 935,
+   "endFrame": 959,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "saya agak",
+   "startFrame": 959,
+   "endFrame": 974,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "telat",
+   "startFrame": 974,
+   "endFrame": 981,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "mengumpulkan",
+   "startFrame": 981,
+   "endFrame": 997,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tugas yang",
+   "startFrame": 997,
+   "endFrame": 1009,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kemarin.",
+   "startFrame": 1009,
+   "endFrame": 1030,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Oh,",
+   "startFrame": 1030,
+   "endFrame": 1039,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "taruh saja",
+   "startFrame": 1039,
+   "endFrame": 1051,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "di atas",
+   "startFrame": 1051,
+   "endFrame": 1063,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tumpukan",
+   "startFrame": 1063,
+   "endFrame": 1075,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kertas di",
+   "startFrame": 1075,
+   "endFrame": 1091,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "meja saya,",
+   "startFrame": 1091,
+   "endFrame": 1110,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "George.",
+   "startFrame": 1110,
+   "endFrame": 1114,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Enam minggu",
+   "startFrame": 1158,
+   "endFrame": 1184,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kemudian,",
+   "startFrame": 1184,
+   "endFrame": 1196,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tepat hari",
+   "startFrame": 1196,
+   "endFrame": 1210,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Minggu jam",
+   "startFrame": 1210,
+   "endFrame": 1223,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "delapan pagi,",
+   "startFrame": 1223,
+   "endFrame": 1260,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pintu rumah",
+   "startFrame": 1260,
+   "endFrame": 1269,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 1269,
+   "endFrame": 1278,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "digedor",
+   "startFrame": 1278,
+   "endFrame": 1288,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "keras.",
+   "startFrame": 1288,
+   "endFrame": 1296,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Siapa sih",
+   "startFrame": 1315,
+   "endFrame": 1329,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "yang gedor",
+   "startFrame": 1329,
+   "endFrame": 1340,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "pintu jam",
+   "startFrame": 1340,
+   "endFrame": 1352,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "delapan pagi",
+   "startFrame": 1352,
+   "endFrame": 1378,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "begini?!",
+   "startFrame": 1378,
+   "endFrame": 1388,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "George!",
+   "startFrame": 1398,
+   "endFrame": 1407,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Aku baru",
+   "startFrame": 1407,
+   "endFrame": 1426,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menulis kata",
+   "startFrame": 1426,
+   "endFrame": 1443,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pengantar",
+   "startFrame": 1443,
+   "endFrame": 1457,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jurnalmu!",
+   "startFrame": 1457,
+   "endFrame": 1469,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Baca sekarang",
+   "startFrame": 1469,
+   "endFrame": 1487,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "juga!",
+   "startFrame": 1487,
+   "endFrame": 1496,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Dua soal",
+   "startFrame": 1524,
+   "endFrame": 1546,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "di papan",
+   "startFrame": 1546,
+   "endFrame": 1554,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tulis itu",
+   "startFrame": 1554,
+   "endFrame": 1569,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bukan tugas,",
+   "startFrame": 1569,
+   "endFrame": 1588,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "George!",
+   "startFrame": 1588,
+   "endFrame": 1597,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Itu dua",
+   "startFrame": 1597,
+   "endFrame": 1615,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "soal",
+   "startFrame": 1615,
+   "endFrame": 1623,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "statistika",
+   "startFrame": 1623,
+   "endFrame": 1641,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang belum",
+   "startFrame": 1641,
+   "endFrame": 1652,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pernah",
+   "startFrame": 1652,
+   "endFrame": 1660,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terpecahkan!",
+   "startFrame": 1660,
+   "endFrame": 1677,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Hah?",
+   "startFrame": 1689,
+   "endFrame": 1701,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Serius,",
+   "startFrame": 1701,
+   "endFrame": 1723,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Profesor?",
+   "startFrame": 1723,
+   "endFrame": 1752,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Berarti",
+   "startFrame": 1752,
+   "endFrame": 1761,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "George baru",
+   "startFrame": 1761,
+   "endFrame": 1779,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "saja",
+   "startFrame": 1779,
+   "endFrame": 1788,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "memecahkan",
+   "startFrame": 1788,
+   "endFrame": 1808,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "soal",
+   "startFrame": 1808,
+   "endFrame": 1816,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mustahil?",
+   "startFrame": 1816,
+   "endFrame": 1831,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Setahun",
+   "startFrame": 1842,
+   "endFrame": 1857,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kemudian,",
+   "startFrame": 1857,
+   "endFrame": 1870,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kedua jawaban",
+   "startFrame": 1870,
+   "endFrame": 1888,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tugas itu",
+   "startFrame": 1888,
+   "endFrame": 1903,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "langsung",
+   "startFrame": 1903,
+   "endFrame": 1915,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "diterima",
+   "startFrame": 1915,
+   "endFrame": 1927,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 1927,
+   "endFrame": 1935,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "disertasi",
+   "startFrame": 1935,
+   "endFrame": 1951,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "doktor George",
+   "startFrame": 1951,
+   "endFrame": 1979,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Dantzig.",
+   "startFrame": 1979,
+   "endFrame": 1995,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "George",
+   "startFrame": 2027,
+   "endFrame": 2035,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "berhasil",
+   "startFrame": 2035,
+   "endFrame": 2052,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "bukan karena",
+   "startFrame": 2052,
+   "endFrame": 2067,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "soalnya",
+   "startFrame": 2067,
+   "endFrame": 2079,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mudah,",
+   "startFrame": 2079,
+   "endFrame": 2098,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tapi karena",
+   "startFrame": 2098,
+   "endFrame": 2114,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tidak ada",
+   "startFrame": 2114,
+   "endFrame": 2127,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang sempat",
+   "startFrame": 2127,
+   "endFrame": 2139,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bilang",
+   "startFrame": 2139,
+   "endFrame": 2145,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "padanya bahwa",
+   "startFrame": 2145,
+   "endFrame": 2174,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "soal itu",
+   "startFrame": 2174,
+   "endFrame": 2186,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mustahil.",
+   "startFrame": 2186,
+   "endFrame": 2202,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kadang,",
+   "startFrame": 2220,
+   "endFrame": 2241,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "batas",
+   "startFrame": 2241,
+   "endFrame": 2255,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terbesar kita",
+   "startFrame": 2255,
+   "endFrame": 2275,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "cuma rasa",
+   "startFrame": 2275,
+   "endFrame": 2293,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "takut sebelum",
+   "startFrame": 2293,
+   "endFrame": 2317,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "mencoba.",
+   "startFrame": 2317,
+   "endFrame": 2326,
+   "highlight": true,
+   "voice": "dodi"
+  }
+ ]
+}

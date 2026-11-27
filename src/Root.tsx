@@ -66,10 +66,12 @@ import { SheetHororKarakter, SheetHororProperti } from "./SheetHoror";
 import { Horor, TOTAL_FRAMES_HOROR } from "./Horor";
 import { ThumbHororShorts, ThumbHororYoutube } from "./ThumbHoror";
 import { SchoolFlythrough, TOTAL_FRAMES_SCHOOL } from "./SchoolFlythrough";
+import { Dantzig, TOTAL_FRAMES_DANTZIG } from "./Dantzig";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="Dantzig" component={Dantzig} durationInFrames={TOTAL_FRAMES_DANTZIG} fps={30} width={1080} height={1920} defaultProps={{ withAudio: true }} />
       <Composition id="SchoolFlythrough" component={SchoolFlythrough} durationInFrames={TOTAL_FRAMES_SCHOOL} fps={30} width={1080} height={1920} />
       <Composition id="ApacheDetailed" component={ApacheDetailed} durationInFrames={TOTAL_FRAMES_APACHE} fps={30} width={1080} height={1920} />
       <Composition id="RailroadExpansion" component={RailroadExpansion} durationInFrames={TOTAL_FRAMES_RAILROAD} fps={30} width={1080} height={1920} />

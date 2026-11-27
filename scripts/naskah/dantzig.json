@@ -1,0 +1,60 @@
+[
+  {
+    "scene": "hook",
+    "takes": 2,
+    "lines": [
+      ["narasi", "Tahun sembilan belas tiga puluh sembilan, seorang mahasiswa datang terlambat ke kelas statistika.", "dodi"],
+      ["tegang", "Gara-gara telat, dia malah memecahkan dua soal paling mustahil di dunia!", "dodi"]
+    ]
+  },
+  {
+    "scene": "kelas",
+    "takes": 2,
+    "lines": [
+      ["narasi", "Di papan tulis, Profesor Neyman menulis dua contoh teorema yang belum pernah terpecahkan siapa pun.", "dodi"],
+      ["santai", "Tapi George yang baru masuk mengira itu cuma tugas pekerjaan rumah biasa, lalu langsung menyalinnya.", "dodi"]
+    ]
+  },
+  {
+    "scene": "kamar",
+    "takes": 2,
+    "lines": [
+      ["santai", "George, sudah jam dua malam. Tugasnya susah banget ya?", "ara"],
+      ["santai", "Iya nih, agak lebih susah dari biasanya... tapi kayaknya aku baru ketemu caranya!", "dodi"]
+    ]
+  },
+  {
+    "scene": "kantor",
+    "takes": 2,
+    "lines": [
+      ["santai", "Maaf Profesor, saya agak telat mengumpulkan tugas yang kemarin.", "dodi"],
+      ["tegas", "Oh, taruh saja di atas tumpukan kertas di meja saya, George.", "dodi"]
+    ]
+  },
+  {
+    "scene": "minggu",
+    "takes": 2,
+    "lines": [
+      ["narasi", "Enam minggu kemudian, tepat hari Minggu jam delapan pagi, pintu rumah mereka digedor keras.", "dodi"],
+      ["tegang", "Siapa sih yang gedor pintu jam delapan pagi begini?!", "ara"],
+      ["tegas", "George! Aku baru menulis kata pengantar jurnalmu! Baca sekarang juga!", "dodi"]
+    ]
+  },
+  {
+    "scene": "twist",
+    "takes": 2,
+    "lines": [
+      ["tegang", "Dua soal di papan tulis itu bukan tugas, George! Itu dua soal statistika yang belum pernah terpecahkan!", "dodi"],
+      ["santai", "Hah? Serius, Profesor? Berarti George baru saja memecahkan soal mustahil?", "ara"],
+      ["narasi", "Setahun kemudian, kedua jawaban tugas itu langsung diterima menjadi disertasi doktor George Dantzig.", "dodi"]
+    ]
+  },
+  {
+    "scene": "akhir",
+    "takes": 2,
+    "lines": [
+      ["narasi", "George berhasil bukan karena soalnya mudah, tapi karena tidak ada yang sempat bilang padanya bahwa soal itu mustahil.", "dodi"],
+      ["santai", "Kadang, batas terbesar kita cuma rasa takut sebelum mencoba.", "dodi"]
+    ]
+  }
+]
