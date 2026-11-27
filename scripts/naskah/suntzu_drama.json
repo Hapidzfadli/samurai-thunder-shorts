@@ -1,0 +1,97 @@
+[
+  {
+    "scene": "s01_balairung",
+    "title": "01 / TANTANGAN DI BALAIRUNG",
+    "lines": [
+      ["narasi", "Lima ratus tahun sebelum Masehi, di Istana Kerajaan Wu.", "narator"],
+      ["tegas", "Sun Tzu! Aku sudah membaca tiga belas bab kitab perangmu. Teorinya indah, tapi bisakah kau membuktikannya langsung di depan mataku?", "raja"],
+      ["tegas", "Bisa, Yang Mulia. Siapa pun pasukannya, jika aturannya jelas, mereka akan bergerak seperti satu tubuh.", "suntzu"],
+      ["santai", "Oh ya? Kalau begitu, jangan pakai prajurit. Latihlah seratus delapan puluh perempuan istanaku! Jika berhasil, kau kuangkat jadi panglima!", "raja"],
+      ["tegas", "Saya terima tantangan Baginda.", "suntzu"]
+    ]
+  },
+  {
+    "scene": "s02_pasukan",
+    "title": "02 / DUA SELIR PEMIMPIN",
+    "lines": [
+      ["tegas", "Semuanya, berbaris! Kalian kubagi menjadi dua pasukan! Dua selir kesayangan Raja, majulah ke depan! Kalian komandan barisan ini!", "suntzu"],
+      ["santai", "Hahaha, lihat tombak ini berat sekali! Kita disuruh main perang-perangan?", "selir_a"],
+      ["santai", "Tenang saja, Raja sendiri yang menonton dari atas paviliun!", "selir_b"]
+    ]
+  },
+  {
+    "scene": "s03_aturan",
+    "title": "03 / ATURAN GENDERANG & TOMBAK",
+    "lines": [
+      ["tegas", "Dengarkan baik-baik! Kalian tahu mana dada, punggung, tangan kanan, dan tangan kiri?", "suntzu"],
+      ["santai", "Tahu, Tuan!", "crowd_tahu"],
+      ["tegas", "Jika aku berkata hadap kanan, belok ke tangan kanan! Hadap kiri, belok ke tangan kiri! Semua bergerak tepat saat genderang berbunyi! Mengerti?!", "suntzu"],
+      ["santai", "Mengerti!", "crowd_mengerti"]
+    ]
+  },
+  {
+    "scene": "s04_perintah1",
+    "title": "04 / PERINTAH PERTAMA",
+    "lines": [
+      ["tegas", "Siap! Dengar genderang! Hadap kanan! Gerak!", "suntzu"],
+      ["santai", "Hahahaha! Hihihi! Lucu sekali sih gayanya! Hahaha!", "crowd_laugh1"],
+      ["santai", "Aduh, maaf Tuan! Habisnya seperti sandiwara! Hahaha!", "selir_a"],
+      ["tegang", "Hentikan genderang. Jika perintah tidak jelas dan prajurit tidak paham, maka itu kesalahan panglima. Akan kujelaskan sekali lagi.", "suntzu"]
+    ]
+  },
+  {
+    "scene": "s05_perintah2",
+    "title": "05 / KESEMPATAN KEDUA",
+    "lines": [
+      ["tegas", "Sekali lagi! Hadap kiri, belok ke kiri! Hadap kanan, belok ke kanan! Tidak ada yang boleh tertawa! Genderang! Hadap kiri! Gerak!", "suntzu"],
+      ["santai", "Hihihi! Hahaha! Aduh tidak tahan lagi! Hahaha!", "crowd_laugh2"],
+      ["santai", "Maaf Tuan, benar-benar lucu! Hahaha!", "selir_b"]
+    ]
+  },
+  {
+    "scene": "s06_vonis",
+    "title": "06 / HUKUM MILITER",
+    "lines": [
+      ["tegas", "Cukup! Jika perintah tidak jelas, itu salah panglima. Tapi jika perintah sudah jelas namun tetap dilanggar, itu kesalahan komandan pasukan! Hukum militer jelas: kedua pemimpin dijatuhi hukuman mati! Pengawal, tangkap mereka!", "suntzu"],
+      ["tegang", "Aaahhh! Hah?! Hukuman mati?! Jangan! Tolong!", "crowd_scream"],
+      ["tegang", "Tunggu! Kami cuma bercanda! Tolong, Yang Mulia!", "selir_a"],
+      ["tegang", "Baginda! Selamatkan kami!", "selir_b"]
+    ]
+  },
+  {
+    "scene": "s07_utusan",
+    "title": "07 / PERINTAH RAJA DITOLAK",
+    "lines": [
+      ["tegas", "Hei! Hentikan! Utusan, cepat turun! Katakan pada Sun Tzu aku sudah tahu dia bisa memimpin! Jangan sentuh dua selir kesayanganku! Hentikan sekarang!", "raja"],
+      ["tegang", "Panglima! Hentikan! Titah langsung dari Raja Helü! Baginda memerintahkan hukuman dibatalkan sekarang juga!", "utusan"],
+      ["tegas", "Sampaikan pada Baginda, aku sudah diangkat menjadi panglima di lapangan ini. Saat panglima memimpin pasukan, ada perintah raja yang tidak boleh diterima! Laksanakan hukuman!", "suntzu"]
+    ]
+  },
+  {
+    "scene": "s08_eksekusi",
+    "title": "08 / HARGA KEPATUHAN",
+    "lines": [
+      ["tegang", "Kalian berdua di baris depan, maju! Sekarang kalian komandan barisan yang baru. Angkat tombak kalian!", "suntzu"]
+    ]
+  },
+  {
+    "scene": "s09_serempak",
+    "title": "09 / BARISAN BERUBAH",
+    "lines": [
+      ["tegas", "Genderang! Hadap kanan! Gerak!", "suntzu"],
+      ["tegas", "Siap!", "crowd_siap1"],
+      ["tegas", "Hadap kiri! Gerak! Maju!", "suntzu"],
+      ["tegas", "Siap, Panglima!", "crowd_siap2"],
+      ["tegas", "Utusan, lapor pada Baginda! Pasukan sudah terlatih! Mereka siap terjun ke api maupun air sekalipun!", "suntzu"]
+    ]
+  },
+  {
+    "scene": "s10_penutup",
+    "title": "10 / DISIPLIN ATAU KEKEJAMAN?",
+    "lines": [
+      ["tegang", "Suruh sang jenderal beristirahat. Aku tidak punya hati untuk turun melihat pasukan itu.", "raja"],
+      ["tegas", "Baginda rupanya hanya menyukai kata-kata indah tentang perang, tetapi tidak siap menghadapi kenyataannya.", "suntzu"],
+      ["narasi", "Meski berduka, Raja Helü akhirnya menyadari kehebatan Sun Tzu dan mengangkatnya menjadi panglima Kerajaan Wu. Kisah dari catatan sejarah Shiji. Menurutmu, ini disiplin militer, atau kekejaman?", "narator"]
+    ]
+  }
+]

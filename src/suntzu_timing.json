@@ -1,2546 +1,5804 @@
 {
  "fps": 30,
- "totalDurationSec": 89.167,
- "totalFrames": 2675,
+ "totalDurationSec": 190.533,
+ "totalFrames": 5716,
  "order": [
-  "hook",
-  "leaders",
-  "first",
-  "second",
-  "sentence",
-  "stop",
-  "turn",
-  "end"
+  "s01_balairung",
+  "s02_pasukan",
+  "s03_aturan",
+  "s04_perintah1",
+  "s05_perintah2",
+  "s06_vonis",
+  "s07_utusan",
+  "s08_eksekusi",
+  "s09_serempak",
+  "s10_penutup"
  ],
  "scenes": {
-  "hook": {
+  "s01_balairung": {
    "startFrame": 0,
-   "durationInFrames": 271
+   "durationInFrames": 848,
+   "title": "01 / TANTANGAN DI BALAIRUNG"
   },
-  "leaders": {
-   "startFrame": 271,
-   "durationInFrames": 291
+  "s02_pasukan": {
+   "startFrame": 848,
+   "durationInFrames": 475,
+   "title": "02 / DUA SELIR PEMIMPIN"
   },
-  "first": {
-   "startFrame": 562,
-   "durationInFrames": 315
+  "s03_aturan": {
+   "startFrame": 1323,
+   "durationInFrames": 516,
+   "title": "03 / ATURAN GENDERANG & TOMBAK"
   },
-  "second": {
-   "startFrame": 877,
-   "durationInFrames": 276
+  "s04_perintah1": {
+   "startFrame": 1839,
+   "durationInFrames": 641,
+   "title": "04 / PERINTAH PERTAMA"
   },
-  "sentence": {
-   "startFrame": 1153,
-   "durationInFrames": 389
+  "s05_perintah2": {
+   "startFrame": 2480,
+   "durationInFrames": 466,
+   "title": "05 / KESEMPATAN KEDUA"
   },
-  "stop": {
-   "startFrame": 1542,
-   "durationInFrames": 285
+  "s06_vonis": {
+   "startFrame": 2946,
+   "durationInFrames": 656,
+   "title": "06 / HUKUM MILITER"
   },
-  "turn": {
-   "startFrame": 1827,
-   "durationInFrames": 335
+  "s07_utusan": {
+   "startFrame": 3602,
+   "durationInFrames": 744,
+   "title": "07 / PERINTAH RAJA DITOLAK"
   },
-  "end": {
-   "startFrame": 2162,
-   "durationInFrames": 513
+  "s08_eksekusi": {
+   "startFrame": 4346,
+   "durationInFrames": 292,
+   "title": "08 / HARGA KEPATUHAN"
+  },
+  "s09_serempak": {
+   "startFrame": 4638,
+   "durationInFrames": 432,
+   "title": "09 / BARISAN BERUBAH"
+  },
+  "s10_penutup": {
+   "startFrame": 5070,
+   "durationInFrames": 646,
+   "title": "10 / DISIPLIN ATAU KEKEJAMAN?"
   }
  },
  "lines": {
-  "hook": [
+  "s01_balairung": [
    {
-    "voice": "dodi",
+    "voice": "narator",
+    "speaker": "",
     "style": "narasi",
-    "text": "Bisakah ahli strategi mengubah orang yang belum pernah berlatih menjadi pasukan?",
-    "from": 24,
-    "to": 130,
+    "text": "Lima ratus tahun sebelum Masehi, di Istana Kerajaan Wu.",
+    "from": 20,
+    "to": 107,
     "words": [
      {
-      "w": "Bisakah",
-      "from": 24,
-      "to": 37
+      "w": "Lima",
+      "from": 20,
+      "to": 30
      },
      {
-      "w": "ahli",
-      "from": 37,
-      "to": 44
-     },
-     {
-      "w": "strategi",
-      "from": 44,
-      "to": 58
-     },
-     {
-      "w": "mengubah",
-      "from": 58,
-      "to": 68
-     },
-     {
-      "w": "orang",
-      "from": 68,
-      "to": 73
-     },
-     {
-      "w": "yang",
-      "from": 73,
-      "to": 78
-     },
-     {
-      "w": "belum",
-      "from": 78,
-      "to": 83
-     },
-     {
-      "w": "pernah",
-      "from": 83,
-      "to": 90
-     },
-     {
-      "w": "berlatih",
-      "from": 90,
-      "to": 102
-     },
-     {
-      "w": "menjadi",
-      "from": 102,
-      "to": 109
-     },
-     {
-      "w": "pasukan?",
-      "from": 109,
-      "to": 121
-     }
-    ]
-   },
-   {
-    "voice": "ara",
-    "style": "santai",
-    "text": "Raja Helü menguji Sun Tzu dengan perempuan istana, bukan prajurit?",
-    "from": 137,
-    "to": 255,
-    "words": [
-     {
-      "w": "Raja",
-      "from": 137,
-      "to": 147
-     },
-     {
-      "w": "Helü",
-      "from": 147,
-      "to": 155
-     },
-     {
-      "w": "menguji",
-      "from": 155,
-      "to": 168
-     },
-     {
-      "w": "Sun",
-      "from": 168,
-      "to": 174
-     },
-     {
-      "w": "Tzu",
-      "from": 174,
-      "to": 181
-     },
-     {
-      "w": "dengan",
-      "from": 181,
-      "to": 189
-     },
-     {
-      "w": "perempuan",
-      "from": 189,
-      "to": 203
-     },
-     {
-      "w": "istana,",
-      "from": 203,
-      "to": 215
-     },
-     {
-      "w": "bukan",
-      "from": 215,
-      "to": 236
-     },
-     {
-      "w": "prajurit?",
-      "from": 236,
-      "to": 252
-     }
-    ]
-   }
-  ],
-  "leaders": [
-   {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Menurut kisah dalam Shiji, seratus delapan puluh perempuan dibagi menjadi dua kelompok.",
-    "from": 14,
-    "to": 142,
-    "words": [
-     {
-      "w": "Menurut",
-      "from": 14,
-      "to": 22
-     },
-     {
-      "w": "kisah",
-      "from": 22,
-      "to": 28
-     },
-     {
-      "w": "dalam",
-      "from": 28,
-      "to": 34
-     },
-     {
-      "w": "Shiji,",
-      "from": 34,
-      "to": 39
-     },
-     {
-      "w": "seratus",
-      "from": 39,
-      "to": 72
-     },
-     {
-      "w": "delapan",
-      "from": 72,
-      "to": 86
-     },
-     {
-      "w": "puluh",
-      "from": 86,
-      "to": 96
-     },
-     {
-      "w": "perempuan",
-      "from": 96,
-      "to": 108
-     },
-     {
-      "w": "dibagi",
-      "from": 108,
-      "to": 113
-     },
-     {
-      "w": "menjadi",
-      "from": 113,
-      "to": 124
-     },
-     {
-      "w": "dua",
-      "from": 124,
-      "to": 128
-     },
-     {
-      "w": "kelompok.",
-      "from": 128,
-      "to": 138
-     }
-    ]
-   },
-   {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Dua selir kesayangan raja dipilih menjadi pemimpin, sementara peserta memegang tombak.",
-    "from": 150,
-    "to": 275,
-    "words": [
-     {
-      "w": "Dua",
-      "from": 150,
-      "to": 159
-     },
-     {
-      "w": "selir",
-      "from": 159,
-      "to": 169
-     },
-     {
-      "w": "kesayangan",
-      "from": 169,
-      "to": 185
-     },
-     {
-      "w": "raja",
-      "from": 185,
-      "to": 193
-     },
-     {
-      "w": "dipilih",
-      "from": 193,
-      "to": 203
-     },
-     {
-      "w": "menjadi",
-      "from": 203,
-      "to": 210
-     },
-     {
-      "w": "pemimpin,",
-      "from": 210,
-      "to": 225
-     },
-     {
-      "w": "sementara",
-      "from": 225,
-      "to": 240
-     },
-     {
-      "w": "peserta",
-      "from": 240,
-      "to": 250
-     },
-     {
-      "w": "memegang",
-      "from": 250,
-      "to": 263
-     },
-     {
-      "w": "tombak.",
-      "from": 263,
-      "to": 272
-     }
-    ]
-   }
-  ],
-  "first": [
-   {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Genderang berbunyi, perintah belok kanan diberikan, tetapi para peserta malah tertawa.",
-    "from": 14,
-    "to": 153,
-    "words": [
-     {
-      "w": "Genderang",
-      "from": 14,
-      "to": 25
-     },
-     {
-      "w": "berbunyi,",
-      "from": 25,
+      "w": "ratus",
+      "from": 30,
       "to": 41
      },
      {
-      "w": "perintah",
+      "w": "tahun",
       "from": 41,
-      "to": 63
+      "to": 48
      },
      {
-      "w": "belok",
-      "from": 63,
-      "to": 70
+      "w": "sebelum",
+      "from": 48,
+      "to": 58
      },
      {
-      "w": "kanan",
-      "from": 70,
-      "to": 77
+      "w": "Masehi,",
+      "from": 58,
+      "to": 75
      },
      {
-      "w": "diberikan,",
-      "from": 77,
+      "w": "di",
+      "from": 75,
+      "to": 78
+     },
+     {
+      "w": "Istana",
+      "from": 78,
+      "to": 86
+     },
+     {
+      "w": "Kerajaan",
+      "from": 86,
+      "to": 98
+     },
+     {
+      "w": "Wu.",
+      "from": 98,
       "to": 101
-     },
-     {
-      "w": "tetapi",
-      "from": 101,
-      "to": 110
-     },
-     {
-      "w": "para",
-      "from": 110,
-      "to": 115
-     },
-     {
-      "w": "peserta",
-      "from": 115,
-      "to": 127
-     },
-     {
-      "w": "malah",
-      "from": 127,
-      "to": 136
-     },
-     {
-      "w": "tertawa.",
-      "from": 136,
-      "to": 148
      }
     ]
    },
    {
-    "voice": "ara",
-    "style": "santai",
-    "text": "Sun Tzu mengakui, kalau perintah belum jelas, panglima yang bertanggung jawab.",
-    "from": 160,
-    "to": 299,
+    "voice": "raja",
+    "speaker": "RAJA HELÜ",
+    "style": "tegas",
+    "text": "Sun Tzu! Aku sudah membaca tiga belas bab kitab perangmu. Teorinya indah, tapi bisakah kau membuktikannya langsung di depan mataku?",
+    "from": 112,
+    "to": 325,
     "words": [
      {
       "w": "Sun",
-      "from": 160,
-      "to": 168
+      "from": 112,
+      "to": 124
      },
      {
-      "w": "Tzu",
-      "from": 168,
-      "to": 176
+      "w": "Tzu!",
+      "from": 124,
+      "to": 140
      },
      {
-      "w": "mengakui,",
-      "from": 176,
-      "to": 196
+      "w": "Aku",
+      "from": 140,
+      "to": 144
      },
      {
-      "w": "kalau",
-      "from": 196,
-      "to": 211
+      "w": "sudah",
+      "from": 144,
+      "to": 151
      },
      {
-      "w": "perintah",
-      "from": 211,
+      "w": "membaca",
+      "from": 151,
+      "to": 165
+     },
+     {
+      "w": "tiga",
+      "from": 165,
+      "to": 172
+     },
+     {
+      "w": "belas",
+      "from": 172,
+      "to": 180
+     },
+     {
+      "w": "bab",
+      "from": 180,
+      "to": 186
+     },
+     {
+      "w": "kitab",
+      "from": 186,
+      "to": 197
+     },
+     {
+      "w": "perangmu.",
+      "from": 197,
+      "to": 216
+     },
+     {
+      "w": "Teorinya",
+      "from": 216,
       "to": 228
      },
      {
-      "w": "belum",
+      "w": "indah,",
       "from": 228,
-      "to": 234
+      "to": 242
+     },
+     {
+      "w": "tapi",
+      "from": 242,
+      "to": 249
+     },
+     {
+      "w": "bisakah",
+      "from": 249,
+      "to": 260
+     },
+     {
+      "w": "kau",
+      "from": 260,
+      "to": 265
+     },
+     {
+      "w": "membuktikannya",
+      "from": 265,
+      "to": 285
+     },
+     {
+      "w": "langsung",
+      "from": 285,
+      "to": 297
+     },
+     {
+      "w": "di",
+      "from": 297,
+      "to": 301
+     },
+     {
+      "w": "depan",
+      "from": 301,
+      "to": 310
+     },
+     {
+      "w": "mataku?",
+      "from": 310,
+      "to": 321
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Bisa, Yang Mulia. Siapa pun pasukannya, jika aturannya jelas, mereka akan bergerak seperti satu tubuh.",
+    "from": 331,
+    "to": 532,
+    "words": [
+     {
+      "w": "Bisa,",
+      "from": 331,
+      "to": 341
+     },
+     {
+      "w": "Yang",
+      "from": 341,
+      "to": 359
+     },
+     {
+      "w": "Mulia.",
+      "from": 359,
+      "to": 372
+     },
+     {
+      "w": "Siapa",
+      "from": 372,
+      "to": 391
+     },
+     {
+      "w": "pun",
+      "from": 391,
+      "to": 403
+     },
+     {
+      "w": "pasukannya,",
+      "from": 403,
+      "to": 420
+     },
+     {
+      "w": "jika",
+      "from": 420,
+      "to": 439
+     },
+     {
+      "w": "aturannya",
+      "from": 439,
+      "to": 451
      },
      {
       "w": "jelas,",
-      "from": 234,
-      "to": 248
+      "from": 451,
+      "to": 463
      },
      {
-      "w": "panglima",
-      "from": 248,
-      "to": 270
+      "w": "mereka",
+      "from": 463,
+      "to": 478
      },
      {
-      "w": "yang",
-      "from": 270,
-      "to": 275
+      "w": "akan",
+      "from": 478,
+      "to": 488
      },
      {
-      "w": "bertanggung",
-      "from": 275,
-      "to": 290
+      "w": "bergerak",
+      "from": 488,
+      "to": 501
      },
      {
-      "w": "jawab.",
-      "from": 290,
-      "to": 298
+      "w": "seperti",
+      "from": 501,
+      "to": 507
+     },
+     {
+      "w": "satu",
+      "from": 507,
+      "to": 518
+     },
+     {
+      "w": "tubuh.",
+      "from": 518,
+      "to": 530
+     }
+    ]
+   },
+   {
+    "voice": "raja",
+    "speaker": "RAJA HELÜ",
+    "style": "santai",
+    "text": "Oh ya? Kalau begitu, jangan pakai prajurit. Latihlah seratus delapan puluh perempuan istanaku! Jika berhasil, kau kuangkat jadi panglima!",
+    "from": 538,
+    "to": 768,
+    "words": [
+     {
+      "w": "Oh",
+      "from": 538,
+      "to": 543
+     },
+     {
+      "w": "ya?",
+      "from": 543,
+      "to": 549
+     },
+     {
+      "w": "Kalau",
+      "from": 549,
+      "to": 566
+     },
+     {
+      "w": "begitu,",
+      "from": 566,
+      "to": 573
+     },
+     {
+      "w": "jangan",
+      "from": 573,
+      "to": 581
+     },
+     {
+      "w": "pakai",
+      "from": 581,
+      "to": 587
+     },
+     {
+      "w": "prajurit.",
+      "from": 587,
+      "to": 600
+     },
+     {
+      "w": "Latihlah",
+      "from": 600,
+      "to": 621
+     },
+     {
+      "w": "seratus",
+      "from": 621,
+      "to": 635
+     },
+     {
+      "w": "delapan",
+      "from": 635,
+      "to": 659
+     },
+     {
+      "w": "puluh",
+      "from": 659,
+      "to": 669
+     },
+     {
+      "w": "perempuan",
+      "from": 669,
+      "to": 683
+     },
+     {
+      "w": "istanaku!",
+      "from": 683,
+      "to": 709
+     },
+     {
+      "w": "Jika",
+      "from": 709,
+      "to": 715
+     },
+     {
+      "w": "berhasil,",
+      "from": 715,
+      "to": 728
+     },
+     {
+      "w": "kau",
+      "from": 728,
+      "to": 732
+     },
+     {
+      "w": "kuangkat",
+      "from": 732,
+      "to": 743
+     },
+     {
+      "w": "jadi",
+      "from": 743,
+      "to": 749
+     },
+     {
+      "w": "panglima!",
+      "from": 749,
+      "to": 765
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Saya terima tantangan Baginda.",
+    "from": 774,
+    "to": 834,
+    "words": [
+     {
+      "w": "Saya",
+      "from": 774,
+      "to": 781
+     },
+     {
+      "w": "terima",
+      "from": 781,
+      "to": 792
+     },
+     {
+      "w": "tantangan",
+      "from": 792,
+      "to": 811
+     },
+     {
+      "w": "Baginda.",
+      "from": 811,
+      "to": 825
      }
     ]
    }
   ],
-  "second": [
+  "s02_pasukan": [
    {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Ia menjelaskan lagi, lalu memberi perintah belok kiri, tetapi tawa kembali terdengar.",
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Semuanya, berbaris! Kalian kubagi menjadi dua pasukan! Dua selir kesayangan Raja, majulah ke depan! Kalian komandan barisan ini!",
     "from": 14,
-    "to": 148,
+    "to": 241,
     "words": [
      {
-      "w": "Ia",
+      "w": "Semuanya,",
       "from": 14,
-      "to": 18
+      "to": 27
      },
      {
-      "w": "menjelaskan",
-      "from": 18,
-      "to": 32
+      "w": "berbaris!",
+      "from": 27,
+      "to": 65
      },
      {
-      "w": "lagi,",
-      "from": 32,
-      "to": 50
+      "w": "Kalian",
+      "from": 65,
+      "to": 75
      },
      {
-      "w": "lalu",
-      "from": 50,
-      "to": 56
-     },
-     {
-      "w": "memberi",
-      "from": 56,
-      "to": 66
-     },
-     {
-      "w": "perintah",
-      "from": 66,
-      "to": 77
-     },
-     {
-      "w": "belok",
-      "from": 77,
+      "w": "kubagi",
+      "from": 75,
       "to": 86
      },
      {
-      "w": "kiri,",
+      "w": "menjadi",
       "from": 86,
-      "to": 102
+      "to": 92
      },
      {
-      "w": "tetapi",
-      "from": 102,
-      "to": 111
+      "w": "dua",
+      "from": 92,
+      "to": 100
      },
      {
-      "w": "tawa",
-      "from": 111,
+      "w": "pasukan!",
+      "from": 100,
       "to": 120
      },
      {
-      "w": "kembali",
+      "w": "Dua",
       "from": 120,
-      "to": 131
+      "to": 126
      },
      {
-      "w": "terdengar.",
-      "from": 131,
+      "w": "selir",
+      "from": 126,
+      "to": 134
+     },
+     {
+      "w": "kesayangan",
+      "from": 134,
+      "to": 146
+     },
+     {
+      "w": "Raja,",
+      "from": 146,
+      "to": 162
+     },
+     {
+      "w": "majulah",
+      "from": 162,
+      "to": 174
+     },
+     {
+      "w": "ke",
+      "from": 174,
+      "to": 177
+     },
+     {
+      "w": "depan!",
+      "from": 177,
+      "to": 195
+     },
+     {
+      "w": "Kalian",
+      "from": 195,
+      "to": 206
+     },
+     {
+      "w": "komandan",
+      "from": 206,
+      "to": 215
+     },
+     {
+      "w": "barisan",
+      "from": 215,
+      "to": 228
+     },
+     {
+      "w": "ini!",
+      "from": 228,
+      "to": 235
+     }
+    ]
+   },
+   {
+    "voice": "selir_a",
+    "speaker": "SELIR A",
+    "style": "santai",
+    "text": "Hahaha, lihat tombak ini berat sekali! Kita disuruh main perang-perangan?",
+    "from": 246,
+    "to": 354,
+    "words": [
+     {
+      "w": "Hahaha,",
+      "from": 246,
+      "to": 270
+     },
+     {
+      "w": "lihat",
+      "from": 270,
+      "to": 280
+     },
+     {
+      "w": "tombak",
+      "from": 280,
+      "to": 288
+     },
+     {
+      "w": "ini",
+      "from": 288,
+      "to": 294
+     },
+     {
+      "w": "berat",
+      "from": 294,
+      "to": 301
+     },
+     {
+      "w": "sekali!",
+      "from": 301,
+      "to": 319
+     },
+     {
+      "w": "Kita",
+      "from": 319,
+      "to": 325
+     },
+     {
+      "w": "disuruh",
+      "from": 325,
+      "to": 333
+     },
+     {
+      "w": "main",
+      "from": 333,
+      "to": 337
+     },
+     {
+      "w": "perang-perangan?",
+      "from": 337,
+      "to": 349
+     }
+    ]
+   },
+   {
+    "voice": "selir_b",
+    "speaker": "SELIR B",
+    "style": "santai",
+    "text": "Tenang saja, Raja sendiri yang menonton dari atas paviliun!",
+    "from": 359,
+    "to": 463,
+    "words": [
+     {
+      "w": "Tenang",
+      "from": 359,
+      "to": 370
+     },
+     {
+      "w": "saja,",
+      "from": 370,
+      "to": 392
+     },
+     {
+      "w": "Raja",
+      "from": 392,
+      "to": 402
+     },
+     {
+      "w": "sendiri",
+      "from": 402,
+      "to": 410
+     },
+     {
+      "w": "yang",
+      "from": 410,
+      "to": 416
+     },
+     {
+      "w": "menonton",
+      "from": 416,
+      "to": 429
+     },
+     {
+      "w": "dari",
+      "from": 429,
+      "to": 437
+     },
+     {
+      "w": "atas",
+      "from": 437,
+      "to": 445
+     },
+     {
+      "w": "paviliun!",
+      "from": 445,
+      "to": 460
+     }
+    ]
+   }
+  ],
+  "s03_aturan": [
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Dengarkan baik-baik! Kalian tahu mana dada, punggung, tangan kanan, dan tangan kiri?",
+    "from": 10,
+    "to": 148,
+    "words": [
+     {
+      "w": "Dengarkan",
+      "from": 10,
+      "to": 21
+     },
+     {
+      "w": "baik-baik!",
+      "from": 21,
+      "to": 41
+     },
+     {
+      "w": "Kalian",
+      "from": 41,
+      "to": 47
+     },
+     {
+      "w": "tahu",
+      "from": 47,
+      "to": 57
+     },
+     {
+      "w": "mana",
+      "from": 57,
+      "to": 70
+     },
+     {
+      "w": "dada,",
+      "from": 70,
+      "to": 85
+     },
+     {
+      "w": "punggung,",
+      "from": 85,
+      "to": 103
+     },
+     {
+      "w": "tangan",
+      "from": 103,
+      "to": 110
+     },
+     {
+      "w": "kanan,",
+      "from": 110,
+      "to": 128
+     },
+     {
+      "w": "dan",
+      "from": 128,
+      "to": 129
+     },
+     {
+      "w": "tangan",
+      "from": 129,
+      "to": 139
+     },
+     {
+      "w": "kiri?",
+      "from": 139,
       "to": 145
      }
     ]
    },
    {
-    "voice": "ara",
-    "style": "tegang",
-    "text": "Jadi, kesempatan kedua pun tidak mengubah barisan itu?",
-    "from": 155,
-    "to": 260,
+    "voice": "crowd_tahu",
+    "speaker": "PASUKAN",
+    "style": "santai",
+    "text": "Tahu, Tuan!",
+    "from": 153,
+    "to": 184,
     "words": [
      {
-      "w": "Jadi,",
-      "from": 155,
-      "to": 166
+      "w": "Tahu,",
+      "from": 153,
+      "to": 164
      },
      {
-      "w": "kesempatan",
-      "from": 166,
-      "to": 195
+      "w": "Tuan!",
+      "from": 164,
+      "to": 172
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Jika aku berkata hadap kanan, belok ke tangan kanan! Hadap kiri, belok ke tangan kiri! Semua bergerak tepat saat genderang berbunyi! Mengerti?!",
+    "from": 188,
+    "to": 470,
+    "words": [
+     {
+      "w": "Jika",
+      "from": 188,
+      "to": 202
      },
      {
-      "w": "kedua",
-      "from": 195,
-      "to": 205
+      "w": "aku",
+      "from": 202,
+      "to": 226
      },
      {
-      "w": "pun",
-      "from": 205,
-      "to": 211
+      "w": "berkata",
+      "from": 226,
+      "to": 237
      },
      {
-      "w": "tidak",
-      "from": 211,
-      "to": 219
+      "w": "hadap",
+      "from": 237,
+      "to": 246
      },
      {
-      "w": "mengubah",
-      "from": 219,
-      "to": 235
+      "w": "kanan,",
+      "from": 246,
+      "to": 265
      },
      {
-      "w": "barisan",
-      "from": 235,
-      "to": 245
+      "w": "belok",
+      "from": 265,
+      "to": 275
      },
      {
-      "w": "itu?",
-      "from": 245,
-      "to": 254
+      "w": "ke",
+      "from": 275,
+      "to": 277
+     },
+     {
+      "w": "tangan",
+      "from": 277,
+      "to": 282
+     },
+     {
+      "w": "kanan!",
+      "from": 282,
+      "to": 299
+     },
+     {
+      "w": "Hadap",
+      "from": 299,
+      "to": 314
+     },
+     {
+      "w": "kiri,",
+      "from": 314,
+      "to": 328
+     },
+     {
+      "w": "belok",
+      "from": 328,
+      "to": 336
+     },
+     {
+      "w": "ke",
+      "from": 336,
+      "to": 338
+     },
+     {
+      "w": "tangan",
+      "from": 338,
+      "to": 343
+     },
+     {
+      "w": "kiri!",
+      "from": 343,
+      "to": 366
+     },
+     {
+      "w": "Semua",
+      "from": 366,
+      "to": 376
+     },
+     {
+      "w": "bergerak",
+      "from": 376,
+      "to": 389
+     },
+     {
+      "w": "tepat",
+      "from": 389,
+      "to": 399
+     },
+     {
+      "w": "saat",
+      "from": 399,
+      "to": 411
+     },
+     {
+      "w": "genderang",
+      "from": 411,
+      "to": 426
+     },
+     {
+      "w": "berbunyi!",
+      "from": 426,
+      "to": 450
+     },
+     {
+      "w": "Mengerti?!",
+      "from": 450,
+      "to": 464
+     }
+    ]
+   },
+   {
+    "voice": "crowd_mengerti",
+    "speaker": "PASUKAN",
+    "style": "santai",
+    "text": "Mengerti!",
+    "from": 475,
+    "to": 505,
+    "words": [
+     {
+      "w": "Mengerti!",
+      "from": 475,
+      "to": 492
      }
     ]
    }
   ],
-  "sentence": [
+  "s04_perintah1": [
    {
-    "voice": "dodi",
-    "style": "tegang",
-    "text": "Menurut Sun Tzu, perintah yang jelas tetapi tidak dipatuhi menjadi tanggung jawab pemimpin kelompok.",
-    "from": 14,
-    "to": 158,
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Siap! Dengar genderang! Hadap kanan! Gerak!",
+    "from": 10,
+    "to": 117,
     "words": [
      {
-      "w": "Menurut",
-      "from": 14,
-      "to": 24
+      "w": "Siap!",
+      "from": 10,
+      "to": 40
      },
      {
-      "w": "Sun",
-      "from": 24,
-      "to": 31
+      "w": "Dengar",
+      "from": 40,
+      "to": 48
      },
      {
-      "w": "Tzu,",
-      "from": 31,
+      "w": "genderang!",
+      "from": 48,
+      "to": 71
+     },
+     {
+      "w": "Hadap",
+      "from": 71,
+      "to": 81
+     },
+     {
+      "w": "kanan!",
+      "from": 81,
+      "to": 100
+     },
+     {
+      "w": "Gerak!",
+      "from": 100,
+      "to": 114
+     }
+    ]
+   },
+   {
+    "voice": "crowd_laugh1",
+    "speaker": "PASUKAN",
+    "style": "santai",
+    "text": "Hahahaha! Hihihi! Lucu sekali sih gayanya! Hahaha!",
+    "from": 137,
+    "to": 241,
+    "words": [
+     {
+      "w": "Hahahaha!",
+      "from": 137,
+      "to": 163
+     },
+     {
+      "w": "Hihihi!",
+      "from": 163,
+      "to": 183
+     },
+     {
+      "w": "Lucu",
+      "from": 183,
+      "to": 193
+     },
+     {
+      "w": "sekali",
+      "from": 193,
+      "to": 203
+     },
+     {
+      "w": "sih",
+      "from": 203,
+      "to": 207
+     },
+     {
+      "w": "gayanya!",
+      "from": 207,
+      "to": 228
+     },
+     {
+      "w": "Hahaha!",
+      "from": 228,
+      "to": 239
+     }
+    ]
+   },
+   {
+    "voice": "selir_a",
+    "speaker": "SELIR A",
+    "style": "santai",
+    "text": "Aduh, maaf Tuan! Habisnya seperti sandiwara! Hahaha!",
+    "from": 250,
+    "to": 383,
+    "words": [
+     {
+      "w": "Aduh,",
+      "from": 250,
+      "to": 264
+     },
+     {
+      "w": "maaf",
+      "from": 264,
+      "to": 279
+     },
+     {
+      "w": "Tuan!",
+      "from": 279,
+      "to": 289
+     },
+     {
+      "w": "Habisnya",
+      "from": 289,
+      "to": 315
+     },
+     {
+      "w": "seperti",
+      "from": 315,
+      "to": 324
+     },
+     {
+      "w": "sandiwara!",
+      "from": 324,
+      "to": 337
+     },
+     {
+      "w": "Hahaha!",
+      "from": 337,
+      "to": 351
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegang",
+    "text": "Hentikan genderang. Jika perintah tidak jelas dan prajurit tidak paham, maka itu kesalahan panglima. Akan kujelaskan sekali lagi.",
+    "from": 391,
+    "to": 628,
+    "words": [
+     {
+      "w": "Hentikan",
+      "from": 391,
+      "to": 405
+     },
+     {
+      "w": "genderang.",
+      "from": 405,
+      "to": 435
+     },
+     {
+      "w": "Jika",
+      "from": 435,
+      "to": 446
+     },
+     {
+      "w": "perintah",
+      "from": 446,
+      "to": 457
+     },
+     {
+      "w": "tidak",
+      "from": 457,
+      "to": 461
+     },
+     {
+      "w": "jelas",
+      "from": 461,
+      "to": 473
+     },
+     {
+      "w": "dan",
+      "from": 473,
+      "to": 488
+     },
+     {
+      "w": "prajurit",
+      "from": 488,
+      "to": 501
+     },
+     {
+      "w": "tidak",
+      "from": 501,
+      "to": 506
+     },
+     {
+      "w": "paham,",
+      "from": 506,
+      "to": 530
+     },
+     {
+      "w": "maka",
+      "from": 530,
+      "to": 541
+     },
+     {
+      "w": "itu",
+      "from": 541,
+      "to": 546
+     },
+     {
+      "w": "kesalahan",
+      "from": 546,
+      "to": 560
+     },
+     {
+      "w": "panglima.",
+      "from": 560,
+      "to": 584
+     },
+     {
+      "w": "Akan",
+      "from": 584,
+      "to": 591
+     },
+     {
+      "w": "kujelaskan",
+      "from": 591,
+      "to": 608
+     },
+     {
+      "w": "sekali",
+      "from": 608,
+      "to": 615
+     },
+     {
+      "w": "lagi.",
+      "from": 615,
+      "to": 622
+     }
+    ]
+   }
+  ],
+  "s05_perintah2": [
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Sekali lagi! Hadap kiri, belok ke kiri! Hadap kanan, belok ke kanan! Tidak ada yang boleh tertawa! Genderang! Hadap kiri! Gerak!",
+    "from": 10,
+    "to": 234,
+    "words": [
+     {
+      "w": "Sekali",
+      "from": 10,
+      "to": 22
+     },
+     {
+      "w": "lagi!",
+      "from": 22,
+      "to": 38
+     },
+     {
+      "w": "Hadap",
+      "from": 38,
+      "to": 45
+     },
+     {
+      "w": "kiri,",
+      "from": 45,
+      "to": 58
+     },
+     {
+      "w": "belok",
+      "from": 58,
+      "to": 65
+     },
+     {
+      "w": "ke",
+      "from": 65,
+      "to": 69
+     },
+     {
+      "w": "kiri!",
+      "from": 69,
+      "to": 84
+     },
+     {
+      "w": "Hadap",
+      "from": 84,
+      "to": 91
+     },
+     {
+      "w": "kanan,",
+      "from": 91,
+      "to": 106
+     },
+     {
+      "w": "belok",
+      "from": 106,
+      "to": 115
+     },
+     {
+      "w": "ke",
+      "from": 115,
+      "to": 117
+     },
+     {
+      "w": "kanan!",
+      "from": 117,
+      "to": 133
+     },
+     {
+      "w": "Tidak",
+      "from": 133,
+      "to": 140
+     },
+     {
+      "w": "ada",
+      "from": 140,
+      "to": 146
+     },
+     {
+      "w": "yang",
+      "from": 146,
+      "to": 150
+     },
+     {
+      "w": "boleh",
+      "from": 150,
+      "to": 156
+     },
+     {
+      "w": "tertawa!",
+      "from": 156,
+      "to": 180
+     },
+     {
+      "w": "Genderang!",
+      "from": 180,
+      "to": 193
+     },
+     {
+      "w": "Hadap",
+      "from": 193,
+      "to": 207
+     },
+     {
+      "w": "kiri!",
+      "from": 207,
+      "to": 223
+     },
+     {
+      "w": "Gerak!",
+      "from": 223,
+      "to": 231
+     }
+    ]
+   },
+   {
+    "voice": "crowd_laugh2",
+    "speaker": "PASUKAN",
+    "style": "santai",
+    "text": "Hihihi! Hahaha! Aduh tidak tahan lagi! Hahaha!",
+    "from": 254,
+    "to": 383,
+    "words": [
+     {
+      "w": "Hihihi!",
+      "from": 276,
+      "to": 284
+     },
+     {
+      "w": "Hahaha!",
+      "from": 284,
+      "to": 302
+     },
+     {
+      "w": "Aduh",
+      "from": 302,
+      "to": 325
+     },
+     {
+      "w": "tidak",
+      "from": 325,
+      "to": 333
+     },
+     {
+      "w": "tahan",
+      "from": 333,
+      "to": 343
+     },
+     {
+      "w": "lagi!",
+      "from": 343,
+      "to": 364
+     },
+     {
+      "w": "Hahaha!",
+      "from": 364,
+      "to": 381
+     }
+    ]
+   },
+   {
+    "voice": "selir_b",
+    "speaker": "SELIR B",
+    "style": "santai",
+    "text": "Maaf Tuan, benar-benar lucu! Hahaha!",
+    "from": 392,
+    "to": 453,
+    "words": [
+     {
+      "w": "Maaf",
+      "from": 392,
+      "to": 397
+     },
+     {
+      "w": "Tuan,",
+      "from": 397,
+      "to": 405
+     },
+     {
+      "w": "benar-benar",
+      "from": 405,
+      "to": 422
+     },
+     {
+      "w": "lucu!",
+      "from": 422,
+      "to": 435
+     },
+     {
+      "w": "Hahaha!",
+      "from": 435,
+      "to": 447
+     }
+    ]
+   }
+  ],
+  "s06_vonis": [
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Cukup! Jika perintah tidak jelas, itu salah panglima. Tapi jika perintah sudah jelas namun tetap dilanggar, itu kesalahan komandan pasukan! Hukum militer jelas: kedua pemimpin dijatuhi hukuman mati! Pengawal, tangkap mereka!",
+    "from": 9,
+    "to": 357,
+    "words": [
+     {
+      "w": "Cukup!",
+      "from": 9,
+      "to": 41
+     },
+     {
+      "w": "Jika",
+      "from": 41,
       "to": 46
      },
      {
       "w": "perintah",
       "from": 46,
-      "to": 57
-     },
-     {
-      "w": "yang",
-      "from": 57,
-      "to": 62
-     },
-     {
-      "w": "jelas",
-      "from": 62,
-      "to": 80
-     },
-     {
-      "w": "tetapi",
-      "from": 80,
-      "to": 88
+      "to": 53
      },
      {
       "w": "tidak",
-      "from": 88,
-      "to": 94
-     },
-     {
-      "w": "dipatuhi",
-      "from": 94,
-      "to": 109
-     },
-     {
-      "w": "menjadi",
-      "from": 109,
-      "to": 113
-     },
-     {
-      "w": "tanggung",
-      "from": 113,
-      "to": 125
-     },
-     {
-      "w": "jawab",
-      "from": 125,
-      "to": 133
-     },
-     {
-      "w": "pemimpin",
-      "from": 133,
-      "to": 144
-     },
-     {
-      "w": "kelompok.",
-      "from": 144,
-      "to": 155
-     }
-    ]
-   },
-   {
-    "voice": "dodi",
-    "style": "tegang",
-    "text": "Lalu ia menjatuhkan hukuman mati kepada kedua pemimpin itu.",
-    "from": 172,
-    "to": 273,
-    "words": [
-     {
-      "w": "Lalu",
-      "from": 172,
-      "to": 180
-     },
-     {
-      "w": "ia",
-      "from": 180,
-      "to": 185
-     },
-     {
-      "w": "menjatuhkan",
-      "from": 185,
-      "to": 204
-     },
-     {
-      "w": "hukuman",
-      "from": 204,
-      "to": 216
-     },
-     {
-      "w": "mati",
-      "from": 216,
-      "to": 228
-     },
-     {
-      "w": "kepada",
-      "from": 228,
-      "to": 233
-     },
-     {
-      "w": "kedua",
-      "from": 233,
-      "to": 246
-     },
-     {
-      "w": "pemimpin",
-      "from": 246,
-      "to": 262
-     },
-     {
-      "w": "itu.",
-      "from": 262,
-      "to": 268
-     }
-    ]
-   },
-   {
-    "voice": "ara",
-    "style": "tegang",
-    "text": "Hukuman mati hanya karena latihan tidak tertib?",
-    "from": 288,
-    "to": 372,
-    "words": [
-     {
-      "w": "Hukuman",
-      "from": 288,
-      "to": 303
-     },
-     {
-      "w": "mati",
-      "from": 303,
-      "to": 318
-     },
-     {
-      "w": "hanya",
-      "from": 318,
-      "to": 325
-     },
-     {
-      "w": "karena",
-      "from": 325,
-      "to": 333
-     },
-     {
-      "w": "latihan",
-      "from": 333,
-      "to": 350
-     },
-     {
-      "w": "tidak",
-      "from": 350,
-      "to": 356
-     },
-     {
-      "w": "tertib?",
-      "from": 356,
-      "to": 369
-     }
-    ]
-   }
-  ],
-  "stop": [
-   {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Dari paviliun, raja mengirim utusan untuk menghentikan hukuman.",
-    "from": 14,
-    "to": 114,
-    "words": [
-     {
-      "w": "Dari",
-      "from": 14,
-      "to": 20
-     },
-     {
-      "w": "paviliun,",
-      "from": 20,
-      "to": 40
-     },
-     {
-      "w": "raja",
-      "from": 40,
-      "to": 48
-     },
-     {
-      "w": "mengirim",
-      "from": 48,
-      "to": 57
-     },
-     {
-      "w": "utusan",
-      "from": 57,
-      "to": 70
-     },
-     {
-      "w": "untuk",
-      "from": 70,
-      "to": 78
-     },
-     {
-      "w": "menghentikan",
-      "from": 78,
-      "to": 95
-     },
-     {
-      "w": "hukuman.",
-      "from": 95,
-      "to": 107
-     }
-    ]
-   },
-   {
-    "voice": "dodi",
-    "style": "tegang",
-    "text": "Tetapi Sun Tzu menolak, dengan alasan panglima di lapangan tidak selalu menerima perintah raja.",
-    "from": 121,
-    "to": 269,
-    "words": [
-     {
-      "w": "Tetapi",
-      "from": 121,
-      "to": 131
-     },
-     {
-      "w": "Sun",
-      "from": 131,
-      "to": 137
-     },
-     {
-      "w": "Tzu",
-      "from": 137,
-      "to": 143
-     },
-     {
-      "w": "menolak,",
-      "from": 143,
-      "to": 160
-     },
-     {
-      "w": "dengan",
-      "from": 160,
-      "to": 171
-     },
-     {
-      "w": "alasan",
-      "from": 171,
-      "to": 183
-     },
-     {
-      "w": "panglima",
-      "from": 183,
-      "to": 198
-     },
-     {
-      "w": "di",
-      "from": 198,
-      "to": 201
-     },
-     {
-      "w": "lapangan",
-      "from": 201,
-      "to": 212
-     },
-     {
-      "w": "tidak",
-      "from": 212,
-      "to": 220
-     },
-     {
-      "w": "selalu",
-      "from": 220,
-      "to": 233
-     },
-     {
-      "w": "menerima",
-      "from": 233,
-      "to": 244
-     },
-     {
-      "w": "perintah",
-      "from": 244,
-      "to": 255
-     },
-     {
-      "w": "raja.",
-      "from": 255,
-      "to": 262
-     }
-    ]
-   }
-  ],
-  "turn": [
-   {
-    "voice": "dodi",
-    "style": "tegang",
-    "text": "Kisah itu menyebut hukuman tetap dilaksanakan, lalu dua pengganti maju memimpin.",
-    "from": 14,
-    "to": 147,
-    "words": [
-     {
-      "w": "Kisah",
-      "from": 14,
-      "to": 22
-     },
-     {
-      "w": "itu",
-      "from": 22,
-      "to": 27
-     },
-     {
-      "w": "menyebut",
-      "from": 27,
-      "to": 36
-     },
-     {
-      "w": "hukuman",
-      "from": 36,
-      "to": 50
-     },
-     {
-      "w": "tetap",
-      "from": 50,
+      "from": 53,
       "to": 63
      },
      {
-      "w": "dilaksanakan,",
+      "w": "jelas,",
       "from": 63,
-      "to": 89
+      "to": 79
      },
      {
-      "w": "lalu",
-      "from": 89,
-      "to": 96
+      "w": "itu",
+      "from": 79,
+      "to": 81
      },
      {
-      "w": "dua",
-      "from": 96,
-      "to": 100
+      "w": "salah",
+      "from": 81,
+      "to": 93
      },
      {
-      "w": "pengganti",
-      "from": 100,
-      "to": 114
+      "w": "panglima.",
+      "from": 93,
+      "to": 108
      },
      {
-      "w": "maju",
-      "from": 114,
-      "to": 126
+      "w": "Tapi",
+      "from": 108,
+      "to": 118
      },
      {
-      "w": "memimpin.",
-      "from": 126,
-      "to": 141
-     }
-    ]
-   },
-   {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Kini mereka berbelok serempak tanpa tertawa.",
-    "from": 154,
-    "to": 226,
-    "words": [
+      "w": "jika",
+      "from": 118,
+      "to": 123
+     },
      {
-      "w": "Kini",
-      "from": 154,
+      "w": "perintah",
+      "from": 123,
+      "to": 130
+     },
+     {
+      "w": "sudah",
+      "from": 130,
+      "to": 139
+     },
+     {
+      "w": "jelas",
+      "from": 139,
+      "to": 153
+     },
+     {
+      "w": "namun",
+      "from": 153,
       "to": 159
      },
      {
-      "w": "mereka",
+      "w": "tetap",
       "from": 159,
       "to": 165
      },
      {
-      "w": "berbelok",
+      "w": "dilanggar,",
       "from": 165,
-      "to": 180
+      "to": 183
      },
      {
-      "w": "serempak",
-      "from": 180,
-      "to": 196
+      "w": "itu",
+      "from": 183,
+      "to": 188
      },
      {
-      "w": "tanpa",
-      "from": 196,
-      "to": 207
+      "w": "kesalahan",
+      "from": 188,
+      "to": 201
      },
      {
-      "w": "tertawa.",
-      "from": 207,
-      "to": 218
+      "w": "komandan",
+      "from": 201,
+      "to": 210
+     },
+     {
+      "w": "pasukan!",
+      "from": 210,
+      "to": 234
+     },
+     {
+      "w": "Hukum",
+      "from": 234,
+      "to": 239
+     },
+     {
+      "w": "militer",
+      "from": 239,
+      "to": 248
+     },
+     {
+      "w": "jelas:",
+      "from": 248,
+      "to": 263
+     },
+     {
+      "w": "kedua",
+      "from": 263,
+      "to": 269
+     },
+     {
+      "w": "pemimpin",
+      "from": 269,
+      "to": 281
+     },
+     {
+      "w": "dijatuhi",
+      "from": 281,
+      "to": 301
+     },
+     {
+      "w": "hukuman",
+      "from": 301,
+      "to": 311
+     },
+     {
+      "w": "mati!",
+      "from": 311,
+      "to": 320
+     },
+     {
+      "w": "Pengawal,",
+      "from": 320,
+      "to": 334
+     },
+     {
+      "w": "tangkap",
+      "from": 334,
+      "to": 346
+     },
+     {
+      "w": "mereka!",
+      "from": 346,
+      "to": 350
      }
     ]
    },
    {
-    "voice": "ara",
+    "voice": "crowd_scream",
+    "speaker": "PASUKAN",
     "style": "tegang",
-    "text": "Tertib, tetapi menurutku karena takut.",
-    "from": 234,
-    "to": 318,
+    "text": "Aaahhh! Hah?! Hukuman mati?! Jangan! Tolong!",
+    "from": 362,
+    "to": 493,
     "words": [
      {
-      "w": "Tertib,",
-      "from": 234,
-      "to": 248
+      "w": "Aaahhh!",
+      "from": 362,
+      "to": 394
      },
      {
-      "w": "tetapi",
-      "from": 248,
-      "to": 268
+      "w": "Hah?!",
+      "from": 394,
+      "to": 420
      },
      {
-      "w": "menurutku",
-      "from": 268,
-      "to": 294
+      "w": "Hukuman",
+      "from": 420,
+      "to": 433
      },
      {
-      "w": "karena",
-      "from": 294,
-      "to": 301
+      "w": "mati?!",
+      "from": 433,
+      "to": 454
      },
      {
-      "w": "takut.",
-      "from": 301,
-      "to": 316
+      "w": "Jangan!",
+      "from": 454,
+      "to": 475
+     },
+     {
+      "w": "Tolong!",
+      "from": 475,
+      "to": 488
+     }
+    ]
+   },
+   {
+    "voice": "selir_a",
+    "speaker": "SELIR A",
+    "style": "tegang",
+    "text": "Tunggu! Kami cuma bercanda! Tolong, Yang Mulia!",
+    "from": 498,
+    "to": 584,
+    "words": [
+     {
+      "w": "Tunggu!",
+      "from": 498,
+      "to": 517
+     },
+     {
+      "w": "Kami",
+      "from": 517,
+      "to": 525
+     },
+     {
+      "w": "cuma",
+      "from": 525,
+      "to": 531
+     },
+     {
+      "w": "bercanda!",
+      "from": 531,
+      "to": 542
+     },
+     {
+      "w": "Tolong,",
+      "from": 542,
+      "to": 563
+     },
+     {
+      "w": "Yang",
+      "from": 563,
+      "to": 569
+     },
+     {
+      "w": "Mulia!",
+      "from": 569,
+      "to": 581
+     }
+    ]
+   },
+   {
+    "voice": "selir_b",
+    "speaker": "SELIR B",
+    "style": "tegang",
+    "text": "Baginda! Selamatkan kami!",
+    "from": 589,
+    "to": 642,
+    "words": [
+     {
+      "w": "Baginda!",
+      "from": 589,
+      "to": 600
+     },
+     {
+      "w": "Selamatkan",
+      "from": 600,
+      "to": 624
+     },
+     {
+      "w": "kami!",
+      "from": 624,
+      "to": 634
      }
     ]
    }
   ],
-  "end": [
+  "s07_utusan": [
    {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Ini kisah dalam Shiji yang ditulis jauh sesudah masa Sun Tzu, bukan kepastian setiap kejadiannya.",
-    "from": 14,
-    "to": 186,
+    "voice": "raja",
+    "speaker": "RAJA HELÜ",
+    "style": "tegas",
+    "text": "Hei! Hentikan! Utusan, cepat turun! Katakan pada Sun Tzu aku sudah tahu dia bisa memimpin! Jangan sentuh dua selir kesayanganku! Hentikan sekarang!",
+    "from": 9,
+    "to": 276,
     "words": [
      {
-      "w": "Ini",
-      "from": 14,
-      "to": 20
+      "w": "Hei!",
+      "from": 9,
+      "to": 33
      },
      {
-      "w": "kisah",
-      "from": 20,
-      "to": 34
+      "w": "Hentikan!",
+      "from": 33,
+      "to": 61
      },
      {
-      "w": "dalam",
-      "from": 34,
-      "to": 41
+      "w": "Utusan,",
+      "from": 61,
+      "to": 79
      },
      {
-      "w": "Shiji",
-      "from": 41,
-      "to": 63
-     },
-     {
-      "w": "yang",
-      "from": 63,
-      "to": 72
-     },
-     {
-      "w": "ditulis",
-      "from": 72,
+      "w": "cepat",
+      "from": 79,
       "to": 86
      },
      {
-      "w": "jauh",
+      "w": "turun!",
       "from": 86,
-      "to": 95
+      "to": 110
      },
      {
-      "w": "sesudah",
-      "from": 95,
-      "to": 105
-     },
-     {
-      "w": "masa",
-      "from": 105,
-      "to": 111
-     },
-     {
-      "w": "Sun",
-      "from": 111,
+      "w": "Katakan",
+      "from": 110,
       "to": 119
      },
      {
-      "w": "Tzu,",
+      "w": "pada",
       "from": 119,
-      "to": 129
+      "to": 126
      },
      {
-      "w": "bukan",
-      "from": 129,
-      "to": 136
+      "w": "Sun",
+      "from": 126,
+      "to": 132
      },
      {
-      "w": "kepastian",
-      "from": 136,
-      "to": 154
+      "w": "Tzu",
+      "from": 132,
+      "to": 138
      },
      {
-      "w": "setiap",
-      "from": 154,
+      "w": "aku",
+      "from": 138,
+      "to": 143
+     },
+     {
+      "w": "sudah",
+      "from": 143,
+      "to": 148
+     },
+     {
+      "w": "tahu",
+      "from": 148,
+      "to": 155
+     },
+     {
+      "w": "dia",
+      "from": 155,
+      "to": 159
+     },
+     {
+      "w": "bisa",
+      "from": 159,
       "to": 164
      },
      {
-      "w": "kejadiannya.",
+      "w": "memimpin!",
       "from": 164,
-      "to": 182
-     }
-    ]
-   },
-   {
-    "voice": "ara",
-    "style": "tegang",
-    "text": "Disiplin atau kekejaman, apakah kepatuhan sebanding dengan harga nyawa?",
-    "from": 194,
-    "to": 331,
-    "words": [
+      "to": 190
+     },
      {
-      "w": "Disiplin",
-      "from": 194,
+      "w": "Jangan",
+      "from": 190,
+      "to": 199
+     },
+     {
+      "w": "sentuh",
+      "from": 199,
+      "to": 208
+     },
+     {
+      "w": "dua",
+      "from": 208,
       "to": 213
      },
      {
-      "w": "atau",
+      "w": "selir",
       "from": 213,
-      "to": 219
+      "to": 221
      },
      {
-      "w": "kekejaman,",
-      "from": 219,
-      "to": 241
+      "w": "kesayanganku!",
+      "from": 221,
+      "to": 249
      },
      {
-      "w": "apakah",
-      "from": 241,
+      "w": "Hentikan",
+      "from": 249,
       "to": 260
      },
      {
-      "w": "kepatuhan",
+      "w": "sekarang!",
       "from": 260,
-      "to": 277
-     },
-     {
-      "w": "sebanding",
-      "from": 277,
-      "to": 295
-     },
-     {
-      "w": "dengan",
-      "from": 295,
-      "to": 302
-     },
-     {
-      "w": "harga",
-      "from": 302,
-      "to": 316
-     },
-     {
-      "w": "nyawa?",
-      "from": 316,
-      "to": 326
+      "to": 269
      }
     ]
    },
    {
-    "voice": "dodi",
-    "style": "narasi",
-    "text": "Dialog ini didramatisasi, bukan kutipan percakapan aslinya.",
-    "from": 339,
-    "to": 459,
+    "voice": "utusan",
+    "speaker": "UTUSAN RAJA",
+    "style": "tegang",
+    "text": "Panglima! Hentikan! Titah langsung dari Raja Helü! Baginda memerintahkan hukuman dibatalkan sekarang juga!",
+    "from": 318,
+    "to": 469,
     "words": [
      {
-      "w": "Dialog",
-      "from": 339,
-      "to": 351
+      "w": "Panglima!",
+      "from": 318,
+      "to": 346
+     },
+     {
+      "w": "Hentikan!",
+      "from": 346,
+      "to": 362
+     },
+     {
+      "w": "Titah",
+      "from": 362,
+      "to": 370
+     },
+     {
+      "w": "langsung",
+      "from": 370,
+      "to": 378
+     },
+     {
+      "w": "dari",
+      "from": 378,
+      "to": 384
+     },
+     {
+      "w": "Raja",
+      "from": 384,
+      "to": 393
+     },
+     {
+      "w": "Helü!",
+      "from": 393,
+      "to": 403
+     },
+     {
+      "w": "Baginda",
+      "from": 403,
+      "to": 412
+     },
+     {
+      "w": "memerintahkan",
+      "from": 412,
+      "to": 428
+     },
+     {
+      "w": "hukuman",
+      "from": 428,
+      "to": 437
+     },
+     {
+      "w": "dibatalkan",
+      "from": 437,
+      "to": 451
+     },
+     {
+      "w": "sekarang",
+      "from": 451,
+      "to": 458
+     },
+     {
+      "w": "juga!",
+      "from": 458,
+      "to": 465
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Sampaikan pada Baginda, aku sudah diangkat menjadi panglima di lapangan ini. Saat panglima memimpin pasukan, ada perintah raja yang tidak boleh diterima! Laksanakan hukuman!",
+    "from": 476,
+    "to": 730,
+    "words": [
+     {
+      "w": "Sampaikan",
+      "from": 476,
+      "to": 490
+     },
+     {
+      "w": "pada",
+      "from": 490,
+      "to": 496
+     },
+     {
+      "w": "Baginda,",
+      "from": 496,
+      "to": 513
+     },
+     {
+      "w": "aku",
+      "from": 513,
+      "to": 519
+     },
+     {
+      "w": "sudah",
+      "from": 519,
+      "to": 525
+     },
+     {
+      "w": "diangkat",
+      "from": 525,
+      "to": 539
+     },
+     {
+      "w": "menjadi",
+      "from": 539,
+      "to": 550
+     },
+     {
+      "w": "panglima",
+      "from": 550,
+      "to": 565
+     },
+     {
+      "w": "di",
+      "from": 565,
+      "to": 568
+     },
+     {
+      "w": "lapangan",
+      "from": 568,
+      "to": 576
+     },
+     {
+      "w": "ini.",
+      "from": 576,
+      "to": 588
+     },
+     {
+      "w": "Saat",
+      "from": 588,
+      "to": 596
+     },
+     {
+      "w": "panglima",
+      "from": 596,
+      "to": 609
+     },
+     {
+      "w": "memimpin",
+      "from": 609,
+      "to": 619
+     },
+     {
+      "w": "pasukan,",
+      "from": 619,
+      "to": 636
+     },
+     {
+      "w": "ada",
+      "from": 636,
+      "to": 643
+     },
+     {
+      "w": "perintah",
+      "from": 643,
+      "to": 655
+     },
+     {
+      "w": "raja",
+      "from": 655,
+      "to": 662
+     },
+     {
+      "w": "yang",
+      "from": 662,
+      "to": 666
+     },
+     {
+      "w": "tidak",
+      "from": 666,
+      "to": 671
+     },
+     {
+      "w": "boleh",
+      "from": 671,
+      "to": 679
+     },
+     {
+      "w": "diterima!",
+      "from": 679,
+      "to": 699
+     },
+     {
+      "w": "Laksanakan",
+      "from": 699,
+      "to": 715
+     },
+     {
+      "w": "hukuman!",
+      "from": 715,
+      "to": 725
+     }
+    ]
+   }
+  ],
+  "s08_eksekusi": [
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegang",
+    "text": "Kalian berdua di baris depan, maju! Sekarang kalian komandan barisan yang baru. Angkat tombak kalian!",
+    "from": 69,
+    "to": 274,
+    "words": [
+     {
+      "w": "Kalian",
+      "from": 69,
+      "to": 79
+     },
+     {
+      "w": "berdua",
+      "from": 79,
+      "to": 89
+     },
+     {
+      "w": "di",
+      "from": 89,
+      "to": 94
+     },
+     {
+      "w": "baris",
+      "from": 94,
+      "to": 100
+     },
+     {
+      "w": "depan,",
+      "from": 100,
+      "to": 125
+     },
+     {
+      "w": "maju!",
+      "from": 125,
+      "to": 157
+     },
+     {
+      "w": "Sekarang",
+      "from": 157,
+      "to": 170
+     },
+     {
+      "w": "kalian",
+      "from": 170,
+      "to": 176
+     },
+     {
+      "w": "komandan",
+      "from": 176,
+      "to": 189
+     },
+     {
+      "w": "barisan",
+      "from": 189,
+      "to": 204
+     },
+     {
+      "w": "yang",
+      "from": 204,
+      "to": 208
+     },
+     {
+      "w": "baru.",
+      "from": 208,
+      "to": 233
+     },
+     {
+      "w": "Angkat",
+      "from": 233,
+      "to": 246
+     },
+     {
+      "w": "tombak",
+      "from": 246,
+      "to": 254
+     },
+     {
+      "w": "kalian!",
+      "from": 254,
+      "to": 264
+     }
+    ]
+   }
+  ],
+  "s09_serempak": [
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Genderang! Hadap kanan! Gerak!",
+    "from": 10,
+    "to": 87,
+    "words": [
+     {
+      "w": "Genderang!",
+      "from": 10,
+      "to": 30
+     },
+     {
+      "w": "Hadap",
+      "from": 30,
+      "to": 48
+     },
+     {
+      "w": "kanan!",
+      "from": 48,
+      "to": 59
+     },
+     {
+      "w": "Gerak!",
+      "from": 59,
+      "to": 81
+     }
+    ]
+   },
+   {
+    "voice": "crowd_siap1",
+    "speaker": "PASUKAN",
+    "style": "tegas",
+    "text": "Siap!",
+    "from": 106,
+    "to": 137,
+    "words": [
+     {
+      "w": "Siap!",
+      "from": 106,
+      "to": 114
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Hadap kiri! Gerak! Maju!",
+    "from": 144,
+    "to": 204,
+    "words": [
+     {
+      "w": "Hadap",
+      "from": 144,
+      "to": 155
+     },
+     {
+      "w": "kiri!",
+      "from": 155,
+      "to": 170
+     },
+     {
+      "w": "Gerak!",
+      "from": 170,
+      "to": 182
+     },
+     {
+      "w": "Maju!",
+      "from": 182,
+      "to": 200
+     }
+    ]
+   },
+   {
+    "voice": "crowd_siap2",
+    "speaker": "PASUKAN",
+    "style": "tegas",
+    "text": "Siap, Panglima!",
+    "from": 223,
+    "to": 253,
+    "words": [
+     {
+      "w": "Siap,",
+      "from": 223,
+      "to": 227
+     },
+     {
+      "w": "Panglima!",
+      "from": 227,
+      "to": 236
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Utusan, lapor pada Baginda! Pasukan sudah terlatih! Mereka siap terjun ke api maupun air sekalipun!",
+    "from": 261,
+    "to": 419,
+    "words": [
+     {
+      "w": "Utusan,",
+      "from": 261,
+      "to": 274
+     },
+     {
+      "w": "lapor",
+      "from": 274,
+      "to": 290
+     },
+     {
+      "w": "pada",
+      "from": 290,
+      "to": 295
+     },
+     {
+      "w": "Baginda!",
+      "from": 295,
+      "to": 306
+     },
+     {
+      "w": "Pasukan",
+      "from": 306,
+      "to": 322
+     },
+     {
+      "w": "sudah",
+      "from": 322,
+      "to": 327
+     },
+     {
+      "w": "terlatih!",
+      "from": 327,
+      "to": 346
+     },
+     {
+      "w": "Mereka",
+      "from": 346,
+      "to": 350
+     },
+     {
+      "w": "siap",
+      "from": 350,
+      "to": 356
+     },
+     {
+      "w": "terjun",
+      "from": 356,
+      "to": 364
+     },
+     {
+      "w": "ke",
+      "from": 364,
+      "to": 367
+     },
+     {
+      "w": "api",
+      "from": 367,
+      "to": 381
+     },
+     {
+      "w": "maupun",
+      "from": 381,
+      "to": 388
+     },
+     {
+      "w": "air",
+      "from": 388,
+      "to": 396
+     },
+     {
+      "w": "sekalipun!",
+      "from": 396,
+      "to": 413
+     }
+    ]
+   }
+  ],
+  "s10_penutup": [
+   {
+    "voice": "raja",
+    "speaker": "RAJA HELÜ",
+    "style": "tegang",
+    "text": "Suruh sang jenderal beristirahat. Aku tidak punya hati untuk turun melihat pasukan itu.",
+    "from": 14,
+    "to": 153,
+    "words": [
+     {
+      "w": "Suruh",
+      "from": 14,
+      "to": 23
+     },
+     {
+      "w": "sang",
+      "from": 23,
+      "to": 28
+     },
+     {
+      "w": "jenderal",
+      "from": 28,
+      "to": 43
+     },
+     {
+      "w": "beristirahat.",
+      "from": 43,
+      "to": 72
+     },
+     {
+      "w": "Aku",
+      "from": 72,
+      "to": 82
+     },
+     {
+      "w": "tidak",
+      "from": 82,
+      "to": 88
+     },
+     {
+      "w": "punya",
+      "from": 88,
+      "to": 96
+     },
+     {
+      "w": "hati",
+      "from": 96,
+      "to": 106
+     },
+     {
+      "w": "untuk",
+      "from": 106,
+      "to": 111
+     },
+     {
+      "w": "turun",
+      "from": 111,
+      "to": 122
+     },
+     {
+      "w": "melihat",
+      "from": 122,
+      "to": 132
+     },
+     {
+      "w": "pasukan",
+      "from": 132,
+      "to": 142
+     },
+     {
+      "w": "itu.",
+      "from": 142,
+      "to": 148
+     }
+    ]
+   },
+   {
+    "voice": "suntzu",
+    "speaker": "SUN TZU",
+    "style": "tegas",
+    "text": "Baginda rupanya hanya menyukai kata-kata indah tentang perang, tetapi tidak siap menghadapi kenyataannya.",
+    "from": 160,
+    "to": 327,
+    "words": [
+     {
+      "w": "Baginda",
+      "from": 160,
+      "to": 170
+     },
+     {
+      "w": "rupanya",
+      "from": 170,
+      "to": 181
+     },
+     {
+      "w": "hanya",
+      "from": 181,
+      "to": 186
+     },
+     {
+      "w": "menyukai",
+      "from": 186,
+      "to": 198
+     },
+     {
+      "w": "kata-kata",
+      "from": 198,
+      "to": 209
+     },
+     {
+      "w": "indah",
+      "from": 209,
+      "to": 218
+     },
+     {
+      "w": "tentang",
+      "from": 218,
+      "to": 223
+     },
+     {
+      "w": "perang,",
+      "from": 223,
+      "to": 258
+     },
+     {
+      "w": "tetapi",
+      "from": 258,
+      "to": 278
+     },
+     {
+      "w": "tidak",
+      "from": 278,
+      "to": 284
+     },
+     {
+      "w": "siap",
+      "from": 284,
+      "to": 294
+     },
+     {
+      "w": "menghadapi",
+      "from": 294,
+      "to": 305
+     },
+     {
+      "w": "kenyataannya.",
+      "from": 305,
+      "to": 323
+     }
+    ]
+   },
+   {
+    "voice": "narator",
+    "speaker": "",
+    "style": "narasi",
+    "text": "Meski berduka, Raja Helü akhirnya menyadari kehebatan Sun Tzu dan mengangkatnya menjadi panglima Kerajaan Wu. Kisah dari catatan sejarah Shiji. Menurutmu, ini disiplin militer, atau kekejaman?",
+    "from": 334,
+    "to": 601,
+    "words": [
+     {
+      "w": "Meski",
+      "from": 334,
+      "to": 342
+     },
+     {
+      "w": "berduka,",
+      "from": 342,
+      "to": 353
+     },
+     {
+      "w": "Raja",
+      "from": 353,
+      "to": 359
+     },
+     {
+      "w": "Helü",
+      "from": 359,
+      "to": 363
+     },
+     {
+      "w": "akhirnya",
+      "from": 363,
+      "to": 373
+     },
+     {
+      "w": "menyadari",
+      "from": 373,
+      "to": 385
+     },
+     {
+      "w": "kehebatan",
+      "from": 385,
+      "to": 399
+     },
+     {
+      "w": "Sun",
+      "from": 399,
+      "to": 406
+     },
+     {
+      "w": "Tzu",
+      "from": 406,
+      "to": 413
+     },
+     {
+      "w": "dan",
+      "from": 413,
+      "to": 419
+     },
+     {
+      "w": "mengangkatnya",
+      "from": 419,
+      "to": 433
+     },
+     {
+      "w": "menjadi",
+      "from": 433,
+      "to": 439
+     },
+     {
+      "w": "panglima",
+      "from": 439,
+      "to": 456
+     },
+     {
+      "w": "Kerajaan",
+      "from": 456,
+      "to": 468
+     },
+     {
+      "w": "Wu.",
+      "from": 468,
+      "to": 481
+     },
+     {
+      "w": "Kisah",
+      "from": 481,
+      "to": 488
+     },
+     {
+      "w": "dari",
+      "from": 488,
+      "to": 493
+     },
+     {
+      "w": "catatan",
+      "from": 493,
+      "to": 503
+     },
+     {
+      "w": "sejarah",
+      "from": 503,
+      "to": 513
+     },
+     {
+      "w": "Shiji.",
+      "from": 513,
+      "to": 524
+     },
+     {
+      "w": "Menurutmu,",
+      "from": 524,
+      "to": 542
      },
      {
       "w": "ini",
-      "from": 351,
-      "to": 357
+      "from": 542,
+      "to": 545
      },
      {
-      "w": "didramatisasi,",
-      "from": 357,
-      "to": 398
+      "w": "disiplin",
+      "from": 545,
+      "to": 557
      },
      {
-      "w": "bukan",
-      "from": 398,
-      "to": 405
+      "w": "militer,",
+      "from": 557,
+      "to": 569
      },
      {
-      "w": "kutipan",
-      "from": 405,
-      "to": 423
+      "w": "atau",
+      "from": 569,
+      "to": 579
      },
      {
-      "w": "percakapan",
-      "from": 423,
-      "to": 441
-     },
-     {
-      "w": "aslinya.",
-      "from": 441,
-      "to": 458
+      "w": "kekejaman?",
+      "from": 579,
+      "to": 597
      }
     ]
    }
   ]
  },
  "events": {
-  "drum": 12,
-  "right": 68,
-  "laugh": 134,
-  "left": 84,
-  "laugh2": 109,
-  "sentence": 202,
-  "death": 214,
-  "stop": 76,
-  "refuse": 141,
-  "turn": 163,
-  "replacement": 98,
-  "fear": 299
+  "drum1": 119,
+  "laugh1": 137,
+  "drum2": 236,
+  "laugh2": 254,
+  "death_verdict": 311,
+  "arrest_cmd": 334,
+  "crowd_scream": 362,
+  "utusan_run_start": 272,
+  "utusan_arrive": 318,
+  "suntzu_refuse": 476,
+  "gong_exec": 10,
+  "replace_cmd": 69,
+  "drum3_right": 89,
+  "siap1": 106,
+  "drum4_left": 206,
+  "siap2": 223
  },
  "captions": [
   {
-   "text": "Bisakah",
-   "startFrame": 24,
-   "endFrame": 37,
+   "text": "Lima",
+   "startFrame": 20,
+   "endFrame": 30,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
-   "text": "ahli",
-   "startFrame": 37,
-   "endFrame": 44,
+   "text": "ratus",
+   "startFrame": 30,
+   "endFrame": 41,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
-   "text": "strategi",
-   "startFrame": 44,
+   "text": "tahun",
+   "startFrame": 41,
+   "endFrame": 48,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "sebelum",
+   "startFrame": 48,
    "endFrame": 58,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
-   "text": "mengubah",
+   "text": "Masehi,",
    "startFrame": 58,
-   "endFrame": 68,
+   "endFrame": 75,
    "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "orang",
-   "startFrame": 68,
-   "endFrame": 73,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "yang",
-   "startFrame": 73,
-   "endFrame": 78,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "belum",
-   "startFrame": 78,
-   "endFrame": 83,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "pernah",
-   "startFrame": 83,
-   "endFrame": 90,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "berlatih",
-   "startFrame": 90,
-   "endFrame": 102,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menjadi",
-   "startFrame": 102,
-   "endFrame": 109,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "pasukan?",
-   "startFrame": 109,
-   "endFrame": 121,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Raja",
-   "startFrame": 137,
-   "endFrame": 147,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Helü",
-   "startFrame": 147,
-   "endFrame": 155,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "menguji",
-   "startFrame": 155,
-   "endFrame": 168,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Sun",
-   "startFrame": 168,
-   "endFrame": 174,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Tzu",
-   "startFrame": 174,
-   "endFrame": 181,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "dengan",
-   "startFrame": 181,
-   "endFrame": 189,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "perempuan",
-   "startFrame": 189,
-   "endFrame": 203,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "istana,",
-   "startFrame": 203,
-   "endFrame": 215,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "bukan",
-   "startFrame": 215,
-   "endFrame": 236,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "prajurit?",
-   "startFrame": 236,
-   "endFrame": 252,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Menurut",
-   "startFrame": 285,
-   "endFrame": 293,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kisah",
-   "startFrame": 293,
-   "endFrame": 299,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dalam",
-   "startFrame": 299,
-   "endFrame": 305,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Shiji,",
-   "startFrame": 305,
-   "endFrame": 310,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "seratus",
-   "startFrame": 310,
-   "endFrame": 343,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "delapan",
-   "startFrame": 343,
-   "endFrame": 357,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "puluh",
-   "startFrame": 357,
-   "endFrame": 367,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "perempuan",
-   "startFrame": 367,
-   "endFrame": 379,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dibagi",
-   "startFrame": 379,
-   "endFrame": 384,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menjadi",
-   "startFrame": 384,
-   "endFrame": 395,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dua",
-   "startFrame": 395,
-   "endFrame": 399,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kelompok.",
-   "startFrame": 399,
-   "endFrame": 409,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Dua",
-   "startFrame": 421,
-   "endFrame": 430,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "selir",
-   "startFrame": 430,
-   "endFrame": 440,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kesayangan",
-   "startFrame": 440,
-   "endFrame": 456,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "raja",
-   "startFrame": 456,
-   "endFrame": 464,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dipilih",
-   "startFrame": 464,
-   "endFrame": 474,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menjadi",
-   "startFrame": 474,
-   "endFrame": 481,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "pemimpin,",
-   "startFrame": 481,
-   "endFrame": 496,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "sementara",
-   "startFrame": 496,
-   "endFrame": 511,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "peserta",
-   "startFrame": 511,
-   "endFrame": 521,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "memegang",
-   "startFrame": 521,
-   "endFrame": 534,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tombak.",
-   "startFrame": 534,
-   "endFrame": 543,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Genderang",
-   "startFrame": 576,
-   "endFrame": 587,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "berbunyi,",
-   "startFrame": 587,
-   "endFrame": 603,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "perintah",
-   "startFrame": 603,
-   "endFrame": 625,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "belok",
-   "startFrame": 625,
-   "endFrame": 632,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kanan",
-   "startFrame": 632,
-   "endFrame": 639,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "diberikan,",
-   "startFrame": 639,
-   "endFrame": 663,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tetapi",
-   "startFrame": 663,
-   "endFrame": 672,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "para",
-   "startFrame": 672,
-   "endFrame": 677,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "peserta",
-   "startFrame": 677,
-   "endFrame": 689,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "malah",
-   "startFrame": 689,
-   "endFrame": 698,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tertawa.",
-   "startFrame": 698,
-   "endFrame": 710,
-   "highlight": true,
-   "voice": "dodi"
-  },
-  {
-   "text": "Sun",
-   "startFrame": 722,
-   "endFrame": 730,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Tzu",
-   "startFrame": 730,
-   "endFrame": 738,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "mengakui,",
-   "startFrame": 738,
-   "endFrame": 758,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "kalau",
-   "startFrame": 758,
-   "endFrame": 773,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "perintah",
-   "startFrame": 773,
-   "endFrame": 790,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "belum",
-   "startFrame": 790,
-   "endFrame": 796,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "jelas,",
-   "startFrame": 796,
-   "endFrame": 810,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "panglima",
-   "startFrame": 810,
-   "endFrame": 832,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "yang",
-   "startFrame": 832,
-   "endFrame": 837,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "bertanggung",
-   "startFrame": 837,
-   "endFrame": 852,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "jawab.",
-   "startFrame": 852,
-   "endFrame": 860,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Ia",
-   "startFrame": 891,
-   "endFrame": 895,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menjelaskan",
-   "startFrame": 895,
-   "endFrame": 909,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "lagi,",
-   "startFrame": 909,
-   "endFrame": 927,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "lalu",
-   "startFrame": 927,
-   "endFrame": 933,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "memberi",
-   "startFrame": 933,
-   "endFrame": 943,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "perintah",
-   "startFrame": 943,
-   "endFrame": 954,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "belok",
-   "startFrame": 954,
-   "endFrame": 963,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kiri,",
-   "startFrame": 963,
-   "endFrame": 979,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tetapi",
-   "startFrame": 979,
-   "endFrame": 988,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tawa",
-   "startFrame": 988,
-   "endFrame": 997,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kembali",
-   "startFrame": 997,
-   "endFrame": 1008,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "terdengar.",
-   "startFrame": 1008,
-   "endFrame": 1022,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Jadi,",
-   "startFrame": 1032,
-   "endFrame": 1043,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "kesempatan",
-   "startFrame": 1043,
-   "endFrame": 1072,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "kedua",
-   "startFrame": 1072,
-   "endFrame": 1082,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "pun",
-   "startFrame": 1082,
-   "endFrame": 1088,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "tidak",
-   "startFrame": 1088,
-   "endFrame": 1096,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "mengubah",
-   "startFrame": 1096,
-   "endFrame": 1112,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "barisan",
-   "startFrame": 1112,
-   "endFrame": 1122,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "itu?",
-   "startFrame": 1122,
-   "endFrame": 1131,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Menurut",
-   "startFrame": 1167,
-   "endFrame": 1177,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Sun",
-   "startFrame": 1177,
-   "endFrame": 1184,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Tzu,",
-   "startFrame": 1184,
-   "endFrame": 1199,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "perintah",
-   "startFrame": 1199,
-   "endFrame": 1210,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "yang",
-   "startFrame": 1210,
-   "endFrame": 1215,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "jelas",
-   "startFrame": 1215,
-   "endFrame": 1233,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tetapi",
-   "startFrame": 1233,
-   "endFrame": 1241,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tidak",
-   "startFrame": 1241,
-   "endFrame": 1247,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dipatuhi",
-   "startFrame": 1247,
-   "endFrame": 1262,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menjadi",
-   "startFrame": 1262,
-   "endFrame": 1266,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tanggung",
-   "startFrame": 1266,
-   "endFrame": 1278,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "jawab",
-   "startFrame": 1278,
-   "endFrame": 1286,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "pemimpin",
-   "startFrame": 1286,
-   "endFrame": 1297,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kelompok.",
-   "startFrame": 1297,
-   "endFrame": 1308,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Lalu",
-   "startFrame": 1325,
-   "endFrame": 1333,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "ia",
-   "startFrame": 1333,
-   "endFrame": 1338,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menjatuhkan",
-   "startFrame": 1338,
-   "endFrame": 1357,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "hukuman",
-   "startFrame": 1357,
-   "endFrame": 1369,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "mati",
-   "startFrame": 1369,
-   "endFrame": 1381,
-   "highlight": true,
-   "voice": "dodi"
-  },
-  {
-   "text": "kepada",
-   "startFrame": 1381,
-   "endFrame": 1386,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kedua",
-   "startFrame": 1386,
-   "endFrame": 1399,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "pemimpin",
-   "startFrame": 1399,
-   "endFrame": 1415,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "itu.",
-   "startFrame": 1415,
-   "endFrame": 1421,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Hukuman",
-   "startFrame": 1441,
-   "endFrame": 1456,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "mati",
-   "startFrame": 1456,
-   "endFrame": 1471,
-   "highlight": true,
-   "voice": "ara"
-  },
-  {
-   "text": "hanya",
-   "startFrame": 1471,
-   "endFrame": 1478,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "karena",
-   "startFrame": 1478,
-   "endFrame": 1486,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "latihan",
-   "startFrame": 1486,
-   "endFrame": 1503,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "tidak",
-   "startFrame": 1503,
-   "endFrame": 1509,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "tertib?",
-   "startFrame": 1509,
-   "endFrame": 1522,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "Dari",
-   "startFrame": 1556,
-   "endFrame": 1562,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "paviliun,",
-   "startFrame": 1562,
-   "endFrame": 1582,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "raja",
-   "startFrame": 1582,
-   "endFrame": 1590,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "mengirim",
-   "startFrame": 1590,
-   "endFrame": 1599,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "utusan",
-   "startFrame": 1599,
-   "endFrame": 1612,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "untuk",
-   "startFrame": 1612,
-   "endFrame": 1620,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menghentikan",
-   "startFrame": 1620,
-   "endFrame": 1637,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "hukuman.",
-   "startFrame": 1637,
-   "endFrame": 1649,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Tetapi",
-   "startFrame": 1663,
-   "endFrame": 1673,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Sun",
-   "startFrame": 1673,
-   "endFrame": 1679,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Tzu",
-   "startFrame": 1679,
-   "endFrame": 1685,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menolak,",
-   "startFrame": 1685,
-   "endFrame": 1702,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dengan",
-   "startFrame": 1702,
-   "endFrame": 1713,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "alasan",
-   "startFrame": 1713,
-   "endFrame": 1725,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "panglima",
-   "startFrame": 1725,
-   "endFrame": 1740,
-   "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
    "text": "di",
-   "startFrame": 1740,
-   "endFrame": 1743,
+   "startFrame": 75,
+   "endFrame": 78,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
-   "text": "lapangan",
-   "startFrame": 1743,
-   "endFrame": 1754,
+   "text": "Istana",
+   "startFrame": 78,
+   "endFrame": 86,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
-   "text": "tidak",
-   "startFrame": 1754,
-   "endFrame": 1762,
+   "text": "Kerajaan",
+   "startFrame": 86,
+   "endFrame": 98,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
-   "text": "selalu",
-   "startFrame": 1762,
-   "endFrame": 1775,
+   "text": "Wu.",
+   "startFrame": 98,
+   "endFrame": 101,
    "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menerima",
-   "startFrame": 1775,
-   "endFrame": 1786,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "perintah",
-   "startFrame": 1786,
-   "endFrame": 1797,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "raja.",
-   "startFrame": 1797,
-   "endFrame": 1804,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Kisah",
-   "startFrame": 1841,
-   "endFrame": 1849,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "itu",
-   "startFrame": 1849,
-   "endFrame": 1854,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "menyebut",
-   "startFrame": 1854,
-   "endFrame": 1863,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "hukuman",
-   "startFrame": 1863,
-   "endFrame": 1877,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tetap",
-   "startFrame": 1877,
-   "endFrame": 1890,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dilaksanakan,",
-   "startFrame": 1890,
-   "endFrame": 1916,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "lalu",
-   "startFrame": 1916,
-   "endFrame": 1923,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dua",
-   "startFrame": 1923,
-   "endFrame": 1927,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "pengganti",
-   "startFrame": 1927,
-   "endFrame": 1941,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "maju",
-   "startFrame": 1941,
-   "endFrame": 1953,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "memimpin.",
-   "startFrame": 1953,
-   "endFrame": 1968,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Kini",
-   "startFrame": 1981,
-   "endFrame": 1986,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "mereka",
-   "startFrame": 1986,
-   "endFrame": 1992,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "berbelok",
-   "startFrame": 1992,
-   "endFrame": 2007,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "serempak",
-   "startFrame": 2007,
-   "endFrame": 2023,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tanpa",
-   "startFrame": 2023,
-   "endFrame": 2034,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "tertawa.",
-   "startFrame": 2034,
-   "endFrame": 2045,
-   "highlight": true,
-   "voice": "dodi"
-  },
-  {
-   "text": "Tertib,",
-   "startFrame": 2061,
-   "endFrame": 2075,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "tetapi",
-   "startFrame": 2075,
-   "endFrame": 2095,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "menurutku",
-   "startFrame": 2095,
-   "endFrame": 2121,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "karena",
-   "startFrame": 2121,
-   "endFrame": 2128,
-   "highlight": false,
-   "voice": "ara"
-  },
-  {
-   "text": "takut.",
-   "startFrame": 2128,
-   "endFrame": 2143,
-   "highlight": true,
-   "voice": "ara"
-  },
-  {
-   "text": "Ini",
-   "startFrame": 2176,
-   "endFrame": 2182,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "kisah",
-   "startFrame": 2182,
-   "endFrame": 2196,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "dalam",
-   "startFrame": 2196,
-   "endFrame": 2203,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "Shiji",
-   "startFrame": 2203,
-   "endFrame": 2225,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "yang",
-   "startFrame": 2225,
-   "endFrame": 2234,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "ditulis",
-   "startFrame": 2234,
-   "endFrame": 2248,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "jauh",
-   "startFrame": 2248,
-   "endFrame": 2257,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "sesudah",
-   "startFrame": 2257,
-   "endFrame": 2267,
-   "highlight": false,
-   "voice": "dodi"
-  },
-  {
-   "text": "masa",
-   "startFrame": 2267,
-   "endFrame": 2273,
-   "highlight": false,
-   "voice": "dodi"
+   "voice": "narator",
+   "speaker": ""
   },
   {
    "text": "Sun",
-   "startFrame": 2273,
-   "endFrame": 2281,
+   "startFrame": 112,
+   "endFrame": 124,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "Tzu,",
-   "startFrame": 2281,
-   "endFrame": 2291,
+   "text": "Tzu!",
+   "startFrame": 124,
+   "endFrame": 140,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "bukan",
-   "startFrame": 2291,
-   "endFrame": 2298,
+   "text": "Aku",
+   "startFrame": 140,
+   "endFrame": 144,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "kepastian",
-   "startFrame": 2298,
-   "endFrame": 2316,
+   "text": "sudah",
+   "startFrame": 144,
+   "endFrame": 151,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "setiap",
-   "startFrame": 2316,
-   "endFrame": 2326,
+   "text": "membaca",
+   "startFrame": 151,
+   "endFrame": 165,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "kejadiannya.",
-   "startFrame": 2326,
-   "endFrame": 2344,
+   "text": "tiga",
+   "startFrame": 165,
+   "endFrame": 172,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "Disiplin",
-   "startFrame": 2356,
-   "endFrame": 2375,
+   "text": "belas",
+   "startFrame": 172,
+   "endFrame": 180,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "bab",
+   "startFrame": 180,
+   "endFrame": 186,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "kitab",
+   "startFrame": 186,
+   "endFrame": 197,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "perangmu.",
+   "startFrame": 197,
+   "endFrame": 216,
    "highlight": true,
-   "voice": "ara"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "atau",
-   "startFrame": 2375,
-   "endFrame": 2381,
+   "text": "Teorinya",
+   "startFrame": 216,
+   "endFrame": 228,
    "highlight": false,
-   "voice": "ara"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "kekejaman,",
-   "startFrame": 2381,
-   "endFrame": 2403,
+   "text": "indah,",
+   "startFrame": 228,
+   "endFrame": 242,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "tapi",
+   "startFrame": 242,
+   "endFrame": 249,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "bisakah",
+   "startFrame": 249,
+   "endFrame": 260,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "kau",
+   "startFrame": 260,
+   "endFrame": 265,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "membuktikannya",
+   "startFrame": 265,
+   "endFrame": 285,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "langsung",
+   "startFrame": 285,
+   "endFrame": 297,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "di",
+   "startFrame": 297,
+   "endFrame": 301,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "depan",
+   "startFrame": 301,
+   "endFrame": 310,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "mataku?",
+   "startFrame": 310,
+   "endFrame": 321,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Bisa,",
+   "startFrame": 331,
+   "endFrame": 341,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Yang",
+   "startFrame": 341,
+   "endFrame": 359,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Mulia.",
+   "startFrame": 359,
+   "endFrame": 372,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Siapa",
+   "startFrame": 372,
+   "endFrame": 391,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pun",
+   "startFrame": 391,
+   "endFrame": 403,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pasukannya,",
+   "startFrame": 403,
+   "endFrame": 420,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "jika",
+   "startFrame": 420,
+   "endFrame": 439,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "aturannya",
+   "startFrame": 439,
+   "endFrame": 451,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "jelas,",
+   "startFrame": 451,
+   "endFrame": 463,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 463,
+   "endFrame": 478,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "akan",
+   "startFrame": 478,
+   "endFrame": 488,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "bergerak",
+   "startFrame": 488,
+   "endFrame": 501,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "seperti",
+   "startFrame": 501,
+   "endFrame": 507,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "satu",
+   "startFrame": 507,
+   "endFrame": 518,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tubuh.",
+   "startFrame": 518,
+   "endFrame": 530,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Oh",
+   "startFrame": 538,
+   "endFrame": 543,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "ya?",
+   "startFrame": 543,
+   "endFrame": 549,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Kalau",
+   "startFrame": 549,
+   "endFrame": 566,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "begitu,",
+   "startFrame": 566,
+   "endFrame": 573,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "jangan",
+   "startFrame": 573,
+   "endFrame": 581,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "pakai",
+   "startFrame": 581,
+   "endFrame": 587,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "prajurit.",
+   "startFrame": 587,
+   "endFrame": 600,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Latihlah",
+   "startFrame": 600,
+   "endFrame": 621,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "seratus",
+   "startFrame": 621,
+   "endFrame": 635,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "delapan",
+   "startFrame": 635,
+   "endFrame": 659,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 659,
+   "endFrame": 669,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "perempuan",
+   "startFrame": 669,
+   "endFrame": 683,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "istanaku!",
+   "startFrame": 683,
+   "endFrame": 709,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Jika",
+   "startFrame": 709,
+   "endFrame": 715,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "berhasil,",
+   "startFrame": 715,
+   "endFrame": 728,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "kau",
+   "startFrame": 728,
+   "endFrame": 732,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "kuangkat",
+   "startFrame": 732,
+   "endFrame": 743,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "jadi",
+   "startFrame": 743,
+   "endFrame": 749,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "panglima!",
+   "startFrame": 749,
+   "endFrame": 765,
    "highlight": true,
-   "voice": "ara"
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
   },
   {
-   "text": "apakah",
-   "startFrame": 2403,
-   "endFrame": 2422,
+   "text": "Saya",
+   "startFrame": 774,
+   "endFrame": 781,
    "highlight": false,
-   "voice": "ara"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
   },
   {
-   "text": "kepatuhan",
-   "startFrame": 2422,
-   "endFrame": 2439,
+   "text": "terima",
+   "startFrame": 781,
+   "endFrame": 792,
    "highlight": false,
-   "voice": "ara"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
   },
   {
-   "text": "sebanding",
-   "startFrame": 2439,
-   "endFrame": 2457,
+   "text": "tantangan",
+   "startFrame": 792,
+   "endFrame": 811,
    "highlight": false,
-   "voice": "ara"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
   },
   {
-   "text": "dengan",
-   "startFrame": 2457,
-   "endFrame": 2464,
+   "text": "Baginda.",
+   "startFrame": 811,
+   "endFrame": 825,
    "highlight": false,
-   "voice": "ara"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
   },
   {
-   "text": "harga",
-   "startFrame": 2464,
-   "endFrame": 2478,
+   "text": "Semuanya,",
+   "startFrame": 862,
+   "endFrame": 875,
    "highlight": false,
-   "voice": "ara"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
   },
   {
-   "text": "nyawa?",
-   "startFrame": 2478,
-   "endFrame": 2488,
+   "text": "berbaris!",
+   "startFrame": 875,
+   "endFrame": 913,
    "highlight": false,
-   "voice": "ara"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
   },
   {
-   "text": "Dialog",
-   "startFrame": 2501,
-   "endFrame": 2513,
+   "text": "Kalian",
+   "startFrame": 913,
+   "endFrame": 923,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kubagi",
+   "startFrame": 923,
+   "endFrame": 934,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 934,
+   "endFrame": 940,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "dua",
+   "startFrame": 940,
+   "endFrame": 948,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pasukan!",
+   "startFrame": 948,
+   "endFrame": 968,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Dua",
+   "startFrame": 968,
+   "endFrame": 974,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "selir",
+   "startFrame": 974,
+   "endFrame": 982,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kesayangan",
+   "startFrame": 982,
+   "endFrame": 994,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Raja,",
+   "startFrame": 994,
+   "endFrame": 1010,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "majulah",
+   "startFrame": 1010,
+   "endFrame": 1022,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ke",
+   "startFrame": 1022,
+   "endFrame": 1025,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "depan!",
+   "startFrame": 1025,
+   "endFrame": 1043,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Kalian",
+   "startFrame": 1043,
+   "endFrame": 1054,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "komandan",
+   "startFrame": 1054,
+   "endFrame": 1063,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "barisan",
+   "startFrame": 1063,
+   "endFrame": 1076,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ini!",
+   "startFrame": 1076,
+   "endFrame": 1083,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hahaha,",
+   "startFrame": 1094,
+   "endFrame": 1118,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "lihat",
+   "startFrame": 1118,
+   "endFrame": 1128,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "tombak",
+   "startFrame": 1128,
+   "endFrame": 1136,
+   "highlight": true,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
   },
   {
    "text": "ini",
-   "startFrame": 2513,
-   "endFrame": 2519,
+   "startFrame": 1136,
+   "endFrame": 1142,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "selir_a",
+   "speaker": "SELIR A"
   },
   {
-   "text": "didramatisasi,",
-   "startFrame": 2519,
-   "endFrame": 2560,
+   "text": "berat",
+   "startFrame": 1142,
+   "endFrame": 1149,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "selir_a",
+   "speaker": "SELIR A"
   },
   {
-   "text": "bukan",
-   "startFrame": 2560,
-   "endFrame": 2567,
+   "text": "sekali!",
+   "startFrame": 1149,
+   "endFrame": 1167,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "selir_a",
+   "speaker": "SELIR A"
   },
   {
-   "text": "kutipan",
-   "startFrame": 2567,
-   "endFrame": 2585,
+   "text": "Kita",
+   "startFrame": 1167,
+   "endFrame": 1173,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "selir_a",
+   "speaker": "SELIR A"
   },
   {
-   "text": "percakapan",
-   "startFrame": 2585,
-   "endFrame": 2603,
+   "text": "disuruh",
+   "startFrame": 1173,
+   "endFrame": 1181,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "selir_a",
+   "speaker": "SELIR A"
   },
   {
-   "text": "aslinya.",
-   "startFrame": 2603,
+   "text": "main",
+   "startFrame": 1181,
+   "endFrame": 1185,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "perang-perangan?",
+   "startFrame": 1185,
+   "endFrame": 1197,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Tenang",
+   "startFrame": 1207,
+   "endFrame": 1218,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "saja,",
+   "startFrame": 1218,
+   "endFrame": 1240,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "Raja",
+   "startFrame": 1240,
+   "endFrame": 1250,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "sendiri",
+   "startFrame": 1250,
+   "endFrame": 1258,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "yang",
+   "startFrame": 1258,
+   "endFrame": 1264,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "menonton",
+   "startFrame": 1264,
+   "endFrame": 1277,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "dari",
+   "startFrame": 1277,
+   "endFrame": 1285,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "atas",
+   "startFrame": 1285,
+   "endFrame": 1293,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "paviliun!",
+   "startFrame": 1293,
+   "endFrame": 1308,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "Dengarkan",
+   "startFrame": 1333,
+   "endFrame": 1344,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "baik-baik!",
+   "startFrame": 1344,
+   "endFrame": 1364,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Kalian",
+   "startFrame": 1364,
+   "endFrame": 1370,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tahu",
+   "startFrame": 1370,
+   "endFrame": 1380,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "mana",
+   "startFrame": 1380,
+   "endFrame": 1393,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "dada,",
+   "startFrame": 1393,
+   "endFrame": 1408,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "punggung,",
+   "startFrame": 1408,
+   "endFrame": 1426,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tangan",
+   "startFrame": 1426,
+   "endFrame": 1433,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kanan,",
+   "startFrame": 1433,
+   "endFrame": 1451,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "dan",
+   "startFrame": 1451,
+   "endFrame": 1453,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tangan",
+   "startFrame": 1452,
+   "endFrame": 1462,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kiri?",
+   "startFrame": 1462,
+   "endFrame": 1468,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Tahu,",
+   "startFrame": 1476,
+   "endFrame": 1487,
+   "highlight": false,
+   "voice": "crowd_tahu",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Tuan!",
+   "startFrame": 1487,
+   "endFrame": 1495,
+   "highlight": false,
+   "voice": "crowd_tahu",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Jika",
+   "startFrame": 1511,
+   "endFrame": 1525,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "aku",
+   "startFrame": 1525,
+   "endFrame": 1549,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "berkata",
+   "startFrame": 1549,
+   "endFrame": 1560,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "hadap",
+   "startFrame": 1560,
+   "endFrame": 1569,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kanan,",
+   "startFrame": 1569,
+   "endFrame": 1588,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "belok",
+   "startFrame": 1588,
+   "endFrame": 1598,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ke",
+   "startFrame": 1598,
+   "endFrame": 1600,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tangan",
+   "startFrame": 1600,
+   "endFrame": 1605,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kanan!",
+   "startFrame": 1605,
+   "endFrame": 1622,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hadap",
+   "startFrame": 1622,
+   "endFrame": 1637,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kiri,",
+   "startFrame": 1637,
+   "endFrame": 1651,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "belok",
+   "startFrame": 1651,
+   "endFrame": 1659,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ke",
+   "startFrame": 1659,
+   "endFrame": 1661,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tangan",
+   "startFrame": 1661,
+   "endFrame": 1666,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kiri!",
+   "startFrame": 1666,
+   "endFrame": 1689,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Semua",
+   "startFrame": 1689,
+   "endFrame": 1699,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "bergerak",
+   "startFrame": 1699,
+   "endFrame": 1712,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tepat",
+   "startFrame": 1712,
+   "endFrame": 1722,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "saat",
+   "startFrame": 1722,
+   "endFrame": 1734,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "genderang",
+   "startFrame": 1734,
+   "endFrame": 1749,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "berbunyi!",
+   "startFrame": 1749,
+   "endFrame": 1773,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Mengerti?!",
+   "startFrame": 1773,
+   "endFrame": 1787,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Mengerti!",
+   "startFrame": 1798,
+   "endFrame": 1815,
+   "highlight": false,
+   "voice": "crowd_mengerti",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Siap!",
+   "startFrame": 1849,
+   "endFrame": 1879,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Dengar",
+   "startFrame": 1879,
+   "endFrame": 1887,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "genderang!",
+   "startFrame": 1887,
+   "endFrame": 1910,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hadap",
+   "startFrame": 1910,
+   "endFrame": 1920,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kanan!",
+   "startFrame": 1920,
+   "endFrame": 1939,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Gerak!",
+   "startFrame": 1939,
+   "endFrame": 1953,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hahahaha!",
+   "startFrame": 1976,
+   "endFrame": 2002,
+   "highlight": true,
+   "voice": "crowd_laugh1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Hihihi!",
+   "startFrame": 2002,
+   "endFrame": 2022,
+   "highlight": true,
+   "voice": "crowd_laugh1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Lucu",
+   "startFrame": 2022,
+   "endFrame": 2032,
+   "highlight": false,
+   "voice": "crowd_laugh1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "sekali",
+   "startFrame": 2032,
+   "endFrame": 2042,
+   "highlight": false,
+   "voice": "crowd_laugh1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "sih",
+   "startFrame": 2042,
+   "endFrame": 2046,
+   "highlight": false,
+   "voice": "crowd_laugh1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "gayanya!",
+   "startFrame": 2046,
+   "endFrame": 2067,
+   "highlight": false,
+   "voice": "crowd_laugh1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Hahaha!",
+   "startFrame": 2067,
+   "endFrame": 2078,
+   "highlight": false,
+   "voice": "crowd_laugh1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Aduh,",
+   "startFrame": 2089,
+   "endFrame": 2103,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "maaf",
+   "startFrame": 2103,
+   "endFrame": 2118,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Tuan!",
+   "startFrame": 2118,
+   "endFrame": 2128,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Habisnya",
+   "startFrame": 2128,
+   "endFrame": 2154,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "seperti",
+   "startFrame": 2154,
+   "endFrame": 2163,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "sandiwara!",
+   "startFrame": 2163,
+   "endFrame": 2176,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Hahaha!",
+   "startFrame": 2176,
+   "endFrame": 2190,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Hentikan",
+   "startFrame": 2230,
+   "endFrame": 2244,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "genderang.",
+   "startFrame": 2244,
+   "endFrame": 2274,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Jika",
+   "startFrame": 2274,
+   "endFrame": 2285,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 2285,
+   "endFrame": 2296,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 2296,
+   "endFrame": 2300,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "jelas",
+   "startFrame": 2300,
+   "endFrame": 2312,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "dan",
+   "startFrame": 2312,
+   "endFrame": 2327,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "prajurit",
+   "startFrame": 2327,
+   "endFrame": 2340,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 2340,
+   "endFrame": 2345,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "paham,",
+   "startFrame": 2345,
+   "endFrame": 2369,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "maka",
+   "startFrame": 2369,
+   "endFrame": 2380,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "itu",
+   "startFrame": 2380,
+   "endFrame": 2385,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kesalahan",
+   "startFrame": 2385,
+   "endFrame": 2399,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "panglima.",
+   "startFrame": 2399,
+   "endFrame": 2423,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Akan",
+   "startFrame": 2423,
+   "endFrame": 2430,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kujelaskan",
+   "startFrame": 2430,
+   "endFrame": 2447,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "sekali",
+   "startFrame": 2447,
+   "endFrame": 2454,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "lagi.",
+   "startFrame": 2454,
+   "endFrame": 2461,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Sekali",
+   "startFrame": 2490,
+   "endFrame": 2502,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "lagi!",
+   "startFrame": 2502,
+   "endFrame": 2518,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hadap",
+   "startFrame": 2518,
+   "endFrame": 2525,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kiri,",
+   "startFrame": 2525,
+   "endFrame": 2538,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "belok",
+   "startFrame": 2538,
+   "endFrame": 2545,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ke",
+   "startFrame": 2545,
+   "endFrame": 2549,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kiri!",
+   "startFrame": 2549,
+   "endFrame": 2564,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hadap",
+   "startFrame": 2564,
+   "endFrame": 2571,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kanan,",
+   "startFrame": 2571,
+   "endFrame": 2586,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "belok",
+   "startFrame": 2586,
+   "endFrame": 2595,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ke",
+   "startFrame": 2595,
+   "endFrame": 2597,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kanan!",
+   "startFrame": 2597,
+   "endFrame": 2613,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Tidak",
+   "startFrame": 2613,
    "endFrame": 2620,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ada",
+   "startFrame": 2620,
+   "endFrame": 2626,
    "highlight": false,
-   "voice": "dodi"
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "yang",
+   "startFrame": 2626,
+   "endFrame": 2630,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "boleh",
+   "startFrame": 2630,
+   "endFrame": 2636,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tertawa!",
+   "startFrame": 2636,
+   "endFrame": 2660,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Genderang!",
+   "startFrame": 2660,
+   "endFrame": 2673,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hadap",
+   "startFrame": 2673,
+   "endFrame": 2687,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kiri!",
+   "startFrame": 2687,
+   "endFrame": 2703,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Gerak!",
+   "startFrame": 2703,
+   "endFrame": 2711,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hihihi!",
+   "startFrame": 2756,
+   "endFrame": 2764,
+   "highlight": true,
+   "voice": "crowd_laugh2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Hahaha!",
+   "startFrame": 2764,
+   "endFrame": 2782,
+   "highlight": false,
+   "voice": "crowd_laugh2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Aduh",
+   "startFrame": 2782,
+   "endFrame": 2805,
+   "highlight": false,
+   "voice": "crowd_laugh2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 2805,
+   "endFrame": 2813,
+   "highlight": true,
+   "voice": "crowd_laugh2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "tahan",
+   "startFrame": 2813,
+   "endFrame": 2823,
+   "highlight": false,
+   "voice": "crowd_laugh2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "lagi!",
+   "startFrame": 2823,
+   "endFrame": 2844,
+   "highlight": false,
+   "voice": "crowd_laugh2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Hahaha!",
+   "startFrame": 2844,
+   "endFrame": 2861,
+   "highlight": false,
+   "voice": "crowd_laugh2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Maaf",
+   "startFrame": 2872,
+   "endFrame": 2877,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "Tuan,",
+   "startFrame": 2877,
+   "endFrame": 2885,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "benar-benar",
+   "startFrame": 2885,
+   "endFrame": 2902,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "lucu!",
+   "startFrame": 2902,
+   "endFrame": 2915,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "Hahaha!",
+   "startFrame": 2915,
+   "endFrame": 2927,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "Cukup!",
+   "startFrame": 2955,
+   "endFrame": 2987,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Jika",
+   "startFrame": 2987,
+   "endFrame": 2992,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 2992,
+   "endFrame": 2999,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 2999,
+   "endFrame": 3009,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "jelas,",
+   "startFrame": 3009,
+   "endFrame": 3025,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "itu",
+   "startFrame": 3025,
+   "endFrame": 3027,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "salah",
+   "startFrame": 3027,
+   "endFrame": 3039,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "panglima.",
+   "startFrame": 3039,
+   "endFrame": 3054,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Tapi",
+   "startFrame": 3054,
+   "endFrame": 3064,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "jika",
+   "startFrame": 3064,
+   "endFrame": 3069,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 3069,
+   "endFrame": 3076,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 3076,
+   "endFrame": 3085,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "jelas",
+   "startFrame": 3085,
+   "endFrame": 3099,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "namun",
+   "startFrame": 3099,
+   "endFrame": 3105,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tetap",
+   "startFrame": 3105,
+   "endFrame": 3111,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "dilanggar,",
+   "startFrame": 3111,
+   "endFrame": 3129,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "itu",
+   "startFrame": 3129,
+   "endFrame": 3134,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kesalahan",
+   "startFrame": 3134,
+   "endFrame": 3147,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "komandan",
+   "startFrame": 3147,
+   "endFrame": 3156,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pasukan!",
+   "startFrame": 3156,
+   "endFrame": 3180,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hukum",
+   "startFrame": 3180,
+   "endFrame": 3185,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "militer",
+   "startFrame": 3185,
+   "endFrame": 3194,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "jelas:",
+   "startFrame": 3194,
+   "endFrame": 3209,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kedua",
+   "startFrame": 3209,
+   "endFrame": 3215,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pemimpin",
+   "startFrame": 3215,
+   "endFrame": 3227,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "dijatuhi",
+   "startFrame": 3227,
+   "endFrame": 3247,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "hukuman",
+   "startFrame": 3247,
+   "endFrame": 3257,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "mati!",
+   "startFrame": 3257,
+   "endFrame": 3266,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Pengawal,",
+   "startFrame": 3266,
+   "endFrame": 3280,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tangkap",
+   "startFrame": 3280,
+   "endFrame": 3292,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "mereka!",
+   "startFrame": 3292,
+   "endFrame": 3296,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Aaahhh!",
+   "startFrame": 3308,
+   "endFrame": 3340,
+   "highlight": true,
+   "voice": "crowd_scream",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Hah?!",
+   "startFrame": 3340,
+   "endFrame": 3366,
+   "highlight": false,
+   "voice": "crowd_scream",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Hukuman",
+   "startFrame": 3366,
+   "endFrame": 3379,
+   "highlight": true,
+   "voice": "crowd_scream",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "mati?!",
+   "startFrame": 3379,
+   "endFrame": 3400,
+   "highlight": true,
+   "voice": "crowd_scream",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Jangan!",
+   "startFrame": 3400,
+   "endFrame": 3421,
+   "highlight": false,
+   "voice": "crowd_scream",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Tolong!",
+   "startFrame": 3421,
+   "endFrame": 3434,
+   "highlight": false,
+   "voice": "crowd_scream",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Tunggu!",
+   "startFrame": 3444,
+   "endFrame": 3463,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Kami",
+   "startFrame": 3463,
+   "endFrame": 3471,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "cuma",
+   "startFrame": 3471,
+   "endFrame": 3477,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "bercanda!",
+   "startFrame": 3477,
+   "endFrame": 3488,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Tolong,",
+   "startFrame": 3488,
+   "endFrame": 3509,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Yang",
+   "startFrame": 3509,
+   "endFrame": 3515,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Mulia!",
+   "startFrame": 3515,
+   "endFrame": 3527,
+   "highlight": false,
+   "voice": "selir_a",
+   "speaker": "SELIR A"
+  },
+  {
+   "text": "Baginda!",
+   "startFrame": 3535,
+   "endFrame": 3546,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "Selamatkan",
+   "startFrame": 3546,
+   "endFrame": 3570,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "kami!",
+   "startFrame": 3570,
+   "endFrame": 3580,
+   "highlight": false,
+   "voice": "selir_b",
+   "speaker": "SELIR B"
+  },
+  {
+   "text": "Hei!",
+   "startFrame": 3611,
+   "endFrame": 3635,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Hentikan!",
+   "startFrame": 3635,
+   "endFrame": 3663,
+   "highlight": true,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Utusan,",
+   "startFrame": 3663,
+   "endFrame": 3681,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "cepat",
+   "startFrame": 3681,
+   "endFrame": 3688,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "turun!",
+   "startFrame": 3688,
+   "endFrame": 3712,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Katakan",
+   "startFrame": 3712,
+   "endFrame": 3721,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "pada",
+   "startFrame": 3721,
+   "endFrame": 3728,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Sun",
+   "startFrame": 3728,
+   "endFrame": 3734,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Tzu",
+   "startFrame": 3734,
+   "endFrame": 3740,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "aku",
+   "startFrame": 3740,
+   "endFrame": 3745,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 3745,
+   "endFrame": 3750,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "tahu",
+   "startFrame": 3750,
+   "endFrame": 3757,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "dia",
+   "startFrame": 3757,
+   "endFrame": 3761,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "bisa",
+   "startFrame": 3761,
+   "endFrame": 3766,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "memimpin!",
+   "startFrame": 3766,
+   "endFrame": 3792,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Jangan",
+   "startFrame": 3792,
+   "endFrame": 3801,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "sentuh",
+   "startFrame": 3801,
+   "endFrame": 3810,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "dua",
+   "startFrame": 3810,
+   "endFrame": 3815,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "selir",
+   "startFrame": 3815,
+   "endFrame": 3823,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "kesayanganku!",
+   "startFrame": 3823,
+   "endFrame": 3851,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Hentikan",
+   "startFrame": 3851,
+   "endFrame": 3862,
+   "highlight": true,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "sekarang!",
+   "startFrame": 3862,
+   "endFrame": 3871,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Panglima!",
+   "startFrame": 3920,
+   "endFrame": 3948,
+   "highlight": true,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "Hentikan!",
+   "startFrame": 3948,
+   "endFrame": 3964,
+   "highlight": true,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "Titah",
+   "startFrame": 3964,
+   "endFrame": 3972,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "langsung",
+   "startFrame": 3972,
+   "endFrame": 3980,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "dari",
+   "startFrame": 3980,
+   "endFrame": 3986,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "Raja",
+   "startFrame": 3986,
+   "endFrame": 3995,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "Helü!",
+   "startFrame": 3995,
+   "endFrame": 4005,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "Baginda",
+   "startFrame": 4005,
+   "endFrame": 4014,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "memerintahkan",
+   "startFrame": 4014,
+   "endFrame": 4030,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "hukuman",
+   "startFrame": 4030,
+   "endFrame": 4039,
+   "highlight": true,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "dibatalkan",
+   "startFrame": 4039,
+   "endFrame": 4053,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "sekarang",
+   "startFrame": 4053,
+   "endFrame": 4060,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "juga!",
+   "startFrame": 4060,
+   "endFrame": 4067,
+   "highlight": false,
+   "voice": "utusan",
+   "speaker": "UTUSAN RAJA"
+  },
+  {
+   "text": "Sampaikan",
+   "startFrame": 4078,
+   "endFrame": 4092,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pada",
+   "startFrame": 4092,
+   "endFrame": 4098,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Baginda,",
+   "startFrame": 4098,
+   "endFrame": 4115,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "aku",
+   "startFrame": 4115,
+   "endFrame": 4121,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 4121,
+   "endFrame": 4127,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "diangkat",
+   "startFrame": 4127,
+   "endFrame": 4141,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 4141,
+   "endFrame": 4152,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "panglima",
+   "startFrame": 4152,
+   "endFrame": 4167,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "di",
+   "startFrame": 4167,
+   "endFrame": 4170,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "lapangan",
+   "startFrame": 4170,
+   "endFrame": 4178,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ini.",
+   "startFrame": 4178,
+   "endFrame": 4190,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Saat",
+   "startFrame": 4190,
+   "endFrame": 4198,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "panglima",
+   "startFrame": 4198,
+   "endFrame": 4211,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "memimpin",
+   "startFrame": 4211,
+   "endFrame": 4221,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pasukan,",
+   "startFrame": 4221,
+   "endFrame": 4238,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ada",
+   "startFrame": 4238,
+   "endFrame": 4245,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 4245,
+   "endFrame": 4257,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "raja",
+   "startFrame": 4257,
+   "endFrame": 4264,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "yang",
+   "startFrame": 4264,
+   "endFrame": 4268,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 4268,
+   "endFrame": 4273,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "boleh",
+   "startFrame": 4273,
+   "endFrame": 4281,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "diterima!",
+   "startFrame": 4281,
+   "endFrame": 4301,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Laksanakan",
+   "startFrame": 4301,
+   "endFrame": 4317,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "hukuman!",
+   "startFrame": 4317,
+   "endFrame": 4327,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Kalian",
+   "startFrame": 4415,
+   "endFrame": 4425,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "berdua",
+   "startFrame": 4425,
+   "endFrame": 4435,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "di",
+   "startFrame": 4435,
+   "endFrame": 4440,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "baris",
+   "startFrame": 4440,
+   "endFrame": 4446,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "depan,",
+   "startFrame": 4446,
+   "endFrame": 4471,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "maju!",
+   "startFrame": 4471,
+   "endFrame": 4503,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Sekarang",
+   "startFrame": 4503,
+   "endFrame": 4516,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kalian",
+   "startFrame": 4516,
+   "endFrame": 4522,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "komandan",
+   "startFrame": 4522,
+   "endFrame": 4535,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "barisan",
+   "startFrame": 4535,
+   "endFrame": 4550,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "yang",
+   "startFrame": 4550,
+   "endFrame": 4554,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "baru.",
+   "startFrame": 4554,
+   "endFrame": 4579,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Angkat",
+   "startFrame": 4579,
+   "endFrame": 4592,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tombak",
+   "startFrame": 4592,
+   "endFrame": 4600,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kalian!",
+   "startFrame": 4600,
+   "endFrame": 4610,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Genderang!",
+   "startFrame": 4648,
+   "endFrame": 4668,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Hadap",
+   "startFrame": 4668,
+   "endFrame": 4686,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kanan!",
+   "startFrame": 4686,
+   "endFrame": 4697,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Gerak!",
+   "startFrame": 4697,
+   "endFrame": 4719,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Siap!",
+   "startFrame": 4744,
+   "endFrame": 4752,
+   "highlight": true,
+   "voice": "crowd_siap1",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Hadap",
+   "startFrame": 4782,
+   "endFrame": 4793,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kiri!",
+   "startFrame": 4793,
+   "endFrame": 4808,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Gerak!",
+   "startFrame": 4808,
+   "endFrame": 4820,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Maju!",
+   "startFrame": 4820,
+   "endFrame": 4838,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Siap,",
+   "startFrame": 4861,
+   "endFrame": 4865,
+   "highlight": true,
+   "voice": "crowd_siap2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Panglima!",
+   "startFrame": 4865,
+   "endFrame": 4874,
+   "highlight": true,
+   "voice": "crowd_siap2",
+   "speaker": "PASUKAN"
+  },
+  {
+   "text": "Utusan,",
+   "startFrame": 4899,
+   "endFrame": 4912,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "lapor",
+   "startFrame": 4912,
+   "endFrame": 4928,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "pada",
+   "startFrame": 4928,
+   "endFrame": 4933,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Baginda!",
+   "startFrame": 4933,
+   "endFrame": 4944,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Pasukan",
+   "startFrame": 4944,
+   "endFrame": 4960,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "sudah",
+   "startFrame": 4960,
+   "endFrame": 4965,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "terlatih!",
+   "startFrame": 4965,
+   "endFrame": 4984,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Mereka",
+   "startFrame": 4984,
+   "endFrame": 4988,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "siap",
+   "startFrame": 4988,
+   "endFrame": 4994,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "terjun",
+   "startFrame": 4994,
+   "endFrame": 5002,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "ke",
+   "startFrame": 5002,
+   "endFrame": 5005,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "api",
+   "startFrame": 5005,
+   "endFrame": 5019,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "maupun",
+   "startFrame": 5019,
+   "endFrame": 5026,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "air",
+   "startFrame": 5026,
+   "endFrame": 5034,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "sekalipun!",
+   "startFrame": 5034,
+   "endFrame": 5051,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Suruh",
+   "startFrame": 5084,
+   "endFrame": 5093,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "sang",
+   "startFrame": 5093,
+   "endFrame": 5098,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "jenderal",
+   "startFrame": 5098,
+   "endFrame": 5113,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "beristirahat.",
+   "startFrame": 5113,
+   "endFrame": 5142,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Aku",
+   "startFrame": 5142,
+   "endFrame": 5152,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 5152,
+   "endFrame": 5158,
+   "highlight": true,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "punya",
+   "startFrame": 5158,
+   "endFrame": 5166,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "hati",
+   "startFrame": 5166,
+   "endFrame": 5176,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "untuk",
+   "startFrame": 5176,
+   "endFrame": 5181,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "turun",
+   "startFrame": 5181,
+   "endFrame": 5192,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "melihat",
+   "startFrame": 5192,
+   "endFrame": 5202,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "pasukan",
+   "startFrame": 5202,
+   "endFrame": 5212,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "itu.",
+   "startFrame": 5212,
+   "endFrame": 5218,
+   "highlight": false,
+   "voice": "raja",
+   "speaker": "RAJA HELÜ"
+  },
+  {
+   "text": "Baginda",
+   "startFrame": 5230,
+   "endFrame": 5240,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "rupanya",
+   "startFrame": 5240,
+   "endFrame": 5251,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "hanya",
+   "startFrame": 5251,
+   "endFrame": 5256,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "menyukai",
+   "startFrame": 5256,
+   "endFrame": 5268,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kata-kata",
+   "startFrame": 5268,
+   "endFrame": 5279,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "indah",
+   "startFrame": 5279,
+   "endFrame": 5288,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tentang",
+   "startFrame": 5288,
+   "endFrame": 5293,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "perang,",
+   "startFrame": 5293,
+   "endFrame": 5328,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tetapi",
+   "startFrame": 5328,
+   "endFrame": 5348,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 5348,
+   "endFrame": 5354,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "siap",
+   "startFrame": 5354,
+   "endFrame": 5364,
+   "highlight": true,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "menghadapi",
+   "startFrame": 5364,
+   "endFrame": 5375,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "kenyataannya.",
+   "startFrame": 5375,
+   "endFrame": 5393,
+   "highlight": false,
+   "voice": "suntzu",
+   "speaker": "SUN TZU"
+  },
+  {
+   "text": "Meski",
+   "startFrame": 5404,
+   "endFrame": 5412,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "berduka,",
+   "startFrame": 5412,
+   "endFrame": 5423,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Raja",
+   "startFrame": 5423,
+   "endFrame": 5429,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Helü",
+   "startFrame": 5429,
+   "endFrame": 5433,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "akhirnya",
+   "startFrame": 5433,
+   "endFrame": 5443,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "menyadari",
+   "startFrame": 5443,
+   "endFrame": 5455,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "kehebatan",
+   "startFrame": 5455,
+   "endFrame": 5469,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Sun",
+   "startFrame": 5469,
+   "endFrame": 5476,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Tzu",
+   "startFrame": 5476,
+   "endFrame": 5483,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "dan",
+   "startFrame": 5483,
+   "endFrame": 5489,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "mengangkatnya",
+   "startFrame": 5489,
+   "endFrame": 5503,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 5503,
+   "endFrame": 5509,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "panglima",
+   "startFrame": 5509,
+   "endFrame": 5526,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Kerajaan",
+   "startFrame": 5526,
+   "endFrame": 5538,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Wu.",
+   "startFrame": 5538,
+   "endFrame": 5551,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Kisah",
+   "startFrame": 5551,
+   "endFrame": 5558,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "dari",
+   "startFrame": 5558,
+   "endFrame": 5563,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "catatan",
+   "startFrame": 5563,
+   "endFrame": 5573,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "sejarah",
+   "startFrame": 5573,
+   "endFrame": 5583,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Shiji.",
+   "startFrame": 5583,
+   "endFrame": 5594,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "Menurutmu,",
+   "startFrame": 5594,
+   "endFrame": 5612,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "ini",
+   "startFrame": 5612,
+   "endFrame": 5615,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "disiplin",
+   "startFrame": 5615,
+   "endFrame": 5627,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "militer,",
+   "startFrame": 5627,
+   "endFrame": 5639,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "atau",
+   "startFrame": 5639,
+   "endFrame": 5649,
+   "highlight": false,
+   "voice": "narator",
+   "speaker": ""
+  },
+  {
+   "text": "kekejaman?",
+   "startFrame": 5649,
+   "endFrame": 5667,
+   "highlight": true,
+   "voice": "narator",
+   "speaker": ""
   }
  ]
 }
