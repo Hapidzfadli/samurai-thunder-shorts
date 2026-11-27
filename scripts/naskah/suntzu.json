@@ -1,0 +1,137 @@
+[
+  {
+    "scene": "hook",
+    "lines": [
+      [
+        "narasi",
+        "Bisakah ahli strategi mengubah orang yang belum pernah berlatih menjadi pasukan?",
+        "dodi"
+      ],
+      [
+        "santai",
+        "Raja Helü menguji Sun Tzu dengan perempuan istana, bukan prajurit?",
+        "ara"
+      ]
+    ]
+  },
+  {
+    "scene": "leaders",
+    "lines": [
+      [
+        "narasi",
+        "Menurut kisah dalam Shiji, seratus delapan puluh perempuan dibagi menjadi dua kelompok.",
+        "dodi"
+      ],
+      [
+        "narasi",
+        "Dua selir kesayangan raja dipilih menjadi pemimpin, sementara peserta memegang tombak.",
+        "dodi"
+      ]
+    ]
+  },
+  {
+    "scene": "first",
+    "lines": [
+      [
+        "narasi",
+        "Genderang berbunyi, perintah belok kanan diberikan, tetapi para peserta malah tertawa.",
+        "dodi"
+      ],
+      [
+        "santai",
+        "Sun Tzu mengakui, kalau perintah belum jelas, panglima yang bertanggung jawab.",
+        "ara"
+      ]
+    ]
+  },
+  {
+    "scene": "second",
+    "lines": [
+      [
+        "narasi",
+        "Ia menjelaskan lagi, lalu memberi perintah belok kiri, tetapi tawa kembali terdengar.",
+        "dodi"
+      ],
+      [
+        "tegang",
+        "Jadi, kesempatan kedua pun tidak mengubah barisan itu?",
+        "ara"
+      ]
+    ]
+  },
+  {
+    "scene": "sentence",
+    "lines": [
+      [
+        "tegang",
+        "Menurut Sun Tzu, perintah yang jelas tetapi tidak dipatuhi menjadi tanggung jawab pemimpin kelompok.",
+        "dodi"
+      ],
+      [
+        "tegang",
+        "Lalu ia menjatuhkan hukuman mati kepada kedua pemimpin itu.",
+        "dodi"
+      ],
+      [
+        "tegang",
+        "Hukuman mati hanya karena latihan tidak tertib?",
+        "ara"
+      ]
+    ]
+  },
+  {
+    "scene": "stop",
+    "lines": [
+      [
+        "narasi",
+        "Dari paviliun, raja mengirim utusan untuk menghentikan hukuman.",
+        "dodi"
+      ],
+      [
+        "tegang",
+        "Tetapi Sun Tzu menolak, dengan alasan panglima di lapangan tidak selalu menerima perintah raja.",
+        "dodi"
+      ]
+    ]
+  },
+  {
+    "scene": "turn",
+    "lines": [
+      [
+        "tegang",
+        "Kisah itu menyebut hukuman tetap dilaksanakan, lalu dua pengganti maju memimpin.",
+        "dodi"
+      ],
+      [
+        "narasi",
+        "Kini mereka berbelok serempak tanpa tertawa.",
+        "dodi"
+      ],
+      [
+        "tegang",
+        "Tertib, tetapi menurutku karena takut.",
+        "ara"
+      ]
+    ]
+  },
+  {
+    "scene": "end",
+    "lines": [
+      [
+        "narasi",
+        "Ini kisah dalam Shiji yang ditulis jauh sesudah masa Sun Tzu, bukan kepastian setiap kejadiannya.",
+        "dodi"
+      ],
+      [
+        "tegang",
+        "Disiplin atau kekejaman, apakah kepatuhan sebanding dengan harga nyawa?",
+        "ara"
+      ],
+      [
+        "narasi",
+        "Dialog ini didramatisasi, bukan kutipan percakapan aslinya.",
+        "dodi"
+      ]
+    ]
+  }
+]

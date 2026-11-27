@@ -1,0 +1,2546 @@
+{
+ "fps": 30,
+ "totalDurationSec": 106.767,
+ "totalFrames": 3203,
+ "order": [
+  "hook",
+  "leaders",
+  "first",
+  "second",
+  "sentence",
+  "stop",
+  "turn",
+  "end"
+ ],
+ "scenes": {
+  "hook": {
+   "startFrame": 0,
+   "durationInFrames": 357
+  },
+  "leaders": {
+   "startFrame": 357,
+   "durationInFrames": 375
+  },
+  "first": {
+   "startFrame": 732,
+   "durationInFrames": 361
+  },
+  "second": {
+   "startFrame": 1093,
+   "durationInFrames": 333
+  },
+  "sentence": {
+   "startFrame": 1426,
+   "durationInFrames": 503
+  },
+  "stop": {
+   "startFrame": 1929,
+   "durationInFrames": 361
+  },
+  "turn": {
+   "startFrame": 2290,
+   "durationInFrames": 374
+  },
+  "end": {
+   "startFrame": 2664,
+   "durationInFrames": 539
+  }
+ },
+ "lines": {
+  "hook": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Bisakah ahli strategi mengubah orang yang belum pernah berlatih menjadi pasukan?",
+    "from": 24,
+    "to": 186,
+    "words": [
+     {
+      "w": "Bisakah",
+      "from": 26,
+      "to": 40
+     },
+     {
+      "w": "ahli",
+      "from": 42,
+      "to": 51
+     },
+     {
+      "w": "strategi",
+      "from": 52,
+      "to": 67
+     },
+     {
+      "w": "mengubah",
+      "from": 69,
+      "to": 84
+     },
+     {
+      "w": "orang",
+      "from": 86,
+      "to": 97
+     },
+     {
+      "w": "yang",
+      "from": 98,
+      "to": 107
+     },
+     {
+      "w": "belum",
+      "from": 108,
+      "to": 119
+     },
+     {
+      "w": "pernah",
+      "from": 120,
+      "to": 132
+     },
+     {
+      "w": "berlatih",
+      "from": 134,
+      "to": 149
+     },
+     {
+      "w": "menjadi",
+      "from": 151,
+      "to": 165
+     },
+     {
+      "w": "pasukan?",
+      "from": 167,
+      "to": 180
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Raja Helü menguji Sun Tzu dengan perempuan istana, bukan prajurit?",
+    "from": 193,
+    "to": 341,
+    "words": [
+     {
+      "w": "Raja",
+      "from": 196,
+      "to": 206
+     },
+     {
+      "w": "Helü",
+      "from": 207,
+      "to": 215
+     },
+     {
+      "w": "menguji",
+      "from": 216,
+      "to": 232
+     },
+     {
+      "w": "Sun",
+      "from": 234,
+      "to": 242
+     },
+     {
+      "w": "Tzu",
+      "from": 243,
+      "to": 252
+     },
+     {
+      "w": "dengan",
+      "from": 253,
+      "to": 266
+     },
+     {
+      "w": "perempuan",
+      "from": 268,
+      "to": 287
+     },
+     {
+      "w": "istana,",
+      "from": 289,
+      "to": 303
+     },
+     {
+      "w": "bukan",
+      "from": 304,
+      "to": 316
+     },
+     {
+      "w": "prajurit?",
+      "from": 318,
+      "to": 335
+     }
+    ]
+   }
+  ],
+  "leaders": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Menurut kisah dalam Shiji, seratus delapan puluh perempuan dibagi menjadi dua kelompok.",
+    "from": 14,
+    "to": 189,
+    "words": [
+     {
+      "w": "Menurut",
+      "from": 16,
+      "to": 30
+     },
+     {
+      "w": "kisah",
+      "from": 32,
+      "to": 42
+     },
+     {
+      "w": "dalam",
+      "from": 44,
+      "to": 54
+     },
+     {
+      "w": "Shiji,",
+      "from": 56,
+      "to": 66
+     },
+     {
+      "w": "seratus",
+      "from": 68,
+      "to": 82
+     },
+     {
+      "w": "delapan",
+      "from": 83,
+      "to": 97
+     },
+     {
+      "w": "puluh",
+      "from": 99,
+      "to": 110
+     },
+     {
+      "w": "perempuan",
+      "from": 111,
+      "to": 128
+     },
+     {
+      "w": "dibagi",
+      "from": 130,
+      "to": 142
+     },
+     {
+      "w": "menjadi",
+      "from": 144,
+      "to": 158
+     },
+     {
+      "w": "dua",
+      "from": 160,
+      "to": 167
+     },
+     {
+      "w": "kelompok.",
+      "from": 168,
+      "to": 184
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Dua selir kesayangan raja dipilih menjadi pemimpin, sementara peserta memegang tombak.",
+    "from": 197,
+    "to": 358,
+    "words": [
+     {
+      "w": "Dua",
+      "from": 199,
+      "to": 206
+     },
+     {
+      "w": "selir",
+      "from": 207,
+      "to": 217
+     },
+     {
+      "w": "kesayangan",
+      "from": 219,
+      "to": 236
+     },
+     {
+      "w": "raja",
+      "from": 238,
+      "to": 247
+     },
+     {
+      "w": "dipilih",
+      "from": 248,
+      "to": 261
+     },
+     {
+      "w": "menjadi",
+      "from": 262,
+      "to": 275
+     },
+     {
+      "w": "pemimpin,",
+      "from": 277,
+      "to": 291
+     },
+     {
+      "w": "sementara",
+      "from": 293,
+      "to": 309
+     },
+     {
+      "w": "peserta",
+      "from": 311,
+      "to": 324
+     },
+     {
+      "w": "memegang",
+      "from": 326,
+      "to": 340
+     },
+     {
+      "w": "tombak.",
+      "from": 342,
+      "to": 353
+     }
+    ]
+   }
+  ],
+  "first": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Genderang berbunyi, perintah belok kanan diberikan, tetapi para peserta malah tertawa.",
+    "from": 14,
+    "to": 175,
+    "words": [
+     {
+      "w": "Genderang",
+      "from": 16,
+      "to": 32
+     },
+     {
+      "w": "berbunyi,",
+      "from": 34,
+      "to": 48
+     },
+     {
+      "w": "perintah",
+      "from": 50,
+      "to": 65
+     },
+     {
+      "w": "belok",
+      "from": 67,
+      "to": 77
+     },
+     {
+      "w": "kanan",
+      "from": 78,
+      "to": 88
+     },
+     {
+      "w": "diberikan,",
+      "from": 90,
+      "to": 106
+     },
+     {
+      "w": "tetapi",
+      "from": 108,
+      "to": 119
+     },
+     {
+      "w": "para",
+      "from": 121,
+      "to": 129
+     },
+     {
+      "w": "peserta",
+      "from": 131,
+      "to": 144
+     },
+     {
+      "w": "malah",
+      "from": 145,
+      "to": 155
+     },
+     {
+      "w": "tertawa.",
+      "from": 157,
+      "to": 170
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "santai",
+    "text": "Sun Tzu mengakui, kalau perintah belum jelas, panglima yang bertanggung jawab.",
+    "from": 183,
+    "to": 344,
+    "words": [
+     {
+      "w": "Sun",
+      "from": 185,
+      "to": 193
+     },
+     {
+      "w": "Tzu",
+      "from": 194,
+      "to": 202
+     },
+     {
+      "w": "mengakui,",
+      "from": 203,
+      "to": 219
+     },
+     {
+      "w": "kalau",
+      "from": 221,
+      "to": 232
+     },
+     {
+      "w": "perintah",
+      "from": 233,
+      "to": 249
+     },
+     {
+      "w": "belum",
+      "from": 251,
+      "to": 262
+     },
+     {
+      "w": "jelas,",
+      "from": 264,
+      "to": 275
+     },
+     {
+      "w": "panglima",
+      "from": 276,
+      "to": 292
+     },
+     {
+      "w": "yang",
+      "from": 294,
+      "to": 304
+     },
+     {
+      "w": "bertanggung",
+      "from": 305,
+      "to": 325
+     },
+     {
+      "w": "jawab.",
+      "from": 328,
+      "to": 339
+     }
+    ]
+   }
+  ],
+  "second": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Ia menjelaskan lagi, lalu memberi perintah belok kiri, tetapi tawa kembali terdengar.",
+    "from": 14,
+    "to": 189,
+    "words": [
+     {
+      "w": "Ia",
+      "from": 16,
+      "to": 22
+     },
+     {
+      "w": "menjelaskan",
+      "from": 23,
+      "to": 44
+     },
+     {
+      "w": "lagi,",
+      "from": 46,
+      "to": 56
+     },
+     {
+      "w": "lalu",
+      "from": 57,
+      "to": 66
+     },
+     {
+      "w": "memberi",
+      "from": 68,
+      "to": 82
+     },
+     {
+      "w": "perintah",
+      "from": 84,
+      "to": 100
+     },
+     {
+      "w": "belok",
+      "from": 102,
+      "to": 113
+     },
+     {
+      "w": "kiri,",
+      "from": 114,
+      "to": 124
+     },
+     {
+      "w": "tetapi",
+      "from": 125,
+      "to": 137
+     },
+     {
+      "w": "tawa",
+      "from": 139,
+      "to": 149
+     },
+     {
+      "w": "kembali",
+      "from": 150,
+      "to": 164
+     },
+     {
+      "w": "terdengar.",
+      "from": 166,
+      "to": 183
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Jadi, kesempatan kedua pun tidak mengubah barisan itu?",
+    "from": 197,
+    "to": 316,
+    "words": [
+     {
+      "w": "Jadi,",
+      "from": 199,
+      "to": 209
+     },
+     {
+      "w": "kesempatan",
+      "from": 210,
+      "to": 230
+     },
+     {
+      "w": "kedua",
+      "from": 233,
+      "to": 244
+     },
+     {
+      "w": "pun",
+      "from": 246,
+      "to": 254
+     },
+     {
+      "w": "tidak",
+      "from": 255,
+      "to": 266
+     },
+     {
+      "w": "mengubah",
+      "from": 268,
+      "to": 284
+     },
+     {
+      "w": "barisan",
+      "from": 286,
+      "to": 301
+     },
+     {
+      "w": "itu?",
+      "from": 303,
+      "to": 311
+     }
+    ]
+   }
+  ],
+  "sentence": [
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Menurut Sun Tzu, perintah yang jelas tetapi tidak dipatuhi menjadi tanggung jawab pemimpin kelompok.",
+    "from": 14,
+    "to": 218,
+    "words": [
+     {
+      "w": "Menurut",
+      "from": 16,
+      "to": 30
+     },
+     {
+      "w": "Sun",
+      "from": 32,
+      "to": 39
+     },
+     {
+      "w": "Tzu,",
+      "from": 40,
+      "to": 48
+     },
+     {
+      "w": "perintah",
+      "from": 49,
+      "to": 65
+     },
+     {
+      "w": "yang",
+      "from": 67,
+      "to": 76
+     },
+     {
+      "w": "jelas",
+      "from": 77,
+      "to": 88
+     },
+     {
+      "w": "tetapi",
+      "from": 89,
+      "to": 102
+     },
+     {
+      "w": "tidak",
+      "from": 103,
+      "to": 114
+     },
+     {
+      "w": "dipatuhi",
+      "from": 116,
+      "to": 131
+     },
+     {
+      "w": "menjadi",
+      "from": 133,
+      "to": 147
+     },
+     {
+      "w": "tanggung",
+      "from": 149,
+      "to": 164
+     },
+     {
+      "w": "jawab",
+      "from": 167,
+      "to": 177
+     },
+     {
+      "w": "pemimpin",
+      "from": 179,
+      "to": 194
+     },
+     {
+      "w": "kelompok.",
+      "from": 196,
+      "to": 212
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Lalu ia menjatuhkan hukuman mati kepada kedua pemimpin itu.",
+    "from": 233,
+    "to": 366,
+    "words": [
+     {
+      "w": "Lalu",
+      "from": 235,
+      "to": 245
+     },
+     {
+      "w": "ia",
+      "from": 246,
+      "to": 253
+     },
+     {
+      "w": "menjatuhkan",
+      "from": 254,
+      "to": 275
+     },
+     {
+      "w": "hukuman",
+      "from": 278,
+      "to": 293
+     },
+     {
+      "w": "mati",
+      "from": 295,
+      "to": 305
+     },
+     {
+      "w": "kepada",
+      "from": 306,
+      "to": 319
+     },
+     {
+      "w": "kedua",
+      "from": 321,
+      "to": 333
+     },
+     {
+      "w": "pemimpin",
+      "from": 334,
+      "to": 351
+     },
+     {
+      "w": "itu.",
+      "from": 353,
+      "to": 361
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Hukuman mati hanya karena latihan tidak tertib?",
+    "from": 381,
+    "to": 486,
+    "words": [
+     {
+      "w": "Hukuman",
+      "from": 383,
+      "to": 398
+     },
+     {
+      "w": "mati",
+      "from": 400,
+      "to": 410
+     },
+     {
+      "w": "hanya",
+      "from": 411,
+      "to": 422
+     },
+     {
+      "w": "karena",
+      "from": 424,
+      "to": 437
+     },
+     {
+      "w": "latihan",
+      "from": 438,
+      "to": 453
+     },
+     {
+      "w": "tidak",
+      "from": 455,
+      "to": 466
+     },
+     {
+      "w": "tertib?",
+      "from": 468,
+      "to": 481
+     }
+    ]
+   }
+  ],
+  "stop": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Dari paviliun, raja mengirim utusan untuk menghentikan hukuman.",
+    "from": 14,
+    "to": 133,
+    "words": [
+     {
+      "w": "Dari",
+      "from": 16,
+      "to": 24
+     },
+     {
+      "w": "paviliun,",
+      "from": 26,
+      "to": 40
+     },
+     {
+      "w": "raja",
+      "from": 42,
+      "to": 50
+     },
+     {
+      "w": "mengirim",
+      "from": 51,
+      "to": 66
+     },
+     {
+      "w": "utusan",
+      "from": 68,
+      "to": 79
+     },
+     {
+      "w": "untuk",
+      "from": 80,
+      "to": 90
+     },
+     {
+      "w": "menghentikan",
+      "from": 92,
+      "to": 112
+     },
+     {
+      "w": "hukuman.",
+      "from": 115,
+      "to": 127
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Tetapi Sun Tzu menolak, dengan alasan panglima di lapangan tidak selalu menerima perintah raja.",
+    "from": 140,
+    "to": 344,
+    "words": [
+     {
+      "w": "Tetapi",
+      "from": 143,
+      "to": 156
+     },
+     {
+      "w": "Sun",
+      "from": 157,
+      "to": 165
+     },
+     {
+      "w": "Tzu",
+      "from": 166,
+      "to": 174
+     },
+     {
+      "w": "menolak,",
+      "from": 175,
+      "to": 190
+     },
+     {
+      "w": "dengan",
+      "from": 192,
+      "to": 205
+     },
+     {
+      "w": "alasan",
+      "from": 207,
+      "to": 220
+     },
+     {
+      "w": "panglima",
+      "from": 221,
+      "to": 238
+     },
+     {
+      "w": "di",
+      "from": 240,
+      "to": 246
+     },
+     {
+      "w": "lapangan",
+      "from": 247,
+      "to": 263
+     },
+     {
+      "w": "tidak",
+      "from": 265,
+      "to": 277
+     },
+     {
+      "w": "selalu",
+      "from": 278,
+      "to": 291
+     },
+     {
+      "w": "menerima",
+      "from": 293,
+      "to": 309
+     },
+     {
+      "w": "perintah",
+      "from": 311,
+      "to": 328
+     },
+     {
+      "w": "raja.",
+      "from": 330,
+      "to": 339
+     }
+    ]
+   }
+  ],
+  "turn": [
+   {
+    "voice": "dodi",
+    "style": "tegang",
+    "text": "Kisah itu menyebut hukuman tetap dilaksanakan, lalu dua pengganti maju memimpin.",
+    "from": 14,
+    "to": 175,
+    "words": [
+     {
+      "w": "Kisah",
+      "from": 16,
+      "to": 27
+     },
+     {
+      "w": "itu",
+      "from": 28,
+      "to": 35
+     },
+     {
+      "w": "menyebut",
+      "from": 37,
+      "to": 52
+     },
+     {
+      "w": "hukuman",
+      "from": 54,
+      "to": 68
+     },
+     {
+      "w": "tetap",
+      "from": 69,
+      "to": 80
+     },
+     {
+      "w": "dilaksanakan,",
+      "from": 82,
+      "to": 103
+     },
+     {
+      "w": "lalu",
+      "from": 106,
+      "to": 115
+     },
+     {
+      "w": "dua",
+      "from": 116,
+      "to": 124
+     },
+     {
+      "w": "pengganti",
+      "from": 125,
+      "to": 142
+     },
+     {
+      "w": "maju",
+      "from": 144,
+      "to": 153
+     },
+     {
+      "w": "memimpin.",
+      "from": 154,
+      "to": 169
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Kini mereka berbelok serempak tanpa tertawa.",
+    "from": 183,
+    "to": 274,
+    "words": [
+     {
+      "w": "Kini",
+      "from": 185,
+      "to": 194
+     },
+     {
+      "w": "mereka",
+      "from": 195,
+      "to": 207
+     },
+     {
+      "w": "berbelok",
+      "from": 209,
+      "to": 224
+     },
+     {
+      "w": "serempak",
+      "from": 226,
+      "to": 241
+     },
+     {
+      "w": "tanpa",
+      "from": 243,
+      "to": 253
+     },
+     {
+      "w": "tertawa.",
+      "from": 255,
+      "to": 268
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Tertib, tetapi menurutku karena takut.",
+    "from": 281,
+    "to": 358,
+    "words": [
+     {
+      "w": "Tertib,",
+      "from": 283,
+      "to": 295
+     },
+     {
+      "w": "tetapi",
+      "from": 297,
+      "to": 309
+     },
+     {
+      "w": "menurutku",
+      "from": 310,
+      "to": 327
+     },
+     {
+      "w": "karena",
+      "from": 329,
+      "to": 341
+     },
+     {
+      "w": "takut.",
+      "from": 342,
+      "to": 353
+     }
+    ]
+   }
+  ],
+  "end": [
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Ini kisah dalam Shiji yang ditulis jauh sesudah masa Sun Tzu, bukan kepastian setiap kejadiannya.",
+    "from": 14,
+    "to": 232,
+    "words": [
+     {
+      "w": "Ini",
+      "from": 16,
+      "to": 24
+     },
+     {
+      "w": "kisah",
+      "from": 25,
+      "to": 37
+     },
+     {
+      "w": "dalam",
+      "from": 39,
+      "to": 50
+     },
+     {
+      "w": "Shiji",
+      "from": 52,
+      "to": 64
+     },
+     {
+      "w": "yang",
+      "from": 65,
+      "to": 76
+     },
+     {
+      "w": "ditulis",
+      "from": 77,
+      "to": 92
+     },
+     {
+      "w": "jauh",
+      "from": 94,
+      "to": 104
+     },
+     {
+      "w": "sesudah",
+      "from": 106,
+      "to": 121
+     },
+     {
+      "w": "masa",
+      "from": 123,
+      "to": 133
+     },
+     {
+      "w": "Sun",
+      "from": 134,
+      "to": 143
+     },
+     {
+      "w": "Tzu,",
+      "from": 144,
+      "to": 152
+     },
+     {
+      "w": "bukan",
+      "from": 153,
+      "to": 165
+     },
+     {
+      "w": "kepastian",
+      "from": 167,
+      "to": 185
+     },
+     {
+      "w": "setiap",
+      "from": 188,
+      "to": 201
+     },
+     {
+      "w": "kejadiannya.",
+      "from": 203,
+      "to": 225
+     }
+    ]
+   },
+   {
+    "voice": "ara",
+    "style": "tegang",
+    "text": "Disiplin atau kekejaman, apakah kepatuhan sebanding dengan harga nyawa?",
+    "from": 239,
+    "to": 373,
+    "words": [
+     {
+      "w": "Disiplin",
+      "from": 242,
+      "to": 256
+     },
+     {
+      "w": "atau",
+      "from": 258,
+      "to": 266
+     },
+     {
+      "w": "kekejaman,",
+      "from": 267,
+      "to": 283
+     },
+     {
+      "w": "apakah",
+      "from": 285,
+      "to": 297
+     },
+     {
+      "w": "kepatuhan",
+      "from": 298,
+      "to": 314
+     },
+     {
+      "w": "sebanding",
+      "from": 316,
+      "to": 332
+     },
+     {
+      "w": "dengan",
+      "from": 334,
+      "to": 345
+     },
+     {
+      "w": "harga",
+      "from": 347,
+      "to": 356
+     },
+     {
+      "w": "nyawa?",
+      "from": 358,
+      "to": 368
+     }
+    ]
+   },
+   {
+    "voice": "dodi",
+    "style": "narasi",
+    "text": "Dialog ini didramatisasi, bukan kutipan percakapan aslinya.",
+    "from": 380,
+    "to": 485,
+    "words": [
+     {
+      "w": "Dialog",
+      "from": 383,
+      "to": 393
+     },
+     {
+      "w": "ini",
+      "from": 395,
+      "to": 401
+     },
+     {
+      "w": "didramatisasi,",
+      "from": 402,
+      "to": 422
+     },
+     {
+      "w": "bukan",
+      "from": 425,
+      "to": 435
+     },
+     {
+      "w": "kutipan",
+      "from": 436,
+      "to": 448
+     },
+     {
+      "w": "percakapan",
+      "from": 450,
+      "to": 466
+     },
+     {
+      "w": "aslinya.",
+      "from": 468,
+      "to": 480
+     }
+    ]
+   }
+  ]
+ },
+ "events": {
+  "drum": 14,
+  "right": 76,
+  "laugh": 155,
+  "left": 112,
+  "laugh2": 137,
+  "sentence": 276,
+  "death": 293,
+  "stop": 90,
+  "refuse": 173,
+  "turn": 207,
+  "replacement": 123,
+  "fear": 340
+ },
+ "captions": [
+  {
+   "text": "Bisakah",
+   "startFrame": 26,
+   "endFrame": 40,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ahli",
+   "startFrame": 42,
+   "endFrame": 51,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "strategi",
+   "startFrame": 52,
+   "endFrame": 67,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mengubah",
+   "startFrame": 69,
+   "endFrame": 84,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "orang",
+   "startFrame": 86,
+   "endFrame": 97,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang",
+   "startFrame": 98,
+   "endFrame": 107,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "belum",
+   "startFrame": 108,
+   "endFrame": 119,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pernah",
+   "startFrame": 120,
+   "endFrame": 132,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "berlatih",
+   "startFrame": 134,
+   "endFrame": 149,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 151,
+   "endFrame": 165,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pasukan?",
+   "startFrame": 167,
+   "endFrame": 180,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Raja",
+   "startFrame": 196,
+   "endFrame": 206,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Helü",
+   "startFrame": 207,
+   "endFrame": 215,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "menguji",
+   "startFrame": 216,
+   "endFrame": 232,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Sun",
+   "startFrame": 234,
+   "endFrame": 242,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Tzu",
+   "startFrame": 243,
+   "endFrame": 252,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "dengan",
+   "startFrame": 253,
+   "endFrame": 266,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "perempuan",
+   "startFrame": 268,
+   "endFrame": 287,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "istana,",
+   "startFrame": 289,
+   "endFrame": 303,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "bukan",
+   "startFrame": 304,
+   "endFrame": 316,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "prajurit?",
+   "startFrame": 318,
+   "endFrame": 335,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Menurut",
+   "startFrame": 373,
+   "endFrame": 387,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kisah",
+   "startFrame": 389,
+   "endFrame": 399,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dalam",
+   "startFrame": 401,
+   "endFrame": 411,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Shiji,",
+   "startFrame": 413,
+   "endFrame": 423,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "seratus",
+   "startFrame": 425,
+   "endFrame": 439,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "delapan",
+   "startFrame": 440,
+   "endFrame": 454,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "puluh",
+   "startFrame": 456,
+   "endFrame": 467,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perempuan",
+   "startFrame": 468,
+   "endFrame": 485,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dibagi",
+   "startFrame": 487,
+   "endFrame": 499,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 501,
+   "endFrame": 515,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dua",
+   "startFrame": 517,
+   "endFrame": 524,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelompok.",
+   "startFrame": 525,
+   "endFrame": 541,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Dua",
+   "startFrame": 556,
+   "endFrame": 563,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "selir",
+   "startFrame": 564,
+   "endFrame": 574,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kesayangan",
+   "startFrame": 576,
+   "endFrame": 593,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "raja",
+   "startFrame": 595,
+   "endFrame": 604,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dipilih",
+   "startFrame": 605,
+   "endFrame": 618,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 619,
+   "endFrame": 632,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pemimpin,",
+   "startFrame": 634,
+   "endFrame": 648,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sementara",
+   "startFrame": 650,
+   "endFrame": 666,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "peserta",
+   "startFrame": 668,
+   "endFrame": 681,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "memegang",
+   "startFrame": 683,
+   "endFrame": 697,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tombak.",
+   "startFrame": 699,
+   "endFrame": 710,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Genderang",
+   "startFrame": 748,
+   "endFrame": 764,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "berbunyi,",
+   "startFrame": 766,
+   "endFrame": 780,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 782,
+   "endFrame": 797,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "belok",
+   "startFrame": 799,
+   "endFrame": 809,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kanan",
+   "startFrame": 810,
+   "endFrame": 820,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "diberikan,",
+   "startFrame": 822,
+   "endFrame": 838,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tetapi",
+   "startFrame": 840,
+   "endFrame": 851,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "para",
+   "startFrame": 853,
+   "endFrame": 861,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "peserta",
+   "startFrame": 863,
+   "endFrame": 876,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "malah",
+   "startFrame": 877,
+   "endFrame": 887,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tertawa.",
+   "startFrame": 889,
+   "endFrame": 902,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sun",
+   "startFrame": 917,
+   "endFrame": 925,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Tzu",
+   "startFrame": 926,
+   "endFrame": 934,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mengakui,",
+   "startFrame": 935,
+   "endFrame": 951,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kalau",
+   "startFrame": 953,
+   "endFrame": 964,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 965,
+   "endFrame": 981,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "belum",
+   "startFrame": 983,
+   "endFrame": 994,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "jelas,",
+   "startFrame": 996,
+   "endFrame": 1007,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "panglima",
+   "startFrame": 1008,
+   "endFrame": 1024,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "yang",
+   "startFrame": 1026,
+   "endFrame": 1036,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "bertanggung",
+   "startFrame": 1037,
+   "endFrame": 1057,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "jawab.",
+   "startFrame": 1060,
+   "endFrame": 1071,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Ia",
+   "startFrame": 1109,
+   "endFrame": 1115,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menjelaskan",
+   "startFrame": 1116,
+   "endFrame": 1137,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lagi,",
+   "startFrame": 1139,
+   "endFrame": 1149,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lalu",
+   "startFrame": 1150,
+   "endFrame": 1159,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "memberi",
+   "startFrame": 1161,
+   "endFrame": 1175,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 1177,
+   "endFrame": 1193,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "belok",
+   "startFrame": 1195,
+   "endFrame": 1206,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kiri,",
+   "startFrame": 1207,
+   "endFrame": 1217,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tetapi",
+   "startFrame": 1218,
+   "endFrame": 1230,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tawa",
+   "startFrame": 1232,
+   "endFrame": 1242,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kembali",
+   "startFrame": 1243,
+   "endFrame": 1257,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "terdengar.",
+   "startFrame": 1259,
+   "endFrame": 1276,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Jadi,",
+   "startFrame": 1292,
+   "endFrame": 1302,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kesempatan",
+   "startFrame": 1303,
+   "endFrame": 1323,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kedua",
+   "startFrame": 1326,
+   "endFrame": 1337,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "pun",
+   "startFrame": 1339,
+   "endFrame": 1347,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 1348,
+   "endFrame": 1359,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mengubah",
+   "startFrame": 1361,
+   "endFrame": 1377,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "barisan",
+   "startFrame": 1379,
+   "endFrame": 1394,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "itu?",
+   "startFrame": 1396,
+   "endFrame": 1404,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Menurut",
+   "startFrame": 1442,
+   "endFrame": 1456,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sun",
+   "startFrame": 1458,
+   "endFrame": 1465,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tzu,",
+   "startFrame": 1466,
+   "endFrame": 1474,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 1475,
+   "endFrame": 1491,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang",
+   "startFrame": 1493,
+   "endFrame": 1502,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jelas",
+   "startFrame": 1503,
+   "endFrame": 1514,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tetapi",
+   "startFrame": 1515,
+   "endFrame": 1528,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 1529,
+   "endFrame": 1540,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dipatuhi",
+   "startFrame": 1542,
+   "endFrame": 1557,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menjadi",
+   "startFrame": 1559,
+   "endFrame": 1573,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tanggung",
+   "startFrame": 1575,
+   "endFrame": 1590,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jawab",
+   "startFrame": 1593,
+   "endFrame": 1603,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pemimpin",
+   "startFrame": 1605,
+   "endFrame": 1620,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kelompok.",
+   "startFrame": 1622,
+   "endFrame": 1638,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Lalu",
+   "startFrame": 1661,
+   "endFrame": 1671,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ia",
+   "startFrame": 1672,
+   "endFrame": 1679,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menjatuhkan",
+   "startFrame": 1680,
+   "endFrame": 1701,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "hukuman",
+   "startFrame": 1704,
+   "endFrame": 1719,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mati",
+   "startFrame": 1721,
+   "endFrame": 1731,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "kepada",
+   "startFrame": 1732,
+   "endFrame": 1745,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kedua",
+   "startFrame": 1747,
+   "endFrame": 1759,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pemimpin",
+   "startFrame": 1760,
+   "endFrame": 1777,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "itu.",
+   "startFrame": 1779,
+   "endFrame": 1787,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Hukuman",
+   "startFrame": 1809,
+   "endFrame": 1824,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "mati",
+   "startFrame": 1826,
+   "endFrame": 1836,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "hanya",
+   "startFrame": 1837,
+   "endFrame": 1848,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "karena",
+   "startFrame": 1850,
+   "endFrame": 1863,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "latihan",
+   "startFrame": 1864,
+   "endFrame": 1879,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 1881,
+   "endFrame": 1892,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tertib?",
+   "startFrame": 1894,
+   "endFrame": 1907,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Dari",
+   "startFrame": 1945,
+   "endFrame": 1953,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "paviliun,",
+   "startFrame": 1955,
+   "endFrame": 1969,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "raja",
+   "startFrame": 1971,
+   "endFrame": 1979,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mengirim",
+   "startFrame": 1980,
+   "endFrame": 1995,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "utusan",
+   "startFrame": 1997,
+   "endFrame": 2008,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "untuk",
+   "startFrame": 2009,
+   "endFrame": 2019,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menghentikan",
+   "startFrame": 2021,
+   "endFrame": 2041,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "hukuman.",
+   "startFrame": 2044,
+   "endFrame": 2056,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tetapi",
+   "startFrame": 2072,
+   "endFrame": 2085,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sun",
+   "startFrame": 2086,
+   "endFrame": 2094,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tzu",
+   "startFrame": 2095,
+   "endFrame": 2103,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menolak,",
+   "startFrame": 2104,
+   "endFrame": 2119,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dengan",
+   "startFrame": 2121,
+   "endFrame": 2134,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "alasan",
+   "startFrame": 2136,
+   "endFrame": 2149,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "panglima",
+   "startFrame": 2150,
+   "endFrame": 2167,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "di",
+   "startFrame": 2169,
+   "endFrame": 2175,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lapangan",
+   "startFrame": 2176,
+   "endFrame": 2192,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tidak",
+   "startFrame": 2194,
+   "endFrame": 2206,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "selalu",
+   "startFrame": 2207,
+   "endFrame": 2220,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menerima",
+   "startFrame": 2222,
+   "endFrame": 2238,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "perintah",
+   "startFrame": 2240,
+   "endFrame": 2257,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "raja.",
+   "startFrame": 2259,
+   "endFrame": 2268,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kisah",
+   "startFrame": 2306,
+   "endFrame": 2317,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "itu",
+   "startFrame": 2318,
+   "endFrame": 2325,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "menyebut",
+   "startFrame": 2327,
+   "endFrame": 2342,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "hukuman",
+   "startFrame": 2344,
+   "endFrame": 2358,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tetap",
+   "startFrame": 2359,
+   "endFrame": 2370,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dilaksanakan,",
+   "startFrame": 2372,
+   "endFrame": 2393,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "lalu",
+   "startFrame": 2396,
+   "endFrame": 2405,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dua",
+   "startFrame": 2406,
+   "endFrame": 2414,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "pengganti",
+   "startFrame": 2415,
+   "endFrame": 2432,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "maju",
+   "startFrame": 2434,
+   "endFrame": 2443,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "memimpin.",
+   "startFrame": 2444,
+   "endFrame": 2459,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Kini",
+   "startFrame": 2475,
+   "endFrame": 2484,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "mereka",
+   "startFrame": 2485,
+   "endFrame": 2497,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "berbelok",
+   "startFrame": 2499,
+   "endFrame": 2514,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "serempak",
+   "startFrame": 2516,
+   "endFrame": 2531,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tanpa",
+   "startFrame": 2533,
+   "endFrame": 2543,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "tertawa.",
+   "startFrame": 2545,
+   "endFrame": 2558,
+   "highlight": true,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tertib,",
+   "startFrame": 2573,
+   "endFrame": 2585,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "tetapi",
+   "startFrame": 2587,
+   "endFrame": 2599,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "menurutku",
+   "startFrame": 2600,
+   "endFrame": 2617,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "karena",
+   "startFrame": 2619,
+   "endFrame": 2631,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "takut.",
+   "startFrame": 2632,
+   "endFrame": 2643,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "Ini",
+   "startFrame": 2680,
+   "endFrame": 2688,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kisah",
+   "startFrame": 2689,
+   "endFrame": 2701,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "dalam",
+   "startFrame": 2703,
+   "endFrame": 2714,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Shiji",
+   "startFrame": 2716,
+   "endFrame": 2728,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "yang",
+   "startFrame": 2729,
+   "endFrame": 2740,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ditulis",
+   "startFrame": 2741,
+   "endFrame": 2756,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "jauh",
+   "startFrame": 2758,
+   "endFrame": 2768,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "sesudah",
+   "startFrame": 2770,
+   "endFrame": 2785,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "masa",
+   "startFrame": 2787,
+   "endFrame": 2797,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Sun",
+   "startFrame": 2798,
+   "endFrame": 2807,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Tzu,",
+   "startFrame": 2808,
+   "endFrame": 2816,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bukan",
+   "startFrame": 2817,
+   "endFrame": 2829,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kepastian",
+   "startFrame": 2831,
+   "endFrame": 2849,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "setiap",
+   "startFrame": 2852,
+   "endFrame": 2865,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kejadiannya.",
+   "startFrame": 2867,
+   "endFrame": 2889,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "Disiplin",
+   "startFrame": 2906,
+   "endFrame": 2920,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "atau",
+   "startFrame": 2922,
+   "endFrame": 2930,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kekejaman,",
+   "startFrame": 2931,
+   "endFrame": 2947,
+   "highlight": true,
+   "voice": "ara"
+  },
+  {
+   "text": "apakah",
+   "startFrame": 2949,
+   "endFrame": 2961,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "kepatuhan",
+   "startFrame": 2962,
+   "endFrame": 2978,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "sebanding",
+   "startFrame": 2980,
+   "endFrame": 2996,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "dengan",
+   "startFrame": 2998,
+   "endFrame": 3009,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "harga",
+   "startFrame": 3011,
+   "endFrame": 3020,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "nyawa?",
+   "startFrame": 3022,
+   "endFrame": 3032,
+   "highlight": false,
+   "voice": "ara"
+  },
+  {
+   "text": "Dialog",
+   "startFrame": 3047,
+   "endFrame": 3057,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "ini",
+   "startFrame": 3059,
+   "endFrame": 3065,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "didramatisasi,",
+   "startFrame": 3066,
+   "endFrame": 3086,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "bukan",
+   "startFrame": 3089,
+   "endFrame": 3099,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "kutipan",
+   "startFrame": 3100,
+   "endFrame": 3112,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "percakapan",
+   "startFrame": 3114,
+   "endFrame": 3130,
+   "highlight": false,
+   "voice": "dodi"
+  },
+  {
+   "text": "aslinya.",
+   "startFrame": 3132,
+   "endFrame": 3144,
+   "highlight": false,
+   "voice": "dodi"
+  }
+ ]
+}
