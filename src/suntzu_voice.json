@@ -1,0 +1,2159 @@
+{
+ "fps": 30,
+ "totalFrames": 2500,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 252,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Bisakah ahli strategi mengubah orang yang belum pernah berlatih menjadi pasukan?",
+     "score": 0.978,
+     "file": "out/voice/suntzu/hook_0.wav",
+     "wordsSec": [
+      [
+       "Bisa",
+       0.0,
+       0.24
+      ],
+      [
+       "ke",
+       0.24,
+       0.36
+      ],
+      [
+       "ahli",
+       0.36,
+       0.62
+      ],
+      [
+       "strategi",
+       0.62,
+       1.1
+      ],
+      [
+       "mengubah",
+       1.1,
+       1.44
+      ],
+      [
+       "orang",
+       1.44,
+       1.62
+      ],
+      [
+       "yang",
+       1.62,
+       1.78
+      ],
+      [
+       "belum",
+       1.78,
+       1.94
+      ],
+      [
+       "pernah",
+       1.94,
+       2.2
+      ],
+      [
+       "berlatih",
+       2.2,
+       2.6
+      ],
+      [
+       "menjadi",
+       2.6,
+       2.84
+      ],
+      [
+       "pasukan?",
+       2.84,
+       3.24
+      ]
+     ],
+     "from": 8,
+     "to": 113,
+     "words": [
+      {
+       "w": "Bisa",
+       "from": 8,
+       "to": 15
+      },
+      {
+       "w": "ke",
+       "from": 15,
+       "to": 18
+      },
+      {
+       "w": "ahli",
+       "from": 18,
+       "to": 26
+      },
+      {
+       "w": "strategi",
+       "from": 26,
+       "to": 40
+      },
+      {
+       "w": "mengubah",
+       "from": 40,
+       "to": 51
+      },
+      {
+       "w": "orang",
+       "from": 51,
+       "to": 56
+      },
+      {
+       "w": "yang",
+       "from": 56,
+       "to": 61
+      },
+      {
+       "w": "belum",
+       "from": 61,
+       "to": 66
+      },
+      {
+       "w": "pernah",
+       "from": 66,
+       "to": 74
+      },
+      {
+       "w": "berlatih",
+       "from": 74,
+       "to": 86
+      },
+      {
+       "w": "menjadi",
+       "from": 86,
+       "to": 93
+      },
+      {
+       "w": "pasukan?",
+       "from": 93,
+       "to": 105
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Raja Helü menguji Sun Tzu dengan perempuan istana, bukan prajurit?",
+     "score": 0.972,
+     "file": "out/voice/suntzu/hook_1.wav",
+     "wordsSec": [
+      [
+       "Raja",
+       0.0,
+       0.32
+      ],
+      [
+       "Helu",
+       0.32,
+       0.7
+      ],
+      [
+       "menguji",
+       0.7,
+       1.12
+      ],
+      [
+       "Sun",
+       1.12,
+       1.32
+      ],
+      [
+       "Zu",
+       1.32,
+       1.5
+      ],
+      [
+       "dengan",
+       1.5,
+       1.74
+      ],
+      [
+       "perempuan",
+       1.74,
+       2.22
+      ],
+      [
+       "Istana.",
+       2.22,
+       2.64
+      ],
+      [
+       "Bukan",
+       2.94,
+       3.36
+      ],
+      [
+       "Rajurit?",
+       3.36,
+       3.84
+      ]
+     ],
+     "from": 121,
+     "to": 239,
+     "words": [
+      {
+       "w": "Raja",
+       "from": 121,
+       "to": 131
+      },
+      {
+       "w": "Helu",
+       "from": 131,
+       "to": 142
+      },
+      {
+       "w": "menguji",
+       "from": 142,
+       "to": 154
+      },
+      {
+       "w": "Sun",
+       "from": 154,
+       "to": 161
+      },
+      {
+       "w": "Zu",
+       "from": 161,
+       "to": 166
+      },
+      {
+       "w": "dengan",
+       "from": 166,
+       "to": 173
+      },
+      {
+       "w": "perempuan",
+       "from": 173,
+       "to": 188
+      },
+      {
+       "w": "Istana.",
+       "from": 188,
+       "to": 200
+      },
+      {
+       "w": "Bukan",
+       "from": 209,
+       "to": 222
+      },
+      {
+       "w": "Rajurit?",
+       "from": 222,
+       "to": 236
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "leaders",
+   "from": 252,
+   "to": 527,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Menurut kisah dalam Shiji, seratus delapan puluh perempuan dibagi menjadi dua kelompok.",
+     "score": 0.87,
+     "file": "out/voice/suntzu/leaders_0.wav",
+     "wordsSec": [
+      [
+       "Menurut",
+       0.0,
+       0.38
+      ],
+      [
+       "kisah",
+       0.38,
+       0.66
+      ],
+      [
+       "dalam",
+       0.66,
+       0.86
+      ],
+      [
+       "CG,",
+       0.86,
+       1.18
+      ],
+      [
+       "180",
+       1.5,
+       2.04
+      ],
+      [
+       "perempuan",
+       2.04,
+       2.78
+      ],
+      [
+       "dibagi",
+       2.78,
+       3.14
+      ],
+      [
+       "menjadi",
+       3.14,
+       3.4
+      ],
+      [
+       "dua",
+       3.4,
+       3.7
+      ],
+      [
+       "kelompok.",
+       3.7,
+       4.16
+      ]
+     ],
+     "from": 252,
+     "to": 381,
+     "words": [
+      {
+       "w": "Menurut",
+       "from": 252,
+       "to": 263
+      },
+      {
+       "w": "kisah",
+       "from": 263,
+       "to": 272
+      },
+      {
+       "w": "dalam",
+       "from": 272,
+       "to": 278
+      },
+      {
+       "w": "CG,",
+       "from": 278,
+       "to": 287
+      },
+      {
+       "w": "180",
+       "from": 297,
+       "to": 313
+      },
+      {
+       "w": "perempuan",
+       "from": 313,
+       "to": 335
+      },
+      {
+       "w": "dibagi",
+       "from": 335,
+       "to": 346
+      },
+      {
+       "w": "menjadi",
+       "from": 346,
+       "to": 354
+      },
+      {
+       "w": "dua",
+       "from": 354,
+       "to": 363
+      },
+      {
+       "w": "kelompok.",
+       "from": 363,
+       "to": 377
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Dua selir kesayangan raja dipilih menjadi pemimpin, sementara peserta memegang tombak.",
+     "score": 1.0,
+     "file": "out/voice/suntzu/leaders_1.wav",
+     "wordsSec": [
+      [
+       "Selir",
+       0.0,
+       0.52
+      ],
+      [
+       "kesayangan",
+       0.52,
+       0.98
+      ],
+      [
+       "Raja",
+       0.98,
+       1.32
+      ],
+      [
+       "dipilih",
+       1.32,
+       1.7
+      ],
+      [
+       "menjadi",
+       1.7,
+       1.9
+      ],
+      [
+       "pemimpin",
+       1.9,
+       2.44
+      ],
+      [
+       "sementara",
+       2.44,
+       2.94
+      ],
+      [
+       "peserta",
+       2.94,
+       3.3
+      ],
+      [
+       "memegang",
+       3.3,
+       3.74
+      ],
+      [
+       "tombak.",
+       3.74,
+       4.08
+      ]
+     ],
+     "from": 389,
+     "to": 514,
+     "words": [
+      {
+       "w": "Selir",
+       "from": 389,
+       "to": 404
+      },
+      {
+       "w": "kesayangan",
+       "from": 404,
+       "to": 418
+      },
+      {
+       "w": "Raja",
+       "from": 418,
+       "to": 428
+      },
+      {
+       "w": "dipilih",
+       "from": 428,
+       "to": 440
+      },
+      {
+       "w": "menjadi",
+       "from": 440,
+       "to": 446
+      },
+      {
+       "w": "pemimpin",
+       "from": 446,
+       "to": 462
+      },
+      {
+       "w": "sementara",
+       "from": 462,
+       "to": 477
+      },
+      {
+       "w": "peserta",
+       "from": 477,
+       "to": 488
+      },
+      {
+       "w": "memegang",
+       "from": 488,
+       "to": 501
+      },
+      {
+       "w": "tombak.",
+       "from": 501,
+       "to": 511
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "first",
+   "from": 527,
+   "to": 826,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Genderang berbunyi, perintah belok kanan diberikan, tetapi para peserta malah tertawa.",
+     "score": 0.979,
+     "file": "out/voice/suntzu/first_0.wav",
+     "wordsSec": [
+      [
+       "Jenderang",
+       0.0,
+       0.4
+      ],
+      [
+       "berbunyi,",
+       0.4,
+       0.92
+      ],
+      [
+       "perintah",
+       1.06,
+       1.68
+      ],
+      [
+       "belokanan",
+       1.68,
+       2.08
+      ],
+      [
+       "diberikan,",
+       2.08,
+       2.66
+      ],
+      [
+       "tetapi",
+       2.9,
+       3.2
+      ],
+      [
+       "para",
+       3.2,
+       3.36
+      ],
+      [
+       "peserta",
+       3.36,
+       3.78
+      ],
+      [
+       "malah",
+       3.78,
+       4.08
+      ],
+      [
+       "tertawa.",
+       4.08,
+       4.48
+      ]
+     ],
+     "from": 527,
+     "to": 666,
+     "words": [
+      {
+       "w": "Jenderang",
+       "from": 527,
+       "to": 539
+      },
+      {
+       "w": "berbunyi,",
+       "from": 539,
+       "to": 555
+      },
+      {
+       "w": "perintah",
+       "from": 559,
+       "to": 578
+      },
+      {
+       "w": "belokanan",
+       "from": 578,
+       "to": 590
+      },
+      {
+       "w": "diberikan,",
+       "from": 590,
+       "to": 607
+      },
+      {
+       "w": "tetapi",
+       "from": 614,
+       "to": 623
+      },
+      {
+       "w": "para",
+       "from": 623,
+       "to": 628
+      },
+      {
+       "w": "peserta",
+       "from": 628,
+       "to": 641
+      },
+      {
+       "w": "malah",
+       "from": 641,
+       "to": 650
+      },
+      {
+       "w": "tertawa.",
+       "from": 650,
+       "to": 662
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Sun Tzu mengakui, kalau perintah belum jelas, panglima yang bertanggung jawab.",
+     "score": 0.977,
+     "file": "out/voice/suntzu/first_1.wav",
+     "wordsSec": [
+      [
+       "Suncu",
+       0.0,
+       0.46
+      ],
+      [
+       "mengakui",
+       0.46,
+       1.12
+      ],
+      [
+       "kalau",
+       1.12,
+       1.64
+      ],
+      [
+       "perintah",
+       1.64,
+       2.26
+      ],
+      [
+       "belum",
+       2.26,
+       2.4
+      ],
+      [
+       "jelas",
+       2.4,
+       2.9
+      ],
+      [
+       "panglima",
+       2.9,
+       3.66
+      ],
+      [
+       "yang",
+       3.66,
+       3.8
+      ],
+      [
+       "bertanggungjawab.",
+       3.8,
+       4.58
+      ]
+     ],
+     "from": 674,
+     "to": 813,
+     "words": [
+      {
+       "w": "Suncu",
+       "from": 674,
+       "to": 688
+      },
+      {
+       "w": "mengakui",
+       "from": 688,
+       "to": 708
+      },
+      {
+       "w": "kalau",
+       "from": 708,
+       "to": 723
+      },
+      {
+       "w": "perintah",
+       "from": 723,
+       "to": 742
+      },
+      {
+       "w": "belum",
+       "from": 742,
+       "to": 746
+      },
+      {
+       "w": "jelas",
+       "from": 746,
+       "to": 761
+      },
+      {
+       "w": "panglima",
+       "from": 761,
+       "to": 784
+      },
+      {
+       "w": "yang",
+       "from": 784,
+       "to": 788
+      },
+      {
+       "w": "bertanggungjawab.",
+       "from": 788,
+       "to": 812
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "second",
+   "from": 826,
+   "to": 1086,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Ia menjelaskan lagi, lalu memberi perintah belok kiri, tetapi tawa kembali terdengar.",
+     "score": 1.0,
+     "file": "out/voice/suntzu/second_0.wav",
+     "wordsSec": [
+      [
+       "ia",
+       0.0,
+       0.14
+      ],
+      [
+       "menjelaskan",
+       0.14,
+       0.62
+      ],
+      [
+       "lagi,",
+       0.62,
+       0.86
+      ],
+      [
+       "lalu",
+       1.2,
+       1.42
+      ],
+      [
+       "memberi",
+       1.42,
+       1.74
+      ],
+      [
+       "perintah",
+       1.74,
+       2.12
+      ],
+      [
+       "belok",
+       2.12,
+       2.42
+      ],
+      [
+       "kiri,",
+       2.42,
+       2.68
+      ],
+      [
+       "tetapi",
+       2.94,
+       3.26
+      ],
+      [
+       "tawa",
+       3.26,
+       3.54
+      ],
+      [
+       "kembali",
+       3.54,
+       3.92
+      ],
+      [
+       "terdengar.",
+       3.92,
+       4.38
+      ]
+     ],
+     "from": 826,
+     "to": 960,
+     "words": [
+      {
+       "w": "ia",
+       "from": 826,
+       "to": 830
+      },
+      {
+       "w": "menjelaskan",
+       "from": 830,
+       "to": 845
+      },
+      {
+       "w": "lagi,",
+       "from": 845,
+       "to": 852
+      },
+      {
+       "w": "lalu",
+       "from": 862,
+       "to": 869
+      },
+      {
+       "w": "memberi",
+       "from": 869,
+       "to": 878
+      },
+      {
+       "w": "perintah",
+       "from": 878,
+       "to": 890
+      },
+      {
+       "w": "belok",
+       "from": 890,
+       "to": 899
+      },
+      {
+       "w": "kiri,",
+       "from": 899,
+       "to": 906
+      },
+      {
+       "w": "tetapi",
+       "from": 914,
+       "to": 924
+      },
+      {
+       "w": "tawa",
+       "from": 924,
+       "to": 932
+      },
+      {
+       "w": "kembali",
+       "from": 932,
+       "to": 944
+      },
+      {
+       "w": "terdengar.",
+       "from": 944,
+       "to": 957
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Jadi, kesempatan kedua pun tidak mengubah barisan itu?",
+     "score": 1.0,
+     "file": "out/voice/suntzu/second_1.wav",
+     "wordsSec": [
+      [
+       "Jadi",
+       0.0,
+       0.36
+      ],
+      [
+       "kesempatan",
+       0.36,
+       1.32
+      ],
+      [
+       "kedua",
+       1.32,
+       1.64
+      ],
+      [
+       "pun",
+       1.64,
+       1.84
+      ],
+      [
+       "tidak",
+       1.84,
+       2.12
+      ],
+      [
+       "mengubah",
+       2.12,
+       2.64
+      ],
+      [
+       "barisan",
+       2.64,
+       3.0
+      ],
+      [
+       "itu.",
+       3.0,
+       3.28
+      ]
+     ],
+     "from": 968,
+     "to": 1072,
+     "words": [
+      {
+       "w": "Jadi",
+       "from": 968,
+       "to": 979
+      },
+      {
+       "w": "kesempatan",
+       "from": 979,
+       "to": 1008
+      },
+      {
+       "w": "kedua",
+       "from": 1008,
+       "to": 1017
+      },
+      {
+       "w": "pun",
+       "from": 1017,
+       "to": 1023
+      },
+      {
+       "w": "tidak",
+       "from": 1023,
+       "to": 1032
+      },
+      {
+       "w": "mengubah",
+       "from": 1032,
+       "to": 1047
+      },
+      {
+       "w": "barisan",
+       "from": 1047,
+       "to": 1058
+      },
+      {
+       "w": "itu.",
+       "from": 1058,
+       "to": 1067
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "sentence",
+   "from": 1086,
+   "to": 1444,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Menurut Sun Tzu, perintah yang jelas tetapi tidak dipatuhi menjadi tanggung jawab pemimpin kelompok.",
+     "score": 0.994,
+     "file": "out/voice/suntzu/sentence_0.wav",
+     "wordsSec": [
+      [
+       "Menurut",
+       0.0,
+       0.36
+      ],
+      [
+       "Sun",
+       0.36,
+       0.58
+      ],
+      [
+       "Zu,",
+       0.58,
+       0.76
+      ],
+      [
+       "perintah",
+       1.04,
+       1.44
+      ],
+      [
+       "yang",
+       1.44,
+       1.56
+      ],
+      [
+       "jelas,",
+       1.56,
+       1.94
+      ],
+      [
+       "tetapi",
+       2.18,
+       2.48
+      ],
+      [
+       "tidak",
+       2.48,
+       2.64
+      ],
+      [
+       "dipatuhi",
+       2.64,
+       3.16
+      ],
+      [
+       "menjadi",
+       3.16,
+       3.3
+      ],
+      [
+       "tanggung",
+       3.3,
+       3.7
+      ],
+      [
+       "jawab",
+       3.7,
+       3.96
+      ],
+      [
+       "pemimpin",
+       3.96,
+       4.36
+      ],
+      [
+       "kelompok.",
+       4.36,
+       4.72
+      ]
+     ],
+     "from": 1086,
+     "to": 1230,
+     "words": [
+      {
+       "w": "Menurut",
+       "from": 1086,
+       "to": 1097
+      },
+      {
+       "w": "Sun",
+       "from": 1097,
+       "to": 1103
+      },
+      {
+       "w": "Zu,",
+       "from": 1103,
+       "to": 1109
+      },
+      {
+       "w": "perintah",
+       "from": 1117,
+       "to": 1129
+      },
+      {
+       "w": "yang",
+       "from": 1129,
+       "to": 1133
+      },
+      {
+       "w": "jelas,",
+       "from": 1133,
+       "to": 1144
+      },
+      {
+       "w": "tetapi",
+       "from": 1151,
+       "to": 1160
+      },
+      {
+       "w": "tidak",
+       "from": 1160,
+       "to": 1165
+      },
+      {
+       "w": "dipatuhi",
+       "from": 1165,
+       "to": 1181
+      },
+      {
+       "w": "menjadi",
+       "from": 1181,
+       "to": 1185
+      },
+      {
+       "w": "tanggung",
+       "from": 1185,
+       "to": 1197
+      },
+      {
+       "w": "jawab",
+       "from": 1197,
+       "to": 1205
+      },
+      {
+       "w": "pemimpin",
+       "from": 1205,
+       "to": 1217
+      },
+      {
+       "w": "kelompok.",
+       "from": 1217,
+       "to": 1228
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Lalu ia menjatuhkan hukuman mati kepada kedua pemimpin itu.",
+     "score": 1.0,
+     "file": "out/voice/suntzu/sentence_1.wav",
+     "wordsSec": [
+      [
+       "lalu",
+       0.0,
+       0.26
+      ],
+      [
+       "ia",
+       0.26,
+       0.42
+      ],
+      [
+       "menjatuhkan",
+       0.42,
+       1.04
+      ],
+      [
+       "hukuman",
+       1.04,
+       1.44
+      ],
+      [
+       "mati",
+       1.44,
+       1.84
+      ],
+      [
+       "kepada",
+       1.84,
+       2.02
+      ],
+      [
+       "kedua",
+       2.02,
+       2.44
+      ],
+      [
+       "pemimpin",
+       2.44,
+       2.98
+      ],
+      [
+       "itu.",
+       2.98,
+       3.18
+      ]
+     ],
+     "from": 1238,
+     "to": 1339,
+     "words": [
+      {
+       "w": "lalu",
+       "from": 1238,
+       "to": 1246
+      },
+      {
+       "w": "ia",
+       "from": 1246,
+       "to": 1250
+      },
+      {
+       "w": "menjatuhkan",
+       "from": 1250,
+       "to": 1269
+      },
+      {
+       "w": "hukuman",
+       "from": 1269,
+       "to": 1281
+      },
+      {
+       "w": "mati",
+       "from": 1281,
+       "to": 1293
+      },
+      {
+       "w": "kepada",
+       "from": 1293,
+       "to": 1298
+      },
+      {
+       "w": "kedua",
+       "from": 1298,
+       "to": 1311
+      },
+      {
+       "w": "pemimpin",
+       "from": 1311,
+       "to": 1327
+      },
+      {
+       "w": "itu.",
+       "from": 1327,
+       "to": 1333
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Hukuman mati hanya karena latihan tidak tertib?",
+     "score": 0.975,
+     "file": "out/voice/suntzu/sentence_2.wav",
+     "wordsSec": [
+      [
+       "hukuman",
+       0.0,
+       0.48
+      ],
+      [
+       "mati",
+       0.48,
+       1.0
+      ],
+      [
+       "hanya",
+       1.0,
+       1.22
+      ],
+      [
+       "karena",
+       1.22,
+       1.5
+      ],
+      [
+       "latihan",
+       1.5,
+       2.06
+      ],
+      [
+       "tidak",
+       2.06,
+       2.24
+      ],
+      [
+       "tertip",
+       2.24,
+       2.7
+      ]
+     ],
+     "from": 1346,
+     "to": 1431,
+     "words": [
+      {
+       "w": "hukuman",
+       "from": 1346,
+       "to": 1361
+      },
+      {
+       "w": "mati",
+       "from": 1361,
+       "to": 1376
+      },
+      {
+       "w": "hanya",
+       "from": 1376,
+       "to": 1383
+      },
+      {
+       "w": "karena",
+       "from": 1383,
+       "to": 1391
+      },
+      {
+       "w": "latihan",
+       "from": 1391,
+       "to": 1408
+      },
+      {
+       "w": "tidak",
+       "from": 1408,
+       "to": 1414
+      },
+      {
+       "w": "tertip",
+       "from": 1414,
+       "to": 1427
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "stop",
+   "from": 1444,
+   "to": 1713,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Dari paviliun, raja mengirim utusan untuk menghentikan hukuman.",
+     "score": 0.981,
+     "file": "out/voice/suntzu/stop_0.wav",
+     "wordsSec": [
+      [
+       "Dari",
+       0.0,
+       0.2
+      ],
+      [
+       "pavilion,",
+       0.2,
+       0.72
+      ],
+      [
+       "Raja",
+       0.9,
+       1.14
+      ],
+      [
+       "mengirim",
+       1.14,
+       1.44
+      ],
+      [
+       "utusan",
+       1.44,
+       1.9
+      ],
+      [
+       "untuk",
+       1.9,
+       2.14
+      ],
+      [
+       "menghentikan",
+       2.14,
+       2.7
+      ],
+      [
+       "hukuman.",
+       2.7,
+       3.1
+      ]
+     ],
+     "from": 1444,
+     "to": 1544,
+     "words": [
+      {
+       "w": "Dari",
+       "from": 1444,
+       "to": 1450
+      },
+      {
+       "w": "pavilion,",
+       "from": 1450,
+       "to": 1466
+      },
+      {
+       "w": "Raja",
+       "from": 1471,
+       "to": 1478
+      },
+      {
+       "w": "mengirim",
+       "from": 1478,
+       "to": 1487
+      },
+      {
+       "w": "utusan",
+       "from": 1487,
+       "to": 1501
+      },
+      {
+       "w": "untuk",
+       "from": 1501,
+       "to": 1508
+      },
+      {
+       "w": "menghentikan",
+       "from": 1508,
+       "to": 1525
+      },
+      {
+       "w": "hukuman.",
+       "from": 1525,
+       "to": 1537
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Tetapi Sun Tzu menolak, dengan alasan panglima di lapangan tidak selalu menerima perintah raja.",
+     "score": 0.994,
+     "file": "out/voice/suntzu/stop_1.wav",
+     "wordsSec": [
+      [
+       "Tetapi",
+       0.0,
+       0.34
+      ],
+      [
+       "Sunzu",
+       0.34,
+       0.68
+      ],
+      [
+       "menolak,",
+       0.68,
+       1.14
+      ],
+      [
+       "dengan",
+       1.26,
+       1.62
+      ],
+      [
+       "alasan",
+       1.62,
+       2.02
+      ],
+      [
+       "Panglima",
+       2.02,
+       2.52
+      ],
+      [
+       "di",
+       2.52,
+       2.62
+      ],
+      [
+       "lapangan",
+       2.62,
+       3.02
+      ],
+      [
+       "tidak",
+       3.02,
+       3.26
+      ],
+      [
+       "selalu",
+       3.26,
+       3.72
+      ],
+      [
+       "menerima",
+       3.72,
+       4.08
+      ],
+      [
+       "perintah",
+       4.08,
+       4.46
+      ],
+      [
+       "raja.",
+       4.46,
+       4.7
+      ]
+     ],
+     "from": 1552,
+     "to": 1700,
+     "words": [
+      {
+       "w": "Tetapi",
+       "from": 1552,
+       "to": 1562
+      },
+      {
+       "w": "Sunzu",
+       "from": 1562,
+       "to": 1572
+      },
+      {
+       "w": "menolak,",
+       "from": 1572,
+       "to": 1586
+      },
+      {
+       "w": "dengan",
+       "from": 1590,
+       "to": 1601
+      },
+      {
+       "w": "alasan",
+       "from": 1601,
+       "to": 1613
+      },
+      {
+       "w": "Panglima",
+       "from": 1613,
+       "to": 1628
+      },
+      {
+       "w": "di",
+       "from": 1628,
+       "to": 1631
+      },
+      {
+       "w": "lapangan",
+       "from": 1631,
+       "to": 1643
+      },
+      {
+       "w": "tidak",
+       "from": 1643,
+       "to": 1650
+      },
+      {
+       "w": "selalu",
+       "from": 1650,
+       "to": 1664
+      },
+      {
+       "w": "menerima",
+       "from": 1664,
+       "to": 1674
+      },
+      {
+       "w": "perintah",
+       "from": 1674,
+       "to": 1686
+      },
+      {
+       "w": "raja.",
+       "from": 1686,
+       "to": 1693
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "turn",
+   "from": 1713,
+   "to": 2032,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Kisah itu menyebut hukuman tetap dilaksanakan, lalu dua pengganti maju memimpin.",
+     "score": 1.0,
+     "file": "out/voice/suntzu/turn_0.wav",
+     "wordsSec": [
+      [
+       "Kisah",
+       0.0,
+       0.3
+      ],
+      [
+       "itu",
+       0.3,
+       0.44
+      ],
+      [
+       "menyebut",
+       0.44,
+       0.76
+      ],
+      [
+       "hukuman",
+       0.76,
+       1.22
+      ],
+      [
+       "tetap",
+       1.22,
+       1.64
+      ],
+      [
+       "dilaksanakan,",
+       1.64,
+       2.22
+      ],
+      [
+       "lalu",
+       2.52,
+       2.74
+      ],
+      [
+       "dua",
+       2.74,
+       2.88
+      ],
+      [
+       "pengganti",
+       2.88,
+       3.36
+      ],
+      [
+       "maju",
+       3.36,
+       3.76
+      ],
+      [
+       "memimpin.",
+       3.76,
+       4.24
+      ]
+     ],
+     "from": 1713,
+     "to": 1846,
+     "words": [
+      {
+       "w": "Kisah",
+       "from": 1713,
+       "to": 1722
+      },
+      {
+       "w": "itu",
+       "from": 1722,
+       "to": 1726
+      },
+      {
+       "w": "menyebut",
+       "from": 1726,
+       "to": 1736
+      },
+      {
+       "w": "hukuman",
+       "from": 1736,
+       "to": 1750
+      },
+      {
+       "w": "tetap",
+       "from": 1750,
+       "to": 1762
+      },
+      {
+       "w": "dilaksanakan,",
+       "from": 1762,
+       "to": 1780
+      },
+      {
+       "w": "lalu",
+       "from": 1789,
+       "to": 1795
+      },
+      {
+       "w": "dua",
+       "from": 1795,
+       "to": 1800
+      },
+      {
+       "w": "pengganti",
+       "from": 1800,
+       "to": 1814
+      },
+      {
+       "w": "maju",
+       "from": 1814,
+       "to": 1826
+      },
+      {
+       "w": "memimpin.",
+       "from": 1826,
+       "to": 1840
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Kini mereka berbelok serempak tanpa tertawa.",
+     "score": 0.987,
+     "file": "out/voice/suntzu/turn_1.wav",
+     "wordsSec": [
+      [
+       "Kini",
+       0.0,
+       0.18
+      ],
+      [
+       "mereka",
+       0.18,
+       0.38
+      ],
+      [
+       "berbelok",
+       0.38,
+       0.9
+      ],
+      [
+       "srempak",
+       0.9,
+       1.38
+      ],
+      [
+       "tanpa",
+       1.38,
+       1.76
+      ],
+      [
+       "tertawa.",
+       1.76,
+       2.14
+      ]
+     ],
+     "from": 1854,
+     "to": 1926,
+     "words": [
+      {
+       "w": "Kini",
+       "from": 1854,
+       "to": 1859
+      },
+      {
+       "w": "mereka",
+       "from": 1859,
+       "to": 1865
+      },
+      {
+       "w": "berbelok",
+       "from": 1865,
+       "to": 1881
+      },
+      {
+       "w": "srempak",
+       "from": 1881,
+       "to": 1895
+      },
+      {
+       "w": "tanpa",
+       "from": 1895,
+       "to": 1907
+      },
+      {
+       "w": "tertawa.",
+       "from": 1907,
+       "to": 1918
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Tertib, tetapi menurutku karena takut.",
+     "score": 0.969,
+     "file": "out/voice/suntzu/turn_2.wav",
+     "wordsSec": [
+      [
+       "tertip",
+       0.0,
+       0.48
+      ],
+      [
+       "tetapi",
+       0.48,
+       1.16
+      ],
+      [
+       "menurutku",
+       1.16,
+       2.0
+      ],
+      [
+       "karena",
+       2.0,
+       2.26
+      ],
+      [
+       "takut",
+       2.26,
+       2.74
+      ]
+     ],
+     "from": 1934,
+     "to": 2019,
+     "words": [
+      {
+       "w": "tertip",
+       "from": 1934,
+       "to": 1948
+      },
+      {
+       "w": "tetapi",
+       "from": 1948,
+       "to": 1969
+      },
+      {
+       "w": "menurutku",
+       "from": 1969,
+       "to": 1994
+      },
+      {
+       "w": "karena",
+       "from": 1994,
+       "to": 2002
+      },
+      {
+       "w": "takut",
+       "from": 2002,
+       "to": 2016
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "end",
+   "from": 2032,
+   "to": 2492,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Ini kisah dalam Shiji yang ditulis jauh sesudah masa Sun Tzu, bukan kepastian setiap kejadiannya.",
+     "score": 0.931,
+     "file": "out/voice/suntzu/end_0.wav",
+     "wordsSec": [
+      [
+       "Ini",
+       0.0,
+       0.24
+      ],
+      [
+       "kisah",
+       0.24,
+       0.72
+      ],
+      [
+       "dalam",
+       0.72,
+       0.92
+      ],
+      [
+       "CG",
+       0.92,
+       1.4
+      ],
+      [
+       "yang",
+       1.4,
+       1.8
+      ],
+      [
+       "ditulis",
+       1.8,
+       2.24
+      ],
+      [
+       "jauh",
+       2.24,
+       2.62
+      ],
+      [
+       "sesudah",
+       2.62,
+       2.98
+      ],
+      [
+       "masa",
+       2.98,
+       3.14
+      ],
+      [
+       "sunjur,",
+       3.14,
+       3.68
+      ],
+      [
+       "bukan",
+       3.82,
+       4.02
+      ],
+      [
+       "kepastian",
+       4.02,
+       4.64
+      ],
+      [
+       "setiap",
+       4.64,
+       4.98
+      ],
+      [
+       "kejadiannya.",
+       4.98,
+       5.6
+      ]
+     ],
+     "from": 2032,
+     "to": 2205,
+     "words": [
+      {
+       "w": "Ini",
+       "from": 2032,
+       "to": 2039
+      },
+      {
+       "w": "kisah",
+       "from": 2039,
+       "to": 2054
+      },
+      {
+       "w": "dalam",
+       "from": 2054,
+       "to": 2060
+      },
+      {
+       "w": "CG",
+       "from": 2060,
+       "to": 2074
+      },
+      {
+       "w": "yang",
+       "from": 2074,
+       "to": 2086
+      },
+      {
+       "w": "ditulis",
+       "from": 2086,
+       "to": 2099
+      },
+      {
+       "w": "jauh",
+       "from": 2099,
+       "to": 2111
+      },
+      {
+       "w": "sesudah",
+       "from": 2111,
+       "to": 2122
+      },
+      {
+       "w": "masa",
+       "from": 2122,
+       "to": 2126
+      },
+      {
+       "w": "sunjur,",
+       "from": 2126,
+       "to": 2143
+      },
+      {
+       "w": "bukan",
+       "from": 2147,
+       "to": 2153
+      },
+      {
+       "w": "kepastian",
+       "from": 2153,
+       "to": 2171
+      },
+      {
+       "w": "setiap",
+       "from": 2171,
+       "to": 2182
+      },
+      {
+       "w": "kejadiannya.",
+       "from": 2182,
+       "to": 2200
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Disiplin atau kekejaman, apakah kepatuhan sebanding dengan harga nyawa?",
+     "score": 1.0,
+     "file": "out/voice/suntzu/end_1.wav",
+     "wordsSec": [
+      [
+       "Disiplin",
+       0.0,
+       0.64
+      ],
+      [
+       "atau",
+       0.64,
+       0.84
+      ],
+      [
+       "kekejaman",
+       0.84,
+       1.56
+      ],
+      [
+       "apakah",
+       1.56,
+       2.2
+      ],
+      [
+       "kepatuhan",
+       2.2,
+       2.76
+      ],
+      [
+       "sebanding",
+       2.76,
+       3.38
+      ],
+      [
+       "dengan",
+       3.38,
+       3.62
+      ],
+      [
+       "harga",
+       3.62,
+       4.08
+      ],
+      [
+       "nyawa?",
+       4.08,
+       4.4
+      ]
+     ],
+     "from": 2213,
+     "to": 2350,
+     "words": [
+      {
+       "w": "Disiplin",
+       "from": 2213,
+       "to": 2232
+      },
+      {
+       "w": "atau",
+       "from": 2232,
+       "to": 2238
+      },
+      {
+       "w": "kekejaman",
+       "from": 2238,
+       "to": 2260
+      },
+      {
+       "w": "apakah",
+       "from": 2260,
+       "to": 2279
+      },
+      {
+       "w": "kepatuhan",
+       "from": 2279,
+       "to": 2296
+      },
+      {
+       "w": "sebanding",
+       "from": 2296,
+       "to": 2314
+      },
+      {
+       "w": "dengan",
+       "from": 2314,
+       "to": 2321
+      },
+      {
+       "w": "harga",
+       "from": 2321,
+       "to": 2335
+      },
+      {
+       "w": "nyawa?",
+       "from": 2335,
+       "to": 2345
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Dialog ini didramatisasi, bukan kutipan percakapan aslinya.",
+     "score": 0.98,
+     "file": "out/voice/suntzu/end_2.wav",
+     "wordsSec": [
+      [
+       "Dialog",
+       0.0,
+       0.42
+      ],
+      [
+       "ini",
+       0.42,
+       0.6
+      ],
+      [
+       "di",
+       0.6,
+       0.82
+      ],
+      [
+       "dramatisasi,",
+       0.82,
+       1.66
+      ],
+      [
+       "bukan",
+       1.96,
+       2.22
+      ],
+      [
+       "putipan",
+       2.22,
+       2.8
+      ],
+      [
+       "percakapan",
+       2.8,
+       3.4
+      ],
+      [
+       "aslinya.",
+       3.4,
+       3.98
+      ]
+     ],
+     "from": 2358,
+     "to": 2478,
+     "words": [
+      {
+       "w": "Dialog",
+       "from": 2358,
+       "to": 2371
+      },
+      {
+       "w": "ini",
+       "from": 2371,
+       "to": 2376
+      },
+      {
+       "w": "di",
+       "from": 2376,
+       "to": 2383
+      },
+      {
+       "w": "dramatisasi,",
+       "from": 2383,
+       "to": 2408
+      },
+      {
+       "w": "bukan",
+       "from": 2417,
+       "to": 2425
+      },
+      {
+       "w": "putipan",
+       "from": 2425,
+       "to": 2442
+      },
+      {
+       "w": "percakapan",
+       "from": 2442,
+       "to": 2460
+      },
+      {
+       "w": "aslinya.",
+       "from": 2460,
+       "to": 2477
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -58,7 +58,7 @@ export const SunTzuScene:React.FC<{timing:Timing;scene:string;index:number}>=({t
  else if(i===5) {const mp=messenger(q);cam=shot(q,[{end:.23,a:[-13,2.5,4.5],b:[-13.2,2.3,4],t:[-13,1.6,-.7]},{end:.65,a:offset(mp,1.4,2.3,5.7),b:offset(mp,1,2,5),t:offset(mp,0,1.1,0)},{end:.77,a:offset(mp,.2,1.7,2.7),b:offset(mp,0,1.65,2.5),t:offset(mp,0,1.5,0)},{end:1,a:[1,2.9,6.5],b:[2.3,3.3,8],t:[-.8,1.4,-1]}]);}
  else if(i===7)cam=shot(q,[{end:.2,a:[2,8,16],b:[0,5,12],t:[0,1.5,1]},{end:.47,a:[-12.9,2.4,5.7],b:[-13.2,2.3,5.2],t:[-13,1.65,.1]},{end:.6,a:[-13,2.5,2.3],b:[-13.1,2.4,2.1],t:[-13.5,1.8,-.9]},{end:1,a:[-12.8,2.8,6.4],b:[-12.2,3.5,9],t:[-13,1.6,-.1]}]);
  else if(i===6&&q<.19)cam=glide(q/.19,[-15,2.9,6],[-14.7,3.2,5.5],[-16.1,2.2,-3.2],48);
- else cam=shot(q,[{end:.23,a:[.4,3.2,9],b:[0,2.8,8],t:[0,1.45,-.2]},{end:.39,a:[.5,2.6,6],b:[.2,2.5,5.7],t:[0,1.45,-.4]},{end:.59,a:[.5,3.3,10],b:[-.4,3.1,9.4],t:[0,1.3,1]},{end:.74,a:i===4?[-.55,1.95,5.7]:[-.8,2,4.1],b:i===4?[-.4,1.9,5.4]:[-.65,1.95,3.9],t:i===4?[-.5,1.7,3.4]:[-.75,1.65,1.3],fov:48},{end:1,a:[.4,3.1,9],b:[1,3.7,11],t:[0,1.4,1.4]}]);
+ else cam=shot(q,[{end:.23,a:[.4,3.2,9],b:[0,2.8,8],t:[0,1.45,-.2]},{end:.39,a:[.5,2.6,6],b:[.2,2.5,5.7],t:[0,1.45,-.4]},{end:.59,a:[.5,3.3,10],b:[-.4,3.1,9.4],t:[0,1.3,1]},{end:.74,a:i===4?[-.55,1.95,5.7]:[-.25,2.05,2.85],b:i===4?[-.4,1.9,5.4]:[-.1,2.0,2.65],t:i===4?[-.5,1.7,3.4]:[0,1.5,.6],fov:48},{end:1,a:[.4,3.1,9],b:[1,3.7,11],t:[0,1.4,1.4]}]);
  if(i===4&&f>=death-2&&f<death+6)cam.p[0]+=(f%2?1:-1)*.035*(1-(f-death+2)/8);
  const actor=(p:BeanParams,at:V,key:string,extra:Partial<BeanParams>={},walk=0,spear=false,voice?:string,rot=0)=><Actor key={key} p={p} at={at} f={f} cam={cam.p} t={t} s={s} extra={extra} walk={walk} spear={spear} voice={voice} turn={rot}/>;
  const laughed=(i===2||i===3)&&f>=(i===3?wordAt(t,s,'tawa',d*.5):training)-2;
@@ -72,7 +72,7 @@ export const SunTzuScene:React.FC<{timing:Timing;scene:string;index:number}>=({t
  <hemisphereLight args={['#fff0da','#8d8069',1.6]}/><directionalLight position={[-15,25,16]} color='#ffdfb2' intensity={2.6}/><directionalLight position={[0,5,15]} intensity={.65}/>
  <pointLight position={[0,3,-11]} intensity={18} distance={14} decay={1.3} color='#ffe3b7'/><pointLight position={[-13,3,-.5]} intensity={15} distance={12} color='#ffe1b5'/>
  <Palace onAnchors={setAnchors}/><Atmosphere f={f}/>
- {i===0?<>{actor(SZ_SUN,offset(hallSun,-.5,0,-.7),'sun',{headTilt:Math.sin(f*.05)*3,armR:[40,-42]})}{actor(SZ_KING,[.9,.99,-13.5],'king',{expr:'smug',armR:q>.65?[65,-45]:[15,-20]})}</>:<>
+ {i===0?<>{actor(SZ_SUN,offset(hallSun,.12,0,-1.55),'sun',{headTilt:Math.sin(f*.05)*3,armR:[40,-42]})}{actor(SZ_KING,[1.05,.99,-13.5],'king',{expr:'smug',armR:q>.65?[65,-45]:[15,-20]})}</>:<>
  {actor(SZ_SUN,aSun,'sun',{armR:sunArm as [number,number],armL:i===3&&f>=left-2?[65,-40]:[-15,-18],expr:i===4?'worried':'neutral'})}
  {i!==7&&Array.from({length:10},(_,n)=>{const row=Math.floor(n/2),side=n%2?1:-1;const rot=i===6?smooth((f-turn+2)/25):0;const move=i===1?1-smooth((q-.24)/.2):0;const p:V=[side*(1.65+row*.13)+move*side*.5,.14,-2.6+row*1.55];return actor({...SZ_CAP_A,robe:n%2?'#819488':'#9d8178',torso:n%2?'#819488':'#9d8178',sleeves:n%2?'#819488':'#9d8178',seed:220+n},p,'extra'+n,{headTilt:laughed?Math.sin(f*.3+n)*5:0,expr:laughed?'happy':'neutral',armR:[28,-42]},move>0&&move<1?1:rot>0&&rot<1?.6:0,true,undefined,rot)})}
  {i!==7&&[SZ_CAP_A,SZ_CAP_B].map((p,n)=>{const exit=i===6?smooth(q/.16):0,approach=i===1?1-smooth((q-.23-n*.03)/.16):0;const at:V=[(n?1:-1)*(.85+exit*4+approach*1.3),.14,n?2.45:1.1];return q<.19||i!==6?actor(p,at,'cap'+n,{expr:i>=4?'scared':laughed?'laugh':'neutral',mouthOpen:laughed?.6+.25*Math.sin(f*.35):0,headTilt:laughed?Math.sin(f*.3+n)*5:0,armR:[30,-40]},approach>0&&approach<1||exit>0&&exit<1?1:0,true):null})}
@@ -81,7 +81,7 @@ export const SunTzuScene:React.FC<{timing:Timing;scene:string;index:number}>=({t
  {(i===5||i===7)&&actor(SZ_KING,[-13.7,.44,-.9],'king',{expr:i===7?'sad':'shock',armR:i===5?[76,-56]:[12,-15],lean:i===5?Math.sin(clamp(q/.14)*Math.PI)*8:0})}
  {i===5&&actor(SZ_MESSENGER,messenger(q),'messenger',{expr:'worried',armL:q>.66?[55,-38]:[-15,-18]},q>.22&&q<.68?1:0)}
  </>}
- {(i!==5||q>.78)&&actor(SZ_DODI,offset(hostBase,-.55,0,-.2),'dodi',{expr:i>=4?'worried':'neutral'},0,false,'dodi')}
+ {(i!==5||q>.78)&&actor(SZ_DODI,offset(hostBase,i===0?-.78:-.55,0,-.2),'dodi',{expr:i>=4?'worried':'neutral'},0,false,'dodi')}
  {(i!==5||q>.78)&&actor(SZ_ARA,offset(hostBase,.62,0,-1.6),'ara',{expr:i>=4?'sad':'think',headTilt:i===7?Math.sin(f*.05)*-3:0},0,false,'ara')}
  </ThreeCanvas>
  <div style={{position:'absolute',top:90,left:70,right:70,color:'#302f31',background:'#f9eedbdc',padding:'20px 25px',borderRadius:18,border:'2px solid #b49b71',fontWeight:850,fontSize:36,lineHeight:1.2}}>{String(i+1).padStart(2,'0')} / {titles[i]}</div>

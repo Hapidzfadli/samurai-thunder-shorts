@@ -1,6 +1,6 @@
 # Sun Tzu — kontrak audio
 
-Naskah: 8 adegan, 19 kalimat utuh, dodi + ara standar. Timing sekarang **ESTIMASI** 106,767 detik; akan ditimpa aktual setelah VoxCPM2 selesai. Tidak ada klaim audio jadi saat catatan ini ditulis.
+Naskah: 8 adegan, 19 kalimat utuh, dodi + ara standar (VoxCPM2 48 kHz CUDA + Whisper word alignment, skor 0.93–1.00). Timing sekarang **AKTUAL** 89,167 detik (`2,675` frame @ 30 fps); master audio `public/audio/suntzu_master.mp3` (-14 LUFS, mean `-17.2 dB`, peak `-1.6 dB`) dan video final `exports/sun-tzu-latihan-istana.mp4` telah selesai dirender di GPU NVIDIA Tesla T4 dan lulus seluruh verifikasi QA.
 
 Urutan scene: `hook`, `leaders`, `first`, `second`, `sentence`, `stop`, `turn`, `end`. Schema sama dengan kelelawar_timing.json: fps/totalDurationSec/totalFrames/order/scenes/lines/events/captions. `scenes[name].startFrame` global; durationInFrames durasi. Baris, kata dan event adalah frame LOKAL scene; captions frame GLOBAL.
 
