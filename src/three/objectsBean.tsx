@@ -15,7 +15,7 @@ export type BeanParams = {
   skin?: string;
   torso?: string;
   pants?: string;
-  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping" | "brodie" | "steel90" | "headband" | "officer" | "pocong" | "kunti";
+  hat?: "none" | "cap" | "bowler" | "bonnet" | "helmet" | "tophat" | "wig" | "kerchief" | "peci" | "policecap" | "turban" | "crown" | "tallturban" | "guardhelmet" | "iket" | "sanggul" | "caping" | "brodie" | "steel90" | "headband" | "officer" | "bicorne" | "pocong" | "kunti";
   pocong?: boolean; // comedic Indonesian wrapped kain kafan shroud with top knot & ties
   kunti?: boolean; // comedic floating long-haired ghost with flowing scalloped white gown
   tired?: boolean; // subtle tired dark under-eye bags (overworked Friday-night ghosts!)
@@ -912,6 +912,25 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     poly(c, [[202, 142], [398, 142], [398, 158], [202, 158]], "#1c1816", INKC, 5);
     poly(c, [[208, 158], [392, 158], [374, 182], [226, 182]], "#141214", INKC, 6); // visor
     poly(c, [[284, 102], [316, 102], [308, 126], [292, 126]], "#f2c230", INKC, 3); // gold emblem
+  } else if (hat === "bicorne") {
+    // Topi bicorne khas Napoleon: lebar melengkung, dipakai melintang, dengan kokade tiga warna
+    poly(c, [[148, 154], [172, 116], [232, 94], [300, 84], [368, 94], [428, 116], [452, 154], [424, 144], [374, 128], [300, 120], [226, 128], [176, 144]], hatCol, INKC, 7);
+    poly(c, [[188, 124], [412, 124], [408, 136], [192, 136]], "#d8aa3a", INKC, 4);
+    c.beginPath();
+    c.arc(356, 120, 17, 0, Math.PI * 2);
+    c.fillStyle = "#d62828";
+    c.fill();
+    c.lineWidth = 4;
+    c.strokeStyle = INKC;
+    c.stroke();
+    c.beginPath();
+    c.arc(356, 120, 11, 0, Math.PI * 2);
+    c.fillStyle = "#fffaf0";
+    c.fill();
+    c.beginPath();
+    c.arc(356, 120, 5, 0, Math.PI * 2);
+    c.fillStyle = "#2a4a9a";
+    c.fill();
   } else if (hat === "pocong") {
     // White kain kafan wrap framing the expressive face + iconic tied bunny-ear topknot!
     const shCol = p.hatColor ?? "#f5f2e6";
