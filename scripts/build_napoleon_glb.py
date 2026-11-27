@@ -319,8 +319,7 @@ def build_L2(ox):
     CY("PipaKompor", (ox - 5.2, -2.6, 2.4), 0.12, 2.4, "Iron_Dark", c, segs=8)
     BALL("ApiKompor", (ox - 5.2, -2.6, 1.15), 0.2, "Flame", c, scale=(1, 1, 1.2), sub=1)
     for sx in (-1, 1):
-        B(f"KursiLipat{sx}", (ox + sx * 1.4, -1.5, 0.85), (0.8, 0.8, 0.1), "Velvet_Blue", c)
-        B(f"SandaranLipat{sx}", (ox + sx * 1.4, -1.85, 1.35), (0.8, 0.08, 0.9), "Velvet_Blue", c)
+        pass  # kursi lipat dihapus: menghalangi kamera
     FLAG("BenderaTenda", ox - 5.0, 4.4, 0.1, "fr", c)
     # peta Eropa di dinding & lukisan
     S.add_planar_quad("PetaDinding", (ox, 4.9, 1.9), 3.2, 2.0, "-Y", "Map_Table", c)

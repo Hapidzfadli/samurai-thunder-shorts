@@ -335,11 +335,11 @@ export const SceneNpTilsit: React.FC = () => {
   const sign = wordF("tilsit", 0, "menandatangani");
   const flyEnd = 84;
   const cam = f < flyEnd
-    ? pathCam(f, 0, flyEnd, [bl(1.2, -7.5, 3.5), bl(1.2, -4.6, 3.1), bl(1.5, -3.0, 2.6)], [bl(0.4, 0.6, 2.3), bl(0.2, 0.8, 2.2), bl(-0.1, 0.8, 2.0)], 44, 42)
+    ? pathCam(f, 0, flyEnd, [bl(1.2, -7.5, 3.5), bl(1.6, -4.6, 3.1), bl(3.2, -5.2, 3.2)], [bl(0.4, 0.6, 2.3), bl(0.5, 0.4, 1.9), bl(0.5, 0.2, 1.6)], 44, 50)
     : shotCam(f - flyEnd, [
-        { to: L2.from - flyEnd - 10, p0: bl(1.9, -2.95, 2.25), p1: bl(1.6, -2.7, 2.2), l0: bl(-0.2, 0.8, 1.95), fov: 42, fov1: 38 },
-        { to: L4.from - flyEnd, p0: bl(1.4, -2.7, 2.2), p1: bl(1.2, -2.5, 2.2), l0: bl(-0.3, 0.7, 2.0), fov: 36, fov1: 34 },
-        { to: dur, p0: bl(1.2, -2.5, 2.2), p1: bl(1.9, -2.95, 2.3), l0: bl(-0.3, 0.7, 2.0), fov: 34, fov1: 40 },
+        { to: L2.from - flyEnd - 10, p0: bl(3.2, -5.2, 3.2), p1: bl(3.0, -4.9, 3.1), l0: bl(0.5, 0.2, 1.6), fov: 50, fov1: 46 },
+        { to: L4.from - flyEnd, p0: bl(3.0, -4.9, 3.1), p1: bl(2.7, -4.5, 3.0), l0: bl(0.4, 0.3, 1.6), fov: 46, fov1: 42 },
+        { to: dur, p0: bl(2.7, -4.5, 3.0), p1: bl(3.4, -5.4, 3.2), l0: bl(0.4, 0.3, 1.6), fov: 42, fov1: 50 },
       ]);
   const mK = mouth("tilsit", "dodi", f, [0]);
   const mA = mouth("tilsit", "ara", f);
@@ -366,8 +366,8 @@ export const SceneNpTilsit: React.FC = () => {
   return (
     <AbsoluteFill>
       <Stage cam={cam} active="L1_Rakit" focus={bl(0, 0, 2)} interior pts={pts}>
-        <BeanCard position={bl(-0.5, 1.55, 0.92)} height={H_K} params={kaisar} />
-        <BeanCard position={bl(1.5, -0.85, 0.92)} height={H_A} params={ajudan} />
+        <BeanCard position={bl(-0.7, 1.7, 0.92)} height={H_K} params={kaisar} />
+        <BeanCard position={bl(1.5, -1.5, 0.92)} height={H_A} params={ajudan} />
       </Stage>
       <Grade warm={0.3} />
       <Insert kind="write" from={sign - 6} len={46} />
@@ -386,9 +386,9 @@ export const SceneNpIde: React.FC = () => {
   const dur = DUR("ide");
   const L0 = lineAt("ide", 0), L1 = lineAt("ide", 1), L2 = lineAt("ide", 2), L3 = lineAt("ide", 3);
   const cam = shotCam(f, [
-    { to: L1.from, p0: bl(3.6, -4.3, 2.3, OX.L2), p1: bl(3.2, -4.0, 2.2, OX.L2), l0: bl(-0.3, 1.8, 1.4, OX.L2), fov: 40, fov1: 38 },
-    { to: L3.from, p0: bl(2.4, -3.0, 2.2, OX.L2), p1: bl(1.8, -2.4, 2.1, OX.L2), l0: bl(-0.4, 1.4, 1.9, OX.L2), fov: 34, fov1: 30 },
-    { to: dur, p0: bl(2.0, -2.6, 2.2, OX.L2), p1: bl(3.4, -4.2, 2.4, OX.L2), l0: bl(-0.4, 1.4, 1.9, OX.L2), fov: 30, fov1: 38 },
+    { to: L1.from, p0: bl(4.4, -4.9, 2.7, OX.L2), p1: bl(4.1, -4.6, 2.6, OX.L2), l0: bl(0.3, 0.5, 1.45, OX.L2), fov: 52, fov1: 48 },
+    { to: L3.from, p0: bl(4.1, -4.6, 2.6, OX.L2), p1: bl(3.6, -4.1, 2.5, OX.L2), l0: bl(0.3, 0.4, 1.5, OX.L2), fov: 46, fov1: 42 },
+    { to: dur, p0: bl(3.6, -4.1, 2.5, OX.L2), p1: bl(4.4, -4.9, 2.7, OX.L2), l0: bl(0.3, 0.4, 1.5, OX.L2), fov: 42, fov1: 52 },
   ]);
   const mK = mouth("ide", "dodi", f);
   const mA = mouth("ide", "ara", f);
@@ -417,7 +417,7 @@ export const SceneNpIde: React.FC = () => {
     <AbsoluteFill>
       <Stage cam={cam} active="L2_Tenda" focus={bl(0, 0, 1.5, OX.L2)} interior pts={pts}>
         <BeanCard position={bl(-0.9, 2.0, 0.27, OX.L2)} height={H_K} params={kaisar} />
-        <BeanCard position={bl(1.7, -1.3, 0.27, OX.L2)} height={H_A} params={ajudan} />
+        <BeanCard position={bl(1.6, -1.5, 0.27, OX.L2)} height={H_A} params={ajudan} />
       </Stage>
       <Grade warm={0.3} />
       <Chip from={4} to={L0.from + 60} top={170} color="#7a1f1f" size={50}>TENDA MARKAS · TILSIT</Chip>
@@ -436,9 +436,9 @@ export const SceneNpTernak: React.FC = () => {
   const dur = DUR("ternak");
   const L0 = lineAt("ternak", 0), L1 = lineAt("ternak", 1), L2 = lineAt("ternak", 2), L3 = lineAt("ternak", 3);
   const cam = shotCam(f, [
-    { to: L1.from, p0: bl(-7, -13.5, 2.6, OX.L3), p1: bl(-5, -11, 2.4, OX.L3), l0: bl(0.5, 0, 2.2, OX.L3), fov: 40, fov1: 38 },
-    { to: L3.from, p0: bl(-4.2, -9.4, 1.8, OX.L3), p1: bl(-2.6, -8.0, 1.7, OX.L3), l0: bl(1.1, -2.6, 1.5, OX.L3), fov: 34, fov1: 30 },
-    { to: dur, p0: bl(-3.4, -9.0, 2.0, OX.L3), p1: bl(-7, -14, 2.8, OX.L3), l0: bl(1.0, -2.4, 1.7, OX.L3), fov: 32, fov1: 40, ease: "out" },
+    { to: L1.from, p0: bl(-7, -13.5, 2.6, OX.L3), p1: bl(-5, -11, 2.4, OX.L3), l0: bl(0.5, -1, 2.0, OX.L3), fov: 50, fov1: 46 },
+    { to: L3.from, p0: bl(-3.6, -10.2, 2.0, OX.L3), p1: bl(-2.0, -8.8, 1.9, OX.L3), l0: bl(0.9, -2.8, 1.4, OX.L3), fov: 46, fov1: 40 },
+    { to: dur, p0: bl(-2.0, -8.8, 1.9, OX.L3), p1: bl(-7, -14, 2.8, OX.L3), l0: bl(0.9, -2.8, 1.5, OX.L3), fov: 40, fov1: 50, ease: "out" },
   ]);
   const walk = ramp(f, 4, 70);
   const mA = mouth("ternak", "ara", f);
@@ -595,15 +595,19 @@ export const SceneNpKereta: React.FC = () => {
   const t = f / 30;
   const dur = DUR("kereta");
   const L0 = lineAt("kereta", 0), L1 = lineAt("kereta", 1), L2 = lineAt("kereta", 2), L3 = lineAt("kereta", 3);
-  const inside = f >= L0.to - 4;
+  const inside = false;
   const cam = inside
     ? shotCam(f - (L0.to - 4), [
-        { to: L2.from - (L0.to - 4), p0: bl(1.25, 0.05, 2.45, OX.L5), p1: bl(1.35, 0.1, 2.45, OX.L5), l0: bl(-1.3, 0.1, 2.0, OX.L5), fov: 50, fov1: 46 },
-        { to: dur, p0: bl(1.35, 0.1, 2.45, OX.L5), p1: bl(1.2, 0.2, 2.5, OX.L5), l0: bl(-1.3, 0.1, 2.0, OX.L5), fov: 46, fov1: 52 },
+        { to: L2.from - (L0.to - 4), p0: bl(1.5, 0.1, 2.3, OX.L5), p1: bl(1.6, 0.15, 2.3, OX.L5), l0: bl(-0.6, 0.0, 1.7, OX.L5), fov: 70, fov1: 64 },
+        { to: dur, p0: bl(1.6, 0.15, 2.3, OX.L5), p1: bl(1.5, 0.2, 2.35, OX.L5), l0: bl(-0.6, 0.0, 1.7, OX.L5), fov: 64, fov1: 72 },
       ])
-    : shotCam(f, [{ to: L0.to, p0: bl(-9, -12, 2.6, OX.L5), p1: bl(-6, -9, 2.4, OX.L5), l0: bl(0, 0, 2.2, OX.L5), fov: 38, fov1: 36 }]);
+    : shotCam(f, [
+        { to: L0.to, p0: bl(-9, -12, 2.6, OX.L5), p1: bl(-6, -9, 2.4, OX.L5), l0: bl(0, 0, 2.2, OX.L5), fov: 44, fov1: 42 },
+        { to: L2.from, p0: bl(-8.4, -9.6, 2.4, OX.L5), p1: bl(-7.6, -8.8, 2.2, OX.L5), l0: bl(-4.2, -3.2, 1.5, OX.L5), fov: 46, fov1: 42 },
+        { to: dur, p0: bl(-7.6, -8.8, 2.2, OX.L5), p1: bl(-9.5, -11.5, 2.8, OX.L5), l0: bl(-4.2, -3.2, 1.5, OX.L5), fov: 42, fov1: 50 },
+      ]);
   const run = ramp(f, 4, Math.max(10, L0.to - 20));
-  const kPos: Vec3 = inside ? bl(-0.9, 0.35, 1.25, OX.L5) : bl(lerpN(-9, -1.6, run), -3.6 + 2.6 * run, 0.0, OX.L5);
+  const kPos: Vec3 = f < L0.to ? bl(lerpN(-9, -1.6, run), -3.6 + 2.6 * run, 0.0, OX.L5) : bl(-3.8, -3.2, 0.0, OX.L5);
   const mK = mouth("kereta", "dodi", f);
   const mA = mouth("kereta", "ara", f);
   const kaisar = bean(KAISAR, {
@@ -615,18 +619,18 @@ export const SceneNpKereta: React.FC = () => {
     armR: inside ? [60, -120] : undefined,
     headTilt: inside ? Math.sin(t * 8) * 6 : 0,
   });
-  const ajudan = bean(AJUDAN, { ...idle(t, 3), expr: speaking("kereta", 3, f) ? "happy" : "happy", mouthOpen: mA, headTilt: nod("kereta", "ara", f), armL: speaking("kereta", 3, f) ? [-120, -70] : [-8, -10] });
+  const ajudan = bean(AJUDAN, { ...idle(t, 3), expr: "happy", mouthOpen: mA, headTilt: nod("kereta", "ara", f), armL: speaking("kereta", 3, f) ? [-120, -70] : [-8, -10] });
   const win = L2.from - 40;
   const pts: PL[] = [{ p: bl(0, 0, 2.7, OX.L5), i: 30 }];
   return (
     <AbsoluteFill>
       <Stage cam={cam} active="L5_Kereta" focus={bl(0, 0, 2, OX.L5)} interior={inside} pts={inside ? pts : []}>
         <BeanCard position={kPos} height={inside ? 1.55 : H_K} params={kaisar} />
-        {inside && <BeanCard position={bl(0.75, -0.4, 1.25, OX.L5)} height={1.5} params={ajudan} />}
-        {inside && (
-          <Swarm n={9} from={bl(0.0, -2.2, 2.2, OX.L5)} to={bl(-0.3, 0.2, 1.3, OX.L5)} t0={win} t1={win + 80} ring={0.9} seed={11} size={0.46} around={0.1} />
+        {f >= L0.to && <BeanCard position={bl(-5.6, -3.8, 0.0, OX.L5)} height={H_A} params={ajudan} />}
+        {f >= L0.to && (
+          <Swarm n={16} from={bl(-9, -3.5, 0, OX.L5)} to={bl(-3.8, -3.2, 0.05, OX.L5)} t0={L1.from} t1={L2.from + 40} ring={1.5} seed={11} size={0.62} around={0.2} />
         )}
-        {!inside && <Swarm n={12} from={bl(-12, -4.5, 0, OX.L5)} to={bl(-3.5, -1.5, 0, OX.L5)} t0={0} t1={L0.to} spread={1.5} ring={1.6} seed={13} size={0.7} />}
+        {f < L0.to && <Swarm n={12} from={bl(-12, -4.5, 0, OX.L5)} to={bl(-3.5, -1.5, 0, OX.L5)} t0={0} t1={L0.to} spread={1.5} ring={1.6} seed={13} size={0.7} />}
       </Stage>
       <Grade />
       <Chip from={4} to={L0.to - 10} top={170} color="#1e3f8a" size={50}>KABUR KE KERETA</Chip>
@@ -650,9 +654,9 @@ export const SceneNpAkhir: React.FC = () => {
   const L0 = lineAt("akhir", 0), L1 = lineAt("akhir", 1), L2 = lineAt("akhir", 2), L3 = lineAt("akhir", 3);
   const last = wordF("akhir", 3, "lapar");
   const cam = shotCam(f, [
-    { to: L2.from, p0: bl(3.4, -4.3, 2.3, OX.L2), p1: bl(2.8, -3.8, 2.2, OX.L2), l0: bl(-0.4, 1.6, 1.6, OX.L2), fov: 36, fov1: 32 },
-    { to: last - 10, p0: bl(2.8, -3.8, 2.2, OX.L2), p1: bl(2.0, -3.0, 2.2, OX.L2), l0: bl(-0.5, 1.6, 1.9, OX.L2), fov: 32, fov1: 26 },
-    { to: dur, p0: bl(1.6, -2.7, 2.35, OX.L2), p1: bl(1.2, -2.3, 2.45, OX.L2), l0: bl(-0.6, 1.7, 2.35, OX.L2), fov: 26, fov1: 22, ease: "out" },
+    { to: L2.from, p0: bl(4.4, -4.9, 2.7, OX.L2), p1: bl(4, -4.5, 2.6, OX.L2), l0: bl(0.3, 0.5, 1.5, OX.L2), fov: 52, fov1: 46 },
+    { to: last - 10, p0: bl(4, -4.5, 2.6, OX.L2), p1: bl(3.4, -3.9, 2.6, OX.L2), l0: bl(-0.1, 0.9, 1.7, OX.L2), fov: 46, fov1: 38 },
+    { to: dur, p0: bl(3.4, -3.9, 2.6, OX.L2), p1: bl(2.9, -3.3, 2.6, OX.L2), l0: bl(-0.5, 1.6, 2.3, OX.L2), fov: 38, fov1: 30, ease: "out" },
   ]);
   const mK = mouth("akhir", "dodi", f, [2, 3]);
   const mA = mouth("akhir", "ara", f);
@@ -676,14 +680,14 @@ export const SceneNpAkhir: React.FC = () => {
     armL: speaking("akhir", 1, f) ? [-110 - Math.sin(f * 0.7) * 10, -130] : [-8, -10],
   });
   const kPos: Vec3 = bl(-0.7, 1.7, 0.27, OX.L2);
-  const hat: Vec3 = [kPos[0] + 0.03, kPos[1] + 2.0 * 0.98, kPos[2] + 0.04];
+  const hat: Vec3 = [kPos[0] + 0.03, kPos[1] + 1.78, kPos[2] + 0.04];
   const rab: Vec3 = lerpV([hat[0] + 1.6, hat[1] + 1.4, hat[2] - 0.4], hat, land);
   const pts: PL[] = [{ p: bl(0, 0, 4.0, OX.L2), i: 28 }, { p: bl(1.4, 1.0, 2.1, OX.L2), i: 22 }, { p: bl(-5.2, -2.6, 1.3, OX.L2), i: 14 }, { p: bl(-3.0, -3.4, 1.8, OX.L2), i: 10 }];
   return (
     <AbsoluteFill>
       <Stage cam={cam} active="L2_Tenda" focus={bl(0, 0, 1.5, OX.L2)} interior night pts={pts}>
         <BeanCard position={kPos} height={H_K} params={kaisar} />
-        <BeanCard position={bl(1.6, -0.6, 0.27, OX.L2)} height={H_A} params={ajudan} />
+        <BeanCard position={bl(-2.3, 0.2, 0.27, OX.L2)} height={H_A} params={ajudan} />
         {land > 0 && <RabbitCard position={rab} size={0.5} shadow={false} params={{ pose: land < 1 ? "hop" : "sit", expr: land >= 1 ? "kenyang" : "polos", mouth: 0.3 }} />}
         <RabbitCard position={bl(-3.4, -1.4, 0.27, OX.L2)} size={0.6} params={{ pose: "sit", expr: "kenyang" }} />
         <RabbitCard position={bl(2.8, 3.0, 0.27, OX.L2)} size={0.55} flip params={{ pose: "sit", expr: "kenyang", fur: "#cdb594" }} />
