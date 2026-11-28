@@ -30,6 +30,18 @@ export const runPose = (f: number, o: { amp?: number; dir?: number; cadence?: nu
   };
 };
 
+/** jalur sebagai fungsi frame → [x, y] Blender */
+export type PathFn = (f: number) => [number, number];
+/** jalur lurus dari (x0,y0) ke arah (x1,y1) dengan kecepatan m/frame; terus melaju melewati titik akhir */
+export const linePath = (x0: number, y0: number, x1: number, y1: number, speed: number, start = 0): PathFn => {
+  const L = Math.hypot(x1 - x0, y1 - y0) || 1;
+  const ux = (x1 - x0) / L, uy = (y1 - y0) / L;
+  return (f) => { const d = Math.max(0, f - start) * speed; return [x0 + ux * d, y0 + uy * d]; };
+};
+export const velOf = (p: PathFn, f: number): [number, number] => {
+  const a = p(f + 1), b = p(f - 1);
+  return [(a[0] - b[0]) / 2, (a[1] - b[1]) / 2];
+};
 /** jalur lari melingkar/elips (koordinat Blender). speed = radian per frame. */
 export type LoopPath = { cx: number; cy: number; rx: number; ry: number; speed: number; phase?: number };
 export const loopAt = (p: LoopPath, f: number): [number, number] => {
@@ -49,14 +61,15 @@ export const screenDir = (cam: Cam, vel: [number, number]): number => {
 };
 
 /** pengejar: tiap kelinci menapak jalur target dengan jeda (menyusul jejak), melompat-lompat. */
-export const ChaseRabbits: React.FC<{ path: LoopPath; f: number; n: number; cam: Cam; ox?: number; gap?: number; size?: number; lead?: number }> = ({ path, f, n, cam, ox = 0, gap = 3, size = 0.78, lead = 3 }) => {
+export const ChaseRabbits: React.FC<{ path: LoopPath | PathFn; f: number; n: number; cam: Cam; ox?: number; gap?: number; size?: number; lead?: number }> = ({ path, f, n, cam, ox = 0, gap = 3, size = 0.78, lead = 3 }) => {
   const FURS = ["#f1ece2", "#f1ece2", "#cdb594", "#e8dccb", "#8a6a4a", "#f6f2ea"];
   return (
     <>
       {Array.from({ length: n }, (_, i) => {
         const ff = f - lead - i * gap - (i % 3) * 2;
-        const [x, y] = loopAt(path, ff);
-        const v = velAt(path, ff);
+        const P: PathFn = typeof path === "function" ? path : (fr) => loopAt(path, fr);
+        const [x, y] = P(ff);
+        const v = velOf(P, ff);
         const side = ((i * 37) % 7 - 3) * 0.28;
         const jump = Math.abs(Math.sin((f + i * 7) * 0.42)) * 0.38;
         const d = screenDir(cam, v);
@@ -75,11 +88,11 @@ export const ChaseRabbits: React.FC<{ path: LoopPath; f: number; n: number; cam:
 };
 
 /** debu di jejak kaki: bola-bola abu yang membesar dan memudar */
-export const DustTrail: React.FC<{ path: LoopPath; f: number; ox?: number; count?: number; color?: string }> = ({ path, f, ox = 0, count = 8, color = "#cdb89a" }) => (
+export const DustTrail: React.FC<{ path: LoopPath | PathFn; f: number; ox?: number; count?: number; color?: string }> = ({ path, f, ox = 0, count = 8, color = "#cdb89a" }) => (
   <>
     {Array.from({ length: count }, (_, i) => {
       const age = i * 3;
-      const [x, y] = loopAt(path, f - 2 - age);
+      const [x, y] = typeof path === "function" ? path(f - 2 - age) : loopAt(path, f - 2 - age);
       const k = age / (count * 3);
       return (
         <mesh key={i} position={toThree(x, y, 0.12 + k * 0.4, ox)}>
@@ -118,4 +131,23 @@ export const chaseCam = (f: number, target: (f: number) => [number, number], ox 
   const pos: Vec3 = [T[0] + fwd[0] * r.a + perp[0] * r.b, r.h, T[2] - (fwd[1] * r.a + perp[1] * r.b)];
   const look: Vec3 = [T[0] + fwd[0] * 0.6, r.lookH, T[2] - fwd[1] * 0.6];
   return { pos, look, fov: r.fov, roll: r.roll };
+};
+
+/**
+ * Kamera "menjauh": kamera DIAM di titik jangkar per segmen dan hanya menoleh mengikuti pelari,
+ * sehingga pelari makin kecil menjauh. anchors: [frameMulai, dx, dy, tinggi, fov, roll] relatif posisi pelari di awal segmen
+ * (dx/dy koordinat Blender). Dua jangkar terakhir dapat naik (crane) lewat `rise`.
+ */
+export type Anchor = { from: number; dx: number; dy: number; h: number; fov: number; roll?: number; rise?: number; lookH?: number };
+export const recedeCam = (f: number, target: PathFn, anchors: Anchor[], ox = 0): Cam => {
+  let a = anchors[0];
+  for (const k of anchors) if (f >= k.from) a = k;
+  const next = anchors[anchors.indexOf(a) + 1];
+  const segLen = (next ? next.from : a.from + 120) - a.from;
+  const prog = smoother(cl((f - a.from) / segLen));
+  const [sx, sy] = target(a.from);
+  const [x, y] = target(f);
+  const P = toThree(sx + a.dx, sy + a.dy, a.h + (a.rise ?? 0) * prog, ox);
+  const L = toThree(x, y, a.lookH ?? 1.1, ox);
+  return { pos: P, look: L, fov: a.fov, roll: a.roll ?? 0 };
 };
