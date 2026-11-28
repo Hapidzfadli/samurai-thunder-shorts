@@ -16,6 +16,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { Vec3 } from "./three/objects";
 import { ToonSky } from "./three/toon";
+import { CineLook, CinePost } from "./cinePost";
 
 export const cl = (v: number, a = 0, b = 1) => Math.max(a, Math.min(b, v));
 export const smoother = (x: number) => x * x * x * (x * (x * 6 - 15) + 10);
@@ -97,7 +98,7 @@ const loadGlb = (url: string): Promise<THREE.Group> => {
             const m = o as THREE.Mesh;
             if (m.isMesh) {
               const nm = m.name;
-              m.castShadow = !(nm.includes("Water") || nm.includes("Meadow") || nm.includes("Dirt") || nm.includes("Langit") || nm.includes("Hill"));
+              m.castShadow = !(nm.includes("Plafon") || nm.includes("Water") || nm.includes("Meadow") || nm.includes("Dirt") || nm.includes("Langit") || nm.includes("Hill"));
               m.receiveShadow = !nm.includes("Langit");
               m.frustumCulled = false;
             }
@@ -172,8 +173,8 @@ export const cineCard = (cam: Cam, p: LightPreset) => ({ tint: p.tint, shade: p.
 export type PL = { p: Vec3; i: number };
 export const CineStage: React.FC<{
   cam: Cam; glb: string; visible: (n: string) => boolean; focus: Vec3; preset: keyof typeof LIGHT_PRESETS;
-  shake?: Vec3; pts?: PL[]; interior?: boolean; children: React.ReactNode;
-}> = ({ cam, glb, visible, focus, preset, shake = [0, 0, 0], pts = [], interior = false, children }) => {
+  shake?: Vec3; pts?: PL[]; interior?: boolean; look?: CineLook; children: React.ReactNode;
+}> = ({ cam, glb, visible, focus, preset, shake = [0, 0, 0], pts = [], interior = false, look, children }) => {
   const { width, height } = useVideoConfig();
   const target = useMemo(() => new THREE.Object3D(), []);
   const P = LIGHT_PRESETS[preset];
@@ -209,6 +210,7 @@ export const CineStage: React.FC<{
         ))}
         <GlbWorld glb={glb} visible={visible} />
         {children}
+        {look && <CinePost look={look} />}
       </ThreeCanvas>
     </AbsoluteFill>
   );

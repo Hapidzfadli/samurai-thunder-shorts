@@ -58,7 +58,7 @@ TM("Plester_Kuning", "plester_kuning", 0.3, 0.92)
 TM("Plester_Krem", "plester_krem", 0.35, 0.92)
 TM("Beton", "beton", 0.3, 0.9)
 TM("Laci_Deposit", "laci_deposit", 0.5, 0.45, 0.5)
-TM("Lantai_Brankas", "lantai_brankas_roll", 1 / 9.0, 0.5)
+TM("Lantai_Brankas", "lantai_brankas_roll", 1 / 9.0, 0.22)
 TM("Lantai_Brankas_Kecil", "lantai_brankas_roll", 1 / 5.0, 0.5)
 TM("Wallpaper", "wallpaper", 0.6, 0.9)
 TM("Papan_Banque", "papan_banque", 1.0, 0.5)
@@ -93,6 +93,8 @@ for nm, col, kw in [
     ("Tikus", "#6a6460", dict(roughness=0.9)), ("Merpati", "#9a9aa8", dict(roughness=0.9)), ("Laut", "#3a8ab0", dict(roughness=0.15)),
     ("Bukit", "#6a8a5a", dict(roughness=1.0)), ("Atap_Genteng", "#b0583a", dict(roughness=0.85)), ("Lampu_Kuning", "#ffe0a0", dict(roughness=0.3, emission=lin("#ffc870"), emission_strength=4.0)),
     ("Lampu_Putih", "#f4f4ff", dict(roughness=0.3, emission=lin("#e8f0ff"), emission_strength=4.0)), ("Cahaya_Lubang", "#fff4d8", dict(roughness=0.3, emission=lin("#fff0d0"), emission_strength=6.0)),
+    ("Plafon_Brankas", "#e6dcc8", dict(roughness=0.85)), ("Plafon_Emas", "#c9a24a", dict(roughness=0.35, metallic=0.7)), ("Plafon_Biru", "#2a3a6a", dict(roughness=0.8)),
+    ("Plafon_Studio", "#efe4cc", dict(roughness=0.9)), ("Plafon_Krem", "#ece2cc", dict(roughness=0.9)),
     ("Lampu_Merah", "#ff4030", dict(roughness=0.3, emission=lin("#ff3020"), emission_strength=3.0)),
 ]:
     M(nm, lin(col), **kw)
@@ -419,6 +421,7 @@ def build_L2(ox):
     CY("KapGantung", (ox + 0.2, 0.8, 2.5), 0.32, 0.25, "Jendela_Hijau", c, segs=14, r2=0.08)
     BALL("BohlamGantung", (ox + 0.2, 0.8, 2.38), 0.08, "Lampu_Kuning", c, sub=1)
     PLANT("TanamanSudut", ox - 2.9, -1.5, 0, c, s=1.3, seed=8)
+    B("Plafon", (ox, 0.3, H + 0.1), (W, D + 0.6, 0.2), "Plafon_Studio", c)
     CY("GantunganTopi", (ox - 3.0, 0.9 + 0.2, 0.9), 0.03, 1.8, "Kayu_Tua", c, segs=8)
     BALL("Topi", (ox - 3.0, 1.1, 1.8), 0.16, "Kulit", c, scale=(1.2, 1.2, 0.6), sub=1)
 
@@ -684,6 +687,19 @@ def build_L5(ox):
         BALL(f"BohlamB{k}", (ox + x, 0.5, 3.3), 0.08, "Lampu_Kuning", c, sub=1)
     CY("BelAlarm", (ox - 4.6, 3.6, 3.4), 0.22, 0.1, "Tabung_Merah", c, rot=(0, PI / 2, 0), segs=16)
     DISC("JamDinding", (ox + 3.6, yb - 0.31, 3.6), 0.26, "Clock_Face", c)
+    # plafon berkubah kotak-kotak (tidak membuat bayangan, lihat cinemaKit) + lampu gantung kristal
+    B("Plafon", (ox, 0.2, H + 0.1), (W, D + 0.6, 0.2), "Plafon_Biru", c)
+    for k in range(6):
+        B(f"BalokPlafonX{k}", (ox - W / 2 + (k + 0.5) * W / 6, 0.2, H - 0.05), (0.16, D + 0.6, 0.18), "Plafon_Emas", c)
+    for k in range(5):
+        B(f"BalokPlafonY{k}", (ox, -D / 2 + 0.2 + (k + 0.5) * (D + 0.6) / 5, H - 0.05), (W, 0.16, 0.18), "Plafon_Emas", c)
+    B("ListPlafon", (ox, yb - 0.32, H - 0.25), (W, 0.2, 0.2), "Plafon_Emas", c)
+    CY("TaliKandil", (ox, 0.3, H - 0.4), 0.02, 0.8, "Plafon_Emas", c, segs=6)
+    RING("CincinKandil", (ox, 0.3, H - 0.85), 0.75, 0.68, 0.08, "Plafon_Emas", c, rot=(0, 0, 0), segs=32)
+    for k in range(10):
+        a = 2 * PI * k / 10
+        BALL(f"KristalKandil{k}", (ox + math.cos(a) * 0.72, 0.3 + math.sin(a) * 0.72, H - 0.75), 0.07, "Lampu_Kuning", c, scale=(1, 1, 1.5), sub=1)
+    BALL("PusatKandil", (ox, 0.3, H - 1.05), 0.16, "Lampu_Kuning", c, scale=(1, 1, 1.6), sub=2)
 
 
 # ====================================================================== L6 · kantor hakim (lantai 2) + jalan
@@ -707,7 +723,7 @@ def build_L6(ox):
         B(f"SayapGedung{sx}", (ox + sx * (W / 2 + 4.0), 0.5 + D / 2, 7.0), (24 / 2 - W / 2 - 0.0 if False else 7.4, D, 14), "Fasad_Batu", c, uv=0.35)
     B("LantaiDasarH", (ox, 0.5 + D / 2, fz / 2), (W, D, fz), "Fasad_Batu", c, uv=0.35)
     B("LantaiRuang", (ox, 0.5 + D / 2, fz - 0.05), (W, D, 0.1), "Floor_Wood", c, uv=0.6)
-    B("PlafonRuang", (ox, 0.5 + D / 2, fz + H + 0.1), (W, D, 0.2), "Plester_Krem", c)
+    B("PlafonRuang", (ox, 0.5 + D / 2, fz + H + 0.1), (W, D, 0.2), "Plafon_Krem", c)
     B("AtasGedung", (ox, 0.5 + D / 2, (fz + H + 0.2 + 14) / 2), (W, D, 14 - fz - H - 0.2), "Fasad_Batu", c, uv=0.35)
     B("DindingBlkRuang", (ox, 0.5 + D - 0.1, fz + H / 2), (W, 0.2, H), "Plester_Krem", c, uv=0.5)
     for sx in (-1, 1):
