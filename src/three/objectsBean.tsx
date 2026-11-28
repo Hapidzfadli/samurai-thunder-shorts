@@ -1088,7 +1088,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
 };
 
 /** Camera-facing 2D bean card in the 3D world; drawn fresh per frame (reusing a texture left cards blank in video renders). */
-export const BeanCard: React.FC<{ position: Vec3; height?: number; params: BeanParams; flip?: boolean; roll?: number; shadow?: boolean; tint?: string; faceCam?: boolean; yaw?: number }> = ({ position, height = 2.0, params, flip = false, roll = 0, shadow = true, tint = "#fff1e0", faceCam = true, yaw = 0 }) => {
+export const BeanCard: React.FC<{ position: Vec3; height?: number; params: BeanParams; flip?: boolean; roll?: number; shadow?: boolean; tint?: string; faceCam?: boolean; yaw?: number; realShadow?: boolean; rim?: string; shade?: string; lightSide?: number }> = ({ position, height = 2.0, params, flip = false, roll = 0, shadow = true, tint = "#fff1e0", faceCam = true, yaw = 0, realShadow = false, rim, shade, lightSide = 1 }) => {
   const frameNo = useCurrentFrame();
   const camera = useThree((s) => s.camera);
   const { cv, tex, buf } = useMemo(() => {
@@ -1107,6 +1107,38 @@ export const BeanCard: React.FC<{ position: Vec3; height?: number; params: BeanP
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [frameNo]);
   useEffect(() => () => tex.dispose(), [tex]);
+  // bayangan nyata dari lampu arah (alpha tekstur) + material dua-nada dengan rim light (opsional, dipakai cinemaKit)
+  const depthMat = useMemo(() => (realShadow ? new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: tex, alphaTest: 0.5 }) : null), [realShadow, tex]);
+  const rimMat = useMemo(
+    () =>
+      rim
+        ? new THREE.ShaderMaterial({
+            transparent: true,
+            side: THREE.DoubleSide,
+            toneMapped: false,
+            uniforms: {
+              map: { value: tex },
+              uTint: { value: new THREE.Color(tint) },
+              uShade: { value: new THREE.Color(shade ?? tint).multiplyScalar(0.8) },
+              uRim: { value: new THREE.Color(rim) },
+              uSide: { value: lightSide * (flip ? -1 : 1) },
+            },
+            vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }",
+            fragmentShader: /* glsl */ `
+              uniform sampler2D map; uniform vec3 uTint; uniform vec3 uShade; uniform vec3 uRim; uniform float uSide; varying vec2 vUv;
+              void main(){
+                vec4 c = texture2D(map, vUv);
+                if (c.a < 0.05) discard;
+                float u = uSide > 0.0 ? vUv.x : 1.0 - vUv.x;
+                vec3 col = c.rgb * mix(uShade, uTint, smoothstep(0.15, 0.85, u));
+                col += uRim * smoothstep(0.8, 1.0, u) * 0.5;
+                gl_FragColor = vec4(col, c.a);
+                #include <colorspace_fragment>
+              }`,
+          })
+        : null,
+    [rim, tex, tint, shade, lightSide, flip],
+  );
   const ctx = cv.getContext("2d", { willReadFrequently: true })!;
   drawBean(ctx, params);
   buf.set(ctx.getImageData(0, 0, BW, BH).data);
@@ -1116,12 +1148,12 @@ export const BeanCard: React.FC<{ position: Vec3; height?: number; params: BeanP
   return (
     <group position={position} rotation={[0, face, 0]}>
       <group rotation={[0, 0, roll]}>
-        <mesh position={[0, height / 2 - height * 0.025, 0]} scale={[flip ? -1 : 1, 1, 1]}>
+        <mesh position={[0, height / 2 - height * 0.025, 0]} scale={[flip ? -1 : 1, 1, 1]} castShadow={realShadow} customDepthMaterial={depthMat ?? undefined}>
           <planeGeometry args={[w, height]} />
-          <meshBasicMaterial map={tex} transparent alphaTest={0.05} toneMapped={false} color={tint} side={THREE.DoubleSide} />
+          {rimMat ? <primitive object={rimMat} attach="material" /> : <meshBasicMaterial map={tex} transparent alphaTest={0.05} toneMapped={false} color={tint} side={THREE.DoubleSide} />}
         </mesh>
       </group>
-      {shadow && (
+      {shadow && !realShadow && (
         <mesh position={[0.1, 0.015, 0.05]} rotation={[-Math.PI / 2, 0, 0]} scale={[1, 0.4, 1]}>
           <circleGeometry args={[0.55 * (height / 2.0), 20]} />
           <meshBasicMaterial color="#1a1030" transparent opacity={0.38} />

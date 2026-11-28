@@ -26,6 +26,13 @@ Gaya: latar 3D (Blender → GLB) + tokoh kartun 2D datar, tetapi harus terlihat 
 - **Detail bercerita**: papan nama, layar, label nomor, noda/karat/retak, kertas berserakan, figuran di latar belakang; tekstur kotor/lapuk, bukan permukaan "baru".
 - **Atmosfer**: debu di sorot cahaya, daun, asap, bendera berkibar, kabut tipis untuk pemisahan lapisan, vignette + grading per adegan.
 - Kirim pratinjau still (≥1 per jenis shot) dan minta persetujuan sebelum render.
+- **Perkakas siap pakai: `src/cinemaKit.tsx`** (contoh pakai: `src/UjiSinema.tsx`, komposisi `UjiSinema`):
+  - `CineStage` + `LIGHT_PRESETS` (siang/senja/malam/tegang/akrab): 1 lampu utama berarah + hemisphere gelap + bayangan nyata; `GlbWorld` memuat GLB dengan `invalidate/advance`.
+  - `buildShots({dur, focus, targets, front, reach, style})` membuat paket shot otomatis (lebar/medium/close-up/sudut rendah-miring/crane/orbit, ganti ±2-2,6 detik) → `shotCam(frame, shots)`. `focus` = titik LANTAI; `targets` = posisi kaki tokoh (medium/close-up bergantian menyorot tokoh). `front` = azimut kamera di koordinat Three.js (`atan2(z, x)`, ingat z = -y Blender).
+  - `cineCard(cam, preset)` → props `BeanCard` (`tint`, `shade`, `rim`, `lightSide`, `realShadow`) agar tokoh punya bayangan jatuh nyata + rim light.
+  - `Foreground` (jeruji/tiang/tepi) untuk bingkai depan; `CineGrade` untuk grading + vignette.
+  - Keterbatasan: `buildShots` tidak tahu properti latar. Cek still tiap shot; ruangan dengan meja/tiang besar (mis. tenda Napoleon) perlu kamera manual atau `targets`/`front` disetel agar tidak terhalang.
+- **Checklist pratinjau (cek sebelum kirim lembar kontak)**: tiap adegan ≥3 shot berbeda; ada 1 sumber cahaya berarah dengan sisi gelap yang terlihat; bayangan tokoh jatuh di lantai; ada benda bingkai depan di sebagian shot; tokoh tidak terhalang properti; adegan malam benar-benar gelap.
 
 ## 3. GERAKAN HARUS MASUK AKAL (aturan paling penting)
 Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh**, tidak boleh "tiba-tiba sudah terjadi".
@@ -61,6 +68,11 @@ Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh*
   - Tokoh berrangka (skinned) dari Blender gagal tampil di Remotion: pakai kartu 2D.
   - Cek kamera dari semua shot: jangan ada properti (kursi, tiang, meja) yang menghalangi tokoh; kamera vertikal sempit, fov interior 40-55. Pakai `blender ... -- <out> none public/models/<x>.glb` untuk ekspor ulang.
   - Container cloud dimatikan saat idle dan menghentikan proses latar: render panjang dipotong per 300 frame (`--frames=a-b`, gabung `ffmpeg concat`) atau pakai Colab T4 (`colab/render_napoleon.ipynb`, ±40 menit). Kompres video akhir (crf 24) agar <100 MB sebelum di-push.
+- **Render di Google Colab (T4, ±40 menit untuk 3.300 frame; disarankan untuk render akhir)**:
+  - Notebook siap pakai: `colab/render_napoleon.ipynb` (salin dan ganti `BRANCH`, `COMP`, `AUDIO`, `OUT_NAME`). Runtime T4 GPU; secret `GITHUB_TOKEN` (read) di panel Secrets; mode `--gl=angle-egl`; hasil + audio digabung dan disalin ke Drive `MyDrive/shorts-render/`. Uji 10 detik dulu dengan `FRAMES="0-299"`.
+  - Jangan render lama di container cloud ini (mati saat idle). Pilihan: render per potongan 300 frame, atau Colab.
+  - Colab CLI (`pip install -U google-colab-cli`, perintah `colab new --gpu T4`, `colab exec`, `colab download`, `colab usage`): login dari container butuh `gcloud auth application-default login --no-launch-browser --scopes=openid,https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/colaboratory`, lalu pakai `colab --auth adc ...`. Kode verifikasi hanya berlaku selama proses login hidup (jaga container tetap aktif, mis. dengan Monitor). Host yang harus diizinkan di environment: `colab.research.google.com`, `colab.pa.googleapis.com`, `oauth2.googleapis.com`, `www.googleapis.com`.
+  - Sebelum membuat runtime, cek saldo `colab usage` dan minta persetujuan user (memakai compute unit, ±1-2 unit/jam untuk T4). Hentikan runtime (`colab stop`) setelah selesai.
 
 ## 6. Gaya standar & perkakas yang dipakai ulang (jangan menulis ulang dari nol)
 - Gaya video standar = **3D explainer** (referensi Apache, contoh: `exports/perang-emu-1932.mp4`, `exports/kerja-kelompok.mp4`):

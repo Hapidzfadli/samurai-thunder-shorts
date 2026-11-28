@@ -70,6 +70,9 @@ Dipilih pengguna untuk cerita bersetting gedung (sekolah, kantor, lab). Contoh j
 - **Karakter = kartu 2D (`BeanCard`) atau cutout 2D di ruang 3D**, bukan model 3D berrig/Mixamo. Uji model berrig di Remotion pernah gagal tampil; pengguna juga lebih suka gaya kartu 2D.
 - Latar buatan sendiri di Blender sudah dicoba (`blender/sekolah*.py`, gaya low-poly lembut); untuk proyek nyata pakai pola `build_school_glb.py` agar teksturnya terbawa.
 
+## 5c. Kualitas sinematik (cahaya, kamera, bayangan) — pakai `src/cinemaKit.tsx`
+Agar video tidak datar: bangun adegan dengan `CineStage` + preset cahaya (`LIGHT_PRESETS`), kamera dari `buildShots(...)` + `shotCam(...)`, tokoh dengan `cineCard(...)` (bayangan nyata + rim light), dan `Foreground` untuk bingkai depan. Ganti shot tiap 2-3 detik. Contoh lengkap: `src/UjiSinema.tsx`. Aturan lengkap + checklist pratinjau: `CLAUDE.md` bagian 2b. Cek tiap shot di still: properti latar bisa menghalangi kamera otomatis.
+
 ## 6. Still-check hemat (satu lembar kontak)
 Skrip render still memakai `@remotion/renderer` dan harus berada di root repo agar modul ditemukan (jangan di-commit; masukkan ke `.git/info/exclude`):
 ```js
