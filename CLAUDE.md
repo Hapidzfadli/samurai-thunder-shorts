@@ -17,6 +17,7 @@ Bahasa komunikasi dengan user: Bahasa Indonesia. Format video: vertikal 1080x192
 - Karakter: pakaian berdetail (lipatan/bayangan, kelim, aksesoris, alas kaki), ekspresi wajah tidak tertutup janggut/kumis/topi.
 - Kamera tenang: glide lembut, push-in pelan, selalu menjauh lagi setelah close-up. Karakter tidak boleh saling menutupi wajah atau terpotong di tepi frame pada shot dialog.
 - Background terang dan jelas kecuali cerita butuh malam.
+- **Watermark kanal "PZClip" wajib di setiap video** (komponen `src/Watermark.tsx`, pojok kanan atas, semi-transparan; pasang di komposisi utama di atas grading, di bawah subtitle).
 
 ## 2b. Kualitas visual sinematik (acuan: video "Prisoner Who Tunneled Into a Bank" + Napoleon)
 Gaya: latar 3D (Blender → GLB) + tokoh kartun 2D datar, tetapi harus terlihat **sinematik**, bukan stiker di ruangan kosong.

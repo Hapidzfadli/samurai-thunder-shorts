@@ -5,6 +5,7 @@ import { Vec3 } from "./three/objects";
 import { BeanCard, BeanParams, beanWalk, poseCrawl, poseCrouch, poseJump, poseKneel, poseSit, poseWalkSide } from "./three/objectsBean";
 import { CineGrade, CineStage, Foreground, LIGHT_PRESETS, PL, cineCard, Cam } from "./cinemaKit";
 import { CineLook, Dust, LightShaft } from "./cinePost";
+import { Watermark } from "./Watermark";
 import { Brush, Bucket, Drill, Handcuffs, InHand, Lantern, ManholeCover, MoneyBundle, Necklace, OpenDrawer, Sack, Shovel } from "./three/objectsTerowongan";
 import { FOTOGRAFER, FOTOGRAFER_GALI, MIMI, MIMI_GOT, MANAJER, POLISI, HAKIM, KOMPLOTAN } from "./SheetTerowongan";
 
@@ -131,6 +132,7 @@ export const PratinjauTerowongan: React.FC = () => {
         {v.fg && <Foreground cam={cam} kind={v.fg} side={v.fgSide ?? 1} color="#1a1a22" />}
       </CineStage>
       <CineGrade preset={v.preset} />
+      <Watermark />
       <div style={{ position: "absolute", top: 40, left: 40, right: 40, fontFamily: "Inter, sans-serif", fontWeight: 800, fontSize: 40, color: "#fff", textShadow: "0 3px 8px #000" }}>
         {(f % VIEWS.length) + 1}. {v.judul}{lama ? " (lama)" : ""}
       </div>

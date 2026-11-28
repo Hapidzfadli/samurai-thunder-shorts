@@ -202,7 +202,7 @@ export const OpenDrawer: React.FC<{ out?: number; bundles?: number }> = ({ out =
       <Inked geo={g.front} mat={m.steel} pos={[0, 0, out]} ink={0.03} />
       <mesh geometry={g.plate} material={m.brass} position={[0, 0.04, out + 0.012]} />
       {Array.from({ length: bundles }, (_, i) => (
-        <group key={i} position={[(i % 2 ? 0.06 : -0.06), -0.055 + Math.floor(i / 2) * 0.036, out * 0.3 + (i % 3) * 0.04]} rotation={[0, (i % 3) * 0.08, 0]}>
+        <group key={i} position={[(i % 2 ? 0.06 : -0.06), -0.055 + Math.floor(i / 2) * 0.036, out - 0.08 - (i % 3) * 0.07]} rotation={[0, (i % 3) * 0.08, 0]}>
           <MoneyBundle />
         </group>
       ))}

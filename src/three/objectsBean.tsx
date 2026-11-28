@@ -1687,7 +1687,7 @@ export const poseCrouch = (side = false): PP =>
 /** merangkak (profil), f = frame, speed = kecepatan siklus */
 export const poseCrawl = (f: number, speed = 1): PP => {
   const s = Math.sin(f * 0.25 * speed);
-  return { view: "side", pitch: 76, legL: [2 + 14 * s, -92], legR: [2 - 14 * s, -92], armL: [-4 - 16 * s, 2], armR: [-4 + 16 * s, 2], headTilt: -42 };
+  return { view: "side", pitch: 76, legL: [2 + 22 * s, -92], legR: [2 - 22 * s, -92], armL: [-4 - 24 * s, 2 + 10 * Math.max(0, s)], armR: [-4 + 24 * s, 2 + 10 * Math.max(0, -s)], headTilt: -42 };
 };
 /** jalan menyamping (profil) — tokoh harus benar-benar berpindah tempat (linePath) */
 export const poseWalkSide = (f: number, speed = 1, amp = 1): PP => {
@@ -1713,3 +1713,18 @@ export const poseDig = (f: number, speed = 1): PP => {
 };
 /** berbaring (profil): badan mendatar */
 export const poseLie = (): PP => ({ view: "side", pitch: 90, legL: [92, 0], legR: [90, 0], armL: [90, 0], armR: [70, 30], headTilt: -10 });
+/** memanjat tangga (tampak belakang, menghadap tangga). f = frame; tangan & kaki bergantian meraih anak tangga */
+export const poseClimb = (f: number, speed = 1): PP => {
+  const ph = f * 0.18 * speed;
+  const s = Math.sin(ph);
+  const up = (v: number) => Math.max(0, v);
+  return {
+    back: true,
+    armL: [-150 - 18 * s, -10 - 30 * up(-s)],
+    armR: [150 - 18 * s, 10 + 30 * up(s)],
+    legL: [-6 - 14 * up(s), 26 * up(s)],
+    legR: [6 + 14 * up(-s), -26 * up(-s)],
+    thigh: 165 - 50 * Math.abs(s) * 0.6,
+    ground: false,
+  };
+};
