@@ -388,7 +388,7 @@ def build_L2(ox):
     BALL("LampuMejaBohlam", (ox + 1.2, 2.0, 1.25), 0.06, "Lampu_Kuning", c, sub=1)
     CY("Asbak", (ox - 0.6, 2.4, 0.84), 0.08, 0.04, "Kaca_Gelap", c, segs=10)
     CY("CangkirKopi", (ox - 0.4, 1.9, 0.86), 0.05, 0.1, "Kusen_Putih", c, segs=10)
-    CHAIR("KursiKerja", ox + 0.2, 1.2, 0, c, face=1)
+    CHAIR("KursiKerja", ox + 0.2, 1.2, 0, c, face=-1)
     # kamera di tripod + payung lampu studio
     for k in range(3):
         a = k * 2 * PI / 3
@@ -785,7 +785,7 @@ def build_L6(ox):
     CY("KapLampuH", (ox + 1.9, oy + 4.9, fz + 1.18), 0.16, 0.14, "Jendela_Hijau", c, segs=12, r2=0.1)
     CHAIR("KursiHakim", ox + 0.8, oy + 5.5, fz, c, mat="Kulit", face=-1)
     B("SandaranTinggi", (ox + 0.8, oy + 5.75, fz + 1.2), (0.6, 0.06, 1.0), "Kulit", c)
-    CHAIR("KursiTerperiksa", ox + 0.3, oy + 3.0, fz, c, face=1)
+    CHAIR("KursiTerperiksa", ox + 0.3, oy + 3.0, fz, c, face=-1)
     CHAIR("KursiPanitera", ox - 2.6, oy + 4.2, fz, c, face=1)
     TABLE("MejaPanitera", ox - 2.6, oy + 4.8, fz, 1.2, 0.7, 0.75, "Wood_Desk", c)
     Q("RakBukuH", (ox + 3.0, oy + D - 0.22, fz + 1.5), 2.2, 2.6, "-Y", "Rak_Buku", c)
