@@ -137,8 +137,8 @@ export const SceneTwHook: React.FC = () => {
     lat: "L5", preset: "tegang", look: { ...DALAM, exposure: 0.62 }, interior: true, pts: [[0, 3.6, 2.0, 4], [-1.7, -1.4, 0.3, 3]],
     shake: [EV["hook.brankas"] - cut + 8, EV["hook.brankas"] - cut + 22, EV["hook.brankas"] - cut + 36].map((v) => Math.max(0, v)),
     keys: [
-      { to: at(D, 0.62) - cut, p0: [0.2, -2.2, 1.5], p1: [0.1, 1.2, 1.9], l0: [0, 4.3, 2.05], fov: 46, r0: 3, r1: 0 },
-      { to: at(D, 0.8) - cut, p0: [-0.6, 2.9, 2.5], p1: [-0.9, 3.2, 2.7], l0: [-1.5, 4.3, 2.6], fov: 34, r0: -4 },
+      { to: at(D, 0.62) - cut, p0: [0.3, -3.6, 1.5], p1: [0.15, -1.6, 1.8], l0: [0, 4.3, 2.0], fov: 50, r0: 3, r1: 0 },
+      { to: at(D, 0.8) - cut, p0: [-0.2, 1.6, 2.3], p1: [-0.4, 2.0, 2.4], l0: [-1.6, 4.3, 2.3], fov: 42, r0: -4 },
       { to: D - cut, p0: [0.9, -2.8, 2.6], p1: [0.4, -3.4, 2.1], l0: [-1.7, -1.4, 0.0], l1: [-1.7, -1.2, 0.3], fov: 50, r0: 5, r1: 2 },
     ],
     dust: { c: [0, 1.8, 1.8], sz: [3, 3, 2] },
@@ -176,7 +176,7 @@ export const SceneTwIde: React.FC = () => {
     shafts: [{ a: [-3.5, 0.2, 1.9], b: [-1.2, 0.9, 0], r0: 0.55, r1: 1.0, s: 0.2 }], dust: { c: [-2.2, 0.5, 1.2], sz: [2.2, 2.4, 1.8] },
     keys: [
       { to: Math.max(40, lineF("ide", 1) - 4), p0: [2.6, -2.9, 1.7], p1: [2.2, -2.4, 1.6], l0: [-0.4, 1.8, 1.2], fov: 50, r0: -2 },
-      { to: ePeta + 50, p0: [1.3, -0.7, 1.35], p1: [1.1, -0.5, 1.3], l0: [0.2, 1.4, 1.05], fov: 42, r0: 3, r1: 1 },
+      { to: ePeta + 50, p0: [1.5, -1.1, 1.45], p1: [1.3, -0.9, 1.4], l0: [0.2, 1.4, 1.05], fov: 50, r0: 3, r1: 1 },
       { to: eBr - 2, p0: [2.2, -2.2, 1.5], l0: [-0.2, 1.5, 1.1], fov: 46 },
       { to: eBr + 40, p0: [0.25, -0.95, 1.6], p1: [0.15, -0.75, 1.6], l0: [-0.7, 0.35, 1.5], fov: 32, r0: -4 },
       { to: D, p0: [2.4, -2.7, 1.8], l0: [-0.3, 1.6, 1.2], fov: 52, r0: -2 },
@@ -246,7 +246,7 @@ export const SceneTwGot: React.FC = () => {
     actors: (f) => {
       const lift = ease(f, 6, c1 - 10);
       return [
-        { p: { ...FOTOGRAFER_GALI, ...poseCrouch(true), expr: "smug", armL: [40 + lift * 30, -20], armR: [55 + lift * 30, -30] }, at: [-2.2, -1.75, 0], flip: true, item: { kind: "cover", hand: "both", rot: [lerp(0.1, 1.45, lift), lerp(0, 1.15, lift), 0], s: 0.78 } },
+        { p: { ...FOTOGRAFER_GALI, ...poseCrouch(true), expr: "smug", armL: [40 + lift * 30, -20], armR: [55 + lift * 30, -30] }, at: [-2.2, -1.75, 0], flip: true, item: { kind: "cover", hand: "both", rot: [lerp(0.1, 1.45, lift), lerp(0, 1.15, lift), 0], s: 0.6 } },
         { p: { ...MIMI_GOT, ...idle(f, 3), expr: "disgust", turn: -0.5, armR: [50, -60] }, at: [-4.0, -0.9, 0], item: { kind: "lantern" } },
       ];
     },
@@ -300,7 +300,7 @@ export const SceneTwGali: React.FC = () => {
     actors: (f) => {
       const craw = Math.sin(f / 50) * 0.5 + 0.5;
       return [
-        { p: { ...FOTOGRAFER_GALI, ...poseDig(f, 1.3), ...talk("gali", "dodi", f), headTilt: -10 }, at: [0.95, -1.88, -5.42], item: { kind: "drill", rot: [0, 0, 0.2] } },
+        { p: { ...FOTOGRAFER_GALI, ...poseCrouch(true), pitch: 22 + 6 * Math.sin(f * 0.4), armL: [70, -20], armR: [80 + 6 * Math.sin(f * 0.8), -20], ...talk("gali", "dodi", f) }, at: [0.95, -1.88, -5.42], item: { kind: "drill", rot: [0, 0, 0.2] } },
         { p: { ...MIMI_GOT, ...poseCrawl(f, 1.2), expr: f >= eA - 2 ? "scared" : "worried", sweat: true, ...(mouth("gali", "ara", f) ? { mouthOpen: mouth("gali", "ara", f) } : {}) }, at: [lerp(-3.0, -4.2, craw), -1.88, -5.42], flip: true },
         { p: { ...KOMPLOTAN, ...poseCrouch(true), expr: "neutral", armR: [40, -20] }, at: [-7.4, -1.3, -5.42], item: { kind: "bucket" } },
         { p: { ...POLISI, ...poseWalkSide(f), expr: "neutral" }, at: [lerp(-15, -8.5, f / D), -1.4, 0.24] },
@@ -330,7 +330,7 @@ export const SceneTwBrankas: React.FC = () => {
     keys: [
       { to: lineF("brankas", 0, true) + 6, p0: [-0.3, -3.4, 0.3], p1: [-0.4, -3.1, 0.35], l0: [-1.8, -0.9, 1.0], fov: 44, r0: 5, r1: 3 },
       { to: eK - 3, p0: [2.6, -4.4, 1.9], l0: [-0.6, 2.2, 1.2], fov: 56, r0: -3 },
-      { to: eS - 4, p0: [0.3, -1.0, 1.6], p1: [0.0, -0.7, 1.65], l0: [-4.7, 0.3, 1.8], fov: 50, r0: 4 },
+      { to: eS - 4, p0: [1.8, -3.4, 1.7], p1: [1.5, -3.0, 1.7], l0: [-3.6, 0.6, 1.5], fov: 52, r0: 4 },
       { to: D, p0: [0.5, -2.6, 1.5], l0: [-1.0, -0.6, 1.2], fov: 40, r0: -2 },
     ],
     dof: (f) => (f < lineF("brankas", 0, true) ? [-1.7, -1.4, 0.2] : null),
@@ -426,19 +426,19 @@ export const SceneTwPesan: React.FC = () => {
     lat: "L5", preset: "tegang", look: DALAM, interior: true, pts: [[-2.5, 0.5, 3.2, 12], [-2.6, 2.6, 2.0, 6]],
     keys: [
       { to: Math.max(20, lineF("pesan", 1) - c1 - 2), p0: [-0.6, 0.2, 1.6], l0: [-3.0, 4.2, 1.9], fov: 46, r0: -2 },
-      { to: Math.max(40, eM - c1 - 30), p0: [-2.2, 2.2, 1.7], p1: [-2.4, 2.5, 1.75], l0: [-3.0, 4.2, 2.0], fov: 40, r0: 2 },
-      { to: D - c1, p0: [-0.3, 0.3, 1.6], p1: [-0.35, 0.55, 1.6], l0: [-1.0, 1.4, 1.6], fov: 32, r0: -3 },
+      { to: Math.max(40, eM - c1 - 30), p0: [-2.6, 0.9, 1.8], p1: [-2.7, 1.2, 1.85], l0: [-3.0, 4.1, 1.85], fov: 52, r0: 2 },
+      { to: D - c1, p0: [-0.4, 0.9, 1.6], p1: [-0.45, 1.15, 1.6], l0: [-1.2, 2.3, 1.55], fov: 34, r0: -3 },
     ],
     actors: (f) => {
       const gf = f + c1;
       const painting = l1 && gf >= l1.from - 6 && gf <= l1.to + 4;
       const stroke = Math.sin(gf * 0.5) * 18;
       return [
-        { p: painting ? { ...FOTOGRAFER_GALI, back: true, hair: "#2a1c14", armR: [150 + stroke, -10], armL: [-20, -10] } : { ...FOTOGRAFER_GALI, ...idle(gf), expr: "smug", turn: 0.5, ...talk("pesan", "dodi", gf) }, at: [-3.0, 3.6, 0], item: { kind: "brush", rot: [0, 0, 0.4] } },
-        { p: { ...MIMI_GOT, ...idle(gf, 2), turn: 0.6, ...talk("pesan", "ara", gf), ...(gf >= eM - 30 ? { expr: mouth("pesan", "ara", gf) ? "talk" : "neutral", headTilt: -6 } : {}) }, at: [-1.0, 1.3, 0] },
+        { p: painting ? { ...FOTOGRAFER_GALI, back: true, hair: "#2a1c14", armL: [-150 + stroke, -10], armR: [20, -10] } : { ...FOTOGRAFER_GALI, ...idle(gf), expr: "smug", turn: 0.5, ...talk("pesan", "dodi", gf) }, at: [-2.35, 3.6, 0], item: { kind: "brush", hand: "L", rot: [0, 0, -0.4] } },
+        { p: { ...MIMI_GOT, ...idle(gf, 2), turn: 0.6, ...talk("pesan", "ara", gf), ...(gf >= eM - 30 ? { expr: mouth("pesan", "ara", gf) ? "talk" : "neutral", headTilt: -6 } : {}) }, at: [-1.7, 2.6, 0] },
       ];
     },
-    extra: (f) => <group position={bl(-3.1, 4.18, 2.05, ox)}><WallText lines={["SANS ARMES,", "NI HAINE,", "NI VIOLENCE"]} progress={prog(f + c1)} w={2.0} h={1.05} /></group>,
+    extra: (f) => <group position={bl(-3.1, 4.09, 2.05, ox)}><WallText lines={["SANS ARMES,", "NI HAINE,", "NI VIOLENCE"]} progress={prog(f + c1)} w={2.0} h={1.05} /></group>,
   };
   return (
     <AbsoluteFill>
@@ -464,10 +464,10 @@ export const SceneTwTangkap: React.FC = () => {
       const up = lerp(-1.9, 0, ease(f, 4, c1 * 0.45));
       const readK = f > c1 * 0.5;
       return [
-        { p: { ...POLISI, ...idle(f), expr: readK ? "shock" : "neutral", sweat: readK, ...(readK ? { turn: 0.6 } : { armL: [-100, -30], armR: [100, 30] }) }, at: readK ? [-1.2, -0.6, 0] : [-1.7, -1.4, up] },
+        { p: { ...POLISI, ...idle(f), expr: readK ? "shock" : "neutral", sweat: readK, ...(readK ? { turn: 0.6 } : { armL: [-100, -30], armR: [100, 30] }) }, at: readK ? [-0.9, 0.6, 0] : [-1.7, -1.4, up] },
       ];
     },
-    extra: () => <group position={bl(-3.1, 4.18, 2.05, OX.L5)}><WallText lines={["SANS ARMES,", "NI HAINE,", "NI VIOLENCE"]} progress={1} w={2.0} h={1.05} /></group>,
+    extra: () => <group position={bl(-3.1, 4.09, 2.05, OX.L5)}><WallText lines={["SANS ARMES,", "NI HAINE,", "NI VIOLENCE"]} progress={1} w={2.0} h={1.05} /></group>,
   };
   const B: Part = {
     lat: "L2", preset: "akrab", look: DALAM, interior: true, pts: [[1.2, 2.0, 1.25, 10], [0.2, 0.8, 2.3, 10]],
@@ -508,7 +508,7 @@ export const SceneTwKabur: React.FC = () => {
     lat: "L6", preset: "siang", look: DALAM, interior: true, pts: [[0.5, 4.1, FZ + 2.7, 8]],
     shafts: [{ a: [-1.8, 0.2, FZ + 1.7], b: [-0.2, 3.4, FZ], r0: 0.7, r1: 1.3, s: 0.2 }], dust: { c: [-1.0, 1.8, FZ + 1.0], sz: [2, 2.6, 1.8] },
     keys: [
-      { to: runA - 2, p0: [3.9, 0.7, FZ + 1.6], p1: [3.6, 1.1, FZ + 1.55], l0: [-0.1, 5.1, FZ + 1.0], fov: 50, r0: -2 },
+      { to: runA - 2, p0: [4.2, 0.3, FZ + 1.6], p1: [3.9, 0.7, FZ + 1.55], l0: [-0.4, 4.8, FZ + 1.0], fov: 52, r0: -2 },
       { to: eJ + 6, p0: [2.4, 2.6, FZ + 1.5], l0: [-1.6, 0.4, FZ + 1.4], fov: 48, r0: 4 },
     ],
     actors: (f) => {
@@ -560,7 +560,7 @@ export const SceneTwKabur: React.FC = () => {
   };
   const E: Part = {
     lat: "L6", preset: "senja", look: LUAR,
-    keys: [{ to: D - l3, p0: [-2, -16, 3.5], p1: [-3, -20, 6], l0: [4, 0, 3], l1: [8, 0, 5], fov: 52, r0: -2 }],
+    keys: [{ to: D - l3, p0: [-4, -11.5, 3.0], p1: [-5, -13, 6.5], l0: [6, -3, 2.5], l1: [10, -3, 4], fov: 52, r0: -2 }],
     actors: (f) => [{ p: { ...FOTOGRAFER, ...poseSit(true), shin: 210, expr: "laugh", armR: [80, -20] }, at: [26 + f * 0.25 - 0.1, -4.8, 0.55], h: 1.9 }],
     extra: (f) => <group position={bl(26 + f * 0.25, -4.8, 0.0, ox)}><Motorbike spin={f} /></group>,
   };
