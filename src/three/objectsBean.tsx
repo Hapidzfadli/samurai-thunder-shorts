@@ -460,6 +460,26 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   }
   if (p.apron) poly(c, [[260 + tx * 0.8, shY + 60], [340 + tx * 0.8, shY + 60], [352, hipY + 130], [248, hipY + 130]], p.apron, INKC, 6);
   if (!p.coat && !p.pocong && !p.kunti) poly(c, [[246, hipY + 10], [354, hipY + 10], [350, hipY + 40], [250, hipY + 40]], pants, INKC, 6);
+  // duduk menghadap kamera: paha memendek ke arah penonton -> pangkuan + dua lutut bulat
+  if (p.thigh !== undefined && p.thigh < 90 && !p.robe && !p.pocong && !p.kunti) {
+    const lapCol = p.skirt ?? pants;
+    poly(c, [[244, hipY + 6], [356, hipY + 6], [366, hipY + 56], [234, hipY + 56]], lapCol, INKC, 6);
+    ([[280, lL], [322, lR]] as [number, [number, number]][]).forEach(([x, a2]) => {
+      const kn = tip(x, hipY, TH, a2[0]);
+      c.beginPath();
+      c.ellipse(kn[0] + (x < 300 ? -8 : 8), kn[1] + 8, 34, 30, 0, 0, Math.PI * 2);
+      c.fillStyle = lapCol;
+      c.fill();
+      c.lineWidth = 6;
+      c.strokeStyle = INKC;
+      c.stroke();
+      c.beginPath();
+      c.arc(kn[0] + (x < 300 ? -8 : 8), kn[1] + 4, 14, Math.PI * 1.1, Math.PI * 1.9);
+      c.lineWidth = 3;
+      c.strokeStyle = "rgba(20,10,30,0.35)";
+      c.stroke();
+    });
+  }
   // near leg
   if (!p.pocong && !p.kunti) {
     limb(c, 322, hipY, TH, SH, lR, 10);
@@ -1658,7 +1678,7 @@ const drawBeanSide = (c: CanvasRenderingContext2D, p: BeanParams) => {
 type PP = Partial<BeanParams>;
 /** duduk di kursi/kasur. side=true: profil (paha mendatar ke depan) */
 export const poseSit = (side = false): PP =>
-  side ? { view: "side", legL: [86, -86], legR: [82, -82], armL: [26, -40], armR: [44, -50] } : { thigh: 46, shin: 172, legL: [10, -10], legR: [-10, 10], armL: [-14, -30], armR: [14, -30] };
+  side ? { view: "side", shin: 240, legL: [86, -86], legR: [82, -82], armL: [26, -40], armR: [44, -50] } : { thigh: 46, shin: 202, legL: [12, -12], legR: [-12, 12], armL: [-14, -30], armR: [14, -30] };
 /** berlutut (lutut di lantai) */
 export const poseKneel = (side = false): PP => (side ? { view: "side", pitch: 4, legL: [-2, -88], legR: [6, -92] } : { thigh: 165, shin: 14, legL: [6, 0], legR: [-6, 0] });
 /** jongkok */
@@ -1667,7 +1687,7 @@ export const poseCrouch = (side = false): PP =>
 /** merangkak (profil), f = frame, speed = kecepatan siklus */
 export const poseCrawl = (f: number, speed = 1): PP => {
   const s = Math.sin(f * 0.25 * speed);
-  return { view: "side", pitch: 78, legL: [2 + 14 * s, -92], legR: [2 - 14 * s, -92], armL: [-4 - 16 * s, 2], armR: [-4 + 16 * s, 2], headTilt: -26 };
+  return { view: "side", pitch: 76, legL: [2 + 14 * s, -92], legR: [2 - 14 * s, -92], armL: [-4 - 16 * s, 2], armR: [-4 + 16 * s, 2], headTilt: -42 };
 };
 /** jalan menyamping (profil) — tokoh harus benar-benar berpindah tempat (linePath) */
 export const poseWalkSide = (f: number, speed = 1, amp = 1): PP => {
