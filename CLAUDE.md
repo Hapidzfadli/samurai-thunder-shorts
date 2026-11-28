@@ -18,6 +18,15 @@ Bahasa komunikasi dengan user: Bahasa Indonesia. Format video: vertikal 1080x192
 - Kamera tenang: glide lembut, push-in pelan, selalu menjauh lagi setelah close-up. Karakter tidak boleh saling menutupi wajah atau terpotong di tepi frame pada shot dialog.
 - Background terang dan jelas kecuali cerita butuh malam.
 
+## 2b. Kualitas visual sinematik (acuan: video "Prisoner Who Tunneled Into a Bank" + Napoleon)
+Gaya: latar 3D (Blender → GLB) + tokoh kartun 2D datar, tetapi harus terlihat **sinematik**, bukan stiker di ruangan kosong.
+- **Pencahayaan**: tiap latar punya 1 sumber cahaya utama berarah jelas (sorot jendela/lampu) dan sisi lain lebih gelap; palet per adegan (dingin biru = tegang, hangat emas = akrab); adegan malam benar-benar gelap dengan cahaya dari lilin/lampu. Jangan cahaya rata.
+- **Kamera**: ganti shot tiap 2-3 detik, tidak ada shot statis >3 detik. Paket per adegan: lebar → medium → close-up → insert tangan → lebar. Variasikan gerak (fly-through, push-in/pull-back, orbit lambat, crane, tracking), pakai sudut rendah/miring (roll 3-6°), easing halus. Bingkai tokoh dengan benda latar depan (jeruji, tiang, tepi meja) dan blur ringan di kejauhan.
+- **Tokoh menyatu dengan latar**: bayangan jatuh nyata di lantai (bukan blob), rim light tipis di tepi, warna ambien dari lampu sekitar, garis tepi seragam tebalnya.
+- **Detail bercerita**: papan nama, layar, label nomor, noda/karat/retak, kertas berserakan, figuran di latar belakang; tekstur kotor/lapuk, bukan permukaan "baru".
+- **Atmosfer**: debu di sorot cahaya, daun, asap, bendera berkibar, kabut tipis untuk pemisahan lapisan, vignette + grading per adegan.
+- Kirim pratinjau still (≥1 per jenis shot) dan minta persetujuan sebelum render.
+
 ## 3. GERAKAN HARUS MASUK AKAL (aturan paling penting)
 Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh**, tidak boleh "tiba-tiba sudah terjadi".
 - **Benda penting (botol, sumbat, telur, surat, HP, dll) dibuat sebagai objek 3D terpisah** yang posisinya mengikuti titik tangan karakter yang memegang (pakai `beanHandWorld` di `src/three/objectsBean.tsx`), BUKAN digambar di dalam gambar karakter. Dengan begitu benda bisa berpindah tangan.
@@ -47,6 +56,11 @@ Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh*
 - Jangan import `*_timing.json` yang belum ada dari `src/Root.tsx` (bundle gagal).
 - Render: `npx remotion render src/index.ts <Comp> out/<x>-silent.mp4 --gl=swangle --browser-executable=/opt/pw-browsers/chromium_headless_shell --concurrency=4 --muted`, lalu mux dengan ffmpeg ke `exports/<judul>.mp4`. Periksa nama file output skrip render setelah meng-copy skrip lama.
 - Topik politik/tokoh nyata: tokoh terduga dibuat fiktif, selalu "diduga", kartu parodi + praduga tak bersalah.
+- **Pipeline Blender → GLB → Remotion (pelajaran Napoleon)**:
+  - Setelah GLB termuat di `@remotion/three`, panggil `invalidate()`/`advance()` dari `useThree` sebelum `continueRender`, kalau tidak latar kosong di render. Clone scene per komponen; tampilkan hanya node latar aktif (+ "Langit").
+  - Tokoh berrangka (skinned) dari Blender gagal tampil di Remotion: pakai kartu 2D.
+  - Cek kamera dari semua shot: jangan ada properti (kursi, tiang, meja) yang menghalangi tokoh; kamera vertikal sempit, fov interior 40-55. Pakai `blender ... -- <out> none public/models/<x>.glb` untuk ekspor ulang.
+  - Container cloud dimatikan saat idle dan menghentikan proses latar: render panjang dipotong per 300 frame (`--frames=a-b`, gabung `ffmpeg concat`) atau pakai Colab T4 (`colab/render_napoleon.ipynb`, ±40 menit). Kompres video akhir (crf 24) agar <100 MB sebelum di-push.
 
 ## 6. Gaya standar & perkakas yang dipakai ulang (jangan menulis ulang dari nol)
 - Gaya video standar = **3D explainer** (referensi Apache, contoh: `exports/perang-emu-1932.mp4`, `exports/kerja-kelompok.mp4`):
