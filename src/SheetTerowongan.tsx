@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import { CameraRig } from "./three/objects";
-import { BeanCard, BeanParams, BeanExpr } from "./three/objectsBean";
+import { BeanCard, BeanParams, BeanExpr, poseSit, poseKneel, poseCrouch, poseCrawl, poseWalkSide, poseRunSide, poseJump, poseDig, poseLie, beanWalk } from "./three/objectsBean";
 
 /* ================================================================== */
 /* CAST "TEROWONGAN KE BRANKAS" (kisah nyata Nice 1976).               */
@@ -211,5 +211,83 @@ export const SheetTerowonganLatar: React.FC = () => (
         Benda terpisah (ikut tangan via beanHandWorld): peta got · lentera · sekop · bor listrik · ember tanah · obor las · kuas & kaleng cat · kotak deposit · kalung/perhiasan · borgol · koper kecil
       </div>
     </div>
+  </AbsoluteFill>
+);
+
+/* ---------------- Lembar pose & arah hadap (drawBeanSide + pose library) ---------------- */
+type Cell = { lbl: string; p: BeanParams; flip?: boolean; seat?: number };
+const D = FOTOGRAFER_GALI;
+const A = MIMI_GOT;
+const DIR = (b: BeanParams, hair: string): Cell[] => [
+  { lbl: "depan", p: { ...b, expr: "talk", mouthOpen: 0.5, armR: [40, -60] } },
+  { lbl: "¾ kanan", p: { ...b, expr: "smug", turn: 0.6 } },
+  { lbl: "samping kanan", p: { ...b, view: "side", expr: "neutral" } },
+  { lbl: "belakang", p: { ...b, back: true, hair } },
+  { lbl: "samping kiri", p: { ...b, view: "side", expr: "think" }, flip: true },
+  { lbl: "¾ kiri", p: { ...b, expr: "happy", turn: -0.6 } },
+  { lbl: "jalan menyamping", p: { ...b, ...poseWalkSide(8), expr: "neutral" } },
+  { lbl: "lari menyamping", p: { ...b, ...poseRunSide(5), expr: "scared", sweat: true } },
+];
+const ROWS: Cell[][] = [
+  DIR(D, "#2a1c14"),
+  DIR(A, "#4a2a1a"),
+  [
+    { lbl: "duduk (depan)", p: { ...FOTOGRAFER, ...poseSit(), expr: "smug" }, seat: 0 },
+    { lbl: "duduk (samping)", p: { ...FOTOGRAFER, ...poseSit(true), expr: "talk", mouthOpen: 0.4 }, seat: -0.12 },
+    { lbl: "jongkok (depan)", p: { ...D, ...poseCrouch(), expr: "think" } },
+    { lbl: "jongkok (samping)", p: { ...D, ...poseCrouch(true), expr: "think" } },
+    { lbl: "berlutut", p: { ...D, ...poseKneel(true), expr: "neutral", armR: [70, -40] } },
+    { lbl: "merangkak", p: { ...D, ...poseCrawl(6), expr: "neutral" } },
+    { lbl: "mengebor/menggali", p: { ...D, ...poseDig(4), expr: "angry" } },
+    { lbl: "melompat", p: { ...FOTOGRAFER, ...poseJump(true), expr: "shock" } },
+  ],
+  [
+    { lbl: "duduk (depan)", p: { ...MIMI, ...poseSit(), expr: "worried" }, seat: 0 },
+    { lbl: "duduk (samping)", p: { ...MIMI, ...poseSit(true), expr: "smug" }, seat: -0.12 },
+    { lbl: "jongkok (depan)", p: { ...A, ...poseCrouch(), expr: "disgust" } },
+    { lbl: "berlutut (depan)", p: { ...A, ...poseKneel(), expr: "shock", armL: [-120, -20], armR: [120, 20] } },
+    { lbl: "merangkak", p: { ...A, ...poseCrawl(14), expr: "worried", sweat: true } },
+    { lbl: "berbaring", p: { ...A, ...poseLie(), expr: "sleepy" } },
+    { lbl: "jalan ke kamera", p: { ...A, ...beanWalk(0.3), expr: "talk", mouthOpen: 0.4 } },
+    { lbl: "melompat (depan)", p: { ...A, ...poseJump(), expr: "happy" } },
+  ],
+];
+export const SheetTerowonganPose: React.FC = () => (
+  <AbsoluteFill style={{ background: "linear-gradient(#eef1f8, #d9c6aa)" }}>
+    <ThreeCanvas width={2000} height={1500} camera={{ fov: 20, near: 0.5, far: 200, position: [0, 0, 44] }}>
+      <CameraRig position={[0, 0, 44]} lookAt={[0, 0, 0]} fov={20} />
+      {ROWS.map((row, r) =>
+        row.map((cl, i) => {
+          const x = -8.6 + i * 2.46;
+          const y = 4.1 - r * 3.72;
+          return (
+            <group key={`${r}${i}`}>
+              <mesh position={[x, y - 0.03, 0]}>
+                <boxGeometry args={[2.2, 0.06, 0.1]} />
+                <meshBasicMaterial color="#a89070" />
+              </mesh>
+              {cl.seat !== undefined && (
+                <mesh position={[x + cl.seat, y + 0.27, -0.25]}>
+                  <boxGeometry args={[0.7, 0.54, 0.2]} />
+                  <meshBasicMaterial color="#7a4a2a" />
+                </mesh>
+              )}
+              <BeanCard position={[x, y, 0]} height={2.6} shadow={false} faceCam={false} flip={cl.flip} params={cl.p} />
+            </group>
+          );
+        }),
+      )}
+      <hemisphereLight args={["#fff8ea", "#b8928a", 1.9]} />
+    </ThreeCanvas>
+    <div style={{ position: "absolute", top: 12, left: 30, fontFamily: "Anton, Impact, sans-serif", fontSize: 44, color: "#241726" }}>
+      POSE & ARAH HADAP · DODI (baris 1, 3) · ARA (baris 2, 4)
+    </div>
+    {ROWS.map((row, r) => (
+      <div key={r} style={{ position: "absolute", top: 395 + r * 342, left: 22, right: 22, display: "flex", justifyContent: "space-between" }}>
+        {row.map((cl) => (
+          <div key={cl.lbl} style={{ width: 236, textAlign: "center", fontFamily: "Inter, sans-serif", fontWeight: 800, fontSize: 19, color: "#5a2a30" }}>{cl.lbl}</div>
+        ))}
+      </div>
+    ))}
   </AbsoluteFill>
 );

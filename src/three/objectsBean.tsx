@@ -50,6 +50,12 @@ export type BeanParams = {
   headphones?: boolean;
   hatColor?: string;
   hair?: string;
+  view?: "front" | "side"; // side = profil menghadap kanan (flip kartu untuk kiri)
+  turn?: number; // -1..1 tampak tiga-perempat (wajah bergeser ke arah hadap)
+  thigh?: number; // panjang paha di kanvas (pose depan: 45 = duduk menghadap kamera)
+  shin?: number; // panjang betis di kanvas
+  pitch?: number; // derajat, badan condong ke depan (profil): 80 = merangkak, 90 = berbaring
+  ground?: boolean; // false = tidak ditapakkan otomatis (melompat/melayang)
   back?: boolean; // tampak belakang: wajah tertutup rambut/kepala belakang (tokoh berlari menjauhi kamera)
   mustache?: boolean;
   apron?: string;
@@ -306,6 +312,13 @@ const drawProp = (c: CanvasRenderingContext2D, p: BeanParams, hx: number, hy: nu
 
 export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   c.clearRect(0, 0, BW, BH);
+  if (p.view === "side") {
+    drawBeanSide(c, p);
+    return;
+  }
+  const TH = p.thigh ?? 165;
+  const SH = p.shin ?? 170;
+  const drop = frontDrop(p);
   const skin = p.skin ?? "#f7ead6";
   const torso = p.torso ?? "#6b84b8";
   const pants = p.pants ?? "#3a3a4a";
@@ -326,7 +339,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   c.save();
   c.translate(300, 975);
   c.scale(1 - sq, 1 + sq);
-  c.translate(-300, -975 - bob);
+  c.translate(-300, -975 - bob + drop);
   const hipY = 640;
   const shY = 350;
   // long flowing back hair behind shoulders for Mbak Kunti
@@ -346,11 +359,11 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   }
   // far leg + arm
   if (!p.pocong && !p.kunti) {
-    limb(c, 280, hipY, 165, 170, lL, 10);
-    const footL = tip(...tip(280, hipY, 165, lL[0]), 170, lL[0] + lL[1]);
+    limb(c, 280, hipY, TH, SH, lL, 10);
+    const footL = tip(...tip(280, hipY, TH, lL[0]), SH, lL[0] + lL[1]);
     if (p.robe) slipper(c, footL[0], footL[1], p.robeTrim ?? "#8a3a2a");
     else if (p.boots) {
-      const kneeL = tip(280, hipY, 165, lL[0]);
+      const kneeL = tip(280, hipY, TH, lL[0]);
       seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 22, "#7a6a4a"); // calf puttees
       seg(c, kneeL[0], kneeL[1], footL[0], footL[1], 14, "#92805a");
       poly(c, [[footL[0] - 14, footL[1] - 28], [footL[0] + 14, footL[1] - 28], [footL[0] + 44, footL[1] - 6], [footL[0] + 44, footL[1] + 10], [footL[0] - 16, footL[1] + 10]], p.boots, INKC, 6);
@@ -449,11 +462,11 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   if (!p.coat && !p.pocong && !p.kunti) poly(c, [[246, hipY + 10], [354, hipY + 10], [350, hipY + 40], [250, hipY + 40]], pants, INKC, 6);
   // near leg
   if (!p.pocong && !p.kunti) {
-    limb(c, 322, hipY, 165, 170, lR, 10);
-    const footR = tip(...tip(322, hipY, 165, lR[0]), 170, lR[0] + lR[1]);
+    limb(c, 322, hipY, TH, SH, lR, 10);
+    const footR = tip(...tip(322, hipY, TH, lR[0]), SH, lR[0] + lR[1]);
     if (p.robe) slipper(c, footR[0], footR[1], p.robeTrim ?? "#8a3a2a");
     else if (p.boots) {
-      const kneeR = tip(322, hipY, 165, lR[0]);
+      const kneeR = tip(322, hipY, TH, lR[0]);
       seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 22, "#7a6a4a");
       seg(c, kneeR[0], kneeR[1], footR[0], footR[1], 14, "#92805a");
       poly(c, [[footR[0] - 14, footR[1] - 28], [footR[0] + 14, footR[1] - 28], [footR[0] + 44, footR[1] - 6], [footR[0] + 44, footR[1] + 10], [footR[0] - 16, footR[1] + 10]], p.boots, INKC, 6);
@@ -521,18 +534,20 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   }
   if (p.skirt) {
     const wd = p.wide ?? 1;
-    poly(c, [[300 - 66 * wd, hipY - 30], [300 + 66 * wd, hipY - 30], [300 + 80 * wd, 868], [300 - 80 * wd, 868]], p.skirt, INKC, 8);
+    const sb = Math.min(868, hipY + (TH + SH) * 0.68, 975 - drop - 8);
+    const sw = p.thigh !== undefined && p.thigh > 120 && Math.abs(lL[0]) > 60 ? 1.6 : 1; // jongkok: rok melebar di lutut
+    poly(c, [[300 - 66 * wd, hipY - 30], [300 + 66 * wd, hipY - 30], [300 + 80 * wd * sw, sb], [300 - 80 * wd * sw, sb]], p.skirt, INKC, 8);
     c.save();
     c.beginPath();
     c.moveTo(300 - 66 * wd, hipY - 30);
     c.lineTo(300 + 66 * wd, hipY - 30);
-    c.lineTo(300 + 80 * wd, 868);
-    c.lineTo(300 - 80 * wd, 868);
+    c.lineTo(300 + 80 * wd * sw, sb);
+    c.lineTo(300 - 80 * wd * sw, sb);
     c.closePath();
     c.clip();
-    batikDots(c, 200, hipY - 30, 400, 868, p.batik ?? "#f2d8a0");
+    batikDots(c, 160, hipY - 30, 440, sb, p.batik ?? "#f2d8a0");
     c.restore();
-    seg(c, 300 + 30 * wd, hipY - 20, 300 + 46 * wd, 866, 4, INKC);
+    seg(c, 300 + 30 * wd, hipY - 20, 300 + 46 * wd, sb - 2, 4, INKC);
   }
   if (p.kebaya) {
     const wd = p.wide ?? 1;
@@ -618,6 +633,22 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
   c.strokeStyle = INKC;
   c.lineWidth = 10;
   c.stroke();
+  // telinga di sisi belakang saat menoleh (tiga-perempat)
+  const turn = p.turn ?? 0;
+  if (Math.abs(turn) > 0.05 && !p.back) {
+    const ex0 = 300 - Math.sign(turn) * 112;
+    c.beginPath();
+    c.ellipse(ex0, 226, 16, 26, 0, 0, Math.PI * 2);
+    c.fillStyle = skin;
+    c.fill();
+    c.lineWidth = 6;
+    c.strokeStyle = INKC;
+    c.stroke();
+  }
+  c.save();
+  c.translate(300 + turn * 46, 0);
+  c.scale(1 - Math.abs(turn) * 0.16, 1);
+  c.translate(-300, 0);
   // face
   const ex = [262, 338];
   const look = (p.look ?? 0) * 7;
@@ -790,6 +821,9 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.stroke();
     c.restore();
   }
+  c.restore(); // akhir pergeseran wajah tiga-perempat
+  c.save();
+  c.translate(turn * 14, 0);
   // hats
   const hat = p.hat ?? "none";
   if (hat === "cap") {
@@ -985,6 +1019,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.fill();
     c.stroke();
   }
+  c.restore(); // akhir geser topi tiga-perempat
   if (p.soot && p.soot > 0) {
     c.fillStyle = `rgba(36, 23, 38, ${0.22 * p.soot})`;
     [[232, 248, 22, 10], [362, 254, 18, 9], [280, 180, 14, 7]].forEach(([sx, sy, rx, ry]) => {
@@ -1094,7 +1129,7 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
     c.save();
     c.translate(300, 975);
     c.scale(1 - sq2, 1 + sq2);
-    c.translate(-300, -975 - (p.bob ?? 0));
+    c.translate(-300, -975 - (p.bob ?? 0) + frontDrop(p));
     c.translate(300 + tx2 * 1.3, 330);
     c.rotate(R(lean2 * 0.6 + (p.headTilt ?? 0)));
     c.translate(-300, -330);
@@ -1217,6 +1252,12 @@ export const beanWalk = (phase: number, amp = 1): Partial<BeanParams> => {
  * whole drawing lifted by `bob`. The card faces the camera (yaw = atan2(cam - pos)).
  */
 export const beanHandCanvas = (p: BeanParams, side: "L" | "R"): [number, number] => {
+  if (p.view === "side") {
+    const J = sideJoints(p);
+    const h = side === "L" ? J.hL : J.hR;
+    const sq0 = p.squash ?? 0;
+    return [300 + (h[0] + J.dx - 300) * (1 - sq0) * J.k, 975 + (h[1] + J.dy - (p.bob ?? 0) - 975) * (1 + sq0) * J.k];
+  }
   const wide = p.wide ?? 0.95;
   const tx = (p.lean ?? 0) * 3.2;
   const sq = p.squash ?? 0;
@@ -1226,7 +1267,7 @@ export const beanHandCanvas = (p: BeanParams, side: "L" | "R"): [number, number]
   const e = tip(sx, sy, 130, a[0]);
   const h = tip(e[0], e[1], 120, a[0] + a[1]);
   const bx = 300 + (h[0] - 300) * (1 - sq);
-  const by = 975 + (h[1] - (p.bob ?? 0) - 975) * (1 + sq);
+  const by = 975 + (h[1] - (p.bob ?? 0) + frontDrop(p) - 975) * (1 + sq);
   return [bx, by];
 };
 export const beanCanvasToWorld = (cx: number, cy: number, position: Vec3, height: number, camPos: Vec3, flip = false, toCam = 0.04): Vec3 => {
@@ -1240,3 +1281,415 @@ export const beanHandWorld = (p: BeanParams, side: "L" | "R", position: Vec3, he
   const [cx, cy] = beanHandCanvas(p, side);
   return beanCanvasToWorld(cx, cy, position, height, camPos, flip, 0.06);
 };
+
+/* ======================================================================================
+ * POSE & ARAH HADAP (tambahan): tampak samping (profil), pose duduk/jongkok/berlutut/merangkak/
+ * menggali/melompat/berbaring + jalan/lari menyamping. Profil menghadap KANAN; pakai `flip` di
+ * BeanCard untuk menghadap kiri. Tiga-perempat = `turn` (-1..1) pada tampak depan.
+ * Semua pose ditapakkan otomatis ke lantai (y kanvas 975) kecuali `ground: false`.
+ * ==================================================================================== */
+const frontDrop = (p: BeanParams): number => {
+  if (p.view === "side" || (p.thigh === undefined && p.shin === undefined) || p.ground === false) return 0;
+  const TH = p.thigh ?? 165;
+  const SH = p.shin ?? 170;
+  let low = 0;
+  ([[280, p.legL ?? [0, 0]], [322, p.legR ?? [0, 0]]] as [number, [number, number]][]).forEach(([x, a]) => {
+    const k = tip(x, 640, TH, a[0]);
+    const f = tip(k[0], k[1], SH, a[0] + a[1]);
+    low = Math.max(low, k[1] + 24, f[1]);
+  });
+  return 975 - low;
+};
+
+type SJ = { H: [number, number]; S: [number, number]; C: [number, number]; kL: [number, number]; fL: [number, number]; kR: [number, number]; fR: [number, number]; hL: [number, number, number]; hR: [number, number, number]; dx: number; dy: number; th: number; TH: number; SH: number; k: number };
+const sideJoints = (p: BeanParams): SJ => {
+  const TH = p.thigh ?? 165;
+  const SH = p.shin ?? 170;
+  const th = R(p.pitch ?? 0);
+  const H: [number, number] = [300, 640];
+  const up = (L: number, side = 0): [number, number] => [H[0] + L * Math.sin(th) + side * Math.cos(th), H[1] - L * Math.cos(th) + side * Math.sin(th)];
+  const S = up(268, 0);
+  const C = up(420, 6);
+  const lL = p.legL ?? [0, 0];
+  const lR = p.legR ?? [0, 0];
+  const kL = tip(H[0] - 6, H[1], TH, lL[0]);
+  const fL = tip(kL[0], kL[1], SH, lL[0] + lL[1]);
+  const kR = tip(H[0] + 6, H[1], TH, lR[0]);
+  const fR = tip(kR[0], kR[1], SH, lR[0] + lR[1]);
+  const aL = p.armL ?? [-6, -8];
+  const aR = p.armR ?? [6, -8];
+  const eL = tip(S[0] - 6, S[1] + 10, 130, aL[0]);
+  const hL = tip(eL[0], eL[1], 120, aL[0] + aL[1]);
+  const eR = tip(S[0] + 6, S[1] + 10, 130, aR[0]);
+  const hR = tip(eR[0], eR[1], 120, aR[0] + aR[1]);
+  const ys = [fL[1] + 8, fR[1] + 8, kL[1] + 24, kR[1] + 24, H[1] + 40, C[1] + 118, hL[1] + 12, hR[1] + 12];
+  const dy = p.ground === false ? 0 : 975 - Math.max(...ys);
+  const xs = [fL[0] - 20, fR[0] - 20, fL[0] + 50, fR[0] + 50, kL[0], kR[0], C[0] - (p.hat === "sanggul" ? 165 : 130), C[0] + 150, hL[0], hR[0], H[0] - 70];
+  const x0 = Math.min(...xs);
+  const x1 = Math.max(...xs);
+  let dx = 0;
+  if (Math.abs(p.pitch ?? 0) > 15 || x0 < 20 || x1 > 580) dx = 300 - (x0 + x1) / 2;
+  const k = Math.min(1, 570 / (x1 - x0));
+  return { H, S, C, kL, fL, kR, fR, hL: [hL[0], hL[1], aL[0] + aL[1]], hR: [hR[0], hR[1], aR[0] + aR[1]], dx, dy, th, TH, SH, k };
+};
+
+const sideFoot = (c: CanvasRenderingContext2D, p: BeanParams, f: [number, number], shinAng: number, far: boolean) => {
+  c.save();
+  c.translate(f[0], f[1]);
+  c.rotate(R(-shinAng));
+  if (p.boots) poly(c, [[-14, -26], [14, -26], [44, -6], [46, 10], [-16, 10]], far ? shadeCol(p.boots) : p.boots, INKC, 6);
+  else if (p.robe) poly(c, [[-16, -12], [40, -10], [56, 2], [-16, 8]], p.robeTrim ?? "#8a3a2a", INKC, 6);
+  else if (p.barefoot) poly(c, [[-8, -8], [36, -6], [40, 6], [-8, 6]], p.skin ?? "#f7ead6", INKC, 5);
+  else seg(c, 0, 0, 40, 0, 10);
+  c.restore();
+};
+const shadeCol = (hex: string) => {
+  const h = hex.replace("#", "");
+  if (h.length !== 6) return hex;
+  const k = (i: number) => Math.round(parseInt(h.slice(i, i + 2), 16) * 0.78).toString(16).padStart(2, "0");
+  return `#${k(0)}${k(2)}${k(4)}`;
+};
+
+const drawBeanSide = (c: CanvasRenderingContext2D, p: BeanParams) => {
+  const J = sideJoints(p);
+  const skin = p.skin ?? "#f7ead6";
+  const torso = p.torso ?? "#6b84b8";
+  const pants = p.pants ?? "#3a3a4a";
+  const wd = p.wide ?? 1;
+  const sq = p.squash ?? 0;
+  c.save();
+  c.translate(300, 975);
+  c.scale((1 - sq) * J.k, (1 + sq) * J.k);
+  c.translate(-300 + J.dx, -975 - (p.bob ?? 0) + J.dy);
+  const { H, S, C, th } = J;
+  const lL = p.legL ?? [0, 0];
+  const lR = p.legR ?? [0, 0];
+  const aL = p.armL ?? [-6, -8];
+  const aR = p.armR ?? [6, -8];
+  // lengan & kaki jauh
+  limb(c, S[0] - 6, S[1] + 10, 130, 120, aL, 9);
+  if (p.sleeves || p.robe) sleeve(c, S[0] - 6, S[1] + 10, aL, shadeCol(p.robe ?? p.sleeves!));
+  c.fillStyle = INKC;
+  c.beginPath();
+  c.arc(J.hL[0], J.hL[1], 12, 0, Math.PI * 2);
+  c.fill();
+  if (!p.robe) {
+    limb(c, H[0] - 6, H[1], J.TH, J.SH, lL, 10);
+    if (p.boots) seg(c, J.kL[0], J.kL[1], J.fL[0], J.fL[1], 16, shadeCol("#7a6a4a"));
+    if (p.pangsi) trouser(c, H[0] - 6, H[1], lL, shadeCol(p.pangsi));
+    sideFoot(c, p, J.fL, lL[0] + lL[1], true);
+  }
+  // badan (diputar pitch di pinggul)
+  c.save();
+  c.translate(H[0], H[1]);
+  c.rotate(th);
+  const yS = -276;
+  const bodyPts: [number, number][] = [[-44 * wd, yS], [40 * wd, yS], [58 * wd, -140], [54 * wd, p.coat ? 60 : 20], [-50 * wd, p.coat ? 60 : 20], [-54 * wd, -140]];
+  poly(c, bodyPts, torso, INKC, 8);
+  poly(c, [[-50 * wd, -150], [-54 * wd, -140], [-50 * wd, 20], [-30 * wd, 20], [-34 * wd, -150]], "rgba(20,10,30,0.14)", "rgba(0,0,0,0)", 1);
+  if (p.safari) {
+    poly(c, [[14, -226], [46, -226], [46, -180], [14, -180]], torso, INKC, 4);
+    [-226, -166, -106, -46].forEach((y) => {
+      c.fillStyle = INKC;
+      c.beginPath();
+      c.arc(50 * wd, y, 5, 0, Math.PI * 2);
+      c.fill();
+    });
+  }
+  if (p.tie) poly(c, [[38, -266], [50, -266], [54, -150], [46, -136], [36, -150]], p.tie, INKC, 4);
+  if (p.badge) poly(c, [[16, -232], [36, -232], [36, -212], [26, -200], [16, -212]], "#e0b040", INKC, 3);
+  if (!p.coat && !p.skirt) poly(c, [[-50 * wd, 6], [54 * wd, 6], [52 * wd, 40], [-48 * wd, 40]], pants, INKC, 6);
+  if (p.belt) poly(c, [[-50 * wd, -14], [54 * wd, -14], [54 * wd, 10], [-50 * wd, 10]], p.belt, INKC, 5);
+  if (p.apron) poly(c, [[30, -200], [58, -200], [64, 120], [30, 120]], p.apron, INKC, 6);
+  c.restore();
+  // rok / jubah
+  if (p.skirt) {
+    const rot = (x: number, y: number): [number, number] => [H[0] + x * Math.cos(th) - y * Math.sin(th), H[1] + x * Math.sin(th) + y * Math.cos(th)];
+    const kA: [number, number] = [(J.kL[0] + J.kR[0]) / 2, (J.kL[1] + J.kR[1]) / 2];
+    const pts: [number, number][] = [rot(-56 * wd, -40), rot(58 * wd, -40), [J.kR[0] + 34, J.kR[1] + 56], [kA[0] - 34, kA[1] + 62], [H[0] - 60, H[1] + 50]];
+    poly(c, pts, p.skirt, INKC, 8);
+    c.save();
+    c.beginPath();
+    pts.forEach(([x, y], i) => (i ? c.lineTo(x, y) : c.moveTo(x, y)));
+    c.closePath();
+    c.clip();
+    batikDots(c, 100, 500, 560, 990, p.batik ?? "#f2d8a0");
+    c.restore();
+  }
+  if (p.robe) {
+    const fx = (J.fL[0] + J.fR[0]) / 2;
+    const fy = Math.max(J.fL[1], J.fR[1]);
+    poly(c, [[S[0] - 50, S[1] - 6], [S[0] + 48, S[1] - 6], [fx + 70, fy - 14], [fx - 70, fy - 14]], p.robe, INKC, 8);
+    if (p.robeTrim) seg(c, S[0] + 40, S[1], fx + 62, fy - 18, 10, p.robeTrim);
+    sideFoot(c, p, J.fR, lR[0] + lR[1], false);
+  } else {
+    // kaki dekat
+    limb(c, H[0] + 6, H[1], J.TH, J.SH, lR, 10);
+    if (p.boots) seg(c, J.kR[0], J.kR[1], J.fR[0], J.fR[1], 16, "#8a7a5a");
+    if (p.pangsi) trouser(c, H[0] + 6, H[1], lR, p.pangsi);
+    sideFoot(c, p, J.fR, lR[0] + lR[1], false);
+  }
+  // leher + kepala profil
+  const phi = th * 0.35 + R(p.headTilt ?? 0);
+  c.save();
+  c.translate(C[0], C[1]);
+  c.rotate(phi);
+  seg(c, -6, 100, -16, 150, 9);
+  const head = new Path2D();
+  head.moveTo(0, -117);
+  head.bezierCurveTo(82, -117, 122, -55, 120, 7);
+  head.bezierCurveTo(118, 71, 72, 115, 0, 115);
+  head.bezierCurveTo(-72, 115, -118, 71, -120, 7);
+  head.bezierCurveTo(-122, -55, -82, -117, 0, -117);
+  head.closePath();
+  // hidung (tertutup sebagian oleh kepala)
+  c.beginPath();
+  c.ellipse(116, 26, 22, 17, 0.2, 0, Math.PI * 2);
+  c.fillStyle = skin;
+  c.fill();
+  c.lineWidth = 7;
+  c.strokeStyle = INKC;
+  c.stroke();
+  c.fillStyle = skin;
+  c.fill(head);
+  // rambut di belakang & atas (dalam kepala)
+  const hairCol = p.hat === "sanggul" ? p.hair ?? "#1c1418" : p.hair;
+  if (hairCol) {
+    c.save();
+    c.clip(head);
+    c.fillStyle = hairCol;
+    c.beginPath();
+    c.moveTo(-140, -140);
+    c.lineTo(70, -140);
+    c.quadraticCurveTo(60, -70, 10, -66);
+    c.quadraticCurveTo(-30, -60, -40, 0);
+    c.quadraticCurveTo(-50, 50, -70, 90);
+    c.lineTo(-140, 90);
+    c.closePath();
+    c.fill();
+    c.restore();
+  }
+  c.lineWidth = 10;
+  c.strokeStyle = INKC;
+  c.stroke(head);
+  // telinga
+  c.beginPath();
+  c.ellipse(-16, 20, 16, 24, 0, 0, Math.PI * 2);
+  c.fillStyle = skin;
+  c.fill();
+  c.lineWidth = 6;
+  c.stroke();
+  c.beginPath();
+  c.arc(-14, 20, 9, -1.2, 1.2);
+  c.lineWidth = 4;
+  c.stroke();
+  // mata (satu) + alis
+  const ex = 58;
+  const ey = 4;
+  const big = p.expr === "shock" || p.expr === "scared" ? 22 : 17;
+  const look = (p.look ?? 0) * 5;
+  if (p.blink || p.expr === "sleepy") seg(c, ex - 14, ey + 4, ex + 14, ey + 4, 6);
+  else if (p.expr === "happy") {
+    c.beginPath();
+    c.arc(ex, ey + 8, 14, Math.PI, 0);
+    c.lineWidth = 6;
+    c.stroke();
+  } else if (p.expr === "laugh") {
+    c.beginPath();
+    c.moveTo(ex - 12, ey - 11);
+    c.lineTo(ex + 11, ey);
+    c.lineTo(ex - 12, ey + 11);
+    c.lineWidth = 7;
+    c.stroke();
+  } else if (p.expr === "disgust") seg(c, ex - 14, ey + 2, ex + 14, ey - 4, 7);
+  else {
+    c.beginPath();
+    c.ellipse(ex, ey, big * 0.8, big, 0, 0, Math.PI * 2);
+    c.fillStyle = "#fffdf6";
+    c.fill();
+    c.lineWidth = 5;
+    c.stroke();
+    c.beginPath();
+    c.arc(ex + 6 + look, ey + (p.expr === "sad" ? 4 : 0), p.expr === "shock" ? 5 : 7, 0, Math.PI * 2);
+    c.fillStyle = INKC;
+    c.fill();
+  }
+  let ba = 0;
+  let by = ey - 34;
+  if (p.expr === "worried" || p.expr === "scared" || p.expr === "sad") ba = 16;
+  if (p.expr === "angry") ba = -20;
+  if (p.expr === "smug" || p.expr === "think" || p.expr === "disgust") ba = -10;
+  if (p.expr === "shock") by -= 12;
+  c.save();
+  c.translate(ex + 2, by);
+  c.rotate(R(ba));
+  seg(c, -15, 0, 15, 0, 7);
+  c.restore();
+  // mulut
+  const mx = 84;
+  const my = 64;
+  const mo = p.mouthOpen ?? 0;
+  c.strokeStyle = INKC;
+  c.lineWidth = 7;
+  c.lineCap = "round";
+  if (p.expr === "shock" || p.expr === "scared") {
+    c.beginPath();
+    c.ellipse(mx + 4, my + 4, 11, 16, 0, 0, Math.PI * 2);
+    c.fillStyle = INKC;
+    c.fill();
+  } else if (p.expr === "talk" || mo > 0.05) {
+    c.beginPath();
+    c.ellipse(mx + 4, my + 2, 12, 5 + mo * 12, 0, 0, Math.PI * 2);
+    c.fillStyle = INKC;
+    c.fill();
+  } else if (p.expr === "happy" || p.expr === "laugh") {
+    c.beginPath();
+    c.moveTo(mx - 16, my - 4);
+    c.quadraticCurveTo(mx + 6, my + 22, mx + 22, my - 8);
+    c.closePath();
+    c.fillStyle = p.expr === "laugh" ? "#3a0f16" : INKC;
+    c.fill();
+    c.stroke();
+  } else if (p.expr === "smug") {
+    c.beginPath();
+    c.moveTo(mx - 14, my + 2);
+    c.quadraticCurveTo(mx + 4, my + 12, mx + 18, my - 8);
+    c.stroke();
+  } else if (p.expr === "angry" || p.expr === "sad" || p.expr === "worried") {
+    c.beginPath();
+    c.arc(mx + 2, my + 20, 16, Math.PI * 1.2, Math.PI * 1.85);
+    c.stroke();
+  } else if (p.expr === "disgust") {
+    c.beginPath();
+    c.moveTo(mx - 14, my + 4);
+    c.quadraticCurveTo(mx - 4, my - 6, mx + 4, my + 4);
+    c.quadraticCurveTo(mx + 12, my + 12, mx + 18, my);
+    c.stroke();
+  } else seg(c, mx - 12, my + 2, mx + 14, my, 7);
+  if (p.mustache) {
+    c.fillStyle = "#2b1a12";
+    c.beginPath();
+    c.moveTo(mx + 26, my - 22);
+    c.quadraticCurveTo(mx - 6, my - 34, mx - 30, my - 8);
+    c.quadraticCurveTo(mx - 4, my - 8, mx + 26, my - 12);
+    c.fill();
+    c.lineWidth = 4;
+    c.stroke();
+  }
+  if (p.expr === "disgust") {
+    c.fillStyle = "rgba(140,190,90,0.45)";
+    c.beginPath();
+    c.ellipse(40, 46, 22, 14, 0, 0, Math.PI * 2);
+    c.fill();
+  }
+  // topi profil
+  const hat = p.hat ?? "none";
+  const hc = p.hatColor ?? "#5a3a22";
+  if (hat === "cap") {
+    poly(c, [[-112, -38], [-100, -100], [0, -128], [90, -98], [108, -50]], hc, INKC, 8);
+    poly(c, [[80, -56], [172, -46], [166, -30], [80, -38]], hc, INKC, 7);
+  } else if (hat === "helmet" || hat === "guardhelmet" || hat === "steel90" || hat === "brodie") {
+    poly(c, [[-122, -24], [-110, -98], [0, -134], [102, -98], [118, -30]], hat === "guardhelmet" ? "#b8bfc8" : hc, INKC, 8);
+    seg(c, -118, -30, 118, -30, 6, "rgba(0,0,0,0.25)");
+    if (hat === "helmet") {
+      poly(c, [[86, -70], [118, -78], [124, -48], [94, -42]], "#3a3a40", INKC, 5);
+      c.beginPath();
+      c.arc(122, -62, 10, 0, Math.PI * 2);
+      c.fillStyle = "#fff4b0";
+      c.fill();
+      c.lineWidth = 4;
+      c.stroke();
+    }
+  } else if (hat === "bowler" || hat === "tophat") {
+    poly(c, [[-70, -72], [-62, hat === "tophat" ? -200 : -124], [62, hat === "tophat" ? -200 : -124], [72, -72]], hc, INKC, 8);
+    poly(c, [[-116, -76], [118, -76], [110, -58], [-108, -58]], hc, INKC, 7);
+  } else if (hat === "policecap" || hat === "officer") {
+    poly(c, [[-112, -58], [-96, -112], [60, -122], [124, -98], [104, -58]], hc, INKC, 7);
+    poly(c, [[-108, -60], [104, -60], [100, -40], [-104, -40]], "#121216", INKC, 6);
+    poly(c, [[92, -46], [164, -36], [154, -22], [90, -32]], "#141214", INKC, 6);
+    poly(c, [[40, -104], [60, -104], [60, -82], [40, -82]], "#e0b040", INKC, 3);
+  } else if (hat === "kerchief" || hat === "iket" || hat === "headband") {
+    poly(c, [[-120, -16], [-106, -100], [0, -124], [98, -96], [112, -38], [0, -60]], hc, INKC, 8);
+    poly(c, [[-112, -60], [-170, -30], [-150, 4], [-116, -28]], hc, INKC, 6);
+  } else if (hat === "sanggul") {
+    c.beginPath();
+    c.arc(-112, -58, 44, 0, Math.PI * 2);
+    c.fillStyle = p.hair ?? "#1c1418";
+    c.fill();
+    c.lineWidth = 6;
+    c.stroke();
+    seg(c, -100, -100, -150, -116, 5, "#e0b040");
+    c.fillStyle = "#e0b040";
+    c.beginPath();
+    c.arc(-152, -118, 8, 0, Math.PI * 2);
+    c.fill();
+  } else if (hat !== "none" && hat !== "wig") {
+    poly(c, [[-118, -30], [-106, -100], [0, -126], [100, -96], [114, -34]], hc, INKC, 8);
+  }
+  if (p.soot && p.soot > 0) {
+    c.fillStyle = `rgba(36, 23, 38, ${0.22 * p.soot})`;
+    c.beginPath();
+    c.ellipse(40, 50, 20, 10, -0.2, 0, Math.PI * 2);
+    c.fill();
+  }
+  if (p.sweat) {
+    c.fillStyle = "#8fd3ff";
+    c.lineWidth = 4;
+    c.beginPath();
+    c.moveTo(-40, -70);
+    c.quadraticCurveTo(-22, -34, -40, -24);
+    c.quadraticCurveTo(-60, -34, -40, -70);
+    c.fill();
+    c.stroke();
+  }
+  c.restore();
+  // lengan dekat + benda
+  limb(c, S[0] + 6, S[1] + 10, 130, 120, aR, 9);
+  if (p.sleeves || p.robe) sleeve(c, S[0] + 6, S[1] + 10, aR, p.robe ?? p.sleeves!);
+  c.fillStyle = INKC;
+  c.beginPath();
+  c.arc(J.hR[0], J.hR[1], 12, 0, Math.PI * 2);
+  c.fill();
+  if (p.prop && p.prop !== "none") drawProp(c, p, p.propHand === "L" ? J.hL[0] : J.hR[0], p.propHand === "L" ? J.hL[1] : J.hR[1], p.propHand === "L" ? J.hL[2] : J.hR[2]);
+  c.restore();
+};
+
+/* ----------------------------------------------------------------------------- perpustakaan pose */
+type PP = Partial<BeanParams>;
+/** duduk di kursi/kasur. side=true: profil (paha mendatar ke depan) */
+export const poseSit = (side = false): PP =>
+  side ? { view: "side", legL: [86, -86], legR: [82, -82], armL: [26, -40], armR: [44, -50] } : { thigh: 46, shin: 172, legL: [10, -10], legR: [-10, 10], armL: [-14, -30], armR: [14, -30] };
+/** berlutut (lutut di lantai) */
+export const poseKneel = (side = false): PP => (side ? { view: "side", pitch: 4, legL: [-2, -88], legR: [6, -92] } : { thigh: 165, shin: 14, legL: [6, 0], legR: [-6, 0] });
+/** jongkok */
+export const poseCrouch = (side = false): PP =>
+  side ? { view: "side", pitch: 26, legL: [126, -150], legR: [132, -156], armL: [40, -30], armR: [62, -40] } : { thigh: 150, shin: 168, legL: [-100, 100], legR: [100, -100], armL: [-44, -50], armR: [44, -50] };
+/** merangkak (profil), f = frame, speed = kecepatan siklus */
+export const poseCrawl = (f: number, speed = 1): PP => {
+  const s = Math.sin(f * 0.25 * speed);
+  return { view: "side", pitch: 78, legL: [2 + 14 * s, -92], legR: [2 - 14 * s, -92], armL: [-4 - 16 * s, 2], armR: [-4 + 16 * s, 2], headTilt: -26 };
+};
+/** jalan menyamping (profil) — tokoh harus benar-benar berpindah tempat (linePath) */
+export const poseWalkSide = (f: number, speed = 1, amp = 1): PP => {
+  const ph = f * 0.21 * speed;
+  const s = Math.sin(ph);
+  const co = Math.cos(ph);
+  return { view: "side", pitch: 3 * amp, legL: [26 * s * amp, -Math.max(0, co) * 40 * amp], legR: [-26 * s * amp, -Math.max(0, -co) * 40 * amp], armL: [-24 * s * amp, 14], armR: [24 * s * amp, 14], bob: Math.abs(co) * 6 * amp };
+};
+/** lari menyamping (profil) */
+export const poseRunSide = (f: number, speed = 1): PP => {
+  const ph = f * 0.42 * speed;
+  const s = Math.sin(ph);
+  const co = Math.cos(ph);
+  return { view: "side", pitch: 14, legL: [48 * s, -(0.3 + Math.max(0, co)) * 75], legR: [-48 * s, -(0.3 + Math.max(0, -co)) * 75], armL: [-44 * s, 80], armR: [44 * s, 80], bob: Math.abs(co) * 14 };
+};
+/** melompat / melayang (tidak ditapakkan). side=true untuk profil */
+export const poseJump = (side = false): PP =>
+  side ? { view: "side", ground: false, pitch: 8, legL: [70, -110], legR: [40, -70], armL: [-160, -10], armR: [-140, -30] } : { thigh: 140, shin: 150, ground: false, legL: [-34, 50], legR: [34, -50], armL: [-150, 10], armR: [150, -10] };
+/** menggali/mengebor (profil): badan membungkuk, kedua tangan ke depan-bawah */
+export const poseDig = (f: number, speed = 1): PP => {
+  const s = Math.sin(f * 0.3 * speed);
+  return { view: "side", pitch: 30 + 10 * s, legL: [22, -16], legR: [-16, -6], armL: [46 + 12 * s, -36], armR: [60 + 12 * s, -44] };
+};
+/** berbaring (profil): badan mendatar */
+export const poseLie = (): PP => ({ view: "side", pitch: 90, legL: [92, 0], legR: [90, 0], armL: [90, 0], armR: [70, 30], headTilt: -10 });
