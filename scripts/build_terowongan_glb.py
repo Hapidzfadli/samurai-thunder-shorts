@@ -757,13 +757,7 @@ def build_L6(ox):
     S.add_hip_roof("AtapH", (ox, 7.0, 14.0), 24.6, 14, 3.0, 0.7, "Atap_Genteng", c)
     # mobil di bawah jendela (pendaratan), motor menunggu, lampu jalan, pohon, gedung seberang
     CAR("MobilBawahJdl", jx + 0.2, -3.2, 0, "Mobil_Krem", c, 1)
-    mx, my = ox + 3.4, -4.8
-    for sx in (-1, 1):
-        CY(f"RodaMotor{sx}", (mx + sx * 0.65, my, 0.32), 0.32, 0.1, "Ban", c, rot=(PI / 2, 0, 0), segs=16)
-    B("BadanMotor", (mx, my, 0.62), (1.0, 0.3, 0.35), "Tabung_Merah", c, bevel=0.06)
-    B("JokMotor", (mx - 0.2, my, 0.86), (0.6, 0.28, 0.1), "Plastik_Hitam", c)
-    B("StangMotor", (mx + 0.55, my, 1.05), (0.06, 0.7, 0.05), "Krom", c)
-    CY("LampuMotor", (mx + 0.7, my, 0.9), 0.08, 0.06, "Lampu_Kuning", c, rot=(0, PI / 2, 0), segs=10)
+    # motor dibuat di Remotion (objectsTerowongan.Motorbike) agar bisa melaju
     for k in range(5):
         LAMPPOST(f"LampuH{k}", ox - 16 + k * 8, -2.0, c)
     for k in range(4):

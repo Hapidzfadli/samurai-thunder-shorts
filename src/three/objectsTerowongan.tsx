@@ -209,3 +209,77 @@ export const OpenDrawer: React.FC<{ out?: number; bundles?: number }> = ({ out =
     </group>
   );
 };
+
+/** Motor kecil 1970-an (bisa melaju). Titik (0,0,0) = di lantai, tengah; maju ke +X lokal. */
+export const Motorbike: React.FC<{ spin?: number }> = ({ spin = 0 }) => {
+  const g = useMemo(() => ({ wheel: new THREE.TorusGeometry(0.27, 0.07, 10, 24), hub: new THREE.CylinderGeometry(0.06, 0.06, 0.1, 10), body: new THREE.BoxGeometry(0.85, 0.26, 0.24), seat: new THREE.BoxGeometry(0.5, 0.08, 0.26), tank: new THREE.SphereGeometry(0.17, 14, 10), bar: new THREE.CylinderGeometry(0.02, 0.02, 0.6, 8), lamp: new THREE.CylinderGeometry(0.07, 0.07, 0.06, 12), fork: new THREE.BoxGeometry(0.04, 0.5, 0.04) }), []);
+  const m = useMemo(() => ({ tyre: std("#161616", { roughness: 0.9 }), red: std("#c0302a", { roughness: 0.35 }), black: std("#202024"), chrome: std("#d0d4d8", { metalness: 0.9, roughness: 0.15 }), glow: new THREE.MeshStandardMaterial({ color: "#fff2c0", emissive: "#ffd070", emissiveIntensity: 2 }) }), []);
+  return (
+    <group>
+      {[-0.55, 0.6].map((x) => (
+        <group key={x} position={[x, 0.34, 0]} rotation={[0, 0, -spin]}>
+          <mesh geometry={g.wheel} material={m.tyre} castShadow />
+          <mesh geometry={g.hub} material={m.chrome} rotation={[Math.PI / 2, 0, 0]} />
+        </group>
+      ))}
+      <Inked geo={g.body} mat={m.red} pos={[0.02, 0.62, 0]} ink={0.04} />
+      <mesh geometry={g.tank} material={m.red} position={[0.2, 0.8, 0]} scale={[1.3, 0.7, 0.8]} castShadow />
+      <mesh geometry={g.seat} material={m.black} position={[-0.25, 0.8, 0]} />
+      <mesh geometry={g.fork} material={m.chrome} position={[0.55, 0.62, 0]} rotation={[0, 0, -0.35]} />
+      <mesh geometry={g.bar} material={m.chrome} position={[0.48, 0.98, 0]} rotation={[Math.PI / 2, 0, 0]} />
+      <mesh geometry={g.lamp} material={m.glow} position={[0.62, 0.86, 0]} rotation={[0, 0, Math.PI / 2]} />
+    </group>
+  );
+};
+
+/** Tulisan cat di dinding yang muncul bertahap (progress 0..1). Bidang menghadap +Z lokal. */
+export const WallText: React.FC<{ lines: string[]; progress: number; w?: number; h?: number; color?: string }> = ({ lines, progress, w = 1.9, h = 1.0, color = "#b8141e" }) => {
+  const total = lines.join("").length;
+  const shown = Math.floor(total * Math.max(0, Math.min(1, progress)));
+  const tex = useMemo(() => {
+    const c = document.createElement("canvas");
+    c.width = 1024;
+    c.height = 540;
+    const t = new THREE.CanvasTexture(c);
+    t.colorSpace = THREE.SRGBColorSpace;
+    return { c, t };
+  }, []);
+  const ctx = tex.c.getContext("2d")!;
+  ctx.clearRect(0, 0, 1024, 540);
+  ctx.font = "bold 118px Anton, Impact, sans-serif";
+  ctx.fillStyle = color;
+  ctx.textAlign = "center";
+  let left = shown;
+  lines.forEach((ln, i) => {
+    const part = ln.slice(0, Math.max(0, Math.min(ln.length, left)));
+    left -= ln.length;
+    ctx.fillText(part.padEnd(ln.length, " "), 512, 150 + i * 165);
+    // tetesan cat
+    for (let k = 0; k < Math.min(part.length, 6); k++) ctx.fillRect(120 + k * 140 + (i * 37) % 60, 160 + i * 165, 6, 26 + ((k * 13) % 30));
+  });
+  tex.t.needsUpdate = true;
+  return (
+    <mesh>
+      <planeGeometry args={[w, h]} />
+      <meshStandardMaterial map={tex.t} transparent roughness={0.9} polygonOffset polygonOffsetFactor={-2} />
+    </mesh>
+  );
+};
+
+/** percikan las (deterministik per frame) */
+export const Sparks: React.FC<{ frame: number; n?: number; on?: boolean }> = ({ frame, n = 26, on = true }) => {
+  const mat = useMemo(() => new THREE.MeshBasicMaterial({ color: "#ffd27a" }), []);
+  const geo = useMemo(() => new THREE.SphereGeometry(0.012, 6, 4), []);
+  if (!on) return null;
+  return (
+    <group>
+      {Array.from({ length: n }, (_, i) => {
+        const t = ((frame * 0.7 + i * 3.7) % 12) / 12;
+        const a = i * 2.39996;
+        const v = 0.6 + ((i * 37) % 10) / 10;
+        return <mesh key={i} geometry={geo} material={mat} position={[Math.cos(a) * v * t * 0.5, v * t * 0.35 - 2.2 * t * t * 0.3, Math.sin(a) * v * t * 0.5]} scale={1 - t} />;
+      })}
+      <pointLight intensity={2 + Math.abs(Math.sin(frame * 1.7)) * 3} distance={4} color="#bcd4ff" />
+    </group>
+  );
+};

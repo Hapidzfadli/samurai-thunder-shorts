@@ -1,0 +1,44 @@
+[
+  {"scene": "hook", "takes": 3, "lines": [
+    ["tegang", "Senin pagi, Juli seribu sembilan ratus tujuh puluh enam. Pintu brankas sebuah bank di kota Nice, Prancis, tidak bisa dibuka.", "dodi"],
+    ["bisik", "Karena dikunci... dari dalam.", "dodi"]
+  ]},
+  {"scene": "ide", "takes": 3, "lines": [
+    ["santai", "Kamu mau bobol bank? Kamu kan cuma tukang foto.", "ara"],
+    ["bisik", "Justru itu. Lihat peta got ini. Ada saluran yang lewat persis di samping brankasnya.", "dodi"],
+    ["tegang", "Di samping... brankas?", "ara"]
+  ]},
+  {"scene": "got", "takes": 3, "lines": [
+    ["tegang", "Baunya ya ampun! Aku nggak dibayar cukup buat ini.", "ara"],
+    ["santai", "Kamu dibayar pakai isi brankas. Jalan terus.", "dodi"]
+  ]},
+  {"scene": "gali", "takes": 3, "lines": [
+    ["narasi", "Berminggu-minggu, tiap malam, mereka menggali terowongan sekitar delapan meter dari got ke dinding brankas.", "dodi"],
+    ["tegang", "Di atas kita jalan raya. Kalau ambruk, gimana?", "ara"],
+    ["santai", "Makanya gali pelan-pelan. Dan jangan bersin.", "dodi"]
+  ]},
+  {"scene": "brankas", "takes": 3, "lines": [
+    ["bisik", "Akhir pekan Bastille Day. Bank tutup tiga hari. Kita punya waktu.", "dodi"],
+    ["tegang", "Tiga ratus tujuh puluh satu kotak?! Kita buka semua?", "ara"],
+    ["santai", "Satu per satu, dengan sopan.", "dodi"]
+  ]},
+  {"scene": "uang", "takes": 3, "lines": [
+    ["santai", "Tangkap!", "dodi"],
+    ["santai", "Wanginya beda sama got.", "ara"]
+  ]},
+  {"scene": "pesan", "takes": 3, "lines": [
+    ["santai", "Kamu nulis apa di tembok?", "ara"],
+    ["tegas", "Tanpa senjata, tanpa kebencian, tanpa kekerasan.", "dodi"],
+    ["santai", "Iya, tapi tetap mencuri, kan?", "ara"]
+  ]},
+  {"scene": "tangkap", "takes": 3, "lines": [
+    ["narasi", "Senin pagi, polisi menemukan hampir lima puluh juta franc lenyap. Beberapa bulan kemudian, Si Fotografer tertangkap.", "dodi"],
+    ["santai", "Nah kan. Sudah kubilang.", "ara"]
+  ]},
+  {"scene": "kabur", "takes": 3, "lines": [
+    ["santai", "Pak Hakim, boleh saya tunjukkan di peta, bagaimana caranya?", "dodi"],
+    ["narasi", "Saat diperiksa hakim, ia melompat dari jendela, mendarat di atap mobil, dan kabur naik motor.", "dodi"],
+    ["tegang", "Hah?! Dia kabur lagi?!", "ara"],
+    ["narasi", "Uangnya tidak pernah ditemukan. Dan ia tidak pernah tertangkap lagi.", "dodi"]
+  ]}
+]
