@@ -26,6 +26,13 @@ Gaya: latar 3D (Blender → GLB) + tokoh kartun 2D datar, tetapi harus terlihat 
 - **Detail bercerita**: papan nama, layar, label nomor, noda/karat/retak, kertas berserakan, figuran di latar belakang; tekstur kotor/lapuk, bukan permukaan "baru".
 - **Atmosfer**: debu di sorot cahaya, daun, asap, bendera berkibar, kabut tipis untuk pemisahan lapisan, vignette + grading per adegan.
 - Kirim pratinjau still (≥1 per jenis shot) dan minta persetujuan sebelum render.
+- **Perkakas siap pakai: `src/cinemaKit.tsx`** (contoh pakai: `src/UjiSinema.tsx`, komposisi `UjiSinema`):
+  - `CineStage` + `LIGHT_PRESETS` (siang/senja/malam/tegang/akrab): 1 lampu utama berarah + hemisphere gelap + bayangan nyata; `GlbWorld` memuat GLB dengan `invalidate/advance`.
+  - `buildShots({dur, focus, targets, front, reach, style})` membuat paket shot otomatis (lebar/medium/close-up/sudut rendah-miring/crane/orbit, ganti ±2-2,6 detik) → `shotCam(frame, shots)`. `focus` = titik LANTAI; `targets` = posisi kaki tokoh (medium/close-up bergantian menyorot tokoh). `front` = azimut kamera di koordinat Three.js (`atan2(z, x)`, ingat z = -y Blender).
+  - `cineCard(cam, preset)` → props `BeanCard` (`tint`, `shade`, `rim`, `lightSide`, `realShadow`) agar tokoh punya bayangan jatuh nyata + rim light.
+  - `Foreground` (jeruji/tiang/tepi) untuk bingkai depan; `CineGrade` untuk grading + vignette.
+  - Keterbatasan: `buildShots` tidak tahu properti latar. Cek still tiap shot; ruangan dengan meja/tiang besar (mis. tenda Napoleon) perlu kamera manual atau `targets`/`front` disetel agar tidak terhalang.
+- **Checklist pratinjau (cek sebelum kirim lembar kontak)**: tiap adegan ≥3 shot berbeda; ada 1 sumber cahaya berarah dengan sisi gelap yang terlihat; bayangan tokoh jatuh di lantai; ada benda bingkai depan di sebagian shot; tokoh tidak terhalang properti; adegan malam benar-benar gelap.
 
 ## 3. GERAKAN HARUS MASUK AKAL (aturan paling penting)
 Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh**, tidak boleh "tiba-tiba sudah terjadi".
