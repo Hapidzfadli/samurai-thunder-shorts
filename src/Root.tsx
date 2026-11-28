@@ -59,6 +59,7 @@ import { Napoleon, TOTAL_FRAMES_NAPOLEON } from "./Napoleon";
 import { UjiSinema, TOTAL_FRAMES_UJI } from "./UjiSinema";
 import { UjiKejar, TOTAL_FRAMES_KEJAR } from "./UjiKejar";
 import { SheetNapoleonKarakter, SheetNapoleonEkspresi } from "./SheetNapoleon";
+import { PratinjauTerowongan, TOTAL_FRAMES_PRATINJAU_T } from "./PratinjauTerowongan";
 import { SheetTerowonganKarakter, SheetTerowonganEkspresi, SheetTerowonganLatar } from "./SheetTerowongan";
 import { SheetKelelawarKarakter, SheetKelelawarEkspresi, SheetKelelawarProperti } from "./SheetKelelawar";
 import { Mie, TOTAL_FRAMES_MIE } from "./Mie";
@@ -93,6 +94,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="Napoleon" component={Napoleon} durationInFrames={TOTAL_FRAMES_NAPOLEON} fps={30} width={1080} height={1920} defaultProps={{ withAudio: false }} />
       <Composition id="UjiSinema" component={UjiSinema} durationInFrames={TOTAL_FRAMES_UJI} fps={30} width={1080} height={1920} />
       <Composition id="UjiKejar" component={UjiKejar} durationInFrames={TOTAL_FRAMES_KEJAR} fps={30} width={1080} height={1920} />
+      <Composition id="PratinjauTerowongan" component={PratinjauTerowongan} durationInFrames={TOTAL_FRAMES_PRATINJAU_T} fps={30} width={1080} height={1920} />
       <Composition id="SheetTerowonganKarakter" component={SheetTerowonganKarakter} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetTerowonganEkspresi" component={SheetTerowonganEkspresi} durationInFrames={1} fps={30} width={2000} height={1150} />
       <Composition id="SheetTerowonganLatar" component={SheetTerowonganLatar} durationInFrames={1} fps={30} width={2000} height={1440} />
