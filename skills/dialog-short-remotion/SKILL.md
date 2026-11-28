@@ -72,6 +72,7 @@ Dipilih pengguna untuk cerita bersetting gedung (sekolah, kantor, lab). Contoh j
 
 ## 5c. Kualitas sinematik (cahaya, kamera, bayangan) — pakai `src/cinemaKit.tsx`
 Agar video tidak datar: bangun adegan dengan `CineStage` + preset cahaya (`LIGHT_PRESETS`), kamera dari `buildShots(...)` + `shotCam(...)`, tokoh dengan `cineCard(...)` (bayangan nyata + rim light), dan `Foreground` untuk bingkai depan. Ganti shot tiap 2-3 detik. Contoh lengkap: `src/UjiSinema.tsx`. Aturan lengkap + checklist pratinjau: `CLAUDE.md` bagian 2b. Cek tiap shot di still: properti latar bisa menghalangi kamera otomatis.
+Tokoh hidup: arah hadap mengikuti gerak (tampak belakang `back: true` saat menjauh), pose sesuai aksi (duduk/jongkok/merangkak/menggali), lari benar-benar berpindah tempat (`src/motionKit.tsx`: `runPose`, `linePath`, `recedeCam`, `ChaseRabbits`), benda di tangan via `beanHandWorld`, close-up wajah + tokoh kecil, shot penampang untuk terowongan. Lihat `CLAUDE.md` bagian 2b.
 
 ## 6. Still-check hemat (satu lembar kontak)
 Skrip render still memakai `@remotion/renderer` dan harus berada di root repo agar modul ditemukan (jangan di-commit; masukkan ke `.git/info/exclude`):

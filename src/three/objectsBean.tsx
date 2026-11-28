@@ -50,6 +50,7 @@ export type BeanParams = {
   headphones?: boolean;
   hatColor?: string;
   hair?: string;
+  back?: boolean; // tampak belakang: wajah tertutup rambut/kepala belakang (tokoh berlari menjauhi kamera)
   mustache?: boolean;
   apron?: string;
   tie?: string;
@@ -1084,6 +1085,39 @@ export const drawBean = (c: CanvasRenderingContext2D, p: BeanParams) => {
       c.fill();
       c.stroke();
     }
+  }
+  // tampak belakang: tutup wajah dengan kepala belakang (rambut) + tengkuk, topi tetap terlihat
+  if (p.back) {
+    const lean2 = p.lean ?? 0;
+    const tx2 = lean2 * 3.2;
+    const sq2 = p.squash ?? 0;
+    c.save();
+    c.translate(300, 975);
+    c.scale(1 - sq2, 1 + sq2);
+    c.translate(-300, -975 - (p.bob ?? 0));
+    c.translate(300 + tx2 * 1.3, 330);
+    c.rotate(R(lean2 * 0.6 + (p.headTilt ?? 0)));
+    c.translate(-300, -330);
+    const head = new Path2D();
+    head.moveTo(300, 88);
+    head.bezierCurveTo(382, 88, 422, 150, 420, 212);
+    head.bezierCurveTo(418, 276, 372, 320, 300, 320);
+    head.bezierCurveTo(228, 320, 182, 276, 180, 212);
+    head.bezierCurveTo(178, 150, 218, 88, 300, 88);
+    head.closePath();
+    c.save();
+    c.clip(head);
+    c.fillStyle = p.hair ?? "#2a1a12";
+    c.fillRect(170, 140, 260, 190);
+    c.fillStyle = p.skin ?? "#f7ead6";
+    c.beginPath();
+    c.ellipse(300, 318, 70, 34, 0, Math.PI, 0);
+    c.fill();
+    c.restore();
+    c.strokeStyle = INKC;
+    c.lineWidth = 10;
+    c.stroke(head);
+    c.restore();
   }
 };
 
