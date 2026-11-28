@@ -336,7 +336,7 @@ def build_L1(ox):
         B(f"BangkuSandar{k}", (x, -7.38, 1.05), (1.8, 0.05, 0.4), "Jendela_Hijau", c)
         for sx in (-1, 1):
             B(f"BangkuKaki{k}{sx}", (x + sx * 0.8, -7.6, 0.5), (0.06, 0.4, 0.5), "Besi_Hitam", c)
-        CY(f"Sampah{k}", (x + 2.2, -7.4, 0.7), 0.25, 0.8, "Jendela_Hijau", c, segs=10)
+        CY(f"Sampah{k}", (x + 2.2, -10.6, 0.7), 0.25, 0.8, "Jendela_Hijau", c, segs=10)
     for k in range(6):
         PLANT(f"PotJalan{k}", ox - 7.5 + k * 3.0 if k < 3 else ox + 1.5 + (k - 3) * 3.0, 7.7, 0.26, c, s=1.2, seed=20 + k)
     for k in range(9):
@@ -597,7 +597,7 @@ def build_L5(ox):
     RING("SumurBrankas", (hx, hy, -1.3), 0.7, 0.6, 2.2, "Tanah", c, rot=(0, 0, 0), segs=24)
     DISC("DasarSumur", (hx, hy, -2.3), 0.62, "Tanah_Gelap", c, axis="Z")
     RUBBLE("Puing", hx, hy, 0.02, 22, c, spread=1.1, size=0.13)
-    CY("BongkahLantai", (hx + 1.05, hy - 0.35, 0.18), 0.6, 0.2, "Beton", c, rot=(0.25, 0.15, 0), segs=20)
+    CY("BongkahLantai", (hx - 0.9, hy + 0.75, 0.18), 0.6, 0.2, "Beton", c, rot=(0.25, 0.15, 0), segs=20)
     # dinding: belakang (pintu brankas), kiri/kanan (laci), depan rendah
     back = B("DindingBlk", (ox, yb, H / 2), (W, 0.6, H), "Beton", c, uv=0.5)
     CUT(back, [CY("LubangPintu", (ox, yb, 2.05), 1.95, 1.0, "Beton", c, rot=(PI / 2, 0, 0), segs=48)])
@@ -833,7 +833,131 @@ def merge_for_export():
         bpy.context.object.name = f"{colname}__{mn}"
 
 
-merge_for_export()
+# ====================================================================== BAKE cahaya pantul (BAKE=1)
+# Per latar: gabung semua mesh jadi satu objek (material tetap), UV kedua "LM" (smart project), Cycles bake DIFFUSE
+# INDIRECT (pantulan saja; cahaya langsung tetap real-time di Remotion) -> public/models/terowongan_lm_<L>.png
+SUN_DIR = {"L1": (26, -20, 42), "L2": (-22, -26, 30), "L3": (-20, -18, 40), "L4": (26, -20, 42), "L5": (30, 10, 34), "L6": (26, -20, 42)}
+SUN_E = {"L1": 3.5, "L2": 2.6, "L3": 0.15, "L4": 3.5, "L5": 2.0, "L6": 3.5}
+POINTS = {
+    "L2": [(1.2, 2.0, 1.25, 60), (0.2, 0.8, 2.3, 120)],
+    "L3": [(-1.4, -4 + 6 * k, 2.4, 40) for k in range(8)] + [(0.9, 0, 5.5, 250), (1.3, 1.6, 1.3, 60)],
+    "L4": [(-6 + 2.2 * k, -1.0, -4.5, 30) for k in range(4)] + [(7.4, -0.6, -3.2, 150), (-8, -0.6, -4.6, 40)],
+    "L5": [(0, 0.3, 3.3, 400), (-2.5, 0.5, 3.2, 150), (2.5, 0.5, 3.2, 150), (2.5, 0.7, 1.66, 150)],
+    "L6": [(0.5, 4.1, 4.6 + 2.7, 150)],
+}
+LM_RES = {"L1": 2048, "L2": 1024, "L3": 1024, "L4": 2048, "L5": 1024, "L6": 2048}
+
+
+def bake_latar(L, outdir):
+    import numpy as np
+    col = bpy.data.collections.get(BUILD_COL[L])
+    ox = OX[L]
+    objs = [o for o in col.objects if o.type == "MESH" and o.data.materials]
+    keep, solo = [], []
+    for o in objs:
+        big = max(o.dimensions) > 60
+        plaf = o.data.materials[0].name.startswith("Plafon")
+        (solo if (big or plaf) else keep).append(o)
+        if plaf:
+            o.visible_shadow = False
+    bpy.ops.object.select_all(action="DESELECT")
+    for o in keep:
+        o.select_set(True)
+    bpy.context.view_layer.objects.active = keep[0]
+    bpy.ops.object.join()
+    J = bpy.context.object
+    J.name = BUILD_COL[L]
+    uv = J.data.uv_layers.new(name="LM")
+    J.data.uv_layers.active = uv
+    bpy.ops.object.mode_set(mode="EDIT")
+    bpy.ops.mesh.select_all(action="SELECT")
+    bpy.ops.uv.smart_project(angle_limit=1.15, island_margin=0.004, area_weight=0.0, correct_aspect=True, scale_to_bounds=False)
+    bpy.ops.object.mode_set(mode="OBJECT")
+    J.data.uv_layers.active = J.data.uv_layers[0]
+    J.data.uv_layers[0].active_render = True
+    # lampu
+    added = []
+    bpy.ops.object.light_add(type="SUN")
+    sun = bpy.context.object
+    sun.rotation_euler = Vector(SUN_DIR[L]).to_track_quat("Z", "Y").to_euler()
+    sun.data.energy = SUN_E[L]
+    sun.data.angle = math.radians(4)
+    added.append(sun)
+    for (x, y, z, w) in POINTS.get(L, []):
+        bpy.ops.object.light_add(type="POINT", location=(ox + x, y, z))
+        li = bpy.context.object
+        li.data.energy = w
+        li.data.color = (1.0, 0.85, 0.62)
+        li.data.shadow_soft_size = 0.2
+        added.append(li)
+    # target gambar
+    res = LM_RES[L]
+    im = bpy.data.images.new(f"lm_{L}", res, res, alpha=False, float_buffer=True)
+    nodes = []
+    for m in J.data.materials:
+        nt = m.node_tree
+        n = nt.nodes.new("ShaderNodeTexImage")
+        n.image = im
+        nt.nodes.active = n
+        nodes.append((nt, n))
+    bpy.ops.object.select_all(action="DESELECT")
+    J.select_set(True)
+    bpy.context.view_layer.objects.active = J
+    t0 = time.time()
+    r = bpy.ops.object.bake(type="DIFFUSE", pass_filter={"INDIRECT"}, uv_layer="LM", margin=8, use_clear=True)
+    print("bake result", r, flush=True)
+    print(f"BAKE {L} {time.time() - t0:.0f} dtk", flush=True)
+    for nt, n in nodes:
+        nt.nodes.remove(n)
+    for li in added:
+        bpy.data.objects.remove(li, do_unlink=True)
+    # haluskan (pantulan berfrekuensi rendah) lalu simpan 8-bit gamma
+    a = np.array(im.pixels[:], dtype=np.float32).reshape(res, res, 4)[..., :3]
+    k = 3
+    for ax in (0, 1):
+        acc = np.zeros_like(a)
+        for d in range(-k, k + 1):
+            acc += np.roll(a, d, axis=ax)
+        a = acc / (2 * k + 1)
+    out = np.ones((res, res, 4), dtype=np.float32)
+    out[..., :3] = np.clip(a / (1 + a), 0, 1) ** (1 / 2.2)  # tonemap Reinhard -> sRGB
+    im2 = bpy.data.images.new(f"lm8_{L}", res, res, alpha=False)
+    im2.pixels.foreach_set(out.ravel())
+    im2.filepath_raw = os.path.join(outdir, f"terowongan_lm_{L}.png")
+    im2.file_format = "PNG"
+    im2.save()
+    # objek besar/plafon tetap terpisah, beri nama latar__material
+    for o in solo:
+        o.name = f"{BUILD_COL[L]}__solo_{o.data.materials[0].name}"
+
+
+BUILD_COL = {"L1": "L1_Jalan", "L2": "L2_Studio", "L3": "L3_Got", "L4": "L4_Penampang", "L5": "L5_Brankas", "L6": "L6_Hakim"}
+import time
 os.makedirs(os.path.dirname(os.path.abspath(GLB)), exist_ok=True)
+if os.environ.get("BAKE"):
+    import addon_utils
+    addon_utils.enable("cycles", default_set=True)
+    sc = bpy.context.scene
+    sc.render.engine = "CYCLES"
+    sc.cycles.device = "CPU"
+    sc.cycles.samples = int(os.environ.get("BAKE_SAMPLES", "48"))
+    sc.cycles.use_denoising = False
+    sc.cycles.sample_clamp_indirect = 1.5
+    sc.cycles.max_bounces = 4
+    sc.view_layers[0].cycles.use_denoising = False
+    sc.render.bake.margin = 8
+    w = bpy.data.worlds.new("w")
+    sc.world = w
+    w.use_nodes = True
+    w.node_tree.nodes["Background"].inputs[0].default_value = (0.55, 0.7, 0.95, 1)
+    w.node_tree.nodes["Background"].inputs[1].default_value = 0.8
+    for L in BUILD_COL:
+        if ONLY and L not in ONLY:
+            continue
+        bake_latar(L, os.path.dirname(os.path.abspath(GLB)))
+    for o in list(bpy.data.objects):  # sisa objek (Langit) tetap digabung per material
+        pass
+else:
+    merge_for_export()
 bpy.ops.export_scene.gltf(filepath=GLB, export_format="GLB", export_yup=True, export_materials="EXPORT", export_texcoords=True, export_normals=True, export_apply=True)
 print("GLB", GLB, os.path.getsize(GLB) // 1024, "KB")

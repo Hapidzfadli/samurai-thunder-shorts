@@ -113,15 +113,37 @@ const loadGlb = (url: string): Promise<THREE.Group> => {
   return glbCache[url];
 };
 
-/** Muat GLB sekali, clone per komponen, tampilkan node yang lolos `visible(namaNode)`. Memanggil invalidate/advance sebelum continueRender. */
-export const GlbWorld: React.FC<{ glb: string; visible: (name: string) => boolean }> = ({ glb, visible }) => {
+export type Lightmap = { prefix: string; url: string; intensity?: number };
+const lmCache: Record<string, Promise<THREE.Texture>> = {};
+const loadLm = (url: string) => {
+  if (!lmCache[url]) {
+    lmCache[url] = new Promise((res, rej) =>
+      new THREE.TextureLoader().load(staticFile(url), (t) => {
+        t.flipY = false; // UV glTF (sama seperti tekstur di dalam GLB)
+        t.colorSpace = THREE.SRGBColorSpace;
+        t.channel = 1; // UV kedua "LM" dari Blender
+        res(t);
+      }, undefined, rej),
+    );
+  }
+  return lmCache[url];
+};
+
+/** Muat GLB sekali, clone per komponen, tampilkan node yang lolos `visible(namaNode)`. Memanggil invalidate/advance sebelum continueRender.
+ *  `lightmaps`: peta cahaya pantul hasil bake Blender (UV kedua) untuk mesh yang namanya diawali `prefix`. */
+export const GlbWorld: React.FC<{ glb: string; visible: (name: string) => boolean; lightmaps?: Lightmap[] }> = ({ glb, visible, lightmaps = [] }) => {
   const invalidate = useThree((st) => st.invalidate);
   const advance = useThree((st) => st.advance);
   const [scene, setScene] = useState<THREE.Group | null>(null);
+  const [lms, setLms] = useState<THREE.Texture[] | null>(null);
   const [h] = useState(() => delayRender("glb " + glb));
+  const lmKey = lightmaps.map((l) => l.url).join("|");
   useEffect(() => {
-    loadGlb(glb).then(setScene).catch((e) => { console.error(e); continueRender(h); });
-  }, [h, glb]);
+    Promise.all([loadGlb(glb), Promise.all(lightmaps.map((l) => loadLm(l.url)))])
+      .then(([g, t]) => { setLms(t); setScene(g); })
+      .catch((e) => { console.error(e); continueRender(h); });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [h, glb, lmKey]);
   useEffect(() => {
     if (!scene) return;
     invalidate();
@@ -132,11 +154,21 @@ export const GlbWorld: React.FC<{ glb: string; visible: (name: string) => boolea
     if (!scene) return null;
     const c = scene.clone(true);
     c.traverse((o) => {
-      if ((o as THREE.Mesh).isMesh) o.visible = visible(o.name);
+      const m = o as THREE.Mesh;
+      if (!m.isMesh) return;
+      m.visible = visible(o.name);
+      if (!m.visible || !lms) return;
+      lightmaps.forEach((l, i) => {
+        if (!o.name.startsWith(l.prefix) || !m.geometry.attributes.uv1) return;
+        const mat = (m.material as THREE.MeshStandardMaterial).clone();
+        mat.lightMap = lms[i];
+        mat.lightMapIntensity = l.intensity ?? 2.0;
+        m.material = mat;
+      });
     });
     return c;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scene]);
+  }, [scene, lms]);
   return inst ? <primitive object={inst} /> : null;
 };
 
@@ -173,8 +205,8 @@ export const cineCard = (cam: Cam, p: LightPreset) => ({ tint: p.tint, shade: p.
 export type PL = { p: Vec3; i: number };
 export const CineStage: React.FC<{
   cam: Cam; glb: string; visible: (n: string) => boolean; focus: Vec3; preset: keyof typeof LIGHT_PRESETS;
-  shake?: Vec3; pts?: PL[]; interior?: boolean; look?: CineLook; children: React.ReactNode;
-}> = ({ cam, glb, visible, focus, preset, shake = [0, 0, 0], pts = [], interior = false, look, children }) => {
+  shake?: Vec3; pts?: PL[]; interior?: boolean; look?: CineLook; lightmaps?: Lightmap[]; hemiScale?: number; children: React.ReactNode;
+}> = ({ cam, glb, visible, focus, preset, shake = [0, 0, 0], pts = [], interior = false, look, lightmaps, hemiScale = 1, children }) => {
   const { width, height } = useVideoConfig();
   const target = useMemo(() => new THREE.Object3D(), []);
   const P = LIGHT_PRESETS[preset];
@@ -186,7 +218,7 @@ export const CineStage: React.FC<{
         <group position={cam.pos}>
           <ToonSky top={P.sky[0]} horizon={P.sky[1]} bottom={P.sky[1]} r={900} />
         </group>
-        <hemisphereLight args={[P.hemi[0], P.hemi[1], interior ? P.hemi[2] * 1.4 : P.hemi[2]]} />
+        <hemisphereLight args={[P.hemi[0], P.hemi[1], (interior ? P.hemi[2] * 1.4 : P.hemi[2]) * hemiScale]} />
         <primitive object={target} position={focus} />
         <directionalLight
           target={target}
@@ -208,7 +240,7 @@ export const CineStage: React.FC<{
         {pts.map((q, i) => (
           <pointLight key={i} position={q.p} intensity={q.i} distance={16} decay={1.6} color={P.point} />
         ))}
-        <GlbWorld glb={glb} visible={visible} />
+        <GlbWorld glb={glb} visible={visible} lightmaps={lightmaps} />
         {children}
         {look && <CinePost look={look} />}
       </ThreeCanvas>
