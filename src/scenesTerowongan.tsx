@@ -527,12 +527,12 @@ export const SceneTwKabur: React.FC = () => {
     },
   };
   const c2 = eJ + 6;
-  const bikeX = (f: number) => lerp(3.4, 26, ease(f, eM - c2 + 10, eH - c2 + 30));
+  const bikeX = (f: number) => lerp(3.4, 11, ease(f, eM - c2 + 4, eH - c2 + 24));
   const B: Part = {
     lat: "L6", preset: "siang", look: LUAR,
     keys: [
-      { to: eA - c2 + 18, p0: [1.6, -8.6, 1.4], l0: [-1.4, -1.6, 2.9], l1: [-1.4, -2.6, 1.6], fov: 52, r0: 4 },
-      { to: eH - c2 - 2, p0: [0.2, -9.5, 1.0], p1: [6, -10.5, 1.1], l0: [3.2, -4.6, 0.9], l1: [12, -4.8, 0.9], fov: 46, r0: -3 },
+      { to: eM - c2 - 2, p0: [1.6, -8.6, 1.4], p1: [2.2, -8.4, 1.3], l0: [-1.4, -1.6, 2.9], l1: [0.4, -3.6, 1.4], fov: 52, r0: 4 },
+      { to: eH - c2 - 2, p0: [3.6, -15.5, 2.0], p1: [5.0, -15.5, 2.0], l0: [3.6, -4.6, 1.1], l1: [5.4, -4.6, 1.1], fov: 50, r0: -3 },
     ],
     shake: [eA - c2 + 2],
     actors: (f) => {
@@ -561,8 +561,8 @@ export const SceneTwKabur: React.FC = () => {
   const E: Part = {
     lat: "L6", preset: "senja", look: LUAR,
     keys: [{ to: D - l3, p0: [-4, -11.5, 3.0], p1: [-5, -13, 6.5], l0: [6, -3, 2.5], l1: [10, -3, 4], fov: 52, r0: -2 }],
-    actors: (f) => [{ p: { ...FOTOGRAFER, ...poseSit(true), shin: 210, expr: "laugh", armR: [80, -20] }, at: [26 + f * 0.25 - 0.1, -4.8, 0.55], h: 1.9 }],
-    extra: (f) => <group position={bl(26 + f * 0.25, -4.8, 0.0, ox)}><Motorbike spin={f} /></group>,
+    actors: (f) => [{ p: { ...FOTOGRAFER, ...poseSit(true), shin: 210, expr: "laugh", armR: [80, -20] }, at: [11 + f * 0.12 - 0.1, -4.8, 0.55], h: 1.9 }],
+    extra: (f) => <group position={bl(11 + f * 0.12, -4.8, 0.0, ox)}><Motorbike spin={f} /></group>,
   };
   return (
     <AbsoluteFill>

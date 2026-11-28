@@ -1,7 +1,7 @@
 {
  "fps": 30,
- "totalDurationSec": 117.233,
- "totalFrames": 3517,
+ "totalDurationSec": 94.267,
+ "totalFrames": 2828,
  "order": [
   "hook",
   "ide",
@@ -16,39 +16,39 @@
  "scenes": {
   "hook": {
    "startFrame": 0,
-   "durationInFrames": 412
+   "durationInFrames": 323
   },
   "ide": {
-   "startFrame": 412,
-   "durationInFrames": 408
+   "startFrame": 323,
+   "durationInFrames": 352
   },
   "got": {
-   "startFrame": 820,
-   "durationInFrames": 271
+   "startFrame": 675,
+   "durationInFrames": 250
   },
   "gali": {
-   "startFrame": 1091,
-   "durationInFrames": 506
+   "startFrame": 925,
+   "durationInFrames": 365
   },
   "brankas": {
-   "startFrame": 1597,
-   "durationInFrames": 400
+   "startFrame": 1290,
+   "durationInFrames": 316
   },
   "uang": {
-   "startFrame": 1997,
-   "durationInFrames": 147
+   "startFrame": 1606,
+   "durationInFrames": 146
   },
   "pesan": {
-   "startFrame": 2144,
-   "durationInFrames": 330
+   "startFrame": 1752,
+   "durationInFrames": 307
   },
   "tangkap": {
-   "startFrame": 2474,
-   "durationInFrames": 374
+   "startFrame": 2059,
+   "durationInFrames": 266
   },
   "kabur": {
-   "startFrame": 2848,
-   "durationInFrames": 669
+   "startFrame": 2325,
+   "durationInFrames": 503
   }
  },
  "lines": {
@@ -58,107 +58,107 @@
     "style": "tegang",
     "text": "Senin pagi, Juli seribu sembilan ratus tujuh puluh enam. Pintu brankas sebuah bank di kota Nice, Prancis, tidak bisa dibuka.",
     "from": 16,
-    "to": 311,
+    "to": 228,
     "words": [
      {
       "w": "Senin",
       "from": 16,
-      "to": 29
+      "to": 24
      },
      {
       "w": "pagi,",
-      "from": 30,
-      "to": 40
+      "from": 24,
+      "to": 34
      },
      {
       "w": "Juli",
-      "from": 47,
-      "to": 57
+      "from": 34,
+      "to": 50
      },
      {
       "w": "seribu",
-      "from": 58,
-      "to": 72
+      "from": 50,
+      "to": 76
      },
      {
       "w": "sembilan",
-      "from": 73,
-      "to": 91
+      "from": 76,
+      "to": 120
      },
      {
       "w": "ratus",
-      "from": 93,
-      "to": 105
+      "from": 120,
+      "to": 126
      },
      {
       "w": "tujuh",
-      "from": 106,
-      "to": 118
+      "from": 126,
+      "to": 131
      },
      {
       "w": "puluh",
-      "from": 119,
-      "to": 132
+      "from": 131,
+      "to": 136
      },
      {
       "w": "enam.",
-      "from": 133,
-      "to": 143
+      "from": 136,
+      "to": 142
      },
      {
       "w": "Pintu",
-      "from": 149,
-      "to": 162
+      "from": 142,
+      "to": 149
      },
      {
       "w": "brankas",
-      "from": 163,
-      "to": 179
+      "from": 149,
+      "to": 158
      },
      {
       "w": "sebuah",
-      "from": 180,
-      "to": 194
+      "from": 158,
+      "to": 166
      },
      {
       "w": "bank",
-      "from": 195,
-      "to": 206
+      "from": 166,
+      "to": 173
      },
      {
       "w": "di",
-      "from": 207,
-      "to": 214
+      "from": 173,
+      "to": 181
      },
      {
       "w": "kota",
-      "from": 214,
-      "to": 225
+      "from": 181,
+      "to": 187
      },
      {
       "w": "Nice,",
-      "from": 226,
-      "to": 236
+      "from": 187,
+      "to": 193
      },
      {
       "w": "Prancis,",
-      "from": 242,
-      "to": 258
+      "from": 193,
+      "to": 203
      },
      {
       "w": "tidak",
-      "from": 265,
-      "to": 277
+      "from": 203,
+      "to": 208
      },
      {
       "w": "bisa",
-      "from": 278,
-      "to": 289
+      "from": 208,
+      "to": 214
      },
      {
       "w": "dibuka.",
-      "from": 290,
-      "to": 304
+      "from": 214,
+      "to": 222
      }
     ]
    },
@@ -166,28 +166,28 @@
     "voice": "dodi",
     "style": "bisik",
     "text": "Karena dikunci... dari dalam.",
-    "from": 327,
-    "to": 395,
+    "from": 244,
+    "to": 306,
     "words": [
      {
       "w": "Karena",
-      "from": 327,
-      "to": 341
+      "from": 244,
+      "to": 251
      },
      {
       "w": "dikunci...",
-      "from": 342,
-      "to": 358
+      "from": 251,
+      "to": 269
      },
      {
       "w": "dari",
-      "from": 365,
-      "to": 375
+      "from": 269,
+      "to": 286
      },
      {
       "w": "dalam.",
-      "from": 376,
-      "to": 389
+      "from": 286,
+      "to": 296
      }
     ]
    }
@@ -198,52 +198,52 @@
     "style": "santai",
     "text": "Kamu mau bobol bank? Kamu kan cuma tukang foto.",
     "from": 10,
-    "to": 126,
+    "to": 119,
     "words": [
      {
       "w": "Kamu",
       "from": 10,
-      "to": 21
+      "to": 19
      },
      {
       "w": "mau",
-      "from": 22,
-      "to": 31
+      "from": 19,
+      "to": 27
      },
      {
       "w": "bobol",
-      "from": 31,
-      "to": 44
+      "from": 27,
+      "to": 48
      },
      {
       "w": "bank?",
-      "from": 45,
-      "to": 55
+      "from": 48,
+      "to": 75
      },
      {
       "w": "Kamu",
-      "from": 62,
-      "to": 72
+      "from": 75,
+      "to": 86
      },
      {
       "w": "kan",
-      "from": 73,
-      "to": 82
+      "from": 86,
+      "to": 89
      },
      {
       "w": "cuma",
-      "from": 82,
-      "to": 93
+      "from": 89,
+      "to": 95
      },
      {
       "w": "tukang",
-      "from": 94,
-      "to": 108
+      "from": 95,
+      "to": 103
      },
      {
       "w": "foto.",
-      "from": 109,
-      "to": 120
+      "from": 103,
+      "to": 111
      }
     ]
    },
@@ -251,78 +251,78 @@
     "voice": "dodi",
     "style": "bisik",
     "text": "Justru itu. Lihat peta got ini. Ada saluran yang lewat persis di samping brankasnya.",
-    "from": 133,
-    "to": 333,
+    "from": 126,
+    "to": 274,
     "words": [
      {
       "w": "Justru",
-      "from": 133,
-      "to": 147
+      "from": 126,
+      "to": 137
      },
      {
       "w": "itu.",
-      "from": 149,
-      "to": 157
+      "from": 137,
+      "to": 158
      },
      {
       "w": "Lihat",
-      "from": 164,
-      "to": 176
+      "from": 158,
+      "to": 167
      },
      {
       "w": "peta",
-      "from": 177,
-      "to": 187
+      "from": 167,
+      "to": 177
      },
      {
       "w": "got",
-      "from": 188,
-      "to": 197
+      "from": 177,
+      "to": 184
      },
      {
       "w": "ini.",
-      "from": 198,
-      "to": 206
+      "from": 184,
+      "to": 199
      },
      {
       "w": "Ada",
-      "from": 213,
-      "to": 221
+      "from": 199,
+      "to": 205
      },
      {
       "w": "saluran",
-      "from": 222,
-      "to": 238
+      "from": 205,
+      "to": 217
      },
      {
       "w": "yang",
-      "from": 239,
-      "to": 250
+      "from": 217,
+      "to": 223
      },
      {
       "w": "lewat",
-      "from": 251,
-      "to": 263
+      "from": 223,
+      "to": 231
      },
      {
       "w": "persis",
-      "from": 264,
-      "to": 278
+      "from": 231,
+      "to": 244
      },
      {
       "w": "di",
-      "from": 279,
-      "to": 286
+      "from": 244,
+      "to": 247
      },
      {
       "w": "samping",
-      "from": 287,
-      "to": 303
+      "from": 247,
+      "to": 256
      },
      {
       "w": "brankasnya.",
-      "from": 304,
-      "to": 325
+      "from": 256,
+      "to": 270
      }
     ]
    },
@@ -330,23 +330,23 @@
     "voice": "ara",
     "style": "tegang",
     "text": "Di samping... brankas?",
-    "from": 342,
-    "to": 394,
+    "from": 283,
+    "to": 338,
     "words": [
      {
       "w": "Di",
-      "from": 342,
-      "to": 348
+      "from": 283,
+      "to": 288
      },
      {
       "w": "samping...",
-      "from": 349,
-      "to": 365
+      "from": 288,
+      "to": 315
      },
      {
       "w": "brankas?",
-      "from": 372,
-      "to": 388
+      "from": 315,
+      "to": 331
      }
     ]
    }
@@ -357,52 +357,52 @@
     "style": "tegang",
     "text": "Baunya ya ampun! Aku nggak dibayar cukup buat ini.",
     "from": 21,
-    "to": 142,
+    "to": 145,
     "words": [
      {
       "w": "Baunya",
       "from": 21,
-      "to": 35
+      "to": 34
      },
      {
       "w": "ya",
-      "from": 36,
-      "to": 43
+      "from": 34,
+      "to": 39
      },
      {
       "w": "ampun!",
-      "from": 44,
+      "from": 39,
       "to": 56
      },
      {
       "w": "Aku",
-      "from": 63,
-      "to": 71
+      "from": 56,
+      "to": 86
      },
      {
       "w": "nggak",
-      "from": 72,
-      "to": 84
+      "from": 86,
+      "to": 96
      },
      {
       "w": "dibayar",
-      "from": 85,
-      "to": 101
+      "from": 96,
+      "to": 110
      },
      {
       "w": "cukup",
-      "from": 103,
-      "to": 115
+      "from": 110,
+      "to": 122
      },
      {
       "w": "buat",
-      "from": 116,
-      "to": 126
+      "from": 122,
+      "to": 128
      },
      {
       "w": "ini.",
-      "from": 127,
-      "to": 136
+      "from": 128,
+      "to": 139
      }
     ]
    },
@@ -410,43 +410,43 @@
     "voice": "dodi",
     "style": "santai",
     "text": "Kamu dibayar pakai isi brankas. Jalan terus.",
-    "from": 151,
-    "to": 257,
+    "from": 154,
+    "to": 236,
     "words": [
      {
       "w": "Kamu",
-      "from": 151,
-      "to": 162
+      "from": 154,
+      "to": 163
      },
      {
       "w": "dibayar",
       "from": 163,
-      "to": 178
+      "to": 175
      },
      {
       "w": "pakai",
-      "from": 180,
-      "to": 192
+      "from": 175,
+      "to": 184
      },
      {
       "w": "isi",
-      "from": 193,
-      "to": 202
+      "from": 184,
+      "to": 193
      },
      {
       "w": "brankas.",
+      "from": 193,
+      "to": 203
+     },
+     {
+      "w": "Jalan",
       "from": 203,
       "to": 219
      },
      {
-      "w": "Jalan",
-      "from": 225,
-      "to": 238
-     },
-     {
       "w": "terus.",
-      "from": 239,
-      "to": 251
+      "from": 219,
+      "to": 225
      }
     ]
    }
@@ -457,77 +457,77 @@
     "style": "narasi",
     "text": "Berminggu-minggu, tiap malam, mereka menggali terowongan sekitar delapan meter dari got ke dinding brankas.",
     "from": 14,
-    "to": 256,
+    "to": 171,
     "words": [
      {
       "w": "Berminggu-minggu,",
       "from": 14,
-      "to": 44
+      "to": 36
      },
      {
       "w": "tiap",
-      "from": 52,
-      "to": 62
+      "from": 36,
+      "to": 47
      },
      {
       "w": "malam,",
-      "from": 63,
-      "to": 75
+      "from": 47,
+      "to": 56
      },
      {
       "w": "mereka",
-      "from": 82,
-      "to": 96
+      "from": 56,
+      "to": 64
      },
      {
       "w": "menggali",
-      "from": 97,
-      "to": 115
+      "from": 64,
+      "to": 76
      },
      {
       "w": "terowongan",
-      "from": 116,
-      "to": 138
+      "from": 76,
+      "to": 90
      },
      {
       "w": "sekitar",
-      "from": 140,
-      "to": 155
+      "from": 90,
+      "to": 100
      },
      {
       "w": "delapan",
-      "from": 157,
-      "to": 173
+      "from": 100,
+      "to": 121
      },
      {
       "w": "meter",
-      "from": 174,
-      "to": 186
+      "from": 121,
+      "to": 131
      },
      {
       "w": "dari",
-      "from": 187,
-      "to": 198
+      "from": 131,
+      "to": 137
      },
      {
       "w": "got",
-      "from": 199,
-      "to": 207
+      "from": 137,
+      "to": 141
      },
      {
       "w": "ke",
-      "from": 208,
-      "to": 215
+      "from": 141,
+      "to": 144
      },
      {
       "w": "dinding",
-      "from": 216,
-      "to": 232
+      "from": 144,
+      "to": 154
      },
      {
       "w": "brankas.",
-      "from": 233,
-      "to": 249
+      "from": 154,
+      "to": 163
      }
     ]
    },
@@ -535,48 +535,48 @@
     "voice": "ara",
     "style": "tegang",
     "text": "Di atas kita jalan raya. Kalau ambruk, gimana?",
-    "from": 265,
-    "to": 380,
+    "from": 180,
+    "to": 273,
     "words": [
      {
       "w": "Di",
-      "from": 265,
-      "to": 272
+      "from": 180,
+      "to": 184
      },
      {
       "w": "atas",
-      "from": 272,
-      "to": 283
+      "from": 184,
+      "to": 193
      },
      {
       "w": "kita",
-      "from": 284,
-      "to": 294
+      "from": 193,
+      "to": 201
      },
      {
       "w": "jalan",
-      "from": 295,
-      "to": 307
+      "from": 201,
+      "to": 211
      },
      {
       "w": "raya.",
-      "from": 308,
-      "to": 319
+      "from": 211,
+      "to": 229
      },
      {
       "w": "Kalau",
-      "from": 325,
-      "to": 337
+      "from": 229,
+      "to": 239
      },
      {
       "w": "ambruk,",
-      "from": 338,
-      "to": 352
+      "from": 239,
+      "to": 255
      },
      {
       "w": "gimana?",
-      "from": 359,
-      "to": 373
+      "from": 255,
+      "to": 268
      }
     ]
    },
@@ -584,38 +584,38 @@
     "voice": "dodi",
     "style": "santai",
     "text": "Makanya gali pelan-pelan. Dan jangan bersin.",
-    "from": 387,
-    "to": 490,
+    "from": 281,
+    "to": 348,
     "words": [
      {
       "w": "Makanya",
-      "from": 387,
-      "to": 403
+      "from": 281,
+      "to": 289
      },
      {
       "w": "gali",
-      "from": 405,
-      "to": 415
+      "from": 289,
+      "to": 297
      },
      {
       "w": "pelan-pelan.",
-      "from": 416,
-      "to": 437
+      "from": 297,
+      "to": 318
      },
      {
       "w": "Dan",
-      "from": 444,
-      "to": 453
+      "from": 318,
+      "to": 322
      },
      {
       "w": "jangan",
-      "from": 454,
-      "to": 468
+      "from": 322,
+      "to": 329
      },
      {
       "w": "bersin.",
-      "from": 469,
-      "to": 483
+      "from": 329,
+      "to": 342
      }
     ]
    }
@@ -626,62 +626,62 @@
     "style": "bisik",
     "text": "Akhir pekan Bastille Day. Bank tutup tiga hari. Kita punya waktu.",
     "from": 14,
-    "to": 171,
+    "to": 124,
     "words": [
      {
       "w": "Akhir",
       "from": 14,
-      "to": 26
+      "to": 23
      },
      {
       "w": "pekan",
-      "from": 27,
-      "to": 39
+      "from": 23,
+      "to": 31
      },
      {
       "w": "Bastille",
-      "from": 40,
-      "to": 58
+      "from": 31,
+      "to": 42
      },
      {
       "w": "Day.",
-      "from": 59,
-      "to": 68
+      "from": 42,
+      "to": 49
      },
      {
       "w": "Bank",
-      "from": 74,
-      "to": 85
+      "from": 49,
+      "to": 63
      },
      {
       "w": "tutup",
-      "from": 86,
-      "to": 98
+      "from": 63,
+      "to": 72
      },
      {
       "w": "tiga",
-      "from": 99,
-      "to": 109
+      "from": 72,
+      "to": 83
      },
      {
       "w": "hari.",
-      "from": 110,
-      "to": 121
+      "from": 83,
+      "to": 98
      },
      {
       "w": "Kita",
-      "from": 127,
-      "to": 138
+      "from": 98,
+      "to": 103
      },
      {
       "w": "punya",
-      "from": 139,
-      "to": 151
+      "from": 103,
+      "to": 110
      },
      {
       "w": "waktu.",
-      "from": 152,
-      "to": 164
+      "from": 110,
+      "to": 117
      }
     ]
    },
@@ -689,53 +689,53 @@
     "voice": "ara",
     "style": "tegang",
     "text": "Tiga ratus tujuh puluh satu kotak?! Kita buka semua?",
-    "from": 180,
-    "to": 303,
+    "from": 133,
+    "to": 224,
     "words": [
      {
       "w": "Tiga",
-      "from": 180,
-      "to": 190
+      "from": 133,
+      "to": 152
      },
      {
       "w": "ratus",
-      "from": 191,
-      "to": 203
+      "from": 152,
+      "to": 167
      },
      {
       "w": "tujuh",
-      "from": 204,
-      "to": 217
+      "from": 167,
+      "to": 177
      },
      {
       "w": "puluh",
-      "from": 218,
-      "to": 230
+      "from": 177,
+      "to": 192
      },
      {
       "w": "satu",
-      "from": 231,
-      "to": 242
+      "from": 192,
+      "to": 199
      },
      {
       "w": "kotak?!",
-      "from": 243,
-      "to": 255
+      "from": 199,
+      "to": 204
      },
      {
       "w": "Kita",
-      "from": 261,
-      "to": 272
+      "from": 204,
+      "to": 208
      },
      {
       "w": "buka",
-      "from": 273,
-      "to": 283
+      "from": 208,
+      "to": 210
      },
      {
       "w": "semua?",
-      "from": 284,
-      "to": 296
+      "from": 210,
+      "to": 213
      }
     ]
    },
@@ -743,33 +743,33 @@
     "voice": "dodi",
     "style": "santai",
     "text": "Satu per satu, dengan sopan.",
-    "from": 316,
-    "to": 388,
+    "from": 238,
+    "to": 304,
     "words": [
      {
       "w": "Satu",
-      "from": 316,
-      "to": 327
+      "from": 238,
+      "to": 248
      },
      {
       "w": "per",
-      "from": 328,
-      "to": 336
+      "from": 248,
+      "to": 255
      },
      {
       "w": "satu,",
-      "from": 337,
-      "to": 348
+      "from": 255,
+      "to": 264
      },
      {
       "w": "dengan",
-      "from": 354,
-      "to": 368
+      "from": 264,
+      "to": 283
      },
      {
       "w": "sopan.",
-      "from": 369,
-      "to": 382
+      "from": 283,
+      "to": 296
      }
     ]
    }
@@ -780,12 +780,12 @@
     "style": "santai",
     "text": "Tangkap!",
     "from": 24,
-    "to": 47,
+    "to": 62,
     "words": [
      {
       "w": "Tangkap!",
       "from": 24,
-      "to": 40
+      "to": 58
      }
     ]
    },
@@ -793,28 +793,28 @@
     "voice": "ara",
     "style": "santai",
     "text": "Wanginya beda sama got.",
-    "from": 74,
-    "to": 130,
+    "from": 89,
+    "to": 129,
     "words": [
      {
       "w": "Wanginya",
-      "from": 74,
-      "to": 91
+      "from": 89,
+      "to": 101
      },
      {
       "w": "beda",
-      "from": 93,
-      "to": 103
+      "from": 101,
+      "to": 111
      },
      {
       "w": "sama",
-      "from": 104,
-      "to": 115
+      "from": 111,
+      "to": 116
      },
      {
       "w": "got.",
       "from": 116,
-      "to": 124
+      "to": 125
      }
     ]
    }
@@ -825,32 +825,32 @@
     "style": "santai",
     "text": "Kamu nulis apa di tembok?",
     "from": 16,
-    "to": 79,
+    "to": 66,
     "words": [
      {
       "w": "Kamu",
       "from": 16,
-      "to": 27
+      "to": 24
      },
      {
       "w": "nulis",
-      "from": 28,
-      "to": 40
+      "from": 24,
+      "to": 36
      },
      {
       "w": "apa",
-      "from": 41,
-      "to": 50
+      "from": 36,
+      "to": 45
      },
      {
       "w": "di",
-      "from": 51,
-      "to": 58
+      "from": 45,
+      "to": 52
      },
      {
       "w": "tembok?",
-      "from": 58,
-      "to": 72
+      "from": 52,
+      "to": 63
      }
     ]
    },
@@ -858,38 +858,38 @@
     "voice": "dodi",
     "style": "tegas",
     "text": "Tanpa senjata, tanpa kebencian, tanpa kekerasan.",
-    "from": 86,
-    "to": 202,
+    "from": 74,
+    "to": 189,
     "words": [
      {
       "w": "Tanpa",
-      "from": 86,
-      "to": 99
+      "from": 74,
+      "to": 86
      },
      {
       "w": "senjata,",
-      "from": 100,
-      "to": 116
+      "from": 86,
+      "to": 109
      },
      {
       "w": "tanpa",
-      "from": 122,
-      "to": 135
+      "from": 109,
+      "to": 121
      },
      {
       "w": "kebencian,",
-      "from": 136,
-      "to": 155
+      "from": 121,
+      "to": 150
      },
      {
       "w": "tanpa",
-      "from": 162,
-      "to": 175
+      "from": 150,
+      "to": 167
      },
      {
       "w": "kekerasan.",
-      "from": 176,
-      "to": 195
+      "from": 167,
+      "to": 183
      }
     ]
    },
@@ -897,33 +897,33 @@
     "voice": "ara",
     "style": "santai",
     "text": "Iya, tapi tetap mencuri, kan?",
-    "from": 232,
-    "to": 309,
+    "from": 219,
+    "to": 286,
     "words": [
      {
       "w": "Iya,",
-      "from": 232,
-      "to": 241
+      "from": 219,
+      "to": 235
      },
      {
       "w": "tapi",
-      "from": 247,
-      "to": 258
+      "from": 235,
+      "to": 245
      },
      {
       "w": "tetap",
-      "from": 258,
-      "to": 271
+      "from": 245,
+      "to": 263
      },
      {
       "w": "mencuri,",
-      "from": 272,
-      "to": 288
+      "from": 263,
+      "to": 273
      },
      {
       "w": "kan?",
-      "from": 294,
-      "to": 303
+      "from": 273,
+      "to": 278
      }
     ]
    }
@@ -934,87 +934,87 @@
     "style": "narasi",
     "text": "Senin pagi, polisi menemukan hampir lima puluh juta franc lenyap. Beberapa bulan kemudian, Si Fotografer tertangkap.",
     "from": 14,
-    "to": 282,
+    "to": 191,
     "words": [
      {
       "w": "Senin",
       "from": 14,
-      "to": 26
+      "to": 22
      },
      {
       "w": "pagi,",
-      "from": 27,
-      "to": 37
+      "from": 22,
+      "to": 32
      },
      {
       "w": "polisi",
-      "from": 44,
-      "to": 58
+      "from": 32,
+      "to": 44
      },
      {
       "w": "menemukan",
-      "from": 59,
-      "to": 78
+      "from": 44,
+      "to": 55
      },
      {
       "w": "hampir",
-      "from": 80,
-      "to": 94
+      "from": 55,
+      "to": 65
      },
      {
       "w": "lima",
-      "from": 95,
-      "to": 106
+      "from": 65,
+      "to": 78
      },
      {
       "w": "puluh",
-      "from": 107,
-      "to": 119
+      "from": 78,
+      "to": 92
      },
      {
       "w": "juta",
-      "from": 120,
-      "to": 131
+      "from": 92,
+      "to": 98
      },
      {
       "w": "franc",
-      "from": 132,
-      "to": 144
+      "from": 98,
+      "to": 107
      },
      {
       "w": "lenyap.",
-      "from": 145,
-      "to": 159
+      "from": 107,
+      "to": 117
      },
      {
       "w": "Beberapa",
-      "from": 166,
-      "to": 183
+      "from": 117,
+      "to": 131
      },
      {
       "w": "bulan",
-      "from": 185,
-      "to": 197
+      "from": 131,
+      "to": 139
      },
      {
       "w": "kemudian,",
-      "from": 198,
-      "to": 216
+      "from": 139,
+      "to": 154
      },
      {
       "w": "Si",
-      "from": 223,
-      "to": 230
+      "from": 154,
+      "to": 158
      },
      {
       "w": "Fotografer",
-      "from": 230,
-      "to": 252
+      "from": 158,
+      "to": 174
      },
      {
       "w": "tertangkap.",
-      "from": 253,
-      "to": 275
+      "from": 174,
+      "to": 188
      }
     ]
    },
@@ -1022,28 +1022,28 @@
     "voice": "ara",
     "style": "santai",
     "text": "Nah kan. Sudah kubilang.",
-    "from": 295,
-    "to": 358,
+    "from": 205,
+    "to": 250,
     "words": [
      {
       "w": "Nah",
-      "from": 295,
-      "to": 304
+      "from": 205,
+      "to": 212
      },
      {
       "w": "kan.",
-      "from": 305,
-      "to": 313
+      "from": 212,
+      "to": 224
      },
      {
       "w": "Sudah",
-      "from": 320,
-      "to": 332
+      "from": 224,
+      "to": 233
      },
      {
       "w": "kubilang.",
-      "from": 333,
-      "to": 351
+      "from": 233,
+      "to": 242
      }
     ]
    }
@@ -1054,52 +1054,52 @@
     "style": "santai",
     "text": "Pak Hakim, boleh saya tunjukkan di peta, bagaimana caranya?",
     "from": 10,
-    "to": 153,
+    "to": 102,
     "words": [
      {
       "w": "Pak",
       "from": 10,
-      "to": 19
+      "to": 14
      },
      {
       "w": "Hakim,",
-      "from": 20,
-      "to": 32
+      "from": 14,
+      "to": 34
      },
      {
       "w": "boleh",
-      "from": 39,
-      "to": 51
+      "from": 34,
+      "to": 37
      },
      {
       "w": "saya",
-      "from": 52,
-      "to": 63
+      "from": 37,
+      "to": 44
      },
      {
       "w": "tunjukkan",
-      "from": 63,
-      "to": 83
+      "from": 44,
+      "to": 56
      },
      {
       "w": "di",
-      "from": 85,
-      "to": 92
+      "from": 56,
+      "to": 59
      },
      {
       "w": "peta,",
-      "from": 92,
-      "to": 103
+      "from": 59,
+      "to": 70
      },
      {
       "w": "bagaimana",
-      "from": 109,
-      "to": 128
+      "from": 70,
+      "to": 86
      },
      {
       "w": "caranya?",
-      "from": 130,
-      "to": 146
+      "from": 86,
+      "to": 97
      }
     ]
    },
@@ -1107,83 +1107,83 @@
     "voice": "dodi",
     "style": "narasi",
     "text": "Saat diperiksa hakim, ia melompat dari jendela, mendarat di atap mobil, dan kabur naik motor.",
-    "from": 165,
-    "to": 387,
+    "from": 114,
+    "to": 267,
     "words": [
      {
       "w": "Saat",
-      "from": 165,
-      "to": 175
+      "from": 114,
+      "to": 123
      },
      {
       "w": "diperiksa",
-      "from": 176,
-      "to": 196
+      "from": 123,
+      "to": 134
      },
      {
       "w": "hakim,",
-      "from": 197,
-      "to": 210
+      "from": 134,
+      "to": 148
      },
      {
       "w": "ia",
-      "from": 216,
-      "to": 223
+      "from": 148,
+      "to": 155
      },
      {
       "w": "melompat",
-      "from": 224,
-      "to": 241
+      "from": 155,
+      "to": 166
      },
      {
       "w": "dari",
-      "from": 243,
-      "to": 253
+      "from": 166,
+      "to": 171
      },
      {
       "w": "jendela,",
-      "from": 254,
-      "to": 270
+      "from": 171,
+      "to": 190
      },
      {
       "w": "mendarat",
-      "from": 277,
-      "to": 294
+      "from": 190,
+      "to": 203
      },
      {
       "w": "di",
-      "from": 296,
-      "to": 303
+      "from": 203,
+      "to": 207
      },
      {
       "w": "atap",
-      "from": 303,
-      "to": 314
+      "from": 207,
+      "to": 214
      },
      {
       "w": "mobil,",
-      "from": 315,
-      "to": 327
+      "from": 214,
+      "to": 222
      },
      {
       "w": "dan",
-      "from": 334,
-      "to": 342
+      "from": 222,
+      "to": 234
      },
      {
       "w": "kabur",
-      "from": 343,
-      "to": 355
+      "from": 234,
+      "to": 247
      },
      {
       "w": "naik",
-      "from": 356,
-      "to": 367
+      "from": 247,
+      "to": 253
      },
      {
       "w": "motor.",
-      "from": 368,
-      "to": 380
+      "from": 253,
+      "to": 260
      }
     ]
    },
@@ -1191,28 +1191,28 @@
     "voice": "ara",
     "style": "tegang",
     "text": "Hah?! Dia kabur lagi?!",
-    "from": 396,
-    "to": 450,
+    "from": 276,
+    "to": 332,
     "words": [
      {
       "w": "Hah?!",
-      "from": 396,
-      "to": 404
+      "from": 276,
+      "to": 300
      },
      {
       "w": "Dia",
-      "from": 410,
-      "to": 419
+      "from": 300,
+      "to": 308
      },
      {
       "w": "kabur",
-      "from": 420,
-      "to": 432
+      "from": 308,
+      "to": 319
      },
      {
       "w": "lagi?!",
-      "from": 433,
-      "to": 444
+      "from": 319,
+      "to": 326
      }
     ]
    },
@@ -1220,1066 +1220,1066 @@
     "voice": "dodi",
     "style": "narasi",
     "text": "Uangnya tidak pernah ditemukan. Dan ia tidak pernah tertangkap lagi.",
-    "from": 464,
-    "to": 621,
+    "from": 345,
+    "to": 455,
     "words": [
      {
       "w": "Uangnya",
-      "from": 464,
-      "to": 479
+      "from": 345,
+      "to": 357
      },
      {
       "w": "tidak",
-      "from": 481,
-      "to": 493
+      "from": 357,
+      "to": 362
      },
      {
       "w": "pernah",
-      "from": 494,
-      "to": 508
+      "from": 362,
+      "to": 371
      },
      {
       "w": "ditemukan.",
-      "from": 509,
-      "to": 529
+      "from": 371,
+      "to": 388
      },
      {
       "w": "Dan",
-      "from": 536,
-      "to": 545
+      "from": 388,
+      "to": 404
      },
      {
       "w": "ia",
-      "from": 545,
-      "to": 552
+      "from": 404,
+      "to": 410
      },
      {
       "w": "tidak",
-      "from": 553,
-      "to": 565
+      "from": 410,
+      "to": 417
      },
      {
       "w": "pernah",
-      "from": 566,
-      "to": 580
+      "from": 417,
+      "to": 426
      },
      {
       "w": "tertangkap",
-      "from": 582,
-      "to": 603
+      "from": 426,
+      "to": 441
      },
      {
       "w": "lagi.",
-      "from": 605,
-      "to": 615
+      "from": 441,
+      "to": 449
      }
     ]
    }
   ]
  },
  "events": {
-  "hook.brankas": 161,
-  "hook.dibuka": 288,
-  "hook.dalam": 373,
-  "ide.foto": 107,
-  "ide.peta": 175,
-  "ide.samping": 285,
-  "ide.brankas2": 369,
+  "hook.brankas": 147,
+  "hook.dibuka": 212,
+  "hook.dalam": 283,
+  "ide.foto": 101,
+  "ide.peta": 165,
+  "ide.samping": 245,
+  "ide.brankas2": 312,
   "got.bau": 19,
   "got.dibayar": 161,
-  "got.jalan": 223,
+  "got.jalan": 201,
   "gali.minggu": 12,
-  "gali.delapan": 155,
-  "gali.ambruk": 336,
-  "gali.bersin": 467,
-  "brk.bastille": 38,
-  "brk.waktu": 150,
-  "brk.kotak": 241,
-  "brk.sopan": 367,
+  "gali.delapan": 98,
+  "gali.ambruk": 237,
+  "gali.bersin": 327,
+  "brk.bastille": 29,
+  "brk.waktu": 108,
+  "brk.kotak": 197,
+  "brk.sopan": 281,
   "uang.tangkap": 21,
-  "uang.wangi": 72,
+  "uang.wangi": 87,
   "uang.got": 114,
-  "psn.tembok": 56,
-  "psn.senjata": 98,
-  "psn.kekerasan": 174,
-  "psn.mencuri": 270,
-  "tkp.polisi": 42,
-  "tkp.lenyap": 143,
-  "tkp.tertangkap": 251,
-  "tkp.kubilang": 331,
-  "kbr.peta": 90,
-  "kbr.caranya": 128,
-  "kbr.melompat": 221,
-  "kbr.atap": 301,
-  "kbr.motor": 366,
-  "kbr.hah": 393,
-  "kbr.ditemukan": 507,
-  "kbr.lagi": 603
+  "psn.tembok": 50,
+  "psn.senjata": 84,
+  "psn.kekerasan": 165,
+  "psn.mencuri": 261,
+  "tkp.polisi": 30,
+  "tkp.lenyap": 105,
+  "tkp.tertangkap": 172,
+  "tkp.kubilang": 231,
+  "kbr.peta": 57,
+  "kbr.caranya": 84,
+  "kbr.melompat": 152,
+  "kbr.atap": 205,
+  "kbr.motor": 251,
+  "kbr.hah": 273,
+  "kbr.ditemukan": 369,
+  "kbr.lagi": 439
  },
  "captions": [
   {
    "text": "Senin pagi,",
    "startFrame": 16,
-   "endFrame": 47,
+   "endFrame": 34,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Juli seribu",
-   "startFrame": 47,
-   "endFrame": 73,
+   "startFrame": 34,
+   "endFrame": 76,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "sembilan",
-   "startFrame": 73,
-   "endFrame": 93,
+   "startFrame": 76,
+   "endFrame": 120,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "ratus tujuh",
-   "startFrame": 93,
-   "endFrame": 119,
+   "startFrame": 120,
+   "endFrame": 131,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "puluh enam.",
-   "startFrame": 119,
-   "endFrame": 149,
+   "startFrame": 131,
+   "endFrame": 142,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Pintu",
-   "startFrame": 149,
-   "endFrame": 163,
+   "startFrame": 142,
+   "endFrame": 149,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "brankas",
-   "startFrame": 163,
-   "endFrame": 180,
+   "startFrame": 149,
+   "endFrame": 158,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "sebuah bank",
-   "startFrame": 180,
-   "endFrame": 207,
+   "startFrame": 158,
+   "endFrame": 173,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "di kota",
-   "startFrame": 207,
-   "endFrame": 226,
+   "startFrame": 173,
+   "endFrame": 187,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Nice,",
-   "startFrame": 226,
-   "endFrame": 242,
+   "startFrame": 187,
+   "endFrame": 193,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Prancis,",
-   "startFrame": 242,
-   "endFrame": 265,
+   "startFrame": 193,
+   "endFrame": 203,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "tidak bisa",
-   "startFrame": 265,
-   "endFrame": 290,
+   "startFrame": 203,
+   "endFrame": 214,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "dibuka.",
-   "startFrame": 290,
-   "endFrame": 304,
+   "startFrame": 214,
+   "endFrame": 222,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Karena",
-   "startFrame": 327,
-   "endFrame": 342,
+   "startFrame": 244,
+   "endFrame": 251,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "dikunci...",
-   "startFrame": 342,
-   "endFrame": 365,
+   "startFrame": 251,
+   "endFrame": 269,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "dari dalam.",
-   "startFrame": 365,
-   "endFrame": 389,
+   "startFrame": 269,
+   "endFrame": 296,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Kamu mau",
-   "startFrame": 422,
-   "endFrame": 443,
+   "startFrame": 334,
+   "endFrame": 350,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "bobol bank?",
-   "startFrame": 443,
-   "endFrame": 473,
+   "startFrame": 350,
+   "endFrame": 398,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Kamu kan",
-   "startFrame": 473,
-   "endFrame": 494,
+   "startFrame": 398,
+   "endFrame": 412,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "cuma tukang",
-   "startFrame": 494,
-   "endFrame": 521,
+   "startFrame": 412,
+   "endFrame": 426,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "foto.",
-   "startFrame": 521,
-   "endFrame": 532,
+   "startFrame": 426,
+   "endFrame": 434,
    "highlight": true,
    "voice": "ara"
   },
   {
    "text": "Justru itu.",
-   "startFrame": 545,
-   "endFrame": 576,
+   "startFrame": 449,
+   "endFrame": 481,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Lihat peta",
-   "startFrame": 576,
-   "endFrame": 600,
+   "startFrame": 481,
+   "endFrame": 500,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "got ini.",
-   "startFrame": 600,
-   "endFrame": 625,
+   "startFrame": 500,
+   "endFrame": 522,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Ada saluran",
-   "startFrame": 625,
-   "endFrame": 651,
+   "startFrame": 522,
+   "endFrame": 540,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "yang lewat",
-   "startFrame": 651,
-   "endFrame": 676,
+   "startFrame": 540,
+   "endFrame": 554,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "persis di",
-   "startFrame": 676,
-   "endFrame": 699,
+   "startFrame": 554,
+   "endFrame": 570,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "samping",
-   "startFrame": 699,
-   "endFrame": 716,
+   "startFrame": 570,
+   "endFrame": 579,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "brankasnya.",
-   "startFrame": 716,
-   "endFrame": 737,
+   "startFrame": 579,
+   "endFrame": 593,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Di",
-   "startFrame": 754,
-   "endFrame": 761,
+   "startFrame": 606,
+   "endFrame": 611,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "samping...",
-   "startFrame": 761,
-   "endFrame": 784,
+   "startFrame": 611,
+   "endFrame": 638,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "brankas?",
-   "startFrame": 784,
-   "endFrame": 800,
+   "startFrame": 638,
+   "endFrame": 654,
    "highlight": true,
    "voice": "ara"
   },
   {
    "text": "Baunya ya",
-   "startFrame": 841,
-   "endFrame": 864,
+   "startFrame": 696,
+   "endFrame": 714,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "ampun!",
-   "startFrame": 864,
-   "endFrame": 883,
+   "startFrame": 714,
+   "endFrame": 731,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Aku nggak",
-   "startFrame": 883,
-   "endFrame": 905,
+   "startFrame": 731,
+   "endFrame": 771,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "dibayar",
-   "startFrame": 905,
-   "endFrame": 923,
+   "startFrame": 771,
+   "endFrame": 785,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "cukup buat",
-   "startFrame": 923,
-   "endFrame": 947,
+   "startFrame": 785,
+   "endFrame": 803,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "ini.",
-   "startFrame": 947,
-   "endFrame": 956,
+   "startFrame": 803,
+   "endFrame": 814,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Kamu dibayar",
-   "startFrame": 971,
-   "endFrame": 1000,
+   "startFrame": 829,
+   "endFrame": 850,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "pakai isi",
-   "startFrame": 1000,
-   "endFrame": 1023,
+   "startFrame": 850,
+   "endFrame": 868,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "brankas.",
-   "startFrame": 1023,
-   "endFrame": 1045,
+   "startFrame": 868,
+   "endFrame": 878,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Jalan terus.",
-   "startFrame": 1045,
-   "endFrame": 1071,
+   "startFrame": 878,
+   "endFrame": 900,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Berminggu-minggu,",
-   "startFrame": 1104,
-   "endFrame": 1143,
+   "startFrame": 938,
+   "endFrame": 961,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "tiap malam,",
-   "startFrame": 1143,
-   "endFrame": 1173,
+   "startFrame": 961,
+   "endFrame": 981,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "mereka",
-   "startFrame": 1173,
-   "endFrame": 1188,
+   "startFrame": 981,
+   "endFrame": 989,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "menggali",
-   "startFrame": 1188,
-   "endFrame": 1207,
+   "startFrame": 989,
+   "endFrame": 1001,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "terowongan",
-   "startFrame": 1207,
-   "endFrame": 1231,
+   "startFrame": 1001,
+   "endFrame": 1015,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "sekitar",
-   "startFrame": 1231,
-   "endFrame": 1248,
+   "startFrame": 1015,
+   "endFrame": 1025,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "delapan",
-   "startFrame": 1248,
-   "endFrame": 1265,
+   "startFrame": 1025,
+   "endFrame": 1046,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "meter dari",
-   "startFrame": 1265,
-   "endFrame": 1290,
+   "startFrame": 1046,
+   "endFrame": 1062,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "got ke",
-   "startFrame": 1290,
-   "endFrame": 1307,
+   "startFrame": 1062,
+   "endFrame": 1069,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "dinding",
-   "startFrame": 1307,
-   "endFrame": 1324,
+   "startFrame": 1069,
+   "endFrame": 1079,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "brankas.",
-   "startFrame": 1324,
-   "endFrame": 1340,
+   "startFrame": 1079,
+   "endFrame": 1088,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Di atas",
-   "startFrame": 1356,
-   "endFrame": 1374,
+   "startFrame": 1105,
+   "endFrame": 1118,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "kita jalan",
-   "startFrame": 1374,
-   "endFrame": 1399,
+   "startFrame": 1118,
+   "endFrame": 1136,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "raya.",
-   "startFrame": 1399,
-   "endFrame": 1416,
+   "startFrame": 1136,
+   "endFrame": 1154,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Kalau",
-   "startFrame": 1416,
-   "endFrame": 1429,
+   "startFrame": 1154,
+   "endFrame": 1164,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "ambruk,",
-   "startFrame": 1429,
-   "endFrame": 1450,
+   "startFrame": 1164,
+   "endFrame": 1180,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "gimana?",
-   "startFrame": 1450,
-   "endFrame": 1464,
+   "startFrame": 1180,
+   "endFrame": 1193,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Makanya gali",
-   "startFrame": 1478,
-   "endFrame": 1507,
+   "startFrame": 1206,
+   "endFrame": 1222,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "pelan-pelan.",
-   "startFrame": 1507,
-   "endFrame": 1535,
+   "startFrame": 1222,
+   "endFrame": 1243,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Dan jangan",
-   "startFrame": 1535,
-   "endFrame": 1560,
+   "startFrame": 1243,
+   "endFrame": 1254,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "bersin.",
-   "startFrame": 1560,
-   "endFrame": 1574,
+   "startFrame": 1254,
+   "endFrame": 1267,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Akhir pekan",
-   "startFrame": 1610,
-   "endFrame": 1637,
+   "startFrame": 1304,
+   "endFrame": 1321,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Bastille",
-   "startFrame": 1637,
-   "endFrame": 1656,
+   "startFrame": 1321,
+   "endFrame": 1332,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Day.",
-   "startFrame": 1656,
-   "endFrame": 1671,
+   "startFrame": 1332,
+   "endFrame": 1339,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Bank tutup",
-   "startFrame": 1671,
-   "endFrame": 1696,
+   "startFrame": 1339,
+   "endFrame": 1362,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "tiga hari.",
-   "startFrame": 1696,
-   "endFrame": 1724,
+   "startFrame": 1362,
+   "endFrame": 1388,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Kita punya",
-   "startFrame": 1724,
-   "endFrame": 1749,
+   "startFrame": 1388,
+   "endFrame": 1400,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "waktu.",
-   "startFrame": 1749,
-   "endFrame": 1761,
+   "startFrame": 1400,
+   "endFrame": 1407,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Tiga ratus",
-   "startFrame": 1777,
-   "endFrame": 1801,
+   "startFrame": 1423,
+   "endFrame": 1457,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "tujuh puluh",
-   "startFrame": 1801,
-   "endFrame": 1828,
+   "startFrame": 1457,
+   "endFrame": 1482,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "satu kotak?!",
-   "startFrame": 1828,
-   "endFrame": 1858,
+   "startFrame": 1482,
+   "endFrame": 1494,
    "highlight": true,
    "voice": "ara"
   },
   {
    "text": "Kita buka",
-   "startFrame": 1858,
-   "endFrame": 1881,
+   "startFrame": 1494,
+   "endFrame": 1500,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "semua?",
-   "startFrame": 1881,
-   "endFrame": 1893,
+   "startFrame": 1500,
+   "endFrame": 1503,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Satu per",
-   "startFrame": 1913,
-   "endFrame": 1934,
+   "startFrame": 1528,
+   "endFrame": 1545,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "satu,",
-   "startFrame": 1934,
-   "endFrame": 1951,
+   "startFrame": 1545,
+   "endFrame": 1554,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "dengan",
-   "startFrame": 1951,
-   "endFrame": 1966,
+   "startFrame": 1554,
+   "endFrame": 1573,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "sopan.",
-   "startFrame": 1966,
-   "endFrame": 1979,
+   "startFrame": 1573,
+   "endFrame": 1586,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Tangkap!",
-   "startFrame": 2021,
-   "endFrame": 2037,
+   "startFrame": 1630,
+   "endFrame": 1664,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Wanginya",
-   "startFrame": 2071,
-   "endFrame": 2090,
+   "startFrame": 1695,
+   "endFrame": 1707,
    "highlight": true,
    "voice": "ara"
   },
   {
    "text": "beda sama",
-   "startFrame": 2090,
-   "endFrame": 2113,
+   "startFrame": 1707,
+   "endFrame": 1722,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "got.",
-   "startFrame": 2113,
-   "endFrame": 2121,
+   "startFrame": 1722,
+   "endFrame": 1731,
    "highlight": true,
    "voice": "ara"
   },
   {
    "text": "Kamu nulis",
-   "startFrame": 2160,
-   "endFrame": 2185,
+   "startFrame": 1768,
+   "endFrame": 1788,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "apa di",
-   "startFrame": 2185,
-   "endFrame": 2202,
+   "startFrame": 1788,
+   "endFrame": 1804,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "tembok?",
-   "startFrame": 2202,
-   "endFrame": 2216,
+   "startFrame": 1804,
+   "endFrame": 1815,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Tanpa",
-   "startFrame": 2230,
-   "endFrame": 2244,
+   "startFrame": 1826,
+   "endFrame": 1838,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "senjata,",
-   "startFrame": 2244,
-   "endFrame": 2266,
+   "startFrame": 1838,
+   "endFrame": 1861,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "tanpa",
-   "startFrame": 2266,
-   "endFrame": 2280,
+   "startFrame": 1861,
+   "endFrame": 1873,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "kebencian,",
-   "startFrame": 2280,
-   "endFrame": 2306,
+   "startFrame": 1873,
+   "endFrame": 1902,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "tanpa",
-   "startFrame": 2306,
-   "endFrame": 2320,
+   "startFrame": 1902,
+   "endFrame": 1919,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "kekerasan.",
-   "startFrame": 2320,
-   "endFrame": 2339,
+   "startFrame": 1919,
+   "endFrame": 1935,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Iya,",
-   "startFrame": 2376,
-   "endFrame": 2391,
+   "startFrame": 1971,
+   "endFrame": 1987,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "tapi tetap",
-   "startFrame": 2391,
-   "endFrame": 2416,
+   "startFrame": 1987,
+   "endFrame": 2015,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "mencuri,",
-   "startFrame": 2416,
-   "endFrame": 2438,
+   "startFrame": 2015,
+   "endFrame": 2025,
    "highlight": true,
    "voice": "ara"
   },
   {
    "text": "kan?",
-   "startFrame": 2438,
-   "endFrame": 2447,
+   "startFrame": 2025,
+   "endFrame": 2030,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Senin pagi,",
-   "startFrame": 2488,
-   "endFrame": 2518,
+   "startFrame": 2072,
+   "endFrame": 2091,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "polisi",
-   "startFrame": 2518,
-   "endFrame": 2533,
+   "startFrame": 2091,
+   "endFrame": 2103,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "menemukan",
-   "startFrame": 2533,
-   "endFrame": 2554,
+   "startFrame": 2103,
+   "endFrame": 2114,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "hampir lima",
-   "startFrame": 2554,
-   "endFrame": 2581,
+   "startFrame": 2114,
+   "endFrame": 2137,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "puluh juta",
-   "startFrame": 2581,
-   "endFrame": 2606,
+   "startFrame": 2137,
+   "endFrame": 2157,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "franc",
-   "startFrame": 2606,
-   "endFrame": 2619,
+   "startFrame": 2157,
+   "endFrame": 2166,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "lenyap.",
-   "startFrame": 2619,
-   "endFrame": 2640,
+   "startFrame": 2166,
+   "endFrame": 2176,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Beberapa",
-   "startFrame": 2640,
-   "endFrame": 2659,
+   "startFrame": 2176,
+   "endFrame": 2190,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "bulan",
-   "startFrame": 2659,
-   "endFrame": 2672,
+   "startFrame": 2190,
+   "endFrame": 2198,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "kemudian,",
-   "startFrame": 2672,
-   "endFrame": 2697,
+   "startFrame": 2198,
+   "endFrame": 2213,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Si",
-   "startFrame": 2697,
-   "endFrame": 2704,
+   "startFrame": 2213,
+   "endFrame": 2217,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Fotografer",
-   "startFrame": 2704,
-   "endFrame": 2727,
+   "startFrame": 2217,
+   "endFrame": 2233,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "tertangkap.",
-   "startFrame": 2727,
-   "endFrame": 2749,
+   "startFrame": 2233,
+   "endFrame": 2246,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Nah kan.",
-   "startFrame": 2769,
-   "endFrame": 2794,
+   "startFrame": 2264,
+   "endFrame": 2283,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Sudah",
-   "startFrame": 2794,
-   "endFrame": 2807,
+   "startFrame": 2283,
+   "endFrame": 2292,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "kubilang.",
-   "startFrame": 2807,
-   "endFrame": 2825,
+   "startFrame": 2292,
+   "endFrame": 2301,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Pak Hakim,",
-   "startFrame": 2858,
-   "endFrame": 2887,
+   "startFrame": 2336,
+   "endFrame": 2359,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "boleh saya",
-   "startFrame": 2887,
-   "endFrame": 2911,
+   "startFrame": 2359,
+   "endFrame": 2368,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "tunjukkan di",
-   "startFrame": 2911,
-   "endFrame": 2940,
+   "startFrame": 2368,
+   "endFrame": 2384,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "peta,",
-   "startFrame": 2940,
-   "endFrame": 2957,
+   "startFrame": 2384,
+   "endFrame": 2395,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "bagaimana",
-   "startFrame": 2957,
-   "endFrame": 2978,
+   "startFrame": 2395,
+   "endFrame": 2410,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "caranya?",
-   "startFrame": 2978,
-   "endFrame": 2994,
+   "startFrame": 2410,
+   "endFrame": 2422,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "Saat",
-   "startFrame": 3013,
-   "endFrame": 3024,
+   "startFrame": 2439,
+   "endFrame": 2448,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "diperiksa",
-   "startFrame": 3024,
-   "endFrame": 3045,
+   "startFrame": 2448,
+   "endFrame": 2458,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "hakim,",
-   "startFrame": 3045,
-   "endFrame": 3064,
+   "startFrame": 2458,
+   "endFrame": 2474,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "ia melompat",
-   "startFrame": 3064,
-   "endFrame": 3091,
+   "startFrame": 2474,
+   "endFrame": 2492,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "dari",
-   "startFrame": 3091,
-   "endFrame": 3102,
+   "startFrame": 2492,
+   "endFrame": 2496,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "jendela,",
-   "startFrame": 3102,
-   "endFrame": 3125,
+   "startFrame": 2496,
+   "endFrame": 2516,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "mendarat di",
-   "startFrame": 3125,
-   "endFrame": 3151,
+   "startFrame": 2516,
+   "endFrame": 2532,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "atap mobil,",
-   "startFrame": 3151,
-   "endFrame": 3182,
+   "startFrame": 2532,
+   "endFrame": 2547,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "dan kabur",
-   "startFrame": 3182,
-   "endFrame": 3204,
+   "startFrame": 2547,
+   "endFrame": 2572,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "naik motor.",
-   "startFrame": 3204,
-   "endFrame": 3228,
+   "startFrame": 2572,
+   "endFrame": 2584,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Hah?!",
-   "startFrame": 3244,
-   "endFrame": 3258,
+   "startFrame": 2601,
+   "endFrame": 2625,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "Dia kabur",
-   "startFrame": 3258,
-   "endFrame": 3281,
+   "startFrame": 2625,
+   "endFrame": 2644,
    "highlight": false,
    "voice": "ara"
   },
   {
    "text": "lagi?!",
-   "startFrame": 3281,
-   "endFrame": 3292,
+   "startFrame": 2644,
+   "endFrame": 2651,
    "highlight": true,
    "voice": "ara"
   },
   {
    "text": "Uangnya",
-   "startFrame": 3312,
-   "endFrame": 3329,
+   "startFrame": 2670,
+   "endFrame": 2682,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "tidak pernah",
-   "startFrame": 3329,
-   "endFrame": 3357,
+   "startFrame": 2682,
+   "endFrame": 2696,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "ditemukan.",
-   "startFrame": 3357,
-   "endFrame": 3384,
+   "startFrame": 2696,
+   "endFrame": 2713,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "Dan ia",
-   "startFrame": 3384,
-   "endFrame": 3401,
+   "startFrame": 2713,
+   "endFrame": 2735,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "tidak pernah",
-   "startFrame": 3401,
-   "endFrame": 3430,
+   "startFrame": 2735,
+   "endFrame": 2751,
    "highlight": false,
    "voice": "dodi"
   },
   {
    "text": "tertangkap",
-   "startFrame": 3430,
-   "endFrame": 3453,
+   "startFrame": 2751,
+   "endFrame": 2766,
    "highlight": true,
    "voice": "dodi"
   },
   {
    "text": "lagi.",
-   "startFrame": 3453,
-   "endFrame": 3463,
+   "startFrame": 2766,
+   "endFrame": 2774,
    "highlight": true,
    "voice": "dodi"
   }

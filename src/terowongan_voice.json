@@ -1,0 +1,2241 @@
+{
+ "fps": 30,
+ "totalFrames": 2574,
+ "scenes": [
+  {
+   "scene": "hook",
+   "from": 8,
+   "to": 302,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "dodi",
+     "text": "Senin pagi, Juli seribu sembilan ratus tujuh puluh enam. Pintu brankas sebuah bank di kota Nice, Prancis, tidak bisa dibuka.",
+     "score": 0.879,
+     "file": "out/voice/terowongan/hook_0.wav",
+     "wordsSec": [
+      [
+       "Sini",
+       0.0,
+       0.26
+      ],
+      [
+       "pagi,",
+       0.26,
+       0.76
+      ],
+      [
+       "Juli",
+       1.0,
+       1.32
+      ],
+      [
+       "1976,",
+       1.32,
+       2.92
+      ],
+      [
+       "pintu",
+       3.2,
+       3.54
+      ],
+      [
+       "berangkas",
+       3.54,
+       3.98
+      ],
+      [
+       "sebuah",
+       3.98,
+       4.4
+      ],
+      [
+       "bang",
+       4.4,
+       4.52
+      ],
+      [
+       "di",
+       4.52,
+       4.74
+      ],
+      [
+       "kota",
+       4.74,
+       4.96
+      ],
+      [
+       "Nisi,",
+       4.96,
+       5.3
+      ],
+      [
+       "Prancis,",
+       5.46,
+       5.94
+      ],
+      [
+       "tidak",
+       6.04,
+       6.24
+      ],
+      [
+       "bisa",
+       6.24,
+       6.46
+      ],
+      [
+       "dibuka.",
+       6.46,
+       6.86
+      ]
+     ],
+     "from": 8,
+     "to": 219,
+     "words": [
+      {
+       "w": "Sini",
+       "from": 8,
+       "to": 15
+      },
+      {
+       "w": "pagi,",
+       "from": 15,
+       "to": 30
+      },
+      {
+       "w": "Juli",
+       "from": 38,
+       "to": 47
+      },
+      {
+       "w": "1976,",
+       "from": 47,
+       "to": 95
+      },
+      {
+       "w": "pintu",
+       "from": 104,
+       "to": 114
+      },
+      {
+       "w": "berangkas",
+       "from": 114,
+       "to": 127
+      },
+      {
+       "w": "sebuah",
+       "from": 127,
+       "to": 140
+      },
+      {
+       "w": "bang",
+       "from": 140,
+       "to": 143
+      },
+      {
+       "w": "di",
+       "from": 143,
+       "to": 150
+      },
+      {
+       "w": "kota",
+       "from": 150,
+       "to": 156
+      },
+      {
+       "w": "Nisi,",
+       "from": 156,
+       "to": 166
+      },
+      {
+       "w": "Prancis,",
+       "from": 171,
+       "to": 186
+      },
+      {
+       "w": "tidak",
+       "from": 189,
+       "to": 195
+      },
+      {
+       "w": "bisa",
+       "from": 195,
+       "to": 201
+      },
+      {
+       "w": "dibuka.",
+       "from": 201,
+       "to": 213
+      }
+     ]
+    },
+    {
+     "style": "bisik",
+     "voice": "dodi",
+     "text": "Karena dikunci... dari dalam.",
+     "score": 1.0,
+     "file": "out/voice/terowongan/hook_1.wav",
+     "wordsSec": [
+      [
+       "karena",
+       0.0,
+       0.22
+      ],
+      [
+       "di",
+       0.22,
+       0.4
+      ],
+      [
+       "kunci",
+       0.4,
+       0.82
+      ],
+      [
+       "dari",
+       0.82,
+       1.4
+      ],
+      [
+       "dalam",
+       1.4,
+       1.72
+      ]
+     ],
+     "from": 226,
+     "to": 289,
+     "words": [
+      {
+       "w": "karena",
+       "from": 226,
+       "to": 233
+      },
+      {
+       "w": "di",
+       "from": 233,
+       "to": 238
+      },
+      {
+       "w": "kunci",
+       "from": 238,
+       "to": 251
+      },
+      {
+       "w": "dari",
+       "from": 251,
+       "to": 268
+      },
+      {
+       "w": "dalam",
+       "from": 268,
+       "to": 278
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "ide",
+   "from": 302,
+   "to": 643,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Kamu mau bobol bank? Kamu kan cuma tukang foto.",
+     "score": 0.946,
+     "file": "out/voice/terowongan/ide_0.wav",
+     "wordsSec": [
+      [
+       "Kamu",
+       0.0,
+       0.3
+      ],
+      [
+       "mau",
+       0.3,
+       0.56
+      ],
+      [
+       "bobo",
+       0.56,
+       1.2
+      ],
+      [
+       "bang?",
+       1.2,
+       1.46
+      ],
+      [
+       "Kamu",
+       2.04,
+       2.46
+      ],
+      [
+       "kan",
+       2.46,
+       2.58
+      ],
+      [
+       "cuman",
+       2.58,
+       2.82
+      ],
+      [
+       "tukang",
+       2.82,
+       3.08
+      ],
+      [
+       "foto.",
+       3.08,
+       3.36
+      ]
+     ],
+     "from": 302,
+     "to": 410,
+     "words": [
+      {
+       "w": "Kamu",
+       "from": 302,
+       "to": 311
+      },
+      {
+       "w": "mau",
+       "from": 311,
+       "to": 319
+      },
+      {
+       "w": "bobo",
+       "from": 319,
+       "to": 338
+      },
+      {
+       "w": "bang?",
+       "from": 338,
+       "to": 346
+      },
+      {
+       "w": "Kamu",
+       "from": 363,
+       "to": 376
+      },
+      {
+       "w": "kan",
+       "from": 376,
+       "to": 380
+      },
+      {
+       "w": "cuman",
+       "from": 380,
+       "to": 387
+      },
+      {
+       "w": "tukang",
+       "from": 387,
+       "to": 395
+      },
+      {
+       "w": "foto.",
+       "from": 395,
+       "to": 403
+      }
+     ]
+    },
+    {
+     "style": "bisik",
+     "voice": "dodi",
+     "text": "Justru itu. Lihat peta got ini. Ada saluran yang lewat persis di samping brankasnya.",
+     "score": 0.986,
+     "file": "out/voice/terowongan/ide_1.wav",
+     "wordsSec": [
+      [
+       "Justru",
+       0.0,
+       0.36
+      ],
+      [
+       "itu,",
+       0.36,
+       0.6
+      ],
+      [
+       "lihat",
+       1.06,
+       1.32
+      ],
+      [
+       "petagot",
+       1.32,
+       1.9
+      ],
+      [
+       "ini,",
+       1.9,
+       2.1
+      ],
+      [
+       "ada",
+       2.4,
+       2.58
+      ],
+      [
+       "saluran",
+       2.58,
+       2.98
+      ],
+      [
+       "yang",
+       2.98,
+       3.16
+      ],
+      [
+       "lewat",
+       3.16,
+       3.42
+      ],
+      [
+       "persis",
+       3.42,
+       3.82
+      ],
+      [
+       "di",
+       3.82,
+       3.98
+      ],
+      [
+       "samping",
+       3.98,
+       4.26
+      ],
+      [
+       "berangkasnya.",
+       4.26,
+       4.78
+      ]
+     ],
+     "from": 418,
+     "to": 566,
+     "words": [
+      {
+       "w": "Justru",
+       "from": 418,
+       "to": 429
+      },
+      {
+       "w": "itu,",
+       "from": 429,
+       "to": 436
+      },
+      {
+       "w": "lihat",
+       "from": 450,
+       "to": 458
+      },
+      {
+       "w": "petagot",
+       "from": 458,
+       "to": 475
+      },
+      {
+       "w": "ini,",
+       "from": 475,
+       "to": 481
+      },
+      {
+       "w": "ada",
+       "from": 490,
+       "to": 496
+      },
+      {
+       "w": "saluran",
+       "from": 496,
+       "to": 508
+      },
+      {
+       "w": "yang",
+       "from": 508,
+       "to": 513
+      },
+      {
+       "w": "lewat",
+       "from": 513,
+       "to": 521
+      },
+      {
+       "w": "persis",
+       "from": 521,
+       "to": 533
+      },
+      {
+       "w": "di",
+       "from": 533,
+       "to": 538
+      },
+      {
+       "w": "samping",
+       "from": 538,
+       "to": 546
+      },
+      {
+       "w": "berangkasnya.",
+       "from": 546,
+       "to": 562
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Di samping... brankas?",
+     "score": 0.941,
+     "file": "out/voice/terowongan/ide_2.wav",
+     "wordsSec": [
+      [
+       "disamping,",
+       0.0,
+       0.68
+      ],
+      [
+       "berangkas",
+       1.0,
+       1.62
+      ]
+     ],
+     "from": 574,
+     "to": 629,
+     "words": [
+      {
+       "w": "disamping,",
+       "from": 574,
+       "to": 594
+      },
+      {
+       "w": "berangkas",
+       "from": 604,
+       "to": 622
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "got",
+   "from": 643,
+   "to": 870,
+   "lines": [
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Baunya ya ampun! Aku nggak dibayar cukup buat ini.",
+     "score": 0.976,
+     "file": "out/voice/terowongan/got_0.wav",
+     "wordsSec": [
+      [
+       "Baungnya",
+       0.0,
+       0.56
+      ],
+      [
+       "ya",
+       0.56,
+       0.7
+      ],
+      [
+       "ampun,",
+       0.7,
+       1.32
+      ],
+      [
+       "aku",
+       1.92,
+       2.32
+      ],
+      [
+       "nggak",
+       2.32,
+       2.54
+      ],
+      [
+       "dibayar",
+       2.54,
+       3.0
+      ],
+      [
+       "cukup",
+       3.0,
+       3.4
+      ],
+      [
+       "buat",
+       3.4,
+       3.56
+      ],
+      [
+       "ini.",
+       3.56,
+       3.92
+      ]
+     ],
+     "from": 643,
+     "to": 767,
+     "words": [
+      {
+       "w": "Baungnya",
+       "from": 643,
+       "to": 660
+      },
+      {
+       "w": "ya",
+       "from": 660,
+       "to": 664
+      },
+      {
+       "w": "ampun,",
+       "from": 664,
+       "to": 682
+      },
+      {
+       "w": "aku",
+       "from": 700,
+       "to": 712
+      },
+      {
+       "w": "nggak",
+       "from": 712,
+       "to": 719
+      },
+      {
+       "w": "dibayar",
+       "from": 719,
+       "to": 733
+      },
+      {
+       "w": "cukup",
+       "from": 733,
+       "to": 745
+      },
+      {
+       "w": "buat",
+       "from": 745,
+       "to": 750
+      },
+      {
+       "w": "ini.",
+       "from": 750,
+       "to": 760
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Kamu dibayar pakai isi brankas. Jalan terus.",
+     "score": 0.973,
+     "file": "out/voice/terowongan/got_1.wav",
+     "wordsSec": [
+      [
+       "Kamu",
+       0.0,
+       0.26
+      ],
+      [
+       "dibayar",
+       0.26,
+       0.66
+      ],
+      [
+       "pakai",
+       0.66,
+       0.88
+      ],
+      [
+       "isi",
+       0.88,
+       1.22
+      ],
+      [
+       "berangkas,",
+       1.22,
+       1.64
+      ],
+      [
+       "jalan",
+       1.86,
+       2.18
+      ],
+      [
+       "terus!",
+       2.18,
+       2.36
+      ]
+     ],
+     "from": 775,
+     "to": 857,
+     "words": [
+      {
+       "w": "Kamu",
+       "from": 775,
+       "to": 783
+      },
+      {
+       "w": "dibayar",
+       "from": 783,
+       "to": 795
+      },
+      {
+       "w": "pakai",
+       "from": 795,
+       "to": 801
+      },
+      {
+       "w": "isi",
+       "from": 801,
+       "to": 812
+      },
+      {
+       "w": "berangkas,",
+       "from": 812,
+       "to": 824
+      },
+      {
+       "w": "jalan",
+       "from": 831,
+       "to": 840
+      },
+      {
+       "w": "terus!",
+       "from": 840,
+       "to": 846
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "gali",
+   "from": 870,
+   "to": 1217,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Berminggu-minggu, tiap malam, mereka menggali terowongan sekitar delapan meter dari got ke dinding brankas.",
+     "score": 0.988,
+     "file": "out/voice/terowongan/gali_0.wav",
+     "wordsSec": [
+      [
+       "Berminggu",
+       0.0,
+       0.4
+      ],
+      [
+       "-minggu,",
+       0.4,
+       0.78
+      ],
+      [
+       "tiap",
+       0.96,
+       1.16
+      ],
+      [
+       "malam",
+       1.16,
+       1.5
+      ],
+      [
+       "mereka",
+       1.5,
+       1.72
+      ],
+      [
+       "menggali",
+       1.72,
+       2.2
+      ],
+      [
+       "terowongan",
+       2.2,
+       2.64
+      ],
+      [
+       "sekitar",
+       2.64,
+       3.02
+      ],
+      [
+       "8",
+       3.02,
+       3.38
+      ],
+      [
+       "meter",
+       3.38,
+       3.68
+      ],
+      [
+       "dari",
+       3.68,
+       3.98
+      ],
+      [
+       "Got",
+       3.98,
+       4.14
+      ],
+      [
+       "kedinding",
+       4.14,
+       4.56
+      ],
+      [
+       "berangkas.",
+       4.56,
+       4.98
+      ]
+     ],
+     "from": 870,
+     "to": 1027,
+     "words": [
+      {
+       "w": "Berminggu",
+       "from": 870,
+       "to": 882
+      },
+      {
+       "w": "-minggu,",
+       "from": 882,
+       "to": 893
+      },
+      {
+       "w": "tiap",
+       "from": 899,
+       "to": 905
+      },
+      {
+       "w": "malam",
+       "from": 905,
+       "to": 915
+      },
+      {
+       "w": "mereka",
+       "from": 915,
+       "to": 922
+      },
+      {
+       "w": "menggali",
+       "from": 922,
+       "to": 936
+      },
+      {
+       "w": "terowongan",
+       "from": 936,
+       "to": 949
+      },
+      {
+       "w": "sekitar",
+       "from": 949,
+       "to": 961
+      },
+      {
+       "w": "8",
+       "from": 961,
+       "to": 971
+      },
+      {
+       "w": "meter",
+       "from": 971,
+       "to": 980
+      },
+      {
+       "w": "dari",
+       "from": 980,
+       "to": 989
+      },
+      {
+       "w": "Got",
+       "from": 989,
+       "to": 994
+      },
+      {
+       "w": "kedinding",
+       "from": 994,
+       "to": 1007
+      },
+      {
+       "w": "berangkas.",
+       "from": 1007,
+       "to": 1019
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Di atas kita jalan raya. Kalau ambruk, gimana?",
+     "score": 1.0,
+     "file": "out/voice/terowongan/gali_1.wav",
+     "wordsSec": [
+      [
+       "Di",
+       0.0,
+       0.16
+      ],
+      [
+       "atas",
+       0.16,
+       0.46
+      ],
+      [
+       "kita",
+       0.46,
+       0.7
+      ],
+      [
+       "jalan",
+       0.7,
+       1.06
+      ],
+      [
+       "raya,",
+       1.06,
+       1.42
+      ],
+      [
+       "kalau",
+       1.64,
+       1.98
+      ],
+      [
+       "Ambruk",
+       1.98,
+       2.5
+      ],
+      [
+       "gimana?",
+       2.5,
+       2.96
+      ]
+     ],
+     "from": 1035,
+     "to": 1129,
+     "words": [
+      {
+       "w": "Di",
+       "from": 1035,
+       "to": 1040
+      },
+      {
+       "w": "atas",
+       "from": 1040,
+       "to": 1049
+      },
+      {
+       "w": "kita",
+       "from": 1049,
+       "to": 1056
+      },
+      {
+       "w": "jalan",
+       "from": 1056,
+       "to": 1067
+      },
+      {
+       "w": "raya,",
+       "from": 1067,
+       "to": 1078
+      },
+      {
+       "w": "kalau",
+       "from": 1084,
+       "to": 1094
+      },
+      {
+       "w": "Ambruk",
+       "from": 1094,
+       "to": 1110
+      },
+      {
+       "w": "gimana?",
+       "from": 1110,
+       "to": 1124
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Makanya gali pelan-pelan. Dan jangan bersin.",
+     "score": 1.0,
+     "file": "out/voice/terowongan/gali_2.wav",
+     "wordsSec": [
+      [
+       "Makanya",
+       0.0,
+       0.26
+      ],
+      [
+       "gali",
+       0.26,
+       0.52
+      ],
+      [
+       "pelan",
+       0.52,
+       0.74
+      ],
+      [
+       "-pelan,",
+       0.74,
+       1.18
+      ],
+      [
+       "dan",
+       1.24,
+       1.36
+      ],
+      [
+       "jangan",
+       1.36,
+       1.6
+      ],
+      [
+       "bersin.",
+       1.6,
+       2.04
+      ]
+     ],
+     "from": 1137,
+     "to": 1204,
+     "words": [
+      {
+       "w": "Makanya",
+       "from": 1137,
+       "to": 1144
+      },
+      {
+       "w": "gali",
+       "from": 1144,
+       "to": 1152
+      },
+      {
+       "w": "pelan",
+       "from": 1152,
+       "to": 1159
+      },
+      {
+       "w": "-pelan,",
+       "from": 1159,
+       "to": 1172
+      },
+      {
+       "w": "dan",
+       "from": 1174,
+       "to": 1177
+      },
+      {
+       "w": "jangan",
+       "from": 1177,
+       "to": 1185
+      },
+      {
+       "w": "bersin.",
+       "from": 1185,
+       "to": 1198
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "brankas",
+   "from": 1217,
+   "to": 1515,
+   "lines": [
+    {
+     "style": "bisik",
+     "voice": "dodi",
+     "text": "Akhir pekan Bastille Day. Bank tutup tiga hari. Kita punya waktu.",
+     "score": 0.979,
+     "file": "out/voice/terowongan/brankas_0.wav",
+     "wordsSec": [
+      [
+       "Akhir",
+       0.0,
+       0.32
+      ],
+      [
+       "pekan",
+       0.32,
+       0.6
+      ],
+      [
+       "Bastille",
+       0.6,
+       1.02
+      ],
+      [
+       "Day,",
+       1.02,
+       1.28
+      ],
+      [
+       "bang",
+       1.52,
+       1.72
+      ],
+      [
+       "tutup",
+       1.72,
+       2.06
+      ],
+      [
+       "3",
+       2.06,
+       2.26
+      ],
+      [
+       "hari,",
+       2.26,
+       2.54
+      ],
+      [
+       "kita",
+       2.8,
+       2.96
+      ],
+      [
+       "punya",
+       2.96,
+       3.2
+      ],
+      [
+       "waktu.",
+       3.2,
+       3.46
+      ]
+     ],
+     "from": 1217,
+     "to": 1328,
+     "words": [
+      {
+       "w": "Akhir",
+       "from": 1217,
+       "to": 1227
+      },
+      {
+       "w": "pekan",
+       "from": 1227,
+       "to": 1235
+      },
+      {
+       "w": "Bastille",
+       "from": 1235,
+       "to": 1248
+      },
+      {
+       "w": "Day,",
+       "from": 1248,
+       "to": 1256
+      },
+      {
+       "w": "bang",
+       "from": 1263,
+       "to": 1269
+      },
+      {
+       "w": "tutup",
+       "from": 1269,
+       "to": 1279
+      },
+      {
+       "w": "3",
+       "from": 1279,
+       "to": 1285
+      },
+      {
+       "w": "hari,",
+       "from": 1285,
+       "to": 1293
+      },
+      {
+       "w": "kita",
+       "from": 1301,
+       "to": 1306
+      },
+      {
+       "w": "punya",
+       "from": 1306,
+       "to": 1313
+      },
+      {
+       "w": "waktu.",
+       "from": 1313,
+       "to": 1321
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Tiga ratus tujuh puluh satu kotak?! Kita buka semua?",
+     "score": 0.971,
+     "file": "out/voice/terowongan/brankas_1.wav",
+     "wordsSec": [
+      [
+       "371",
+       0.0,
+       0.96
+      ],
+      [
+       "kota",
+       0.96,
+       1.48
+      ],
+      [
+       "Kita",
+       1.66,
+       2.18
+      ],
+      [
+       "buka",
+       2.18,
+       2.46
+      ],
+      [
+       "semua",
+       2.46,
+       2.68
+      ]
+     ],
+     "from": 1335,
+     "to": 1427,
+     "words": [
+      {
+       "w": "371",
+       "from": 1335,
+       "to": 1364
+      },
+      {
+       "w": "kota",
+       "from": 1364,
+       "to": 1380
+      },
+      {
+       "w": "Kita",
+       "from": 1385,
+       "to": 1401
+      },
+      {
+       "w": "buka",
+       "from": 1401,
+       "to": 1409
+      },
+      {
+       "w": "semua",
+       "from": 1409,
+       "to": 1416
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Satu per satu, dengan sopan.",
+     "score": 0.875,
+     "file": "out/voice/terowongan/brankas_2.wav",
+     "wordsSec": [
+      [
+       "satu",
+       0.0,
+       0.36
+      ],
+      [
+       "persatu",
+       0.36,
+       0.88
+      ],
+      [
+       "dengan",
+       0.88,
+       1.52
+      ],
+      [
+       "sopan",
+       1.52,
+       1.96
+      ]
+     ],
+     "from": 1434,
+     "to": 1501,
+     "words": [
+      {
+       "w": "satu",
+       "from": 1434,
+       "to": 1445
+      },
+      {
+       "w": "persatu",
+       "from": 1445,
+       "to": 1461
+      },
+      {
+       "w": "dengan",
+       "from": 1461,
+       "to": 1480
+      },
+      {
+       "w": "sopan",
+       "from": 1480,
+       "to": 1493
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "uang",
+   "from": 1515,
+   "to": 1614,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Tangkap!",
+     "score": 1.0,
+     "file": "out/voice/terowongan/uang_0.wav",
+     "wordsSec": [
+      [
+       "tangkap",
+       0.0,
+       1.12
+      ]
+     ],
+     "from": 1515,
+     "to": 1553,
+     "words": [
+      {
+       "w": "tangkap",
+       "from": 1515,
+       "to": 1548
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Wanginya beda sama got.",
+     "score": 0.947,
+     "file": "out/voice/terowongan/uang_1.wav",
+     "wordsSec": [
+      [
+       "wanginya",
+       0.0,
+       0.38
+      ],
+      [
+       "beda",
+       0.38,
+       0.72
+      ],
+      [
+       "sama",
+       0.72,
+       0.9
+      ],
+      [
+       "gut",
+       0.9,
+       1.18
+      ]
+     ],
+     "from": 1561,
+     "to": 1600,
+     "words": [
+      {
+       "w": "wanginya",
+       "from": 1561,
+       "to": 1572
+      },
+      {
+       "w": "beda",
+       "from": 1572,
+       "to": 1582
+      },
+      {
+       "w": "sama",
+       "from": 1582,
+       "to": 1588
+      },
+      {
+       "w": "gut",
+       "from": 1588,
+       "to": 1596
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "pesan",
+   "from": 1614,
+   "to": 1875,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Kamu nulis apa di tembok?",
+     "score": 1.0,
+     "file": "out/voice/terowongan/pesan_0.wav",
+     "wordsSec": [
+      [
+       "kamu",
+       0.0,
+       0.24
+      ],
+      [
+       "nulis",
+       0.24,
+       0.64
+      ],
+      [
+       "apa",
+       0.64,
+       0.96
+      ],
+      [
+       "di",
+       0.96,
+       1.2
+      ],
+      [
+       "tembok",
+       1.2,
+       1.56
+      ]
+     ],
+     "from": 1614,
+     "to": 1664,
+     "words": [
+      {
+       "w": "kamu",
+       "from": 1614,
+       "to": 1621
+      },
+      {
+       "w": "nulis",
+       "from": 1621,
+       "to": 1633
+      },
+      {
+       "w": "apa",
+       "from": 1633,
+       "to": 1643
+      },
+      {
+       "w": "di",
+       "from": 1643,
+       "to": 1650
+      },
+      {
+       "w": "tembok",
+       "from": 1650,
+       "to": 1661
+      }
+     ]
+    },
+    {
+     "style": "tegas",
+     "voice": "dodi",
+     "text": "Tanpa senjata, tanpa kebencian, tanpa kekerasan.",
+     "score": 1.0,
+     "file": "out/voice/terowongan/pesan_1.wav",
+     "wordsSec": [
+      [
+       "Tanpa",
+       0.0,
+       0.4
+      ],
+      [
+       "senjata,",
+       0.4,
+       0.94
+      ],
+      [
+       "tanpa",
+       1.16,
+       1.58
+      ],
+      [
+       "kebencian,",
+       1.58,
+       2.16
+      ],
+      [
+       "tanpa",
+       2.52,
+       3.1
+      ],
+      [
+       "kekerasan.",
+       3.1,
+       3.62
+      ]
+     ],
+     "from": 1672,
+     "to": 1787,
+     "words": [
+      {
+       "w": "Tanpa",
+       "from": 1672,
+       "to": 1684
+      },
+      {
+       "w": "senjata,",
+       "from": 1684,
+       "to": 1700
+      },
+      {
+       "w": "tanpa",
+       "from": 1706,
+       "to": 1719
+      },
+      {
+       "w": "kebencian,",
+       "from": 1719,
+       "to": 1736
+      },
+      {
+       "w": "tanpa",
+       "from": 1747,
+       "to": 1765
+      },
+      {
+       "w": "kekerasan.",
+       "from": 1765,
+       "to": 1780
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Iya, tapi tetap mencuri, kan?",
+     "score": 0.955,
+     "file": "out/voice/terowongan/pesan_2.wav",
+     "wordsSec": [
+      [
+       "iya,",
+       0.0,
+       0.32
+      ],
+      [
+       "tapi",
+       0.54,
+       0.86
+      ],
+      [
+       "tetep",
+       0.86,
+       1.46
+      ],
+      [
+       "mencurikan",
+       1.46,
+       1.96
+      ]
+     ],
+     "from": 1795,
+     "to": 1861,
+     "words": [
+      {
+       "w": "iya,",
+       "from": 1795,
+       "to": 1804
+      },
+      {
+       "w": "tapi",
+       "from": 1811,
+       "to": 1820
+      },
+      {
+       "w": "tetep",
+       "from": 1820,
+       "to": 1838
+      },
+      {
+       "w": "mencurikan",
+       "from": 1838,
+       "to": 1853
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "tangkap",
+   "from": 1875,
+   "to": 2119,
+   "lines": [
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Senin pagi, polisi menemukan hampir lima puluh juta franc lenyap. Beberapa bulan kemudian, Si Fotografer tertangkap.",
+     "score": 0.976,
+     "file": "out/voice/terowongan/tangkap_0.wav",
+     "wordsSec": [
+      [
+       "Sinin",
+       0.0,
+       0.3
+      ],
+      [
+       "pagi,",
+       0.3,
+       0.68
+      ],
+      [
+       "polisi",
+       0.74,
+       1.06
+      ],
+      [
+       "menemukan",
+       1.06,
+       1.44
+      ],
+      [
+       "hampir",
+       1.44,
+       1.86
+      ],
+      [
+       "50",
+       1.86,
+       2.24
+      ],
+      [
+       "juta",
+       2.24,
+       2.62
+      ],
+      [
+       "frank",
+       2.62,
+       2.86
+      ],
+      [
+       "lenyap",
+       2.86,
+       3.28
+      ],
+      [
+       "beberapa",
+       3.28,
+       3.76
+      ],
+      [
+       "bulan",
+       3.76,
+       4.06
+      ],
+      [
+       "kemudian",
+       4.06,
+       4.54
+      ],
+      [
+       "si",
+       4.54,
+       4.74
+      ],
+      [
+       "fotografer",
+       4.74,
+       5.3
+      ],
+      [
+       "tertangkap.",
+       5.3,
+       5.8
+      ]
+     ],
+     "from": 1875,
+     "to": 2052,
+     "words": [
+      {
+       "w": "Sinin",
+       "from": 1875,
+       "to": 1884
+      },
+      {
+       "w": "pagi,",
+       "from": 1884,
+       "to": 1895
+      },
+      {
+       "w": "polisi",
+       "from": 1897,
+       "to": 1906
+      },
+      {
+       "w": "menemukan",
+       "from": 1906,
+       "to": 1918
+      },
+      {
+       "w": "hampir",
+       "from": 1918,
+       "to": 1930
+      },
+      {
+       "w": "50",
+       "from": 1930,
+       "to": 1942
+      },
+      {
+       "w": "juta",
+       "from": 1942,
+       "to": 1953
+      },
+      {
+       "w": "frank",
+       "from": 1953,
+       "to": 1960
+      },
+      {
+       "w": "lenyap",
+       "from": 1960,
+       "to": 1973
+      },
+      {
+       "w": "beberapa",
+       "from": 1973,
+       "to": 1987
+      },
+      {
+       "w": "bulan",
+       "from": 1987,
+       "to": 1996
+      },
+      {
+       "w": "kemudian",
+       "from": 1996,
+       "to": 2011
+      },
+      {
+       "w": "si",
+       "from": 2011,
+       "to": 2017
+      },
+      {
+       "w": "fotografer",
+       "from": 2017,
+       "to": 2034
+      },
+      {
+       "w": "tertangkap.",
+       "from": 2034,
+       "to": 2049
+      }
+     ]
+    },
+    {
+     "style": "santai",
+     "voice": "ara",
+     "text": "Nah kan. Sudah kubilang.",
+     "score": 1.0,
+     "file": "out/voice/terowongan/tangkap_1.wav",
+     "wordsSec": [
+      [
+       "Nah",
+       0.0,
+       0.24
+      ],
+      [
+       "kan?",
+       0.24,
+       0.42
+      ],
+      [
+       "Sudahku",
+       0.66,
+       1.06
+      ],
+      [
+       "bilang.",
+       1.06,
+       1.26
+      ]
+     ],
+     "from": 2060,
+     "to": 2105,
+     "words": [
+      {
+       "w": "Nah",
+       "from": 2060,
+       "to": 2067
+      },
+      {
+       "w": "kan?",
+       "from": 2067,
+       "to": 2073
+      },
+      {
+       "w": "Sudahku",
+       "from": 2080,
+       "to": 2092
+      },
+      {
+       "w": "bilang.",
+       "from": 2092,
+       "to": 2098
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "scene": "kabur",
+   "from": 2119,
+   "to": 2566,
+   "lines": [
+    {
+     "style": "santai",
+     "voice": "dodi",
+     "text": "Pak Hakim, boleh saya tunjukkan di peta, bagaimana caranya?",
+     "score": 1.0,
+     "file": "out/voice/terowongan/kabur_0.wav",
+     "wordsSec": [
+      [
+       "Pak",
+       0.0,
+       0.12
+      ],
+      [
+       "Hakim,",
+       0.12,
+       0.5
+      ],
+      [
+       "boleh",
+       0.78,
+       0.88
+      ],
+      [
+       "saya",
+       0.88,
+       1.1
+      ],
+      [
+       "tunjukkan",
+       1.1,
+       1.52
+      ],
+      [
+       "di",
+       1.52,
+       1.62
+      ],
+      [
+       "PETA",
+       1.62,
+       1.98
+      ],
+      [
+       "bagaimana",
+       1.98,
+       2.5
+      ],
+      [
+       "caranya?",
+       2.5,
+       2.88
+      ]
+     ],
+     "from": 2119,
+     "to": 2210,
+     "words": [
+      {
+       "w": "Pak",
+       "from": 2119,
+       "to": 2122
+      },
+      {
+       "w": "Hakim,",
+       "from": 2122,
+       "to": 2134
+      },
+      {
+       "w": "boleh",
+       "from": 2142,
+       "to": 2145
+      },
+      {
+       "w": "saya",
+       "from": 2145,
+       "to": 2152
+      },
+      {
+       "w": "tunjukkan",
+       "from": 2152,
+       "to": 2164
+      },
+      {
+       "w": "di",
+       "from": 2164,
+       "to": 2167
+      },
+      {
+       "w": "PETA",
+       "from": 2167,
+       "to": 2178
+      },
+      {
+       "w": "bagaimana",
+       "from": 2178,
+       "to": 2194
+      },
+      {
+       "w": "caranya?",
+       "from": 2194,
+       "to": 2205
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Saat diperiksa hakim, ia melompat dari jendela, mendarat di atap mobil, dan kabur naik motor.",
+     "score": 1.0,
+     "file": "out/voice/terowongan/kabur_1.wav",
+     "wordsSec": [
+      [
+       "Saat",
+       0.0,
+       0.3
+      ],
+      [
+       "diperiksa",
+       0.3,
+       0.66
+      ],
+      [
+       "hakim,",
+       0.66,
+       1.04
+      ],
+      [
+       "ia",
+       1.16,
+       1.38
+      ],
+      [
+       "melompat",
+       1.38,
+       1.76
+      ],
+      [
+       "dari",
+       1.76,
+       1.92
+      ],
+      [
+       "jendela,",
+       1.92,
+       2.38
+      ],
+      [
+       "mendarat",
+       2.56,
+       2.98
+      ],
+      [
+       "di",
+       2.98,
+       3.1
+      ],
+      [
+       "atap",
+       3.1,
+       3.34
+      ],
+      [
+       "mobil",
+       3.34,
+       3.6
+      ],
+      [
+       "dan",
+       3.6,
+       4.0
+      ],
+      [
+       "kabur",
+       4.0,
+       4.44
+      ],
+      [
+       "naik",
+       4.44,
+       4.64
+      ],
+      [
+       "motor.",
+       4.64,
+       4.86
+      ]
+     ],
+     "from": 2218,
+     "to": 2371,
+     "words": [
+      {
+       "w": "Saat",
+       "from": 2218,
+       "to": 2227
+      },
+      {
+       "w": "diperiksa",
+       "from": 2227,
+       "to": 2237
+      },
+      {
+       "w": "hakim,",
+       "from": 2237,
+       "to": 2249
+      },
+      {
+       "w": "ia",
+       "from": 2252,
+       "to": 2259
+      },
+      {
+       "w": "melompat",
+       "from": 2259,
+       "to": 2270
+      },
+      {
+       "w": "dari",
+       "from": 2270,
+       "to": 2275
+      },
+      {
+       "w": "jendela,",
+       "from": 2275,
+       "to": 2289
+      },
+      {
+       "w": "mendarat",
+       "from": 2294,
+       "to": 2307
+      },
+      {
+       "w": "di",
+       "from": 2307,
+       "to": 2311
+      },
+      {
+       "w": "atap",
+       "from": 2311,
+       "to": 2318
+      },
+      {
+       "w": "mobil",
+       "from": 2318,
+       "to": 2326
+      },
+      {
+       "w": "dan",
+       "from": 2326,
+       "to": 2338
+      },
+      {
+       "w": "kabur",
+       "from": 2338,
+       "to": 2351
+      },
+      {
+       "w": "naik",
+       "from": 2351,
+       "to": 2357
+      },
+      {
+       "w": "motor.",
+       "from": 2357,
+       "to": 2363
+      }
+     ]
+    },
+    {
+     "style": "tegang",
+     "voice": "ara",
+     "text": "Hah?! Dia kabur lagi?!",
+     "score": 1.0,
+     "file": "out/voice/terowongan/kabur_2.wav",
+     "wordsSec": [
+      [
+       "Hah?",
+       0.0,
+       0.22
+      ],
+      [
+       "Dia",
+       0.8,
+       1.04
+      ],
+      [
+       "kabur",
+       1.04,
+       1.42
+      ],
+      [
+       "lagi?",
+       1.42,
+       1.66
+      ]
+     ],
+     "from": 2379,
+     "to": 2435,
+     "words": [
+      {
+       "w": "Hah?",
+       "from": 2379,
+       "to": 2386
+      },
+      {
+       "w": "Dia",
+       "from": 2403,
+       "to": 2410
+      },
+      {
+       "w": "kabur",
+       "from": 2410,
+       "to": 2422
+      },
+      {
+       "w": "lagi?",
+       "from": 2422,
+       "to": 2429
+      }
+     ]
+    },
+    {
+     "style": "narasi",
+     "voice": "dodi",
+     "text": "Uangnya tidak pernah ditemukan. Dan ia tidak pernah tertangkap lagi.",
+     "score": 0.982,
+     "file": "out/voice/terowongan/kabur_3.wav",
+     "wordsSec": [
+      [
+       "wangnya",
+       0.0,
+       0.38
+      ],
+      [
+       "tidak",
+       0.38,
+       0.56
+      ],
+      [
+       "pernah",
+       0.56,
+       0.86
+      ],
+      [
+       "ditemukan",
+       0.86,
+       1.42
+      ],
+      [
+       "dan",
+       1.42,
+       1.94
+      ],
+      [
+       "ia",
+       1.94,
+       2.16
+      ],
+      [
+       "tidak",
+       2.16,
+       2.4
+      ],
+      [
+       "pernah",
+       2.4,
+       2.68
+      ],
+      [
+       "tertangkap",
+       2.68,
+       3.18
+      ],
+      [
+       "lagi.",
+       3.18,
+       3.44
+      ]
+     ],
+     "from": 2442,
+     "to": 2552,
+     "words": [
+      {
+       "w": "wangnya",
+       "from": 2442,
+       "to": 2454
+      },
+      {
+       "w": "tidak",
+       "from": 2454,
+       "to": 2459
+      },
+      {
+       "w": "pernah",
+       "from": 2459,
+       "to": 2468
+      },
+      {
+       "w": "ditemukan",
+       "from": 2468,
+       "to": 2485
+      },
+      {
+       "w": "dan",
+       "from": 2485,
+       "to": 2501
+      },
+      {
+       "w": "ia",
+       "from": 2501,
+       "to": 2507
+      },
+      {
+       "w": "tidak",
+       "from": 2507,
+       "to": 2514
+      },
+      {
+       "w": "pernah",
+       "from": 2514,
+       "to": 2523
+      },
+      {
+       "w": "tertangkap",
+       "from": 2523,
+       "to": 2538
+      },
+      {
+       "w": "lagi.",
+       "from": 2538,
+       "to": 2546
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
