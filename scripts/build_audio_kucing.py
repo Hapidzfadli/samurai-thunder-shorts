@@ -222,52 +222,217 @@ def sfx_sad_wah(dur=0.95):
     return y
 
 
-def spy_comedy_bgm(total_sec: float, tense_start: float, tense_end: float, end_start: float):
-    """Procedural 1960s Spy Jazz / Espionage Comedy BGM (walking upright bass + sneaky snaps + vibraphone)."""
+# ============== NEW JAMES BOND 1960s SPY INSTRUMENT & FOLEY SYNTHS ==============
+def _spy_twang_note(freq: float, dur: float = 0.42):
+    """Vintage 1960s Spy Surf-Guitar twang note with metallic pick attack & spring-reverb shimmer."""
+    n = max(64, int(SR * dur))
+    t = np.linspace(0, dur, n, dtype=np.float32)
+    # Rich electric guitar harmonics + slight vintage tremolo
+    vib = 1.0 + 0.004 * np.sin(2 * np.pi * 5.8 * t)
+    ph = 2 * np.pi * np.cumsum(np.full(n, freq, dtype=np.float32) * vib) / SR
+    sig = (
+        0.52 * np.sin(ph)
+        + 0.36 * np.sin(2 * ph)
+        + 0.24 * np.sin(3 * ph)
+        + 0.14 * np.sin(4 * ph)
+        + 0.08 * np.sin(5 * ph)
+    )
+    # Slight tube overdrive + pick transient + spring reverb tail
+    sig = np.tanh(sig * 1.45) * np.exp(-t * 5.2) * (1.0 - np.exp(-t * 280.0))
+    pick = bp(nz(0.025), 2000, 6500) * np.exp(-np.linspace(0, 14, int(SR * 0.025)))
+    y = sig.astype(np.float32)
+    put(y, norm(pick), 0.0, 0.22)
+    # Simple vintage spring-reverb multi-tap echo
+    out = np.zeros(n + int(SR * 0.18), dtype=np.float32)
+    put(out, y, 0.0, 1.0)
+    put(out, bp(y, 700, 3800), 0.042, 0.28)
+    put(out, bp(y, 600, 3200), 0.095, 0.16)
+    return norm(out)
+
+
+def sfx_bond_chord(dur: float = 1.65):
+    """Iconic 1960s Spy Minor-Major 9th guitar chord (Em(maj9): E-G-B-D#-F#) with staggered arpeggio strum!"""
+    freqs = [164.81, 196.00, 246.94, 311.13, 369.99, 659.25]  # E3 G3 B3 D#4 F#4 E5
+    y = np.zeros(int(SR * (dur + 0.3)), dtype=np.float32)
+    for i, f in enumerate(freqs):
+        note = _spy_twang_note(f, dur)
+        put(y, note, i * 0.032, 0.42 if i < 4 else 0.34)
+    return norm(y) * 0.72
+
+
+def sfx_bond_brass(root: float = 164.81, dur: float = 0.58, intense: bool = False):
+    """Punchy 1960s Spy Brass Section Stab (trombones + muted trumpets hitting dissonant spy chord!)."""
+    n = int(SR * dur)
+    t = np.linspace(0, dur, n, dtype=np.float32)
+    ratios = [1.0, 1.189, 1.498, 1.888, 2.0] if intense else [1.0, 1.189, 1.498, 2.0]  # Em / Em(maj7)
+    sig = np.zeros(n, dtype=np.float32)
+    for r in ratios:
+        for det in (-0.004, 0.0, 0.0045):
+            f = root * r * (1.0 + det)
+            # Sawtooth-like brass harmonic stack
+            ph = 2 * np.pi * f * t
+            h = (
+                0.55 * np.sin(ph)
+                + 0.42 * np.sin(2 * ph)
+                + 0.30 * np.sin(3 * ph)
+                + 0.20 * np.sin(4 * ph)
+                + 0.12 * np.sin(5 * ph)
+            )
+            sig += h
+    # Sharp brass blat attack + breathy bite
+    env = np.minimum(1.0, t / 0.022) * np.exp(-np.maximum(0.0, t - 0.14) * (4.2 if intense else 6.0))
+    sig = np.tanh(sig * 0.22) * env
+    sig = bp(sig, 140, 4200)
+    return norm(sig) * (0.82 if intense else 0.68)
+
+
+def sfx_record_scratch(dur: float = 0.36):
+    """Classic comedy vinyl record-scratch halting the spy music right before disaster!"""
+    n = int(SR * dur)
+    t = np.linspace(0, dur, n, dtype=np.float32)
+    f = 220.0 + 1650.0 * np.sin(np.pi * (t / dur) ** 0.55) ** 2 + 420.0 * np.sin(2 * np.pi * 16 * t)
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    sig = np.tanh((np.sin(ph) + 0.5 * np.sin(2 * ph) + 0.4 * bp(nz(dur), 900, 4800)) * 1.5)
+    env = np.maximum(0.0, np.sin(np.pi * t / dur)) ** 0.45
+    return norm(sig * env) * 0.78
+
+
+def sfx_gadget_click(dur: float = 0.24):
+    """Crisp metallic spy gadget KLIK! + high-tech sonar confirmation beep."""
+    y = np.zeros(int(SR * dur), dtype=np.float32)
+    cl = bp(nz(0.035), 2200, 7200) * np.exp(-np.linspace(0, 18, int(SR * 0.035)))
+    put(y, norm(cl), 0.0, 0.90)
+    put(y, sfx_blip(1320.0, 0.12), 0.045, 0.68)
+    put(y, sfx_blip(1760.0, 0.12), 0.105, 0.62)
+    return norm(y) * 0.72
+
+
+def sfx_desk_slam(dur: float = 0.42):
+    """Heavy CIA Director desk slam BRAAK!! (deep sub thud + wooden crack)."""
+    n = int(SR * dur)
+    t = np.linspace(0, dur, n, dtype=np.float32)
+    thud = np.sin(2 * np.pi * (115 * np.exp(-t * 14) + 38) * t) * np.exp(-t * 11)
+    crack = bp(nz(0.10), 400, 3200) * np.exp(-np.linspace(0, 15, int(SR * 0.10)))
+    y = thud.astype(np.float32)
+    put(y, norm(crack), 0.0, 0.78)
+    return norm(y) * 0.85
+
+
+def sfx_stamp_thud(dur: float = 0.28):
+    """Official red CIA DIBATALKAN rubber stamp thump."""
+    n = int(SR * dur)
+    t = np.linspace(0, dur, n, dtype=np.float32)
+    th = np.sin(2 * np.pi * (95 * np.exp(-t * 16) + 42) * t) * np.exp(-t * 14)
+    slap = bp(nz(0.05), 800, 3600) * np.exp(-np.linspace(0, 16, int(SR * 0.05)))
+    y = th.astype(np.float32)
+    put(y, norm(slap), 0.0, 0.55)
+    return norm(y) * 0.72
+
+
+def sfx_sonar_ping(freq: float = 1180.0, dur: float = 0.55):
+    """Retro 1960s secret-lab X-Ray sonar radar ping."""
+    t = np.linspace(0, dur, int(SR * dur), dtype=np.float32)
+    s = (np.sin(2 * np.pi * freq * t) + 0.25 * np.sin(2 * np.pi * freq * 2 * t)) * np.exp(-t * 6.5)
+    return norm(s) * 0.48
+
+
+def james_bond_spy_bgm(total_sec: float, S: dict, ev_sec: dict, dir_end: float):
+    """Original 1960s James Bond-style Spy Surf-Guitar + Walking Bass + Jazz Drums + Brass + Chase Bongos!"""
     n = int(SR * total_sec)
     bgm = np.zeros(n, dtype=np.float32)
-    beat = 0.46  # ~130 BPM snappy espionage groove!
-    bass_prog = [110.0, 130.8, 146.8, 155.6, 146.8, 130.8, 123.5, 98.0]  # A minor spy walking line!
-    vib_notes = [440.0, 523.2, 659.3, 622.2, 523.2, 493.9, 440.0, 392.0]
+
+    # Pre-render reusable spy surf-guitar chromatic motif notes (E2, F2, F#2, G2, B2, E3, G3, B3, D#4)
+    g_notes = {
+        "E2": _spy_twang_note(82.41, 0.34),
+        "F2": _spy_twang_note(87.31, 0.34),
+        "Fs2": _spy_twang_note(92.50, 0.34),
+        "G2": _spy_twang_note(98.00, 0.34),
+        "B2": _spy_twang_note(123.47, 0.34),
+        "E3": _spy_twang_note(164.81, 0.36),
+        "G3": _spy_twang_note(196.00, 0.36),
+        "B3": _spy_twang_note(246.94, 0.36),
+        "Ds4": _spy_twang_note(311.13, 0.42),
+    }
+    # Original chromatic espionage vamp (distinct original rhythm, classic 1960s spy vibe!)
+    vamp_bass = ["E2", "B2", "E2", "F2", "Fs2", "B2", "F2", "E2"]
+    vamp_lead = [None, "E3", None, "G3", "B3", None, "Ds4", "B3"]
+
+    # Reusable brushed jazz snare & chase bongo
+    snare = norm(bp(nz(0.085), 1400, 6800) * np.exp(-np.linspace(0, 14, int(SR * 0.085))))
+    ride = norm(bp(nz(0.11), 4500, 10500) * np.exp(-np.linspace(0, 12, int(SR * 0.11))))
+    tb1 = np.linspace(0, 0.09, int(SR * 0.09), dtype=np.float32)
+    bongo_hi = norm(np.sin(2 * np.pi * (340 * np.exp(-tb1 * 18) + 210) * tb1) * np.exp(-tb1 * 22))
+    bongo_lo = norm(np.sin(2 * np.pi * (230 * np.exp(-tb1 * 16) + 145) * tb1) * np.exp(-tb1 * 20))
+
+    t_xray0, t_xray1 = S["xray"], S["van"]
+    t_chase0, t_chase1 = S["lepas"], ev_sec["kac.ngerem"] - 0.25  # Record scratch halts chase right at brake!
+    t_dir0, t_dir1 = S["direktur"], dir_end
+    t_end0 = S["akhir"]
+
+    # Opening iconic spy chord + brass hit
+    put(bgm, sfx_bond_chord(1.5), 0.08, 0.38)
 
     step = 0
-    t_cur = 0.0
-    while t_cur < total_sec - 0.3:
-        in_tense = tense_start <= t_cur <= tense_end
-        in_end = t_cur >= end_start
-        b_dur = beat * (0.76 if in_tense else (1.25 if in_end else 1.0))
+    t_cur = 0.40
+    while t_cur < total_sec - 0.5:
+        in_xray = t_xray0 <= t_cur < t_xray1
+        in_chase = t_chase0 <= t_cur < t_chase1
+        in_post_brake = t_chase1 <= t_cur < t_dir0  # Comedy lull right after record scratch -> playful bass!
+        in_dir = t_dir0 <= t_cur < t_dir1
+        in_end = t_cur >= t_end0
 
-        # Plucked upright spy bass
-        bf = bass_prog[step % len(bass_prog)] * (1.12 if in_tense else 1.0)
-        bd = min(0.36, b_dur * 0.9)
-        tb = np.linspace(0, bd, int(SR * bd))
-        bass = (0.75 * np.sin(2 * np.pi * bf * tb) + 0.25 * np.sin(2 * np.pi * 2 * bf * tb)) * np.exp(-tb * 7.0)
-        put(bgm, bass, t_cur, 0.28 if in_tense else 0.20)
+        # Dynamic tempo per mood!
+        b_dur = 0.29 if in_chase else (0.34 if in_dir else (0.44 if in_xray else (0.50 if in_end else 0.39)))
 
-        # Sneaky finger snap / hi-hat on off-beats
-        if step % 2 == 1 and not in_end:
-            snap = bp(nz(0.045), 1800, 6000) * np.exp(-np.linspace(0, 14, int(SR * 0.045)))
-            put(bgm, norm(snap), t_cur, 0.14 if in_tense else 0.09)
+        # 1. Chromatic Spy Surf-Guitar Riff & Walking Upright Bass
+        bn = vamp_bass[step % len(vamp_bass)]
+        put(bgm, g_notes[bn], t_cur, 0.36 if in_chase else (0.20 if in_end else 0.28))
 
-        # Vibraphone sneaky chord stab every 2 beats
-        if step % 2 == 0 and not in_end:
-            vf = vib_notes[(step // 2) % len(vib_notes)]
-            vd = 0.35
-            tv = np.linspace(0, vd, int(SR * vd))
-            vib = (np.sin(2 * np.pi * vf * tv) + 0.35 * np.sin(2 * np.pi * vf * 1.5 * tv)) * np.exp(-tv * 6.5)
-            put(bgm, vib, t_cur, 0.09 if in_tense else 0.07)
+        # Deep warm upright bass support
+        bf_map = {"E2": 82.41, "F2": 87.31, "Fs2": 92.50, "G2": 98.00, "B2": 123.47}
+        bf = bf_map[bn]
+        bd = min(0.32, b_dur * 0.9)
+        tb = np.linspace(0, bd, int(SR * bd), dtype=np.float32)
+        ubass = (0.78 * np.sin(2 * np.pi * bf * tb) + 0.22 * np.sin(2 * np.pi * 2 * bf * tb)) * np.exp(-tb * 6.5)
+        put(bgm, ubass, t_cur, 0.30 if in_chase else 0.22)
+
+        # 2. High Spy Guitar Twang Melody / Vibraphone Accent
+        ln = vamp_lead[step % len(vamp_lead)]
+        if ln and not in_end and not in_post_brake:
+            put(bgm, g_notes[ln], t_cur, 0.22 if in_chase else 0.16)
+
+        # 3. Brushed Jazz Ride & Snare / Action Chase Bongos!
+        if not in_end:
+            put(bgm, ride, t_cur, 0.13 if in_chase else 0.08)
+            if step % 2 == 1:
+                put(bgm, snare, t_cur, 0.17 if in_chase else 0.10)
+            if in_chase:
+                # Urgent 1960s spy-chase double-time bongos!
+                put(bgm, bongo_hi if step % 2 == 0 else bongo_lo, t_cur, 0.20)
+                put(bgm, bongo_lo if step % 2 == 0 else bongo_hi, t_cur + b_dur * 0.5, 0.16)
+            elif in_xray and step % 4 == 0:
+                put(bgm, sfx_sonar_ping(1180.0 + (step % 8) * 45, 0.42), t_cur, 0.14)
+            elif in_dir and step % 4 == 0:
+                # Tense dramatic timpani rumble under Pak Direktur!
+                put(bgm, sfx_bond_brass(164.81, 0.35, intense=True), t_cur, 0.22)
+
+        # Occasional dramatic brass stab on downbeat every 16 steps during sneaking/chase
+        if step % 16 == 0 and not in_end and not in_xray and not in_post_brake:
+            put(bgm, sfx_bond_brass(164.81, 0.45, intense=in_chase), t_cur, 0.24 if in_chase else 0.15)
 
         t_cur += b_dur
         step += 1
 
-    return norm(bgm) * 0.20
+    # Classic James Bond finale Em(maj9) spy guitar chord right at end!
+    put(bgm, sfx_bond_chord(1.8), max(0.0, ev_sec["akh.batal"] + 0.15), 0.34)
+    return norm(bgm) * 0.30
 
 
 def main():
     vdata = json.loads(VOICE_JSON.read_text())
     scenes_raw = vdata["scenes"]
 
-    # 1. Build scene timeline & voice bed
+    # 1. Build scene timeline & voice bed (100% IDENTICAL frame counts to V2!)
     scene_meta = {}
     line_placed = []
     t_cursor = 0.0
@@ -357,54 +522,93 @@ def main():
             })
             i += len(chunk)
 
-    # 2. Mix Voice + Comedy Foley SFX + Ducking Spy Jazz BGM
+    # 2. Mix Voice + James Bond Spy Foley SFX + Ducking James Bond Spy BGM
     n_tot = int(SR * total_sec)
     voice_bus = np.zeros(n_tot, dtype=np.float32)
     sfx_bus = np.zeros(n_tot, dtype=np.float32)
 
     for l in line_placed:
         y = read_wav(ROOT / l["wav"])
-        # Normalize each voice line cleanly to consistent speaking peak
-        y = norm(y) * (0.95 if l["voice"] == "direktur" else 0.88)
+        y = norm(y) * (0.96 if l["voice"] == "direktur" else 0.90)
         put(voice_bus, y, l["start"], 1.0)
 
     S = {k: v["start"] for k, v in scene_meta.items()}
 
-    # Synced Foley SFX!
-    put(sfx_bus, sfx_kaching(), ev_sec["hook.dolar"], 0.65)
-    put(sfx_bus, sfx_meow(0.55, 680.0), ev_sec["hook.kucing"] + 0.12, 0.85)
-    put(sfx_bus, sfx_whip(), S["lab"], 0.55)
-    put(sfx_bus, sfx_whip(), ev_sec["lab.hah"], 0.55)
-    put(sfx_bus, E.sfx_xray(), S["xray"] + 0.05, 0.50)
-    put(sfx_bus, sfx_blip(760), ev_sec["xr.kuping"], 0.55)
-    put(sfx_bus, sfx_blip(980), ev_sec["xr.pemancar"], 0.55)
-    put(sfx_bus, sfx_blip(1240), ev_sec["xr.ekor"], 0.60)
-    put(sfx_bus, sfx_whip(), S["van"], 0.50)
-    put(sfx_bus, sfx_van_door(), ev_sec["van.pintu"], 0.72)
-    put(sfx_bus, sfx_sizzle(1.6), ev_sec["van.ikan"], 0.55)
-    put(sfx_bus, sfx_whip(), ev_sec["lep.apa"], 0.60)
-    put(sfx_bus, sfx_meow(0.42, 790.0), ev_sec["lep.belok"], 0.75)
-    put(sfx_bus, sfx_tire_screech(0.88), ev_sec["kac.ngerem"] - 0.12, 0.78)
-    put(sfx_bus, sfx_taxi_horn(), ev_sec["kac.ngerem"] + 0.35, 0.62)
-    put(sfx_bus, sfx_sizzle(1.8), ev_sec["kac.gerobak"], 0.50)
-    put(sfx_bus, sfx_blip(1450, 0.12), ev_sec["kac.radar"], 0.60)
-    put(sfx_bus, sfx_blip(1650, 0.12), ev_sec["kac.tongkol"], 0.65)
-    put(sfx_bus, sfx_radio_static(0.32), ev_sec["dir.headset"] + 0.15, 0.62)
-    put(sfx_bus, sfx_meow(0.45, 720.0), ev_sec["dir.siapa"] - 0.38, 0.72)
-    put(sfx_bus, sfx_crunch(0.65), ev_sec["dir.siapa"] - 0.20, 0.72)
-    put(sfx_bus, sfx_steam_anger(0.85), ev_sec["dir.ikan"] + 0.25, 0.68)
-    put(sfx_bus, sfx_kaching(), ev_sec["akh.melayang"], 0.50)
-    put(sfx_bus, sfx_sad_wah(0.95), ev_sec["akh.meong"] + 0.45, 0.65)
-    put(sfx_bus, sfx_meow(0.50, 620.0), ev_sec["akh.meong"] + 0.15, 0.72)
+    # ===== JAMES BOND SPY STINGS + V2 INSERT & WHIP-PAN FOLEY (45+ CUES!) =====
+    # Scene 1: Hook
+    put(sfx_bus, sfx_bond_brass(164.81, 0.55), 0.12, 0.58)
+    put(sfx_bus, sfx_kaching(), ev_sec["hook.dolar"], 0.72)
+    put(sfx_bus, sfx_whip(), ev_sec["hook.dolar"] - 0.30, 0.45)
+    put(sfx_bus, sfx_bond_brass(196.00, 0.48, intense=True), ev_sec["hook.kucing"] - 0.10, 0.58)
+    put(sfx_bus, sfx_meow(0.55, 680.0), ev_sec["hook.kucing"] + 0.10, 0.88)
 
-    # Spy Jazz BGM with smooth sidechain ducking under voice!
-    bgm = spy_comedy_bgm(total_sec, S["lepas"], scene_meta["direktur"]["end"], S["akhir"])
+    # Scene 2: Lab CIA
+    put(sfx_bus, sfx_whip(), S["lab"], 0.55)
+    put(sfx_bus, sfx_whip(), ev_sec["lab.meong"] - 0.30, 0.48)
+    put(sfx_bus, sfx_whip(), ev_sec["lab.hah"] - 0.12, 0.60)
+    put(sfx_bus, sfx_blip(620, 0.12), ev_sec["lab.hah"], 0.45)
+    put(sfx_bus, sfx_whip(), ev_sec["lab.nyadap"] + 1.05, 0.48)
+
+    # Scene 3: X-Ray + INSERT #1 (KLIK! MIKROFON!)
+    put(sfx_bus, E.sfx_xray(), S["xray"] + 0.05, 0.58)
+    put(sfx_bus, sfx_gadget_click(), ev_sec["xr.kuping"] - 0.10, 0.82)
+    put(sfx_bus, sfx_meow(0.32, 540.0), ev_sec["xr.kuping"] + 0.35, 0.52)  # Annoyed mrrp!
+    put(sfx_bus, sfx_blip(980), ev_sec["xr.pemancar"], 0.62)
+    put(sfx_bus, sfx_blip(1240), ev_sec["xr.ekor"], 0.66)
+    put(sfx_bus, sfx_whip(), ev_sec["xr.ekor"] - 0.25, 0.48)
+    put(sfx_bus, sfx_whip(), ev_sec["xr.yakin"] - 0.25, 0.48)
+    put(sfx_bus, sfx_whip(), ev_sec["xr.profesional"] - 0.78, 0.48)
+
+    # Scene 4: Surveillance Van + INSERT #2 (SRAAK!! MISI MULAI!)
+    put(sfx_bus, sfx_whip(), S["van"], 0.55)
+    put(sfx_bus, sfx_radio_static(0.24), S["van"] + 0.20, 0.45)
+    put(sfx_bus, sfx_van_door(0.75), ev_sec["van.pintu"] - 0.06, 0.85)
+    put(sfx_bus, sfx_bond_brass(164.81, 0.52, intense=True), ev_sec["van.pintu"] + 0.05, 0.62)
+    put(sfx_bus, sfx_sizzle(1.6), ev_sec["van.ikan"] - 0.35, 0.58)
+    put(sfx_bus, sfx_whip(), ev_sec["van.ikan"] - 1.15, 0.45)
+
+    # Scene 5: Washington Park Chase
+    put(sfx_bus, sfx_bond_brass(220.0, 0.45, intense=True), ev_sec["lep.apa"] - 0.05, 0.65)
+    put(sfx_bus, sfx_whip(), ev_sec["lep.apa"], 0.62)
+    put(sfx_bus, sfx_meow(0.42, 790.0), ev_sec["lep.belok"], 0.82)
+    put(sfx_bus, sfx_whip(), ev_sec["lep.belok"] + 0.30, 0.50)
+    put(sfx_bus, sfx_taxi_horn(), ev_sec["lep.taksi"] - 0.12, 0.68)
+
+    # Scene 6: INSERT #3 (CIIIT!! NYARIS!!) + Fish Cart Leap + INSERT #4 (KRES-KRES!!)
+    put(sfx_bus, sfx_record_scratch(0.36), ev_sec["kac.ngerem"] - 0.24, 0.88)
+    put(sfx_bus, sfx_tire_screech(0.92), ev_sec["kac.ngerem"] - 0.10, 0.86)
+    put(sfx_bus, sfx_taxi_horn(), ev_sec["kac.ngerem"] + 0.36, 0.68)
+    put(sfx_bus, sfx_whip(), ev_sec["kac.gerobak"] - 0.20, 0.52)
+    put(sfx_bus, sfx_sizzle(1.9), ev_sec["kac.gerobak"] - 0.10, 0.56)
+    put(sfx_bus, sfx_blip(1450, 0.12), ev_sec["kac.radar"], 0.65)
+    put(sfx_bus, sfx_blip(1680, 0.14), ev_sec["kac.tongkol"] - 0.65, 0.62)
+    put(sfx_bus, sfx_crunch(0.75), ev_sec["kac.tongkol"] - 0.62, 0.88)  # Right on Insert #4 KRES-KRES!
+    put(sfx_bus, sfx_meow(0.40, 700.0), ev_sec["kac.tongkol"] - 0.10, 0.65)
+
+    # Scene 7: Pak Direktur CIA Explosion (Radio Static + Brass Sting + Desk Slam BRAAK!! + Steam!)
+    put(sfx_bus, sfx_radio_static(0.32), ev_sec["dir.headset"] + 0.10, 0.68)
+    put(sfx_bus, sfx_meow(0.45, 720.0), ev_sec["dir.siapa"] - 0.42, 0.76)
+    put(sfx_bus, sfx_crunch(0.60), ev_sec["dir.siapa"] - 0.22, 0.76)
+    put(sfx_bus, sfx_bond_brass(146.83, 0.68, intense=True), ev_sec["dir.siapa"] - 0.04, 0.76)
+    put(sfx_bus, sfx_desk_slam(), ev_sec["dir.siapa"] + 0.80, 0.85)  # Synced to BRAAK!! emote
+    put(sfx_bus, sfx_steam_anger(0.90), ev_sec["dir.ikan"] + 0.20, 0.74)
+
+    # Scene 8: Finale (DIBATALKAN Stamp + Dollar Rain + Bond Chord + Sad Trombone + Smug Meow!)
+    put(sfx_bus, sfx_stamp_thud(), ev_sec["akh.batal"], 0.78)
+    put(sfx_bus, sfx_whip(), ev_sec["akh.fakta"] - 0.20, 0.48)
+    put(sfx_bus, sfx_kaching(), ev_sec["akh.melayang"], 0.62)
+    put(sfx_bus, sfx_bond_chord(1.4), ev_sec["akh.meong"] - 0.45, 0.45)
+    put(sfx_bus, sfx_meow(0.52, 620.0), ev_sec["akh.meong"] + 0.12, 0.80)
+    put(sfx_bus, sfx_sad_wah(0.98), ev_sec["akh.meong"] + 0.45, 0.72)
+
+    # James Bond 1960s Spy Soundtrack with smooth sidechain ducking under voice!
+    bgm = james_bond_spy_bgm(total_sec, S, ev_sec, scene_meta["direktur"]["end"])
     env_voice = np.abs(voice_bus)
-    win = int(SR * 0.15)
+    win = int(SR * 0.14)
     smooth_v = np.convolve(env_voice, np.ones(win) / win, mode="same")
-    duck = 1.0 - np.clip(smooth_v * 6.5, 0.0, 0.68)
-    mix = voice_bus + sfx_bus * 0.72 + bgm * duck
-    mix = np.tanh(mix * 1.05) * 0.92
+    duck = 1.0 - np.clip(smooth_v * 5.2, 0.0, 0.56)
+    mix = voice_bus + sfx_bus * 0.78 + bgm * duck
+    mix = np.tanh(mix * 1.06) * 0.92
 
     tmp_wav = Path("/tmp/kucing_master_raw.wav")
     with wave.open(str(tmp_wav), "wb") as w:
