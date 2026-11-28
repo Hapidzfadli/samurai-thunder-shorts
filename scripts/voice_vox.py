@@ -62,7 +62,7 @@ class Voice:
         dev = os.environ.get("VOX_DEVICE", "cpu")  # Colab GPU: VOX_DEVICE=cuda
         self.tts = VoxCPM.from_pretrained("openbmb/VoxCPM2", load_denoiser=False, optimize=False, device=dev)
         self.sr = self.tts.tts_model.sample_rate
-        self.asr = WhisperModel("small", device="cuda" if dev == "cuda" else "cpu", compute_type="float16" if dev == "cuda" else "int8")
+        self.asr = WhisperModel("small", device="cpu", compute_type="int8")  # ctranslate2 CUDA tidak tersedia di Colab
         self.use_style_tags = use_style_tags
 
     def hear(self, y: np.ndarray, sr: int):
