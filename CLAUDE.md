@@ -32,7 +32,15 @@ Gaya: latar 3D (Blender → GLB) + tokoh kartun 2D datar, tetapi harus terlihat 
   - `cineCard(cam, preset)` → props `BeanCard` (`tint`, `shade`, `rim`, `lightSide`, `realShadow`) agar tokoh punya bayangan jatuh nyata + rim light.
   - `Foreground` (jeruji/tiang/tepi) untuk bingkai depan; `CineGrade` untuk grading + vignette.
   - Keterbatasan: `buildShots` tidak tahu properti latar. Cek still tiap shot; ruangan dengan meja/tiang besar (mis. tenda Napoleon) perlu kamera manual atau `targets`/`front` disetel agar tidak terhalang.
-- **Checklist pratinjau (cek sebelum kirim lembar kontak)**: tiap adegan ≥3 shot berbeda; ada 1 sumber cahaya berarah dengan sisi gelap yang terlihat; bayangan tokoh jatuh di lantai; ada benda bingkai depan di sebagian shot; tokoh tidak terhalang properti; adegan malam benar-benar gelap.
+- **Tokoh hidup seperti referensi (wajib direncanakan di daftar gerakan per adegan)**:
+  - **Arah hadap mengikuti gerak**: tokoh tidak selalu menghadap kamera. Yang berjalan/lari menjauh tampak belakang (`back: true` di BeanParams), yang lewat menyamping tampak samping/profil, yang mendekat tampak depan. Jangan pakai kartu depan untuk tokoh yang bergerak menjauh (terlihat lari mundur). Tampak samping/tiga-perempat belum ada di `drawBean`: bila adegan butuh, buat dulu untuk tokoh yang dipakai saja.
+  - **Pose sesuai aksi**: berdiri saja tidak cukup. Rencanakan pose duduk (kursi/kasur, kaki menekuk), jongkok/berlutut, berbaring, merangkak, menggali, membawa beban, memanjat, muncul dari lubang. Lari pakai `runPose` + jalur `linePath`/`recedeCam` (`src/motionKit.tsx`), tokoh harus benar-benar berpindah tempat (menjauh/mendekat/melintas), bukan berputar di tempat.
+  - **Menyatu dengan latar**: tokoh boleh tertutup sebagian (di dalam lubang hanya kepala, di balik kasur/jeruji, kaki menggantung di tepi ranjang); kontak dengan perabot harus pas (pantat di dudukan, tangan di meja).
+  - **Benda di tangan**: tiap tokoh yang beraksi memegang benda yang relevan (sekop, cangkir, koper, karung, papan klip) lewat `beanHandWorld`, bukan digambar menyatu.
+  - **Skala ekstrem**: selang-seling close-up wajah yang memenuhi layar dengan tokoh kecil di ruang besar.
+  - **Shot penampang (cutaway)** untuk cerita bawah tanah/di dalam dinding/terowongan: irisan latar memperlihatkan tokoh kecil bergerak di dalamnya (model Blender khusus).
+  - **Ekspresi + gag visual**: kacamata hitam, gigi meringis, keringat, wajah puas/licik; reaksi tiap kalimat penting.
+- **Checklist pratinjau (cek sebelum kirim lembar kontak)**: tiap adegan ≥3 shot berbeda; ada 1 sumber cahaya berarah dengan sisi gelap yang terlihat; bayangan tokoh jatuh di lantai; ada benda bingkai depan di sebagian shot; tokoh tidak terhalang properti; adegan malam benar-benar gelap; **arah hadap tokoh sesuai arah geraknya; ada ≥1 pose selain berdiri per adegan aksi; tokoh yang lari/jalan benar-benar berpindah tempat.**
 
 ## 3. GERAKAN HARUS MASUK AKAL (aturan paling penting)
 Setiap aksi yang disebut narasi harus **terlihat dikerjakan dengan tangan/tubuh**, tidak boleh "tiba-tiba sudah terjadi".
