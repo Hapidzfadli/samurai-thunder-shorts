@@ -177,3 +177,35 @@ export const InHand: React.FC<{
     </group>
   );
 };
+
+/** Bundel uang kertas franc berikat pita kertas. Titik (0,0,0) = pusat. */
+export const MoneyBundle: React.FC<{ s?: number; tint?: string }> = ({ s = 1, tint = "#c9b98a" }) => {
+  const g = useMemo(() => ({ stack: new THREE.BoxGeometry(0.16, 0.035, 0.075), band: new THREE.BoxGeometry(0.03, 0.038, 0.078), edge: new THREE.BoxGeometry(0.162, 0.004, 0.077) }), []);
+  const m = useMemo(() => ({ note: std(tint, { roughness: 0.9 }), band: std("#f4ecd8"), edge: std("#8a7a50") }), [tint]);
+  return (
+    <group scale={s}>
+      <Inked geo={g.stack} mat={m.note} ink={0.04} />
+      {[-0.01, 0.0, 0.01].map((y) => <mesh key={y} geometry={g.edge} material={m.edge} position={[0, y, 0]} />)}
+      <mesh geometry={g.band} material={m.band} />
+    </group>
+  );
+};
+
+/** Laci deposit baja yang ditarik keluar dari dinding, berisi tumpukan uang + kalung. Titik = mulut laci di dinding; laci menjulur ke +Z lokal. */
+export const OpenDrawer: React.FC<{ out?: number; bundles?: number }> = ({ out = 0.42, bundles = 6 }) => {
+  const g = useMemo(() => ({ floor: new THREE.BoxGeometry(0.3, 0.012, out), side: new THREE.BoxGeometry(0.012, 0.16, out), front: new THREE.BoxGeometry(0.32, 0.18, 0.02), plate: new THREE.BoxGeometry(0.08, 0.03, 0.005) }), [out]);
+  const m = useMemo(() => ({ steel: std("#aeb4bc", { metalness: 0.7, roughness: 0.35 }), brass: std("#c9a24a", { metalness: 0.8, roughness: 0.3 }) }), []);
+  return (
+    <group>
+      <mesh geometry={g.floor} material={m.steel} position={[0, -0.08, out / 2]} castShadow />
+      {[-1, 1].map((sd) => <mesh key={sd} geometry={g.side} material={m.steel} position={[sd * 0.15, 0, out / 2]} />)}
+      <Inked geo={g.front} mat={m.steel} pos={[0, 0, out]} ink={0.03} />
+      <mesh geometry={g.plate} material={m.brass} position={[0, 0.04, out + 0.012]} />
+      {Array.from({ length: bundles }, (_, i) => (
+        <group key={i} position={[(i % 2 ? 0.06 : -0.06), -0.055 + Math.floor(i / 2) * 0.036, out * 0.3 + (i % 3) * 0.04]} rotation={[0, (i % 3) * 0.08, 0]}>
+          <MoneyBundle />
+        </group>
+      ))}
+    </group>
+  );
+};

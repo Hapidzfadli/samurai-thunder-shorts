@@ -153,13 +153,24 @@ export const GlbWorld: React.FC<{ glb: string; visible: (name: string) => boolea
   const inst = useMemo(() => {
     if (!scene) return null;
     const c = scene.clone(true);
+    // nama latar bisa ada di mesh sendiri ATAU di node induk (mesh gabungan hasil bake)
+    const fullName = (o: THREE.Object3D) => {
+      let n = o.name;
+      for (let q = o.parent; q && q !== c; q = q.parent) n = q.name + "/" + n;
+      return n;
+    };
+    const match = (o: THREE.Object3D, f: (n: string) => boolean) => {
+      for (let q: THREE.Object3D | null = o; q && q !== c; q = q.parent) if (f(q.name)) return true;
+      return false;
+    };
     c.traverse((o) => {
       const m = o as THREE.Mesh;
       if (!m.isMesh) return;
-      m.visible = visible(o.name);
+      void fullName;
+      m.visible = match(o, visible);
       if (!m.visible || !lms) return;
       lightmaps.forEach((l, i) => {
-        if (!o.name.startsWith(l.prefix) || !m.geometry.attributes.uv1) return;
+        if (!match(o, (n) => n.startsWith(l.prefix)) || !m.geometry.attributes.uv1) return;
         const mat = (m.material as THREE.MeshStandardMaterial).clone();
         mat.lightMap = lms[i];
         mat.lightMapIntensity = l.intensity ?? 2.0;
